@@ -7,9 +7,9 @@
  */
 class Dashboard extends CI_Controller{
     public function index(){
-        $this->load->view('dashboard/header_view');
-        $this->load->view('dashboard/dashboard_view');
-        $this->load->view('dashboard/footer_view');
+        
+        $this->load->view('dashboard/examples/dashboard');
+        
     }
     public function logout(){
         session_destroy();
