@@ -4,5 +4,6 @@ class Home extends CI_Controller{
         $this->load->view('public/header_view');
         $this->load->view('public/content_view');
         $this->load->view('public/footer_view');
+        
     }
 }

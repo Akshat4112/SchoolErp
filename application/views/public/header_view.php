@@ -24,14 +24,7 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
                 <li><a href="#">About-us</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact-us <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-
-                    </ul>
-                </li>
+                <li><a href="#">Contact-us</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Sign in</a></li>
