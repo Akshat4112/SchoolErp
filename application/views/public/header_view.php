@@ -5,7 +5,7 @@
 
     <script src="<?= base_url()?>public/js/jquery.js"></script>
     <script src="<?= base_url()?>public/js/bootstrap.js"></script>
-    <title>School ERP changes ridhima</title>
+    <title>School ERP changes ridhima and again by akshat</title>
 </head>
 <body>
 <nav class="navbar navbar-default">
