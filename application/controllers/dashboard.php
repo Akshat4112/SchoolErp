@@ -12,7 +12,7 @@ class Dashboard extends CI_Controller{
 
     }
     public function admission_view(){
-    	$this->load->view('admission_view');
+    	$this->load->view('dashboard/examples/admission_view');
     }
     public function logout(){
         session_destroy();
