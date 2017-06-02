@@ -5,7 +5,7 @@
 
     <script src="<?= base_url()?>public/js/jquery.js"></script>
     <script src="<?= base_url()?>public/js/bootstrap.js"></script>
-    <title>School ERP</title>
+    <title>School ERP changeed by akshat</title>
 </head>
 <body>
 <nav class="navbar navbar-default">
