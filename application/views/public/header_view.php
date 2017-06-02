@@ -5,7 +5,7 @@
 
     <script src="<?= base_url()?>public/js/jquery.js"></script>
     <script src="<?= base_url()?>public/js/bootstrap.js"></script>
-    <title>School ERP</title>
+    <title>School ERP title changed by ridhima Garg</title>
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -17,7 +17,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">FHT ERP</a>
+            <a class="navbar-brand" href="#">FHT ERPppp</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
