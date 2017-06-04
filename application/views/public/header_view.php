@@ -29,6 +29,6 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Sign in</a></li>
             </ul>
-        </div>
+		</div>
     </div>
 </nav>

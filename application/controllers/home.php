@@ -6,4 +6,10 @@ class Home extends CI_Controller{
         $this->load->view('public/footer_view');
         
     }
+    public function test(){
+        $q=$this->db->get('users');
+        print_r($q->result());
+
+
+    }
 }
