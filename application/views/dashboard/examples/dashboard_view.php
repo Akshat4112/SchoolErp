@@ -97,15 +97,18 @@
                                 <i class="material-icons">notifications</i>
                                 <span class="notification"><!-- No. of notification to be updated from here --></span>
                                 <p class="hidden-lg hidden-md">Notifications</p>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="<?= site_url('dashboard/logout'); ?>">Logout</a></li>
-                            </ul>
-                        </li>
+                                <ul class="dropdown-menu">
+                                    <li><a href=""">Notification 1</a></li>
+                    </ul>
+                    </a>
+                    </li>
                         <li>
                             <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="material-icons">person</i>
                                 <p class="hidden-lg hidden-md">Profile</p>
+                                <ul class="dropdown-menu">
+                                    <li><a href="<?= site_url('dashboard/logout'); ?>">Logout</a></li>
+                                </ul>
                             </a>
                         </li>
                     </ul>
@@ -219,6 +222,56 @@
                                 </div></a>
                             </div>
                         </div>
+                        <div class="content">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <a href=""><div class="card card-stats">
+                                                <div class="card-header" data-background-color="orange">
+                                                    <i class="material-icons">content_copy</i>
+                                                </div>
+                                                <div class="card-content">
+                                                    <p class="category"><a href="<?= site_url('accounting/accounting_view'); ?>"> KPIs</a></p>
+                                                    <h3 class="title">K</h3>
+                                                </div>
+
+                                            </div></a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <a href=""> <div class="card card-stats">
+                                                <div class="card-header" data-background-color="green">
+                                                    <i class="material-icons">store</i>
+                                                </div>
+                                                <div class="card-content">
+                                                    <p class="category"><a href="<?= site_url('attendance/attendance_view'); ?>"> Dashboards</a></p>
+                                                    <h3 class="title">D</h3>
+                                                </div>
+                                            </div></a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <a href=""> <div class="card card-stats">
+                                                <div class="card-header" data-background-color="red">
+                                                    <i class="material-icons">info_outline</i>
+                                                </div>
+                                                <div class="card-content">
+                                                    <p class="category"><a href="<?= site_url('employees/employees_view'); ?>"> Settings</a></p>
+                                                    <h3 class="title">S</h3>
+                                                </div>
+                                            </div></a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <a href=""> <div class="card card-stats">
+                                                <div class="card-header" data-background-color="blue">
+                                                    <i class="fa fa-twitter"></i>
+                                                </div>
+                                                <div class="card-content">
+                                                    <p class="category"><a href="<?= site_url('time_table/time_table_view'); ?>">Admin</a></p>
+                                                    <h3 class="title">Ad</h3>
+                                                </div>
+
+                                            </div></a>
+                                    </div>
+                                </div>
             </div>
         </div>
         <footer class="footer">
