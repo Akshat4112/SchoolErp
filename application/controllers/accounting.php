@@ -7,4 +7,7 @@
  */
 class Accounting extends CI_Controller{
     public function index(){}
+    public function accounting_view(){
+        $this->load->view('dashboard/examples/accounting_view');
+    }
 }

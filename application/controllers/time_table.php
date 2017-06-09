@@ -7,4 +7,7 @@
  */
 class Time_table extends CI_Controller{
     public function index(){}
+    public function time_table_view(){
+        $this->load->view('dashboard/examples/time_table_view');
+    }
 }

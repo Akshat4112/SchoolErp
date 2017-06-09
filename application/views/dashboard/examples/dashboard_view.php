@@ -111,7 +111,7 @@
                                 <p class="hidden-lg hidden-md">Notifications</p>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Mike John responded to your email</a></li>
+                                <li><a href="<?= site_url('dashboard/logout'); ?>">Logout</a></li>
                                 <li><a href="#">You have 5 new tasks</a></li>
                                 <li><a href="#">You're now friend with Andrew</a></li>
                                 <li><a href="#">Another Notification</a></li>
@@ -163,7 +163,7 @@
                                 <i class="material-icons">content_copy</i>
                             </div>
                             <div class="card-content">
-                                <p class="category">Discuss</p>
+                                <p class="category"><a href="<?= site_url('discuss/discuss_view'); ?>">Discuss</a></p>
                                 <h3 class="title">Title</h3>
                             </div>
                         </div></a>
@@ -174,7 +174,7 @@
                                 <i class="material-icons">store</i>
                             </div>
                             <div class="card-content">
-                                <p class="category">Faculties</p>
+                                <p class="category"><a href="<?= site_url('faculties/faculties_view'); ?>"> Faculties</a></p>
                                 <h3 class="title">Title</h3>
                             </div>
                         </div></a>
@@ -185,22 +185,24 @@
                                 <i class="material-icons">info_outline</i>
                             </div>
                             <div class="card-content">
-                                <p class="category">Students</p>
+                                <p class="category"><a href="<?= site_url('students/students_view'); ?>"> Students</a></p>
                                 <h3 class="title">Title</h3>
                             </div>
                         </div></a>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
-                        <a href="" <div class="card card-stats">
-                            <div class="card-header" data-background-color="blue">
-                                <i class="fa fa-twitter"></i>
-                            </div>
-                            <div class="card-content">
-                                <p class="category">Admissions</p>
-                                <h3 class="title">Title</h3>
-                            </div>
-                        </div></a>
+                        <a href=""> <div class="card card-stats">
+                                <div class="card-header" data-background-color="red">
+                                    <i class="material-icons">info_outline</i>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category"><a href="<?= site_url('admissions/admissions_view'); ?>"> Admissions</a></p>
+                                    <h3 class="title">Title</h3>
+                                </div>
+                            </div></a>
                     </div>
+
+
                 </div>
                 <div class="content">
                     <div class="container-fluid">
@@ -211,7 +213,7 @@
                                         <i class="material-icons">content_copy</i>
                                     </div>
                                     <div class="card-content">
-                                        <p class="category">Accounting</p>
+                                        <p class="category"><a href="<?= site_url('accounting/accounting_view'); ?>"> Accounting</a></p>
                                         <h3 class="title">Title</h3>
                                     </div>
 
@@ -223,7 +225,7 @@
                                         <i class="material-icons">store</i>
                                     </div>
                                     <div class="card-content">
-                                        <p class="category">Attendance</p>
+                                        <p class="category"><a href="<?= site_url('attendance/attendance_view'); ?>"> Attendance</a></p>
                                         <h3 class="title">Title</h3>
                                     </div>
                                 </div></a>
@@ -234,7 +236,7 @@
                                         <i class="material-icons">info_outline</i>
                                     </div>
                                     <div class="card-content">
-                                        <p class="category">Employees</p>
+                                        <p class="category"><a href="<?= site_url('employees/employees_view'); ?>"> Employees</a></p>
                                         <h3 class="title">Title</h3>
                                     </div>
                                 </div></a>
@@ -245,7 +247,7 @@
                                         <i class="fa fa-twitter"></i>
                                     </div>
                                     <div class="card-content">
-                                        <p class="category">Time_Tables</p>
+                                        <p class="category"><a href="<?= site_url('time_table/time_table_view'); ?>"> Time Table</a></p>
                                         <h3 class="title">Title</h3>
                                     </div>
 

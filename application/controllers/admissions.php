@@ -7,4 +7,7 @@
  */
 class Admissions extends CI_Controller{
     public function index(){}
+    public function admissions_view(){
+        $this->load->view('dashboard/examples/admission_view');
+    }
 }

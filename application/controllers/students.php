@@ -7,4 +7,7 @@
  */
 class Students extends CI_Controller{
     public function index(){}
+    public function students_view(){
+        $this->load->view('dashboard/examples/students_view');
+    }
 }
