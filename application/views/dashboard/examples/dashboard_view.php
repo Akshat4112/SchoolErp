@@ -94,7 +94,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Material Dashboard</a>
+                    <a class="navbar-brand" href="#">Dashboard</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -107,31 +107,11 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="material-icons">notifications</i>
-                                <span class="notification">5</span>
+                                <span class="notification"><!-- No. of notification to be updated from here --></span>
                                 <p class="hidden-lg hidden-md">Notifications</p>
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="<?= site_url('dashboard/logout'); ?>">Logout</a></li>
-                                <li><a href="#">You have 5 new tasks</a></li>
-                                <li><a href="#">You're now friend with Andrew</a></li>
-                                <li><a href="#">Another Notification</a></li>
-                                <li><a href="#">Another One</a></li>
-                            </ul>
-                        </li>
-
-
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="material-icons">notifications</i>
-                                <span class="notification">5</span>
-                                <p class="hidden-lg hidden-md">Notifications</p>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Mike John responded to your email</a></li>
-                                <li><a href="#">You have 5 new tasks</a></li>
-                                <li><a href="#">You're now friend with Andrew</a></li>
-                                <li><a href="#">Another Notification</a></li>
-                                <li><a href="#">Another One</a></li>
                             </ul>
                         </li>
 
@@ -164,7 +144,7 @@
                             </div>
                             <div class="card-content">
                                 <p class="category"><a href="<?= site_url('discuss/discuss_view'); ?>">Discuss</a></p>
-                                <h3 class="title">Title</h3>
+                                <h3 class="title">D</h3>
                             </div>
                         </div></a>
                     </div>
@@ -175,7 +155,7 @@
                             </div>
                             <div class="card-content">
                                 <p class="category"><a href="<?= site_url('faculties/faculties_view'); ?>"> Faculties</a></p>
-                                <h3 class="title">Title</h3>
+                                <h3 class="title">F</h3>
                             </div>
                         </div></a>
                     </div>
@@ -186,7 +166,7 @@
                             </div>
                             <div class="card-content">
                                 <p class="category"><a href="<?= site_url('students/students_view'); ?>"> Students</a></p>
-                                <h3 class="title">Title</h3>
+                                <h3 class="title">S</h3>
                             </div>
                         </div></a>
                     </div>
@@ -197,7 +177,7 @@
                                 </div>
                                 <div class="card-content">
                                     <p class="category"><a href="<?= site_url('admissions/admissions_view'); ?>"> Admissions</a></p>
-                                    <h3 class="title">Title</h3>
+                                    <h3 class="title">A</h3>
                                 </div>
                             </div></a>
                     </div>
@@ -214,7 +194,7 @@
                                     </div>
                                     <div class="card-content">
                                         <p class="category"><a href="<?= site_url('accounting/accounting_view'); ?>"> Accounting</a></p>
-                                        <h3 class="title">Title</h3>
+                                        <h3 class="title">Ac</h3>
                                     </div>
 
                                 </div></a>
@@ -226,7 +206,7 @@
                                     </div>
                                     <div class="card-content">
                                         <p class="category"><a href="<?= site_url('attendance/attendance_view'); ?>"> Attendance</a></p>
-                                        <h3 class="title">Title</h3>
+                                        <h3 class="title">At</h3>
                                     </div>
                                 </div></a>
                             </div>
@@ -237,7 +217,7 @@
                                     </div>
                                     <div class="card-content">
                                         <p class="category"><a href="<?= site_url('employees/employees_view'); ?>"> Employees</a></p>
-                                        <h3 class="title">Title</h3>
+                                        <h3 class="title">E</h3>
                                     </div>
                                 </div></a>
                             </div>
@@ -248,7 +228,7 @@
                                     </div>
                                     <div class="card-content">
                                         <p class="category"><a href="<?= site_url('time_table/time_table_view'); ?>"> Time Table</a></p>
-                                        <h3 class="title">Title</h3>
+                                        <h3 class="title">TT</h3>
                                     </div>
 
                                 </div></a>
