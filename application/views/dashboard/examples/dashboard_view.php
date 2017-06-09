@@ -75,12 +75,6 @@
                         <p>Notifications</p>
                     </a>
                 </li>
-                <li class="active-pro">
-                    <a href="upgrade.html">
-                        <i class="material-icons">unarchive</i>
-                        <p>Upgrade to PRO</p>
-                    </a>
-                </li>
             </ul>
         </div>
     </div>
@@ -98,12 +92,6 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="material-icons">dashboard</i>
-                                <p class="hidden-lg hidden-md">Dashboard</p>
-                            </a>
-                        </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="material-icons">notifications</i>
@@ -114,7 +102,6 @@
                                 <li><a href="<?= site_url('dashboard/logout'); ?>">Logout</a></li>
                             </ul>
                         </li>
-
                         <li>
                             <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="material-icons">person</i>
@@ -172,7 +159,7 @@
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <a href=""> <div class="card card-stats">
-                                <div class="card-header" data-background-color="red">
+                                <div class="card-header" data-background-color="blue">
                                     <i class="material-icons">info_outline</i>
                                 </div>
                                 <div class="card-content">
@@ -181,8 +168,6 @@
                                 </div>
                             </div></a>
                     </div>
-
-
                 </div>
                 <div class="content">
                     <div class="container-fluid">
