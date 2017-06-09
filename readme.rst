@@ -2,8 +2,6 @@
 What is SchoolERP
 ###################
 
-<<<<<<< HEAD
-
 *******************
 Release Information
 *******************
@@ -15,11 +13,10 @@ Changelog and New Features
 **************************
 
 You can find a list of all changes for each release in the
-=======
+
 
 This repo contains in-development code for future releases. To download the
 latest stable release.
->>>>>>> origin/master
 
 *******************
 Server Requirements
