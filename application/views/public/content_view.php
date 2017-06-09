@@ -5,7 +5,7 @@
             <fieldset>
                 <legend>Login</legend>
                 <div class="form-group">
-                    <label for="inputEmail" class="col-lg-2 control-label">Email here ridhima</label>
+                    <label for="inputEmail" class="col-lg-2 control-label">Email</label>
                     <div class="col-lg-10">
                         <input type="text" class="form-control" id="inputEmail" placeholder="Email">
                     </div>
