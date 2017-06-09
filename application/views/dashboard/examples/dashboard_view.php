@@ -20,64 +20,33 @@
 </head>
 <body>
 <div class="wrapper">
-    <div class="sidebar" data-color="purple" data-image="<?=base_url()?>public/assets/img/sidebar-1.jpg">
+
         <!--
             Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
 
             Tip 2: you can also add an image using data-image tag
         -->
-        <div class="logo">
-            <a href="http://www.futureheadtech.com" class="simple-text">
-                Dashboard
-            </a>
+
+        <div class="col-md-2" style="margin-top: 100px; margin-left: 30px;">
+            <div class="card card-profile">
+                <div class="card-avatar">
+                    <a href="#pablo">
+                        <img class="img" src="<?= base_url();?>public/assets/img/faces/marc.jpg" />
+                    </a>
+                </div>
+
+                <div class="content">
+                    <h6 class="category text-gray">Administrator</h6>
+                    <h4 class="card-title">Ravi Shukla</h4>
+                    <p class="card-content">
+
+                    </p>
+                    <a href="#pablo" class="btn btn-primary btn-round">Follow</a>
+                </div>
+            </div>
         </div>
-        <div class="sidebar-wrapper">
-            <ul class="nav">
-                <li class="active">
-                    <a href="dashboard_view.php">
-                        <i class="material-icons">dashboard</i>
-                        <p>Dashboard</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="user.html">
-                        <i class="material-icons">person</i>
-                        <p>User Profile</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="table.html">
-                        <i class="material-icons">content_paste</i>
-                        <p>Table List</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="typography.html">
-                        <i class="material-icons">library_books</i>
-                        <p>Typography</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="icons.html">
-                        <i class="material-icons">bubble_chart</i>
-                        <p>Icons</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="maps.html">
-                        <i class="material-icons">location_on</i>
-                        <p>Maps</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="notifications.html">
-                        <i class="material-icons text-gray">notifications</i>
-                        <p>Notifications</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
+
+
     <div class="main-panel">
         <nav class="navbar navbar-transparent navbar-absolute">
             <div class="container-fluid">

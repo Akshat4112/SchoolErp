@@ -43,6 +43,7 @@
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
+                <li><a href="">Settings</a></li>
                 <li><a href="">Logout</a></li>
             </ul>
         </div>
