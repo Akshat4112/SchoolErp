@@ -6,5 +6,7 @@
  * Time: 10:40 AM
  */
 class Employees extends CI_Controller{
-    public function index(){}
+    public function index(){
+
+    }
 }

@@ -11,18 +11,4 @@ class User_controller extends CI_Controller {
         parent::__construct();
         $this->load->model('user_model');
     }
-
-    public function get(){
-        $this->user_model->get(3);
-
-    }
-    public function insert(){
-
-    }
-    public function update(){
-
-    }
-    public function delete(){
-
-    }
 }
