@@ -4,7 +4,6 @@
     <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url()?>public/assets/img/apple-icon.png" />
     <link rel="icon" type="image/png" href="<?= base_url()?>public/assets/img/favicon.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Accounting</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 
@@ -50,72 +49,52 @@
 </nav>
 
 
-    <div class="row">
-        <div class="col-lg-1"></div>
-        <div class="col-lg-10">
-    <h5>Admission Registers</h5>
-    <a href="#" class="btn btn-default">Create</a>
-    <a href="#" class="btn btn-default" style="margin-left: 10px;">Import</a>
-    </div>
-        <div class="col-lg-1"></div>
-</div>
 <div class="row">
-    <div class="col-lg-1"></div>
-    <div class="col-lg-10">
-        <table class="table table-striped table-hover ">
-            <thead>
-            <tr>
-                <th>Name</th>
-                <th>Course</th>
-                <th>Start Date</th>
-                <th>End Date</th>
-                <th>Minimum No. of Admissions</th>
-                <th>Maximum No. of Admissions</th>
-                <th>Status</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>Class 1st</td>
-                <td>Physics</td>
-                <td>1/1/17</td>
-                <td>1/4/17</td>
-                <td>10</td>
-                <td>50</td>
-                <td>Done</td>
-            </tr>
-            <tr>
-                <td>Class 2nd</td>
-                <td>Physics</td>
-                <td>1/1/17</td>
-                <td>1/4/17</td>
-                <td>10</td>
-                <td>50</td>
-                <td>Done</td>
-            </tr>
-            <tr class="info">
-                <td>Class 3rd</td>
-                <td>Physics</td>
-                <td>1/1/17</td>
-                <td>1/4/17</td>
-                <td>10</td>
-                <td>50</td>
-                <td>Done</td>
-            </tr>
-            <tr class="success">
-                <td>Class 4th</td>
-                <td>Physics</td>
-                <td>1/1/17</td>
-                <td>1/4/17</td>
-                <td>10</td>
-                <td>50</td>
-                <td>Done</td>
-            </tr>
-            </tbody>
-        </table>
+    <h5 style="margin-left: 70px;">Admission Analysis Report</h5>
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+
+        <form class="form-horizontal">
+            <fieldset>
+                <div class="form-group">
+                    <label for="select" class="col-lg-2 control-label">Course</label>
+                    <div class="col-lg-10">
+                        <select class="form-control" id="select">
+                            <option>Physics</option>
+                            <option>Chemistry</option>
+                            <option>Maths</option>
+                            <option>Computer</option>
+                            <option>Music</option>
+                        </select>
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="select" class="col-lg-2 control-label">Start Date</label>
+                        <div class="col-lg-10">
+                            <input type="date">
+                            <br>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="select" class="col-lg-2 control-label">End Date</label>
+                        <div class="col-lg-10">
+                            <input type="date">
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="reset" class="btn btn-default">Cancel</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
     </div>
-    <div class="col-lg-1"></div>
+    <div class="col-lg-4"></div>
 </div>
+
 
 
 

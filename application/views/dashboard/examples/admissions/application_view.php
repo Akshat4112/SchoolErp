@@ -4,7 +4,6 @@
     <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url()?>public/assets/img/apple-icon.png" />
     <link rel="icon" type="image/png" href="<?= base_url()?>public/assets/img/favicon.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Accounting</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 
@@ -50,14 +49,14 @@
 </nav>
 
 
-    <div class="row">
-        <div class="col-lg-1"></div>
-        <div class="col-lg-10">
-    <h5>Admission Registers</h5>
-    <a href="#" class="btn btn-default">Create</a>
-    <a href="#" class="btn btn-default" style="margin-left: 10px;">Import</a>
+<div class="row">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10">
+        <h5>Registrations</h5>
+        <a href="#" class="btn btn-default">Create</a>
+        <a href="#" class="btn btn-default" style="margin-left: 10px;">Import</a>
     </div>
-        <div class="col-lg-1"></div>
+    <div class="col-lg-1"></div>
 </div>
 <div class="row">
     <div class="col-lg-1"></div>
@@ -65,51 +64,66 @@
         <table class="table table-striped table-hover ">
             <thead>
             <tr>
-                <th>Name</th>
+                <th>Title</th>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th>Application Number</th>
+                <th>Admission Date</th>
+                <th>Birth Date</th>
                 <th>Course</th>
-                <th>Start Date</th>
-                <th>End Date</th>
-                <th>Minimum No. of Admissions</th>
-                <th>Maximum No. of Admissions</th>
-                <th>Status</th>
+                <th>Batch</th>
+                <th>State</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td>Class 1st</td>
+                <td>Mr.</td>
+                <td>Ravi</td>
+                <td>Kumar</td>
+                <td>Sharma</td>
+                <td>AO13</td>
+                <td>2/14/15</td>
+                <td>1/12/1996</td>
                 <td>Physics</td>
-                <td>1/1/17</td>
-                <td>1/4/17</td>
-                <td>10</td>
-                <td>50</td>
-                <td>Done</td>
+                <td>2014</td>
+                <td>Ongoing</td>
             </tr>
             <tr>
-                <td>Class 2nd</td>
+                <td>Mr.</td>
+                <td>Ravi</td>
+                <td>Kumar</td>
+                <td>Sharma</td>
+                <td>AO13</td>
+                <td>2/14/15</td>
+                <td>1/12/1996</td>
                 <td>Physics</td>
-                <td>1/1/17</td>
-                <td>1/4/17</td>
-                <td>10</td>
-                <td>50</td>
-                <td>Done</td>
+                <td>2014</td>
+                <td>Ongoing</td>
             </tr>
             <tr class="info">
-                <td>Class 3rd</td>
+                <td>Mr.</td>
+                <td>Ravi</td>
+                <td>Kumar</td>
+                <td>Sharma</td>
+                <td>AO13</td>
+                <td>2/14/15</td>
+                <td>1/12/1996</td>
                 <td>Physics</td>
-                <td>1/1/17</td>
-                <td>1/4/17</td>
-                <td>10</td>
-                <td>50</td>
-                <td>Done</td>
+                <td>2014</td>
+                <td>Ongoing</td>
             </tr>
             <tr class="success">
-                <td>Class 4th</td>
+                <td>Mr.</td>
+                <td>Ravi</td>
+                <td>Kumar</td>
+                <td>Sharma</td>
+                <td>AO13</td>
+                <td>2/14/15</td>
+                <td>1/12/1996</td>
                 <td>Physics</td>
-                <td>1/1/17</td>
-                <td>1/4/17</td>
-                <td>10</td>
-                <td>50</td>
-                <td>Done</td>
+                <td>2014</td>
+                <td>Ongoing</td>
             </tr>
             </tbody>
         </table>
