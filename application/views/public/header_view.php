@@ -1,11 +1,11 @@
 <html>
 <head>
-    <link rel="stylesheet" href="<?= base_url() ?>public/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="<?= base_url() ?>public/css/style.css" />
+    <link rel="stylesheet" href="<?= base_url() ?>public/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="<?= base_url() ?>public/assets/css/style.css" />
 
-    <script src="<?= base_url()?>public/js/jquery.js"></script>
-    <script src="<?= base_url()?>public/js/bootstrap.js"></script>
-    <title>School ERP changes ridhima and again by akshat</title>
+    <script src="<?= base_url()?>public/assets/js/jquery.js"></script>
+    <script src="<?= base_url()?>public/assets/js/bootstrap.js"></script>
+    <title>School ERP</title>
 </head>
 <body>
 <nav class="navbar navbar-default">
