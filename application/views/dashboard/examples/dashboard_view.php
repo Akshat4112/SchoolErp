@@ -41,7 +41,7 @@
                     <p class="card-content">
 
                     </p>
-                    <a href="#pablo" class="btn btn-primary btn-round">Follow</a>
+                    <a href="#pablo" class="btn btn-primary btn-round">Edit Profile</a>
                 </div>
             </div>
         </div>
