@@ -1,6 +1,6 @@
 <html>
 <head>
-    <link rel="stylesheet" href="<?= base_url() ?>public/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="<?= base_url() ?>public/assets/css/bootswatch_paper.css" />
     <link rel="stylesheet" href="<?= base_url() ?>public/assets/css/style.css" />
 
     <script src="<?= base_url()?>public/assets/js/jquery.js"></script>
@@ -17,7 +17,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">FHT ERPppp</a>
+            <a class="navbar-brand" href="#">School ERP</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -27,7 +27,7 @@
                 <li><a href="#">Contact-us</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Sign in</a></li>
+                <li><a href="#">Help</a></li>
             </ul>
 		</div>
     </div>
