@@ -10,4 +10,7 @@ class Students extends CI_Controller{
     public function students_view(){
         $this->load->view('dashboard/examples/students_view');
     }
+    public function create_student(){
+        $this->load->view('dashboard/examples/students/create_student_view');
+    }
 }
