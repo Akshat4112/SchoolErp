@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link href="<?= base_url()?>public/assets/css/bootswatch_paper.css" rel="stylesheet" />
-    <!--link href="<?= base_url()?>public/assets/css/bootstrap.min.css" rel="stylesheet" /-->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link href="<?=base_url()?>public/assets/css/font-awesome.min.css" rel="stylesheet">
     <link href='<?=base_url()?>public/assets/css/google_fonts.css' rel='stylesheet' type='text/css'>
+    <link href='<?=base_url()?>public/assets/css/demo.css' rel='stylesheet' type='text/css'>
     <title>
         Employees
     </title>
@@ -56,7 +56,7 @@
 <br>
 <br>
 <div class="row" >
-    <div class="col-lg-3"  style="margin-left:20px;" >
+    <div class="col-lg-3"  style="margin-left:20px;" id="here" >
         <div class="panel panel-default">
             <div class="panel-body">
                 <img src="<?= base_url();?>public/assets/img/faces/marc.jpg" height="70px;" width="75px;" >
@@ -90,6 +90,25 @@
     </div>
             
 </div>
+<div class="col-lg-3 DivBlue"  style="margin-left:20px;" >
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <img src="<?= base_url();?>public/assets/img/faces/marc.jpg" height="70px;" width="75px;" >
+                <b>Rajesh Kumar</b><br>
+                Address: Kamla Nagar<br>
+                 <button type="button" class="btn btn-default">Following</button>
+            </div>
+        </div>
+    </div>
+<script >
+ $(document).ready(function() {
+
+    $('#here').on('click', function(){
+        window.location.href='employee_info';
+    });
+
+}); 
+</script>
 <script src="<?= base_url()?>public/assets/js/jquery-3.1.0.min.js" type="text/javascript"></script>
 <script src="<?= base_url()?>public//assets/js/bootstrap.min.js" type="text/javascript"></script>
 </html>
