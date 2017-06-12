@@ -27,7 +27,7 @@
             Tip 2: you can also add an image using data-image tag
         -->
 
-        <div class="col-md-2" style="margin-top: 100px; margin-left: 30px;">
+        <div class="col-md-2" style="margin-top: 100px; margin-left: 25px;">
             <div class="card card-profile">
                 <div class="card-avatar">
                     <a href="#pablo">
