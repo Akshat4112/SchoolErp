@@ -55,11 +55,12 @@
                         <li><a href="#">Channel</a></li>
                         <li><a href="#">Direct Message</a></li>
                         <li><a href="#">Private Channel</a></li>
+                        <button type="button" class="btn btn-default" style="margin-top: 14px;">Mark all as Read</button>
 
 
 
                     </ul>
-                    <form class="navbar-form navbar-left" role="search" style="margin-left: 250px;">
+                    <form class="navbar-form navbar-left" role="search" style="margin-left: 50px;">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Search">
                         </div>
