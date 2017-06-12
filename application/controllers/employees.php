@@ -9,6 +9,7 @@ class Employees extends CI_Controller{
     public function index(){
     	$this->load->view('dashboard/examples/employees_view');
     }
+
     public function employee_info(){
         $this->load->view('dashboard/examples/employeeinfo_view');
     }

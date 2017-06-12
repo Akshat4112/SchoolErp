@@ -1,7 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Innvosign
- * Date: 6/9/2017
- * Time: 4:40 PM
- */
+class Query extends CI_Controller{
+    public function index(){
+
+    }
+}
