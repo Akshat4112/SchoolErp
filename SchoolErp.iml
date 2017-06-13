@@ -9,5 +9,6 @@
     <orderEntry type="module" module-name="Online_notice_board" />
     <orderEntry type="module" module-name="swqmsn" />
     <orderEntry type="module" module-name="backend" />
+    <orderEntry type="module" module-name="magzines" />
   </component>
 </module>
