@@ -6,10 +6,17 @@ class Home extends CI_Controller{
         $this->load->view('public/footer_view');
         
     }
-    public function test(){
-        $q=$this->db->get('users');
-        print_r($q->result());
-
-
+    public function about_us(){
+        $this->load->view('public/about_us');
+    }
+    public function contact_us(){
+        $this->load->view('public/contact_us');
+    }
+    public function help(){
+        $this->load->view('public/help');
+    }
+    public function signin(){
+    }
+    public function register(){
     }
 }

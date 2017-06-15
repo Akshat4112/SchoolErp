@@ -22,12 +22,12 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">About-us</a></li>
-                <li><a href="#">Contact-us</a></li>
+                <li><a href="<?=site_url('home/'); ?>">Home <span class="sr-only">(current)</span></a></li>
+                <li><a href="<?=site_url('home/about_us'); ?>">About-us</a></li>
+                <li><a href="<?=site_url('home/contact_us'); ?>">Contact-us</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Help</a></li>
+                <li><a href="<?=site_url('home/help'); ?>">Help</a></li>
             </ul>
 		</div>
     </div>
