@@ -8,16 +8,6 @@ Release Information
 
 This repo contains in-development code for future releases.
 
-**************************
-Changelog and New Features
-**************************
-
-You can find a list of all changes for each release in the
-
-
-This repo contains in-development code for future releases. To download the
-latest stable release.
-
 *******************
 Server Requirements
 *******************
