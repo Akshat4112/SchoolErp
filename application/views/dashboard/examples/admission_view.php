@@ -31,7 +31,7 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="<?= site_url('admissions/admissions_view');?>">Admission Registers<span class="sr-only">(current)</span></a></li>
+                <li><a href="<?= site_url('admissions/admissions_view');?>">Admission Registers<span class="sr-only">(current)</span></a></li>
                 <li><a href="<?= site_url('admissions/application_view');?>">Applications</a></li>
                 <li><a href="<?= site_url('admissions/admission_analysis_view');?>">Admission Analysis</a></li>
 
@@ -55,7 +55,7 @@
         <div class="col-lg-1"></div>
         <div class="col-lg-10">
     <h5>Admission Registers</h5>
-    <a href="#" class="btn btn-default">Create</a>
+    <a href="<?=site_url('admissions/create_admission_view'); ?>" class="btn btn-default">Create</a>
     <a href="#" class="btn btn-default" style="margin-left: 10px;">Import</a>
     </div>
         <div class="col-lg-1"></div>

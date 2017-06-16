@@ -16,4 +16,8 @@ class Admissions extends CI_Controller{
     public function admission_analysis_view(){
         $this->load->view('dashboard/examples/admissions/admission_analysis_view');
     }
+    public function create_admission_view(){
+        $this->load->view('dashboard/examples/admissions/header_admission');
+        $this->load->view('dashboard/examples/admissions/create_admission_view');
+    }
 }
