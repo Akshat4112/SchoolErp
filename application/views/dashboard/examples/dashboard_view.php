@@ -65,7 +65,6 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="material-icons">notifications</i>
                                 <span class="notification"><!-- No. of notification to be updated from here --></span>
-                                <p class="hidden-lg hidden-md">Notifications</p>
                                 <ul class="dropdown-menu">
                                     <li><a href=""">Notification 1</a></li>
                     </ul>
@@ -74,7 +73,6 @@
                         <li>
                             <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="material-icons">person</i>
-                                <p class="hidden-lg hidden-md">Profile</p>
                                 <ul class="dropdown-menu">
                                     <li><a href="<?= site_url('dashboard/logout'); ?>">Logout</a></li>
                                 </ul>
