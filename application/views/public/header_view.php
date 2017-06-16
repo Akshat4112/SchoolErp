@@ -17,7 +17,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">School ERP</a>
+            <a class="navbar-brand" href="<?=site_url('home/') ?>">School ERP</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -27,6 +27,7 @@
                 <li><a href="<?=site_url('home/contact_us'); ?>">Contact-us</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                <li><a href="<?=site_url('home/register'); ?>">Register</a></li>
                 <li><a href="<?=site_url('home/help'); ?>">Help</a></li>
             </ul>
 		</div>
