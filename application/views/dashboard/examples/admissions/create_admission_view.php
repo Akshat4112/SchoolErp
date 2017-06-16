@@ -12,11 +12,16 @@
             </div>
         </div><hr>
         <div class="row">
-            <div class="col-md-3 col-md-offset-1">
+            <div class="col-md-12">
             <div class="form-group">
-                <div class="col-lg-10 col-lg-offset-2">
-                    <button type="reset" class="btn btn-primary">Confirm</button>
+                <div class="col-lg-12 col-lg-offset-1">
+                    <a href="<?= site_url('admissions/confirm_view');?>"><button type="reset" class="btn btn-primary">Confirm</button></a>
                     <button type="submit" class="btn btn-default">Cancel</button>
+                    <button type="submit" class="btn btn-success" style="margin-left: 230px;">Draft</button>
+                    <button type="submit" class="btn btn-default">Confirmed</button>
+                    <button type="submit" class="btn btn-default">Application Gethering</button>
+                    <button type="submit" class="btn btn-default">Admission Process</button>
+                    <button type="submit" class="btn btn-default">Done</button>
                 </div>
             </div>
             </div>

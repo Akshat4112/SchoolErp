@@ -20,4 +20,21 @@ class Admissions extends CI_Controller{
         $this->load->view('dashboard/examples/admissions/header_admission');
         $this->load->view('dashboard/examples/admissions/create_admission_view');
     }
+    public function confirm_view(){
+        $this->load->view('dashboard/examples/admissions/header_admission');
+        $this->load->view('dashboard/examples/admissions/confirm_view');
+    }
+    public function application_gathering(){
+        $this->load->view('dashboard/examples/admissions/header_admission');
+        $this->load->view('dashboard/examples/admissions/application_gathering_view.php');
+    }
+    public function admission_process(){
+        $this->load->view('dashboard/examples/admissions/header_admission');
+        $this->load->view('dashboard/examples/admissions/admission_process.php');
+    }
+    public function done(){
+        $this->load->view('dashboard/examples/admissions/header_admission');
+        $this->load->view('dashboard/examples/admissions/done_view.php');
+    }
+
 }

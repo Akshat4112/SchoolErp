@@ -25,12 +25,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Admissions</a>
+            <a class="navbar-brand" href="<?= site_url('admissions/admissions_view')?>">Admissions</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="<?= site_url('admissions/admissions_view');?>">Admission Registers<span class="sr-only">(current)</span></a></li>
+                <li><a href="<?= site_url('admissions/admissions_view');?>">Admission Registers<span class="sr-only">(current)</span></a></li>
                 <li><a href="<?= site_url('admissions/application_view');?>">Applications</a></li>
                 <li><a href="<?= site_url('admissions/admission_analysis_view');?>">Admission Analysis</a></li>
 
