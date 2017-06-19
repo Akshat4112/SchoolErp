@@ -77,7 +77,7 @@
                                 <i class="material-icons">info_outline</i>
                             </div>
                             <div class="card-content">
-                                <p class="category"><a href="<?= site_url('students/students_view'); ?>"> Students</a></p>
+                                <p class="category"><a href="<?= site_url('students/dashboard'); ?>"> Students</a></p>
                                 <h3 class="title">S</h3>
                             </div>
                         </div></a>
