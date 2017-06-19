@@ -66,7 +66,7 @@
                                 <i class="material-icons">store</i>
                             </div>
                             <div class="card-content">
-                                <p class="category"><a href="<?= site_url('faculties/faculties_view'); ?>"> Faculties</a></p>
+                                <p class="category"><a href="<?= site_url('faculties/dashboard'); ?>"> Faculties</a></p>
                                 <h3 class="title">F</h3>
                             </div>
                         </div></a>
