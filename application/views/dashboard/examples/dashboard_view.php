@@ -1,96 +1,51 @@
-<!doctype html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url()?>public/assets/img/apple-icon.png" />
-    <link rel="icon" type="image/png" href="<?= base_url()?>public/assets/img/favicon.png" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Dashboard</title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
-    <!-- Bootstrap core CSS     -->
-    <link href="<?= base_url()?>public/assets/css/bootstrap.min.css" rel="stylesheet" />
-    <!--  Material Dashboard CSS    -->
     <link href="<?= base_url()?>public/assets/css/material-dashboard.css" rel="stylesheet"/>
-    <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="<?= base_url()?>public/assets/css/demo.css" rel="stylesheet" />
-    <!--     Fonts and icons     -->
+<!--     Fonts and icons     -->
     <link href="<?=base_url()?>public/assets/css/font-awesome.min.css" rel="stylesheet">
     <link href='<?=base_url()?>public/assets/css/google_fonts.css' rel='stylesheet' type='text/css'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <link href="<?= base_url()?>public/assets/css/bootswatch_paper.css" rel="stylesheet" />
+    <link href="<?=base_url()?>public/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href='<?=base_url()?>public/assets/css/google_fonts.css' rel='stylesheet' type='text/css'>
+    <title>
+        Dashboard
+    </title>
 </head>
 <body>
-<div class="wrapper">
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header"> <a class="navbar-brand" href="<?= site_url('dashboard/')?>">Dashboard</a>
+    </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
 
-        <!--
-            Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
-
-            Tip 2: you can also add an image using data-image tag
-        -->
-
-        <div class="col-md-2" style="margin-top: 100px; margin-left: 25px;">
-            <div class="card card-profile">
-                <div class="card-avatar">
-                    <a href="#pablo">
-                        <img class="img" src="<?= base_url();?>public/assets/img/faces/marc.jpg" />
-                    </a>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
                 </div>
-
-                <div class="content">
-                    <h6 class="category text-gray">Administrator</h6>
-                    <h4 class="card-title">Ravi Shukla</h4>
-                    <p class="card-content">
-
-                    </p>
-                    <a href="#pablo" class="btn btn-primary btn-round">Edit Profile</a>
-                </div>
-            </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Akshat <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Prefrences</a></li>
+                        <li><a href="<?= site_url('dashboard/logout');?>">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
+    </div>
+</nav>
 
 
-    <div class="main-panel">
-        <nav class="navbar navbar-transparent navbar-absolute">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Dashboard</a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="material-icons">notifications</i>
-                                <span class="notification"><!-- No. of notification to be updated from here --></span>
-                                <ul class="dropdown-menu">
-                                    <li><a href=""">Notification 1</a></li>
-                    </ul>
-                    </a>
-                    </li>
-                        <li>
-                            <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="material-icons">person</i>
-                                <ul class="dropdown-menu">
-                                    <li><a href="<?= site_url('dashboard/logout'); ?>">Logout</a></li>
-                                </ul>
-                            </a>
-                        </li>
-                    </ul>
-                    <form class="navbar-form navbar-right" role="search">
-                        <div class="form-group  is-empty">
-                            <input type="text" class="form-control" placeholder="Search">
-                            <span class="material-input"></span>
-                        </div>
-                        <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                            <i class="material-icons">search</i><div class="ripple-container"></div>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </nav>
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
