@@ -6,7 +6,7 @@
  * Time: 10:40 AM
  */
 class Admissions extends CI_Controller{
-    public function index(){}
+
     public function admissions_view(){
         $this->load->view('dashboard/examples/admissions/header_admission');
         $this->load->view('dashboard/examples/admission_view');
