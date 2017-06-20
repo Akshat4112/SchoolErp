@@ -1,13 +1,14 @@
-<?php include 'header_view.php'?>
 <div class="container">
     <div class="col-md-6 col-md-offset-3">
 <form class="form-horizontal" method="post" name="reg">
+    <?php echo validation_errors(); ?>
+    <?php echo form_open('form'); ?>
     <fieldset>
         <legend>Registration Page</legend>
         <div class="form-group">
             <label for="inputEmail" class="col-lg-2 control-label">Email</label>
             <div class="col-lg-10">
-                <input type="text" class="form-control" id="inputEmail" placeholder="Email" name="regemail">
+                <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="regemail">
             </div>
         </div>
         <div class="form-group">

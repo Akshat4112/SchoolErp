@@ -1,10 +1,6 @@
 <div class="container">
     <div class="col-sm-3"></div>
     <div class="col-sm-6">
-
-
-
-
         <form class="form-horizontal" method="post" name="form2">
             <fieldset>
                 <legend>Login</legend>
@@ -28,7 +24,6 @@
                 </div>
             </fieldset>
         </form>
-
     </div>
     <div class="col-sm-3"></div>
 </div>
