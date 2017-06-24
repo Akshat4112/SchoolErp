@@ -88,7 +88,7 @@
                                     <i class="material-icons">info_outline</i>
                                 </div>
                                 <div class="card-content">
-                                    <p class="category"><a href="<?= site_url('admissions/admissions_view'); ?>"> Admissions</a></p>
+                                    <p class="category"><a href="<?= site_url('admissions'); ?>"> Admissions</a></p>
                                     <h3 class="title">A</h3>
                                 </div>
                             </div></a>

@@ -10,6 +10,13 @@ class Home extends CI_Controller{
     }
 public function index(){
         $this->load->view('public/content_view');
+
+        $email=$this->input->post('email');
+        $password=$this->input->post('password');
+
+        if($email='akshat41121995@gmail.com' && $password=='nicola'){
+            echo 'You are authorised';
+        }
     }
     public function about_us(){
         $this->load->view('public/about_us');
@@ -24,19 +31,5 @@ public function index(){
 
         $this->load->view('public/register_view');
         $this->load->model('register');
-
-        $regemail = $this->input->post('regemail');
-        $regpass = $this->input->post('regpass');
-        $regconpass = $this->input->post('regconpass');
-
-        $data=array(
-            'email'=>$regemail,
-            'pass'=>$regpass,
-            'con_pass'=>$regconpass
-        );
-        $tablename="register";
-        $this->register->insert($tablename,$data);
-
-
     }
 }

@@ -1,12 +1,6 @@
 <?php
-
 defined('BASEPATH') OR exit('No direct script access allowed');
-/**
- * Created by PhpStorm.
- * User: Akshat
- * Date: 6/5/2017
- * Time: 10:40 AM
- */
+
 class Admissions extends CI_Controller{
     public function __construct()
     {
@@ -15,9 +9,37 @@ class Admissions extends CI_Controller{
         $this->load->view('dashboard/examples/admissions/footer_admission');
     }
 
-    public function admissions_view(){
-
+    public function index(){
         $this->load->view('dashboard/examples/admission_view');
+    }
+
+    public function create_admission_view(){
+        $this->load->view('dashboard/examples/admissions/create_admission_view');
+    }
+    public function import(){
+        $this->load->view('dashboard/examples/admissions/import_view');
+    }
+    public function export(){
+        $this->load->view('dashboard/examples/admissions/export_view');
+    }
+    public function admission_form(){
+
+        $this->load->view('dashboard/examples/admissions/admission_form_view');
+
+    }
+    public function send_sms(){
+
+        $this->load->view('dashboard/examples/admissions/send_sms.php');
+
+    }
+    public function id_card(){
+
+        $this->load->view('dashboard/examples/admissions/id_card.php');
+
+    }
+    public function create_list(){
+
+        $this->load->view('dashboard/examples/admissions/create_list_view');
 
     }
     public function application_view(){
@@ -28,31 +50,6 @@ class Admissions extends CI_Controller{
     public function admission_analysis_view(){
 
         $this->load->view('dashboard/examples/admissions/admission_analysis_view');
-
-    }
-    public function create_admission_view(){
-
-        $this->load->view('dashboard/examples/admissions/create_admission_view');
-
-    }
-    public function confirm_view(){
-
-        $this->load->view('dashboard/examples/admissions/confirm_view');
-
-    }
-    public function application_gathering(){
-
-        $this->load->view('dashboard/examples/admissions/application_gathering_view.php');
-
-    }
-    public function admission_process(){
-
-        $this->load->view('dashboard/examples/admissions/admission_process.php');
-
-    }
-    public function done(){
-
-        $this->load->view('dashboard/examples/admissions/done_view.php');
 
     }
 

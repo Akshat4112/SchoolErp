@@ -1,9 +1,14 @@
 <div class="row">
         <div class="col-lg-1"></div>
         <div class="col-lg-10">
-    <h5>Admission Registers</h5>
+    <h5>Admissions </h5>
     <a href="<?=site_url('admissions/create_admission_view'); ?>" class="btn btn-default">Create</a>
-    <a href="#" class="btn btn-default" style="margin-left: 10px;">Import</a>
+    <a href="<?=site_url('admissions/import'); ?>" class="btn btn-default">Import</a>
+    <a href="<?=site_url('admissions/export'); ?>" class="btn btn-default">Export</a>
+    <a href="<?=site_url('admissions/admission_form'); ?>" class="btn btn-default">Admissions Form</a>
+    <a href="<?=site_url('admissions/send_sms'); ?>" class="btn btn-default">Send SMS</a>
+    <a href="<?=site_url('admissions/id_card'); ?>" class="btn btn-default">ID Card</a>
+    <a href="<?=site_url('admissions/create_list'); ?>" class="btn btn-default">List</a>
     </div>
         <div class="col-lg-1"></div>
 </div>
