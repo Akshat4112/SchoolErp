@@ -55,7 +55,7 @@
                                 <i class="material-icons">content_copy</i>
                             </div>
                             <div class="card-content">
-                                <p class="category"><a href="<?= site_url('discuss/discuss_view'); ?>">Discuss</a></p>
+                                <p class="category"><a href="<?= site_url('discuss/discuss_view'); ?>">Fees Plan</a></p>
                                 <h3 class="title">D</h3>
                             </div>
                         </div></a>
@@ -66,7 +66,7 @@
                                 <i class="material-icons">store</i>
                             </div>
                             <div class="card-content">
-                                <p class="category"><a href="<?= site_url('faculties/dashboard'); ?>"> Faculties</a></p>
+                                <p class="category"><a href="<?= site_url('faculties/dashboard'); ?>"> Fees Reciept</a></p>
                                 <h3 class="title">F</h3>
                             </div>
                         </div></a>
@@ -77,7 +77,7 @@
                                 <i class="material-icons">info_outline</i>
                             </div>
                             <div class="card-content">
-                                <p class="category"><a href="<?= site_url('students/dashboard'); ?>"> Students</a></p>
+                                <p class="category"><a href="<?= site_url('students/dashboard'); ?>"> Transport</a></p>
                                 <h3 class="title">S</h3>
                             </div>
                         </div></a>
@@ -103,7 +103,7 @@
                                         <i class="material-icons">content_copy</i>
                                     </div>
                                     <div class="card-content">
-                                        <p class="category"><a href="<?= site_url('accounting/accounting_view'); ?>"> Accounting</a></p>
+                                        <p class="category"><a href="<?= site_url('accounting/accounting_view'); ?>"> Fees Card</a></p>
                                         <h3 class="title">Ac</h3>
                                     </div>
 
@@ -115,7 +115,7 @@
                                         <i class="material-icons">store</i>
                                     </div>
                                     <div class="card-content">
-                                        <p class="category"><a href="<?= site_url('attendance/attendance_view'); ?>"> Attendance</a></p>
+                                        <p class="category"><a href="<?= site_url('attendance/attendance_view'); ?>"> Demand Register</a></p>
                                         <h3 class="title">At</h3>
                                     </div>
                                 </div></a>
@@ -126,7 +126,7 @@
                                         <i class="material-icons">info_outline</i>
                                     </div>
                                     <div class="card-content">
-                                        <p class="category"><a href="<?= site_url('employees/employees_view'); ?>"> Employees</a></p>
+                                        <p class="category"><a href="<?= site_url('employees/employees_view'); ?>"> Library</a></p>
                                         <h3 class="title">E</h3>
                                     </div>
                                 </div></a>
@@ -153,7 +153,7 @@
                                                     <i class="material-icons">content_copy</i>
                                                 </div>
                                                 <div class="card-content">
-                                                    <p class="category"><a href="<?= site_url('accounting/accounting_view'); ?>"> KPIs</a></p>
+                                                    <p class="category"><a href="<?= site_url('accounting/accounting_view'); ?>">Fees Day Book</a></p>
                                                     <h3 class="title">K</h3>
                                                 </div>
 
@@ -165,7 +165,7 @@
                                                     <i class="material-icons">store</i>
                                                 </div>
                                                 <div class="card-content">
-                                                    <p class="category"><a href="<?= site_url('attendance/attendance_view'); ?>"> Dashboards</a></p>
+                                                    <p class="category"><a href="<?= site_url('attendance/attendance_view'); ?>"> Dues List</a></p>
                                                     <h3 class="title">D</h3>
                                                 </div>
                                             </div></a>
@@ -176,7 +176,7 @@
                                                     <i class="material-icons">info_outline</i>
                                                 </div>
                                                 <div class="card-content">
-                                                    <p class="category"><a href="<?= site_url('employees/employees_view'); ?>"> Settings</a></p>
+                                                    <p class="category"><a href="<?= site_url('employees/employees_view'); ?>"> Summary</a></p>
                                                     <h3 class="title">S</h3>
                                                 </div>
                                             </div></a>
