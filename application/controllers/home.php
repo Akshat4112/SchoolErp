@@ -44,4 +44,13 @@ class Home extends CI_Controller
         $this->load->view('public/register_view');
         $this->load->model('register');
     }
+    public function suggestions(){
+        $this->load->view('public/suggestions');
+    }
+    public function query(){
+        $this->load->view('public/query');
+    }
+    public function feedback(){
+        $this->load->view('public/feedback');
+    }
 }

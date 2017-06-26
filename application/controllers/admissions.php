@@ -20,9 +20,7 @@ class Admissions extends CI_Controller{
     }
     public function student_details(){
         $this->load->view('dashboard/examples/admissions/create_admission_view');
-
-        $this->load->library('form_validation');
-        $this->form_validation->set_rules('student_first_name','First Name','required|trim',array('required'=>'This filed is required'));
+        $this->form_validation->set_rules('student_first_name','First Name','required|trim');
 
         $this->form_validation->set_rules('student_last_name','Last Name','required|trim');
         /***
@@ -82,6 +80,68 @@ class Admissions extends CI_Controller{
         }
 
     }
+    public function address_details(){
+
+        $house_no = $this->input->post('house_no');
+        $street_name = $this->input->post('street_name');
+        $other_info = $this->input->post('other_info');
+        $zip_code = $this->input->post('zip_code');
+        $city = $this->input->post('city');
+        $state = $this->input->post('state');
+        $country = $this->input->post('country');
+
+        $data=array(
+            'house_no'=>$house_no,
+            'street_name'=>$street_name,
+            'other_info'=>$other_info,
+            'zip_code'=>$zip_code,
+            'city'=>$city,
+            'state'=>$state,
+            'country'=>$country
+        );
+
+        $this->db->insert('address',$data);
+    }
+    public function other_info_details(){
+        $fathers_first_name=$this->input->post('fathers_first_name');
+        $fathers_middle_name=$this->input->post('fathers_middle_name');
+        $fathers_last_name=$this->input->post('fathers_last_name');
+        $f_mobile=$this->input->post('f_mobile');
+        $f_qual=$this->input->post('f_qual');
+        $f_occu=$this->input->post('f_qual');
+        $f_dob=$this->input->post('f_dob');
+        $f_photo=$this->input->post('f_photo');
+        $mothers_first_name=$this->input->post('mothers_first_name');
+        $mothers_middle_name=$this->input->post('mothers_middle_name');
+        $mothers_last_name=$this->input->post('mothers_last_name');
+        $m_mobile=$this->input->post('m_mobile');
+        $m_qual=$this->input->post('m_qual');
+        $m_occu=$this->input->post('m_occu');
+        $m_dob=$this->input->post('m_dob');
+        $m_photo=$this->input->post('m_photo');
+        $parents_wedding_date=$this->input->post('parents_wedding_date');
+
+        $data=array(
+            'fathers_first_name'=>$fathers_first_name,
+            'fathers_middle_name'=>$fathers_middle_name,
+            'fathers_last_name'=>$fathers_last_name,
+            'f_mobile'=>$f_mobile,
+            'f_qual'=>$f_qual,
+            'f_occu'=>$f_occu,
+            'f_dob'=>$f_dob,
+            'f_photo'=>$f_photo,
+            'mothers_first_name'=>$mothers_first_name,
+            'mothers_middle_name'=>$mothers_middle_name,
+            'mothers_last_name'=>$mothers_last_name,
+            'm_mobile'=>$m_mobile,
+            'm_qual'=>$m_qual,
+            'm_occu'=>$m_occu,
+            'm_dob'=>$m_dob,
+            'm_photo'=>$m_photo,
+            'parents_wedding_date'=>date('dd-mm-yyyy')
+            );
+        $this->db->insert('other_info',$data);
+    }
     public function import(){
         $this->load->view('dashboard/examples/admissions/import_view');
     }
@@ -106,16 +166,6 @@ class Admissions extends CI_Controller{
     public function create_list(){
 
         $this->load->view('dashboard/examples/admissions/create_list_view');
-
     }
-    public function application_view(){
 
-        $this->load->view('dashboard/examples/admissions/application_view');
-
-    }
-    public function admission_analysis_view(){
-
-        $this->load->view('dashboard/examples/admissions/admission_analysis_view');
-
-    }
 }

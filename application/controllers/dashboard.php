@@ -11,7 +11,20 @@ class Dashboard extends CI_Controller{
         $this->load->view('dashboard/examples/dashboard_view');
 
     }
-     public function logout(){
+    public function documentation()
+    {
+        $this->load->view('dashboard/examples/dashboards/documentation');
+
+    }
+    public function support()
+    {
+        $this->load->view('dashboard/examples/dashboards/support');
+    }
+    public function prefrences()
+    {
+        $this->load->view('dashboard/examples/dashboards/prefrences');
+    }
+    public function logout(){
         session_destroy();
         redirect('/');
     }

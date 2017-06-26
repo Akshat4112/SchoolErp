@@ -28,16 +28,16 @@
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Search">
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Akshat
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Prefrences</a></li>
+                        <li><a href="<?= site_url('dashboard/documentation'); ?>">Documentation</a></li>
+                        <li><a href="<?= site_url('dashboard/support'); ?>">Support</a></li>
+                        <li><a href="<?= site_url('dashboard/prefrences'); ?>">Prefrences</a></li>
                         <li><a href="<?= site_url('dashboard/logout'); ?>">Logout</a></li>
                     </ul>
                 </li>
@@ -58,7 +58,7 @@
                         </div>
                         <div class="card-content">
                             <p class="category"><a href="<?= site_url('discuss/discuss_view'); ?>">Fees Plan</a></p>
-                            <h3 class="title">D</h3>
+                            <h3 class="title"></h3>
                         </div>
                     </div>
                 </a>
@@ -71,7 +71,7 @@
                         </div>
                         <div class="card-content">
                             <p class="category"><a href="<?= site_url('faculties/dashboard'); ?>"> Fees Reciept</a></p>
-                            <h3 class="title">F</h3>
+                            <h3 class="title"></h3>
                         </div>
                     </div>
                 </a>
@@ -84,7 +84,7 @@
                         </div>
                         <div class="card-content">
                             <p class="category"><a href="<?= site_url('students/dashboard'); ?>"> Transport</a></p>
-                            <h3 class="title">S</h3>
+                            <h3 class="title"></h3>
                         </div>
                     </div>
                 </a>
@@ -97,7 +97,7 @@
                         </div>
                         <div class="card-content">
                             <p class="category"><a href="<?= site_url('admissions'); ?>"> Admissions</a></p>
-                            <h3 class="title">A</h3>
+                            <h3 class="title"></h3>
                         </div>
                     </div>
                 </a>
@@ -115,7 +115,7 @@
                                 <div class="card-content">
                                     <p class="category"><a href="<?= site_url('accounting/accounting_view'); ?>"> Fees
                                             Card</a></p>
-                                    <h3 class="title">Ac</h3>
+                                    <h3 class="title"></h3>
                                 </div>
 
                             </div>
@@ -130,7 +130,7 @@
                                 <div class="card-content">
                                     <p class="category"><a href="<?= site_url('attendance/attendance_view'); ?>"> Demand
                                             Register</a></p>
-                                    <h3 class="title">At</h3>
+                                    <h3 class="title"></h3>
                                 </div>
                             </div>
                         </a>
@@ -144,7 +144,7 @@
                                 <div class="card-content">
                                     <p class="category"><a href="<?= site_url('employees/employees_view'); ?>">
                                             Library</a></p>
-                                    <h3 class="title">E</h3>
+                                    <h3 class="title"></h3>
                                 </div>
                             </div>
                         </a>
@@ -158,7 +158,7 @@
                                 <div class="card-content">
                                     <p class="category"><a href="<?= site_url('time_table/time_table_view'); ?>"> Time
                                             Table</a></p>
-                                    <h3 class="title">TT</h3>
+                                    <h3 class="title"></h3>
                                 </div>
 
                             </div>
@@ -178,7 +178,7 @@
                                             <p class="category"><a
                                                         href="<?= site_url('accounting/accounting_view'); ?>">Fees Day
                                                     Book</a></p>
-                                            <h3 class="title">K</h3>
+                                            <h3 class="title"></h3>
                                         </div>
 
                                     </div>
@@ -194,7 +194,7 @@
                                             <p class="category"><a
                                                         href="<?= site_url('attendance/attendance_view'); ?>"> Dues
                                                     List</a></p>
-                                            <h3 class="title">D</h3>
+                                            <h3 class="title"></h3>
                                         </div>
                                     </div>
                                 </a>
@@ -208,7 +208,7 @@
                                         <div class="card-content">
                                             <p class="category"><a href="<?= site_url('employees/employees_view'); ?>">
                                                     Summary</a></p>
-                                            <h3 class="title">S</h3>
+                                            <h3 class="title"></h3>
                                         </div>
                                     </div>
                                 </a>
@@ -223,7 +223,7 @@
                                             <p class="category"><a
                                                         href="<?= site_url('time_table/time_table_view'); ?>">Admin</a>
                                             </p>
-                                            <h3 class="title">Ad</h3>
+                                            <h3 class="title"></h3>
                                         </div>
 
                                     </div>
@@ -237,22 +237,22 @@
                         <nav class="pull-left">
                             <ul>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?= site_url('home/feedback')?>">
                                         Feedback
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?= site_url('home/query')?>">
                                         Query
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?= site_url('home/suggestions')?>">
                                         Suggestions
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?= site_url('home/help')?>">
                                         Help
                                     </a>
                                 </li>

@@ -155,60 +155,62 @@
             </form>
         </div>
         <div class="tab-pane fade" id="address" style="margin-top: 20px;">
-            <form class="form-horizontal">
+            <?php echo validation_errors(); ?>
+            <?php echo form_open('admissions/address_details', ['class' => 'form-horizontal']); ?>
                 <fieldset>
                     <div class="form-group">
                         <label for="inputEmail" class="col-lg-2 control-label">House No.</label>
                         <div class="col-lg-6">
-                            <input type="text" class="form-control" id="inputEmail" placeholder="Enter House Number">
+                            <input type="text" class="form-control" id="inputEmail" placeholder="Enter House Number" name="house_no">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputEmail" class="col-lg-2 control-label">Street Name</label>
                         <div class="col-lg-6">
-                            <input type="text" class="form-control" id="inputEmail" placeholder="Enter Street Name">
+                            <input type="text" class="form-control" id="inputEmail" placeholder="Enter Street Name" name="street_name">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputEmail" class="col-lg-2 control-label">Other Info</label>
                         <div class="col-lg-6">
                             <input type="text" class="form-control" id="inputEmail"
-                                   placeholder="Enter any Landmark (If possible)">
+                                   placeholder="Enter any Landmark (If possible)" name="other_info">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputEmail" class="col-lg-2 control-label">Zip Code</label>
                         <div class="col-lg-6">
-                            <input type="text" class="form-control" id="inputEmail" placeholder="Enter Zipcode">
+                            <input type="text" class="form-control" id="inputEmail" placeholder="Enter Zipcode" name="zip_code">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputEmail" class="col-lg-2 control-label">City</label>
                         <div class="col-lg-6">
-                            <input type="text" class="form-control" id="inputEmail" placeholder="Enter City">
+                            <input type="text" class="form-control" id="inputEmail" placeholder="Enter City" name="city">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputEmail" class="col-lg-2 control-label">State</label>
                         <div class="col-lg-6">
-                            <input type="text" class="form-control" id="inputEmail" placeholder="Enter State">
+                            <input type="text" class="form-control" id="inputEmail" placeholder="Enter State" name="state">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputEmail" class="col-lg-2 control-label">Country</label>
                         <div class="col-lg-6">
-                            <input type="text" class="form-control" id="inputEmail" placeholder="Enter Country">
+                            <input type="text" class="form-control" id="inputEmail" placeholder="Enter Country" name="country">
                         </div>
                     </div>
                 </fieldset>
-                <button type="reset" class="btn btn-primary" style="margin-left: 150px;">Save</button>
-                <button type="submit" class="btn btn-default">Discard</button>
+            <?php echo form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default']),
+            form_submit(['name' => 'Submit', 'value' => 'Update', 'class' => 'btn btn-primary']); ?>
             </form>
         </div>
         <div class="tab-pane fade" id="parent">
             <div class="row">
                 <div class="col-md-5">
-                    <form class="form-horizontal">
+                    <?php echo validation_errors(); ?>
+                    <?php echo form_open('admissions/other_info_details', ['class' => 'form-horizontal']); ?>
                         <fieldset>
                             <div>
                                 <h5>Father's Details</h5>
@@ -216,45 +218,45 @@
                             <div class="form-group">
                                 <label for="inputText" class="col-lg-2 control-label">First Name</label>
                                 <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="inputText" placeholder="First Name">
+                                    <input type="text" class="form-control" id="inputText" placeholder="First Name" name="fathers_first_name">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputText" class="col-lg-2 control-label">Middle Name</label>
                                 <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="inputText" placeholder="Middle Name">
+                                    <input type="text" class="form-control" id="inputText" placeholder="Middle Name" name="fathers_middle_name">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputText" class="col-lg-2 control-label">Last Name</label>
                                 <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="inputText" placeholder="Last Name">
+                                    <input type="text" class="form-control" id="inputText" placeholder="Last Name" name="fathers_last_name">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputText" class="col-lg-2 control-label">DOB</label>
                                 <div class="col-lg-10">
-                                    <input type="date" class="form-control" id="inputText" placeholder="Last Name">
+                                    <input type="date" class="form-control" id="inputText" placeholder="DOB" name="f_dob">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="select" class="col-lg-2 control-label">Mobile</label>
                                 <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="inputText" placeholder="Mobile">
+                                    <input type="text" class="form-control" id="inputText" placeholder="Mobile" name="f_mobile">
                                     <br>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="select" class="col-lg-2 control-label">Qualification</label>
                                 <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="inputText" placeholder="Qualification">
+                                    <input type="text" class="form-control" id="inputText" placeholder="Qualification" name="f_qual">
                                     <br>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="select" class="col-lg-2 control-label">Occupation</label>
                                 <div class="col-lg-10">
-                                    <select class="form-control" id="select">
+                                    <select class="form-control" id="select" name="f_occu">
                                         <option>Business</option>
                                         <option>Service</option>
                                     </select>
@@ -264,7 +266,7 @@
                             <div class="form-group">
                                 <label for="inputText" class="col-lg-2 control-label">Photo</label>
                                 <div class="col-lg-10">
-                                    <input type="file" name="fphoto">
+                                    <input type="file" name="f_photo">
                                 </div>
                             </div>
                 </div>
@@ -276,49 +278,49 @@
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">First Name</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText" placeholder="First Name">
+                            <input type="text" class="form-control" id="inputText" placeholder="First Name" name="mothers_first_name">
                         </div>
                         <br><br>
                     </div>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Middle Name</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText" placeholder="Middle Name">
+                            <input type="text" class="form-control" id="inputText" placeholder="Middle Name" name="mothers_middle_name">
                         </div>
                         <br><br>
                     </div>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Last Name</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText" placeholder="Last Name">
+                            <input type="text" class="form-control" id="inputText" placeholder="Last Name" name="mothers_last_name">
                         </div>
                         <br><br>
                     </div>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">DOB</label>
                         <div class="col-lg-10">
-                            <input type="date" class="form-control" id="inputText" placeholder="Last Name">
+                            <input type="date" class="form-control" id="inputText" placeholder="DOB" name="m_dob">
                         </div>
                         <br><br>
                     </div>
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Mobile</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText" placeholder="Mobile">
+                            <input type="text" class="form-control" id="inputText" placeholder="Mobile" name="m_mobile">
                         </div>
                         <br><br>
                     </div>
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Qualification</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText" placeholder="Qualification">
+                            <input type="text" class="form-control" id="inputText" placeholder="Qualification" name="m_qual">
                             <br>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Occupation</label>
                         <div class="col-lg-10">
-                            <select class="form-control" id="select">
+                            <select class="form-control" id="select" name="m_occu">
                                 <option>Business</option>
                                 <option>Service</option>
                             </select><br>
@@ -328,13 +330,12 @@
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Photo</label>
                         <div class="col-lg-10">
-                            <input type="file" name="fphoto">
+                            <input type="file" name="m_photo">
                         </div>
                         <br>
                     </div>
-                    <button type="reset" class="btn btn-primary" style="margin-left: 25px; margin-top: 20px;">Save
-                    </button>
-                    <button type="submit" class="btn btn-default" style="margin-top: 20px;">Discard</button>
+                    <?php echo form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default']),
+                    form_submit(['name' => 'Submit', 'value' => 'Update', 'class' => 'btn btn-primary']); ?>
                 </div>
             </div>
             </fieldset>

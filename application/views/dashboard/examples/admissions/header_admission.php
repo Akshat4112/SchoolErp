@@ -24,10 +24,14 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="<?= site_url('admissions/admissions_view'); ?>">Admission Registers</a></li>
-                <li><a href="<?= site_url('admissions/application_view'); ?>">Applications</a></li>
-                <li><a href="<?= site_url('admissions/admission_analysis_view'); ?>">Admission Analysis</a></li>
-
+                <li><a href="<?= site_url('admissions'); ?>">Admission Registers</a></li>
+                <li><a href="<?=site_url('admissions/create_admission_view'); ?>">Create</a></li>
+                <li><a href="<?=site_url('admissions/import'); ?>">Import</a></li>
+                <li><a href="<?=site_url('admissions/export'); ?>">Export</a></li>
+                <li><a href="<?=site_url('admissions/admission_form'); ?>">Admissions Form</a></li>
+                <li><a href="<?=site_url('admissions/send_sms'); ?>">Send SMS</a></li>
+                <li><a href="<?=site_url('admissions/id_card'); ?>">ID Card</a></li>
+                <li><a href="<?=site_url('admissions/create_list'); ?>">List</a></li>
             </ul>
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
@@ -40,10 +44,10 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Akshat
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Prefrences</a></li>
-                        <li><a href="#">Logout</a></li>
+                        <li><a href="<?=site_url('dashboard/documentation') ?>">Documentation</a></li>
+                        <li><a href="<?=site_url('dashboard/support') ?>">Support</a></li>
+                        <li><a href="<?=site_url('dashboard/prefrences') ?>">Prefrences</a></li>
+                        <li><a href="<?=site_url('dashboard/logout') ?>">Logout</a></li>
                     </ul>
                 </li>
             </ul>
