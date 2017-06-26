@@ -2,7 +2,6 @@
     <h5 style="margin-left: 70px;">Admission Analysis Report</h5>
     <div class="col-lg-4"></div>
     <div class="col-lg-4">
-
         <form class="form-horizontal">
             <fieldset>
                 <div class="form-group">

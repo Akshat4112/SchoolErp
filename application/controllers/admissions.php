@@ -19,9 +19,10 @@ class Admissions extends CI_Controller{
 
     }
     public function student_details(){
+        $this->load->view('dashboard/examples/admissions/create_admission_view');
 
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('student_first_name','First Name','required|trim');
+        $this->form_validation->set_rules('student_first_name','First Name','required|trim',array('required'=>'This filed is required'));
 
         $this->form_validation->set_rules('student_last_name','Last Name','required|trim');
         /***
@@ -73,8 +74,11 @@ class Admissions extends CI_Controller{
                 'student_dob' => $student_dob
             );
             $this->db->insert('student', $data);
+            echo  $message['success'] =  'Student Information is successfully saved';
         }else{
-            echo 'all fields required';
+            echo  $message['failed']='All Fields are Required';
+            redirect('admissions/create_admission_view');
+
         }
 
     }

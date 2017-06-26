@@ -16,13 +16,14 @@
         <div class="tab-pane fade active in" id="home" style="margin-top: 15px;">
             <div class="row">
                 <div class="col-md-5">
+                    <?php echo validation_errors(); ?>
                     <?php echo form_open('admissions/student_details', ['class' => 'form-horizontal']); ?>
                     <fieldset>
                         <div class="form-group">
                             <label for="inputText" class="col-lg-2 control-label">First Name</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputText" placeholder="First Name"
-                                       name="student_first_name">
+                                <?php echo form_input(['name' => 'student_first_name', 'class' => 'form-control', 'placeholder' => 'Enter First Name', 'value' => set_value('student_first_name')]); ?>
+                                <?php echo form_error('student_first_name', "<p class='text-danger'>", "</p>"); ?>
                             </div>
                         </div>
                         <div class="form-group">
