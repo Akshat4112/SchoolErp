@@ -10,13 +10,15 @@ class Admissions extends CI_Controller{
     }
 
     public function index(){
-        $this->load->view('dashboard/examples/admission_view');
+        $query = $this->db->query('SELECT *from student');
+        $data['det']= $query->result_array();
+
+
+        $this->load->view('dashboard/examples/admission_view',$data);
     }
 
     public function create_admission_view(){
-
         $this->load->view('dashboard/examples/admissions/create_admission_view');
-
     }
     public function student_details(){
         $this->load->view('dashboard/examples/admissions/create_admission_view');

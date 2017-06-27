@@ -1,3 +1,4 @@
+
 <div class="row">
     <div class="col-lg-1">
 
@@ -15,6 +16,7 @@
         <table class="table table-striped table-hover ">
             <thead>
             <tr>
+
                 <th>Admission No.</th>
                 <th>Name</th>
                 <th>Father</th>
@@ -31,10 +33,21 @@
             </thead>
             <tbody>
             <tr>
-                <td>Class 1st</td>
+                <td></td>
+                <td><pre><?php
+
+
+                        foreach($det as $dataa){
+
+                            echo $dataa['student_first_name'].' ';
+                        }
+                        ; ?></pre></td>
+                <td><?php   ?></td>
+                <td><?php  ?></td>
+
             </tr>
             <tr>
-                <td>Class 2nd</td>
+
 
             </tr>
             <tr class="info">
