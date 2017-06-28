@@ -15,11 +15,21 @@ class Home extends CI_Controller
     {
         $this->load->view('public/content_view');
 
-        $email = $this->input->post('regemail');
-        $password = $this->input->post('password');
+    }
+    public function admin_login(){
+        /*
+         * Email and password to be fetchded with database later.
+         */
+        $email=$this->input->post('email');
+        $password=$this->input->post('password');
+        if($email=='akshat41121995@gmail.com' && $password=='nicola11') {
+            echo $email;
 
-        if ($email = 'akshat41121995@gmail.com' && $password == 'nicola') {
-            echo 'You are authorised';
+            redirect('dashboard');
+        }
+        else{
+            redirect('home');
+
         }
     }
 

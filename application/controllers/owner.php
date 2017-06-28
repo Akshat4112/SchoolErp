@@ -27,21 +27,12 @@ class Owner extends CI_Controller
 
         } else {
             redirect('owner/incinfo');
-
-
         }
     }
 
     public function incinfo()
     {
         $this->load->view('public/incorrect_info');
-
-    }
-
-
-    public function logout()
-    {
-        redirect('/');
 
     }
 }
