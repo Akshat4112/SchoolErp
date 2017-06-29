@@ -10,11 +10,9 @@ class Admissions extends CI_Controller{
     }
 
     public function index(){
-        $query = $this->db->query('SELECT *from student');
-        $data['det']= $query->result_array();
 
 
-        $this->load->view('dashboard/examples/admission_view',$data);
+        $this->load->view('dashboard/examples/admission_view');
     }
 
     public function create_admission_view(){
@@ -22,12 +20,31 @@ class Admissions extends CI_Controller{
     }
     public function student_details(){
         $this->load->view('dashboard/examples/admissions/create_admission_view');
-        $this->form_validation->set_rules('student_first_name','First Name','required|trim');
+        $this->form_validation->set_rules(array(
+            array(
+                'field'=>'student_first_name',
+                'label'=>'First Name',
+                'rules'=>'required'
+            ),
+            array(
+                'field'=>'student_last_name',
+                'label'=>'Last Name',
+                'rules'=>'required'
+            )
+        ));
 
-        $this->form_validation->set_rules('student_last_name','Last Name','required|trim');
+        $this->form_validation->set_error_delimiters('<div class="alert alert-error">','</div>');
+        if($this->form_validation->run()){
+            $this->load->view('public/login_success');
+
+        }
+        else{
+            $this->load->view('public/incorrect_info');
+        }
+
+
         /***
-
-         * $this->form_validation->set_rules('student_dob','First Name','required|trim');
+        $this->form_validation->set_rules('student_dob','First Name','required|trim');
         $this->form_validation->set_rules('student_gender','First Name','required|trim');
         $this->form_validation->set_rules('student_category','First Name','required|trim');
         $this->form_validation->set_rules('student_caste','First Name','required|trim');

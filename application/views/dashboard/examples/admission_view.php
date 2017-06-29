@@ -33,21 +33,14 @@
             </thead>
             <tbody>
             <tr>
+                <td>Class1</td>
                 <td></td>
-                <td><pre><?php
-
-
-                        foreach($det as $dataa){
-
-                            echo $dataa['student_first_name'].' ';
-                        }
-                        ; ?></pre></td>
-                <td><?php   ?></td>
-                <td><?php  ?></td>
+                <td></td>
+                <td></td>
 
             </tr>
             <tr>
-
+                <td>Class 2</td>
 
             </tr>
             <tr class="info">

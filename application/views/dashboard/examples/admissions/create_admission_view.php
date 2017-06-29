@@ -29,28 +29,28 @@
                         <div class="form-group">
                             <label for="inputText" class="col-lg-2 control-label">Middle Name</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputText" placeholder="Middle Name"
+                                <input type="text" class="form-control" id="inputText" placeholder="Enter Middle Name"
                                        name="student_middle_name">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputText" class="col-lg-2 control-label">Last Name</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputText" placeholder="Last Name"
+                                <input type="text" class="form-control" id="inputText" placeholder="Enter Last Name"
                                        name="student_last_name">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputText" class="col-lg-2 control-label">Date of Birth</label>
                             <div class="col-lg-10">
-                                <input type="date" class="form-control" id="inputText" placeholder="DOB"
-                                       name="student_dob">
+                                <input type="date" class="form-control" id="inputDate" name="student_dob">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="select" class="col-lg-2 control-label">Gender</label>
                             <div class="col-lg-10">
                                 <select class="form-control" id="select" name="gender">
+                                    <option disabled="disabled">Select gender</option>
                                     <option id="1">Male</option>
                                     <option id="2">Female</option>
                                     <option id="3">Other</option>
@@ -62,6 +62,7 @@
                             <label for="select" class="col-lg-2 control-label">Category</label>
                             <div class="col-lg-10">
                                 <select class="form-control" id="select" name="category">
+                                    <option disabled="disabled">Select Category</option>
                                     <option id="1">General</option>
                                     <option id="2">OBC</option>
                                     <option id="3">SC</option>
@@ -71,22 +72,27 @@
                                 <br>
                             </div>
                         </div>
+                </div>
+                <div class="col-md-5">
                         <div class="form-group">
                             <label for="select" class="col-lg-2 control-label">Caste</label>
                             <div class="col-lg-10">
                                 <select class="form-control" id="select" name="caste">
+                                    <option disabled="disabled">Select Caste</option>
                                     <option id="1">Hindu</option>
                                     <option id="2">Christian</option>
+                                    <option id="1">Sikh</option>
+                                    <option id="1">Muslim</option>
                                 </select>
                                 <br>
                             </div>
                         </div>
-                </div>
-                <div class="col-md-5">
+
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Class</label>
                         <div class="col-lg-10">
                             <select class="form-control" id="select" name="student_class">
+                                <option disabled="disabled">Select Class</option>
                                 <option id="1">Ist</option>
                                 <option id="2">IInd</option>
                                 <option id="3">IIIrd</option>
@@ -102,6 +108,7 @@
                         <label for="select" class="col-lg-2 control-label">Section</label>
                         <div class="col-lg-10">
                             <select class="form-control" id="select" name="student_section">
+                                <option disabled="disabled">Select Section</option>
                                 <option id="1">A</option>
                                 <option id="2">B</option>
                                 <option id="3">C</option>
@@ -125,6 +132,7 @@
                         <label for="select" class="col-lg-2 control-label">House</label>
                         <div class="col-lg-10">
                             <select class="form-control" id="select" name="house">
+                                <option disabled="disabled">Select House</option>
                                 <option id="1">Red</option>
                                 <option id="2">Green</option>
                                 <option id="3">Blue</option>
@@ -145,10 +153,9 @@
                             <br><br>
                         </div>
                     </div>
-                    <?php echo form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default']),
-                    form_submit(['name' => 'Submit', 'value' => 'Update', 'class' => 'btn btn-primary']); ?>
-
-
+                    <?php echo form_submit(['name' => 'Submit', 'value' => 'Update', 'class' => 'btn btn-primary','style'=>'margin-left:45px;']),
+                    form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default'])
+                    ; ?>
                 </div>
             </div>
             </fieldset>
@@ -202,8 +209,9 @@
                         </div>
                     </div>
                 </fieldset>
-            <?php echo form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default']),
-            form_submit(['name' => 'Submit', 'value' => 'Update', 'class' => 'btn btn-primary']); ?>
+            <?php echo form_submit(['name' => 'Submit', 'value' => 'Update', 'class' => 'btn btn-primary','style'=>'margin-left:150px;margin-top:10px;']),
+            form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default','style'=>'margin-top:10px;'])
+            ; ?>
             </form>
         </div>
         <div class="tab-pane fade" id="parent">
@@ -334,8 +342,10 @@
                         </div>
                         <br>
                     </div>
-                    <?php echo form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default']),
-                    form_submit(['name' => 'Submit', 'value' => 'Update', 'class' => 'btn btn-primary']); ?>
+
+                    <?php echo form_submit(['name' => 'Submit', 'value' => 'Update', 'class' => 'btn btn-primary','style'=>'margin-top:15px;']),
+                    form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default','style'=>'margin-top:15px;'])
+                    ; ?>
                 </div>
             </div>
             </fieldset>
@@ -449,9 +459,9 @@
                         </div>
                         <br><br>
                     </div>
-                    <button type="reset" class="btn btn-primary" style="margin-left: 25px; margin-top: 20px;">Save
-                    </button>
-                    <button type="submit" class="btn btn-default" style="margin-top: 20px;">Discard</button>
+                    <?php echo form_submit(['name' => 'Submit', 'value' => 'Update', 'class' => 'btn btn-primary','style'=>'margin-left:45px;']),
+                    form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default'])
+                    ; ?>
                 </div>
             </div>
             </fieldset>
@@ -492,9 +502,9 @@
                                 <input type="date" name="fphoto">
                             </div>
                         </div>
-                        <button type="reset" class="btn btn-primary" style="margin-left: 25px; margin-top: 20px;">Save
-                        </button>
-                        <button type="submit" class="btn btn-default" style="margin-top: 20px;">Discard</button>
+                        <?php echo form_submit(['name' => 'Submit', 'value' => 'Update', 'class' => 'btn btn-primary','style'=>'margin-left:45px;']),
+                        form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default'])
+                        ; ?>
                     </fieldset>
                 </form>
             </div>
@@ -503,7 +513,72 @@
             <div class="col-md-5">
                 <form class="form-horizontal">
                     <fieldset>
-                        <h2>Balance</h2>
+                        <h4>Balance</h4>
+                        <div class="form-group">
+                            <label for="inputText" class="col-lg-2 control-label">Ledger Balance</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="inputText" placeholder="Enter Legder Balance">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputText" class="col-lg-2 control-label">Fees Balance</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="inputText" placeholder="Enter Fees Balance">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputText" class="col-lg-2 control-label">Comments</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="inputText" placeholder="Comments">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputText" class="col-lg-2 control-label">Hostel Room No.</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="inputText" placeholder="Enter Hostel Room No.">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputText" class="col-lg-2 control-label">Bed No.</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="inputText" placeholder="Enter Bed No.">
+                            </div>
+                        </div>
+                    </div>
+            <div class="col-md-5"><br><br>
+                        <div class="form-group">
+                            <label for="inputText" class="col-lg-2 control-label">Scholarship No.</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="inputText" placeholder="Scholarship No.">
+                            </div><br><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputText" class="col-lg-2 control-label">Aadhar UID</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="inputText" placeholder="Enter Aadhar Card UID">
+                            </div><br><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputText" class="col-lg-2 control-label">Family</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="inputText" placeholder="If family member exists">
+                            </div><br><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputText" class="col-lg-2 control-label">Status</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="inputText" placeholder="Status">
+                            </div><br><br>
+                        </div><div class="form-group">
+                            <label for="inputText" class="col-lg-2 control-label">Discontinue Date</label>
+                            <div class="col-lg-10">
+                                <input type="date" class="form-control" id="inputText" placeholder="Date">
+                            </div>
+                        </div>
+                <?php echo form_submit(['name' => 'Submit', 'value' => 'Update', 'class' => 'btn btn-primary','style'=>'margin-top:25px;']),
+                form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default','style'=>'margin-top:25px;'])
+                ; ?>
+
                     </fieldset>
                 </form>
             </div>
