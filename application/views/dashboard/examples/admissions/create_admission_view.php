@@ -9,8 +9,8 @@
                     Details</b></a></li>
         <li class="" style="margin-left: 20px;"><a href="#attach" data-toggle="tab" aria-expanded="false"><b>Attachements</b></a>
         </li>
-        <li class="" style="margin-left: 20px;"><a href="#balance" data-toggle="tab"
-                                                   aria-expanded="false"><b>Balance</b></a></li>
+        <li class="" style="margin-left: 20px;"><a href="#balance" data-toggle="tab" aria-expanded="false"><b>Balance</b></a></li>
+        <li class="" style="margin-left: 20px;"><a href="#addifield" data-toggle="tab" aria-expanded="false"><b>Additional Fields</b></a></li>
     </ul>
     <div id="myTabContent" class="tab-content">
         <div class="tab-pane fade active in" id="home" style="margin-top: 15px;">
@@ -226,19 +226,19 @@
                             <div class="form-group">
                                 <label for="inputText" class="col-lg-2 control-label">First Name</label>
                                 <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="inputText" placeholder="First Name" name="fathers_first_name">
+                                    <input type="text" class="form-control" id="inputText" placeholder="Father's first name" name="fathers_first_name">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputText" class="col-lg-2 control-label">Middle Name</label>
                                 <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="inputText" placeholder="Middle Name" name="fathers_middle_name">
+                                    <input type="text" class="form-control" id="inputText" placeholder="Father's middle name" name="fathers_middle_name">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputText" class="col-lg-2 control-label">Last Name</label>
                                 <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="inputText" placeholder="Last Name" name="fathers_last_name">
+                                    <input type="text" class="form-control" id="inputText" placeholder="Father's last name" name="fathers_last_name">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -286,21 +286,21 @@
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">First Name</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText" placeholder="First Name" name="mothers_first_name">
+                            <input type="text" class="form-control" id="inputText" placeholder="Mother's first name" name="mothers_first_name">
                         </div>
                         <br><br>
                     </div>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Middle Name</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText" placeholder="Middle Name" name="mothers_middle_name">
+                            <input type="text" class="form-control" id="inputText" placeholder="Mother's middle name" name="mothers_middle_name">
                         </div>
                         <br><br>
                     </div>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Last Name</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText" placeholder="Last Name" name="mothers_last_name">
+                            <input type="text" class="form-control" id="inputText" placeholder="Mother's last name" name="mothers_last_name">
                         </div>
                         <br><br>
                     </div>
@@ -469,7 +469,8 @@
         </div>
         <div class="tab-pane fade" id="attach">
             <div class="col-md-5">
-                <form class="form-horizontal">
+                <?php echo validation_errors(); ?>
+                <?php echo form_open('admissions/student_details', ['class' => 'form-horizontal']); ?>
                     <fieldset>
                         <h4>Attachement</h4>
                         <div class="form-group">
@@ -511,7 +512,8 @@
         </div>
         <div class="tab-pane fade" id="balance">
             <div class="col-md-5">
-                <form class="form-horizontal">
+                <?php echo validation_errors(); ?>
+                <?php echo form_open('admissions/student_details', ['class' => 'form-horizontal']); ?>
                     <fieldset>
                         <h4>Balance</h4>
                         <div class="form-group">
@@ -578,11 +580,23 @@
                 <?php echo form_submit(['name' => 'Submit', 'value' => 'Update', 'class' => 'btn btn-primary','style'=>'margin-top:25px;']),
                 form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default','style'=>'margin-top:25px;'])
                 ; ?>
-
                     </fieldset>
                 </form>
             </div>
         </div>
+        <div class="tab-pane fade" id="addifield">
+            <div class="col-md-5">
+                <?php echo validation_errors(); ?>
+                <?php echo form_open('admissions/student_details', ['class' => 'form-horizontal']); ?>
+                <fieldset>
+                    <h4>Additional Field</h4>
+
+                <?php echo form_submit(['name' => 'Submit', 'value' => 'Add', 'class' => 'btn btn-primary','style'=>'margin-top:25px;']),
+                form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default','style'=>'margin-top:25px;'])
+                ; ?>
+                </fieldset>
+                </form>
+            </div>
     </div>
 </div>
 
