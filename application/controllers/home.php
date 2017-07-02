@@ -1,6 +1,6 @@
 <?php
 
-class Home extends CI_Controller
+class Home extends MY_Controller
 {
     public function __construct()
     {
@@ -48,12 +48,6 @@ class Home extends CI_Controller
         $this->load->view('public/help');
     }
 
-    public function register()
-    {
-
-        $this->load->view('public/register_view');
-        $this->load->model('register');
-    }
     public function suggestions(){
         $this->load->view('public/suggestions');
     }

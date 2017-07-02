@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Date: 6/5/2017
  * Time: 10:40 AM
  */
-class Students extends CI_Controller{
+class Students extends MY_Controller{
     public function __construct()
     {
         parent::__construct();

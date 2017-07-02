@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Date: 6/5/2017
  * Time: 10:41 AM
  */
-class Attendance extends CI_Controller{
+class Attendance extends MY_Controller{
     public function index(){}
     public function attendance_view(){
         $this->load->view('dashboard/examples/attendance_view');

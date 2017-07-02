@@ -5,7 +5,7 @@
  * Date: 6/30/2017
  * Time: 12:37 PM
  */
-class Testis extends CI_Controller{
+class Testis extends MY_Controller{
     public function index(){}
     public function abc(){
         $this->load->model('test');

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class User_controller extends CI_Controller {
+class User_controller extends MY_Controller {
 
     public function index(){
         echo 'it is working';

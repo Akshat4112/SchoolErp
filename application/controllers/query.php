@@ -1,5 +1,5 @@
 <?php
-class Query extends CI_Controller{
+class Query extends MY_Controller{
     public function index(){
 
     }

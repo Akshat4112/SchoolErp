@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Date: 6/5/2017
  * Time: 10:41 AM
  */
-class Faculties extends CI_Controller
+class Faculties extends MY_Controller
 {
     public function stu_badges(){
         $this->load->view('dashboard/examples/faculties/header');

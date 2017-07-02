@@ -10,5 +10,6 @@
     <orderEntry type="module" module-name="swqmsn" />
     <orderEntry type="module" module-name="backend" />
     <orderEntry type="module" module-name="magzines" />
+    <orderEntry type="module" module-name="Search_engine" />
   </component>
 </module>
