@@ -17,19 +17,27 @@ class Home extends MY_Controller
 
     }
     public function admin_login(){
-        /*
-         * Email and password to be fetchded with database later.
-         */
-        $email=$this->input->post('email');
-        $password=$this->input->post('password');
-        if($email=='akshat41121995@gmail.com' && $password=='nicola11') {
-            echo $email;
+        $this->form_validation->set_rules('email','Email','required|trim');
+        $this->form_validation->set_rules('password','Password','required');
 
-            redirect('dashboard');
-        }
-        else{
-            redirect('home');
+        if($this->form_validation->run()){
 
+            $email= $this->input->post('email');
+            $password= $this->input->post('password');
+
+            $this->load->model('login_model');
+            $login_id = $this->login_model->login_valid($email,$password);
+            if($login_id){
+                $this->load->library('session');
+                $this->session->set_userdata('login_id',$login_id);
+                redirect('dashboard');
+                // echo 'Password Match';
+            }else{
+                echo 'password do not match';
+            }
+            //echo 'Validation Successful';
+        }else{
+            $this->load->view('public/content_view');
         }
     }
 
