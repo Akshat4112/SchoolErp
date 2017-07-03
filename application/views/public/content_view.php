@@ -7,16 +7,16 @@
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Email</label>
                     <div class="col-lg-10">
-                        <?php echo form_input(['name'=>'email','class'=>'form-control'  ,'placeholder'=>'Enter Email']); ?>
-                        <?php // echo form_error('email',"<p class='text-danger'>","</p>"); ?>
+                        <?php echo form_input(['name'=>'email','class'=>'form-control'  ,'placeholder'=>'Enter Email','value'=>set_value('email')]); ?>
+                        <?php   echo form_error('email',"<p class='text-danger'>","</p>"); ?>
 
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Password</label>
                     <div class="col-lg-10">
-                        <?php echo form_password(['name'=>'password','class'=>'form-control' ,'placeholder'=>'Enter Password']); ?>
-                        <?php //echo form_error('password',"<p class='text-danger'>","</p>"); ?>
+                        <?php echo form_password(['name'=>'password','class'=>'form-control' ,'placeholder'=>'Enter Password','value'=>set_value('password')]); ?>
+                        <?php  echo form_error('password',"<p class='text-danger'>","</p>"); ?>
                     </div>
                 </div>
                 <div class="form-group">
@@ -28,5 +28,6 @@
             </fieldset>
         </form>
     </div>
-    <div class="col-sm-3"></div>
+    <div class="col-sm-3">
+    </div>
 </div>
