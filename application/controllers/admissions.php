@@ -5,8 +5,13 @@ class Admissions extends MY_Controller{
     public function __construct()
     {
         parent::__construct();
-        $this->load->view('dashboard/examples/admissions/header_admission');
+
+        $this->load->model('get_header_info','ghi');
+
+        $username = $this->ghi->get_admin();
+        $this->load->view('dashboard/examples/admissions/header_admission',['username'=>$username]);
         $this->load->view('dashboard/examples/admissions/footer_admission');
+
     }
 
     public function index(){

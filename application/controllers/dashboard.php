@@ -8,8 +8,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Dashboard extends MY_Controller{
     public function index(){
-        $this->load->view('dashboard/examples/dashboard_view');
-
+        $this->load->model('get_header_info','ghi');
+        $username = $this->ghi->get_admin();
+        $this->load->view('dashboard/examples/dashboard_view',['username'=>$username]);
     }
     public function documentation()
     {
