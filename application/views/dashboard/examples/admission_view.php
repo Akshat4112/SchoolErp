@@ -19,38 +19,32 @@
 
                 <th>Admission No.</th>
                 <th>Name</th>
-                <th>Father</th>
-                <th>Mother</th>
                 <th>Class</th>
                 <th>Section</th>
                 <th>Roll No.</th>
                 <th>DOB</th>
-                <th>Contact No.</th>
                 <th>Route</th>
-                <th>Scholarship No.</th>
-                <th>Old Balance</th>
             </tr>
             </thead>
             <tbody>
+            <?php if(count($stu_det)): ?>
+                <?php foreach($stu_det as $student_det): ?>
             <tr>
-                <td>Class1</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><?php echo $student_det->student_id  ?></td>
+                <td><?php echo $student_det->student_first_name  ?></td>
+                <td><?php echo $student_det->student_class ?></td>
+                <td><?php echo $student_det->student_section  ?></td>
+                <td><?php echo $student_det->student_roll_no  ?></td>
+                <td><?php echo $student_det->student_dob  ?></td>
+                <td><?php echo $student_det->route  ?></td>
 
             </tr>
+            <?php endforeach; ?>
+            <?php else: ?>
             <tr>
-                <td>Class 2</td>
-
+                <td>No Records Found</td>
             </tr>
-            <tr class="info">
-                <td>Class 3rd</td>
-
-            </tr>
-            <tr class="success">
-                <td>Class 4th</td>
-
-            </tr>
+            <?php endif; ?>
             </tbody>
         </table>
     </div>

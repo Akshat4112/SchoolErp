@@ -30,7 +30,7 @@ class Home extends MY_Controller
             if($login_id){
                 $this->load->library('session');
                 $this->session->set_userdata('login_id',$login_id);
-                redirect('dashboard');
+                return redirect('dashboard');
                 // echo 'Password Match';
             }else{
                 echo 'password do not match';
