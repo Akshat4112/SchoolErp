@@ -4,6 +4,15 @@
         <?php echo form_open('home/admin_login',['class'=>'form-horizontal']); ?>
             <fieldset>
                 <legend>Login</legend>
+                <?php if($error = $this->session->flashdata('login_failed')): ?>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="alert alert-dismissible alert-danger">
+                            <?php echo $error ?>
+                        </div>
+                    </div>
+                </div>
+                <?php endif; ?>
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Email</label>
                     <div class="col-lg-10">

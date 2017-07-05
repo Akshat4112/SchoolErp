@@ -7,7 +7,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Time: 6:36 PM
  */
 class Dashboard extends MY_Controller{
+    /**
+     * Dashboard constructor.
+     * for checking if user is logged in or not.
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        if( ! $this->session->userdata('login_id')){
+            return redirect('home');
+        }
+    }
+
     public function index(){
+
         $this->load->model('get_header_info','ghi');
         $username = $this->ghi->get_admin();
         $this->load->view('dashboard/examples/dashboard_view',['username'=>$username]);
@@ -26,7 +39,7 @@ class Dashboard extends MY_Controller{
         $this->load->view('dashboard/examples/dashboards/prefrences');
     }
     public function logout(){
-        session_destroy();
-        redirect('/');
+        $this->session->unset_userdata('login_id');
+        return redirect('home');
     }
 }

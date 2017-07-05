@@ -13,6 +13,9 @@ class Home extends MY_Controller
 
     public function index()
     {
+        if($this->session->userdata('login_id')){
+            return redirect('dashboard');
+        }
         $this->load->view('public/content_view');
 
     }
@@ -33,7 +36,9 @@ class Home extends MY_Controller
                 return redirect('dashboard');
                 // echo 'Password Match';
             }else{
-                echo 'password do not match';
+                $this->session->set_flashdata('login_failed','Invalid Email/Password');
+                return redirect('home');
+
             }
             //echo 'Validation Successful';
         }else{
