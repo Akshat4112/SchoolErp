@@ -35,10 +35,17 @@ class Admissions extends MY_Controller{
 
             $this->load->model('add_model','am');
             if($this->am->student_info($post)){
-                echo 'insert successful';
+                /**
+                 *echo for testing purpose
+                 */
+                //echo 'insert successful';
                 $this->session->set_flashdata('create','Admission Created Successfully');
             }else{
-                echo 'insert failed';
+
+                /**
+                 *echo for testing purpose
+                 */
+                //echo 'insert failed';
                 $this->session->set_flashdata('create','Failed');
                 return redirect('admissions/create_admission_view');
             }
