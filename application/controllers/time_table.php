@@ -9,6 +9,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Time_table extends MY_Controller{
     public function index(){}
     public function time_table_view(){
-        $this->load->view('dashboard/examples/time_table_view');
+        $this->load->view('private/time_table/time_table_view');
     }
 }

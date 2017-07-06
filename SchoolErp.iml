@@ -4,12 +4,6 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="OET" />
     <orderEntry type="module" module-name="Barcode_Embedder" />
-    <orderEntry type="module" module-name="Online_notice_board" />
-    <orderEntry type="module" module-name="swqmsn" />
-    <orderEntry type="module" module-name="backend" />
-    <orderEntry type="module" module-name="magzines" />
-    <orderEntry type="module" module-name="Search_engine" />
   </component>
 </module>

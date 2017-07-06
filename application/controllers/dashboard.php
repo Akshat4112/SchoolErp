@@ -23,20 +23,20 @@ class Dashboard extends MY_Controller{
 
         $this->load->model('get_header_info','ghi');
         $username = $this->ghi->get_admin();
-        $this->load->view('dashboard/examples/dashboard_view',['username'=>$username]);
+        $this->load->view('private/dashboard/dashboard_view',['username'=>$username]);
     }
     public function documentation()
     {
-        $this->load->view('dashboard/examples/dashboards/documentation');
+        $this->load->view('private/dashboard/documentation');
 
     }
     public function support()
     {
-        $this->load->view('dashboard/examples/dashboards/support');
+        $this->load->view('private/dashboard/support');
     }
     public function prefrences()
     {
-        $this->load->view('dashboard/examples/dashboards/prefrences');
+        $this->load->view('private/dashboard/prefrences');
     }
     public function logout(){
         $this->session->unset_userdata('login_id');

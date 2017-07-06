@@ -9,6 +9,5 @@ class Testis extends MY_Controller{
 
     public function abc(){
 
-
     }
 }

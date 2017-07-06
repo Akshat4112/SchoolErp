@@ -14,7 +14,10 @@
     </ul>
     <div id="myTabContent" class="tab-content">
         <div class="tab-pane fade active in" id="home" style="margin-top: 15px;">
+
             <div class="row">
+
+
                 <div class="col-md-5">
                     <?php echo validation_errors(); ?>
                     <?php echo form_open('admissions/student_details', ['class' => 'form-horizontal']); ?>

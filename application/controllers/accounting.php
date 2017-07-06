@@ -9,6 +9,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Accounting extends MY_Controller{
     public function index(){}
     public function accounting_view(){
-        $this->load->view('dashboard/examples/accounting_view');
+        $this->load->view('private/accounting/accounting_view');
     }
 }
