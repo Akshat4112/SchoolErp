@@ -1,6 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
+
     <link href="<?= base_url() ?>public/assets/css/material-dashboard.css" rel="stylesheet"/>
     <!--     Fonts and icons     -->
     <link href="<?= base_url() ?>public/assets/css/font-awesome.min.css" rel="stylesheet">

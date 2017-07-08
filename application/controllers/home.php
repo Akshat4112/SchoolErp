@@ -20,9 +20,6 @@ class Home extends MY_Controller
 
     }
     public function admin_login(){
-        //$this->form_validation->set_rules('email','Email','required|trim');
-        //$this->form_validation->set_rules('password','Password','required');
-
         if($this->form_validation->run('admin_form')){
 
             $email= $this->input->post('email');

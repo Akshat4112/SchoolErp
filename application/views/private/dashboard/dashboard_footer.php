@@ -1,5 +1,5 @@
 <footer class="footer">
-    <div class="container-fluid" style="margin-top: 25px;">
+    <div class="container-fluid" style="margin-top: 80px;">
         <nav class="pull-left">
             <ul>
                 <li>
