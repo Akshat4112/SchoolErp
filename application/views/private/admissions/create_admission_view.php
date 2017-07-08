@@ -1,3 +1,6 @@
+<?php
+echo validation_errors();
+?>
 <div class="container">
     <ul class="nav nav-tabs">
         <li class="active"><a href="#home" data-toggle="tab" aria-expanded="true"><b>General</b></a></li>
@@ -14,10 +17,7 @@
     </ul>
     <div id="myTabContent" class="tab-content">
         <div class="tab-pane fade active in" id="home" style="margin-top: 15px;">
-
             <div class="row">
-
-
                 <div class="col-md-5">
                     <?php echo validation_errors(); ?>
                     <?php echo form_open('admissions/student_details', ['class' => 'form-horizontal']); ?>
@@ -32,46 +32,59 @@
                         <div class="form-group">
                             <label for="inputText" class="col-lg-2 control-label">Middle Name</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputText" placeholder="Enter Middle Name"
-                                       name="student_middle_name">
+                                <?php echo form_input(['name' => 'student_middle_name', 'class' => 'form-control', 'placeholder' => 'Enter Middle Name', 'value' => set_value('student_middle_name')]); ?>
+                                <?php echo form_error('student_middle_name', "<p class='text-danger'>", "</p>"); ?>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputText" class="col-lg-2 control-label">Last Name</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputText" placeholder="Enter Last Name"
-                                       name="student_last_name">
+                                <?php echo form_input(['name' => 'student_last_name', 'class' => 'form-control', 'placeholder' => 'Enter Last Name', 'value' => set_value('student_last_name')]); ?>
+                                <?php echo form_error('student_last_name', "<p class='text-danger'>", "</p>"); ?>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputText" class="col-lg-2 control-label">Date of Birth</label>
                             <div class="col-lg-10">
-                                <input type="date" class="form-control" id="inputDate" name="student_dob">
+                                <?php echo form_input(['name' => 'student_dob', 'class' => 'form-control','id'=>'inputDate', 'placeholder' => 'Enter DOB', 'value' => set_value('student_dob')]); ?>
+                                <?php echo form_error('student_dob', "<p class='text-danger'>", "</p>"); ?>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="select" class="col-lg-2 control-label">Gender</label>
                             <div class="col-lg-10">
-                                <select class="form-control" id="select" name="gender">
-                                    <option disabled="disabled">Select gender</option>
-                                    <option id="1">Male</option>
-                                    <option id="2">Female</option>
-                                    <option id="3">Other</option>
-                                </select>
+                                <?php $options = array(
+                                        'Male'=>'Male',
+                                        'Female'=>'Female',
+                                        'Other'=>'Other'
+                                );
+                                $att=array(
+                                        'class'=>'form-control',
+                                        'id'=>'select',
+                                );
+                                echo form_dropdown('gender',$options,'male',$att);
+                                ?>
+
                                 <br>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="select" class="col-lg-2 control-label">Category</label>
                             <div class="col-lg-10">
-                                <select class="form-control" id="select" name="category">
-                                    <option disabled="disabled">Select Category</option>
-                                    <option id="1">General</option>
-                                    <option id="2">OBC</option>
-                                    <option id="3">SC</option>
-                                    <option id="4">ST</option>
-                                    <option id="5">Others</option>
-                                </select>
+
+                                    <?php $options = array(
+                                        'General'=>'General',
+                                        'OBC'=>'OBC',
+                                        'SC'=>'SC',
+                                        'ST'=>'ST',
+                                        'Other'=>'Other'
+                                    );
+                                    $att=array(
+                                        'class'=>'form-control',
+                                        'id'=>'select',
+                                    );
+                                    echo form_dropdown('category',$options,'general',$att);
+                                    ?>
                                 <br>
                             </div>
                         </div>
@@ -80,13 +93,18 @@
                         <div class="form-group">
                             <label for="select" class="col-lg-2 control-label">Caste</label>
                             <div class="col-lg-10">
-                                <select class="form-control" id="select" name="caste">
-                                    <option disabled="disabled">Select Caste</option>
-                                    <option id="1">Hindu</option>
-                                    <option id="2">Christian</option>
-                                    <option id="1">Sikh</option>
-                                    <option id="1">Muslim</option>
-                                </select>
+                                <?php $options = array(
+                                    'Hindu'=>'Hindu',
+                                    'Christian'=>'Christian',
+                                    'Sikh'=>'Sikh',
+                                    'Muslim'=>'Muslim'
+                                );
+                                $att=array(
+                                    'class'=>'form-control',
+                                    'id'=>'select',
+                                );
+                                echo form_dropdown('caste',$options,'Hindu',$att);
+                                ?>
                                 <br>
                             </div>
                         </div>
@@ -94,28 +112,33 @@
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Class</label>
                         <div class="col-lg-10">
-                            <select class="form-control" id="select" name="student_class">
-                                <option disabled="disabled">Select Class</option>
-                                <option id="1">Ist</option>
-                                <option id="2">IInd</option>
-                                <option id="3">IIIrd</option>
-                                <option id="4">IVth</option>
-                                <option id="5">Vth</option>
-                                <option id="6">VIth</option>
-                                <option id="7">VIIth</option>
-                                <option id="8">VIIth</option>
-                            </select>
+                            <?php $options = array(
+                              'Ist'=>'Ist',
+                                'IInd'=>'IInd',
+                                'IIIrd'=>'IIIrd'
+                            );
+                            $att=array(
+                                'class'=>'form-control',
+                                'id'=>'select',
+                            );
+                            echo form_dropdown('student_class',$options,'Ist',$att);
+                            ?>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Section</label>
                         <div class="col-lg-10">
-                            <select class="form-control" id="select" name="student_section">
-                                <option disabled="disabled">Select Section</option>
-                                <option id="1">A</option>
-                                <option id="2">B</option>
-                                <option id="3">C</option>
-                            </select>
+                            <?php $options = array(
+                                'A'=>'A',
+                                'B'=>'B',
+                                'C'=>'C'
+                            );
+                            $att=array(
+                                'class'=>'form-control',
+                                'id'=>'select',
+                            );
+                            echo form_dropdown('student_section',$options,'A',$att);
+                            ?>
                         </div>
                     </div>
                     <div class="form-group">
@@ -134,12 +157,17 @@
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">House</label>
                         <div class="col-lg-10">
-                            <select class="form-control" id="select" name="house">
-                                <option disabled="disabled">Select House</option>
-                                <option id="1">Red</option>
-                                <option id="2">Green</option>
-                                <option id="3">Blue</option>
-                            </select><br>
+                            <?php $options = array(
+                                'Red'=>'RED',
+                                'Green'=>'GREEN'
+                            );
+                            $att=array(
+                                'class'=>'form-control',
+                                'id'=>'select',
+                            );
+                            echo form_dropdown('house',$options,'RED',$att);
+                            ?>
+                            <br>
                         </div>
                     </div>
                     <div class="form-group">
@@ -157,6 +185,7 @@
                         </div>
                     </div>
                     <?php echo form_submit(['name' => 'Submit', 'value' => 'Update', 'class' => 'btn btn-primary','style'=>'margin-left:45px;']),
+
                     form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default'])
                     ; ?>
                 </div>
@@ -165,9 +194,15 @@
             </form>
         </div>
         <div class="tab-pane fade" id="address" style="margin-top: 20px;">
-            <?php echo validation_errors(); ?>
+
             <?php echo form_open('admissions/address_details', ['class' => 'form-horizontal']); ?>
                 <fieldset>
+                    <div class="form-group">
+                        <label for="inputText" class="col-lg-2 control-label">Student ID</label>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control" id="inputEmail" placeholder="Enter Student ID" name="student_id">
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label for="inputEmail" class="col-lg-2 control-label">House No.</label>
                         <div class="col-lg-6">
@@ -212,10 +247,10 @@
                         </div>
                     </div>
                 </fieldset>
-            <?php echo form_submit(['name' => 'Submit', 'value' => 'Update', 'class' => 'btn btn-primary','style'=>'margin-left:150px;margin-top:10px;']),
+            <?php echo form_submit(['name' => 'submit', 'value' => 'Update', 'class' => 'btn btn-primary','style'=>'margin-left:150px;margin-top:10px;']),
             form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default','style'=>'margin-top:10px;'])
             ; ?>
-            </form>
+        </form>
         </div>
         <div class="tab-pane fade" id="parent">
             <div class="row">

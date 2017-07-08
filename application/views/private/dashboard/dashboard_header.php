@@ -3,7 +3,7 @@
     <meta charset="utf-8"/>
 
     <link href="<?= base_url() ?>public/assets/css/material-dashboard.css" rel="stylesheet"/>
-    <!--     Fonts and icons     -->
+
     <link href="<?= base_url() ?>public/assets/css/font-awesome.min.css" rel="stylesheet">
     <link href='<?= base_url() ?>public/assets/css/google_fonts.css' rel='stylesheet' type='text/css'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -20,18 +20,7 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header"><a class="navbar-brand" href="<?= site_url('dashboard/') ?>">Dashboard</a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-
-            </ul>
-            <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right" style="margin-left: 1120px;">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         <?php

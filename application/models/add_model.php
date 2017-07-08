@@ -9,4 +9,8 @@ class Add_model extends MY_Model{
     public function student_info($array){
         return $this->db->insert('student',$array);
     }
+    public function address_details($array)
+    {
+        return $this->db->insert('address',$array);
+    }
 }

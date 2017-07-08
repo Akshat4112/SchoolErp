@@ -37,9 +37,9 @@ $config=[
     'address'=>
         [
             [
-                'field'=>'house_no',
-                'label'=>'House No.',
-                'rules'=>'required'
+                'field'=>'',
+                'label'=>'',
+                'rules'=>''
             ],
             [
                 'field'=>'',

@@ -44,34 +44,53 @@ class Admissions extends MY_Controller
                  *echo for testing purpose
                  */
                 //echo 'insert successful';
-                $this->session->set_flashdata('create', 'Admission Created Successfully');
+        //        $this->session->set_flashdata('create', 'Admission Created Successfully');
+                echo '<script>alert("Student Information Inserted")</script>';
             } else {
 
                 /**
                  *echo for testing purpose
                  */
                 //echo 'insert failed';
-                $this->session->set_flashdata('create', 'Failed');
+          //      $this->session->set_flashdata('create', 'Failed');
                 return redirect('admissions/create_admission_view');
             }
         }
 
     }
-
-    public function edit_admission()
-    {
-
-    }
-
     public function address_details()
     {
+        $this->load->view('private/admissions/create_admission_view');
+        //if ($this->form_validation->run('address')) {
 
+            $post = $this->input->post();
+            $student_id=$post['student_id'];
+            /*
+            echo $student_id;
+            echo '<pre>';
+            print_r($post);
+            */
+            unset($post['submit']);
+            /*
+            echo '<pre>';
+            print_r($post);
+            */
+            $this->load->model('add_model', 'am');
+            if ($this->am->address_details($post)) {
+                /*echo for testing purpose
+                echo 'insert successful'; */
+                echo '<script>alert("Address Inserted")</script>';
+                } else {
+
+                /*echo for testing purpose
+                echo 'insert failed'; */
+
+                return redirect('admissions/create_admission_view');
+            }
+        //}
     }
 
-    public function other_info_details()
-    {
 
-    }
 
     public function import()
     {
@@ -109,5 +128,16 @@ class Admissions extends MY_Controller
 
         $this->load->view('private/admissions/create_list_view');
     }
+    public function edit_admission()
+    {
+
+    }
+
+
+    public function other_info_details()
+    {
+
+    }
+
 
 }
