@@ -89,6 +89,38 @@ class Admissions extends MY_Controller
             }
         //}
     }
+    public function other_info_details()
+    {
+        $this->load->view('private/admissions/create_admission_view');
+        //if ($this->form_validation->run('address')) {
+
+        $post = $this->input->post();
+        $student_id=$post['student_id'];
+        /*
+        echo $student_id;
+        echo '<pre>';
+        print_r($post);
+        */
+        unset($post['Submit']);
+        /*
+        echo '<pre>';
+        print_r($post);
+        */
+        $this->load->model('add_model', 'am');
+        if ($this->am->other_info_details($post)) {
+            /*echo for testing purpose
+            echo 'insert successful'; */
+            echo '<script>alert("Other Info details Inserted")</script>';
+        } else {
+
+            /*echo for testing purpose
+            echo 'insert failed'; */
+
+            return redirect('admissions/create_admission_view');
+        }
+        //}
+
+    }
 
 
 
@@ -134,10 +166,7 @@ class Admissions extends MY_Controller
     }
 
 
-    public function other_info_details()
-    {
 
-    }
 
 
 }

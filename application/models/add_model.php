@@ -13,7 +13,7 @@ class Add_model extends MY_Model{
     {
         return $this->db->insert('address',$array);
     }
-    public function parents_details($array)
+    public function other_info_details($array)
     {
         return $this->db->insert('other_info',$array);
     }
