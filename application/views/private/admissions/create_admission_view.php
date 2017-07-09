@@ -11,8 +11,7 @@ echo validation_errors();
                     Details</b></a></li>
         <li class="" style="margin-left: 20px;"><a href="#misc" data-toggle="tab" aria-expanded="false"><b>Misc
                     Details</b></a></li>
-        <li class="" style="margin-left: 20px;"><a href="#attach" data-toggle="tab" aria-expanded="false">
-                <b>Attachements</b></a>
+        <li class="" style="margin-left: 20px;"><a href="#attach" data-toggle="tab" aria-expanded="false"><b>Attachements</b></a>
         </li>
         <li class="" style="margin-left: 20px;">
             <a href="#balance" data-toggle="tab" aria-expanded="false">
