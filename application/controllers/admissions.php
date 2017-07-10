@@ -30,7 +30,7 @@ class Admissions extends MY_Controller
 
     public function student_details()
     {
-        $this->load->view('private/admissions/create_admission_view');
+        // $this->load->view('private/admissions/create_admission_view');
 
         $this->form_validation->set_error_delimiters('<div class="alert alert-error">', '</div>');
         if ($this->form_validation->run('student')) {
@@ -46,6 +46,7 @@ class Admissions extends MY_Controller
                 //echo 'insert successful';
         //        $this->session->set_flashdata('create', 'Admission Created Successfully');
                 echo '<script>alert("Student Information Inserted")</script>';
+                return redirect('admissions/create_admission_view#address');
             } else {
 
                 /**

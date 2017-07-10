@@ -5,7 +5,7 @@ echo validation_errors();
 <div class="container">
     <ul class="nav nav-tabs">
         <li class="active"><a href="#home" data-toggle="tab" aria-expanded="true"><b>General</b></a></li>
-        <li class="" style="margin-left: 20px;"><a href="#address" data-toggle="tab" aria-expanded="false"><b>
+        <li class="" style="margin-left: 20px;"><a href="#address"  data-toggle="tab" aria-expanded="false"><b>
                     Address Details</b></a></li>
         <li class="" style="margin-left: 20px;"><a href="#parent" data-toggle="tab" aria-expanded="false"><b>Parents
                     Details</b></a></li>
@@ -78,7 +78,6 @@ echo validation_errors();
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Category</label>
                         <div class="col-lg-10">
-
                             <?php $options = [
                                 'General' => 'General',
                                 'OBC' => 'OBC',
@@ -115,7 +114,6 @@ echo validation_errors();
                             <br>
                         </div>
                     </div>
-
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Class</label>
                         <div class="col-lg-10">
@@ -151,14 +149,17 @@ echo validation_errors();
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Roll No.</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText" placeholder="Enter Roll Number"
-                                   name="student_roll_no">
+                            <?php echo form_input(['name' => 'student_roll_no', 'class' => 'form-control',
+                                'placeholder' => 'Enter First Name',
+                                'value' => set_value('student_roll_no')]); ?>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Route</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText" placeholder="Route" name="route">
+                            <?php echo form_input(['name' => 'route', 'class' => 'form-control',
+                                'placeholder' => 'Enter First Name',
+                                'value' => set_value('route')]); ?>
                         </div>
                     </div>
                     <div class="form-group">
@@ -180,21 +181,22 @@ echo validation_errors();
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Photo</label>
                         <div class="col-lg-10">
-                            <input type="file" name="student_photo">
-                            <br>
+                            <?php form_open_multipart(); ?>
+                            <br><br>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Admission No.</label>
                         <div class="col-lg-10">
-                            <input type="text" placeholder="Enter Admission Number" name="admission_no">
-                            <br><br>
-                        </div>
-                    </div>
-                    <?php echo form_submit(['name' => 'Submit', 'value' => 'Update', 'class' => 'btn btn-primary',
-                        'style' => 'margin-left:45px;']),
-
-                    form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default']); ?>
+                            <?php echo form_input(['name' => 'admission_no', 'class' => 'form-control',
+                                'placeholder' => 'Enter Admission Number',
+                                'value' => set_value('admission_no')]); ?>
+                        </div><br>
+                    </div><br>
+                    <?php echo form_submit(['name' => 'Submit', 'value' => 'Next', 'class' => 'btn btn-primary',
+                        'style' => 'margin-left:45px; margin-top:20px;']),
+                        form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default',
+                            'style' => 'margin-top:20px;']); ?>
                 </div>
             </div>
             <?php
@@ -202,71 +204,82 @@ echo validation_errors();
             echo form_close($string); ?>
 
         <div class="tab-pane fade" id="address" style="margin-top: 20px;">
-
+            
             <?php echo form_open('admissions/address_details', ['class' => 'form-horizontal']); ?>
             <fieldset>
                 <div class="form-group">
                     <label for="inputText" class="col-lg-2 control-label">Student ID</label>
                     <div class="col-lg-6">
-                        <input type="text" class="form-control" id="inputEmail" placeholder="Enter Student ID"
-                               name="student_id">
+                        <?php echo form_input(['name' => 'student_id', 'class' => 'form-control',
+                            'placeholder' => 'Enter First Name',
+                            'value' => set_value('student_id')]); ?>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">House No.</label>
                     <div class="col-lg-6">
-                        <input type="text" class="form-control" id="inputEmail" placeholder="Enter House Number"
-                               name="house_no">
+                        <?php echo form_input(['name' => 'house_no', 'class' => 'form-control',
+                            'placeholder' => 'Enter First Name',
+                            'value' => set_value('house_no')]); ?>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Street Name</label>
                     <div class="col-lg-6">
-                        <input type="text" class="form-control" id="inputEmail" placeholder="Enter Street Name"
-                               name="street_name">
+                        <?php echo form_input(['name' => 'street_name', 'class' => 'form-control',
+                            'placeholder' => 'Enter First Name',
+                            'value' => set_value('street_name')]); ?>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Other Info</label>
                     <div class="col-lg-6">
-                        <input type="text" class="form-control" id="inputEmail"
-                               placeholder="Enter any Landmark (If possible)" name="other_info">
+                        <?php echo form_input(['name' => 'other_info', 'class' => 'form-control',
+                            'placeholder' => 'Enter First Name',
+                            'value' => set_value('other_info')]); ?>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Zip Code</label>
                     <div class="col-lg-6">
-                        <input type="text" class="form-control" id="inputEmail" placeholder="Enter Zipcode"
-                               name="zip_code">
+                        <?php echo form_input(['name' => 'zip_code', 'class' => 'form-control',
+                            'placeholder' => 'Enter First Name',
+                            'value' => set_value('zip_code')]); ?>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">City</label>
                     <div class="col-lg-6">
-                        <input type="text" class="form-control" id="inputEmail" placeholder="Enter City"
-                               name="city">
+                        <?php echo form_input(['name' => 'city', 'class' => 'form-control',
+                            'placeholder' => 'Enter First Name',
+                            'value' => set_value('city')]); ?>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">State</label>
                     <div class="col-lg-6">
-                        <input type="text" class="form-control" id="inputEmail" placeholder="Enter State"
-                               name="state">
+                        <?php echo form_input(['name' => 'state', 'class' => 'form-control',
+                            'placeholder' => 'Enter First Name',
+                            'value' => set_value('state')]); ?>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Country</label>
                     <div class="col-lg-6">
-                        <input type="text" class="form-control" id="inputEmail" placeholder="Enter Country"
-                               name="country">
+                        <?php echo form_input(['name' => 'country', 'class' => 'form-control',
+                            'placeholder' => 'Enter First Name',
+                            'value' => set_value('country')]); ?>>
                     </div>
                 </div>
             </fieldset>
+
             <?php echo form_submit(['name' => 'submit', 'value' => 'Update', 'class' => 'btn btn-primary',
                 'style' => 'margin-left:150px;margin-top:10px;']),
             form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default',
-                'style' => 'margin-top:10px;']); ?>
-        </div>
+                'style' => 'margin-top:10px;']);
+            form_close('</div>');
+            ?>
+
         <div class="tab-pane fade" id="parent">
             <div class="row">
                 <div class="col-md-5">
@@ -275,8 +288,9 @@ echo validation_errors();
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Student Id</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText"
-                                   placeholder="Enter Student Id" name="student_id">
+                            <?php echo form_input(['name' => 'student_id', 'class' => 'form-control',
+                                'placeholder' => 'Enter First Name',
+                                'value' => set_value('student_id')]); ?>>
                         </div>
                     </div>
                     <div>
@@ -285,22 +299,25 @@ echo validation_errors();
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">First Name</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText"
-                                   placeholder="Father's first name" name="fathers_first_name">
+                            <?php echo form_input(['name' => 'fathers_first_name', 'class' => 'form-control',
+                                'placeholder' => 'Enter First Name',
+                                'value' => set_value('fathers_first_name')]); ?>>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Middle Name</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText"
-                                   placeholder="Father's middle name" name="fathers_middle_name">
+                            <?php echo form_input(['name' => 'fathers_middle_name', 'class' => 'form-control',
+                                'placeholder' => 'Enter First Name',
+                                'value' => set_value('fathers_middle_name')]); ?>>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Last Name</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText"
-                                   placeholder="Father's last name" name="fathers_last_name">
+                            <?php echo form_input(['name' => 'student_first_name', 'class' => 'form-control',
+                                'placeholder' => 'Enter First Name',
+                                'value' => set_value('fathers')]); ?>
                         </div>
                     </div>
                     <div class="form-group">
@@ -313,33 +330,42 @@ echo validation_errors();
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Mobile</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText" placeholder="Mobile"
-                                   name="f_mobile">
+                            <?php echo form_input(['name' => 'f_mobile', 'class' => 'form-control',
+                                'placeholder' => 'Enter First Name',
+                                'value' => set_value('f_mobile')]); ?>
                             <br>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Qualification</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText" placeholder="Qualification"
-                                   name="f_qual">
+                            <?php echo form_input(['name' => 'f_qual', 'class' => 'form-control',
+                                'placeholder' => 'Enter First Name',
+                                'value' => set_value('f_qual')]); ?>
                             <br>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Occupation</label>
                         <div class="col-lg-10">
-                            <select class="form-control" id="select" name="f_occu">
-                                <option>Business</option>
-                                <option>Service</option>
-                            </select>
+                            <?php $options = [
+                                'business' => 'Business',
+                                'service' => 'Service',
+                            ];
+                            $attribute_class = [
+                                'class' => 'form-control',
+                                'id' => 'select',
+                            ];
+                            echo form_dropdown('f_occu', $options, 'service', $attribute_class);
+                            ?>
+
                             <br>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Photo</label>
                         <div class="col-lg-10">
-                            <input type="file" name="f_photo">
+                            <?php form_open_multipart(); ?>
                         </div>
                     </div>
                 </div>
@@ -351,24 +377,27 @@ echo validation_errors();
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">First Name</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText" placeholder="Mother's first name"
-                                   name="mothers_first_name">
+                            <?php echo form_input(['name' => 'mothers_first_name', 'class' => 'form-control',
+                                'placeholder' => 'Enter First Name',
+                                'value' => set_value('mothers_first_name')]); ?>
                         </div>
                         <br><br>
                     </div>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Middle Name</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText" placeholder="Mother's middle name"
-                                   name="mothers_middle_name">
+                            <?php echo form_input(['name' => 'mothers_middle_name', 'class' => 'form-control',
+                                'placeholder' => 'Enter First Name',
+                                'value' => set_value('mothers_middle_name')]); ?>
                         </div>
                         <br><br>
                     </div>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Last Name</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText" placeholder="Mother's last name"
-                                   name="mothers_last_name">
+                            <?php echo form_input(['name' => 'mothers_last_name', 'class' => 'form-control',
+                                'placeholder' => 'Enter First Name',
+                                'value' => set_value('mothers_last_name')]); ?>
                         </div>
                         <br><br>
                     </div>
@@ -382,33 +411,41 @@ echo validation_errors();
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Mobile</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText" placeholder="Mobile"
-                                   name="m_mobile">
+                            <?php echo form_input(['name' => 'm_mobile', 'class' => 'form-control',
+                                'placeholder' => 'Enter First Name',
+                                'value' => set_value('m_mobile')]); ?>
                         </div>
                         <br><br>
                     </div>
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Qualification</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText"
-                                   placeholder="Qualification" name="m_qual">
+                            <?php echo form_input(['name' => 'm_qual', 'class' => 'form-control',
+                                'placeholder' => 'Enter First Name',
+                                'value' => set_value('m_qual')]); ?>
                             <br>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Occupation</label>
                         <div class="col-lg-10">
-                            <select class="form-control" id="select" name="m_occu">
-                                <option>Business</option>
-                                <option>Service</option>
-                            </select><br>
+                            <?php $options = [
+                                'business' => 'Business',
+                                'service' => 'Service',
+                            ];
+                            $attribute_class = [
+                                'class' => 'form-control',
+                                'id' => 'select',
+                            ];
+                            echo form_dropdown('m_occu', $options, 'service', $attribute_class);
+                            ?>
 
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Photo</label>
                         <div class="col-lg-10">
-                            <input type="file" name="m_photo">
+                            <?php form_open_multipart(); ?>
                         </div>
                         <br>
                     </div>
@@ -433,34 +470,41 @@ echo validation_errors();
                         <div class="form-group">
                             <label for="inputText" class="col-lg-2 control-label">Student Id</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputText"
-                                       placeholder="Enter Student Id" name="student_id">
+                                <?php echo form_input(['name' => 'student_id', 'class' => 'form-control',
+                                    'placeholder' => 'Enter First Name',
+                                    'value' => set_value('student_id')]); ?>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputText" class="col-lg-2 control-label">Last Attended School</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputText"
-                                       placeholder="Enter Last Attended School">
+                                <?php echo form_input(['name' => 'last_attended_school', 'class' => 'form-control',
+                                    'placeholder' => 'Enter First Name',
+                                    'value' => set_value('last_attended_school')]); ?>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputText" class="col-lg-2 control-label">Remarks</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputText" placeholder="Enter Remarks">
+                                <?php echo form_input(['name' => 'remarks', 'class' => 'form-control',
+                                    'placeholder' => 'Enter First Name',
+                                    'value' => set_value('remarks')]); ?>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputText" class="col-lg-2 control-label">Last Exam Given</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputText"
-                                       placeholder="Last Exam Given">
+                                <?php echo form_input(['name' => 'last_exam_given', 'class' => 'form-control',
+                                    'placeholder' => 'Enter First Name',
+                                    'value' => set_value('last_exam_given')]); ?>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputText" class="col-lg-2 control-label">Year</label>
                             <div class="col-lg-10">
-                                <input type="date" class="form-control" id="inputText" placeholder="Enter Year">
+                                <?php echo form_input(['name' => 'year', 'class' => 'form-control',
+                                    'placeholder' => 'Enter First Name',
+                                    'value' => set_value('year')]); ?>
                             </div>
                         </div>
                         <div class="form-group">
@@ -476,8 +520,9 @@ echo validation_errors();
                         <div class="form-group">
                             <label for="select" class="col-lg-2 control-label">Marks</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputText"
-                                       placeholder="Enter Marks in Percentage">
+                                <?php echo form_input(['name' => 'marks', 'class' => 'form-control',
+                                    'placeholder' => 'Enter First Name',
+                                    'value' => set_value('marks')]); ?>
                                 <br>
                             </div>
                         </div>
@@ -508,35 +553,45 @@ echo validation_errors();
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Vision (Left)</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText" placeholder="Enter Left Vision">
+                            <?php echo form_input(['name' => 'vl', 'class' => 'form-control',
+                                'placeholder' => 'Enter First Name',
+                                'value' => set_value('vl')]); ?>
                         </div>
                         <br><br><br>
                     </div>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Vision (Right)</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText" placeholder="Enter Right Vision">
+                            <?php echo form_input(['name' => 'vl', 'class' => 'form-control',
+                                'placeholder' => 'Enter First Name',
+                                'value' => set_value('vr')]); ?>
                         </div>
                         <br><br>
                     </div>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Height</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText" placeholder="Enter Height">
+                            <?php echo form_input(['name' => 'height', 'class' => 'form-control',
+                                'placeholder' => 'Enter First Name',
+                                'value' => set_value('height')]); ?>
                         </div>
                         <br><br>
                     </div>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Weight</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText" placeholder="Enter Weight">
+                            <?php echo form_input(['name' => 'weight', 'class' => 'form-control',
+                                'placeholder' => 'Enter First Name',
+                                'value' => set_value('weight')]); ?>
                         </div>
                         <br><br>
                     </div>
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Dental Hygiene</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputText" placeholder="Enter Dental Hygiene">
+                            <?php echo form_input(['name' => 'dental_hy', 'class' => 'form-control',
+                                'placeholder' => 'Enter First Name',
+                                'value' => set_value('dental_hy')]); ?>
                         </div>
                         <br><br>
                     </div>
@@ -564,25 +619,25 @@ echo validation_errors();
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">TC</label>
                         <div class="col-lg-10">
-                            <input type="file" name="fphoto">
+                            <?php form_open_multipart(); ?>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">CC</label>
                         <div class="col-lg-10">
-                            <input type="file" name="fphoto">
+                            <?php form_open_multipart(); ?>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Report</label>
                         <div class="col-lg-10">
-                            <input type="file" name="fphoto">
+                            <?php form_open_multipart(); ?>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">DOB Certificate</label>
                         <div class="col-lg-10">
-                            <input type="file" name="fphoto" class="form-control" id="inputText" placeholder="anytihng">
+                            <?php form_open_multipart(); ?>
                         </div>
                     </div>
                     <div class="form-group">
@@ -603,45 +658,53 @@ echo validation_errors();
         <div class="tab-pane fade" id="balance">
             <div class="col-md-5">
                 <?php echo form_open('admissions/student_details', ['class' => 'form-horizontal']); ?>
-
                 <h4>Balance</h4>
                 <div class="form-group">
                     <label for="inputText" class="col-lg-2 control-label">Student Id</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="inputText" placeholder="Enter Student Id"
-                               name="student_id">
+                        <?php echo form_input(['name' => 'student_id', 'class' => 'form-control',
+                            'placeholder' => 'Enter First Name',
+                            'value' => set_value('student_id')]); ?>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputText" class="col-lg-2 control-label">Ledger Balance</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="inputText"
-                               placeholder="Enter Legder Balance">
+                        <?php echo form_input(['name' => 'ledger_balance', 'class' => 'form-control',
+                            'placeholder' => 'Enter First Name',
+                            'value' => set_value('ledger_balance')]); ?>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputText" class="col-lg-2 control-label">Fees Balance</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="inputText" placeholder="Enter Fees Balance">
+                        <?php echo form_input(['name' => 'fees_balance', 'class' => 'form-control',
+                            'placeholder' => 'Enter First Name',
+                            'value' => set_value('fees_balance')]); ?>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputText" class="col-lg-2 control-label">Comments</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="inputText" placeholder="Comments">
+                        <?php echo form_input(['name' => 'comments', 'class' => 'form-control',
+                            'placeholder' => 'Enter First Name',
+                            'value' => set_value('comments')]); ?>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputText" class="col-lg-2 control-label">Hostel Room No.</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="inputText"
-                               placeholder="Enter Hostel Room No.">
+                        <?php echo form_input(['name' => 'hostel_room_no', 'class' => 'form-control',
+                            'placeholder' => 'Enter First Name',
+                            'value' => set_value('hostel_room_no')]); ?>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputText" class="col-lg-2 control-label">Bed No.</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="inputText" placeholder="Enter Bed No.">
+                        <?php echo form_input(['name' => 'bed_no', 'class' => 'form-control',
+                            'placeholder' => 'Enter Bed Number',
+                            'value' => set_value('bed_no')]); ?>
                     </div>
                 </div>
             </div>
@@ -649,37 +712,45 @@ echo validation_errors();
                 <div class="form-group">
                     <label for="inputText" class="col-lg-2 control-label">Scholarship No.</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="inputText" placeholder="Scholarship No.">
+                        <?php echo form_input(['name' => 'scholarship_no', 'class' => 'form-control',
+                            'placeholder' => 'Enter Scholarsip Number',
+                            'value' => set_value('scholarship_no')]); ?>
                     </div>
                     <br><br>
                 </div>
                 <div class="form-group">
                     <label for="inputText" class="col-lg-2 control-label">Aadhar UID</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="inputText"
-                               placeholder="Enter Aadhar Card UID">
+                        <?php echo form_input(['name' => 'aadhar_uid', 'class' => 'form-control',
+                            'placeholder' => 'Enter Aadhar UID',
+                            'value' => set_value('aadhar_uid')]); ?>
                     </div>
                     <br><br>
                 </div>
                 <div class="form-group">
                     <label for="inputText" class="col-lg-2 control-label">Family</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="inputText"
-                               placeholder="If family member exists">
+                        <?php echo form_input(['name' => 'family', 'class' => 'form-control',
+                            'placeholder' => 'Enter Family',
+                            'value' => set_value('family')]); ?>
                     </div>
                     <br><br>
                 </div>
                 <div class="form-group">
                     <label for="inputText" class="col-lg-2 control-label">Status</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="inputText" placeholder="Status">
+                        <?php echo form_input(['name' => 'status', 'class' => 'form-control',
+                            'placeholder' => 'Enter Status',
+                            'value' => set_value('status')]); ?>
                     </div>
                     <br><br>
                 </div>
                 <div class="form-group">
                     <label for="inputText" class="col-lg-2 control-label">Discontinue Date</label>
                     <div class="col-lg-10">
-                        <input type="date" class="form-control" id="inputText" placeholder="Date">
+                        <?php echo form_input(['name' => 'discontinue_date', 'class' => 'form-control',
+                            'placeholder' => 'Enter Date',
+                            'value' => set_value('discontinue_date')]); ?>
                     </div>
                 </div>
                 <?php echo form_submit(['name' => 'Submit', 'value' => 'Update',
@@ -701,7 +772,6 @@ echo validation_errors();
                         'style' => 'margin-top:25px;']),
                     form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default',
                         'style' => 'margin-top:25px;']); ?>
-
                 <?php
                 $string='</div>';
                 form_close($string); ?>
