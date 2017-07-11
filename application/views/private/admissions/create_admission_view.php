@@ -204,7 +204,6 @@ echo validation_errors();
             echo form_close($string); ?>
 
         <div class="tab-pane fade" id="address" style="margin-top: 20px;">
-            
             <?php echo form_open('admissions/address_details', ['class' => 'form-horizontal']); ?>
             <fieldset>
                 <div class="form-group">
