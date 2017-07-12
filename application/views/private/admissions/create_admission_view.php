@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-echo validation_errors();
+
 ?>
 <div class="container">
     <ul class="nav nav-tabs">
@@ -19,9 +19,12 @@ echo validation_errors();
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">First Name</label>
                         <div class="col-lg-10">
+
                             <?php echo form_input(['name' => 'student_first_name', 'class' => 'form-control',
                                 'placeholder' => 'Enter First Name',
-                                'value' => set_value('student_first_name')]); ?>
+                                'value' => set_value('student_first_name')]);
+                            ?>
+                            <?php echo form_error('student_first_name'); ?>
                         </div>
                     </div>
                     <div class="form-group">
@@ -35,17 +38,18 @@ echo validation_errors();
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Last Name</label>
                         <div class="col-lg-10">
+
                             <?php echo form_input(['name' => 'student_last_name', 'class' => 'form-control',
                                 'placeholder' => 'Enter Last Name',
                                 'value' => set_value('student_last_name')]); ?>
+                            <?php echo form_error('student_last_name'); ?>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Date of Birth</label>
                         <div class="col-lg-10">
-                            <?php echo form_input(['name' => 'student_dob', 'class' => 'form-control',
-                                'id' => 'inputDate', 'placeholder' => 'Enter DOB',
-                                'value' => set_value('student_dob')]); ?>
+                            <input type="date" name="student_dob" class="form-control">
+                            <?php echo form_error('student_dob'); ?>
                         </div>
                     </div>
                     <div class="form-group">
@@ -62,6 +66,7 @@ echo validation_errors();
                             ];
                             echo form_dropdown('gender', $options, 'male', $attribute_class);
                             ?>
+                            <?php echo form_error('gender'); ?>
 
                             <br>
                         </div>
@@ -111,7 +116,14 @@ echo validation_errors();
                             <?php $options = [
                                 'Ist' => 'Ist',
                                 'IInd' => 'IInd',
-                                'IIIrd' => 'IIIrd'
+                                'IIIrd' => 'IIIrd',
+                                'IVth' => 'IVth',
+                                'Vth' => 'Vth',
+                                'VIth' => 'VIth',
+                                'VIIth' => 'VIIth',
+                                'VIIIth' => 'VIIIth',
+                                'IXth' => 'IXth',
+                                'Xth' => 'Xth',
                             ];
                             $attribute_class = [
                                 'class' => 'form-control',
@@ -141,15 +153,17 @@ echo validation_errors();
                         <label for="inputText" class="col-lg-2 control-label">Roll No.</label>
                         <div class="col-lg-10">
                             <?php echo form_input(['name' => 'student_roll_no', 'class' => 'form-control',
-                                'placeholder' => 'Enter First Name',
+                                'placeholder' => 'Enter Roll no.',
                                 'value' => set_value('student_roll_no')]); ?>
+                            <?php echo form_error('student_roll_no'); ?>
+
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Route</label>
                         <div class="col-lg-10">
                             <?php echo form_input(['name' => 'route', 'class' => 'form-control',
-                                'placeholder' => 'Enter First Name',
+                                'placeholder' => 'Enter Route',
                                 'value' => set_value('route')]); ?>
                         </div>
                     </div>
@@ -182,6 +196,7 @@ echo validation_errors();
                             <?php echo form_input(['name' => 'admission_no', 'class' => 'form-control',
                                 'placeholder' => 'Enter Admission Number',
                                 'value' => set_value('admission_no')]); ?>
+                            <?php echo form_error('admission_no'); ?>
                         </div><br>
                     </div>
 

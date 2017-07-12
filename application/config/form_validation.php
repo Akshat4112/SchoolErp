@@ -23,15 +23,30 @@ $config=[
     'student'=>
         [
             [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
+                'field'=>'student_first_name',
+                'label'=>'Student First Name',
+                'rules'=>'required'
 
             ],
             [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
+                'field'=>'student_last_name',
+                'label'=>'Student Last Name',
+                'rules'=>'required'
+            ],
+            [
+                'field'=>'admission_no',
+                'label'=>'Admission Number',
+                'rules'=>'required'
+            ],
+            [
+            'field'=>'student_dob',
+            'label'=>'Date Of Birth',
+            'rules'=>'required'
+            ],
+            [
+                'field'=>'student_roll_no',
+                'label'=>'Roll Number',
+                'rules'=>'required'
             ]
         ],
     'address'=>

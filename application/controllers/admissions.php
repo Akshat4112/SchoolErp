@@ -28,33 +28,32 @@ class Admissions extends MY_Controller
         $this->load->view('private/admissions/create_admission_view');
     }
 
+    /**
+     *Function getting information from general from student information,
+     * form validation is in student in config,
+     * model add_model inserts the data using student_info in database in student table
+     **/
+
     public function student_details()
     {
-        //if ($this->form_validation->run('student')) {
+        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
 
-            /*$post = $this->input->post('student');
-            echo '1';
-            print_r($post);
+        if ($this->form_validation->run('student')) {
 
+            $post = $this->input->post();
             unset($post['submit']);
-
             $this->load->model('add_model', 'am');
-            echo '2';
             if ($this->am->student_info($post)) {
-                echo '3';
-                echo 'insert successful';
-*/
-                //echo '<script>alert("Student Information Inserted")</script>';
                 $this->load->view('private/admissions/address');
-  /*          } else {
-
-                echo '<script>alert("Insert Failed")</script>';
-
-                $this->load->view('private/admissions/create_admission_view');
+            } else {
+                    echo 'Database query error';
+                    $this->load->view('private/admissions/create_admission_view');
            }
-        //}else{ echo 'Form Valdiation Failed';}
-*/
+        }else {
+            $this->load->view('private/admissions/create_admission_view');
+        }
     }
+
     public function address_details()
     {
 
