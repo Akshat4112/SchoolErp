@@ -1,9 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-
     <link href="<?= base_url() ?>public/assets/css/material-dashboard.css" rel="stylesheet"/>
-
     <link href="<?= base_url() ?>public/assets/css/font-awesome.min.css" rel="stylesheet">
     <link href='<?= base_url() ?>public/assets/css/google_fonts.css' rel='stylesheet' type='text/css'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>

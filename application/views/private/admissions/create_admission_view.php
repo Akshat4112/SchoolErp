@@ -1,6 +1,5 @@
 <?php
 declare(strict_types=1);
-
 ?>
 <div class="container">
     <ul class="nav nav-tabs">
@@ -191,8 +190,10 @@ declare(strict_types=1);
                         </div>
                     </div><br>
                     <div class="form-group">
+                        <b><p style="margin-left: 16px;" class="text-info">Last Admission Number: <?php echo $last_adm; ?></p></b>
                         <label for="inputText" class="col-lg-2 control-label">Admission No.</label>
                         <div class="col-lg-10">
+
                             <?php echo form_input(['name' => 'admission_no', 'class' => 'form-control',
                                 'placeholder' => 'Enter Admission Number',
                                 'value' => set_value('admission_no')]); ?>

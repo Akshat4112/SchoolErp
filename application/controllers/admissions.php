@@ -21,11 +21,15 @@ class Admissions extends MY_Controller
         $this->load->model('student_model', 'sm');
         $stu_list = $this->sm->student_list();
         $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
+
     }
 
     public function create_admission_view()
     {
-        $this->load->view('private/admissions/create_admission_view');
+        $this->load->model('get_model', 'gm');
+        $last = $this->gm->last_admission_no();
+        //echo $last;
+        $this->load->view('private/admissions/create_admission_view',['last_adm'=>$last]);
     }
 
     /**
@@ -36,21 +40,33 @@ class Admissions extends MY_Controller
 
     public function student_details()
     {
-        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
 
+        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
         if ($this->form_validation->run('student')) {
+
+
+            $this->load->model('get_model', 'gm');
+            $last = $this->gm->last_admission_no();
+            //echo $last;
+            //$this->load->view('private/admissions/create_admission_view',['last_adm'=>$last]);
+
+
 
             $post = $this->input->post();
             unset($post['submit']);
             $this->load->model('add_model', 'am');
+
+
             if ($this->am->student_info($post)) {
                 $this->load->view('private/admissions/address');
             } else {
                     echo 'Database query error';
-                    $this->load->view('private/admissions/create_admission_view');
+                    $this->load->view('private/admissions/create_admission_view',['last_adm'=>$last]);
            }
         }else {
-            $this->load->view('private/admissions/create_admission_view');
+            $this->load->model('get_model', 'gm');
+            $last = $this->gm->last_admission_no();
+            $this->load->view('private/admissions/create_admission_view',['last_adm'=>$last]);
         }
     }
 
