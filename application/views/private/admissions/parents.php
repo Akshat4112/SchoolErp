@@ -45,7 +45,7 @@ echo validation_errors();
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Last Name</label>
                 <div class="col-lg-10">
-                    <?php echo form_input(['name' => 'student_first_name', 'class' => 'form-control',
+                    <?php echo form_input(['name' => 'fathers_first_name', 'class' => 'form-control',
                         'placeholder' => 'Enter First Name',
                         'value' => set_value('fathers')]); ?>
                 </div>
@@ -178,9 +178,9 @@ echo validation_errors();
                 <br>
             </div>
             <?php echo form_submit(['name' => 'Submit',
-                'value' => 'Update',
-                'class' => 'btn btn-primary', 'style' => 'margin-top:15px;']),
-            form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default',
+                'value' => 'Next',
+                'class' => 'btn btn-info', 'style' => 'margin-top:15px;']),
+            form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
                 'style' => 'margin-top:15px;']); ?>
         </div>
     </div>

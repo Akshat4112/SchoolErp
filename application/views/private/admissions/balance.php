@@ -4,17 +4,17 @@ echo validation_errors();
 ?>
 <div class="container">
     <ul class="nav nav-tabs">
-        <li class="active"><a href=""><b>General</b></a></li>
-        <li style="margin-left: 20px;"><b>Address Details</b></li>
-        <li style="margin-left: 20px;"><b>Parents Details</b></li>
-        <li style="margin-left: 20px;"><b>Misc Details</b></li>
-        <li style="margin-left: 20px;"><b>Attachements</b></li>
-        <li style="margin-left: 20px;"><b>Balance</b></li>
+        <li class="text-success"><b>General</b></li>
+        <li class="text-success" style="margin-left: 20px;"><b>Address Details</b></li>
+        <li class="text-success" style="margin-left: 20px;"><b>Parents Details</b></li>
+        <li class="text-success" style="margin-left: 20px;"><b>Misc Details</b></li>
+        <li class="text-success" style="margin-left: 20px;"><b>Attachements</b></li>
+        <li class="active" style="margin-left: 20px;"><a href=""><b>Balance</b></a></li>
         <li style="margin-left: 20px;"><b>Additional Fields</b></li>
     </ul>
     <div class="row">
         <div class="col-md-5">
-            <?php echo form_open('admissions/student_details', ['class' => 'form-horizontal']); ?>
+            <?php echo form_open('admissions/balance', ['class' => 'form-horizontal']); ?>
             <h4>Balance</h4>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Student Id</label>
@@ -110,9 +110,9 @@ echo validation_errors();
                         'value' => set_value('discontinue_date')]); ?>
                 </div>
             </div>
-            <?php echo form_submit(['name' => 'Submit', 'value' => 'Update',
-                'class' => 'btn btn-primary', 'style' => 'margin-top:25px;']),
-            form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default',
+            <?php echo form_submit(['name' => 'Submit', 'value' => 'Done',
+                'class' => 'btn btn-success', 'style' => 'margin-top:25px;']),
+            form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
                 'style' => 'margin-top:25px;']); ?>
 
             <?php

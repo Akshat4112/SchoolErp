@@ -15,14 +15,7 @@ echo validation_errors();
             <div class="row">
                 <div class="col-md-5">
                     <?php echo form_open('admissions/student_details', ['class' => 'form-horizontal']); ?>
-                    <div class="form-group">
-                        <label for="inputText" class="col-lg-2 control-label">Admission No.</label>
-                        <div class="col-lg-10">
-                            <?php echo form_input(['name' => 'admission_no', 'class' => 'form-control',
-                                'placeholder' => 'Enter Admission Number',
-                                'value' => set_value('admission_no')]); ?>
-                        </div><br>
-                    </div>
+
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">First Name</label>
                         <div class="col-lg-10">
@@ -182,17 +175,20 @@ echo validation_errors();
                             <input type="file" name="student_photo">
                             <br>
                         </div>
+                    </div><br>
+                    <div class="form-group">
+                        <label for="inputText" class="col-lg-2 control-label">Admission No.</label>
+                        <div class="col-lg-10">
+                            <?php echo form_input(['name' => 'admission_no', 'class' => 'form-control',
+                                'placeholder' => 'Enter Admission Number',
+                                'value' => set_value('admission_no')]); ?>
+                        </div><br>
                     </div>
 
-                    <?php echo form_submit(['name' => 'Submit', 'value' => 'Next', 'class' => 'btn btn-info',
+                    <?php echo form_submit(['name' => 'submit', 'value' => 'Next', 'class' => 'btn btn-info',
                         'style' => 'margin-left:45px; margin-top:20px;']),
                         form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
                             'style' => 'margin-top:20px;']); ?>
                 </div>
             </div>
-            <?php
-            $string ='</div>';
-            echo form_close($string); ?>
-
-
 </div>

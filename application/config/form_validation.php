@@ -23,15 +23,15 @@ $config=[
     'student'=>
         [
             [
-                'field'=>'student_first_name',
-                'label'=>'Student First Name',
-                'rules'=>'required'
+                'field'=>'',
+                'label'=>'',
+                'rules'=>''
 
             ],
             [
-                'field'=>'student_last_name',
-                'label'=>'Student Last Name',
-                'rules'=>'required'
+                'field'=>'',
+                'label'=>'',
+                'rules'=>''
             ]
         ],
     'address'=>

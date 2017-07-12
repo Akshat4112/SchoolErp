@@ -4,10 +4,10 @@ echo validation_errors();
 ?>
 <div class="container">
     <ul class="nav nav-tabs">
-        <li class="active"><a href=""><b>General</b></a></li>
-        <li style="margin-left: 20px;"><b>Address Details</b></li>
-        <li style="margin-left: 20px;"><b>Parents Details</b></li>
-        <li style="margin-left: 20px;"><b>Misc Details</b></li>
+        <li class="text-success"><b>General</b></li>
+        <li class="text-success" style="margin-left: 20px;"><b>Address Details</b></li>
+        <li class="text-success" style="margin-left: 20px;"><b>Parents Details</b></li>
+        <li class="active" style="margin-left: 20px;"><a href=""> <b>Misc Details</b></a></li>
         <li style="margin-left: 20px;"><b>Attachements</b></li>
         <li style="margin-left: 20px;"><b>Balance</b></li>
         <li style="margin-left: 20px;"><b>Additional Fields</b></li>
@@ -15,7 +15,6 @@ echo validation_errors();
     <div class="row">
         <div class="col-md-5">
                 <?php echo form_open('admissions/misc_details', ['class' => 'form-horizontal']); ?>
-                <fieldset>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Student Id</label>
                         <div class="col-lg-10">
@@ -27,9 +26,9 @@ echo validation_errors();
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Last Attended School</label>
                         <div class="col-lg-10">
-                            <?php echo form_input(['name' => 'last_attended_school', 'class' => 'form-control',
-                                'placeholder' => 'Enter First Name',
-                                'value' => set_value('last_attended_school')]); ?>
+                            <?php echo form_input(['name' => 'las', 'class' => 'form-control',
+                                'placeholder' => 'Enter Last Attended School',
+                                'value' => set_value('las')]); ?>
                         </div>
                     </div>
                     <div class="form-group">
@@ -56,16 +55,14 @@ echo validation_errors();
                                 'value' => set_value('year')]); ?>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="select" class="col-lg-2 control-label">Status</label>
-                        <div class="col-lg-10">
-                            <select class="form-control" id="select">
-                                <option>Pass</option>
-                                <option>Fail</option>
-                            </select
-                            <br>
-                        </div>
-                    </div>
+            <div class="form-group">
+                <label for="inputText" class="col-lg-2 control-label">Year</label>
+                <div class="col-lg-10">
+                    <?php echo form_input(['name' => 'status', 'class' => 'form-control',
+                        'placeholder' => 'Enter First Name',
+                        'value' => set_value('year')]); ?>
+                </div>
+            </div>
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Marks</label>
                         <div class="col-lg-10">
@@ -75,29 +72,23 @@ echo validation_errors();
                             <br>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="select" class="col-lg-2 control-label">Board</label>
-                        <div class="col-lg-10">
-                            <select class="form-control" id="select">
-                                <option>CBSE</option>
-                                <option>ICSE</option>
-                                <option>State Board</option>
-                            </select>
-                            <br>
-                        </div>
-                    </div>
+            <div class="form-group">
+                <label for="inputText" class="col-lg-2 control-label">Year</label>
+                <div class="col-lg-10">
+                    <?php echo form_input(['name' => 'board', 'class' => 'form-control',
+                        'placeholder' => 'Enter First Name',
+                        'value' => set_value('year')]); ?>
+                </div>
+            </div>
             </div>
             <div class="col-md-5">
                 <div class="form-group">
-                    <label for="inputText" class="col-lg-2 control-label">Blood Group</label>
+                    <label for="inputText" class="col-lg-2 control-label">Year</label>
                     <div class="col-lg-10">
-                        <select class="form-control" id="select">
-                            <option disabled="disabled">Enter Blood Group</option>
-                            <option>A+</option>
-                            <option>A-</option>
-                        </select>
+                        <?php echo form_input(['name' => 'bg', 'class' => 'form-control',
+                            'placeholder' => 'Enter First Name',
+                            'value' => set_value('year')]); ?>
                     </div>
-                    <br><br>
                 </div>
                 <div class="form-group">
                     <label for="inputText" class="col-lg-2 control-label">Vision (Left)</label>
@@ -111,7 +102,7 @@ echo validation_errors();
                 <div class="form-group">
                     <label for="inputText" class="col-lg-2 control-label">Vision (Right)</label>
                     <div class="col-lg-10">
-                        <?php echo form_input(['name' => 'vl', 'class' => 'form-control',
+                        <?php echo form_input(['name' => 'vr', 'class' => 'form-control',
                             'placeholder' => 'Enter First Name',
                             'value' => set_value('vr')]); ?>
                     </div>
@@ -144,9 +135,9 @@ echo validation_errors();
                     </div>
                     <br><br>
                 </div>
-                <?php echo form_submit(['name' => 'Submit', 'value' => 'Update', 'class' => 'btn btn-primary',
+                <?php echo form_submit(['name' => 'Submit', 'value' => 'Next', 'class' => 'btn btn-info',
                     'style' => 'margin-left:45px;']),
-                form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default']); ?>
+                form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning']); ?>
             </div>
         </div>
     <?php echo form_close() ?>

@@ -79,9 +79,9 @@ echo validation_errors();
                         </div>
                     </div>
                 </fieldset>
-                <?php echo form_submit(['name' => 'submit', 'value' => 'Update', 'class' => 'btn btn-primary',
+                <?php echo form_submit(['name' => 'submit', 'value' => 'Next', 'class' => 'btn btn-info',
                     'style' => 'margin-left:150px;margin-top:10px;']),
-                form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-default',
+                form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
                     'style' => 'margin-top:10px;']);
                 form_close('</div>');
                 ?>
