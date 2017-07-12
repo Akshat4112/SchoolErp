@@ -30,38 +30,33 @@ class Admissions extends MY_Controller
 
     public function student_details()
     {
-        // $this->load->view('private/admissions/create_admission_view');
 
-        $this->form_validation->set_error_delimiters('<div class="alert alert-error">', '</div>');
-        if ($this->form_validation->run('student')) {
 
-            $post = $this->input->post();
+        //if ($this->form_validation->run('student')) {
+
+            $post = $this->input->post('student');
+
             unset($post['Submit']);
 
             $this->load->model('add_model', 'am');
             if ($this->am->student_info($post)) {
-                /**
-                 *echo for testing purpose
-                 */
-                //echo 'insert successful';
-        //        $this->session->set_flashdata('create', 'Admission Created Successfully');
+
+                echo 'insert successful';
+
                 echo '<script>alert("Student Information Inserted")</script>';
-                return redirect('admissions/create_admission_view#address');
+                $this->load->view('private/admissions/address');
             } else {
 
-                /**
-                 *echo for testing purpose
-                 */
-                //echo 'insert failed';
-          //      $this->session->set_flashdata('create', 'Failed');
-                return redirect('admissions/create_admission_view');
-            }
-        }
+                echo '<script>alert("Insert Failed")</script>';
+
+                $this->load->view('private/admissions/create_admission_view');
+          //  }
+        }//else{ echo 'Form Valdiation Failed';}
 
     }
     public function address_details()
     {
-        $this->load->view('private/admissions/create_admission_view');
+
         //if ($this->form_validation->run('address')) {
 
             $post = $this->input->post();
@@ -81,12 +76,13 @@ class Admissions extends MY_Controller
                 /*echo for testing purpose
                 echo 'insert successful'; */
                 echo '<script>alert("Address Inserted")</script>';
+                $this->load->view('private/admissions/parents');
                 } else {
 
                 /*echo for testing purpose
                 echo 'insert failed'; */
 
-                return redirect('admissions/create_admission_view');
+                $this->load->view('private/admissions/address');
             }
         //}
     }
@@ -112,12 +108,13 @@ class Admissions extends MY_Controller
             /*echo for testing purpose
             echo 'insert successful'; */
             echo '<script>alert("Other Info details Inserted")</script>';
+            $this->load->view('private/admissions/misc');
         } else {
 
             /*echo for testing purpose
             echo 'insert failed'; */
 
-            return redirect('admissions/create_admission_view');
+            $this->load->view('private/admissions/address');
         }
         //}
 
