@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
-echo validation_errors();
 ?>
+
 <div class="container">
     <ul class="nav nav-tabs">
         <li class="text-success"><b>General</b></li>
@@ -15,16 +15,8 @@ echo validation_errors();
     <div class="row">
         <div class="col-md-5">
             <?php echo form_open('admissions/other_info_details', ['class' => 'form-horizontal']); ?>
-            <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">Student Id</label>
-                <div class="col-lg-10">
-                    <?php echo form_input(['name' => 'student_id', 'class' => 'form-control',
-                        'placeholder' => 'Enter First Name',
-                        'value' => set_value('student_id')]); ?>
-                </div>
-            </div>
             <div>
-                <h5>Father's Details</h5>
+                <h5 class="text-info" style="font-size: 20px;">Father's Details</h5>
             </div>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">First Name</label>
@@ -32,6 +24,7 @@ echo validation_errors();
                     <?php echo form_input(['name' => 'fathers_first_name', 'class' => 'form-control',
                         'placeholder' => 'Enter First Name',
                         'value' => set_value('fathers_first_name')]); ?>
+                    <?php echo form_error('fathers_first_name'); ?>
                 </div>
             </div>
             <div class="form-group">
@@ -45,8 +38,8 @@ echo validation_errors();
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Last Name</label>
                 <div class="col-lg-10">
-                    <?php echo form_input(['name' => 'fathers_first_name', 'class' => 'form-control',
-                        'placeholder' => 'Enter First Name',
+                    <?php echo form_input(['name' => 'fathers_last_name', 'class' => 'form-control',
+                        'placeholder' => 'Enter Last Name',
                         'value' => set_value('fathers')]); ?>
                 </div>
             </div>
@@ -63,16 +56,16 @@ echo validation_errors();
                     <?php echo form_input(['name' => 'f_mobile', 'class' => 'form-control',
                         'placeholder' => 'Enter First Name',
                         'value' => set_value('f_mobile')]); ?>
-                    <br>
+
                 </div>
             </div>
             <div class="form-group">
                 <label for="select" class="col-lg-2 control-label">Qualification</label>
                 <div class="col-lg-10">
                     <?php echo form_input(['name' => 'f_qual', 'class' => 'form-control',
-                        'placeholder' => 'Enter First Name',
+                        'placeholder' => 'Enter Qualification',
                         'value' => set_value('f_qual')]); ?>
-                    <br>
+
                 </div>
             </div>
             <div class="form-group">
@@ -95,13 +88,13 @@ echo validation_errors();
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Photo</label>
                 <div class="col-lg-10">
-                    <?php form_open_multipart(); ?>
+                    <input type="file" name="f_photo" class="form-control">
                 </div>
             </div>
         </div>
         <div class="col-md-5">
             <div>
-                <h5>Mother's Details</h5>
+                <h5 class="text-info" style="font-size: 20px;">Mother's Details</h5>
             </div>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">First Name</label>
@@ -109,6 +102,7 @@ echo validation_errors();
                     <?php echo form_input(['name' => 'mothers_first_name', 'class' => 'form-control',
                         'placeholder' => 'Enter First Name',
                         'value' => set_value('mothers_first_name')]); ?>
+                    <?php echo form_error('mothers_first_name'); ?>
                 </div>
                 <br><br>
             </div>
@@ -116,7 +110,7 @@ echo validation_errors();
                 <label for="inputText" class="col-lg-2 control-label">Middle Name</label>
                 <div class="col-lg-10">
                     <?php echo form_input(['name' => 'mothers_middle_name', 'class' => 'form-control',
-                        'placeholder' => 'Enter First Name',
+                        'placeholder' => 'Enter Middle Name',
                         'value' => set_value('mothers_middle_name')]); ?>
                 </div>
                 <br><br>
@@ -125,7 +119,7 @@ echo validation_errors();
                 <label for="inputText" class="col-lg-2 control-label">Last Name</label>
                 <div class="col-lg-10">
                     <?php echo form_input(['name' => 'mothers_last_name', 'class' => 'form-control',
-                        'placeholder' => 'Enter First Name',
+                        'placeholder' => 'Enter Last Name',
                         'value' => set_value('mothers_last_name')]); ?>
                 </div>
                 <br><br>
@@ -135,16 +129,16 @@ echo validation_errors();
                 <div class="col-lg-10">
                     <input type="date" class="form-control" id="inputText" placeholder="DOB" name="m_dob">
                 </div>
-                <br><br>
+                <br>
             </div>
             <div class="form-group">
                 <label for="select" class="col-lg-2 control-label">Mobile</label>
                 <div class="col-lg-10">
                     <?php echo form_input(['name' => 'm_mobile', 'class' => 'form-control',
-                        'placeholder' => 'Enter First Name',
+                        'placeholder' => 'Enter Mobile Number',
                         'value' => set_value('m_mobile')]); ?>
                 </div>
-                <br><br>
+                <br>
             </div>
             <div class="form-group">
                 <label for="select" class="col-lg-2 control-label">Qualification</label>
@@ -173,7 +167,14 @@ echo validation_errors();
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Photo</label>
                 <div class="col-lg-10">
-                    <?php form_open_multipart(); ?>
+                    <input type="file" name="m_photo" class="form-control">
+                </div>
+                <br>
+            </div>
+            <div class="form-group">
+                <label for="inputText" class="col-lg-2 control-label">Parents Wedding Date</label>
+                <div class="col-lg-10">
+                    <input type="date" name="parents_wedding_date" class="form-control">
                 </div>
                 <br>
             </div>

@@ -28,8 +28,7 @@ class Admissions extends MY_Controller
     {
         $this->load->model('get_model', 'gm');
         $last = $this->gm->last_admission_no();
-        //echo $last;
-        $this->load->view('private/admissions/create_admission_view',['last_adm'=>$last]);
+        $this->load->view('private/admissions/create_admission_view', ['last_adm' => $last]);
     }
 
     /**
@@ -41,16 +40,13 @@ class Admissions extends MY_Controller
     public function student_details()
     {
 
+        /*
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
         if ($this->form_validation->run('student')) {
 
-
             $this->load->model('get_model', 'gm');
             $last = $this->gm->last_admission_no();
-            //echo $last;
             //$this->load->view('private/admissions/create_admission_view',['last_adm'=>$last]);
-
-
 
             $post = $this->input->post();
             unset($post['submit']);
@@ -63,84 +59,89 @@ class Admissions extends MY_Controller
                     echo 'Database query error';
                     $this->load->view('private/admissions/create_admission_view',['last_adm'=>$last]);
            }
-        }else {
+        } else {
             $this->load->model('get_model', 'gm');
             $last = $this->gm->last_admission_no();
             $this->load->view('private/admissions/create_admission_view',['last_adm'=>$last]);
-        }
+        }*/
+
+        //Below Part in function is for testing of other functions in same controller
+        $this->load->view('private/admissions/address');
     }
 
+    /**
+     *function for insert details in adress,
+     * loading model get_model as gm for student id,
+     * loading model add_model as am for data insertion
+     */
     public function address_details()
     {
+        /*
+        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+        if ($this->form_validation->run('address')) {
 
-        //if ($this->form_validation->run('address')) {
+            /*for getting student id of last admitted student so thar it can
+            *be traced for address details
+            */
+/*
+            $this->load->model('get_model', 'gm');
+            $stu_id = $this->gm->last_student_id();
 
             $post = $this->input->post();
-            $student_id=$post['student_id'];
-            /*
-            echo $student_id;
-            echo '<pre>';
-            print_r($post);
-            */
+            $post['student_id'] = $stu_id;
             unset($post['submit']);
-            /*
-            echo '<pre>';
-            print_r($post);
-            */
+
             $this->load->model('add_model', 'am');
             if ($this->am->address_details($post)) {
-                /*echo for testing purpose
-                echo 'insert successful'; */
-                //echo '<script>alert("Address Inserted")</script>';
                 $this->load->view('private/admissions/parents');
-                } else {
-
-                /*echo for testing purpose
-                echo 'insert failed'; */
-
+            } else {
                 $this->load->view('private/admissions/address');
             }
-        //}
+        } else {
+            $this->load->view('private/admissions/address');
+        }*/
+        //Below Part in function is for testing of other functions in same controller
+        $this->load->view('private/admissions/parents');
+
     }
+
     public function other_info_details()
     {
-
-        //if ($this->form_validation->run('address')) {
-      $post = $this->input->post();
-
-        $student_id=$post['student_id'];
         /*
-        echo $student_id;
-        echo '<pre>';
-        print_r($post);
-        */
+        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+
+        if ($this->form_validation->run('other_info')) {
+        $post = $this->input->post();
+        $this->load->model('get_model', 'gm');
+        $stu_id = $this->gm->last_student_id();
+        $post = $this->input->post();
+        $post['student_id'] = $stu_id;
         unset($post['Submit']);
-        /*
-        echo '<pre>';
-        print_r($post);
-        */
+
+
         $this->load->model('add_model', 'am');
 
         if ($this->am->other_info_details($post)) {
-            /*echo for testing purpose
-            echo 'insert successful'; */
-            //echo '<script>alert("Other Info details Inserted")</script>';
+
             $this->load->view('private/admissions/misc');
         } else {
-
-            /*echo for testing purpose
-            echo 'insert failed'; */
-
             $this->load->view('private/admissions/parents');
         }
-        //}
+        }else{
+            $this->load->view('private/admissions/parents');
+        }*/
+        //Below Part in function is for testing of other functions in same controller
+        $this->load->view('private/admissions/misc');
+
 
     }
-    public function misc_details(){
+
+    public function misc_details()
+    {
         //if ($this->form_validation->run('address')) {
         $post = $this->input->post();
 
-        $student_id=$post['student_id'];
+
         /*
         echo $student_id;
         echo '<pre>';
@@ -170,13 +171,16 @@ class Admissions extends MY_Controller
 
 
     }
-    public function attachment(){
+
+    public function attachment()
+    {
         $this->load->view('private/admissions/balance');
     }
-    public function balance(){
+
+    public function balance()
+    {
         $this->load->view('private/admissions/success_adm');
     }
-
 
 
     public function import()
@@ -215,10 +219,4 @@ class Admissions extends MY_Controller
 
         $this->load->view('private/admissions/create_list_view');
     }
-
-
-
-
-
-
 }

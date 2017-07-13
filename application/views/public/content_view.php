@@ -30,8 +30,8 @@
                 </div>
                 <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
-                        <?php echo form_submit(['name'=>'Submit','value'=>'Login','class'=>'btn btn-primary']),
-                        form_reset(['name'=>'reset','value'=>'reset','class'=>'btn btn-default']);?>
+                        <?php echo form_submit(['name'=>'Submit','value'=>'Login','class'=>'btn btn-info']),
+                        form_reset(['name'=>'reset','value'=>'reset','class'=>'btn btn-warning']);?>
                     </div>
                 </div>
             </fieldset>

@@ -190,7 +190,7 @@ declare(strict_types=1);
                         </div>
                     </div><br>
                     <div class="form-group">
-                        <b><p style="margin-left: 16px;" class="text-info">Last Admission Number: <?php echo $last_adm; ?></p></b>
+                        <b><p style="margin-left: 16px;" class="text-success">Last Admission Number: <?php echo $last_adm; ?></p></b>
                         <label for="inputText" class="col-lg-2 control-label">Admission No.</label>
                         <div class="col-lg-10">
 

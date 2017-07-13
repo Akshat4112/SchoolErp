@@ -16,14 +16,6 @@ echo validation_errors();
         <div class="col-md-5">
                 <?php echo form_open('admissions/misc_details', ['class' => 'form-horizontal']); ?>
                     <div class="form-group">
-                        <label for="inputText" class="col-lg-2 control-label">Student Id</label>
-                        <div class="col-lg-10">
-                            <?php echo form_input(['name' => 'student_id', 'class' => 'form-control',
-                                'placeholder' => 'Enter First Name',
-                                'value' => set_value('student_id')]); ?>
-                        </div>
-                    </div>
-                    <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Last Attended School</label>
                         <div class="col-lg-10">
                             <?php echo form_input(['name' => 'las', 'class' => 'form-control',

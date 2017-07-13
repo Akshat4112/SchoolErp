@@ -52,40 +52,15 @@ $config=[
     'address'=>
         [
             [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
+                'field'=>'house_no',
+                'label'=>'House Number',
+                'rules'=>'required'
             ],
             [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
+                'field'=>'city',
+                'label'=>'City',
+                'rules'=>'required'
             ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ]
         ],
     'attachements'=>
         [
@@ -271,90 +246,16 @@ $config=[
     'other_info'=>
         [
             [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
+                'field'=>'fathers_first_name',
+                'label'=>'Fathers First Name',
+                'rules'=>'required'
             ],
             [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
+                'field'=>'mothers_first_name',
+                'label'=>'Mothers First Name',
+                'rules'=>'required'
             ]
+
         ],
     'owner'=>
         [
