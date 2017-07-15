@@ -132,7 +132,7 @@
                                         </div>
                                         <div class="card-content">
                                             <p class="category"><a
-                                                        href="<?= site_url('time_table/time_table_view'); ?>"><h4>Admin</h4></a>
+                                                        href="<?= site_url('admin/'); ?>"><h4>Admin</h4></a>
                                             </p>
                                             <h4 class="title"></h4>
                                         </div>

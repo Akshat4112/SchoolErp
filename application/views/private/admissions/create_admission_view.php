@@ -14,7 +14,6 @@ declare(strict_types=1);
             <div class="row">
                 <div class="col-md-5">
                     <?php echo form_open('admissions/student_details', ['class' => 'form-horizontal']); ?>
-
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">First Name</label>
                         <div class="col-lg-10">
