@@ -205,7 +205,7 @@ class Admissions extends MY_Controller
                 $this->load->view('private/admissions/balance');
             }
         } else {
-            redirect('dashboard/');
+            $this->load->view('private/admissions/balance');
         }
     }
 
