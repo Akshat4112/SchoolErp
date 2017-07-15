@@ -21,11 +21,11 @@ class Add_model extends MY_Model{
     {
         return $this->db->insert('misc_info',$array);
     }
-    public function attachements_details($array)
+    public function attach($array)
     {
         return $this->db->insert('attachemnts',$array);
     }
-    public function balance_details($array)
+    public function balance($array)
     {
         return $this->db->insert('old_balance',$array);
     }

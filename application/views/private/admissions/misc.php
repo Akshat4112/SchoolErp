@@ -1,6 +1,5 @@
 <?php
 declare(strict_types=1);
-echo validation_errors();
 ?>
 <div class="container">
     <ul class="nav nav-tabs">
@@ -21,6 +20,7 @@ echo validation_errors();
                             <?php echo form_input(['name' => 'las', 'class' => 'form-control',
                                 'placeholder' => 'Enter Last Attended School',
                                 'value' => set_value('las')]); ?>
+                            <?php echo form_error('las'); ?>
                         </div>
                     </div>
                     <div class="form-group">

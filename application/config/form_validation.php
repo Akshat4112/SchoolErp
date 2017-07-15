@@ -62,12 +62,20 @@ $config=[
                 'rules'=>'required'
             ],
         ],
-    'attachements'=>
+    'misc_stu_details'=>
         [
             [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
+                'field'=>'las',
+                'label'=>'Last attended School',
+                'rules'=>'required'
+            ]
+        ],
+    'attach'=>
+        [
+            [
+                'field'=>'admission_form_no',
+                'label'=>'Admission form number',
+                'rules'=>'required'
             ],
             [
                 'field'=>'',
@@ -190,58 +198,13 @@ $config=[
                 'rules'=>''
             ],
         ],
-    'old_balance'=>
+    'balance'=>
         [
             [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
+                'field'=>'ledger_balance',
+                'label'=>'Ledger Balance',
+                'rules'=>'required'
             ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ],
-            [
-                'field'=>'',
-                'label'=>'',
-                'rules'=>''
-            ]
         ],
     'other_info'=>
         [

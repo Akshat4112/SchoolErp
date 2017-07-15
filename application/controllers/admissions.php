@@ -40,7 +40,7 @@ class Admissions extends MY_Controller
     public function student_details()
     {
 
-        /*
+
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
         if ($this->form_validation->run('student')) {
 
@@ -63,10 +63,10 @@ class Admissions extends MY_Controller
             $this->load->model('get_model', 'gm');
             $last = $this->gm->last_admission_no();
             $this->load->view('private/admissions/create_admission_view',['last_adm'=>$last]);
-        }*/
+        }
 
         //Below Part in function is for testing of other functions in same controller
-        $this->load->view('private/admissions/address');
+        //$this->load->view('private/admissions/address');
     }
 
     /**
@@ -76,38 +76,38 @@ class Admissions extends MY_Controller
      */
     public function address_details()
     {
-        /*
+
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
         if ($this->form_validation->run('address')) {
 
             /*for getting student id of last admitted student so thar it can
             *be traced for address details
             */
-/*
-            $this->load->model('get_model', 'gm');
-            $stu_id = $this->gm->last_student_id();
 
-            $post = $this->input->post();
-            $post['student_id'] = $stu_id;
-            unset($post['submit']);
+                    $this->load->model('get_model', 'gm');
+                    $stu_id = $this->gm->last_student_id();
 
-            $this->load->model('add_model', 'am');
-            if ($this->am->address_details($post)) {
-                $this->load->view('private/admissions/parents');
-            } else {
-                $this->load->view('private/admissions/address');
-            }
-        } else {
-            $this->load->view('private/admissions/address');
-        }*/
+                    $post = $this->input->post();
+                    $post['student_id'] = $stu_id;
+                    unset($post['submit']);
+
+                    $this->load->model('add_model', 'am');
+                    if ($this->am->address_details($post)) {
+                        $this->load->view('private/admissions/parents');
+                    } else {
+                        $this->load->view('private/admissions/address');
+                    }
+                } else {
+                    $this->load->view('private/admissions/address');
+                }
         //Below Part in function is for testing of other functions in same controller
-        $this->load->view('private/admissions/parents');
+        //$this->load->view('private/admissions/parents');
 
     }
 
     public function other_info_details()
     {
-        /*
+
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
 
         if ($this->form_validation->run('other_info')) {
@@ -129,57 +129,84 @@ class Admissions extends MY_Controller
         }
         }else{
             $this->load->view('private/admissions/parents');
-        }*/
+        }
         //Below Part in function is for testing of other functions in same controller
-        $this->load->view('private/admissions/misc');
+        //$this->load->view('private/admissions/misc');
 
 
     }
 
     public function misc_details()
     {
-        //if ($this->form_validation->run('address')) {
-        $post = $this->input->post();
+        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
 
-
-        /*
-        echo $student_id;
-        echo '<pre>';
-        print_r($post);
-        */
-        unset($post['Submit']);
-
-
-        /*
-        echo '<pre>';
-        print_r($post);
-        */
-        $this->load->model('add_model', 'am');
-        if ($this->am->misc_details($post)) {
-            /*echo for testing purpose
-            echo 'insert successful'; */
-
-            $this->load->view('private/admissions/attach');
+        if ($this->form_validation->run('misc_stu_details')) {
+            $post = $this->input->post();
+            $this->load->model('get_model', 'gm');
+            $stu_id = $this->gm->last_student_id();
+            $post = $this->input->post();
+            $post['student_id'] = $stu_id;
+            unset($post['Submit']);
+            $this->load->model('add_model', 'am');
+            if ($this->am->misc_details($post)) {
+                $this->load->view('private/admissions/attach');
+            } else {
+                $this->load->view('private/admissions/misc');
+            }
         } else {
-
-            /*echo for testing purpose
-            echo 'insert failed'; */
-
             $this->load->view('private/admissions/misc');
         }
-        //}
-
-
+        //Below Part in function is for testing of other functions in same controller
+        //$this->load->view('private/admissions/attach');
     }
 
     public function attachment()
     {
-        $this->load->view('private/admissions/balance');
+
+        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+
+        if ($this->form_validation->run('attach')) {
+            $post = $this->input->post();
+            $this->load->model('get_model', 'gm');
+            $stu_id = $this->gm->last_student_id();
+            $post = $this->input->post();
+            $post['student_id'] = $stu_id;
+            unset($post['Submit']);
+            $this->load->model('add_model', 'am');
+            if ($this->am->attach($post)) {
+                $this->load->view('private/admissions/balance');
+            } else {
+                $this->load->view('private/admissions/attach');
+            }
+        } else {
+            $this->load->view('private/admissions/attach');
+        }
+
+        //Below Part in function is for testing of other functions in same controller
+        //$this->load->view('private/admissions/balance');
     }
 
     public function balance()
     {
-        $this->load->view('private/admissions/success_adm');
+        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+
+        if ($this->form_validation->run('balance')) {
+            $post = $this->input->post();
+            $this->load->model('get_model', 'gm');
+            $stu_id = $this->gm->last_student_id();
+            $post = $this->input->post();
+            $post['student_id'] = $stu_id;
+            unset($post['Submit']);
+            $this->load->model('add_model', 'am');
+            if ($this->am->balance($post)) {
+                echo '<script>alert("Admission has been done succesfully")</script>';
+                redirect('dashboard/');
+            } else {
+                $this->load->view('private/admissions/balance');
+            }
+        } else {
+            redirect('dashboard/');
+        }
     }
 
 

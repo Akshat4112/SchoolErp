@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-echo validation_errors();
+
 ?>
 <div class="container">
     <ul class="nav nav-tabs">
@@ -17,26 +17,19 @@ echo validation_errors();
             <?php echo form_open('admissions/balance', ['class' => 'form-horizontal']); ?>
             <h4>Balance</h4>
             <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">Student Id</label>
-                <div class="col-lg-10">
-                    <?php echo form_input(['name' => 'student_id', 'class' => 'form-control',
-                        'placeholder' => 'Enter First Name',
-                        'value' => set_value('student_id')]); ?>
-                </div>
-            </div>
-            <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Ledger Balance</label>
                 <div class="col-lg-10">
                     <?php echo form_input(['name' => 'ledger_balance', 'class' => 'form-control',
-                        'placeholder' => 'Enter First Name',
+                        'placeholder' => 'Enter Ledger Balance',
                         'value' => set_value('ledger_balance')]); ?>
+                    <?php echo form_error('ledger_balance'); ?>
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Fees Balance</label>
                 <div class="col-lg-10">
                     <?php echo form_input(['name' => 'fees_balance', 'class' => 'form-control',
-                        'placeholder' => 'Enter First Name',
+                        'placeholder' => 'Enter Fees Balance',
                         'value' => set_value('fees_balance')]); ?>
                 </div>
             </div>
@@ -44,7 +37,7 @@ echo validation_errors();
                 <label for="inputText" class="col-lg-2 control-label">Comments</label>
                 <div class="col-lg-10">
                     <?php echo form_input(['name' => 'comments', 'class' => 'form-control',
-                        'placeholder' => 'Enter First Name',
+                        'placeholder' => 'Enter extra information',
                         'value' => set_value('comments')]); ?>
                 </div>
             </div>
@@ -52,7 +45,7 @@ echo validation_errors();
                 <label for="inputText" class="col-lg-2 control-label">Hostel Room No.</label>
                 <div class="col-lg-10">
                     <?php echo form_input(['name' => 'hostel_room_no', 'class' => 'form-control',
-                        'placeholder' => 'Enter First Name',
+                        'placeholder' => 'Enter Hostel Room no.',
                         'value' => set_value('hostel_room_no')]); ?>
                 </div>
             </div>
