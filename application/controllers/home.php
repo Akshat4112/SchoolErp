@@ -17,7 +17,6 @@ class Home extends MY_Controller
             return redirect('dashboard');
         }
         $this->load->view('public/content_view');
-
     }
     public function admin_login(){
         if($this->form_validation->run('admin_form')){
