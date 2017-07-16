@@ -199,8 +199,8 @@ class Admissions extends MY_Controller
             unset($post['Submit']);
             $this->load->model('add_model', 'am');
             if ($this->am->balance($post)) {
-                echo '<script>alert("Admission has been done succesfully")</script>';
-                redirect('dashboard/');
+                //echo '<script>alert("Admission has been done succesfully")</script>';
+                redirect('admissions/');
             } else {
                 $this->load->view('private/admissions/balance');
             }
@@ -243,7 +243,13 @@ class Admissions extends MY_Controller
 
     public function create_list()
     {
-
+        require 'fpdf/fpdf.php';
         $this->load->view('private/admissions/create_list_view');
+        /*$pdf = new FPDF();
+        $pdf->AddPage();
+        $pdf->SetFont('Arial','B',16);
+        $pdf->Cell(40,10,'Hello World!');
+        $pdf->Output();
+*/
     }
 }

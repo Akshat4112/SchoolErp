@@ -57,12 +57,12 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Masters <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="">Class</a></li>
-                        <li><a href="#">Section</a></li>
-                        <li><a href="#">Caste</a></li>
-                        <li><a href="#">Category</a></li>
-                        <li><a href="#">House</a></li>
-                        <li><a href="#">Family</a></li>
+                        <li><a href="<?=site_url('admin/masters_class')?>">Class</a></li>
+                        <li><a href="<?=site_url('admin/masters_section')?>">Section</a></li>
+                        <li><a href="<?=site_url('admin/masters_caste')?>">Caste</a></li>
+                        <li><a href="<?=site_url('admin/masters_category')?>">Category</a></li>
+                        <li><a href="<?=site_url('admin/masters_house')?>">House</a></li>
+                        <li><a href="<?=site_url('admin/masters_family')?>">Family</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Enquiry Form</a></li>
