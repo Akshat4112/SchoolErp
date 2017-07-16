@@ -17,7 +17,6 @@ declare(strict_types=1);
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">First Name</label>
                         <div class="col-lg-10">
-
                             <?php echo form_input(['name' => 'student_first_name', 'class' => 'form-control',
                                 'placeholder' => 'Enter First Name',
                                 'value' => set_value('student_first_name')]);
@@ -207,3 +206,4 @@ declare(strict_types=1);
                 </div>
             </div>
 </div>
+
