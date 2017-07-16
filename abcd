@@ -1,0 +1,549 @@
+[33mcommit 1787e20e8b4550eef91d419ee16e11b7e7907b42[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Sun Jul 16 12:34:21 2017 +0530
+
+    Revert "ADMIN STRUCTURE CREATED"
+    
+    This reverts commit f6eb80d4920e0129fcb0e94c005fe00f397ae627.
+
+[33mcommit 85fd1e3d94f538602d48ac45f31a58100dd5c019[m
+Merge: a2f8edb 97c3602
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Sun Jul 16 12:23:42 2017 +0530
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit a2f8edb16a5ae40e672b2066fa3a28310ec85632[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Sun Jul 16 12:22:50 2017 +0530
+
+    ADMIN STRUCTURE CREATED
+
+[33mcommit 97c36020f5794159f912b8ffdd485f96d8ef3dad[m
+Merge: bcd0152 f6eb80d
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Sun Jul 16 12:22:32 2017 +0530
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       application/controllers/admissions.php
+    #       application/controllers/dashboard.php
+    #       application/controllers/home.php
+    #       application/views/private/admissions/students_profile_view.php
+    #       application/views/public/about_us.php
+    #       application/views/public/contact_us.php
+    #       application/views/public/content_view.php
+    #       application/views/public/footer_view.php
+    #       application/views/public/header_view.php
+    #       application/views/public/help.php
+    #       application/views/public/login_success.php
+
+[33mcommit f6eb80d4920e0129fcb0e94c005fe00f397ae627[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Sun Jul 16 12:20:32 2017 +0530
+
+    ADMIN STRUCTURE CREATED
+
+[33mcommit b8792268825c22c50f72e8066790b3875e00a89f[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Sun Jul 16 00:57:14 2017 +0530
+
+    Admin UI Initiated
+
+[33mcommit c108746b7a3a51ad433b65df6305650412fa1f81[m
+Merge: cccb91d 26ee859
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Sat Jul 15 19:33:28 2017 +0530
+
+    Merge branch 'master' of https://github.com/Akshat4112/SchoolErp
+
+[33mcommit cccb91d0cb737d240d22e1f784284f0a761b7b9f[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Sat Jul 15 19:33:24 2017 +0530
+
+    pushed
+
+[33mcommit ee4f993c7b3b5b3719f2a540358118d69b05123a[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Sat Jul 15 14:22:34 2017 +0530
+
+    CREATE ADMISSION IS ALMOST COMPLETED
+
+[33mcommit bcd0152f379a25273d2a23f55a38875467f8977e[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Sat Jul 15 14:22:33 2017 +0530
+
+    CREATE ADMISSION IS ALMOST COMPLETED
+
+[33mcommit bef84c7eaf86ca842a4fbf254fbf1a9c7b7c3597[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Sat Jul 15 11:52:58 2017 +0530
+
+    code optimization
+
+[33mcommit 51804fbefe245a3531fc89956b6b0a510268f5f7[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Sat Jul 15 11:23:21 2017 +0530
+
+    docs improved with deletion of useless files
+
+[33mcommit 08aac694d6b8f011f2a0d033c5e51c3baf56a16a[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Sat Jul 15 10:54:17 2017 +0530
+
+    1 more class initialized
+
+[33mcommit 55f17680c4f0c0ede75a7c44cf96b5cc5b4f3164[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Sat Jul 15 10:39:49 2017 +0530
+
+    Docs changes
+
+[33mcommit 26ee859b2e5f64c5c9c605e629443a9ba7187da1[m
+Merge: bef84c7 0d99130
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Sat Jul 15 02:19:39 2017 +0530
+
+    Merge pull request #3 from Akshat4112/akshat4112-agra
+    
+    add handle's pin
+
+[33mcommit 0d991304f36c7c7b7b758351a5f6a7d22c5d9022[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Sat Jul 15 02:18:04 2017 +0530
+
+    add handle's pin
+
+[33mcommit 1c9a26638a2ae469837f4196cd0ecc90749f8b69[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Fri Jul 14 05:27:51 2017 +0530
+
+    Admission FLow UI
+
+[33mcommit 6347cc1066f0b7d55fec13158890f6ee13c79a48[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Thu Jul 13 01:55:03 2017 +0530
+
+    Last admission Number functionality added
+
+[33mcommit 2cbcc6b7ecba3cee59fa8e43289c0cb4b85d7dc9[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Thu Jul 13 00:57:50 2017 +0530
+
+    validations came into effect in general view of admissions
+
+[33mcommit a5e2474dd2d981fd21e724c54dd3e078f966eb79[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Wed Jul 12 09:18:45 2017 +0530
+
+    UI-UX Changes in admission
+
+[33mcommit 960383bb84b16cb2efe3f25623ab5fcf6cdde138[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Wed Jul 12 08:05:32 2017 +0530
+
+    Changes in UI
+    
+    Making of flow UI in Create Admission
+
+[33mcommit 0000fafcaed57aad65cf6a01160f32b2ab385d0c[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Wed Jul 12 06:00:15 2017 +0530
+
+    UI Changes
+
+[33mcommit f2543c01be915d4bc6d062816b9ca8202819e4c9[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Tue Jul 11 12:25:08 2017 +0530
+
+    EXPORT AND import view changes
+
+[33mcommit bcb0b782297dadb3b52fdf1e919376b16fb48095[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Mon Jul 10 09:18:10 2017 +0530
+
+    changes in front view
+
+[33mcommit db1ae8830ab9a740cd75c350b0c0f258d736b79c[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Mon Jul 10 03:18:27 2017 +0530
+
+    minute changes in admission
+
+[33mcommit e8bc9cd4791368a58da46035cdeda11a35af31c4[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Mon Jul 10 03:13:55 2017 +0530
+
+    view of file create admission is updated
+
+[33mcommit 8667c11fed93cee58028bac4eac0c4d2a4ff2a41[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Sun Jul 9 05:28:08 2017 +0530
+
+    get and add models modified
+
+[33mcommit 2c1cac562e89b116c50fc4bd67a770f2c18aa14f[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Sun Jul 9 05:16:27 2017 +0530
+
+    Address Field Updated
+
+[33mcommit 65a6fbc24465a81fae8ed435de3a5f5b6caff9dc[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Sat Jul 8 13:28:42 2017 +0530
+
+    Changes in htacess for root
+
+[33mcommit 43fe3e5938bbe96713ff13c447ba0f11b64e9f1a[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Thu Jul 6 23:47:00 2017 +0530
+
+    Changed in project structure
+
+[33mcommit d91d817df0e06c2933d1af4ca91ce42f8f829c3e[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Thu Jul 6 23:38:38 2017 +0530
+
+    Changed in project structure
+
+[33mcommit 4d93fed7cf6518250a502fdf18cb864517d9b588[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Wed Jul 5 17:51:23 2017 +0530
+
+    just simple editing
+
+[33mcommit 5ea90dd933582000f931f127d4ed236b2beef30f[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Wed Jul 5 11:44:55 2017 +0530
+
+    Check for user is logged in
+
+[33mcommit dff4aa3152e23fa99fb52769d7434bcc89073d05[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Tue Jul 4 13:46:08 2017 +0530
+
+    Header login name fetched with session is updated
+
+[33mcommit bb9ac03c18f41e4b67b357dfa35d313315e6fe5e[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Tue Jul 4 12:56:29 2017 +0530
+
+    Data is fetched from DB via model student for admisson View
+
+[33mcommit 38be8a8f98b4bd2267fc70db29d1c91c0e03ea6e[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Tue Jul 4 02:00:03 2017 +0530
+
+    Conflicts Resolved
+
+[33mcommit 20e7932b8f38077642d1f09fed57032f821a866e[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Tue Jul 4 01:55:03 2017 +0530
+
+    Validation using model is created
+
+[33mcommit e9e0de5a77311d83b6a15dabcf693c9211720974[m
+Merge: 7a6bf82 0bf5ce5
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Tue Jul 4 01:53:50 2017 +0530
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       application/controllers/home.php
+    #       application/models/login_model.php
+
+[33mcommit 7a6bf82c2b307e7c01b413f6b4558dbaecf939e4[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Tue Jul 4 00:53:02 2017 +0530
+
+    Validation using model is created
+
+[33mcommit 0bf5ce5e6377561372a456e00108a3703326d3b0[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Tue Jul 4 00:53:02 2017 +0530
+
+    Form Validation in Admin Login Created
+
+[33mcommit da8b9d128d5915d4073a94925e01292435d3c231[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Mon Jul 3 00:31:47 2017 +0530
+
+    My Controller inherites CI_Controller
+
+[33mcommit c8d6125fdbb9b974be5a1d4f272f09b9f4d104e4[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Sat Jul 1 01:48:44 2017 +0530
+
+    some test files created
+
+[33mcommit 791f61016738d0d76e0d1bf95d0500a33f857603[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Fri Jun 30 00:56:46 2017 +0530
+
+    Update Readme.rst
+
+[33mcommit 47c52a48afbab22fed546d47a3044036cd2725bd[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Fri Jun 30 00:44:14 2017 +0530
+
+    Changes in view of create admission
+
+[33mcommit 1b4a501d65e8c2305b0ec8754f4de1a5fde500c5[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Thu Jun 29 03:06:43 2017 +0530
+
+    Create code of conduct
+
+[33mcommit 0a33245edcac1fc1e85cc8a96b0ca6528ae44d16[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Thu Jun 29 03:01:47 2017 +0530
+
+    LICENSE Created
+
+[33mcommit c815fd739e6df841a4219e212699c4c50e6ccd6e[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Thu Jun 29 01:44:35 2017 +0530
+
+    Docs edited
+
+[33mcommit 4c4842f55db60c9379807095c8e34e185a1c6ae7[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Tue Jun 27 23:23:21 2017 +0530
+
+    Docs added plus some changes in school erp
+
+[33mcommit adb08ac230d184c97550f72f9abaaf992905de27[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Mon Jun 26 23:47:15 2017 +0530
+
+    Genreal Changes
+
+[33mcommit 072d15c15831d2609d83e7ee4084de689bf4bc98[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Mon Jun 26 17:04:38 2017 +0530
+
+    Form validation in admissions are started
+
+[33mcommit d2d16781a93b9ac62d0c2b052fc4bcad72d35cdc[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Mon Jun 26 16:26:03 2017 +0530
+
+    Database entru through controller is created
+
+[33mcommit 91bf9ba0b4df8c7d1165b999071e5ed60aaf3ced[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Sun Jun 25 12:58:51 2017 +0530
+
+    Changes in create admission
+
+[33mcommit 2b1e9ba311110b498685831bb40dff694d797d67[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Sun Jun 25 04:20:10 2017 +0530
+
+    Docs Added
+
+[33mcommit 1e952fe521e7bfd0c382a0213cd444943c3b8ca7[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Sun Jun 25 01:10:02 2017 +0530
+
+    Chanegs in dashboard and admission
+
+[33mcommit 3cc2508adf558c5b43f380b22ab140b6c7dc5818[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Tue Jun 20 23:10:51 2017 +0530
+
+    DB connections updated
+
+[33mcommit e26a32b5957ed3e03c00beb901a1c9976d8c7bbf[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Tue Jun 20 21:23:31 2017 +0530
+
+    changes in student view
+
+[33mcommit fb5c5ed8a9f6be0ea2b0b3a5cd7e6aa3455aff4c[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Mon Jun 19 20:45:30 2017 +0530
+
+    unnecessary content removed
+
+[33mcommit 56a3acbf2ae8e217ebf91f32c0551a80695543e5[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Mon Jun 19 20:44:37 2017 +0530
+
+    Student views created and updated
+
+[33mcommit 50db6f579f49a7b02461a487d5dd35ac63e1cc04[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Mon Jun 19 19:58:36 2017 +0530
+
+    changes in faculties view
+
+[33mcommit 5d50f90143e297defd3ed38fb7dc97efbdf6e4fe[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Mon Jun 19 18:01:08 2017 +0530
+
+    Some Changes in Dashboard and views
+
+[33mcommit 439909a07852a8ef2ed01a932cc42b0fbd08b911[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Sat Jun 17 00:58:23 2017 +0530
+
+    Changes in view of Students
+
+[33mcommit e94645fc9b51ad3729a92a6994027c388bd220d0[m
+Author: Akshat <akshat41121995@gmail.com>
+Date:   Fri Jun 16 23:02:52 2017 +0530
+
+    Update readme.rst
+
+[33mcommit 75d2c87e9c5c259203cc46db8e439019fdd6c02f[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Fri Jun 16 22:38:28 2017 +0530
+
+    Header updated in admission view
+
+[33mcommit 5492066ff5439d44ffabbbfd05d6f4878b8b7071[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Fri Jun 16 22:23:02 2017 +0530
+
+    Admission Create View
+
+[33mcommit 9b7966ffa5963e495a7d6cf2128343196e26caad[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Fri Jun 16 17:13:55 2017 +0530
+
+    Admission Views Completed
+
+[33mcommit 88a77fd6360bce1f99bd00e7f5fa98f134dd33ab[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Fri Jun 16 16:33:30 2017 +0530
+
+    changes in public files
+
+[33mcommit f43d2c8cc36990ea2fec8ccc8ea1d627428d6c17[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Thu Jun 15 23:37:44 2017 +0530
+
+    Home Page design Changes
+
+[33mcommit 79233226e5f9394bd9d7e679ea8e2ffa865e6a07[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Tue Jun 13 22:31:56 2017 +0530
+
+    Some Changes
+
+[33mcommit 616af71b0cb9450b517848f931499bc3835f1866[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Mon Jun 12 17:16:55 2017 +0530
+
+    changes in discuss
+
+[33mcommit ffb5544162198bc9876700a289a7b95064aaacb5[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Mon Jun 12 17:13:48 2017 +0530
+
+    Discuss UI initiated
+
+[33mcommit 2196a7006c81fbca5537e8af27ba840f3760f435[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Mon Jun 12 16:53:54 2017 +0530
+
+    Changes in view of dashboard
+
+[33mcommit aec365b5b12c3a62a8083dd7e7dd7aca7f653a30[m
+Author: Ridhima Garg <garg.ridhima72@gmail.com>
+Date:   Sun Jun 11 15:26:07 2017 -0700
+
+    adding a file employeeinfo_view
+    
+    employee_view is connected with employeeinfo_view
+
+[33mcommit ea7260392cd2fdd4c859c58bacad4529207f4441[m
+Author: Ridhima Garg <garg.ridhima72@gmail.com>
+Date:   Sun Jun 11 12:01:27 2017 -0700
+
+    changes in employee
+    
+    changes in employee_view
+
+[33mcommit 46e1d29b0cbcc3bd5a9ed1dbba65763015c0536f[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Sat Jun 10 22:55:31 2017 +0530
+
+    Changes in link on navbar brand
+
+[33mcommit f7f55ee58b0d33c9953edb41f021ba9dec3a7055[m
+Author: Ridhima Garg <garg.ridhima72@gmail.com>
+Date:   Sat Jun 10 12:23:03 2017 -0700
+
+    changes in employee view
+    
+    changes in employee view
+
+[33mcommit f89464de0d7918dfe6a5ce5fd37d8c2a3075e715[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Sat Jun 10 10:36:08 2017 +0530
+
+    Changes in header of Home
+
+[33mcommit ab1eaac3e14931fc7be238ac47eae5a27cfb3a80[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Sat Jun 10 10:30:54 2017 +0530
+
+    Create Student UI Design
+
+[33mcommit e7232408af9c253f29500d34ed9c58862762cf8f[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Sat Jun 10 10:10:30 2017 +0530
+
+    UI of attendance and students initiated
+
+[33mcommit 1d56a4074defc58a48fc31afc754fca6badb60bf[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Fri Jun 9 22:02:12 2017 +0530
+
+    Attendance Module Initiated
+
+[33mcommit 47c1f519d0d998ff18cfa0a21bc25e10a50c730e[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Fri Jun 9 21:15:32 2017 +0530
+
+    Admission Module Started
+
+[33mcommit b7d8caefd3d0dba736c5eeefb990b2e2baa39397[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Fri Jun 9 19:10:01 2017 +0530
+
+    Changes in home
+
+[33mcommit a3c3c62b92bdfb9ba663c6c313701a110de4d265[m
+Author: Ridhima Garg <garg.ridhima72@gmail.com>
+Date:   Fri Jun 9 19:05:25 2017 -0700
+
+    changes in title
+
+[33mcommit 87c685fe2e4a492fee516de6d692a1e4ee163d4a[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Fri Jun 9 19:01:48 2017 +0530
+
+    Chanegs in Admissions
+
+[33mcommit f58de3c9dea1722a55a0d5fe2eec41622a78f4ad[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Fri Jun 9 18:53:52 2017 +0530
+
+    Chanegs in icon on dashboard
+
+[33mcommit 51cab61ee12bddc7dfc1034b74aa5d9703ba4912[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Fri Jun 9 18:34:10 2017 +0530
+
+    Changes in dashboard and related files
+
+[33mcommit de87c96f5159d950e0532abdf73a2e3938e3361a[m
+Author: Akshat Gupta <akshat41121995@gmail.com>
+Date:   Fri Jun 9 16:48:38 2017 +0530
+
+    Changes in dashboard
