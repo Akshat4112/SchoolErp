@@ -50,8 +50,8 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Route<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Route</a></li>
-                        <li><a href="#">Route Plan</a></li>
+                        <li><a href="<?=site_url('admin/route')?>">Route</a></li>
+                        <li><a href="<?=site_url('admin/route_plan')?>">Route Plan</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">

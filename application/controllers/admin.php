@@ -34,4 +34,10 @@
     public function masters_family(){
         $this->load->view('private/admin/masters/family');
     }
+    public function route_plan(){
+        $this->load->view('private/admin/route/route_plan');
+    }
+    public function route(){
+        $this->load->view('private/admin/route/route');
+    }
 }
