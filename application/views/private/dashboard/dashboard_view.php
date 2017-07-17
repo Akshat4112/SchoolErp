@@ -38,7 +38,7 @@
                             <i class="material-icons">info_outline</i>
                         </div>
                         <div class="card-content">
-                            <p class="category"><a href="<?= site_url('students/dashboard'); ?>"> <h4>Transport</h4></a></p>
+                            <p class="category"><a href="<?= site_url('admin/route_plan'); ?>"> <h4>Transport</h4></a></p>
                             <h4 class="title"></h4>
                         </div>
                     </div>
