@@ -1,3 +1,10 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Akshat
+ * Date: 7/17/2017
+ * Time: 8:21 PM
+ */?>
 <html>
 <head>
     <meta charset="utf-8"/>
@@ -10,7 +17,7 @@
     <link href="<?= base_url() ?>public/assets/css/font-awesome.min.css" rel="stylesheet">
     <link href='<?= base_url() ?>public/assets/css/google_fonts.css' rel='stylesheet' type='text/css'>
     <title>
-        Admissions
+        Attendance
     </title>
 </head>
 <body>
@@ -18,32 +25,15 @@
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="<?= site_url('dashboard/') ?>"><img
-                        src="<?= base_url() ?>public/assets/img/icon.png" style="margin-top: -12px;"></a>
+                    src="<?= base_url() ?>public/assets/img/icon.png"></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="<?= site_url('admissions'); ?>">Admission Registers</a></li>
-                <li><a href="<?=site_url('admissions/create_admission_view'); ?>">Create</a></li>
-                <li><a href="<?=site_url('admissions/import'); ?>">Import</a></li>
-                <li><a href="<?=site_url('admissions/export'); ?>">Export</a></li>
-                <li><a href="<?=site_url('admissions/admission_form'); ?>">Admissions Form</a></li>
-                <li><a href="<?=site_url('admissions/send_sms'); ?>">Send SMS</a></li>
-                <li><a href="<?=site_url('admissions/id_card'); ?>">ID Card</a></li>
-                <li><a href="<?=site_url('admissions/create_list'); ?>">List</a></li>
+
             </ul>
-            <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php
-                        foreach($username as $user):
-                            echo $user->admin_name;
-                        ?>
-                        <?php endforeach; ?>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="<?=site_url('dashboard/documentation') ?>">Documentation</a></li>
@@ -56,3 +46,4 @@
         </div>
     </div>
 </nav>
+

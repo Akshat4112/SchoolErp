@@ -16,15 +16,15 @@
                     </div>
                 </a>
             </div>
-
             <div class="col-lg-4">
                 <a href="">
                     <div class="card card-stats">
-                        <div class="card-header" data-background-color="orange">
-                            <i class="material-icons">content_copy</i>
+                        <div class="card-header" data-background-color="green">
+                            <i class="material-icons">store</i>
                         </div>
                         <div class="card-content">
-                            <p class="category"><a href="<?= site_url('admin/fees_plan'); ?>"><h4>Fees</h4></a></p>
+                            <p class="category"><a href="<?= site_url('attendance/attend_view'); ?>"> <h4>Attendance</h4>
+                                </a></p>
                             <h4 class="title"></h4>
                         </div>
                     </div>
@@ -52,17 +52,17 @@
                     <div class="col-lg-4">
                         <a href="">
                             <div class="card card-stats">
-                                <div class="card-header" data-background-color="green">
-                                    <i class="material-icons">store</i>
+                                <div class="card-header" data-background-color="orange">
+                                    <i class="material-icons">content_copy</i>
                                 </div>
                                 <div class="card-content">
-                                    <p class="category"><a href="<?= site_url('attendance/attendance_view'); ?>"> <h4>Demand</h4>
-                                            </a></p>
+                                    <p class="category"><a href="<?= site_url('admin/fees_plan'); ?>"><h4>Fees</h4></a></p>
                                     <h4 class="title"></h4>
                                 </div>
                             </div>
                         </a>
                     </div>
+
                     <div class="col-lg-4">
                         <a href="">
                             <div class="card card-stats">
@@ -117,7 +117,7 @@
                                             <i class="material-icons">info_outline</i>
                                         </div>
                                         <div class="card-content">
-                                            <p class="category"><a href="<?= site_url('employees/employees_view'); ?>">
+                                            <p class="category"><a href="<?= site_url('summary/fees_summary'); ?>">
                                                     <h4>Summary</h4></a></p>
                                             <h3 class="title"></h3>
                                         </div>

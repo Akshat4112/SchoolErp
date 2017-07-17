@@ -1,1 +1,8 @@
-<h2>Admission Form View</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <p style="font-size: 20px;" class="text-info">Admission Form</p>
+        </div>
+        <div class="col-lg-6"></div>
+    </div>
+</div>
