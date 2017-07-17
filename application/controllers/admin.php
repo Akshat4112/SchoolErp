@@ -40,4 +40,16 @@
     public function route(){
         $this->load->view('private/admin/route/route');
     }
+    public function fees_head(){
+        $this->load->view('private/admin/fees/fees_head');
+    }
+    public function fees_head_group(){
+        $this->load->view('private/admin/fees/fees_head_group');
+    }
+    public function fees_plan(){
+        $this->load->view('private/admin/fees/fees_plan');
+    }
+    public function fees_conc_sett(){
+        $this->load->view('private/admin/fees/fees_conc_settings');
+    }
 }

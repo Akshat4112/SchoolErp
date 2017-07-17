@@ -24,7 +24,7 @@
                             <i class="material-icons">content_copy</i>
                         </div>
                         <div class="card-content">
-                            <p class="category"><a href="<?= site_url('discuss/discuss_view'); ?>"><h4>Fees</h4></a></p>
+                            <p class="category"><a href="<?= site_url('admin/fees_plan'); ?>"><h4>Fees</h4></a></p>
                             <h4 class="title"></h4>
                         </div>
                     </div>
@@ -103,7 +103,7 @@
                                         </div>
                                         <div class="card-content">
                                             <p class="category"><a
-                                                        href="<?= site_url('attendance/attendance_view'); ?>"> <h4>Dues
+                                                        href="<?= site_url('dues_list/dues_lis'); ?>"> <h4>Dues
                                                         List</h4></a></p>
                                             <h4 class="title"></h4>
                                         </div>
