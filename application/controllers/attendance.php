@@ -15,4 +15,7 @@ class Attendance extends MY_Controller{
     public function attend_view(){
         $this->load->view('private/attendance/attend_view.php');
     }
+    public function attend_new(){
+        echo 'Hello';
+    }
 }

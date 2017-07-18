@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-3">
-            <?php echo form_open('admissions/student_details', ['class' => 'form-horizontal']); ?>
+            <?php echo form_open('attendance/attend_view', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label"><b>Date</b></label>
                 <div class="col-lg-10">
@@ -18,11 +18,12 @@
         </div>
         <div class="col-lg-6">
             <input type="button" class="btn btn-success" value="Ok" style="margin-right: 10px;">
-            <input type="button" class="btn btn-info" value="New">
+            <a href="<?php site_url('attendance/attend_new'); ?>"><button  class="btn btn-info">New</button></a>
             <input type="button" class="btn btn-info" value="Print">
             <input type="button" class="btn btn-info" value="Summary">
             <input type="button" class="btn btn-info" value="Auto">
         </div>
+    <?php echo form_close(); ?>
         <div class="col-lg-3"></div>
     </div>
     <div class="row">

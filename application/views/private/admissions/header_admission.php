@@ -16,7 +16,7 @@
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="<?= site_url('dashboard/') ?>"><img
-                        src="<?= base_url() ?>public/assets/img/icon.png" style="margin-top: -12px;"></a>
+                        src="<?= base_url() ?>public/assets/img/dash.png" style="margin-top: -12px;" height="50" width="50"></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
