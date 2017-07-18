@@ -19,7 +19,7 @@
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="<?= site_url('admin/fees_plan'); ?>"><img src="<?= base_url() ?>/public/assets/img/fees.png"
+                <a href="<?= site_url('fees/fees_view'); ?>"><img src="<?= base_url() ?>/public/assets/img/fees.png"
                                                                    height="110" width="110"></a><br>
                 <p style="font-size: 20px; margin-left: 26px;" class="text-info">Fees</p>
             </div>
