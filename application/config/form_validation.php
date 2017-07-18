@@ -232,5 +232,20 @@ $config=[
                 'label'=>'',
                 'rules'=>''
             ]
+        ],
+    'class'=>
+        [
+            [
+                'field'=>'class',
+                'label'=>'Class',
+                'rules'=>'required'
+            ]
+
+        ],
+    'class_del'=>
+        [
+            'field'=>'class_delete',
+            'label'=>'Class',
+            'rules'=>'required'
         ]
 ];

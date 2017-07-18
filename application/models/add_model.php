@@ -29,6 +29,9 @@ class Add_model extends MY_Model{
     {
         return $this->db->insert('old_balance',$array);
     }
+    public function ins_class($array){
+        return $this->db->insert('class',$array);
+    }
     public function additional_ield()
     {
     }

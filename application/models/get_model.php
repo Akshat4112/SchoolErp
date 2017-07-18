@@ -24,4 +24,9 @@ class Get_model extends MY_Model
         $id=$array['student_id'];
         return $id;
     }
+    public function get_class(){
+        $query = $this->db->get('class');
+        $res = $query->result();
+        return $res;
+    }
 }
