@@ -29,4 +29,10 @@ class Get_model extends MY_Model
         $res = $query->result();
         return $res;
     }
+    public function get_class_list(){
+        $query = $this->db->select('class')->order_by('class')->get('class');
+        $res = $query->result();
+        $array=json_decode(json_encode($res),true);
+        return $array;
+    }
 }

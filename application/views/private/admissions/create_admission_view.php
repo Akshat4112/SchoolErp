@@ -110,17 +110,15 @@ declare(strict_types=1);
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Class</label>
                         <div class="col-lg-10">
-                            <?php $options = [
+
+                            <?php
+                            /*
+                            foreach ($class_drop as $a){
+                                echo $a['class'];
+                            }*/
+                            $options = [
                                 'Ist' => 'Ist',
                                 'IInd' => 'IInd',
-                                'IIIrd' => 'IIIrd',
-                                'IVth' => 'IVth',
-                                'Vth' => 'Vth',
-                                'VIth' => 'VIth',
-                                'VIIth' => 'VIIth',
-                                'VIIIth' => 'VIIIth',
-                                'IXth' => 'IXth',
-                                'Xth' => 'Xth',
                             ];
                             $attribute_class = [
                                 'class' => 'form-control',
@@ -188,7 +186,7 @@ declare(strict_types=1);
                         </div>
                     </div><br>
                     <div class="form-group">
-                        <b><p style="margin-left: 16px;" class="text-success">Last Admission Number: <?php echo $last_adm; ?></p></b>
+                        <b><p style="margin-left: 16px;" class="text-success">Last Admission Number: <?php echo $last_adm;?></p></b>
                         <label for="inputText" class="col-lg-2 control-label">Admission No.</label>
                         <div class="col-lg-10">
 

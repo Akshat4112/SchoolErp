@@ -51,28 +51,25 @@ class Admin extends MY_Controller
 
     public function masters_class_del()
     {
-        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+
+        //Delete Functionality to be made later...
+
+        /*$this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
 
         if ($this->form_validation->run('class_del')) {
-            echo 'run';
-      /*      $post = $this->input->post();
+
+           $post = $this->input->post();
             unset($post['del']);
             print_r($post);
-            $var = $post['class_del'];
-            echo $var;
             $this->load->model('del_model', 'dm');
-            if ($this->dm->del_class($var)) {
-                echo 'Deleted Successfully';
-            } else {
-                echo 'Class doesnt exist';
-            }*/
+            $class = $post['class_delete'];
         }
         else{
             echo 'not run';
-            $this->load->model('get_model', 'gm');
-            $class = $this->gm->get_class();
-            $this->load->view('private/admin/masters/class', ['det_class' => $class]);
-        }
+           }*/
+        $this->load->model('get_model', 'gm');
+        $class = $this->gm->get_class();
+        $this->load->view('private/admin/masters/class', ['det_class' => $class]);
     }
 
 

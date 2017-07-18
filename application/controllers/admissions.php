@@ -26,9 +26,22 @@ class Admissions extends MY_Controller
 
     public function create_admission_view()
     {
+
+        //get class in dropdown dynamically from database
+        $this->load->model('get_model','gm');
+        $class = $this->gm->get_class_list();
+        $array=json_decode(json_encode($class),true);
+
+        //get last admission number from database
         $this->load->model('get_model', 'gm');
         $last = $this->gm->last_admission_no();
-        $this->load->view('private/admissions/create_admission_view', ['last_adm' => $last]);
+
+        $this->load->view('private/admissions/create_admission_view', ['last_adm' => $last,'class_drop'=>$array]);
+
+
+
+
+
     }
 
     /**
@@ -39,8 +52,6 @@ class Admissions extends MY_Controller
 
     public function student_details()
     {
-
-
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
         if ($this->form_validation->run('student')) {
 
