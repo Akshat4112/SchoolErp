@@ -7,8 +7,21 @@
  */?>
 <div class="container">
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-3">
             <h5 class="text-info">Admin Dashboard</h5>
+
+
+        </div>
+        <div class="col-lg-3">
+
+
+        </div>
+        <div class="col-lg-3">
+
+
+        </div>
+        <div class="col-lg-3" style="margin-top: 25px;">
+
         </div>
     </div>
 </div>

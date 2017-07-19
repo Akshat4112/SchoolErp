@@ -65,7 +65,29 @@
                         <li><a href="<?=site_url('admin/masters_family')?>">Family</a></li>
                     </ul>
                 </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="<?=site_url('admin/masters_class')?>">Create User</a></li>
+                        <li><a href="<?=site_url('admin/masters_section')?>">User Profile</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Misc<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="<?=site_url('admin/masters_class')?>">Items</a></li>
+                        <li><a href="<?=site_url('admin/masters_section')?>">Set</a></li>
+                        <li><a href="<?=site_url('admin/masters_section')?>">Document Template</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Enquiry Form</a></li>
+                <li><a href="#">Student Admission</a></li>
+                <li><a href="#">Organisation Info</a></li>
+                <li><a href="#">Bill Sundry</a></li>
+                <li><a href="#">Shift</a></li>
+                <li><a href="#">Standard Narration</a></li>
+
+
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">

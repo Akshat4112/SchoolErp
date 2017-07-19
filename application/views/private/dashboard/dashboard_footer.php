@@ -1,4 +1,4 @@
-<footer class="footer" style="margin-top: 27px;">
+<footer class="footer" style="margin-top: 97px;">
     <div class="container">
                 <a href="<?= site_url('home/feedback')?>">Feedback |</a>
                 <a href="<?= site_url('home/query')?>">Query | </a>
