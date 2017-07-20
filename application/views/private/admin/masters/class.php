@@ -7,7 +7,7 @@
  */?>
 <div class="container">
     <div class="row">
-        <h4>Class of masters</h4>
+        <p style="font-size: 20px; margin-top:0px;" class="text-info">Enter Class to be Added</p>
     <div class="col-lg-4">
         <?php echo form_open('admin/masters_class', ['class' => 'form-horizontal']); ?>
         <div class="form-group">
@@ -50,7 +50,26 @@
             'style' => 'margin-left:45px; margin-top:20px;']),
         form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
             'style' => 'margin-top:20px;']); ?>
-        <?php echo form_close('</div>');?>
+        <?php echo form_close();?>
+
+        <p style="font-size: 20px; margin-top: 40px;" class="text-info">Enter Class to be deletd</p>
+        <?php echo form_open('admin/masters_class_del', ['class' => 'form-horizontal']); ?>
+        <div class="form-group">
+            <label for="inputText" class="col-lg-2 control-label">Class</label>
+            <div class="col-lg-10">
+            <?php  echo form_input(['name' => 'class_delete', 'class' => 'form-control',
+                    'placeholder' => 'Enter Class to be deleted',
+                    'value' => set_value('class_delete')]);
+                ?>
+            <?php echo form_error('class_delete'); ?>
+            </div>
+            <input type="submit" name="del_class" class="btn btn-danger" value="DELETE" style="margin-left: 50px; margin-top: 20px;">
+                <?php  form_close(); ?>
+        </div>
+
+    </div>
+
+
         <div class="col-lg-8">
             <table class="table table-striped table-hover ">
                 <thead>
@@ -78,23 +97,11 @@
                 <?php endif; ?>
                 </tbody>
             </table>
-            <?php echo form_open('admin/masters_class_del', ['class' => 'form-horizontal']); ?>
-            <div class="form-group">
-                <div class="col-lg-10">
-                    <?php echo form_input(['name' => 'class_delete', 'class' => 'form-control',
-                        'placeholder' => 'Enter Class to be deleted',
-                        'value' => set_value('class_delete')]);
-                    ?>
-                    <?php echo form_error('class_delete'); ?>
-                    <?php form_close(); ?>
-                </div>
-            </div>
-            <button name="del" class="btn btn-danger">DELETE</button>
+        </div>
         </div>
 
     </div>
 </div>
-
 
 
 

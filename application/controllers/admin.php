@@ -56,22 +56,23 @@ class Admin extends MY_Controller
 
         //Delete Functionality to be made later...
 
-        /*$this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
-
         if ($this->form_validation->run('class_del')) {
 
-           $post = $this->input->post();
-            unset($post['del']);
-            print_r($post);
+            $post = $this->input->post();
+            unset($post['del_class']);
             $this->load->model('del_model', 'dm');
-            $class = $post['class_delete'];
+            $class_del = $post['class_delete'];
+            if($this->dm->delete_class($class_del)){
+                $this->load->model('get_model', 'gm');
+                $class = $this->gm->get_class();
+                $this->load->view('private/admin/masters/class', ['det_class' => $class]);
+            }
         }
         else{
-            echo 'not run';
-           }*/
-        $this->load->model('get_model', 'gm');
-        $class = $this->gm->get_class();
-        $this->load->view('private/admin/masters/class', ['det_class' => $class]);
+            $this->load->model('get_model', 'gm');
+            $class = $this->gm->get_class();
+            $this->load->view('private/admin/masters/class', ['det_class' => $class]);
+           }
     }
 
 

@@ -276,9 +276,11 @@ $config=[
         ],
     'class_del'=>
         [
+            [
             'field'=>'class_delete',
             'label'=>'Class',
             'rules'=>'required'
+            ]
         ],
 
 ];
