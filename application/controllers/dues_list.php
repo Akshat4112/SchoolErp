@@ -25,9 +25,9 @@ class Dues_list extends MY_Controller{
             array_push($list, $type['class']);
         }
         $this->load->view('private/dues_list/dues_list',['class_drop'=>$list]);
-        print_r($this->input->post());
+        //print_r($this->input->post());
         $cla=$this->input->post();
-        $class = $cla['class']+1;
+        //$class = $cla['class']+1;
 
         //for getting section dynamically from database which is updated by masters
 

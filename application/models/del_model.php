@@ -13,6 +13,6 @@ class Del_model extends MY_Model{
         }
     }
     public function delete_row($table_name,$field){
-        
+
     }
 }
