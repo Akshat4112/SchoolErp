@@ -111,7 +111,27 @@ class Admin extends MY_Controller
 
     public function masters_caste()
     {
-        $this->load->view('private/admin/masters/caste');
+        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+
+        if ($this->form_validation->run('caste')) {
+
+            // for inserting class in database from model
+
+            $this->load->model('add_model', 'am');
+            $post = $this->input->post();
+            unset($post['submit']);
+            if ($this->am->insert_caste($post)) {
+                $this->load->model('get_model', 'gm');
+                $caste = $this->gm->get_caste_list();
+                $this->load->view('private/admin/masters/caste',['cas'=>$caste]);
+            } else {
+                echo 'Query failed in inserting record';
+            }
+        } else {
+            $this->load->model('get_model', 'gm');
+            $caste = $this->gm->get_caste_list();
+            $this->load->view('private/admin/masters/caste',['cas'=>$caste]);
+        }
     }
 
     public function masters_category()

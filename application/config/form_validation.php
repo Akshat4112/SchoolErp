@@ -14,6 +14,14 @@ $config=[
                 'rules'=>'required'
             ]
         ],
+    'caste'=>
+        [
+            [
+                'field'=>'caste_name',
+                'label'=>'Caste Name',
+                'rules'=>'required'
+            ]
+        ],
 
     'admin_form' =>
         [

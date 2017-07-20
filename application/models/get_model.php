@@ -45,6 +45,10 @@ class Get_model extends MY_Model
 
     }
     public function get_caste_list(){
+        $query = $this->db->select('caste_name')->get('caste');
+        $res = $query->result();
+        $array=json_decode(json_encode($res),true);
+        return $array;
 
     }
     public function house_list(){
