@@ -9,23 +9,22 @@
     <div class="row">
         <h4>House of masters</h4>
         <div class="col-lg-4">
-            <?php echo form_open('admmin/', ['class' => 'form-horizontal']); ?>
+            <?php echo form_open('admin/masters_house', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">House</label>
                 <div class="col-lg-10">
-                    <?php echo form_input(['name' => 'house', 'class' => 'form-control',
+                    <?php echo form_input(['name' => 'house_name', 'class' => 'form-control',
                         'placeholder' => 'Enter house',
-                        'value' => set_value('house')]);
+                        'value' => set_value('house_name')]);
                     ?>
-                    <?php echo form_error('house'); ?>
+                    <?php echo form_error('house_name'); ?>
                 </div>
             </div>
             <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-info',
                 'style' => 'margin-left:45px; margin-top:20px;']),
             form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
                 'style' => 'margin-top:20px;']); ?>
-
-
+<?php echo form_close(); ?>
         </div>
         <div class="col-lg-4">
             <table class="table table-striped table-hover ">
@@ -35,12 +34,9 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>A</td>
-                </tr>
-                <tr>
-                    <td>B</td>
-                </tr>
+                    <?php foreach ($house as $h){
+                        echo "<tr><td>".$h['house_name']."</td></tr>";
+                    }?>
                 </tbody>
             </table>
 

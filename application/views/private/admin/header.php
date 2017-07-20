@@ -82,7 +82,7 @@
                 </li>
                 <li><a href="#">Enquiry Form</a></li>
                 <li><a href="#">Student Admission</a></li>
-                <li><a href="#">Organisation Info</a></li>
+                <li><a href="<?php site_url('admin/ogr_info'); ?>">Organisation Info</a></li>
                 <li><a href="#">Bill Sundry</a></li>
                 <li><a href="#">Shift</a></li>
                 <li><a href="#">Standard Narration</a></li>

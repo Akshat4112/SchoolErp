@@ -9,22 +9,22 @@
     <div class="row">
         <h4>Category of masters</h4>
         <div class="col-lg-4">
-            <?php echo form_open('admmin/', ['class' => 'form-horizontal']); ?>
+            <?php echo form_open('admin/masters_category', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Category</label>
                 <div class="col-lg-10">
-                    <?php echo form_input(['name' => 'category', 'class' => 'form-control',
+                    <?php echo form_input(['name' => 'category_name', 'class' => 'form-control',
                         'placeholder' => 'Enter Category',
-                        'value' => set_value('category')]);
+                        'value' => set_value('category_name')]);
                     ?>
-                    <?php echo form_error('category'); ?>
+                    <?php echo form_error('category_name'); ?>
                 </div>
             </div>
             <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-info',
                 'style' => 'margin-left:45px; margin-top:20px;']),
             form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
                 'style' => 'margin-top:20px;']); ?>
-
+<?php echo form_close();?>
 
         </div>
         <div class="col-lg-4">
@@ -35,12 +35,11 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>A</td>
-                </tr>
-                <tr>
-                    <td>B</td>
-                </tr>
+                <?php foreach ($cat as $category){
+                    echo "<tr><td>".$category['category_name']."</td></tr>";
+                }
+
+                ?>
                 </tbody>
             </table>
 

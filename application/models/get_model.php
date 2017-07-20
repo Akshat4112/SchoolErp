@@ -42,6 +42,10 @@ class Get_model extends MY_Model
         return $array;
     }
     public function get_category_list(){
+        $query = $this->db->select('category_name')->get('category');
+        $res = $query->result();
+        $array=json_decode(json_encode($res),true);
+        return $array;
 
     }
     public function get_caste_list(){
@@ -49,10 +53,12 @@ class Get_model extends MY_Model
         $res = $query->result();
         $array=json_decode(json_encode($res),true);
         return $array;
-
     }
-    public function house_list(){
-
+    public function get_house_list(){
+        $query = $this->db->select('house_name')->get('house');
+        $res = $query->result();
+        $array=json_decode(json_encode($res),true);
+        return $array;
     }
     public function family_list(){
 

@@ -6,6 +6,14 @@
  * Time: 12:30 AM
  */
 $config=[
+    'house'=>
+        [
+            [
+                'field'=>'house_name',
+                'label'=>'House Name',
+                'rules'=>'required'
+            ]
+        ],
     'section'=>
         [
             [
@@ -19,6 +27,14 @@ $config=[
             [
                 'field'=>'caste_name',
                 'label'=>'Caste Name',
+                'rules'=>'required'
+            ]
+        ],
+    'category'=>
+        [
+            [
+                'field'=>'category_name',
+                'label'=>'Category Name',
                 'rules'=>'required'
             ]
         ],

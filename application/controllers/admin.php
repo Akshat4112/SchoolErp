@@ -13,6 +13,7 @@ class Admin extends MY_Controller
         parent::__construct();
         $this->load->view('private/admin/header');
         $this->load->view('private/admin/footer');
+        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
     }
 
     public function index()
@@ -23,7 +24,7 @@ class Admin extends MY_Controller
 
     public function masters_class()
     {
-        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+
 
         if ($this->form_validation->run('class')) {
 
@@ -78,10 +79,6 @@ class Admin extends MY_Controller
     {
         //for getting data to populate in table in masters class
 
-
-
-        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
-
         if ($this->form_validation->run('section')) {
 
             // for inserting class in database from model
@@ -111,8 +108,6 @@ class Admin extends MY_Controller
 
     public function masters_caste()
     {
-        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
-
         if ($this->form_validation->run('caste')) {
 
             // for inserting class in database from model
@@ -136,12 +131,48 @@ class Admin extends MY_Controller
 
     public function masters_category()
     {
-        $this->load->view('private/admin/masters/category');
+        if ($this->form_validation->run('category')) {
+
+            // for inserting class in database from model
+
+            $this->load->model('add_model', 'am');
+            $post = $this->input->post();
+            unset($post['submit']);
+            if ($this->am->insert_category($post)) {
+                $this->load->model('get_model', 'gm');
+                $category = $this->gm->get_category_list();
+                $this->load->view('private/admin/masters/category',['cat'=>$category]);
+            } else {
+                echo 'Query failed in inserting record';
+            }
+        } else {
+            $this->load->model('get_model', 'gm');
+            $category = $this->gm->get_category_list();
+            $this->load->view('private/admin/masters/category',['cat'=>$category]);
+        }
     }
 
     public function masters_house()
     {
-        $this->load->view('private/admin/masters/house');
+        if ($this->form_validation->run('house')) {
+
+            // for inserting class in database from model
+
+            $this->load->model('add_model', 'am');
+            $post = $this->input->post();
+            unset($post['submit']);
+            if ($this->am->insert_house($post)) {
+                $this->load->model('get_model', 'gm');
+                $house = $this->gm->get_house_list();
+                $this->load->view('private/admin/masters/house',['house'=>$house]);
+            } else {
+                echo 'Query failed in inserting record';
+            }
+        } else {
+            $this->load->model('get_model', 'gm');
+            $house= $this->gm->get_house_list();
+            $this->load->view('private/admin/masters/house',['house'=>$house]);
+        }
     }
 
     public function masters_family()
@@ -177,5 +208,8 @@ class Admin extends MY_Controller
     public function fees_conc_sett()
     {
         $this->load->view('private/admin/fees/fees_conc_settings');
+    }
+    public function org_info(){
+        $this->load->view('private/admin/organisation_info');
     }
 }
