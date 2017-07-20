@@ -13,6 +13,6 @@ class Calendar extends MY_Controller{
         $this->load->view('private/calendar/footer');
     }
     public function index(){
-
+        echo '1';
     }
 }

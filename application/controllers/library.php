@@ -5,7 +5,7 @@
  * Date: 7/19/2017
  * Time: 1:40 PM
  */
-class Discuss extends MY_Controller{
+class Library extends MY_Controller{
     public function __construct()
     {
         parent::__construct();

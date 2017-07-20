@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: Akshat
- * Date: 7/17/2017
- * Time: 8:21 PM
+ * Date: 7/20/2017
+ * Time: 12:29 PM
  */?>
 <html>
 <head>
@@ -17,15 +17,15 @@
     <link href="<?= base_url() ?>public/assets/css/font-awesome.min.css" rel="stylesheet">
     <link href='<?= base_url() ?>public/assets/css/google_fonts.css' rel='stylesheet' type='text/css'>
     <title>
-        Attendance
+        Accounts
     </title>
 </head>
 <body>
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="<?= site_url('dashboard/') ?>"><img
-                        src="<?= base_url() ?>public/assets/img/dash.png" style="margin-top: -12px;" height="50" width="50"></a>
+            <a class="navbar-brand" href="<?= site_url('accounts/') ?>"><img
+                    src="<?= base_url() ?>public/assets/img/dash.png" style="margin-top: -12px;" height="50" width="50"></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
