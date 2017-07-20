@@ -66,7 +66,7 @@
         </div>
         <div class="row">
             <div class="col-lg-2">
-                <a href="<?= site_url('dues_list/'); ?>"><img src="<?= base_url() ?>/public/assets/img/dues.png"
+                <a href="<?= site_url('dues_list/dues_lis'); ?>"><img src="<?= base_url() ?>/public/assets/img/dues.png"
                                                                    height="80" width="80"></a><br>
                 <p style="font-size: 18px; margin-left: 2px;" class="text-info">Dues List</p>
             </div>

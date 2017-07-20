@@ -35,4 +35,20 @@ class Add_model extends MY_Model{
     public function additional_ield()
     {
     }
+    public function insert_section($array){
+        return $this->db->insert('section',$array);
+    }
+    public function insert_caste($array){
+        return $this->db->insert('caste',$array);
+    }
+    public function insert_category($array){
+        return $this->db->insert('category',$array);
+    }
+    public function insert_house($array){
+        return $this->db->insert('house',$array);
+    }
+    public function insert_family($array){
+        return $this->db->insert('family',$array);
+    }
+
 }

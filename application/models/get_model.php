@@ -35,4 +35,22 @@ class Get_model extends MY_Model
         $array=json_decode(json_encode($res),true);
         return $array;
     }
+    public function get_section_list(){
+        $query = $this->db->select('section_name')->get('section');
+        $res = $query->result();
+        $array=json_decode(json_encode($res),true);
+        return $array;
+    }
+    public function get_category_list(){
+
+    }
+    public function get_caste_list(){
+
+    }
+    public function house_list(){
+
+    }
+    public function family_list(){
+
+    }
 }

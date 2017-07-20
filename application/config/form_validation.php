@@ -6,6 +6,14 @@
  * Time: 12:30 AM
  */
 $config=[
+    'section'=>
+        [
+            [
+                'field'=>'section_name',
+                'label'=>'Section',
+                'rules'=>'required'
+            ]
+        ],
 
     'admin_form' =>
         [
@@ -247,5 +255,6 @@ $config=[
             'field'=>'class_delete',
             'label'=>'Class',
             'rules'=>'required'
-        ]
+        ],
+
 ];

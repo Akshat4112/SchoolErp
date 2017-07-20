@@ -7,7 +7,7 @@ School ERP automates the process of student management right from filling the ad
 Release Information
 *******************
 
-This repo contains in-development code for future releases.
+This repo contains in-development code for future releases.It is based on full MVC CI framework in PHP.
 
 *******************
 Server Requirements

@@ -24,6 +24,7 @@ class Admin extends MY_Controller
     public function masters_class()
     {
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+
         if ($this->form_validation->run('class')) {
 
             // for inserting class in database from model
@@ -75,7 +76,37 @@ class Admin extends MY_Controller
 
     public function masters_section()
     {
-        $this->load->view('private/admin/masters/section');
+        //for getting data to populate in table in masters class
+
+
+
+        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+
+        if ($this->form_validation->run('section')) {
+
+            // for inserting class in database from model
+
+            $this->load->model('add_model', 'am');
+            $post = $this->input->post();
+            unset($post['submit']);
+            if ($this->am->insert_section($post)) {
+                $this->load->model('get_model', 'gm');
+                $section = $this->gm->get_section_list();
+              $this->load->view('private/admin/masters/section',['sec'=>$section]);
+            } else {
+                echo 'Query failed in inserting record';
+            }
+
+        } else {
+            $this->load->model('get_model', 'gm');
+            $section = $this->gm->get_section_list();
+            $this->load->view('private/admin/masters/section',['sec'=>$section]);
+        }
+
+    }
+    public function masters_section_del()
+    {
+
     }
 
     public function masters_caste()

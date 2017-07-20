@@ -5,23 +5,22 @@
  * Date: 7/17/2017
  * Time: 1:15 PM
  */?>
+
+
 <div class="container">
     <div class="row">
     <div class="col-lg-6">
         <p class="text-info" style="font-size: 20px;">Dues List</p>
-        <?php echo form_open('admin/', ['class' => 'form-horizontal']); ?>
+        <?php echo form_open('dues_list/dues_lis', ['class' => 'form-horizontal']); ?>
         <div class="form-group">
             <label for="select" class="col-lg-2 control-label">Class</label>
             <div class="col-lg-10">
-                <?php $options = [
-                    'route1'=>'route1',
-                    'route2'=>'route2',
-                ];
+                <?php
                 $attribute_class = [
                     'class' => 'form-control',
                     'id' => 'select',
                 ];
-                echo form_dropdown('gender', $options, 'male', $attribute_class);
+                echo form_dropdown('class', $class_drop, 'class', $attribute_class);
                 ?>
                 <?php echo form_error('gender'); ?>
 
