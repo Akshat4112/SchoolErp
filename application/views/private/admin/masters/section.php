@@ -34,17 +34,17 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td><?php
+
+                    <?php
                         foreach ($sec as $section){
-                            echo $section['section_name'].'<br>';
+                            echo "<tr><td>".$section['section_name'].'<br>'."</td></tr>";
                         }
-                        ?></td>
-                </tr>
+                        ?>
+
                 </tbody>
             </table>
 
-            <?php echo form_open('admin/section_del', ['class' => 'form-horizontal']); ?>
+            <?php echo form_open('admin/masters_section_del', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
                 <div class="col-lg-12">
                     <?php echo form_input(['name' => 'section_del', 'class' => 'form-control',

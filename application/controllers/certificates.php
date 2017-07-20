@@ -9,10 +9,10 @@ class Certificates extends MY_Controller{
     public function __construct()
     {
         parent::__construct();
-        $this->load->view('private/calendar/header');
-        $this->load->view('private/calendar/footer');
+        $this->load->view('private/certificates/header');
+        $this->load->view('private/certificates/footer');
     }
     public function index(){
-
+        $this->load->view('private/certificates/cert_view');
     }
 }
