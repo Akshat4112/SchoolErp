@@ -167,16 +167,19 @@ class Admin extends MY_Controller
             $post = $this->input->post();
             unset($post['submit']);
             $table_name='house';
+            $field_name='house_name';
             if ($this->am->insert_data($table_name,$post)) {
                 $this->load->model('get_model', 'gm');
-                $house = $this->gm->get_house_list();
+                $house = $this->gm->get_list($field_name,$table_name);
                 $this->load->view('private/admin/masters/house',['house'=>$house]);
             } else {
                 echo 'Query failed in inserting record';
             }
         } else {
             $this->load->model('get_model', 'gm');
-            $house= $this->gm->get_house_list();
+            $table_name='house';
+            $field_name='house_name';
+            $house= $this->gm->get_list($field_name,$table_name);
             $this->load->view('private/admin/masters/house',['house'=>$house]);
         }
     }

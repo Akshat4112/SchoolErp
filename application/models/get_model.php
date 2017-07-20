@@ -63,4 +63,11 @@ class Get_model extends MY_Model
     public function family_list(){
 
     }
+    public function get_list($field,$table_name)
+    {
+        $query = $this->db->select($field)->get($table_name);
+        $res = $query->result();
+        $array=json_decode(json_encode($res),true);
+        return $array;
+    }
 }

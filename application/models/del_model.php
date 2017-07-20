@@ -12,4 +12,7 @@ class Del_model extends MY_Model{
             return true;
         }
     }
+    public function delete_row($table_name,$field){
+        
+    }
 }
