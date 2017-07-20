@@ -62,9 +62,9 @@ class Admissions extends MY_Controller
             $post = $this->input->post();
             unset($post['submit']);
             $this->load->model('add_model', 'am');
+            $table_name='student';
 
-
-            if ($this->am->student_info($post)) {
+            if ($this->am->insert_data($table_name,$post)) {
                 $this->load->view('private/admissions/address');
             } else {
                     echo 'Database query error';
@@ -101,9 +101,9 @@ class Admissions extends MY_Controller
                     $post = $this->input->post();
                     $post['student_id'] = $stu_id;
                     unset($post['submit']);
-
+                    $table_name='address';
                     $this->load->model('add_model', 'am');
-                    if ($this->am->address_details($post)) {
+                    if ($this->am->insert_data($table_name,$post)) {
                         $this->load->view('private/admissions/parents');
                     } else {
                         $this->load->view('private/admissions/address');
@@ -128,11 +128,11 @@ class Admissions extends MY_Controller
         $post = $this->input->post();
         $post['student_id'] = $stu_id;
         unset($post['Submit']);
-
+            $table_name='other_info';
 
         $this->load->model('add_model', 'am');
 
-        if ($this->am->other_info_details($post)) {
+        if ($this->am->insert_data($table_name,$post)) {
 
             $this->load->view('private/admissions/misc');
         } else {
@@ -158,8 +158,9 @@ class Admissions extends MY_Controller
             $post = $this->input->post();
             $post['student_id'] = $stu_id;
             unset($post['Submit']);
+            $table_name='misc_info';
             $this->load->model('add_model', 'am');
-            if ($this->am->misc_details($post)) {
+            if ($this->am->insert_data($table_name,$post)) {
                 $this->load->view('private/admissions/attach');
             } else {
                 $this->load->view('private/admissions/misc');
@@ -183,8 +184,9 @@ class Admissions extends MY_Controller
             $post = $this->input->post();
             $post['student_id'] = $stu_id;
             unset($post['Submit']);
+            $table_name='attachemnts';
             $this->load->model('add_model', 'am');
-            if ($this->am->attach($post)) {
+            if ($this->am->insert_data($table_name,$post)) {
                 $this->load->view('private/admissions/balance');
             } else {
                 $this->load->view('private/admissions/attach');
@@ -208,8 +210,9 @@ class Admissions extends MY_Controller
             $post = $this->input->post();
             $post['student_id'] = $stu_id;
             unset($post['Submit']);
+            $table_name='old_balance';
             $this->load->model('add_model', 'am');
-            if ($this->am->balance($post)) {
+            if ($this->am->insert_data($table_name,$post)) {
                 //echo '<script>alert("Admission has been done succesfully")</script>';
                 redirect('admissions/');
             } else {

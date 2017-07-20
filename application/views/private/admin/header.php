@@ -68,8 +68,8 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="<?=site_url('admin/masters_class')?>">Create User</a></li>
-                        <li><a href="<?=site_url('admin/masters_section')?>">User Profile</a></li>
+                        <li><a href="<?=site_url('admin/create_user')?>">Create User</a></li>
+                        <li><a href="<?=site_url('admin/user_profile')?>">User Profile</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">

@@ -33,7 +33,8 @@ class Admin extends MY_Controller
             $this->load->model('add_model', 'am');
             $post = $this->input->post();
             unset($post['submit']);
-            if ($this->am->ins_class($post)) {
+            $table_name='class';
+            if ($this->am->insert_data($table_name,$post)) {
                 //  $this->load->view('private/admin/masters/class');
 
             } else {
@@ -87,7 +88,8 @@ class Admin extends MY_Controller
             $this->load->model('add_model', 'am');
             $post = $this->input->post();
             unset($post['submit']);
-            if ($this->am->insert_section($post)) {
+            $table_name = 'section';
+            if ($this->am->insert_data($table_name,$post)) {
                 $this->load->model('get_model', 'gm');
                 $section = $this->gm->get_section_list();
               $this->load->view('private/admin/masters/section',['sec'=>$section]);
@@ -116,7 +118,8 @@ class Admin extends MY_Controller
             $this->load->model('add_model', 'am');
             $post = $this->input->post();
             unset($post['submit']);
-            if ($this->am->insert_caste($post)) {
+            $table_name='caste';
+            if ($this->am->insert_data($table_name,$post)) {
                 $this->load->model('get_model', 'gm');
                 $caste = $this->gm->get_caste_list();
                 $this->load->view('private/admin/masters/caste',['cas'=>$caste]);
@@ -139,7 +142,8 @@ class Admin extends MY_Controller
             $this->load->model('add_model', 'am');
             $post = $this->input->post();
             unset($post['submit']);
-            if ($this->am->insert_category($post)) {
+            $table_name='category';
+            if ($this->am->insert_data($table_name,$post)) {
                 $this->load->model('get_model', 'gm');
                 $category = $this->gm->get_category_list();
                 $this->load->view('private/admin/masters/category',['cat'=>$category]);
@@ -162,7 +166,8 @@ class Admin extends MY_Controller
             $this->load->model('add_model', 'am');
             $post = $this->input->post();
             unset($post['submit']);
-            if ($this->am->insert_house($post)) {
+            $table_name='house';
+            if ($this->am->insert_data($table_name,$post)) {
                 $this->load->model('get_model', 'gm');
                 $house = $this->gm->get_house_list();
                 $this->load->view('private/admin/masters/house',['house'=>$house]);
@@ -212,5 +217,11 @@ class Admin extends MY_Controller
     }
     public function org_info(){
         $this->load->view('private/admin/organisation_info');
+    }
+    public function create_user(){
+        $this->load->view('private/admin/user/create_user');
+    }
+    public function user_profile(){
+        $this->load->view('private/admin/user/user_profile');
     }
 }
