@@ -42,7 +42,7 @@
                 </thead>
                 <tbody>
                 <?php
-                        foreach ($cas as $caste){
+                        foreach ($view as $caste){
                             echo "<tr><td>".$caste['caste_name'].'<br>'."</td></tr>";
                         }
                         ?>

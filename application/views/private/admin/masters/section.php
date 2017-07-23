@@ -4,10 +4,10 @@
  * User: Akshat
  * Date: 7/16/2017
  * Time: 1:04 PM
- */ ?>
+ */?>
 <div class="container">
     <div class="row">
-        <h4>Section of masters</h4>
+        <p style="font-size: 20px; margin-top:0px;" class="text-info">Enter Section to be Added</p>
         <div class="col-lg-4">
             <?php echo form_open('admin/masters_section', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
@@ -24,9 +24,27 @@
                 'style' => 'margin-left:45px; margin-top:20px;']),
             form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
                 'style' => 'margin-top:20px;']); ?>
-            <?php echo form_close('</div>');?>
+            <?php echo form_close();?>
 
-        <div class="col-lg-4">
+            <p style="font-size: 20px; margin-top: 40px;" class="text-info">Enter Section to be deletd</p>
+            <?php echo form_open('admin/masters_section_del', ['class' => 'form-horizontal']); ?>
+            <div class="form-group">
+                <label for="inputText" class="col-lg-2 control-label">Section</label>
+                <div class="col-lg-10">
+                    <?php  echo form_input(['name' => 'section_delete', 'class' => 'form-control',
+                        'placeholder' => 'Enter Section to be deleted',
+                        'value' => set_value('section_delete')]);
+                    ?>
+                    <?php echo form_error('section_delete'); ?>
+                </div>
+                <input type="submit" name="del_section" class="btn btn-danger" value="DELETE" style="margin-left: 50px; margin-top: 20px;">
+                <?php  form_close(); ?>
+            </div>
+
+        </div>
+
+
+        <div class="col-lg-8">
             <table class="table table-striped table-hover ">
                 <thead>
                 <tr>
@@ -34,30 +52,31 @@
                 </tr>
                 </thead>
                 <tbody>
-
+                <?php if (count($view)): ?>
                     <?php
-                        foreach ($sec as $section){
-                            echo "<tr><td>".$section['section_name'].'<br>'."</td></tr>";
-                        }
-                        ?>
+                    foreach ($view as $section) {
+                        echo "<tr><td>" . $section['section_name'] . '<br>' . "</td></tr>";
+                    }
+                    ?>
 
+                <?php else: ?>
+                    <tr>
+                        <td>No Records Found</td>
+                    </tr>
+                <?php endif; ?>
                 </tbody>
             </table>
-
-            <?php echo form_open('admin/masters_section_del', ['class' => 'form-horizontal']); ?>
-            <div class="form-group">
-                <div class="col-lg-12">
-                    <?php echo form_input(['name' => 'section_del', 'class' => 'form-control',
-                        'placeholder' => 'Enter Section to be deleted',
-                        'value' => set_value('section_del')]);
-                    ?>
-                    <?php echo form_error('section_del');
-                    echo '<br>'; ?>
-                    <button name="subm" class="btn btn-danger">DELETE</button>
-
-                </div>
-            </div>
-
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+

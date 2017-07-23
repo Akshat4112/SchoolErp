@@ -15,4 +15,16 @@ class Fees extends MY_Controller{
     public function fees_view(){
         $this->load->view('private/fees/fees_view');
     }
+    public function fees_receipt(){
+        $this->load->view('private/fees/fees_receipt');
+    }
+    public function fees_card(){
+        $this->load->view('private/fees/fees_card');
+    }
+    public function fees_plan(){
+        $this->load->view('private/fees/fees_plan');
+    }
+    public function fees_day_book(){
+        $this->load->view('private/fees/fees_day_book');
+    }
 }

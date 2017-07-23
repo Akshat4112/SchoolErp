@@ -35,7 +35,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($cat as $category){
+                <?php foreach ($view as $category){
                     echo "<tr><td>".$category['category_name']."</td></tr>";
                 }
 

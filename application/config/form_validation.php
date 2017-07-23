@@ -6,6 +6,14 @@
  * Time: 12:30 AM
  */
 $config=[
+    'section_del'=>
+        [
+            [
+                'field'=>'section_delete',
+                'label'=>'Section',
+                'rules'=>'required'
+            ]
+        ],
     'house'=>
         [
             [
@@ -281,6 +289,7 @@ $config=[
             'label'=>'Class',
             'rules'=>'required'
             ]
-        ],
+        ]
+
 
 ];

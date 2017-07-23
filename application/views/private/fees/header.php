@@ -27,10 +27,11 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="<?=site_url('admissions/create_admission_view'); ?>">Fees Receipt</a></li>
-                <li><a href="<?=site_url('admissions/import'); ?>">Fees Card</a></li>
-                <li><a href="<?=site_url('admissions/import'); ?>">Fees Plan</a></li>
-                <li><a href="<?=site_url('admissions/import'); ?>">Fees Day Book</a></li>
+                <li><a href="<?=site_url('fees/fees_view'); ?>">Dashboard</a></li>
+                <li><a href="<?=site_url('fees/fees_receipt'); ?>">Fees Receipt</a></li>
+                <li><a href="<?=site_url('fees/fees_card'); ?>">Fees Card</a></li>
+                <li><a href="<?=site_url('fees/fees_plan'); ?>">Fees Plan</a></li>
+                <li><a href="<?=site_url('fees/fees_day_book'); ?>">Fees Day Book</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Fees Reports<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">

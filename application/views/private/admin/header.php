@@ -80,12 +80,12 @@
                         <li><a href="<?=site_url('admin/masters_section')?>">Document Template</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Enquiry Form</a></li>
-                <li><a href="#">Student Admission</a></li>
-                <li><a href="<?php site_url('admin/ogr_info'); ?>">Organisation Info</a></li>
-                <li><a href="#">Bill Sundry</a></li>
-                <li><a href="#">Shift</a></li>
-                <li><a href="#">Standard Narration</a></li>
+                <li><a href="<?= site_url('admin/enquiry')?>">Enquiry Form</a></li>
+                <li><a href="<?= site_url('admissions/create_admission_view')?>">Student Admission</a></li>
+                <li><a href="<?= site_url('admin/org_info') ?>">Organisation Info</a></li>
+                <li><a href="<?= site_url('admin/bill_sundry')?>">Bill Sundry</a></li>
+                <li><a href="<?= site_url('admin/shift')?>">Shift</a></li>
+                <li><a href="<?= site_url('admin/standard_narration')?>">Standard Narration</a></li>
 
 
             </ul>

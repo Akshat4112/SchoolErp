@@ -2,17 +2,15 @@
 /**
  * Created by PhpStorm.
  * User: Akshat
- * Date: 7/20/2017
- * Time: 10:11 PM
+ * Date: 7/23/2017
+ * Time: 12:50 PM
  */?>
 <div class="container">
     <div class="row">
-        <p class="text-info" style="font-size: 20px;">Entrance Test</p>
+        <p class="text-info" style="font-size: 20px;">Shift</p>
         <div class="col-lg-6">
 
         </div>
-        <div class="col-lg-6">
-
-        </div>
+        <div class="col-lg-6"></div>
     </div>
 </div>
