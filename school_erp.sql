@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 16, 2017 at 08:51 AM
+-- Generation Time: Jul 23, 2017 at 01:28 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -54,7 +54,14 @@ INSERT INTO `address` (`address_id`, `house_no`, `street_name`, `other_info`, `z
 (53, '88', '', '', 0, 'agra', '', '', 153),
 (54, 'c-7', 'Balaji Puram', 'Goyal provision store', 282010, 'Agra', 'Uttar Pradesh', 'India', 154),
 (55, '81', 'Brij Vihar', '', 0, 'Agra', 'UP', 'India', 155),
-(56, 'jashd', '', '', 0, 'jasdjasd', '', '', 156);
+(56, 'jashd', '', '', 0, 'jasdjasd', '', '', 156),
+(57, 'A 121', 'Malvia Kunj', 'Near Railway Station', 282005, 'Agra', 'UP', 'India', 157),
+(58, '21', '', '', 0, 'Agra', '', '', 158),
+(59, '66', 'ABCD', 'Yes', 299999, 'Agra', 'Uttar Pradesh', 'India', 159),
+(60, '15/11', 'ABCD', '', 0, 'Agra', '', '', 160),
+(61, 'mahd', '', '', 0, 'bbb', '', '', 161),
+(62, '66', '', '', 0, 'Agra', '', '', 162),
+(63, '22', '', '', 0, 'ag', '', '', 164);
 
 -- --------------------------------------------------------
 
@@ -75,7 +82,9 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`admin_id`, `admin_email`, `admin_password`, `admin_name`) VALUES
 (1, 'akshat41121995@gmail.com', 'nicola11', 'Akshat'),
-(2, 'sajal@gmail.com', '1234', 'Sajal');
+(2, 'sajal@gmail.com', '1234', 'Sajal'),
+(4, 'admin@gmail.com', '1234', 'Admin\r\n'),
+(5, 'user@gmail.com', 'user', 'User');
 
 -- --------------------------------------------------------
 
@@ -106,7 +115,13 @@ INSERT INTO `attachemnts` (`attach_id`, `tc`, `cc`, `report_cc`, `dob_certificat
 (0, 0, 0, 0, 0, 909, '0000-00-00', 154),
 (0, 0, 0, 0, 0, 909, '0000-00-00', 154),
 (0, 0, 0, 0, 0, 909, '0000-00-00', 154),
-(0, 0, 0, 0, 0, 899, '0000-00-00', 155);
+(0, 0, 0, 0, 0, 899, '0000-00-00', 155),
+(0, 0, 0, 0, 0, 1, '0000-00-00', 157),
+(0, 0, 0, 0, 0, 2, '0000-00-00', 158),
+(0, 0, 0, 0, 0, 3, '0000-00-00', 159),
+(0, 0, 0, 0, 0, 4, '0000-00-00', 160),
+(0, 0, 0, 0, 0, 3, '0000-00-00', 162),
+(0, 0, 0, 0, 0, 100, '0000-00-00', 164);
 
 -- --------------------------------------------------------
 
@@ -126,12 +141,24 @@ CREATE TABLE `balance_student` (
 --
 
 CREATE TABLE `caste` (
-  `hindu` varchar(10) NOT NULL,
-  `christian` varchar(10) NOT NULL,
-  `sikh` varchar(10) NOT NULL,
-  `muslim` varchar(10) NOT NULL,
-  `caste_id` int(3) NOT NULL
+  `caste_id` int(3) NOT NULL,
+  `caste_name` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `caste`
+--
+
+INSERT INTO `caste` (`caste_id`, `caste_name`) VALUES
+(28, 'newcas'),
+(29, 'no'),
+(30, 'Hindu'),
+(31, 'A'),
+(32, 'B'),
+(33, 'a'),
+(34, 'JJDBD'),
+(35, 'JJDBD'),
+(36, 'B');
 
 -- --------------------------------------------------------
 
@@ -140,12 +167,19 @@ CREATE TABLE `caste` (
 --
 
 CREATE TABLE `category` (
-  `general` varchar(10) NOT NULL,
-  `obc` varchar(10) NOT NULL,
-  `sc` varchar(10) NOT NULL,
-  `st` varchar(10) NOT NULL,
-  `category_id` int(11) NOT NULL
+  `category_id` int(11) NOT NULL,
+  `category_name` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`category_id`, `category_name`) VALUES
+(22, 'kj'),
+(23, 'dynami'),
+(24, 'dynamo'),
+(25, 'kl');
 
 -- --------------------------------------------------------
 
@@ -154,10 +188,10 @@ CREATE TABLE `category` (
 --
 
 CREATE TABLE `class` (
-  `1` int(2) NOT NULL,
-  `2` int(2) NOT NULL,
-  `3` int(2) NOT NULL,
-  `4` int(2) NOT NULL,
+  `class` int(2) NOT NULL,
+  `prefix` varchar(5) NOT NULL,
+  `start_from` date NOT NULL,
+  `incharge` varchar(25) NOT NULL,
   `class_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -178,15 +212,53 @@ CREATE TABLE `contact_us` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `family`
+--
+
+CREATE TABLE `family` (
+  `family_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fees_reciept`
+--
+
+CREATE TABLE `fees_reciept` (
+  `reciept_id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `reciept_no` int(5) NOT NULL,
+  `admission_no` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `house`
 --
 
 CREATE TABLE `house` (
   `house_id` int(11) NOT NULL,
-  `red` varchar(20) NOT NULL,
-  `green` varchar(20) NOT NULL,
-  `blue` varchar(20) NOT NULL
+  `house_name` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `house`
+--
+
+INSERT INTO `house` (`house_id`, `house_name`) VALUES
+(5, 'newh'),
+(6, 'askdjaks'),
+(7, 'test'),
+(8, 'testhouse'),
+(9, 'newhois'),
+(10, 'mm'),
+(11, 'mm'),
+(12, 'test1'),
+(13, 'asd'),
+(14, 'kjk'),
+(15, 'nnnnnnnnn');
 
 -- --------------------------------------------------------
 
@@ -260,7 +332,13 @@ INSERT INTO `misc_info` (`las`, `remarks`, `last_exam_given`, `year`, `status`, 
 ('St. Peters', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 152),
 ('simpkins school', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 153),
 ('Holy public school', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 154),
-('University Model School', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 155);
+('University Model School', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 155),
+('St. francis', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 157),
+('amsndmas', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 158),
+('zzzz School', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 159),
+('nil', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 160),
+('simpkins school', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 162),
+('ss', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 164);
 
 -- --------------------------------------------------------
 
@@ -292,7 +370,14 @@ INSERT INTO `old_balance` (`balance_id`, `ledger_balance`, `fees_balance`, `comm
 (2, 66, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 151),
 (3, 8782, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 153),
 (4, 9898, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 154),
-(5, 6000, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 155);
+(5, 6000, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 155),
+(6, 999, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 157),
+(7, 21, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 158),
+(8, 21, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 158),
+(9, 0, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 159),
+(10, 90, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 160),
+(11, 66, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 162),
+(12, 99, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 164);
 
 -- --------------------------------------------------------
 
@@ -335,7 +420,13 @@ INSERT INTO `other_info` (`other_info_id`, `fathers_first_name`, `fathers_middle
 (39, 'ajsdhj', '', '', 0, '', 'service', '0000-00-00', 0, 'ajsdjas', '', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 153),
 (40, 'Alok ', '', '', 0, '', 'service', '0000-00-00', 0, 'Gupta', '', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 154),
 (41, 'Kaushal Kishore Garg', '', '', 0, '', 'service', '0000-00-00', 0, 'Kalpna Garg', '', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 155),
-(42, 'asdbasjd', '', '', 0, '', 'service', '0000-00-00', 0, 'jashdjas', 'ajd', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 156);
+(42, 'asdbasjd', '', '', 0, '', 'service', '0000-00-00', 0, 'jashdjas', 'ajd', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 156),
+(43, 'Raja ', '', 'Babu', 0, '', 'service', '0000-00-00', 0, 'Rani', '', 'Bai', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 157),
+(44, 'aksjd', '', '', 0, '', 'service', '0000-00-00', 0, 'ajsdjas', '', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 158),
+(45, 'Fname', '', '', 0, '', 'service', '0000-00-00', 0, 'Mname', '', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 159),
+(46, 'Abcde', '', '', 0, '', 'service', '0000-00-00', 0, 'defgh', '', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 160),
+(47, 'abcd', '', '', 0, '', 'service', '0000-00-00', 0, 'efgh', '', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 162),
+(48, 'new', '', '', 0, '', 'service', '0000-00-00', 0, 'old', '', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 164);
 
 -- --------------------------------------------------------
 
@@ -361,15 +452,35 @@ INSERT INTO `owner` (`ownerId`, `ownerEmail`, `ownerPass`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `route`
+--
+
+CREATE TABLE `route` (
+  `route_id` int(11) NOT NULL,
+  `route_name` text NOT NULL,
+  `freq` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `section`
 --
 
 CREATE TABLE `section` (
   `section_id` int(2) NOT NULL,
-  `A` varchar(2) NOT NULL,
-  `B` varchar(2) NOT NULL,
-  `C` varchar(2) NOT NULL
+  `section_name` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `section`
+--
+
+INSERT INTO `section` (`section_id`, `section_name`) VALUES
+(72, 'B'),
+(75, 'aksjd'),
+(76, 'New'),
+(77, 'MK');
 
 -- --------------------------------------------------------
 
@@ -400,13 +511,9 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`student_id`, `student_first_name`, `student_middle_name`, `student_last_name`, `student_class`, `student_section`, `student_roll_no`, `route`, `caste`, `category`, `house`, `student_photo`, `admission_no`, `gender`, `student_dob`) VALUES
-(150, 'Akshat', 'Kumar', 'Gupta', 'Ist', 'A', 5, 'COD', 'Hindu', 'General', 'Green', 0, 140212, 'Male', '1995-11-21'),
-(151, 'Sajal', '', 'Bansal', 'Ist', 'A', 88, '', 'Hindu', 'General', 'Red', 0, 140213, 'Male', '2017-07-07'),
-(152, 'Aman', '', 'Mehra', 'Ist', 'A', 8, 'Madia Katra', 'Hindu', 'General', 'Red', 0, 98, 'Male', '2221-02-12'),
-(153, 'Reeta', '', 'Kholi', 'Ist', 'A', 67, 'maruti estate', 'Hindu', 'General', 'Red', 0, 99, 'Male', '1997-02-02'),
-(154, 'Arjit', '', 'Gupta', 'Vth', 'A', 6, 'Balaji Puram', 'Hindu', 'General', 'Red', 0, 100, 'Male', '1998-08-14'),
-(155, 'Ridhima ', '', 'Garg', 'Ist', 'A', 70, '', 'Hindu', 'General', 'Red', 0, 101, 'Male', '1997-02-20'),
-(156, 'Ridhima ', '', 'Gupta', 'Ist', 'A', 99, 'Kamla Nagar', 'Hindu', 'General', 'Red', 0, 0, 'Male', '2001-02-01');
+(162, 'Sachin', '', 'Bansal', 'Ist', 'A', 98, 'PL', 'Hindu', 'General', 'Green', 0, 99, 'Male', '2018-05-02'),
+(163, 'aksdk', '', 'kajsdkaj', 'Ist', 'A', 90, '', 'Hindu', 'General', 'Red', 0, 100, 'Male', '0022-01-29'),
+(164, 'Aks', '', 'Gu', 'Ist', 'A', 21, '', 'Hindu', 'General', 'Red', 0, 101, 'Male', '1111-02-02');
 
 -- --------------------------------------------------------
 
@@ -460,6 +567,18 @@ ALTER TABLE `contact_us`
   ADD PRIMARY KEY (`contact_id`);
 
 --
+-- Indexes for table `family`
+--
+ALTER TABLE `family`
+  ADD PRIMARY KEY (`family_id`);
+
+--
+-- Indexes for table `fees_reciept`
+--
+ALTER TABLE `fees_reciept`
+  ADD PRIMARY KEY (`reciept_id`);
+
+--
 -- Indexes for table `house`
 --
 ALTER TABLE `house`
@@ -484,6 +603,12 @@ ALTER TABLE `owner`
   ADD PRIMARY KEY (`ownerId`);
 
 --
+-- Indexes for table `route`
+--
+ALTER TABLE `route`
+  ADD PRIMARY KEY (`route_id`);
+
+--
 -- Indexes for table `section`
 --
 ALTER TABLE `section`
@@ -503,22 +628,22 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `address`
 --
 ALTER TABLE `address`
-  MODIFY `address_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `address_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 --
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `caste`
 --
 ALTER TABLE `caste`
-  MODIFY `caste_id` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `caste_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT for table `class`
 --
@@ -530,35 +655,50 @@ ALTER TABLE `class`
 ALTER TABLE `contact_us`
   MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `family`
+--
+ALTER TABLE `family`
+  MODIFY `family_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `fees_reciept`
+--
+ALTER TABLE `fees_reciept`
+  MODIFY `reciept_id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `house`
 --
 ALTER TABLE `house`
-  MODIFY `house_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `house_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `old_balance`
 --
 ALTER TABLE `old_balance`
-  MODIFY `balance_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `balance_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `other_info`
 --
 ALTER TABLE `other_info`
-  MODIFY `other_info_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `other_info_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 --
 -- AUTO_INCREMENT for table `owner`
 --
 ALTER TABLE `owner`
   MODIFY `ownerId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
+-- AUTO_INCREMENT for table `route`
+--
+ALTER TABLE `route`
+  MODIFY `route_id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `section`
 --
 ALTER TABLE `section`
-  MODIFY `section_id` int(2) NOT NULL AUTO_INCREMENT;
+  MODIFY `section_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 --
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `student_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
+  MODIFY `student_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=165;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
