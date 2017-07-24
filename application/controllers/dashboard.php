@@ -16,27 +16,33 @@ class Dashboard extends MY_Controller{
         parent::__construct();
         if( ! $this->session->userdata('login_id')){
             return redirect('home');
+            exit();
         }
-    }
-
-    public function index(){
-
         $this->load->model('get_header_info','ghi');
         $username = $this->ghi->get_admin();
-        $this->load->view('private/dashboard/dashboard_view',['username'=>$username]);
+        $this->load->view('private/dashboard/dashboard_header',['username'=>$username]);
+
     }
+    public function index(){
+        $this->load->view('private/dashboard/dashboard_view');
+        $this->load->view('private/dashboard/dashboard_footer');
+    }
+
     public function documentation()
     {
         $this->load->view('private/dashboard/documentation');
+        $this->load->view('private/dashboard/dashboard_footer');
 
     }
     public function support()
     {
         $this->load->view('private/dashboard/support');
+        $this->load->view('private/dashboard/dashboard_footer');
     }
     public function prefrences()
     {
         $this->load->view('private/dashboard/prefrences');
+        $this->load->view('private/dashboard/dashboard_footer');
     }
     public function logout(){
         $this->session->unset_userdata('login_id');

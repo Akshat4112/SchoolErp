@@ -9,10 +9,26 @@ class Accounts extends MY_Controller{
     public function __construct()
     {
         parent::__construct();
-        $this->load->view('private/accounts/header');
+        $this->load->model('get_header_info','ghi');
+        $username = $this->ghi->get_admin();
+        $this->load->view('private/accounts/header',['username'=>$username]);
         $this->load->view('private/accounts/footer');
     }
     public function index(){
-        echo 'accounts';
+    }
+    public function new_account(){
+        $this->load->view('private/accounts/new_account');
+    }
+    public function send_sms(){
+        $this->load->view('private/accounts/send_sms');
+    }
+    public function import(){
+        $this->load->view('private/accounts/import');
+    }
+    public function export(){
+        $this->load->view('private/accounts/export');
+    }
+    public function labels(){
+        $this->load->view('private/accounts/labels');
     }
 }

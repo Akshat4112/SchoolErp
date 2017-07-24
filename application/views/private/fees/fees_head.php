@@ -9,47 +9,65 @@
     <div class="row">
     <div class="col-lg-6">
         <p style="font-size: 20px" class="text-info">Create Fees Heading</p>
-        <?php echo form_open('admissions/student_details', ['class' => 'form-horizontal']); ?>
-        <div class="form-group">
-            <label for="inputText" class="col-lg-2 control-label">Group Name</label>
-            <div class="col-lg-10">
-                <?php echo form_input(['name' => 'student_first_name', 'class' => 'form-control',
-                    'placeholder' => 'Enter First Name',
-                    'value' => set_value('student_first_name')]);
-                ?>
-                <?php echo form_error('student_first_name'); ?>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="inputText" class="col-lg-2 control-label">Frequency</label>
-            <div class="col-lg-10">
-                <?php echo form_input(['name' => 'student_first_name', 'class' => 'form-control',
-                    'placeholder' => 'Enter First Name',
-                    'value' => set_value('student_first_name')]);
-                ?>
-                <?php echo form_error('student_first_name'); ?>
-            </div>
-        </div>
+        <?php echo form_open('fees/fees_head', ['class' => 'form-horizontal']); ?>
         <div class="form-group">
             <label for="inputText" class="col-lg-2 control-label">Fees Heading</label>
             <div class="col-lg-10">
-                <?php echo form_input(['name' => 'student_first_name', 'class' => 'form-control',
-                    'placeholder' => 'Enter First Name',
-                    'value' => set_value('student_first_name')]);
+                <?php echo form_input(['name' => 'fees_heading', 'class' => 'form-control',
+                    'placeholder' => 'Enter Fees Heading',
+                    'value' => set_value('fees_heading')]);
                 ?>
-                <?php echo form_error('student_first_name'); ?>
+                <?php echo form_error('fees_heading'); ?>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputText" class="col-lg-2 control-label">Group Name</label>
+            <div class="col-lg-10">
+                <?php
+                $drop=array();
+                foreach($view_drop_fhg as $r){
+                    $drop[$r['fees_head_group_name']]=$r['fees_head_group_name'];
+                }
+                $attribute_class = [
+                    'class' => 'form-control',
+                    'id' => 'select',
+                ];
+                echo form_dropdown('fees_head_group', $drop,'', $attribute_class);
+                ?>
             </div>
         </div>
         <div class="form-group">
             <label for="inputText" class="col-lg-2 control-label">Account Name</label>
             <div class="col-lg-10">
-                <?php echo form_input(['name' => 'student_first_name', 'class' => 'form-control',
-                    'placeholder' => 'Enter First Name',
-                    'value' => set_value('student_first_name')]);
+                <?php
+                $drop=array();
+                foreach($view_drop_anl as $r){
+                    $drop[$r['account_name']]=$r['account_name'];
+                }
+                $attribute_class = [
+                    'class' => 'form-control',
+                    'id' => 'select',
+                ];
+                echo form_dropdown('account_name', $drop,'', $attribute_class);
                 ?>
-                <?php echo form_error('student_first_name'); ?>
             </div>
         </div>
+        <div class="form-group">
+            <label for="inputText" class="col-lg-2 control-label">Frequency</label>
+            <div class="col-lg-10">
+                <select class="form-control" name="frequency">
+                    <option id="annual">Annual</option>
+                    <option id="bi_monthly">Bi Monthly</option>
+                    <option id="half_yearly">Half Yearly</option>
+                    <option id="monthly">Monthly</option>
+                    <option id="one_time">One Time</option>
+                    <option id="quaterly">Quaterly</option>
+                    <option id="four_monthly">Four Monthly</option>
+                </select>
+            </div>
+        </div>
+
+
         <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-info',
             'style' => 'margin-left:45px; margin-top:20px;']),
         form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
@@ -123,22 +141,8 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
+                    <td></td>
+
                 </tr>
                 </tbody>
             </table>

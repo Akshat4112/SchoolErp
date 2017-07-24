@@ -9,13 +9,23 @@ class Fees extends MY_Controller{
     public function __construct()
     {
         parent::__construct();
-        $this->load->view('private/fees/header');
+        $this->load->model('get_header_info','ghi');
+        $username = $this->ghi->get_admin();
+        $this->load->view('private/fees/header',['username'=>$username]);
         $this->load->view('private/fees/footer');
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
     }
     public function fees_head()
     {
-        $this->load->view('private/fees/fees_head');
+        $field_fhg='fees_head_group_name';
+        $field_a='account_name';
+        $table_name_fhg='fees_head_group';
+        $table_name_a='account';
+        $this->load->model('get_model','gm');
+        $fees_head_list = $this->gm->get_list($field_fhg,$table_name_fhg);
+        $account_name_list = $this->gm->get_list($field_a,$table_name_a);
+        $this->load->view('private/fees/fees_head',['view_drop_fhg'=>$fees_head_list,'view_drop_anl'=>$account_name_list]);
+        print_r($this->input->post());
     }
 
     public function fees_head_group()
