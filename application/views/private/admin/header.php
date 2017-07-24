@@ -38,16 +38,6 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Fees<span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="<?=site_url('admin/fees_head') ?>">Fees Head</a></li>
-                        <li><a href="<?=site_url('admin/fees_head_group') ?>">Fees Head Group</a></li>
-                        <li><a href="<?=site_url('admin/fees_plan') ?>">Fees Plan</a></li>
-                        <li><a href="<?=site_url('admin/fees_conc_sett') ?>">Fees Concesion Settings</a></li>
-
-                    </ul>
-                </li>
-                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Route<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="<?=site_url('admin/route')?>">Route</a></li>

@@ -6,6 +6,22 @@
  * Time: 12:30 AM
  */
 $config=[
+    'fhg'=>
+        [
+            [
+                'field'=>'fees_head_group_name',
+                'label'=>'Fees Head Group Name',
+                'rules'=>'required'
+            ]
+        ],
+    'adm_form'=>
+        [
+            [
+                'field'=>'adm_no',
+                'label'=>'Admission No.',
+                'rules'=>'required'
+            ]
+        ],
     'section_del'=>
         [
             [

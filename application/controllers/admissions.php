@@ -12,6 +12,7 @@ class Admissions extends MY_Controller
         $username = $this->ghi->get_admin();
         $this->load->view('private/admissions/header_admission', ['username' => $username]);
         $this->load->view('private/admissions/footer_admission');
+        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
 
     }
 
@@ -37,11 +38,6 @@ class Admissions extends MY_Controller
         $last = $this->gm->last_admission_no();
 
         $this->load->view('private/admissions/create_admission_view', ['last_adm' => $last,'class_drop'=>$array]);
-
-
-
-
-
     }
 
     /**
@@ -201,7 +197,7 @@ class Admissions extends MY_Controller
 
     public function balance()
     {
-        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+
 
         if ($this->form_validation->run('balance')) {
             $post = $this->input->post();
@@ -236,9 +232,18 @@ class Admissions extends MY_Controller
 
     public function admission_form()
     {
-
-        $this->load->view('private/admissions/admission_form_view');
-
+        if($this->form_validation->run('adm_form')){
+            $post=$this->input->post();
+            unset($post['submit']);
+            print_r($post);
+            $this->load->model('get_model', 'gm');
+            $stu_list = $this->gm->admission_form_search($post);
+            $this->load->view('private/admissions/admission_form_view', ['stu_det' => $stu_list]);
+        }else{
+            $this->load->model('get_model', 'gm');
+            $stu_list = $this->gm->admission_form_search();
+            $this->load->view('private/admissions/admission_form_view', ['stu_det' => $stu_list]);
+        }
     }
 
     public function send_sms()

@@ -63,6 +63,9 @@
                         <li><a href="<?=site_url('admin/fees_conc_sett') ?>">Fees Estimation List</a></li>
                     </ul>
                 </li>
+                <li><a href="<?=site_url('fees/fees_head') ?>">Fees Head</a></li>
+                <li><a href="<?=site_url('fees/fees_head_group') ?>">Fees Head Group</a></li>
+                <li><a href="<?=site_url('fees/fees_conc_sett') ?>">Fees Concesion Settings</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
