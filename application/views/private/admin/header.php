@@ -30,14 +30,6 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account<span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Account</a></li>
-                        <li><a href="#">Account group</a></li>
-                        <li><a href="#">Opening Balance Editor</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Route<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="<?=site_url('admin/route')?>">Route</a></li>

@@ -67,7 +67,4 @@ class Get_model extends MY_Model
         $array=json_decode(json_encode($res),true);
         return $array;
     }
-    public function admission_form_search(){
-
-    }
 }

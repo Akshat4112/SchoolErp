@@ -2,12 +2,12 @@
 /**
  * Created by PhpStorm.
  * User: Akshat
- * Date: 7/24/2017
- * Time: 7:06 PM
+ * Date: 7/16/2017
+ * Time: 1:06 PM
  */?>
 <div class="container">
     <div class="row">
-        <p class="text-info" style="font-size: 20px;">Export</p>
+        <p class="text-info" style="font-size: 20px;">Opening Balance Editor</p>
         <div class="col-lg-6">
 
         </div>

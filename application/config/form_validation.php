@@ -6,6 +6,22 @@
  * Time: 12:30 AM
  */
 $config=[
+    'account_gr_delete'=>
+        [
+            [
+                'field'=>'account_group_delete',
+                'label'=>'Account Group Name',
+                'rules'=>'required'
+            ]
+        ],
+    'account_group'=>
+        [
+            [
+                'field'=>'account_group_name',
+                'label'=>'Account Group Name',
+                'rules'=>'required'
+            ]
+        ],
     'fhg'=>
         [
             [

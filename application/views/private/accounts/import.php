@@ -1,12 +1,9 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Akshat
- * Date: 7/24/2017
- * Time: 7:06 PM
- */
+<div class="container">
+    <div class="row">
+        <p class="text-info" style="font-size: 20px;">Import</p>
+        <div class="col-lg-6">
 
-class import
-{
-
-}
+        </div>
+        <div class="col-lg-6"></div>
+    </div>
+</div>

@@ -31,7 +31,17 @@
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Group</label>
                 <div class="col-lg-10">
-
+                    <?php
+                    $drop=array();
+                    foreach($group as $r){
+                        $drop[$r['account_group_name']]=$r['account_group_name'];
+                    }
+                    $attribute_class = [
+                        'class' => 'form-control',
+                        'id' => 'select',
+                    ];
+                    echo form_dropdown('account_group', $drop,'', $attribute_class);
+                    ?>
 
                 </div>
             </div>

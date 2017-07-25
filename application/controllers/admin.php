@@ -85,7 +85,7 @@ class Admin extends MY_Controller
         //goal: one controller and one module for complete genric Creation.
         $form_validation='section';
         $table_name='section';
-        $view='section';
+        $view='admin/masters/section';
         $field='section_name';
         $this->insert_genric($form_validation,$table_name,$view,$field);
 
@@ -114,37 +114,43 @@ class Admin extends MY_Controller
     }
     public function masters_section_del()
     {
-        if ($this->form_validation->run('section_del')) {
-            echo '1';
+        $form_validation='section_del';
+        $table_name='section';
+        $view='admin/masters/section';
+        $field='section_name';
+        $unset='del_section';
+        $value_form='section_delete';
+        $this->delete_genric($form_validation,$table_name,$view,$field,$unset,$value_form);
+
+
+
+
+        /*if ($this->form_validation->run('section_del')) {
             $post = $this->input->post();
-            echo '1';
             unset($post['del_section']);
-            echo '1';
             $this->load->model('del_model', 'dm');
             $value = $post['section_delete'];
-            echo '1';
             $table_name='section';
             $field='section_name';
             if($this->dm->delete_row($table_name,$field,$value)){
-                echo '1';
+
                 $this->load->model('get_model', 'gm');
                 $section = $this->gm->get_list('section_name','section');
-                $this->load->view('private/admin/masters/section', ['sec' => $section]);
+                $this->load->view('private/admin/masters/section', ['view' => $section]);
             }
         }
         else{
-            echo '2';
             $this->load->model('get_model', 'gm');
             $section = $this->gm->get_list('section_name','section');
-            $this->load->view('private/admin/masters/section', ['sec' => $section]);
-        }
+            $this->load->view('private/admin/masters/section', ['view' => $section]);
+        }*/
     }
 
     public function masters_caste()
     {
         $form_validation='caste';
         $table_name='caste';
-        $view='caste';
+        $view='admin/masters/caste';
         $field='caste_name';
         $this->insert_genric($form_validation,$table_name,$view,$field);
 
@@ -179,7 +185,7 @@ class Admin extends MY_Controller
     {
         $form_validation='category';
         $table_name='category';
-        $view='category';
+        $view='admin/masters/category';
         $field='category_name';
         $this->insert_genric($form_validation,$table_name,$view,$field);
 
@@ -210,6 +216,7 @@ class Admin extends MY_Controller
     {
 
     }
+
 
     public function masters_house()
     {
@@ -276,28 +283,5 @@ class Admin extends MY_Controller
     }
     public function standard_narration(){
         $this->load->view('private/admin/std_narration');
-    }
-
-    public function insert_genric($form_validation,$table_name,$view,$field)
-    {
-        if ($this->form_validation->run($form_validation)) {
-
-            // for inserting class in database from model
-
-            $this->load->model('add_model', 'am');
-            $post = $this->input->post();
-            unset($post['submit']);
-            if ($this->am->insert_data($table_name,$post)) {
-                $this->load->model('get_model', 'gm');
-                $array = $this->gm->get_list($field,$table_name);
-                $this->load->view('private/admin/masters/'.$view,['view'=>$array]);
-            } else {
-                echo 'Query failed in inserting record';
-            }
-        } else {
-            $this->load->model('get_model', 'gm');
-            $array = $this->gm->get_list($field,$table_name);
-            $this->load->view('private/admin/masters/'.$view,['view'=>$array]);
-        }
     }
 }
