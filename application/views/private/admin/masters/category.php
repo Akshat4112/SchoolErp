@@ -28,15 +28,15 @@
 
         </div>
         <div class="col-lg-4">
-            <table class="table table-striped table-hover ">
+            <table class="table table-hover ">
                 <thead>
-                <tr>
+                <tr class="info">
                     <th>Category</th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php foreach ($view as $category){
-                    echo "<tr><td>".$category['category_name']."</td></tr>";
+                    echo "<tr class='success'><td>".$category['category_name']."</td></tr>";
                 }
 
                 ?>

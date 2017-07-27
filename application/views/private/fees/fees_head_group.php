@@ -29,16 +29,16 @@
 
     </div>
     <div class="col-lg-6">
-        <table class="table table-striped table-hover ">
+        <table class="table  table-hover ">
             <thead>
-            <tr>
+            <tr class="info">
                 <th>Fees Head Group</th>
             </tr>
             </thead>
             <tbody>
             <?php
             foreach ($view as $v){
-                echo "<tr><td>".$v['fees_head_group_name']."</td></tr>";
+                echo "<tr class='success'><td>".$v['fees_head_group_name']."</td></tr>";
             }
             ?>
             </tbody>

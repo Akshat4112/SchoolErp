@@ -9,9 +9,9 @@
     <div class="row">
         <p class="text-info" style="font-size: 20px;">School Leaving Certificate</p>
         <div class="col-lg-12">
-            <table class="table table-striped table-hover ">
+            <table class="table table-hover ">
                 <thead>
-                <tr>
+                <tr class="info">
                     <th>Sr No.</th>
                     <th>Adm. No.</th>
                     <th>Name</th>
@@ -22,7 +22,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
+                <tr class="success">
                     <td></td>
                     <td></td>
                     <td></td>

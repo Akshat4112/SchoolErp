@@ -119,9 +119,9 @@
     </div>
     <div class="row">
         <div class="col-lg-12">
-            <table class="table table-striped table-hover ">
+            <table class="table table-hover ">
                 <thead>
-                <tr>
+                <tr class="info">
                     <th>Fees Heading</th>
                     <th>Group</th>
                     <th>Account</th>
@@ -143,7 +143,7 @@
                 <tbody>
                 <?php if (count($fhl)): ?>
                     <?php foreach ($fhl as $fees_head_det): ?>
-                        <tr>
+                        <tr class="success">
                             <td><?php echo $fees_head_det->fees_heading ?></td>
                             <td><?php echo $fees_head_det->group_name?></td>
                             <td><?php echo $fees_head_det->account_name ?></td>

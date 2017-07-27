@@ -1,3 +1,10 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Akshat
+ * Date: 7/28/2017
+ * Time: 2:30 AM
+ */?>
 <div class="row">
     <div class="col-lg-1">
     </div>
@@ -6,9 +13,9 @@
         <div class="form-group">
             <div class="col-lg-2">
                 <?php $options = [
-                    'admno' => 'Admission Number',
-                    'student_first_name' => 'Student First Name',
-                    'fathers_first_name' => 'Father\'s Name',
+                    'admno' => 'Account Name',
+                    'student_first_name' => 'Group',
+                    'fathers_first_name' => 'Address',
                 ];
                 $attribute_class = [
                     'class' => 'form-control',
@@ -26,9 +33,9 @@
             </div>
             <div class="col-lg-2">
                 <?php $options = [
-                    'admno' => 'House',
-                    'student_first_name' => 'Student First Name',
-                    'fathers_first_name' => 'Father \'s Name',
+                    'admno' => 'Account Name',
+                    'student_first_name' => 'Group',
+                    'fathers_first_name' => 'Address',
                 ];
                 $attribute_class = [
                     'class' => 'form-control',
@@ -44,9 +51,9 @@
             <div class="col-lg-2">
 
                 <?php $options = [
-                    'admno' => 'Birth Month',
-                    'student_first_name' => 'Student First Name',
-                    'fathers_first_name' => 'Father \'s Name',
+                    'admno' => 'Account Name',
+                    'student_first_name' => 'Group',
+                    'fathers_first_name' => 'Address',
                 ];
                 $attribute_class = [
                     'class' => 'form-control',
@@ -67,30 +74,33 @@
 <div class="row">
     <div class="col-lg-1"></div>
     <div class="col-lg-10">
-        <table class="table table-hover ">
+        <table class="table  table-hover ">
             <thead>
             <tr class="info">
-
-                <th>Admission No.</th>
-                <th>Name</th>
-                <th>Class</th>
-                <th>Section</th>
-                <th>Roll No.</th>
-                <th>DOB</th>
-                <th>Route</th>
+                <th>Account Name</th>
+                <th>Group</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Phone</th>
+                <th>Mobile</th>
+                <th>Email</th>
+                <th>Contact Person</th>
+                <th>Birthday on</th>
             </tr>
             </thead>
             <tbody>
-            <?php if (count($stu_det)): ?>
-                <?php foreach ($stu_det as $student_det): ?>
-                    <tr class="success ">
-                        <td><?php echo $student_det->student_id ?></td>
-                        <td><?php echo $student_det->student_first_name ?></td>
-                        <td><?php echo $student_det->student_class ?></td>
-                        <td><?php echo $student_det->student_section ?></td>
-                        <td><?php echo $student_det->student_roll_no ?></td>
-                        <td><?php echo $student_det->student_dob ?></td>
-                        <td><?php echo $student_det->route ?></td>
+            <?php if (count($account_det)): ?>
+                <?php foreach ($account_det as $acc_det): ?>
+                    <tr class="success">
+                        <td><?php echo $acc_det->account_name ?></td>
+                        <td><?php echo $acc_det->group_acc ?></td>
+                        <td><?php echo $acc_det->address ?></td>
+                        <td><?php echo $acc_det->city?></td>
+                        <td><?php echo $acc_det->phone ?></td>
+                        <td><?php echo $acc_det->mobile ?></td>
+                        <td><?php echo $acc_det->email ?></td>
+                        <td><?php echo $acc_det->contact_per ?></td>
+                        <td><?php echo $acc_det->birthday_on ?></td>
 
                     </tr>
                 <?php endforeach; ?>

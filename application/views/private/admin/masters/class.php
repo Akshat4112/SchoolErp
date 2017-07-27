@@ -71,9 +71,9 @@
 
 
         <div class="col-lg-8">
-            <table class="table table-striped table-hover ">
+            <table class="table table-hover ">
                 <thead>
-                <tr>
+                <tr class="info">
                     <th>Class</th>
                     <th>Prefix</th>
                     <th>Start from</th>
@@ -83,7 +83,7 @@
                 <tbody>
                 <?php if (count($det_class)): ?>
                     <?php foreach($det_class as $class_det): ?>
-                        <tr>
+                        <tr class="success">
                             <td><?php echo $class_det->class?></td>
                             <td><?php echo $class_det->prefix?></td>
                             <td><?php echo $class_det->start_from?></td>

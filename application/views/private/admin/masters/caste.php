@@ -5,13 +5,6 @@
  * Date: 7/16/2017
  * Time: 1:04 PM
  */?>
-<?php
-/**
- * Created by PhpStorm.
- * User: Akshat
- * Date: 7/16/2017
- * Time: 1:04 PM
- */?>
 <div class="container">
     <div class="row">
         <h4>Caste of masters</h4>
@@ -34,16 +27,16 @@
         <?php form_close();?>
         </div>
             <div class="col-lg-4">
-            <table class="table table-striped table-hover ">
+            <table class="table table-hover ">
                 <thead>
-                <tr>
+                <tr class="info">
                     <th>Caste</th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php
                         foreach ($view as $caste){
-                            echo "<tr><td>".$caste['caste_name'].'<br>'."</td></tr>";
+                            echo "<tr class='success'><td>".$caste['caste_name'].'<br>'."</td></tr>";
                         }
                         ?>
                 </tbody>

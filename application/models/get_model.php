@@ -73,5 +73,11 @@ class Get_model extends MY_Model
         $res = $query->result();
         return $res;
     }
+    public function account_list(){
+
+        $query = $this->db->get('account');
+        $res = $query->result();
+        return $res;
+    }
     public function  admission_form_search(){}
 }

@@ -45,9 +45,9 @@
 
 
         <div class="col-lg-8">
-            <table class="table table-striped table-hover ">
+            <table class="table table-hover ">
                 <thead>
-                <tr>
+                <tr class="info">
                     <th>Section</th>
                 </tr>
                 </thead>
@@ -55,7 +55,7 @@
                 <?php if (count($view)): ?>
                     <?php
                     foreach ($view as $section) {
-                        echo "<tr><td>" . $section['section_name'] . '<br>' . "</td></tr>";
+                        echo "<tr class='success'><td>" . $section['section_name'] . '<br>' . "</td></tr>";
                     }
                     ?>
 

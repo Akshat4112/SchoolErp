@@ -28,9 +28,9 @@
     </div>
     <div class="row">
         <div class="col-lg-12">
-            <table class="table table-striped table-hover ">
+            <table class="table table-hover ">
                 <thead>
-                <tr>
+                <tr class="info">
                     <th>S.no</th>
                     <th>Class</th>
                     <th>Section</th>
@@ -42,7 +42,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
+                <tr class="success">
                     <td></td>
                     <td></td>
                     <td></td>

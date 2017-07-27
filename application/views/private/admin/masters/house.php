@@ -27,15 +27,15 @@
 <?php echo form_close(); ?>
         </div>
         <div class="col-lg-4">
-            <table class="table table-striped table-hover ">
+            <table class="table  table-hover ">
                 <thead>
-                <tr>
+                <tr class="info">
                     <th>House</th>
                 </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($house as $h){
-                        echo "<tr><td>".$h['house_name']."</td></tr>";
+                        echo "<tr class='success'><td>".$h['house_name']."</td></tr>";
                     }?>
                 </tbody>
             </table>

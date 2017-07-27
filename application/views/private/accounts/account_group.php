@@ -46,9 +46,9 @@
 
 
         <div class="col-lg-8">
-            <table class="table table-striped table-hover ">
+            <table class="table table-hover ">
                 <thead>
-                <tr>
+                <tr class="info">
                     <th>Account Group</th>
                 </tr>
                 </thead>
@@ -56,7 +56,7 @@
                 <?php if (count($view)): ?>
                     <?php
                     foreach ($view as $account_group) {
-                        echo "<tr><td>" . $account_group['account_group_name'] . '<br>' . "</td></tr>";
+                        echo "<tr class='success'><td>" . $account_group['account_group_name'] . '<br>' . "</td></tr>";
                     }
                     ?>
 

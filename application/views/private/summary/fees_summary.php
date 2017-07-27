@@ -30,9 +30,9 @@
         <div class="col-lg-4"></div>
     </div>
     <div class="row">
-        <table class="table table-striped table-hover ">
+        <table class="table table-hover ">
             <thead>
-            <tr>
+            <tr class="info">
                 <th>Class</th>
                 <th>Fees Head</th>
                 <th>Transport</th>
@@ -44,7 +44,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
+            <tr class="success">
                 <td></td>
                 <td></td>
                 <td></td>

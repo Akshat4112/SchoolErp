@@ -15,7 +15,11 @@ class Accounts extends MY_Controller{
         $this->load->view('private/accounts/footer');
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
     }
-    public function index(){}
+    public function index(){
+        $this->load->model('get_model', 'gm');
+        $stu_list = $this->gm->account_list();
+        $this->load->view('private/accounts/default', ['account_det' => $stu_list]);
+    }
 
     public function account_group()
     {
