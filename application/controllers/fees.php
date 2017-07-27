@@ -25,7 +25,18 @@ class Fees extends MY_Controller{
         $fees_head_list = $this->gm->get_list($field_fhg,$table_name_fhg);
         $account_name_list = $this->gm->get_list($field_a,$table_name_a);
         $this->load->view('private/fees/fees_head',['view_drop_fhg'=>$fees_head_list,'view_drop_anl'=>$account_name_list]);
-        print_r($this->input->post());
+
+        $data = $this->input->post();
+        unset($data['submit']);
+  //      print_r($data);
+
+        //insert fees heading info. in database with insert_genric function
+        /*$form_validation='fees_head';
+        $table_name='fees_head';
+        $view='fees_head';
+        $field=$data;
+        $this->insert_genric($form_validation,$table_name,$view,$field);
+*/
     }
 
     public function fees_head_group()

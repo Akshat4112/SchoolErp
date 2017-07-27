@@ -6,6 +6,20 @@
  * Time: 12:30 AM
  */
 $config=[
+    'fees_head'=>[
+        [
+            'field'=>'fees_heading',
+            'label'=>'Fees Heading',
+            'rules'=>'required'
+        ]
+    ],
+    'account'=>[
+        [
+            'field'=>'account_name',
+            'label'=>'Account Group Name',
+            'rules'=>'required'
+        ]
+    ],
     'account_gr_delete'=>
         [
             [

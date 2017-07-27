@@ -57,11 +57,27 @@ class Accounts extends MY_Controller{
     public function index(){
     }
     public function new_account(){
+
+        //dynamically loading account group name in dropdown
         $field_a='account_group_name';
         $table_name_a='account_group';
         $this->load->model('get_model','gm');
         $group= $this->gm->get_list($field_a,$table_name_a);
         $this->load->view('private/accounts/new_account',['group'=>$group]);
+
+        //inserting new account info in database via new account function and model
+
+        $test = $this->input->post();
+        unset($test['submit']);
+        echo '1';
+        print_r($test);
+        echo '1';
+        $form_validation='account';
+        $table_name='account';
+        $view='accounts/new_account';
+        $field=$test;
+        $this->insert_genric($form_validation,$table_name,$view,$field);
+
     }
     public function send_sms(){
         $this->load->view('private/accounts/send_sms');
@@ -82,27 +98,5 @@ class Accounts extends MY_Controller{
     }
     public function delete(){
         $this->load->view('private/accounts/delete');
-    }
-    public function insert_genric($form_validation,$table_name,$view,$field)
-    {
-        if ($this->form_validation->run($form_validation)) {
-
-            // for inserting class in database from model
-
-            $this->load->model('add_model', 'am');
-            $post = $this->input->post();
-            unset($post['submit']);
-            if ($this->am->insert_data($table_name,$post)) {
-                $this->load->model('get_model', 'gm');
-                $array = $this->gm->get_list($field,$table_name);
-                $this->load->view('private/accounts/'.$view,['view'=>$array]);
-            } else {
-                echo 'Query failed in inserting record';
-            }
-        } else {
-            $this->load->model('get_model', 'gm');
-            $array = $this->gm->get_list($field,$table_name);
-            $this->load->view('private/accounts/'.$view,['view'=>$array]);
-        }
     }
 }

@@ -56,13 +56,14 @@
             <label for="inputText" class="col-lg-2 control-label">Frequency</label>
             <div class="col-lg-10">
                 <select class="form-control" name="frequency">
-                    <option id="annual">Annual</option>
-                    <option id="bi_monthly">Bi Monthly</option>
-                    <option id="half_yearly">Half Yearly</option>
-                    <option id="monthly">Monthly</option>
-                    <option id="one_time">One Time</option>
-                    <option id="quaterly">Quaterly</option>
-                    <option id="four_monthly">Four Monthly</option>
+                    <option value="annual">Annual</option>
+                    <option value="bi_monthly">Bi Monthly</option>
+                    <option value="half_yearly">Half Yearly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="one_time">One Time</option>
+                    <option value="quaterly">Quaterly</option>
+                    <option value="four_monthly">Four Monthly</option>
+                    <option value="custom">Custom</option>
                 </select>
             </div>
         </div>
@@ -78,40 +79,40 @@
     <div class="col-lg-6">
         <div class="checkbox">
             <label>
-                <input type="checkbox"> Jan
+                <input  type="checkbox" value="jan" class="monthly quaterly"> Jan
             </label><br>
             <label>
-                <input type="checkbox"> Feb
+                <input type="checkbox" value="feb" class="monthly bi_monthly"> Feb
             </label><br>
             <label>
-                <input type="checkbox"> Mar
+                <input type="checkbox" value="mar" class="monthly"> Mar
             </label><br>
             <label>
-                <input type="checkbox"> Apr
+                <input type="checkbox" value="apr" class="monthly quaterly four_monthly half_yearly annual bi_monthly one_time"> Apr
             </label><br>
             <label>
-                <input type="checkbox"> May
+                <input type="checkbox" value="may" class="monthly"> May
             </label><br>
             <label>
-                <input type="checkbox"> Jun
+                <input type="checkbox" value="jun" class="monthly bi_monthly"> Jun
             </label><br>
             <label>
-                <input type="checkbox"> Jul
+                <input type="checkbox" value="jul" class="monthly quaterly"> Jul
             </label><br>
             <label>
-                <input type="checkbox"> Aug
+                <input type="checkbox" value="aug" class="monthly four_monthly bi_monthly"> Aug
             </label><br>
             <label>
-                <input type="checkbox"> Sep
+                <input type="checkbox" value="sep" class="monthly"> Sep
             </label><br>
             <label>
-                <input type="checkbox"> Oct
+                <input type="checkbox" value="oct" class="monthly quaterly half_yearly bi_monthly"> Oct
             </label><br>
             <label>
-                <input type="checkbox"> Nov
+                <input type="checkbox" value="nov" class="monthly"> Nov
             </label><br>
             <label>
-                <input type="checkbox"> Dec
+                <input type="checkbox" value="dec" class="monthly four_monthly bi_monthly"> Dec
             </label>
         </div>
     </div>
@@ -150,3 +151,13 @@
         </div>
     </div>
 </div>
+<script>
+$(document).ready(function() {
+$("select[name='frequency']").change(function() {
+// Get the value selected (convert spaces to underscores for class selection)
+var value = $(this).val().replace(' ', '_');
+
+// Clear checks, then check boxes that have class "value"
+$(":checkbox").prop("checked",false).filter("."+value).prop("checked",true);
+});
+});</script>

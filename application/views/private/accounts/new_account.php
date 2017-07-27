@@ -9,7 +9,7 @@
     <div class="row">
         <p class="text-info" style="font-size: 20px;">Create New Account</p>
         <div class="col-lg-6">
-            <?php echo form_open('admissions/student_details', ['class' => 'form-horizontal']); ?>
+            <?php echo form_open('accounts/new_account', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Account Name</label>
                 <div class="col-lg-10">
@@ -40,7 +40,7 @@
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('account_group', $drop,'', $attribute_class);
+                    echo form_dropdown('group_acc', $drop,'', $attribute_class);
                     ?>
 
                 </div>
@@ -50,7 +50,7 @@
                     <div class="form-group">
                         <label for="inputText" class="col-lg-2 control-label">Op. Bal.</label>
                         <div class="col-lg-10">
-                            <?php echo form_input(['name' => 'opening_balance', 'class' => 'form-control',
+                            <?php echo form_input(['name' => 'op_bal', 'class' => 'form-control',
                                 'placeholder' => 'Enter ',
                                 'value' => set_value('opening_balance')]); ?>
                         </div>
@@ -70,9 +70,9 @@
                                 'class' => 'form-control',
                                 'id' => 'select',
                             ];
-                            echo form_dropdown('gender', $options, 'male', $attribute_class);
+                            echo form_dropdown('dr_cr', $options, 'male', $attribute_class);
                             ?>
-                            <?php echo form_error('gender'); ?>
+                            <?php echo form_error('dr_cr'); ?>
 
                             <br>
                         </div>
@@ -90,9 +90,9 @@
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Address 1</label>
                 <div class="col-lg-10">
-                    <?php echo form_input(['name' => 'address_1', 'class' => 'form-control',
+                    <?php echo form_input(['name' => 'address1', 'class' => 'form-control',
                         'placeholder' => 'Enter',
-                        'value' => set_value('address_1')]); ?>
+                        'value' => set_value('address1')]); ?>
                 </div>
             </div>
             <div class="row">
@@ -155,10 +155,10 @@
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Contact Person</label>
                 <div class="col-lg-10">
-                    <?php echo form_input(['name' => 'contact_person', 'class' => 'form-control',
+                    <?php echo form_input(['name' => 'contact_per', 'class' => 'form-control',
                         'placeholder' => 'Enter',
-                        'value' => set_value('contact_person')]); ?>
-                    <?php echo form_error('student_roll_no'); ?>
+                        'value' => set_value('contact_per')]); ?>
+                    <?php echo form_error('contact_per'); ?>
                 </div><br><br>
             </div>
             <div class="row">
@@ -166,7 +166,7 @@
                     <div class="form-group">
                         <label for="inputText" class="col-lg-4 control-label">Birthday on</label>
                         <div class="col-lg-8">
-                            <input type="date" class="form-control" name="bday">
+                            <input type="date" class="form-control" name="birthday_on">
                         </div><br><br>
                     </div>
                 </div>
@@ -174,7 +174,7 @@
                     <div class="form-group">
                         <label for="inputText" class="col-lg-4 control-label">Anniversary on</label>
                         <div class="col-lg-8">
-                            <input type="date" class="form-control" name="bday">
+                            <input type="date" class="form-control" name="anniv_on">
                         </div><br><br>
                     </div>
                 </div>
@@ -191,19 +191,19 @@
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Bank Account No.</label>
                 <div class="col-lg-10">
-                    <?php echo form_input(['name' => 'bank_account_no', 'class' => 'form-control',
+                    <?php echo form_input(['name' => 'bank_acc_no', 'class' => 'form-control',
                         'placeholder' => 'Enter',
-                        'value' => set_value('bank_account_no')]); ?>
-                    <?php echo form_error('bank_account_no'); ?>
+                        'value' => set_value('bank_acc_no')]); ?>
+                    <?php echo form_error('bank_acc_no'); ?>
                 </div><br><br><br>
             </div>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Cheque Printing Name</label>
                 <div class="col-lg-10">
-                    <?php echo form_input(['name' => 'cheque_printing_name', 'class' => 'form-control',
+                    <?php echo form_input(['name' => 'cheque_p_name', 'class' => 'form-control',
                         'placeholder' => 'Enter',
-                        'value' => set_value('cheque_printing_name')]); ?>
-                    <?php echo form_error('cheque_printing_name'); ?>
+                        'value' => set_value('cheque_p_name')]); ?>
+                    <?php echo form_error('cheque_p_name'); ?>
                 </div>
             </div>
             <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-info',
