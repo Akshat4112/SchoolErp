@@ -15,7 +15,7 @@ class Accounts extends MY_Controller{
         $this->load->view('private/accounts/footer');
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
     }
-
+    public function index(){}
 
     public function account_group()
     {
@@ -23,7 +23,7 @@ class Accounts extends MY_Controller{
         //goal: one controller and one module for complete genric Creation.
         $form_validation='account_group';
         $table_name='account_group';
-        $view='account_group';
+        $view='accounts/account_group';
         $field='account_group_name';
         $this->insert_genric($form_validation,$table_name,$view,$field);
     }
@@ -52,32 +52,53 @@ class Accounts extends MY_Controller{
         }
     }
 
-
-
-    public function index(){
-    }
     public function new_account(){
 
         //dynamically loading account group name in dropdown
-        $field_a='account_group_name';
-        $table_name_a='account_group';
-        $this->load->model('get_model','gm');
-        $group= $this->gm->get_list($field_a,$table_name_a);
-        $this->load->view('private/accounts/new_account',['group'=>$group]);
+
 
         //inserting new account info in database via new account function and model
+        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+        if ($this->form_validation->run('account')) {
 
-        $test = $this->input->post();
-        unset($test['submit']);
-        echo '1';
-        print_r($test);
-        echo '1';
-        $form_validation='account';
+
+
+            $post = $this->input->post();
+            unset($post['submit']);
+            $this->load->model('add_model', 'am');
+            $table_name='account';
+
+            if ($this->am->insert_data($table_name,$post)) {
+                $field_a='account_group_name';
+                $table_name_a='account_group';
+                $this->load->model('get_model','gm');
+                $group= $this->gm->get_list($field_a,$table_name_a);
+                $this->load->view('private/accounts/new_account',['group'=>$group]);
+
+            } else {
+                echo 'Database query error';
+                $field_a='account_group_name';
+                $table_name_a='account_group';
+                $this->load->model('get_model','gm');
+                $group= $this->gm->get_list($field_a,$table_name_a);
+                $this->load->view('private/accounts/new_account',['group'=>$group]);
+            }
+        } else {
+            $field_a='account_group_name';
+            $table_name_a='account_group';
+            $this->load->model('get_model','gm');
+            $group= $this->gm->get_list($field_a,$table_name_a);
+            $this->load->view('private/accounts/new_account',['group'=>$group]);
+        }
+
+
+
+        /*$form_validation='account';
         $table_name='account';
         $view='accounts/new_account';
         $field=$test;
         $this->insert_genric($form_validation,$table_name,$view,$field);
-
+*/
     }
     public function send_sms(){
         $this->load->view('private/accounts/send_sms');

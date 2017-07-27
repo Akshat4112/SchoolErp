@@ -262,7 +262,24 @@ class Admin extends MY_Controller
 
 
     public function org_info(){
-        $this->load->view('private/admin/organisation_info');
+        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+        if ($this->form_validation->run('organisation_info')) {
+
+            $post = $this->input->post();
+            unset($post['submit']);
+            $this->load->model('add_model', 'am');
+            $table_name='organisation_info';
+
+            if ($this->am->insert_data($table_name,$post)) {
+                $this->load->view('private/admin/organisation_info');
+            } else {
+                echo 'Database query error';
+                $this->load->view('private/admin/organisation_info');
+            }
+        } else {
+            $this->load->view('private/admin/organisation_info');
+        }
+
     }
     public function create_user(){
         $this->load->view('private/admin/user/create_user');

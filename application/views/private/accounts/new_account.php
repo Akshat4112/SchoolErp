@@ -62,9 +62,8 @@
                         <label for="select" class="col-lg-2 control-label">Dr. /Cr.</label>
                         <div class="col-lg-10">
                             <?php $options = [
-                                'Male' => 'Male',
-                                'Female' => 'Female',
-                                'Other' => 'Other'
+                                'dr' => 'Dr.',
+                                'cr' => 'Cr.'
                             ];
                             $attribute_class = [
                                 'class' => 'form-control',

@@ -67,4 +67,11 @@ class Get_model extends MY_Model
         $array=json_decode(json_encode($res),true);
         return $array;
     }
+    public function fees_head_list(){
+
+        $query = $this->db->get('fees_head');
+        $res = $query->result();
+        return $res;
+    }
+    public function  admission_form_search(){}
 }

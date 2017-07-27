@@ -25,6 +25,10 @@ class Certificates extends MY_Controller{
         $username = $this->ghi->get_admin();
         $this->load->view('private/certificates/slc_header',['username'=>$username]);
         $this->load->view('private/certificates/slc_new');
+
+        $data=$this->input->post();
+        unset($data['submit']);
+        print_r($data);
     }
     public function entrance_test()
     {

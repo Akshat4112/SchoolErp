@@ -32,7 +32,7 @@
                     'class' => 'form-control',
                     'id' => 'select',
                 ];
-                echo form_dropdown('fees_head_group', $drop,'', $attribute_class);
+                echo form_dropdown('group_name', $drop,'', $attribute_class);
                 ?>
             </div>
         </div>
@@ -141,10 +141,20 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td></td>
-
-                </tr>
+                <?php if (count($fhl)): ?>
+                    <?php foreach ($fhl as $fees_head_det): ?>
+                        <tr>
+                            <td><?php echo $fees_head_det->fees_heading ?></td>
+                            <td><?php echo $fees_head_det->group_name?></td>
+                            <td><?php echo $fees_head_det->account_name ?></td>
+                            <td><?php echo $fees_head_det->frequency ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <tr>
+                        <td>No Records Found</td>
+                    </tr>
+                <?php endif; ?>
                 </tbody>
             </table>
 

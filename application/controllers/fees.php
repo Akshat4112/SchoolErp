@@ -17,35 +17,82 @@ class Fees extends MY_Controller{
     }
     public function fees_head()
     {
-        $field_fhg='fees_head_group_name';
-        $field_a='account_name';
-        $table_name_fhg='fees_head_group';
-        $table_name_a='account';
-        $this->load->model('get_model','gm');
-        $fees_head_list = $this->gm->get_list($field_fhg,$table_name_fhg);
-        $account_name_list = $this->gm->get_list($field_a,$table_name_a);
-        $this->load->view('private/fees/fees_head',['view_drop_fhg'=>$fees_head_list,'view_drop_anl'=>$account_name_list]);
 
-        $data = $this->input->post();
-        unset($data['submit']);
-  //      print_r($data);
-
+        //for showing info in table
         //insert fees heading info. in database with insert_genric function
-        /*$form_validation='fees_head';
-        $table_name='fees_head';
-        $view='fees_head';
-        $field=$data;
-        $this->insert_genric($form_validation,$table_name,$view,$field);
-*/
+
+        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+        if ($this->form_validation->run('fees_head')) {
+
+            $post = $this->input->post();
+            unset($post['submit']);
+            $this->load->model('add_model', 'am');
+            $table_name='fees_head';
+
+            if ($this->am->insert_data($table_name,$post)) {
+                $field_fhg='fees_head_group_name';
+                $field_a='account_name';
+                $table_name_fhg='fees_head_group';
+                $table_name_a='account';
+                $this->load->model('get_model','gm');
+                $fees_head_list = $this->gm->get_list($field_fhg,$table_name_fhg);
+                $account_name_list = $this->gm->get_list($field_a,$table_name_a);
+
+                $this->load->model('get_model', 'gm');
+                $fhl = $this->gm->fees_head_list();
+
+                $this->load->view('private/fees/fees_head',
+                    ['view_drop_fhg'=>$fees_head_list,'view_drop_anl'=>$account_name_list,'fhl'=>$fhl]);
+            } else {
+                echo 'Database query error';
+                $field_fhg='fees_head_group_name';
+                $field_a='account_name';
+                $table_name_fhg='fees_head_group';
+                $table_name_a='account';
+                $this->load->model('get_model','gm');
+                $fees_head_list = $this->gm->get_list($field_fhg,$table_name_fhg);
+                $account_name_list = $this->gm->get_list($field_a,$table_name_a);
+
+                $this->load->model('get_model', 'gm');
+                $fhl = $this->gm->fees_head_list();
+
+                $this->load->view('private/fees/fees_head',['view_drop_fhg'=>$fees_head_list,
+                    'view_drop_anl'=>$account_name_list,'fhl'=>$fhl]);
+            }
+        } else {
+            $field_fhg='fees_head_group_name';
+            $field_a='account_name';
+            $table_name_fhg='fees_head_group';
+            $table_name_a='account';
+            $this->load->model('get_model','gm');
+            $fees_head_list = $this->gm->get_list($field_fhg,$table_name_fhg);
+            $account_name_list = $this->gm->get_list($field_a,$table_name_a);
+
+            $this->load->model('get_model', 'gm');
+            $fhl = $this->gm->fees_head_list();
+
+            $this->load->view('private/fees/fees_head',['view_drop_fhg'=>$fees_head_list,
+                'view_drop_anl'=>$account_name_list,'fhl'=>$fhl]);
+        }
     }
 
     public function fees_head_group()
     {
+        //for inserting records in databse from fees_head group
         $form_validation='fhg';
         $table_name='fees_head_group';
         $view='fees_head_group';
         $field='fees_head_group_name';
         $this->insert_genric($form_validation,$table_name,$view,$field);
+
+        //for deleting records in databse from fees_head group
+        $form_validation='fees_head_del';
+        $table_name='';
+        $view='fees/fees_head';
+        $unset='';
+        $value_form='';
+        //delete_genric($form_validation,$table_name,$view,$field,$unset,$value_form);
+
     }
     public function fees_conc_sett()
     {

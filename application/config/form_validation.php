@@ -6,6 +6,20 @@
  * Time: 12:30 AM
  */
 $config=[
+    'organisation_info'=>[
+        [
+            'field'=>'name',
+            'label'=>'Organisation Name',
+            'rules'=>'required'
+        ]
+    ],
+    'fees_head_del'=>[
+        [
+            'field'=>'fees_heading',
+            'label'=>'Fees Heading',
+            'rules'=>'required'
+        ]
+    ],
     'fees_head'=>[
         [
             'field'=>'fees_heading',

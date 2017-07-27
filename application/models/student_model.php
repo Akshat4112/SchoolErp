@@ -11,7 +11,6 @@ class Student_model extends MY_Model {
         $query = $this->db->get('student');
         $res = $query->result();
         return $res;
-
     }
     public function get_attachements(){
 
