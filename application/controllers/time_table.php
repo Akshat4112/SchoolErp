@@ -11,8 +11,8 @@ class Time_table extends MY_Controller{
         parent::__construct();
         $this->load->model('get_header_info','ghi');
         $username = $this->ghi->get_admin();
-        $this->load->view('private/calendar/header',['username'=>$username]);
-        $this->load->view('private/calendar/footer');
+        $this->load->view('private/time_table/header',['username'=>$username]);
+        $this->load->view('private/time_table/footer');
     }
     public function index(){
 

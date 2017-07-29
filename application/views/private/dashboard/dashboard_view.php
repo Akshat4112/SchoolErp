@@ -47,7 +47,7 @@
                 <p style="font-size: 18px; margin-left: 15px;" class="text-info">Library</p>
             </div>
             <div class="col-lg-2">
-                <a href="<?= site_url('tt'); ?>"><img src="<?= base_url() ?>/public/assets/img/tt.png"
+                <a href="<?= site_url('time_table'); ?>"><img src="<?= base_url() ?>/public/assets/img/tt.png"
                                                                    height="80" width="80"></a><br>
                 <p style="font-size: 18px; margin-left: 2px;" class="text-info">Time Table</p>
             </div>
@@ -81,7 +81,7 @@
             </div>
 
             <div class="col-lg-2">
-                <a href="<?= site_url('admin/route_plan'); ?>"><img
+                <a href="<?= site_url('transport'); ?>"><img
                             src="<?= base_url() ?>/public/assets/img/transport.png" height="80" width="80"></a><br>
                 <p style="font-size: 18px; margin-left: 2px;" class="text-info">Transport</p>
             </div>

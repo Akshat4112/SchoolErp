@@ -36,6 +36,28 @@
                 <li><a href="<?= site_url('accounts/delete'); ?>">Delete</a></li>
                 <li><a href="<?=site_url('accounts/account_group'); ?>">Account Group</a></li>
                 <li><a href="<?=site_url('accounts/open_balance_editor'); ?>">Opening Balance Editor</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Financial Accounting <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="<?=site_url('')?>">Payment</a></li>
+                        <li><a href="<?=site_url('')?>">Receipt</a></li>
+                        <li><a href="<?=site_url('')?>">Journal</a></li>
+                        <li><a href="<?=site_url('')?>">Contra</a></li>
+                        <li><a href="<?=site_url('')?>">Debit Note</a></li>
+                        <li><a href="<?=site_url('')?>">Credit Note</a></li>
+
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Accounts<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="<?=site_url('')?>">Balance Sheet</a></li>
+                        <li><a href="<?=site_url('')?>">Profit and Loss</a></li>
+                        <li><a href="<?=site_url('')?>">Trading Account</a></li>
+                        <li><a href="<?=site_url('')?>">Trial Balance</a></li>
+                        <li><a href="<?=site_url('')?>">Outstanding Analysis</a></li>
+                    </ul>
+                </li>
 
             </ul>
             <ul class="nav navbar-nav navbar-right">

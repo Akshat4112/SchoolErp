@@ -4,7 +4,7 @@
                 <a href="<?= site_url('home/query')?>">Query | </a>
                 <a href="<?= site_url('home/suggestions')?>">Suggestions |</a>
                 <a href="<?= site_url('home/help')?>">Help </a>
-        <p class="pull-right">Copyright 2017 at <a href="www.futureheadtech.com">Futurehead Technologies</a></p>
+        <p class="pull-right">Copyright 2017 at <a href="http://www.futureheadtech.com">Futurehead Technologies</a></p>
     </div>
 
 </footer>
