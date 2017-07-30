@@ -26,9 +26,30 @@ class Dues_list extends MY_Controller{
         {
             array_push($list, $type['class']);
         }
-        $this->load->view('private/dues_list/dues_list',['class_drop'=>$list]);
+
+        $fieldsec='section_name';
+        $table_namesec='section';
+        $this->load->model('get_model','gm');
+        $section_list=$this->gm->get_list($fieldsec,$table_namesec);
+        $list1=array();
+        foreach($section_list as $type )
+        {
+            array_push($list1, $type['section_name']);
+        }
+
+        $fieldcat='category_name';
+        $table_namecat='category';
+        $this->load->model('get_model','gm');
+        $category_list=$this->gm->get_list($fieldcat,$table_namecat);
+        $list2=array();
+        foreach($category_list as $type )
+        {
+            array_push($list2, $type['category_name']);
+        }
+        $this->load->view('private/dues_list/dues_list',['class_drop'=>$list,'section_drop'=>$list1,'category_drop'=>$list2]);
         //print_r($this->input->post());
         $cla=$this->input->post();
+        //print_r($cla);
         //$class = $cla['class']+1;
 
         //for getting section dynamically from database which is updated by masters

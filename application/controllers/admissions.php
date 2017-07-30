@@ -225,7 +225,9 @@ class Admissions extends MY_Controller
 
     public function export()
     {
-        $this->load->view('private/admissions/export_view');
+        $this->load->model('student_model', 'sm');
+        $stu_list = $this->sm->student_list();
+        $this->load->view('private/admissions/export_view', ['stu_det' => $stu_list]);
     }
 
     public function admission_form()
@@ -253,20 +255,39 @@ class Admissions extends MY_Controller
 
     public function id_card()
     {
+        $field='class';
+        $table_name='class';
+        $this->load->model('get_model','gm');
+        $class_list=$this->gm->get_list($field,$table_name);
+        $list=array();
+        foreach($class_list as $type )
+        {
+            array_push($list, $type['class']);
+        }
+        $fieldsec='section_name';
+        $table_namesec='section';
+        $this->load->model('get_model','gm');
+        $section_list=$this->gm->get_list($fieldsec,$table_namesec);
+        $list1=array();
+        foreach($section_list as $type )
+        {
+            array_push($list1, $type['section_name']);
+        }
 
-        $this->load->view('private/admissions/id_card.php');
+        $this->load->view('private/admissions/id_card.php',['class_drop'=>$list,'section_drop'=>$list1]);
 
     }
 
     public function create_list()
     {
-        require 'fpdf/fpdf.php';
+        $this->load->library("pdf");
+        $pdf=new pdf();
         $this->load->view('private/admissions/create_list_view');
-        /*$pdf = new FPDF();
-        $pdf->AddPage();
-        $pdf->SetFont('Arial','B',16);
-        $pdf->Cell(40,10,'Hello World!');
-        $pdf->Output();
-*/
+        $pdf = new pdf();
+//        $pdf->AddPage();
+  //      $pdf->SetFont('Arial','B',16);
+    //    $pdf->Cell(40,10,'Hello World!');
+      //  $pdf->Output();
+
     }
 }

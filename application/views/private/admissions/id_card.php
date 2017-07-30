@@ -6,23 +6,28 @@
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Student Class</label>
                 <div class="col-lg-10">
-
-                    <?php echo form_input(['name' => 'stu_class', 'class' => 'form-control',
-                        'placeholder' => 'Enter Student Class',
-                        'value' => set_value('stu_class')]);
+                    <?php
+                    $attribute_class = [
+                        'class' => 'form-control',
+                        'id' => 'select',
+                    ];
+                    echo form_dropdown('class', $class_drop, 'class', $attribute_class);
                     ?>
-                    <?php echo form_error('stu_class'); ?>
+                    <?php echo form_error('class'); ?>
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Student Section</label>
                 <div class="col-lg-10">
 
-                    <?php echo form_input(['name' => 'stu_section', 'class' => 'form-control',
-                        'placeholder' => 'Enter Student Section',
-                        'value' => set_value('stu_section')]);
+                    <?php
+                    $attribute_class = [
+                        'class' => 'form-control',
+                        'id' => 'select',
+                    ];
+                    echo form_dropdown('section', $section_drop, 'section', $attribute_class);
                     ?>
-                    <?php echo form_error('stu_class'); ?>
+                    <?php echo form_error('section'); ?>
                 </div>
             </div>
         </div>

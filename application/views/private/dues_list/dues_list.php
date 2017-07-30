@@ -22,7 +22,7 @@
                 ];
                 echo form_dropdown('class', $class_drop, 'class', $attribute_class);
                 ?>
-                <?php echo form_error('gender'); ?>
+                <?php echo form_error('class'); ?>
 
                 <br>
             </div>
@@ -30,17 +30,14 @@
         <div class="form-group">
             <label for="select" class="col-lg-2 control-label">Section</label>
             <div class="col-lg-10">
-                <?php $options = [
-                    'route1'=>'route1',
-                    'route2'=>'route2',
-                ];
+                <?php
                 $attribute_class = [
                     'class' => 'form-control',
                     'id' => 'select',
                 ];
-                echo form_dropdown('gender', $options, 'male', $attribute_class);
+                echo form_dropdown('section', $section_drop, 'section', $attribute_class);
                 ?>
-                <?php echo form_error('gender'); ?>
+                <?php echo form_error('section'); ?>
 
                 <br>
             </div>
@@ -48,17 +45,14 @@
         <div class="form-group">
             <label for="select" class="col-lg-2 control-label">Category</label>
             <div class="col-lg-10">
-                <?php $options = [
-                    'route1'=>'route1',
-                    'route2'=>'route2',
-                ];
+                <?php
                 $attribute_class = [
                     'class' => 'form-control',
                     'id' => 'select',
                 ];
-                echo form_dropdown('gender', $options, 'male', $attribute_class);
+                echo form_dropdown('category', $category_drop, 'category', $attribute_class);
                 ?>
-                <?php echo form_error('gender'); ?>
+                <?php echo form_error('category'); ?>
 
                 <br>
             </div>
