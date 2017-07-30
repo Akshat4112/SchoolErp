@@ -154,9 +154,45 @@ class Accounts extends MY_Controller{
 
     public function open_balance_editor()
     {
-        $this->load->view('private/accounts/open_balance_editor');
+        $this->load->model('get_model', 'gm');
+        $stu_list = $this->gm->account_list();
+        $this->load->view('private/accounts/open_balance_editor', ['account_det' => $stu_list]);
     }
     public function delete(){
         $this->load->view('private/accounts/delete');
+    }
+    public function balance_sheet(){
+        $this->load->view('private/accounts/balance_sheet');
+    }
+    public function contra(){
+        $this->load->view('private/accounts/contra');
+    }
+    public function credit_note(){
+        $this->load->view('private/accounts/credit_note');
+    }
+    public function debit_note(){
+        $this->load->view('private/accounts/debit_note');
+    }
+    public function journal(){
+        $this->load->view('private/accounts/journal');
+    }
+    public function outstanding_balance(){
+        $this->load->view('private/accounts/outstanding_balance');
+    }
+    public function payments(){
+        $this->load->view('private/accounts/payments');
+    }
+    public function profit_loss()
+    {
+        $this->load->view('private/accounts/profit_loss');
+    }
+    public function receipt(){
+        $this->load->view('private/accounts/receipt');
+    }
+    public function trading_account(){
+        $this->load->view('private/accounts/trading_account');
+    }
+    public function trial_balance(){
+        $this->load->view('private/accounts/trial_balance');
     }
 }
