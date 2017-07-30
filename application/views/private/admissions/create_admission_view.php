@@ -71,19 +71,14 @@ declare(strict_types=1);
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Category</label>
                         <div class="col-lg-10">
-                            <?php $options = [
-                                'General' => 'General',
-                                'OBC' => 'OBC',
-                                'SC' => 'SC',
-                                'ST' => 'ST',
-                                'Other' => 'Other'
-                            ];
+                            <?php
                             $attribute_class = [
                                 'class' => 'form-control',
                                 'id' => 'select',
                             ];
-                            echo form_dropdown('category', $options, 'general', $attribute_class);
+                            echo form_dropdown('category', $category_drop, 'category', $attribute_class);
                             ?>
+                            <?php echo form_error('category'); ?>
                             <br>
                         </div>
                     </div>
@@ -92,56 +87,43 @@ declare(strict_types=1);
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Caste</label>
                         <div class="col-lg-10">
-                            <?php $options = [
-                                'Hindu' => 'Hindu',
-                                'Christian' => 'Christian',
-                                'Sikh' => 'Sikh',
-                                'Muslim' => 'Muslim'
-                            ];
+                            <?php
                             $attribute_class = [
                                 'class' => 'form-control',
                                 'id' => 'select',
                             ];
-                            echo form_dropdown('caste', $options, 'Hindu', $attribute_class);
+                            echo form_dropdown('caste', $caste_drop, 'caste', $attribute_class);
                             ?>
+                            <?php echo form_error('caste'); ?>
                             <br>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Class</label>
                         <div class="col-lg-10">
-
                             <?php
-                            /*
-                            foreach ($class_drop as $a){
-                                echo $a['class'];
-                            }*/
-                            $options = [
-                                'Ist' => 'Ist',
-                                'IInd' => 'IInd',
-                            ];
                             $attribute_class = [
                                 'class' => 'form-control',
                                 'id' => 'select',
                             ];
-                            echo form_dropdown('student_class', $options, 'Ist', $attribute_class);
+                            echo form_dropdown('student_class', $class_drop, 'class', $attribute_class);
                             ?>
+                            <?php echo form_error('student_class'); ?>
+
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Section</label>
                         <div class="col-lg-10">
-                            <?php $options = [
-                                'A' => 'A',
-                                'B' => 'B',
-                                'C' => 'C'
-                            ];
+                            <?php
                             $attribute_class = [
                                 'class' => 'form-control',
                                 'id' => 'select',
                             ];
-                            echo form_dropdown('student_section', $options, 'A', $attribute_class);
+                            echo form_dropdown('student_section', $section_drop, 'section', $attribute_class);
                             ?>
+                            <?php echo form_error('student_section'); ?>
+
                         </div>
                     </div>
                     <div class="form-group">

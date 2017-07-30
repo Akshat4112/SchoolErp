@@ -12,6 +12,9 @@ class Admissions extends MY_Controller
         $this->load->view('private/admissions/header_admission', ['username' => $username]);
         $this->load->view('private/admissions/footer_admission');
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+
+
+
     }
 
     public function index()
@@ -25,17 +28,50 @@ class Admissions extends MY_Controller
 
     public function create_admission_view()
     {
-
-        //get class in dropdown dynamically from database
-        $this->load->model('get_model','gm');
-        $class = $this->gm->get_class_list();
-        $array=json_decode(json_encode($class),true);
-
-        //get last admission number from database
         $this->load->model('get_model', 'gm');
         $last = $this->gm->last_admission_no();
 
-        $this->load->view('private/admissions/create_admission_view', ['last_adm' => $last,'class_drop'=>$array]);
+
+        $this->load->model('get_model','gm');
+        $class_list=$this->gm->get_class_list();
+        $list=array();
+        foreach($class_list as $type )
+        {
+            array_push($list, $type['class']);
+        }
+
+        $fieldsec='section_name';
+        $table_namesec='section';
+        $this->load->model('get_model','gm');
+        $section_list=$this->gm->get_list($fieldsec,$table_namesec);
+        $list1=array();
+        foreach($section_list as $type )
+        {
+            array_push($list1, $type['section_name']);
+        }
+
+        $fieldcat='category_name';
+        $table_namecat='category';
+        $this->load->model('get_model','gm');
+        $category_list=$this->gm->get_list($fieldcat,$table_namecat);
+        $list2=array();
+        foreach($category_list as $type )
+        {
+            array_push($list2, $type['category_name']);
+        }
+
+        $fieldcast='caste_name';
+        $table_namecast='caste';
+        $this->load->model('get_model','gm');
+        $caste_list=$this->gm->get_list($fieldcast,$table_namecast);
+        $list3=array();
+        foreach($caste_list as $type )
+        {
+            array_push($list3, $type['caste_name']);
+        }
+
+        $this->load->view('private/admissions/create_admission_view',['last_adm'=>$last,
+            'class_drop'=>$list,'section_drop'=>$list1,'category_drop'=>$list2,'caste_drop'=>$list3]);
     }
 
     /**
@@ -46,6 +82,50 @@ class Admissions extends MY_Controller
 
     public function student_details()
     {
+
+        $this->load->model('get_model', 'gm');
+        $last = $this->gm->last_admission_no();
+
+
+        $this->load->model('get_model','gm');
+        $class_list=$this->gm->get_class_list();
+        $list=array();
+        foreach($class_list as $type )
+        {
+            array_push($list, $type['class']);
+        }
+
+        $fieldsec='section_name';
+        $table_namesec='section';
+        $this->load->model('get_model','gm');
+        $section_list=$this->gm->get_list($fieldsec,$table_namesec);
+        $list1=array();
+        foreach($section_list as $type )
+        {
+            array_push($list1, $type['section_name']);
+        }
+
+        $fieldcat='category_name';
+        $table_namecat='category';
+        $this->load->model('get_model','gm');
+        $category_list=$this->gm->get_list($fieldcat,$table_namecat);
+        $list2=array();
+        foreach($category_list as $type )
+        {
+            array_push($list2, $type['category_name']);
+        }
+
+        $fieldcast='caste_name';
+        $table_namecast='caste';
+        $this->load->model('get_model','gm');
+        $caste_list=$this->gm->get_list($fieldcast,$table_namecast);
+        $list3=array();
+        foreach($caste_list as $type )
+        {
+            array_push($list3, $type['caste_name']);
+        }
+
+
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
         if ($this->form_validation->run('student')) {
 
@@ -62,12 +142,14 @@ class Admissions extends MY_Controller
                 $this->load->view('private/admissions/address');
             } else {
                     echo 'Database query error';
-                    $this->load->view('private/admissions/create_admission_view',['last_adm'=>$last]);
+                $this->load->view('private/admissions/create_admission_view',['last_adm'=>$last,
+                    'class_drop'=>$list,'section_drop'=>$list1,'category_drop'=>$list2,'caste_drop'=>$list3]);
            }
         } else {
             $this->load->model('get_model', 'gm');
             $last = $this->gm->last_admission_no();
-            $this->load->view('private/admissions/create_admission_view',['last_adm'=>$last]);
+            $this->load->view('private/admissions/create_admission_view',['last_adm'=>$last,
+                'class_drop'=>$list,'section_drop'=>$list1,'category_drop'=>$list2,'caste_drop'=>$list3]);
         }
 
         //Below Part in function is for testing of other functions in same controller
