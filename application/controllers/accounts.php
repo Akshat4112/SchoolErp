@@ -59,8 +59,6 @@ class Accounts extends MY_Controller{
     public function new_account(){
 
         //dynamically loading account group name in dropdown
-
-
         //inserting new account info in database via new account function and model
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
         if ($this->form_validation->run('account')) {
@@ -94,16 +92,32 @@ class Accounts extends MY_Controller{
             $group= $this->gm->get_list($field_a,$table_name_a);
             $this->load->view('private/accounts/new_account',['group'=>$group]);
         }
-
-
-
-        /*$form_validation='account';
-        $table_name='account';
-        $view='accounts/new_account';
-        $field=$test;
-        $this->insert_genric($form_validation,$table_name,$view,$field);
-*/
     }
+    public function account_del()
+    {
+        if ($this->form_validation->run('account_delete')) {
+
+            $post = $this->input->post();
+            unset($post['del_account_name']);
+            $this->load->model('del_model', 'dm');
+            $value = $post['account_name_delete'];
+            $table_name='account';
+            $field='account_name';
+            if($this->dm->delete_row($table_name,$field,$value)){
+                $this->load->model('get_model', 'gm');
+                $list= $this->gm->get_list($field,$table_name);
+                $this->load->view('private/accounts/delete',['view' => $list]);
+            }
+        }
+        else{
+            $table_name='account';
+            $field='account_name';
+            $this->load->model('get_model', 'gm');
+            $list= $this->gm->get_list($field,$table_name);
+            $this->load->view('private/accounts/delete',['view' => $list]);
+        }
+    }
+
     public function send_sms(){
         $this->load->view('private/accounts/send_sms');
     }

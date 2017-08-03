@@ -6,6 +6,13 @@
  * Time: 12:30 AM
  */
 $config=[
+    'account_delete'=>[
+        [
+            'field'=>'account_name_delete',
+            'label'=>'Account Name',
+            'rules'=>'required'
+        ]
+    ],
     'payments'=>[
         [
             'field'=>'vch_no',
