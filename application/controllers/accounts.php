@@ -179,9 +179,7 @@ class Accounts extends MY_Controller{
     public function outstanding_balance(){
         $this->load->view('private/accounts/outstanding_balance');
     }
-    public function payments(){
-        $this->load->view('private/accounts/payments');
-    }
+
     public function profit_loss()
     {
         $this->load->view('private/accounts/profit_loss');
@@ -194,5 +192,40 @@ class Accounts extends MY_Controller{
     }
     public function trial_balance(){
         $this->load->view('private/accounts/trial_balance');
+    }
+    public function payments(){
+        $this->load->model('get_model', 'gm');
+        $table_name='payments';
+        $payments_table= $this->gm->show_table($table_name);
+
+        //getting account name dropdown
+        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+
+        if ($this->form_validation->run('payments')) {
+            $post = $this->input->post();
+            unset($post['submit']);
+            $this->load->model('add_model', 'am');
+            $table_name='payments';
+            if ($this->am->insert_data($table_name,$post)) {
+                $field_a='account_name';
+                $table_name_a='account';
+                $this->load->model('get_model','gm');
+                $account= $this->gm->get_list($field_a,$table_name_a);
+                $this->load->view('private/accounts/payments',['account'=>$account,'payments' => $payments_table]);
+            } else {
+                echo 'Database query error';
+                $field_a='account_name';
+                $table_name_a='account';
+                $this->load->model('get_model','gm');
+                $account= $this->gm->get_list($field_a,$table_name_a);
+                $this->load->view('private/accounts/payments',['account'=>$account,'payments' => $payments_table]);
+            }
+        } else {
+            $field_a='account_name';
+            $table_name_a='account';
+            $this->load->model('get_model','gm');
+            $account= $this->gm->get_list($field_a,$table_name_a);
+            $this->load->view('private/accounts/payments',['account'=>$account,'payments' => $payments_table]);
+        }
     }
 }

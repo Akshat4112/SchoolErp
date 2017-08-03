@@ -19,32 +19,55 @@
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Voucher Number</label>
                 <div class="col-lg-10">
-                    <?php echo form_input(['name' => 'vno', 'class' => 'form-control',
+                    <?php echo form_input(['name' => 'vch_no', 'class' => 'form-control',
                         'placeholder' => 'Enter Voucher Number',
-                        'value' => set_value('vno')]);
+                        'value' => set_value('vch_no')]);
                     ?>
+                    <?php echo form_error('vch_no'); ?>
 
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">D/C</label>
                 <div class="col-lg-10">
-
+                <select class="form-control" name="d_c">
+                    <option id="1">Dr.</option>
+                    <option id="2">Cr.</option>
+                </select>
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Account Name</label>
                 <div class="col-lg-10">
+                    <?php
+                    $drop=array();
+                    foreach($account as $r){
+                        $drop[$r['account_name']]=$r['account_name'];
+                    }
+                    $attribute_class = [
+                        'class' => 'form-control',
+                        'id' => 'select',
+                    ];
+                    echo form_dropdown('account_name', $drop,'', $attribute_class);
+                    ?>
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Amount</label>
                 <div class="col-lg-10">
+                    <?php echo form_input(['name' => 'amount', 'class' => 'form-control',
+                        'placeholder' => 'Enter Amount',
+                        'value' => set_value('amount')]);
+                    ?>
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Short Narration</label>
                 <div class="col-lg-10">
+                    <?php echo form_input(['name' => 'short_narration', 'class' => 'form-control',
+                        'placeholder' => 'Short Narration',
+                        'value' => set_value('short_narration')]);
+                    ?>
                 </div>
             </div>
             <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-info',
@@ -65,20 +88,21 @@
                 </tr>
                 </thead>
                 <tbody>
-                <?php// if (count($det_class)): ?>
-                    <?php //foreach($det_class as $class_det): ?>
+                <?php if (count($payments)): ?>
+                    <?php foreach ($payments as $payment): ?>
                         <tr class="success">
-                            <td><?php// ?></td>
-                            <td><?php// ?></td>
-                            <td><?php// ?></td>
-                            <td><?php//  ?></td>
+                            <td><?php echo $payment->d_c ?></td>
+                            <td><?php echo $payment->account_name?></td>
+                            <td><?php echo $payment->amount?></td>
+                            <td><?php echo $payment->amount?></td>
+                            <td><?php echo $payment->short_narration ?></td>
                         </tr>
-                    <?php// endforeach; ?>
-                <?php// else: ?>
+                    <?php endforeach; ?>
+                <?php else: ?>
                     <tr>
                         <td>No Records Found</td>
                     </tr>
-                <?php// endif; ?>
+                <?php endif; ?>
                 </tbody>
             </table>
         </div>

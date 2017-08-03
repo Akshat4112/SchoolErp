@@ -6,6 +6,13 @@
  * Time: 12:30 AM
  */
 $config=[
+    'payments'=>[
+        [
+            'field'=>'vch_no',
+            'label'=>'Voucher Number',
+            'rules'=>'required'
+        ]
+    ],
     'organisation_info'=>[
         [
             'field'=>'name',
