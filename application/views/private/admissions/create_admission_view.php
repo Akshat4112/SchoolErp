@@ -109,7 +109,6 @@ declare(strict_types=1);
                             echo form_dropdown('student_class', $class_drop, 'class', $attribute_class);
                             ?>
                             <?php echo form_error('student_class'); ?>
-
                         </div>
                     </div>
                     <div class="form-group">
