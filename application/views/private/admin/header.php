@@ -57,9 +57,9 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Misc<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="<?=site_url('admin/masters_class')?>">Items</a></li>
-                        <li><a href="<?=site_url('admin/masters_section')?>">Set</a></li>
-                        <li><a href="<?=site_url('admin/masters_section')?>">Document Template</a></li>
+                        <li><a href="<?=site_url('admin/items')?>">Items</a></li>
+                        <li><a href="<?=site_url('admin/set')?>">Set</a></li>
+                        <li><a href="<?=site_url('admin/document_template')?>">Document Template</a></li>
                     </ul>
                 </li>
                 <li><a href="<?= site_url('admin/enquiry')?>">Enquiry Form</a></li>

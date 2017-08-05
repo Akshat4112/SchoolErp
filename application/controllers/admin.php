@@ -301,4 +301,13 @@ class Admin extends MY_Controller
     public function standard_narration(){
         $this->load->view('private/admin/std_narration');
     }
+    public function items(){
+        $this->load->view('private/admin/misc/items');
+    }
+    public function set(){
+        $this->load->view('private/admin/misc/set');
+    }
+    public function document_template(){
+        $this->load->view('private/admin/misc/document_template');
+    }
 }
