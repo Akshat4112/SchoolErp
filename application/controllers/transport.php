@@ -13,4 +13,12 @@ class Transport extends MY_Controller{
         $this->load->view('private/transport/footer');
     }
     public function index(){}
+    public function route()
+    {
+        $this->load->view('private/transport/route');
+    }
+    public function route_plan()
+    {
+        $this->load->view('private/transport/route_plan');
+    }
 }

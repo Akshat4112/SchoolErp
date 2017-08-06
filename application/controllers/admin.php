@@ -17,7 +17,6 @@ class Admin extends MY_Controller
         $this->load->view('private/admin/footer');
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
     }
-
     public function index()
     {
 
@@ -287,8 +286,12 @@ class Admin extends MY_Controller
     public function user_profile(){
         $this->load->view('private/admin/user/user_profile');
     }
+
     public function enquiry(){
-        $this->load->view('private/admin/enquiry');
+
+        $this->load->view('private/admin/enquiry/enquiry_header');
+        $this->load->view('private/admin/enquiry/enquiry');
+        $this->load->view('private/admin/enquiry/enquiry_footer');
 
     }
     public function bill_sundry(){

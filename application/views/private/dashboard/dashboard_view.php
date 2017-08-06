@@ -63,9 +63,9 @@
                 <p style="font-size: 18px; margin-left: 27px;" class="text-info">Quiz</p>
             </div>
             <div class="col-lg-2">
-                <a href="<?= site_url('lms/'); ?>"><img src="<?= base_url() ?>/public/assets/img/lms.png"
+                <a href="<?= site_url('enquiry/'); ?>"><img src="<?= base_url() ?>/public/assets/img/lms.png"
                                                           height="80" width="80"></a><br>
-                <p style="font-size: 18px; margin-left: 18px;" class="text-info">LMS</p>
+                <p style="font-size: 18px; margin-left: 18px;" class="text-info">Enquiry</p>
             </div>
         </div>
         <div class="row">

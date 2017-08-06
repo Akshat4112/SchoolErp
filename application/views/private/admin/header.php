@@ -30,10 +30,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Route<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Transport<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="<?=site_url('admin/route')?>">Route</a></li>
-                        <li><a href="<?=site_url('admin/route_plan')?>">Route Plan</a></li>
+                        <li><a href="<?=site_url('transport/route')?>">Route</a></li>
+                        <li><a href="<?=site_url('transport/route_plan')?>">Route Plan</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -62,7 +62,7 @@
                         <li><a href="<?=site_url('admin/document_template')?>">Document Template</a></li>
                     </ul>
                 </li>
-                <li><a href="<?= site_url('admin/enquiry')?>">Enquiry Form</a></li>
+                <li><a href="<?= site_url('enquiry')?>">Enquiry Form</a></li>
                 <li><a href="<?= site_url('admissions/create_admission_view')?>">Student Admission</a></li>
                 <li><a href="<?= site_url('admin/org_info') ?>">Organisation Info</a></li>
                 <li><a href="<?= site_url('admin/bill_sundry')?>">Bill Sundry</a></li>
