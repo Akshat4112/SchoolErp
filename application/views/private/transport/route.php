@@ -24,7 +24,7 @@
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Frequency</label>
                 <div class="col-lg-10">
-                    <select class="form-control" name="frequency">
+                    <select class="form-control" name="freq">
                         <option value="annual">Annual</option>
                         <option value="bi_monthly">Bi Monthly</option>
                         <option value="half_yearly">Half Yearly</option>
@@ -117,7 +117,7 @@
 </div>
 <script>
     $(document).ready(function() {
-        $("select[name='frequency']").change(function() {
+        $("select[name='freq']").change(function() {
 // Get the value selected (convert spaces to underscores for class selection)
             var value = $(this).val().replace(' ', '_');
 

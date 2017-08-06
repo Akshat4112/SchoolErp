@@ -6,6 +6,14 @@
  * Time: 12:30 AM
  */
 $config=[
+    'route'=>[
+        [
+            'field'=>'route_name',
+            'label'=>'Route Name',
+            'rules'=>'required'
+        ]
+
+    ],
     'account_delete'=>[
         [
             'field'=>'account_name_delete',

@@ -22,7 +22,6 @@ class Admin extends MY_Controller
 
         $this->load->view('private/admin/admin_dash');
     }
-
     public function cw_strength(){
         $this->load->view('private/admin/cw_strength');
     }

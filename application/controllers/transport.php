@@ -15,7 +15,14 @@ class Transport extends MY_Controller{
     public function index(){}
     public function route()
     {
-        $this->load->view('private/transport/route');
+        $data=$this->input->post();
+        unset($data['submit']);
+        $form_validation='route';
+        $table_name='route';
+        $view='transport/route';
+        $field=$data;
+        print_r($data);
+        $this->insert_genric($form_validation,$table_name,$view,$field);
     }
     public function route_plan()
     {
