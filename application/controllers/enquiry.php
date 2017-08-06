@@ -16,7 +16,7 @@ class Enquiry extends MY_Controller{
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
     }
     public function index(){
-
+        $this->load->view('private/enquiry/enquiry');
     }
     public function new(){
 
