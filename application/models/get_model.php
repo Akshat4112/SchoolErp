@@ -74,6 +74,12 @@ class Get_model extends MY_Model
         $res = $query->result();
         return $res;
     }
+    public function route_list(){
+
+        $query = $this->db->get('route');
+        $res = $query->result();
+        return $res;
+    }
     public function account_list(){
 
         $query = $this->db->get('account');

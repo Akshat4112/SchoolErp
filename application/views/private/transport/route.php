@@ -108,6 +108,18 @@
                 </tr>
                 </thead>
                 <tbody>
+                <?php if (count($rhl)): ?>
+                    <?php foreach ($rhl as $route_head_det): ?>
+                        <tr class="success">
+                            <td><?php echo $route_head_det->route_name?></td>
+                            <td><?php echo $route_head_det->freq?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <tr>
+                        <td>No Records Found</td>
+                    </tr>
+                <?php endif; ?>
 
                 </tbody>
             </table>

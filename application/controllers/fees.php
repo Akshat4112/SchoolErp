@@ -23,7 +23,6 @@ class Fees extends MY_Controller{
 
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
         if ($this->form_validation->run('fees_head')) {
-
             $post = $this->input->post();
             unset($post['submit']);
             $this->load->model('add_model', 'am');

@@ -9,22 +9,21 @@
     <div class="row">
         <div class="col-lg-6">
             <p style="font-size: 20px;" class="text-info">Create Route Plan</p>
-            <?php echo form_open('admin/', ['class' => 'form-horizontal']); ?>
+            <?php echo form_open('transport/route_plan', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
                 <label for="select" class="col-lg-2 control-label">Route</label>
                 <div class="col-lg-10">
-                    <?php $options = [
-                        'route1'=>'route1',
-                        'route2'=>'route2',
-                    ];
+                    <?php
+                    $drop=array();
+                    foreach($route_drop as $r){
+                        $drop[$r['route_name']]=$r['route_name'];
+                    }
                     $attribute_class = [
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('gender', $options, 'male', $attribute_class);
+                    echo form_dropdown('route_plan_name', $drop,'', $attribute_class);
                     ?>
-                    <?php echo form_error('gender'); ?>
-
                     <br>
                 </div>
             </div>
@@ -38,6 +37,10 @@
                     <?php echo form_error('value'); ?>
                 </div>
             </div>
+            <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-info',
+                'style' => 'margin-left:45px; margin-top:20px;']),
+            form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
+                'style' => 'margin-top:20px;']); ?>
             <div class="row">
                 <div class="col-lg-6">
             <div class="form-group">
@@ -64,27 +67,23 @@
                         </div>
                     </div>
 
+
                 </div>
             </div>
         </div>
+        <?php form_close()?>
         <div class="col-lg-6">
-            <table class="table table-striped table-hover ">
+            <table class="table  table-hover ">
                 <thead>
-                <tr>
+                <tr class="info">
                     <th>Class</th>
                     <th>Category</th>
                     <th>Route Name</th>
                     <th>Value</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
+                <tbody class="success">
 
-                </tr>
                 </tbody>
             </table>
         </div>
