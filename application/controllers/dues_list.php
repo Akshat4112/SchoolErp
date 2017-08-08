@@ -46,7 +46,7 @@ class Dues_list extends MY_Controller{
         {
             array_push($list2, $type['category_name']);
         }
-        
+
         $this->load->view('private/dues_list/dues_list',['class_drop'=>$list,'section_drop'=>$list1,'category_drop'=>$list2]);
         //print_r($this->input->post());
         $cla=$this->input->post();
