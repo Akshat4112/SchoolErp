@@ -35,32 +35,32 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Fees Reports<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="<?=site_url('admin/fees_head') ?>">Fees Receipt Register</a></li>
-                        <li><a href="<?=site_url('admin/fees_head_group') ?>">Fees Head Summary</a></li>
-                        <li><a href="<?=site_url('admin/fees_plan') ?>">Fees Monthly Summary</a></li>
-                        <li><a href="<?=site_url('admin/fees_conc_sett') ?>">Fees Concesion Settings</a></li>
-                        <li><a href="<?=site_url('admin/fees_conc_sett') ?>">Defaulter List</a></li>
-                        <li><a href="<?=site_url('admin/fees_conc_sett') ?>">Balance Fees Report</a></li>
-                        <li><a href="<?=site_url('admin/fees_conc_sett') ?>">Yearly Fees Receivable Report</a></li>
-                        <li><a href="<?=site_url('admin/fees_conc_sett') ?>">Receipt Book</a></li>
-                        <li><a href="<?=site_url('admin/fees_conc_sett') ?>">Fees Day Book</a></li>
-                        <li><a href="<?=site_url('admin/fees_conc_sett') ?>">Head Wise Collection</a></li>
-                        <li><a href="<?=site_url('admin/fees_conc_sett') ?>">Fees Group Ledger</a></li>
-                        <li><a href="<?=site_url('admin/fees_conc_sett') ?>">Fees Structure</a></li>
-                        <li><a href="<?=site_url('admin/fees_conc_sett') ?>">Fees Summary Date Wise</a></li>
-                        <li><a href="<?=site_url('admin/fees_conc_sett') ?>">Fees Catogory Concession Wise</a></li>
-                        <li><a href="<?=site_url('admin/fees_conc_sett') ?>">Fees Head Wise Concession Report</a></li>
-                        <li><a href="<?=site_url('admin/fees_conc_sett') ?>">Concession Register</a></li>
+                        <li><a href="<?=site_url('fees/fees_receipt_register') ?>">Fees Receipt Register</a></li>
+                        <li><a href="<?=site_url('fees/fees_head_summary') ?>">Fees Head Summary</a></li>
+                        <li><a href="<?=site_url('fees/fees_monthly_summary') ?>">Fees Monthly Summary</a></li>
+                        <li><a href="<?=site_url('fees/fees_conc_sett') ?>">Fees Concesion Settings</a></li>
+                        <li><a href="<?=site_url('fees/defaulter_list') ?>">Defaulter List</a></li>
+                        <li><a href="<?=site_url('fees_reports/balance_fees_report') ?>">Balance Fees Report</a></li>
+                        <li><a href="<?=site_url('fees/yearly_recv_report') ?>">Yearly Fees Receivable Report</a></li>
+                        <li><a href="<?=site_url('fees/receipt_book') ?>">Receipt Book</a></li>
+                        <li><a href="<?=site_url('fees/fees_day_book') ?>">Fees Day Book</a></li>
+                        <li><a href="<?=site_url('fees/head_wise_collection') ?>">Head Wise Collection</a></li>
+                        <li><a href="<?=site_url('fees/fees_group_ledger') ?>">Fees Group Ledger</a></li>
+                        <li><a href="<?=site_url('fees/fees_structure') ?>">Fees Structure</a></li>
+                        <li><a href="<?=site_url('fees/fees_summary_date_wise') ?>">Fees Summary Date Wise</a></li>
+                        <li><a href="<?=site_url('fees/fee_category_concc_wise') ?>">Fees Catogory Concession Wise</a></li>
+                        <li><a href="<?=site_url('fees/fees_hea_wise_concc_report') ?>">Fees Head Wise Concession Report</a></li>
+                        <li><a href="<?=site_url('fees/concc_register') ?>">Concession Register</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Fees Dues List<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="<?=site_url('admin/fees_head') ?>">Fees Dues - Class Wise</a></li>
-                        <li><a href="<?=site_url('admin/fees_head_group') ?>">Family Wise Dues List</a></li>
-                        <li><a href="<?=site_url('admin/fees_plan') ?>">Fees Status Report</a></li>
-                        <li><a href="<?=site_url('admin/fees_conc_sett') ?>">Fees Dues List - Detailed</a></li>
-                        <li><a href="<?=site_url('admin/fees_conc_sett') ?>">Fees Estimation List</a></li>
+                        <li><a href="<?=site_url('fees/fees_dues_class_wise') ?>">Fees Dues - Class Wise</a></li>
+                        <li><a href="<?=site_url('fees/family_wise_dues_list') ?>">Family Wise Dues List</a></li>
+                        <li><a href="<?=site_url('fees/fees_status_report') ?>">Fees Status Report</a></li>
+                        <li><a href="<?=site_url('fees/fees_dues_list_detailed') ?>">Fees Dues List - Detailed</a></li>
+                        <li><a href="<?=site_url('fees/fees_estimation_list') ?>">Fees Estimation List</a></li>
                     </ul>
                 </li>
                 <li><a href="<?=site_url('fees/fees_head') ?>">Fees Head</a></li>

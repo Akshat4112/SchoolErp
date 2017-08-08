@@ -5,6 +5,7 @@
  * Date: 7/18/2017
  * Time: 10:30 PM
  */
+
 class Fees extends MY_Controller{
     public function __construct()
     {
@@ -17,7 +18,6 @@ class Fees extends MY_Controller{
     }
     public function fees_head()
     {
-
         //for showing info in table
         //insert fees heading info. in database with insert_genric function
 
