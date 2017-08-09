@@ -92,5 +92,9 @@ class Get_model extends MY_Model
         return $res;
 
     }
-    public function  admission_form_search(){}
+    public function  admission_form_search($admission_no){
+        $query=$this->db->select('*')->where('admission_no',$admission_no)->get('student');
+        $res=$query->result_array();
+        return $res;
+    }
 }

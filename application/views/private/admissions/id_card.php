@@ -1,7 +1,7 @@
 <div class="container">
     <h4 class="text-info">ID Card</h4>
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-4">
             <?php echo form_open('admissions/id_card', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Student Class</label>
@@ -30,6 +30,23 @@
                     <?php echo form_error('section'); ?>
                 </div>
             </div>
+            <?php echo form_submit(['name' => 'submit', 'value' => 'Show', 'class' => 'btn btn-info',
+                'style' => 'margin-left:50px; margin-top:5px;']); ?>
+            <?php form_close();?>
+        </div>
+        <div class="col-lg-8">
+            <table class="table table-hover ">
+                <thead>
+                <tr class="info">
+                    <th>Name</th>
+                    <th>Class</th>
+                    <th>Section</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

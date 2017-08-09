@@ -317,10 +317,10 @@ class Admissions extends MY_Controller
         if($this->form_validation->run('adm_form')){
             $post=$this->input->post();
             unset($post['submit']);
-            print_r($post);
+            $admission_no=$post['adm_no'];
             $this->load->model('get_model', 'gm');
-            $stu_list = $this->gm->admission_form_search($post);
-            $this->load->view('private/admissions/admission_form_view', ['stu_det' => $stu_list]);
+            $stu_det = $this->gm->admission_form_search($admission_no);
+            $this->load->view('private/admissions/admission_form_view', ['stu_det' => $stu_det]);
         }else{
             $this->load->model('get_model', 'gm');
             $stu_list = $this->gm->admission_form_search();
