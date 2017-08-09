@@ -134,4 +134,9 @@ class Fees extends MY_Controller{
             $this->load->view('private/fees/'.$view,['view'=>$array]);
         }
     }
+    public function fees_dues_class_fees(){}
+    public function family_wise_dues_list(){}
+    public function fees_status_report(){}
+    public function fees_dues_list_detailed(){}
+    public function fees_estimation_list(){}
 }
