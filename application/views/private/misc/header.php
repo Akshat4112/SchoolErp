@@ -29,10 +29,10 @@
             <ul class="nav navbar-nav">
                 <li><a href="<?= site_url('misc'); ?>">Misc. Functions</a></li>
                 <li><a href="<?= site_url('misc/gatepass'); ?>">Gatepass Management</a></li>
-                <li><a href="<?= site_url('misc/gatepass'); ?>">Material Issue</a></li>
-                <li><a href="<?= site_url('misc/gatepass'); ?>">Stock Purchase</a></li>
-                <li><a href="<?= site_url('misc/gatepass'); ?>">Document Issue</a></li>
-                <li><a href="<?= site_url('misc/gatepass'); ?>">Demand Bill Printing</a></li>
+                <li><a href="<?= site_url('misc/material_issue'); ?>">Material Issue</a></li>
+                <li><a href="<?= site_url('misc/stock_purchase'); ?>">Stock Purchase</a></li>
+                <li><a href="<?= site_url('misc/document_issue'); ?>">Document Issue</a></li>
+                <li><a href="<?= site_url('misc/demand_bill_printing'); ?>">Demand Bill Printing</a></li>
 
             </ul>
             <ul class="nav navbar-nav navbar-right">

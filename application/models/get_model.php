@@ -97,4 +97,11 @@ class Get_model extends MY_Model
         $res=$query->result_array();
         return $res;
     }
+    public function id_card_rec($class,$section){
+        $query=$this->db->select('student_first_name,student_class,student_section')->where('student_class',$class)
+            ->where('student_section',$section)->get('student');
+        $res=$query->result_array();
+        return $res;
+
+    }
 }

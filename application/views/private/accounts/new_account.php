@@ -42,7 +42,6 @@
                     ];
                     echo form_dropdown('group_acc', $drop,'', $attribute_class);
                     ?>
-
                 </div>
             </div>
             <div class="row">

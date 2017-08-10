@@ -7,11 +7,15 @@
                 <label for="inputText" class="col-lg-2 control-label">Student Class</label>
                 <div class="col-lg-10">
                     <?php
+                    $drop=array();
+                    foreach($class_drop as $r){
+                        $drop[$r['class']]=$r['class'];
+                    }
                     $attribute_class = [
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('class', $class_drop, 'class', $attribute_class);
+                    echo form_dropdown('class', $drop,'', $attribute_class);
                     ?>
                     <?php echo form_error('class'); ?>
                 </div>
@@ -21,11 +25,15 @@
                 <div class="col-lg-10">
 
                     <?php
+                    $drop=array();
+                    foreach($section_drop as $r){
+                        $drop[$r['section_name']]=$r['section_name'];
+                    }
                     $attribute_class = [
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('section', $section_drop, 'section', $attribute_class);
+                    echo form_dropdown('section', $drop,'', $attribute_class);
                     ?>
                     <?php echo form_error('section'); ?>
                 </div>
@@ -44,7 +52,20 @@
                 </tr>
                 </thead>
                 <tbody>
+                <?php if (count($table_view)): ?>
 
+                    <?php foreach ($table_view as $tbv): ?>
+                        <tr>
+                            <td><?php echo $tbv['student_first_name'] ?></td>
+                            <td><?php echo $tbv['student_class'] ?></td>
+                            <td><?php echo $tbv['student_section'] ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <tr class="success">
+                        <td>No Records Found</td>
+                    </tr>
+                <?php endif; ?>
                 </tbody>
             </table>
         </div>

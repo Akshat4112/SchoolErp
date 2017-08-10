@@ -72,11 +72,16 @@ declare(strict_types=1);
                         <label for="select" class="col-lg-2 control-label">Category</label>
                         <div class="col-lg-10">
                             <?php
+                            $drop=array();
+
+//                           foreach($category_drop as $r){
+//                                $drop[$r['category_name']]=$r['category_name'];
+//                            }
                             $attribute_class = [
                                 'class' => 'form-control',
                                 'id' => 'select',
                             ];
-                            echo form_dropdown('category', $category_drop, 'category', $attribute_class);
+                            echo form_dropdown('category', $category_drop,'category', $attribute_class);
                             ?>
                             <?php echo form_error('category'); ?>
                             <br>
@@ -101,12 +106,17 @@ declare(strict_types=1);
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Class</label>
                         <div class="col-lg-10">
+
                             <?php
+                            $drop=array();
+                            foreach($class_drop as $r){
+                                $drop[$r['class']]=$r['class'];
+                            }
                             $attribute_class = [
                                 'class' => 'form-control',
                                 'id' => 'select',
                             ];
-                            echo form_dropdown('student_class', $class_drop, 'class', $attribute_class);
+                            echo form_dropdown('student_class', $drop,'1', $attribute_class);
                             ?>
                             <?php echo form_error('student_class'); ?>
                         </div>
@@ -115,11 +125,16 @@ declare(strict_types=1);
                         <label for="select" class="col-lg-2 control-label">Section</label>
                         <div class="col-lg-10">
                             <?php
+                            $drop=array();
+                            foreach($section_drop as $r)
+                            {
+                                $drop[$r['section_name']]=$r['section_name'];
+                            }
                             $attribute_class = [
                                 'class' => 'form-control',
                                 'id' => 'select',
                             ];
-                            echo form_dropdown('student_section', $section_drop, 'section', $attribute_class);
+                            echo form_dropdown('student_section', $drop,'', $attribute_class);
                             ?>
                             <?php echo form_error('student_section'); ?>
 
