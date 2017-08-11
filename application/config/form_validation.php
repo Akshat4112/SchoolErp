@@ -6,6 +6,13 @@
  * Time: 12:30 AM
  */
 $config=[
+    'sln'=>[
+        [
+            'field'=>'student_name',
+            'label'=>'Name',
+            'rules'=>'required'
+        ]
+    ],
     'route'=>[
         [
             'field'=>'route_name',

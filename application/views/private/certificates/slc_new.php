@@ -36,7 +36,7 @@
                  :--
             </p>
             <p style="font-size: 15px;">
-                Class <input type="text" name="class">Medium English, Year <input type="text" name="year">.
+                Class <input type="text" name="class_present">Medium English, Year <input type="text" name="year">.
                 He was admitted to this school in class <input type="text" name="start_class">.He belongs to <input type="text" name="caste_name">
                 caste.
             </p>
