@@ -5,11 +5,13 @@
  * Date: 7/30/2017
  * Time: 1:31 PM
  */
-require_once ('C:\xampp\htdocs\SchoolErp\application\third_party\fpdf\fpdf.php');
+if (!defined('BASEPATH')) exit('No direct script access allowed');
+require_once dirname(__FILE__) . '/tcpdf/tcpdf.php';
 
-class Pdf extends FPDF{
-    public function __construct()
+class Pdf extends TCPDF
+{
+    function __construct()
     {
-        //parent::__contruct();
+        parent::__construct();
     }
 }

@@ -16,6 +16,9 @@ class Misc extends MY_Controller{
 
     }
     public function gatepass(){
+        $data=$this->input->post();
+        unset($data['submit']);
+        print_r($data);
         $this->load->view('private/misc/gatepass');
     }
     public function stock_purchase(){
