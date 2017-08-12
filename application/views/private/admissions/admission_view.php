@@ -1,36 +1,23 @@
 <script>
-    $(document).ready(function(){
-        $('.search').on('keyup',function(){
-            var searchTerm = $(this).val().toLowerCase();
-            $('#userTbl tbody tr').each(function(){
-                var lineStr = $(this).text().toLowerCase();
-                if(lineStr.indexOf(searchTerm) === -1){
-                    $(this).hide();
-                }else{
-                    $(this).show();
-                }
-            });
-        });
-    });
-</script>
-<?php foreach ($stu_det as $student_det){
-    echo $student_det->student_first_name; }?>
-
-<script>
     $( function() {
-        <?php foreach($stu_det as $stu){
-       $avatag =  $stu->student_first_name;
-        }
-        print_r($avatag);
-    ?>
+        <?php foreach ($stu_det as $student_det){
+        $var =  $student_det->student_first_name;
+        $jd[]= json_encode($var);}
+        ?>
+
         var availableTags = [
-            "ActionScript"
+            "ActionScript",
+            "AppleScript",
+            "Asp",
+            "BASIC",
+            "C"
         ];
         $( "#tags" ).autocomplete({
             source: availableTags
         });
     } );
 </script>
+
 <div class="row">
     <div class="col-lg-1">
     </div>
@@ -39,7 +26,14 @@
         <div class="form-group">
             <label for="tags"></label>
             <div class="col-lg-3">
-                <input type="text" id="tags" class="form-control search" placeholder="What you are looking for?">
+                <input type="text" id="autocomplete" class="form-control search" placeholder="What you are looking for?">
+                <script>
+                    var arr=["Hello","Buffalo","Dog"];
+                    $('$autocomplete').autocomplete({
+                        lookup: arr
+                    });
+
+                </script>
             </div>
             <div class="col-lg-9">
 
@@ -90,3 +84,25 @@
     </div>
     <div class="col-lg-1"></div>
 </div>
+<script>
+    $(document).ready(function(){
+        $('.search').on('keyup',function(){
+            var searchTerm = $(this).val().toLowerCase();
+            $('#userTbl tbody tr').each(function(){
+                var lineStr = $(this).text().toLowerCase();
+                if(lineStr.indexOf(searchTerm) === -1){
+                    $(this).hide();
+                }else{
+                    $(this).show();
+                }
+            });
+        });
+    });
+</script>
+
+
+<?php foreach ($stu_det as $student_det){
+    $var =  $student_det->student_first_name;
+    $jd[]= json_encode($var);
+}
+?>
