@@ -13,14 +13,26 @@
         });
     });
 </script>
+<?php foreach ()?>
+<script>
+    $( function() {
+        var availableTags = [
+            "ActionScript"
+        ];
+        $( "#tags" ).autocomplete({
+            source: availableTags
+        });
+    } );
+</script>
 <div class="row">
     <div class="col-lg-1">
     </div>
     <div class="col-lg-10">
         <?php echo form_open('admissions', ['class' => 'form-horizontal']); ?>
         <div class="form-group">
+            <label for="tags"></label>
             <div class="col-lg-3">
-                <input type="text" class="form-control search" placeholder="What you are looking for?">
+                <input type="text" id="tags" class="form-control search" placeholder="What you are looking for?">
             </div>
             <div class="col-lg-9">
 

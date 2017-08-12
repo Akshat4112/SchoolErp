@@ -17,6 +17,7 @@ class Admissions extends MY_Controller
 
     public function index()
     {
+        //get name list for autocomplete functionality
 
         $this->load->model('student_model', 'sm');
         $stu_list = $this->sm->student_list();

@@ -11,7 +11,7 @@
         <div class="col-lg-4">
             <?php echo form_open('admin/masters_house', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">Section</label>
+                <label for="inputText" class="col-lg-2 control-label">House</label>
                 <div class="col-lg-10">
                     <?php echo form_input(['name' => 'house_name', 'class' => 'form-control',
                         'placeholder' => 'Enter House',
@@ -45,7 +45,7 @@
             <table class="table table-hover ">
                 <thead>
                 <tr class="info">
-                    <th>Section</th>
+                    <th>House</th>
                 </tr>
                 </thead>
                 <tbody>

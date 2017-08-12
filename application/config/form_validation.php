@@ -379,9 +379,21 @@ $config=[
                 'label'=>'House Name',
                 'rules'=>'required'
             ]
+        ],
+    'family_del'=>
+        [
+            [
+                'field'=>'family_delete',
+                'label'=>'Family Name',
+                'rules'=>'required'
+            ]
+        ],
+    'family'=>
+        [
+            [
+                'field'=>'family_name',
+                'label'=>'Family Name',
+                'rules'=>'required'
+            ]
         ]
-
-
-
-
 ];

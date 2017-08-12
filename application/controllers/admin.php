@@ -159,20 +159,23 @@ class Admin extends MY_Controller
 
     public function masters_family()
     {
-        $this->load->view('private/admin/masters/family');
+        $data=$this->input->post();
+        unset($data['family_delete']);
+        $form_validation='family';
+        $table_name='family';
+        $view='admin/masters/family';
+        $field='family_name';
+        $this->insert_genric($form_validation,$table_name,$view,$field);
     }
-
-    public function route_plan()
-    {
-        $this->load->view('private/admin/route/route_plan');
+    public function masters_family_del(){
+        $form_validation='family_del';
+        $table_name='family';
+        $view='admin/masters/family';
+        $field='family_name';
+        $unset='del_family';
+        $value_form='family_delete';
+        $this->delete_genric($form_validation,$table_name,$view,$field,$unset,$value_form);
     }
-
-    public function route()
-    {
-        $this->load->view('private/admin/route/route');
-    }
-
-
     public function org_info(){
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
         if ($this->form_validation->run('organisation_info')) {
