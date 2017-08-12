@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 ?>
+
 <div class="container">
     <ul class="nav nav-tabs">
         <li class="active"><a href=""><b>General</b></a></li>
@@ -73,15 +74,14 @@ declare(strict_types=1);
                         <div class="col-lg-10">
                             <?php
                             $drop=array();
-
-//                           foreach($category_drop as $r){
-//                                $drop[$r['category_name']]=$r['category_name'];
-//                            }
+                            foreach($category_drop as $r){
+                            $drop[$r['category_name']]=$r['category_name'];
+                            }
                             $attribute_class = [
-                                'class' => 'form-control',
-                                'id' => 'select',
+                            'class' => 'form-control',
+                            'id' => 'select',
                             ];
-                            echo form_dropdown('category', $category_drop,'category', $attribute_class);
+                            echo form_dropdown('category', $drop,'1', $attribute_class);
                             ?>
                             <?php echo form_error('category'); ?>
                             <br>
@@ -93,11 +93,15 @@ declare(strict_types=1);
                         <label for="select" class="col-lg-2 control-label">Caste</label>
                         <div class="col-lg-10">
                             <?php
+                            $drop=array();
+                            foreach($caste_drop as $r){
+                            $drop[$r['caste_name']]=$r['caste_name'];
+                            }
                             $attribute_class = [
-                                'class' => 'form-control',
-                                'id' => 'select',
+                            'class' => 'form-control',
+                            'id' => 'select',
                             ];
-                            echo form_dropdown('caste', $caste_drop, 'caste', $attribute_class);
+                            echo form_dropdown('caste', $drop,'1', $attribute_class);
                             ?>
                             <?php echo form_error('caste'); ?>
                             <br>

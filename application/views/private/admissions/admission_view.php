@@ -1,73 +1,40 @@
+<script>
+    $(document).ready(function(){
+        $('.search').on('keyup',function(){
+            var searchTerm = $(this).val().toLowerCase();
+            $('#userTbl tbody tr').each(function(){
+                var lineStr = $(this).text().toLowerCase();
+                if(lineStr.indexOf(searchTerm) === -1){
+                    $(this).hide();
+                }else{
+                    $(this).show();
+                }
+            });
+        });
+    });
+</script>
 <div class="row">
     <div class="col-lg-1">
     </div>
     <div class="col-lg-10">
         <?php echo form_open('admissions', ['class' => 'form-horizontal']); ?>
         <div class="form-group">
-            <div class="col-lg-2">
-                <?php $options = [
-                    'admno' => 'Admission Number',
-                    'student_first_name' => 'Student First Name',
-                    'fathers_first_name' => 'Father\'s Name',
-                ];
-                $attribute_class = [
-                    'class' => 'form-control',
-                    'id' => 'select',
-                ];
-                echo form_dropdown('category', $options, 'admno', $attribute_class); ?>
+            <div class="col-lg-3">
+                <input type="text" class="form-control search" placeholder="What you are looking for?">
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-9">
 
-                <?php echo form_input(['name' => 'temp', 'class' => 'form-control',
-                    'placeholder' => 'temp',
-                    'value' => set_value('temp')]); ?>
-
-
-            </div>
-            <div class="col-lg-2">
-                <?php $options = [
-                    'admno' => 'House',
-                    'student_first_name' => 'Student First Name',
-                    'fathers_first_name' => 'Father \'s Name',
-                ];
-                $attribute_class = [
-                    'class' => 'form-control',
-                    'id' => 'select',
-                ];
-                echo form_dropdown('category', $options, 'admno', $attribute_class); ?>
-            </div>
-            <div class="col-lg-2">
-                <?php echo form_input(['name' => 'temp', 'class' => 'form-control',
-                    'placeholder' => 'temp',
-                    'value' => set_value('temp')]); ?>
-            </div>
-            <div class="col-lg-2">
-
-                <?php $options = [
-                    'admno' => 'Birth Month',
-                    'student_first_name' => 'Student First Name',
-                    'fathers_first_name' => 'Father \'s Name',
-                ];
-                $attribute_class = [
-                    'class' => 'form-control',
-                    'id' => 'select',
-                ];
-                echo form_dropdown('category', $options, 'admno', $attribute_class); ?>
-            </div>
-            <div class="col-lg-2">
-                <?php echo form_input(['name' => 'temp', 'class' => 'form-control',
-                    'placeholder' => 'temp',
-                    'value' => set_value('temp')]); ?>
             </div>
         </div>
     </div>
     <div class="col-lg-1">
     </div>
+    <div class="col-lg-1"></div>
 </div>
 <div class="row">
     <div class="col-lg-1"></div>
     <div class="col-lg-10">
-        <table class="table table-hover ">
+        <table class="table table-hover " id="userTbl">
             <thead>
             <tr class="info">
 

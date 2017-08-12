@@ -83,7 +83,7 @@ class Admissions extends MY_Controller
         $this->load->model('get_model', 'gm');
         $caste_list = $this->gm->get_list($fieldcast, $table_namecast);
 
-        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+
         if ($this->form_validation->run('student')) {
 
             $this->load->model('get_model', 'gm');
@@ -120,7 +120,7 @@ class Admissions extends MY_Controller
     public function address_details()
     {
 
-        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+
         if ($this->form_validation->run('address')) {
 
             /*for getting student id of last admitted student so thar it can
@@ -151,7 +151,7 @@ class Admissions extends MY_Controller
     public function other_info_details()
     {
 
-        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+
 
         if ($this->form_validation->run('other_info')) {
             $post = $this->input->post();
@@ -181,7 +181,7 @@ class Admissions extends MY_Controller
 
     public function misc_details()
     {
-        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+
 
         if ($this->form_validation->run('misc_stu_details')) {
             $post = $this->input->post();
@@ -207,7 +207,7 @@ class Admissions extends MY_Controller
     public function attachment()
     {
 
-        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+
 
         if ($this->form_validation->run('attach')) {
             $post = $this->input->post();
