@@ -13,9 +13,16 @@
         });
     });
 </script>
-<?php foreach ()?>
+<?php foreach ($stu_det as $student_det){
+    echo $student_det->student_first_name; }?>
+
 <script>
     $( function() {
+        <?php foreach($stu_det as $stu){
+       $avatag =  $stu->student_first_name;
+        }
+        print_r($avatag);
+    ?>
         var availableTags = [
             "ActionScript"
         ];
