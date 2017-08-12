@@ -158,23 +158,8 @@ $config=[
 
             ],
             [
-                'field'=>'student_last_name',
-                'label'=>'Student Last Name',
-                'rules'=>'required'
-            ],
-            [
                 'field'=>'admission_no',
                 'label'=>'Admission Number',
-                'rules'=>'required'
-            ],
-            [
-            'field'=>'student_dob',
-            'label'=>'Date Of Birth',
-            'rules'=>'required'
-            ],
-            [
-                'field'=>'student_roll_no',
-                'label'=>'Roll Number',
                 'rules'=>'required'
             ]
         ],
@@ -378,7 +363,25 @@ $config=[
             'label'=>'Class',
             'rules'=>'required'
             ]
+        ],
+    'category_del'=>
+        [
+            [
+                'field'=>'category_delete',
+                'label'=>'Category Name',
+                'rules'=>'required'
+            ]
+        ],
+    'house_del'=>
+        [
+            [
+                'field'=>'house_delete',
+                'label'=>'House Name',
+                'rules'=>'required'
+            ]
         ]
+
+
 
 
 ];

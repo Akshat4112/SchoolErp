@@ -7,14 +7,14 @@
  */?>
 <div class="container">
     <div class="row">
-        <h4>House of masters</h4>
+        <p style="font-size: 20px; margin-top:0px;" class="text-info">Enter House to be Added</p>
         <div class="col-lg-4">
             <?php echo form_open('admin/masters_house', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">House</label>
+                <label for="inputText" class="col-lg-2 control-label">Section</label>
                 <div class="col-lg-10">
                     <?php echo form_input(['name' => 'house_name', 'class' => 'form-control',
-                        'placeholder' => 'Enter house',
+                        'placeholder' => 'Enter House',
                         'value' => set_value('house_name')]);
                     ?>
                     <?php echo form_error('house_name'); ?>
@@ -24,38 +24,48 @@
                 'style' => 'margin-left:45px; margin-top:20px;']),
             form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
                 'style' => 'margin-top:20px;']); ?>
-<?php echo form_close(); ?>
+            <?php echo form_close();?>
+
+            <p style="font-size: 20px; margin-top: 40px;" class="text-info">Enter House to be deletd</p>
+            <?php echo form_open('admin/masters_house_del', ['class' => 'form-horizontal']); ?>
+            <div class="form-group">
+                <label for="inputText" class="col-lg-2 control-label">House</label>
+                <div class="col-lg-10">
+                    <?php  echo form_input(['name' => 'house_delete', 'class' => 'form-control',
+                        'placeholder' => 'Enter House to be deleted',
+                        'value' => set_value('house_delete')]);
+                    ?>
+                    <?php echo form_error('house_delete'); ?>
+                </div>
+                <input type="submit" name="del_house" class="btn btn-danger" value="DELETE" style="margin-left: 50px; margin-top: 20px;">
+                <?php  form_close(); ?>
+            </div>
         </div>
-        <div class="col-lg-4">
-            <table class="table  table-hover ">
+        <div class="col-lg-8">
+            <table class="table table-hover ">
                 <thead>
                 <tr class="info">
-                    <th>House</th>
+                    <th>Section</th>
                 </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($house as $h){
-                        echo "<tr class='success'><td>".$h['house_name']."</td></tr>";
-                    }?>
+                <?php if (count($view)): ?>
+                    <?php
+                    foreach ($view as $house) {
+                        echo "<tr class='success'><td>" . $house['house_name'] . '<br>' . "</td></tr>";
+                    }
+                    ?>
+                <?php else: ?>
+                    <tr>
+                        <td>No Records Found</td>
+                    </tr>
+                <?php endif; ?>
                 </tbody>
             </table>
-
-            <?php echo form_open('admissions/', ['class' => 'form-horizontal']); ?>
-            <div class="form-group">
-                <div class="col-lg-12">
-                    <?php echo form_input(['name' => 'house_del', 'class' => 'form-control',
-                        'placeholder' => 'Enter house to be deleted',
-                        'value' => set_value('house_del')]);
-                    ?>
-                    <?php echo form_error('house_del');
-                    echo '<br>';
-                    ?>
-                    <button name="subm" class="btn btn-danger">DELETE</button>
-
-                </div>
-            </div>
-
         </div>
     </div>
 </div>
+
+
+
 

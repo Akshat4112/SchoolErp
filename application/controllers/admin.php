@@ -31,25 +31,20 @@ class Admin extends MY_Controller
     public function masters_class()
     {
         if ($this->form_validation->run('class')) {
-
             // for inserting class in database from model
-
             $this->load->model('add_model', 'am');
             $post = $this->input->post();
             unset($post['submit']);
             $table_name='class';
             if ($this->am->insert_data($table_name,$post)) {
                 //  $this->load->view('private/admin/masters/class');
-
             } else {
                 echo 'Query failed in inserting record';
             }
-
         } else {
             //$this->load->view('private/admin/masters/class');
         }
         //for getting data to populate in table in masters class
-
         $this->load->model('get_model', 'gm');
         $class = $this->gm->get_class();
         $this->load->view('private/admin/masters/class', ['det_class' => $class]);
@@ -62,7 +57,6 @@ class Admin extends MY_Controller
         //Delete Functionality to be made later...
 
         if ($this->form_validation->run('class_del')) {
-
             $post = $this->input->post();
             unset($post['del_class']);
             $this->load->model('del_model', 'dm');
@@ -92,29 +86,6 @@ class Admin extends MY_Controller
         $view='admin/masters/section';
         $field='section_name';
         $this->insert_genric($form_validation,$table_name,$view,$field);
-
-        //for getting data to populate in table in masters class
-        /*if ($this->form_validation->run('section')) {
-
-            // for inserting class in database from model
-            $this->load->model('add_model', 'am');
-            $post = $this->input->post();
-            unset($post['submit']);
-            $table_name = 'section';
-            if ($this->am->insert_data($table_name,$post)) {
-                $this->load->model('get_model', 'gm');
-                $section = $this->gm->get_section_list();
-              $this->load->view('private/admin/masters/section',['sec'=>$section]);
-            } else {
-                echo 'Query failed in inserting record';
-            }
-
-        } else {
-            $this->load->model('get_model', 'gm');
-            $section = $this->gm->get_section_list();
-            $this->load->view('private/admin/masters/section',['sec'=>$section]);
-        }*/
-
     }
     public function masters_section_del()
     {
@@ -125,29 +96,6 @@ class Admin extends MY_Controller
         $unset='del_section';
         $value_form='section_delete';
         $this->delete_genric($form_validation,$table_name,$view,$field,$unset,$value_form);
-
-
-
-
-        /*if ($this->form_validation->run('section_del')) {
-            $post = $this->input->post();
-            unset($post['del_section']);
-            $this->load->model('del_model', 'dm');
-            $value = $post['section_delete'];
-            $table_name='section';
-            $field='section_name';
-            if($this->dm->delete_row($table_name,$field,$value)){
-
-                $this->load->model('get_model', 'gm');
-                $section = $this->gm->get_list('section_name','section');
-                $this->load->view('private/admin/masters/section', ['view' => $section]);
-            }
-        }
-        else{
-            $this->load->model('get_model', 'gm');
-            $section = $this->gm->get_list('section_name','section');
-            $this->load->view('private/admin/masters/section', ['view' => $section]);
-        }*/
     }
 
     public function masters_caste()
@@ -157,96 +105,56 @@ class Admin extends MY_Controller
         $view='admin/masters/caste';
         $field='caste_name';
         $this->insert_genric($form_validation,$table_name,$view,$field);
-
-
-        /*if ($this->form_validation->run('caste')) {
-
-            // for inserting class in database from model
-
-            $this->load->model('add_model', 'am');
-            $post = $this->input->post();
-            unset($post['submit']);
-            $table_name='caste';
-            if ($this->am->insert_data($table_name,$post)) {
-                $this->load->model('get_model', 'gm');
-                $caste = $this->gm->get_caste_list();
-                $this->load->view('private/admin/masters/caste',['cas'=>$caste]);
-            } else {
-                echo 'Query failed in inserting record';
-            }
-        } else {
-            $this->load->model('get_model', 'gm');
-            $caste = $this->gm->get_caste_list();
-            $this->load->view('private/admin/masters/caste',['cas'=>$caste]);
-        }*/
-
     }
+    public function masters_caste_del(){
 
-
-
+        $form_validation='caste_del';
+        $table_name='caste';
+        $view='admin/masters/caste';
+        $field='caste_name';
+        $unset='del_caste';
+        $value_form='caste_delete';
+        $this->delete_genric($form_validation,$table_name,$view,$field,$unset,$value_form);
+    }
 
     public function masters_category()
     {
+        $data=$this->input->post();
+        unset($data['caste_delete']);
         $form_validation='category';
         $table_name='category';
         $view='admin/masters/category';
         $field='category_name';
         $this->insert_genric($form_validation,$table_name,$view,$field);
-
-        /*
-        if ($this->form_validation->run('category')) {
-
-            // for inserting class in database from model
-
-            $this->load->model('add_model', 'am');
-            $post = $this->input->post();
-            unset($post['submit']);
-            $table_name='category';
-            if ($this->am->insert_data($table_name,$post)) {
-                $this->load->model('get_model', 'gm');
-                $category = $this->gm->get_category_list();
-                $this->load->view('private/admin/masters/category',['cat'=>$category]);
-            } else {
-                echo 'Query failed in inserting record';
-            }
-        } else {
-            $this->load->model('get_model', 'gm');
-            $category = $this->gm->get_category_list();
-            $this->load->view('private/admin/masters/category',['cat'=>$category]);
-        }*/
-
     }
-    public function masters_caste_del()
-    {
-
+    public function masters_category_del(){
+        $form_validation='category_del';
+        $table_name='category';
+        $view='admin/masters/category';
+        $field='category_name';
+        $unset='del_category';
+        $value_form='category_delete';
+        $this->delete_genric($form_validation,$table_name,$view,$field,$unset,$value_form);
     }
-
-
     public function masters_house()
     {
-        if ($this->form_validation->run('house')) {
-
-            // for inserting class in database from model
-
-            $this->load->model('add_model', 'am');
-            $post = $this->input->post();
-            unset($post['submit']);
-            $table_name='house';
-            $field_name='house_name';
-            if ($this->am->insert_data($table_name,$post)) {
-                $this->load->model('get_model', 'gm');
-                $house = $this->gm->get_list($field_name,$table_name);
-                $this->load->view('private/admin/masters/house',['house'=>$house]);
-            } else {
-                echo 'Query failed in inserting record';
-            }
-        } else {
-            $this->load->model('get_model', 'gm');
-            $table_name='house';
-            $field_name='house_name';
-            $house= $this->gm->get_list($field_name,$table_name);
-            $this->load->view('private/admin/masters/house',['house'=>$house]);
-        }
+        $data=$this->input->post();
+        unset($data['house_delete']);
+        $form_validation='house';
+        $table_name='house';
+        $view='admin/masters/house';
+        $field='house_name';
+        $this->insert_genric($form_validation,$table_name,$view,$field);
+    }
+    public function masters_house_del()
+    {
+        $form_validation='house_del';
+        $table_name='house';
+        $view='admin/masters/house';
+        $field='house_name';
+        $unset='del_house';
+        $value_form='house_delete';
+        $this->delete_genric($form_validation,$table_name,$view,$field,$unset,$value_form);
     }
 
     public function masters_family()

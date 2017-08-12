@@ -40,10 +40,7 @@
                 <input type="submit" name="del_section" class="btn btn-danger" value="DELETE" style="margin-left: 50px; margin-top: 20px;">
                 <?php  form_close(); ?>
             </div>
-
         </div>
-
-
         <div class="col-lg-8">
             <table class="table table-hover ">
                 <thead>

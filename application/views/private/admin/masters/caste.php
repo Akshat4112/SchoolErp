@@ -7,14 +7,14 @@
  */?>
 <div class="container">
     <div class="row">
-        <h4>Caste of masters</h4>
+        <p style="font-size: 20px; margin-top:0px;" class="text-info">Enter Caste to be Added</p>
         <div class="col-lg-4">
             <?php echo form_open('admin/masters_caste', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Caste</label>
                 <div class="col-lg-10">
                     <?php echo form_input(['name' => 'caste_name', 'class' => 'form-control',
-                        'placeholder' => 'Enter caste',
+                        'placeholder' => 'Enter Caste',
                         'value' => set_value('caste_name')]);
                     ?>
                     <?php echo form_error('caste_name'); ?>
@@ -24,31 +24,47 @@
                 'style' => 'margin-left:45px; margin-top:20px;']),
             form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
                 'style' => 'margin-top:20px;']); ?>
-        <?php form_close();?>
+            <?php echo form_close();?>
+
+            <p style="font-size: 20px; margin-top: 40px;" class="text-info">Enter Caste to be deletd</p>
+            <?php echo form_open('admin/masters_caste_del', ['class' => 'form-horizontal']); ?>
+            <div class="form-group">
+                <label for="inputText" class="col-lg-2 control-label">Caste</label>
+                <div class="col-lg-10">
+                    <?php  echo form_input(['name' => 'caste_delete', 'class' => 'form-control',
+                        'placeholder' => 'Enter caste to be deleted',
+                        'value' => set_value('caste_delete')]);
+                    ?>
+                    <?php echo form_error('caste_delete'); ?>
+                </div>
+                <input type="submit" name="del_caste" class="btn btn-danger" value="DELETE" style="margin-left: 50px; margin-top: 20px;">
+                <?php  form_close(); ?>
+            </div>
         </div>
-            <div class="col-lg-4">
+        <div class="col-lg-8">
             <table class="table table-hover ">
                 <thead>
                 <tr class="info">
-                    <th>Caste</th>
+                    <th>caste</th>
                 </tr>
                 </thead>
                 <tbody>
-                <?php
-                        foreach ($view as $caste){
-                            echo "<tr class='success'><td>".$caste['caste_name'].'<br>'."</td></tr>";
-                        }
-                        ?>
+                <?php if (count($view)): ?>
+                    <?php
+                    foreach ($view as $caste) {
+                        echo "<tr class='success'><td>" . $caste['caste_name'] . '<br>' . "</td></tr>";
+                    }
+                    ?>
+
+                <?php else: ?>
+                    <tr>
+                        <td>No Records Found</td>
+                    </tr>
+                <?php endif; ?>
                 </tbody>
             </table>
-
-            <?php echo form_open('admissions/masters_caste_del', ['class' => 'form-horizontal']); ?>
-            <div class="form-group">
-                <div class="col-lg-12">
-                </div>
-            </div>
-
         </div>
     </div>
 </div>
+
 
