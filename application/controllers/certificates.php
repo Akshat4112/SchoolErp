@@ -11,7 +11,7 @@ class Certificates extends MY_Controller
     public function __construct()
     {
         parent::__construct();
-
+        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
 
     }
 
@@ -26,10 +26,9 @@ class Certificates extends MY_Controller
     public function slc_new()
     {
 
-
         $data=$this->input->post();
         unset($data['submit']);
-        print_r($data);
+        //print_r($data);
 
         if ($this->form_validation->run('sln')) {
         //      Code for genrating pdf in school leaving certificate
@@ -60,22 +59,22 @@ class Certificates extends MY_Controller
             Transfer Certificate
             </p>
             <p style="font-size: 15px;">
-                This is to certify that ___________Son of Mr. ____________
-                and Mrs. ____________ was reading in class___________________of the
-                school _______________.He has ended school from ___________ to
-                ____________ having paid all fees dues to school
+                This is to certify that <b>'.$data['student_name'].'</b> Son of Mr. <b>'.$data['f_name'].'</b>
+                and Mrs.<b> '.$data['m_name'].'</b> was reading in class <b>'.$data['class'].'</b> of the
+                school <b>'.$data['school_name'].'</b> .He has ended school from <b>'.$data['end_date'].'</b> to
+                <b>'.$data['start_date'].'</b> having paid all fees dues to school.
             </p>
             <p style="font-size: 15px;">
-                According to Admission Register his Date of birth (In Figures) _______________
-                In Words ___________
+                According to Admission Register his Date of birth (In Figures)<b> '.$data['dob'].'</b>,
+                In Words <b>'.$data['dob_words'].'</b>.
             </p>
             <p style="font-size: 15px;">
                 He has been vaccinated or immunized against smll pox. Details of last examination passed by him are as follows
                  :--
             </p>
             <p style="font-size: 15px;">
-                Class _________________ Medium English, Year __________________.
-                He was admitted to this school in class _______________.He belongs to _____________
+                Class <b>'.$data['class_present'].'</b> Medium English, Year <b>'.$data['year'].'</b>.
+                He was admitted to this school in class <b>'.$data['start_class'].'</b>.He belongs to <b>'.$data['caste_name'].'</b>
                 caste.
             </p>
             <p style="font-size: 15px;">
@@ -93,11 +92,12 @@ class Certificates extends MY_Controller
 
     }
     else{
+
         $this->load->model('get_header_info', 'ghi');
         $username = $this->ghi->get_admin();
         $this->load->view('private/certificates/slc_header', ['username' => $username]);
         $this->load->view('private/certificates/slc_new');
-        echo 'Form Validation Failed';
+//        echo 'Form Validation Failed';
     }
     }
 
