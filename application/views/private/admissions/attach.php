@@ -2,6 +2,8 @@
 declare(strict_types=1);
 ?>
 <div class="container">
+    <div class="row">
+        <div class="col-lg-12">
     <ul class="nav nav-tabs">
         <li class="text-success"><b>General</b></li>
         <li class="text-success" style="margin-left: 20px;"><b>Address Details</b></li>
@@ -11,46 +13,46 @@ declare(strict_types=1);
         <li style="margin-left: 20px;"><b>Balance</b></li>
         <li style="margin-left: 20px;"><b>Additional Fields</b></li>
     </ul>
+        </div>
+    </div>
     <div class="row">
-        <div class="col-md-4">
-
+        <div class="col-md-5">
+            <p class="text-info" style="font-size: 20px; margin-left: 80px;">Attachements</p>
             <?php echo form_open('admissions/attachment', ['class' => 'form-horizontal']); ?>
+            <div class="form-group">
+                <label for="inputText" class="col-lg-4 control-label">TC</label>
+                <div class="col-lg-8">
+                    <input type="file" name="tc" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputText" class="col-lg-4 control-label">CC</label>
+                <div class="col-lg-8">
+                    <input type="file" name="cc" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputText" class="col-lg-4 control-label">Report</label>
+                <div class="col-lg-8">
+                    <input type="file" name="report_cc" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputText" class="col-lg-4 control-label">DOB Certificate</label>
+                <div class="col-lg-8">
+                    <input type="file" name="dob_certificate" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputText" class="col-lg-4 control-label">Admission form number</label>
+                <div class="col-lg-8">
+                    <input type="text" name="admission_form_no" class="form-control">
+                </div>
 
-            <h4>Attachement</h4>
-            <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">TC</label>
-                <div class="col-lg-10">
-                    <input type="file" name="tc">
-                </div>
             </div>
             <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">CC</label>
-                <div class="col-lg-10">
-                    <input type="file" name="cc">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">Report</label>
-                <div class="col-lg-10">
-                    <input type="file" name="report_cc">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">DOB Certificate</label>
-                <div class="col-lg-10">
-                    <input type="file" name="dob_certificate">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">Admission form number</label>
-                <div class="col-lg-10">
-                    <input type="text" name="admission_form_no">
-                </div>
-                <?php echo form_error('admission_form_no'); ?>
-            </div>
-            <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">Date of Admission</label>
-                <div class="col-lg-10">
+                <label for="inputText" class="col-lg-4 control-label">Date of Admission</label>
+                <div class="col-lg-8">
                     <input type="date" name="date_admission" class=" form-control"
                     id="inputText" placeholder="Date of Admission"
                     ">
@@ -63,8 +65,17 @@ declare(strict_types=1);
             $string = '</div>';
             form_close($string); ?>
         </div>
+        <div class="col-lg-4"></div>
+        <div class="col-lg-3">
+            <?php if($error = $this->session->flashdata('stu_succ')): ?>
+                <div class="alert alert-dismissible alert-success">
+                    <?php echo $error ?>
+                </div>
+            <?php endif; ?>
+            <?php echo form_error('admission_form_no'); ?>
+        </div>
     </div>
-</div>
+    </div>
 
 
 

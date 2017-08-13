@@ -111,6 +111,7 @@ class Admissions extends MY_Controller
             $table_name = 'address';
             $this->load->model('add_model', 'am');
             if ($this->am->insert_data($table_name, $post)) {
+                $this->session->set_flashdata('stu_succ','Address details filled Successfully.');
                 $this->load->view('private/admissions/parents');
             } else {
                 $this->load->view('private/admissions/address');
@@ -140,7 +141,7 @@ class Admissions extends MY_Controller
             $this->load->model('add_model', 'am');
 
             if ($this->am->insert_data($table_name, $post)) {
-
+                $this->session->set_flashdata('stu_succ','Parents details filled Successfully.');
                 $this->load->view('private/admissions/misc');
             } else {
                 $this->load->view('private/admissions/parents');
@@ -168,6 +169,7 @@ class Admissions extends MY_Controller
             $table_name = 'misc_info';
             $this->load->model('add_model', 'am');
             if ($this->am->insert_data($table_name, $post)) {
+                $this->session->set_flashdata('stu_succ','Misc. details filled Successfully.');
                 $this->load->view('private/admissions/attach');
             } else {
                 $this->load->view('private/admissions/misc');
