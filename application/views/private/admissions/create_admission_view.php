@@ -165,16 +165,19 @@ declare(strict_types=1);
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">House</label>
                         <div class="col-lg-10">
-                            <?php $options = [
-                                'Red' => 'RED',
-                                'Green' => 'GREEN'
-                            ];
+                            <?php
+                            $drop=array();
+                            foreach($house_drop as $r)
+                            {
+                                $drop[$r['house_name']]=$r['house_name'];
+                            }
                             $attribute_class = [
                                 'class' => 'form-control',
                                 'id' => 'select',
                             ];
-                            echo form_dropdown('house', $options, 'RED', $attribute_class);
+                            echo form_dropdown('house', $drop,'', $attribute_class);
                             ?>
+                            <?php echo form_error('house'); ?>
                             <br>
                         </div>
                     </div>

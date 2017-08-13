@@ -28,7 +28,6 @@ class Home extends MY_Controller
             $login_id = $this->login_model->login_valid($email,$password);
             if($login_id){
                 $this->session->set_userdata('login_id',$login_id);
-
                 return redirect('dashboard');
                 // echo 'Password Match';
             }else{

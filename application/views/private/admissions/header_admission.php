@@ -25,7 +25,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="<?= site_url('admissions'); ?>">Admission Registers</a></li>
-                <li><a href="<?=site_url('admissions/create_admission_view'); ?>">Create</a></li>
+                <li><a href="<?=site_url('admissions/student_details'); ?>">Create</a></li>
                 <li><a href="<?=site_url('admissions/import'); ?>">Import</a></li>
                 <li><a href="<?=site_url('admissions/export'); ?>">Export</a></li>
                 <li><a href="<?=site_url('admissions/admission_form'); ?>">Admissions Form</a></li>

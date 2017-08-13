@@ -25,38 +25,6 @@ class Admissions extends MY_Controller
 
     }
 
-    public function create_admission_view()
-    {
-        $this->load->model('get_model', 'gm');
-        $last = $this->gm->last_admission_no();
-
-        $field = 'class';
-        $table_name = 'class';
-        $this->load->model('get_model', 'gm');
-        $class_list = $this->gm->get_list($field, $table_name);
-
-        $fieldsec = 'section_name';
-        $table_namesec = 'section';
-        $this->load->model('get_model', 'gm');
-        $section_list = $this->gm->get_list($fieldsec, $table_namesec);
-
-
-        $fieldcat = 'category_name';
-        $table_namecat = 'category';
-        $this->load->model('get_model', 'gm');
-        $category_list = $this->gm->get_list($fieldcat, $table_namecat);
-
-        $fieldcast = 'caste_name';
-        $table_namecast = 'caste';
-        $this->load->model('get_model', 'gm');
-        $caste_list = $this->gm->get_list($fieldcast, $table_namecast);
-
-
-        $this->load->view('private/admissions/create_admission_view', ['last_adm' => $last,
-            'class_drop' => $class_list, 'section_drop' => $section_list, 'category_drop' => $category_list,
-            'caste_drop' => $caste_list]);
-    }
-
     public function student_details()
     {
 
@@ -68,6 +36,11 @@ class Admissions extends MY_Controller
         $class_list = $this->gm->get_class_list();
 
 
+
+        $fieldhouse= 'house_name';
+        $table_namehouse= 'house';
+        $this->load->model('get_model', 'gm');
+        $house_list = $this->gm->get_list($fieldhouse, $table_namehouse);
 
         $fieldsec = 'section_name';
         $table_namesec = 'section';
@@ -97,19 +70,20 @@ class Admissions extends MY_Controller
             $table_name = 'student';
 
             if ($this->am->insert_data($table_name, $post)) {
+                $this->session->set_flashdata('stu_succ','General details filled Successfully.');
                 $this->load->view('private/admissions/address');
             } else {
                 echo 'Database query error';
-                $this->load->view('private/admissions/create_admission_view', ['last_adm' => $last,
+                $this->load->view('private/admissions/student_details', ['last_adm' => $last,
                     'class_drop' => $class_list, 'section_drop' => $section_list, 'category_drop' => $category_list,
-                    'caste_drop' => $caste_list]);
+                    'caste_drop' => $caste_list,'house_drop'=>$house_list]);
             }
         } else {
             $this->load->model('get_model', 'gm');
             $last = $this->gm->last_admission_no();
             $this->load->view('private/admissions/create_admission_view', ['last_adm' => $last,
                 'class_drop' => $class_list, 'section_drop' => $section_list, 'category_drop' => $category_list,
-                'caste_drop' => $caste_list]);
+                'caste_drop' => $caste_list,'house_drop'=>$house_list]);
         }
     }
 

@@ -3,6 +3,8 @@ declare(strict_types=1);
 ?>
 
 <div class="container">
+    <div class="row">
+        <div class="col-lg-12">
     <ul class="nav nav-tabs">
         <li class="text-success"><b>General</b></li>
         <li class="active" style="margin-left: 20px;"><a href=""><b>Address Details</b></a></li>
@@ -12,9 +14,23 @@ declare(strict_types=1);
         <li style="margin-left: 20px;"><b>Balance</b></li>
         <li style="margin-left: 20px;"><b>Additional Fields</b></li>
     </ul>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 10px;">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-4">
+            <?php if($error = $this->session->flashdata('stu_succ')): ?>
+                <div class="alert alert-dismissible alert-success">
+                    <?php echo $error ?>
+                </div>
+            <?php endif; ?>
+        </div>
+        <div class="col-lg-7"></div>
+    </div>
+    <div class="row">
          <?php echo form_open('admissions/address_details', ['class' => 'form-horizontal']); ?>
-                <fieldset>
 
+                <fieldset>
                     <div class="form-group">
                         <label for="inputEmail" class="col-lg-2 control-label">House No.</label>
                         <div class="col-lg-6">
@@ -81,3 +97,4 @@ declare(strict_types=1);
                 form_close('</div>');
                 ?>
 
+    </div>
