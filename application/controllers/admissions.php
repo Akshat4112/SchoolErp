@@ -19,9 +19,26 @@ class Admissions extends MY_Controller
     {
         //get name list for autocomplete functionality
 
+
         $this->load->model('student_model', 'sm');
-        $stu_list = $this->sm->student_list();
-        $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
+
+
+        $data = $this->input->post();
+        unset($data['submit']);
+        print_r($data);
+        if ($this->form_validation->run('sort_admission')) {
+            $field_name = $data['sort_col'];
+            $by='ASC';
+            $table_name='student';
+            $stu_list = $this->sm->order_by($field_name,$by,$table_name);
+            $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
+            //echo 'success';
+        }else{
+            $stu_list = $this->sm->student_list();
+            $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
+        }
+
+
 
     }
 
@@ -196,6 +213,7 @@ class Admissions extends MY_Controller
             $table_name = 'attachemnts';
             $this->load->model('add_model', 'am');
             if ($this->am->insert_data($table_name, $post)) {
+                $this->session->set_flashdata('stu_succ','Attachements updated filled Successfully.');
                 $this->load->view('private/admissions/balance');
             } else {
                 $this->load->view('private/admissions/attach');
@@ -270,8 +288,6 @@ class Admissions extends MY_Controller
 
     public function id_card()
     {
-
-
         $field = 'class';
         $table_name = 'class';
         $this->load->model('get_model', 'gm');
@@ -280,8 +296,8 @@ class Admissions extends MY_Controller
 
         $fieldsec = 'section_name';
         $table_namesec = 'section';
-        $this->load->model('get_model', 'gm');
         $section_list = $this->gm->get_list($fieldsec, $table_namesec);
+
         $this->load->model('get_model', 'gm');
         if ($this->form_validation->run()) {
             $class = '';

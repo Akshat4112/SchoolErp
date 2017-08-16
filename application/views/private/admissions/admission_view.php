@@ -22,7 +22,8 @@
     <div class="col-lg-1">
     </div>
     <div class="col-lg-10">
-        <?php echo form_open('admissions', ['class' => 'form-horizontal']); ?>
+        <?php echo form_open('admissions/', ['class' => 'form-horizontal']); ?>
+
         <div class="form-group">
             <label for="tags"></label>
             <div class="col-lg-3">
@@ -35,8 +36,20 @@
 
                 </script>
             </div>
-            <div class="col-lg-9">
+            <div class="col-lg-3">
+                <select class="form-control" name="sort_col">
+                    <option value="student_first_name">Name</option>
+                    <option value="student_class">Class</option>
+                    <option value="student_section">Section</option>
+                    <option value="student_roll_no">Roll No</option>
+                    <option value="student_dob">DOB</option>
+                </select>
 
+            </div>
+            <div class="col-lg-6">Descending Order(A->Z)
+                <input type="checkbox" name="desc" value="test">
+                <input type="submit" class="btn btn-info" name="submit" value="Sort">
+                <?php form_close(); ?>
             </div>
         </div>
     </div>

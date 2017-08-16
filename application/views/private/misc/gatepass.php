@@ -9,18 +9,8 @@
 <div class="container">
     <div class="row">
         <p class="text-info" style="font-size: 20px;">Gatepass / Visitor Management</p>
-        <div class="col-lg-6">
+        <div class="col-lg-5">
             <?php echo form_open('misc/gatepass', ['class' => 'form-horizontal']); ?>
-            <div class="form-group">
-                <label for="inputText" class="col-lg-3 control-label">ID</label>
-                <div class="col-lg-9">
-                    <?php echo form_input(['name' => 'id', 'class' => 'form-control',
-                        'placeholder' => 'Enter ',
-                        'value' => set_value('id')]);
-                    ?>
-                    <?php echo form_error('id'); ?>
-                </div>
-            </div>
             <div class="form-group">
                 <label for="inputText" class="col-lg-3 control-label">Name</label>
                 <div class="col-lg-9">
@@ -56,9 +46,9 @@
             <div class="form-group">
                 <label for="inputText" class="col-lg-3 control-label">Purpose of Visit</label>
                 <div class="col-lg-9">
-                    <?php echo form_input(['name' => 'purpose_of_visit', 'class' => 'form-control',
+                    <?php echo form_input(['name' => 'purpose', 'class' => 'form-control',
                         'placeholder' => 'Enter',
-                        'value' => set_value('purpose_of_visit')]); ?>
+                        'value' => set_value('purpose')]); ?>
                 </div>
             </div>
             <div class="form-group">
@@ -74,7 +64,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-5">
             <div class="form-group">
                 <label for="inputText" class="col-lg-4 control-label">Photo</label>
                 <div class="col-lg-8">
@@ -85,21 +75,23 @@
                 <label for="inputText" class="col-lg-4 control-label">Expected Return Date</label>
                 <div class="col-lg-8">
                     <input type="date" name="expected_date" class="form-control">
-                </div><br>
+                </div><br><br>
             </div>
             <div class="form-group">
                 <label for="inputText" class="col-lg-4 control-label">Expected Return Time</label>
                 <div class="col-lg-8">
                     <input type="time" name="expected_return_time" class="form-control">
-                </div><br><br><br>
+                </div><br><br>
             </div>
             <div class="form-group">
                 <label for="inputText" class="col-lg-4 control-label">Proof Of Identity</label>
+                <div class="col-lg-8">
                 <input type="file" name="proof_of_identity" class="form-control">
+                </div>
             </div><br><br>
             <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">Items retained</label>
-                <div class="col-lg-10">
+                <label for="inputText" class="col-lg-4 control-label">Items retained</label>
+                <div class="col-lg-8">
                     <?php echo form_input(['name' => 'items_retained', 'class' => 'form-control',
                         'placeholder' => 'Enter',
                        'value' => set_value('items_retained')]); ?>
@@ -112,6 +104,7 @@
             form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
                 'style' => 'margin-top:40px;']); ?>
         </div>
+        <div class="col-lg-2"></div>
     </div>
 
 </div>

@@ -395,5 +395,12 @@ $config=[
                 'label'=>'Family Name',
                 'rules'=>'required'
             ]
+        ],
+    'sort_admission'=>[
+        [
+            'field'=>'sort_col',
+            'label'=>'This',
+            'rules'=>'required'
         ]
+    ]
 ];
