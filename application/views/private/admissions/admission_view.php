@@ -47,11 +47,16 @@
 
                 <th>Admission No.</th>
                 <th>Name</th>
+                <th>Father</th>
+                <th>Mother</th>
                 <th>Class</th>
                 <th>Section</th>
                 <th>Roll No.</th>
                 <th>DOB</th>
+                <th>Contact No.</th>
                 <th>Route</th>
+                <th>Sch. No</th>
+                <th>Old Balance</th>
             </tr>
             </thead>
             <tbody>
@@ -60,11 +65,16 @@
                     <tr class="success ">
                         <td><?php echo $student_det->student_id ?></td>
                         <td><?php echo $student_det->student_first_name ?></td>
+                        <td><?php echo 'fname'; ?></td>
+                        <td><?php echo 'mname'; ?></td>
                         <td><?php echo $student_det->student_class ?></td>
                         <td><?php echo $student_det->student_section ?></td>
                         <td><?php echo $student_det->student_roll_no ?></td>
                         <td><?php echo $student_det->student_dob ?></td>
+                        <td><?php echo 'contact_no'; ?></td>
                         <td><?php echo $student_det->route ?></td>
+                        <td><?php echo 'Sch_no'; ?></td>
+                        <td><?php echo 'old_bal'; ?></td>
 
                     </tr>
                 <?php endforeach; ?>
