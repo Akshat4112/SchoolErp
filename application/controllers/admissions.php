@@ -25,11 +25,10 @@ class Admissions extends MY_Controller
 
         $data = $this->input->post();
         unset($data['submit']);
-        $data['des']='';
         //print_r($data);
         if ($this->form_validation->run('sort_admission')) {
             $field_name = $data['sort_col'];
-            $by='ASC';
+            $by=$data['sort_type'];
             $table_name='student';
             $stu_list = $this->sm->order_by($field_name,$by,$table_name);
             $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);

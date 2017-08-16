@@ -6,10 +6,12 @@
 
         <div class="form-group">
             <label for="tags"></label>
+            <div class="col-lg-1 text-info" style="font-size: 19px;">Search:</div>
             <div class="col-lg-3">
                 <input type="text" id="autocomplete" class="form-control search" placeholder="What you are looking for?">
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-1 text-info" style="font-size: 19px;">Sort by:</div>
+            <div class="col-lg-2">
                 <select class="form-control" name="sort_col">
                     <option value="student_first_name">Name</option>
                     <option value="student_class">Class</option>
@@ -17,12 +19,19 @@
                     <option value="student_roll_no">Roll No</option>
                     <option value="student_dob">DOB</option>
                 </select>
-
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-2">
+                <select class="form-control" name="sort_type">
+                    <option value="ASC">Ascending</option>
+                    <option value="DESC">Descending</option>
+                </select>
+            </div>
+
+            <div class="col-lg-3">
                 <input type="submit" class="btn btn-info" name="submit" value="Sort">
                 <?php form_close(); ?>
             </div>
+            <div class="col-lg-1"></div>
         </div>
     </div>
     <div class="col-lg-1">
