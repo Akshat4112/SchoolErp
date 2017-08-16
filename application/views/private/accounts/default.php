@@ -9,72 +9,38 @@
     <div class="col-lg-1">
     </div>
     <div class="col-lg-10">
-        <?php echo form_open('admissions', ['class' => 'form-horizontal']); ?>
+        <?php echo form_open('accounts/', ['class' => 'form-horizontal']); ?>
+
         <div class="form-group">
-            <div class="col-lg-2">
-                <?php $options = [
-                    'admno' => 'Account Name',
-                    'student_first_name' => 'Group',
-                    'fathers_first_name' => 'Address',
-                ];
-                $attribute_class = [
-                    'class' => 'form-control',
-                    'id' => 'select',
-                ];
-                echo form_dropdown('category', $options, 'admno', $attribute_class); ?>
+            <label for="tags"></label>
+            <div class="col-lg-3">
+                <input type="text" id="autocomplete" class="form-control search" placeholder="What you are looking for?">
             </div>
-            <div class="col-lg-2">
-
-                <?php echo form_input(['name' => 'temp', 'class' => 'form-control',
-                    'placeholder' => 'temp',
-                    'value' => set_value('temp')]); ?>
-
+            <div class="col-lg-3">
+                <select class="form-control" name="sort_col">
+                    <option value="student_first_name">Account Name</option>
+                    <option value="student_class">Group</option>
+                    <option value="student_section">Address</option>
+                    <option value="student_roll_no">Phone</option>
+                    <option value="student_dob">Mobile</option>
+                    <option value="student_dob">Email</option>
+                </select>
 
             </div>
-            <div class="col-lg-2">
-                <?php $options = [
-                    'admno' => 'Account Name',
-                    'student_first_name' => 'Group',
-                    'fathers_first_name' => 'Address',
-                ];
-                $attribute_class = [
-                    'class' => 'form-control',
-                    'id' => 'select',
-                ];
-                echo form_dropdown('category', $options, 'admno', $attribute_class); ?>
-            </div>
-            <div class="col-lg-2">
-                <?php echo form_input(['name' => 'temp', 'class' => 'form-control',
-                    'placeholder' => 'temp',
-                    'value' => set_value('temp')]); ?>
-            </div>
-            <div class="col-lg-2">
-
-                <?php $options = [
-                    'admno' => 'Account Name',
-                    'student_first_name' => 'Group',
-                    'fathers_first_name' => 'Address',
-                ];
-                $attribute_class = [
-                    'class' => 'form-control',
-                    'id' => 'select',
-                ];
-                echo form_dropdown('category', $options, 'admno', $attribute_class); ?>
-            </div>
-            <div class="col-lg-2">
-                <?php echo form_input(['name' => 'temp', 'class' => 'form-control',
-                    'placeholder' => 'temp',
-                    'value' => set_value('temp')]); ?>
+            <div class="col-lg-6">
+                <input type="submit" class="btn btn-info" name="submit" value="Sort">
+                <?php form_close(); ?>
             </div>
         </div>
     </div>
     <div class="col-lg-1">
     </div>
+    <div class="col-lg-1"></div>
 </div>
 <div class="row">
     <div class="col-lg-1"></div>
     <div class="col-lg-10">
-        <table class="table  table-hover ">
+        <table class="table  table-hover " id="userTbl">
             <thead>
             <tr class="info">
                 <th>Account Name</th>
@@ -114,3 +80,18 @@
     </div>
     <div class="col-lg-1"></div>
 </div>
+<script>
+    $(document).ready(function(){
+        $('.search').on('keyup',function(){
+            var searchTerm = $(this).val().toLowerCase();
+            $('#userTbl tbody tr').each(function(){
+                var lineStr = $(this).text().toLowerCase();
+                if(lineStr.indexOf(searchTerm) === -1){
+                    $(this).hide();
+                }else{
+                    $(this).show();
+                }
+            });
+        });
+    });
+</script>

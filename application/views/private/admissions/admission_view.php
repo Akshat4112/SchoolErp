@@ -1,23 +1,3 @@
-<script>
-    $( function() {
-        <?php foreach ($stu_det as $student_det){
-        $var =  $student_det->student_first_name;
-        $jd[]= json_encode($var);}
-        ?>
-
-        var availableTags = [
-            "ActionScript",
-            "AppleScript",
-            "Asp",
-            "BASIC",
-            "C"
-        ];
-        $( "#tags" ).autocomplete({
-            source: availableTags
-        });
-    } );
-</script>
-
 <div class="row">
     <div class="col-lg-1">
     </div>
@@ -28,13 +8,6 @@
             <label for="tags"></label>
             <div class="col-lg-3">
                 <input type="text" id="autocomplete" class="form-control search" placeholder="What you are looking for?">
-                <script>
-                    var arr=["Hello","Buffalo","Dog"];
-                    $('$autocomplete').autocomplete({
-                        lookup: arr
-                    });
-
-                </script>
             </div>
             <div class="col-lg-3">
                 <select class="form-control" name="sort_col">
@@ -46,8 +19,7 @@
                 </select>
 
             </div>
-            <div class="col-lg-6">Descending Order(A->Z)
-                <input type="checkbox" name="desc" value="test">
+            <div class="col-lg-6">
                 <input type="submit" class="btn btn-info" name="submit" value="Sort">
                 <?php form_close(); ?>
             </div>

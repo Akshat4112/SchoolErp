@@ -25,7 +25,8 @@ class Admissions extends MY_Controller
 
         $data = $this->input->post();
         unset($data['submit']);
-        print_r($data);
+        $data['des']='';
+        //print_r($data);
         if ($this->form_validation->run('sort_admission')) {
             $field_name = $data['sort_col'];
             $by='ASC';
