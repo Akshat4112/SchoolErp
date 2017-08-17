@@ -92,9 +92,9 @@ declare(strict_types=1);
             <div class="form-group" style="margin-top: 40px;">
                 <label for="inputText" class="col-lg-3 control-label" style="margin-top: 10px;">Status</label>
                 <div class="col-lg-9">
-                    <?php echo form_input(['name' => 'status', 'class' => 'form-control',
+                    <?php echo form_input(['name' => 'status_adm', 'class' => 'form-control',
                         'placeholder' => 'Enter Status',
-                        'value' => set_value('status')]); ?>
+                        'value' => set_value('status_adm')]); ?>
                 </div>
                 <br><br>
             </div>

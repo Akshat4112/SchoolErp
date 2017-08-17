@@ -65,16 +65,16 @@
                     <tr class="success ">
                         <td><?php echo $student_det->student_id ?></td>
                         <td><?php echo $student_det->student_first_name ?></td>
-                        <td><?php echo 'fname'; ?></td>
-                        <td><?php echo 'mname'; ?></td>
+                        <td><?php echo $student_det->fathers_first_name ?></td>
+                        <td><?php echo $student_det->mothers_first_name ?></td>
                         <td><?php echo $student_det->student_class ?></td>
                         <td><?php echo $student_det->student_section ?></td>
                         <td><?php echo $student_det->student_roll_no ?></td>
                         <td><?php echo $student_det->student_dob ?></td>
-                        <td><?php echo 'contact_no'; ?></td>
+                        <td><?php echo $student_det->f_mobile ?></td>
                         <td><?php echo $student_det->route ?></td>
-                        <td><?php echo 'Sch_no'; ?></td>
-                        <td><?php echo 'old_bal'; ?></td>
+                        <td><?php echo $student_det->scholarship_no ?></td>
+                        <td><?php echo $student_det->fees_balance ?></td>
 
                     </tr>
                 <?php endforeach; ?>

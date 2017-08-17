@@ -3,9 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admissions extends MY_Controller
 {
-
-    public $info = array();
-
     public function __construct()
     {
         parent::__construct();
@@ -35,16 +32,12 @@ class Admissions extends MY_Controller
             $stu_list = $this->sm->student_list();
             $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
         }
-
-
-
     }
 
     public function student_details()
     {
-
-//        $this->load->model('get_model', 'gm');
-//        $last = $this->gm->last_admission_no();
+        $this->load->model('get_model', 'gm');
+        $last = $this->gm->last_admission_no();
 
         $this->load->model('get_model', 'gm');
         $class_list = $this->gm->get_class_list();
@@ -80,10 +73,6 @@ class Admissions extends MY_Controller
             $table_name = 'student';
             $this->load->model('add_model','am');
             if ($this->am->insert_data($table_name, $post)) {
-
-                $si = $this->info['si'] = $post;
-                //print_r($this->info['si']);
-
                 $this->session->set_flashdata('stu_succ', 'General details filled Successfully.');
                 $this->load->view('private/admissions/address');
                 //print_r($_POST['si']);
@@ -105,18 +94,18 @@ class Admissions extends MY_Controller
 
     public function address_details()
     {
+        $this->load->model('get_model', 'gm');
+        $last_student_id = $this->gm->last_student_id();
+
         if ($this->form_validation->run('address')) {
+
             $post = $this->input->post();
             $table_name = 'student';
+
             unset($post['submit']);
-            global $si;
-            //print_r($si);
-            $ad = $this->info=$post;
-            global $info;
-            print_r($info);
 
             $this->load->model('add_model', 'am');
-            if ($this->am->insert_data($table_name, $post)) {
+            if ($this->am->insert_data_key($table_name,$post,$last_student_id)) {
                 $this->session->set_flashdata('stu_succ','Address details filled Successfully.');
                 $this->load->view('private/admissions/parents');
             } else {
@@ -129,19 +118,18 @@ class Admissions extends MY_Controller
 
     public function other_info_details()
     {
+        $this->load->model('get_model', 'gm');
+        $last_student_id = $this->gm->last_student_id();
 
         if ($this->form_validation->run('other_info')) {
             $post = $this->input->post();
-            $this->load->model('get_model', 'gm');
-            $stu_id = $this->gm->last_student_id();
-            $post = $this->input->post();
-            $post['student_id'] = $stu_id;
             unset($post['Submit']);
-            $table_name = 'other_info';
+
+            $table_name = 'student';
 
             $this->load->model('add_model', 'am');
 
-            if ($this->am->insert_data($table_name, $post)) {
+            if ($this->am->insert_data_key($table_name, $post,$last_student_id)) {
                 $this->session->set_flashdata('stu_succ','Parents details filled Successfully.');
                 $this->load->view('private/admissions/misc');
             } else {
@@ -156,16 +144,18 @@ class Admissions extends MY_Controller
 
     public function misc_details()
     {
+        $this->load->model('get_model', 'gm');
+        $student_id = $this->gm->last_student_id();
+
         if ($this->form_validation->run('misc_stu_details')) {
             $post = $this->input->post();
-            $this->load->model('get_model', 'gm');
-            $stu_id = $this->gm->last_student_id();
+
             $post = $this->input->post();
-            $post['student_id'] = $stu_id;
             unset($post['Submit']);
-            $table_name = 'misc_info';
+
+            $table_name = 'student';
             $this->load->model('add_model', 'am');
-            if ($this->am->insert_data($table_name, $post)) {
+            if ($this->am->insert_data_key($table_name, $post,$student_id)) {
                 $this->session->set_flashdata('stu_succ','Misc. details filled Successfully.');
                 $this->load->view('private/admissions/attach');
             } else {
@@ -180,19 +170,19 @@ class Admissions extends MY_Controller
 
     public function attachment()
     {
-
+        $this->load->model('get_model', 'gm');
+        $student_id = $this->gm->last_student_id();
 
 
         if ($this->form_validation->run('attach')) {
             $post = $this->input->post();
-            $this->load->model('get_model', 'gm');
-            $stu_id = $this->gm->last_student_id();
+
             $post = $this->input->post();
-            $post['student_id'] = $stu_id;
             unset($post['Submit']);
-            $table_name = 'attachemnts';
+
+            $table_name = 'student';
             $this->load->model('add_model', 'am');
-            if ($this->am->insert_data($table_name, $post)) {
+            if ($this->am->insert_data_key($table_name, $post,$student_id)) {
                 $this->session->set_flashdata('stu_succ','Attachements updated filled Successfully.');
                 $this->load->view('private/admissions/balance');
             } else {
@@ -208,17 +198,17 @@ class Admissions extends MY_Controller
 
     public function balance()
     {
+        $this->load->model('get_model', 'gm');
+        $student_id = $this->gm->last_student_id();
+
         if ($this->form_validation->run('balance')) {
+
             $post = $this->input->post();
-            $this->load->model('get_model', 'gm');
-            $stu_id = $this->gm->last_student_id();
-            $post = $this->input->post();
-            $post['student_id'] = $stu_id;
             unset($post['Submit']);
-            $table_name = 'old_balance';
+
+            $table_name = 'student';
             $this->load->model('add_model', 'am');
-            if ($this->am->insert_data($table_name, $post)) {
-                //echo '<script>alert("Admission has been done succesfully")</script>';
+            if ($this->am->insert_data_key($table_name, $post,$student_id)) {
                 redirect('admissions/');
             } else {
                 $this->load->view('private/admissions/balance');
