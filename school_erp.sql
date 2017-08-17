@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 08, 2017 at 09:27 PM
+-- Generation Time: Aug 17, 2017 at 08:39 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -53,8 +53,8 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`account_id`, `account_name`, `print_name`, `group_acc`, `op_bal`, `dr_cr`, `address`, `address1`, `city`, `state`, `email`, `phone`, `mobile`, `contact_per`, `birthday_on`, `anniv_on`, `bank_name`, `bank_acc_no`, `cheque_p_name`) VALUES
-(1, 'Bank Accounts', 'BA', 'Accounts', 2000, '245', 'balaji puram', 'agra', '', 'uttar pradesh', 'email@email.com', 9898989, 898267872, 'Mr. Ahuja', '2017-07-26', '2017-07-26', 'SBI', 982720983, 'Ahuja and sons'),
-(8, 'Books', '', 'Banks', 0, 'dr', '', '', '', '', '', 0, 0, '', '0000-00-00', '0000-00-00', '', 0, '');
+(3, 'Banks Account', 'BA', 'Banks', 5000, 'dr', 'Balaji Puram', '', 'Agra', 'Uttar Pradesh', 'Akshat41121995@gmail.com', 2147483647, 2147483647, 'Rajesh', '2017-08-17', '2017-08-15', 'SBI', 2147483647, 'SBI Cheque'),
+(4, 'tut', '', 'tution', 0, 'dr', '', '', '', '', '', 0, 0, '', '0000-00-00', '0000-00-00', '', 0, '');
 
 -- --------------------------------------------------------
 
@@ -73,57 +73,10 @@ CREATE TABLE `account_group` (
 
 INSERT INTO `account_group` (`account_group_id`, `account_group_name`) VALUES
 (38, 'Banks'),
-(39, 'Uniform'),
 (40, 'Library'),
-(41, 'Test'),
-(42, 'Fees'),
-(43, 'Transport'),
-(44, 'abcd');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `address`
---
-
-CREATE TABLE `address` (
-  `address_id` int(5) NOT NULL,
-  `house_no` varchar(5) NOT NULL,
-  `street_name` text NOT NULL,
-  `other_info` text NOT NULL,
-  `zip_code` int(6) NOT NULL,
-  `city` varchar(20) NOT NULL,
-  `state` varchar(20) NOT NULL,
-  `country` varchar(15) NOT NULL,
-  `student_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `address`
---
-
-INSERT INTO `address` (`address_id`, `house_no`, `street_name`, `other_info`, `zip_code`, `city`, `state`, `country`, `student_id`) VALUES
-(45, '', '', '', 0, '', '', '', 0),
-(46, '', '', '', 0, '', '', '', 0),
-(47, '', '', '', 0, '', '', '', 150),
-(48, '878', 'asjdk', '', 0, '', '', '', 150),
-(49, '77', '', '', 0, 'Agra', '', '', 150),
-(50, '22', '', '', 0, 'Agra', '', '', 150),
-(51, 'c-7', '', '', 0, 'Agra', '', '', 151),
-(52, 'C-89', 'Kargil', '', 282019, 'Agra', 'UP', 'India', 152),
-(53, '88', '', '', 0, 'agra', '', '', 153),
-(54, 'c-7', 'Balaji Puram', 'Goyal provision store', 282010, 'Agra', 'Uttar Pradesh', 'India', 154),
-(55, '81', 'Brij Vihar', '', 0, 'Agra', 'UP', 'India', 155),
-(56, 'jashd', '', '', 0, 'jasdjasd', '', '', 156),
-(57, 'A 121', 'Malvia Kunj', 'Near Railway Station', 282005, 'Agra', 'UP', 'India', 157),
-(58, '21', '', '', 0, 'Agra', '', '', 158),
-(59, '66', 'ABCD', 'Yes', 299999, 'Agra', 'Uttar Pradesh', 'India', 159),
-(60, '15/11', 'ABCD', '', 0, 'Agra', '', '', 160),
-(61, 'mahd', '', '', 0, 'bbb', '', '', 161),
-(62, '66', '', '', 0, 'Agra', '', '', 162),
-(63, '22', '', '', 0, 'ag', '', '', 164),
-(64, 'abcd', '', '', 0, 'Agra', '', '', 165),
-(65, '77', '', '', 0, 'Kota', '', '', 169);
+(47, 'Transport'),
+(48, 'test'),
+(49, 'tution');
 
 -- --------------------------------------------------------
 
@@ -151,45 +104,6 @@ INSERT INTO `admin` (`admin_id`, `admin_email`, `admin_password`, `admin_name`) 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `attachemnts`
---
-
-CREATE TABLE `attachemnts` (
-  `attach_id` int(11) NOT NULL,
-  `tc` int(11) NOT NULL,
-  `cc` int(11) NOT NULL,
-  `report_cc` int(11) NOT NULL,
-  `dob_certificate` int(11) NOT NULL,
-  `admission_form_no` int(11) NOT NULL,
-  `date_admission` date NOT NULL,
-  `student_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `attachemnts`
---
-
-INSERT INTO `attachemnts` (`attach_id`, `tc`, `cc`, `report_cc`, `dob_certificate`, `admission_form_no`, `date_admission`, `student_id`) VALUES
-(0, 0, 0, 0, 0, 22, '0000-00-00', 151),
-(0, 0, 0, 0, 0, 99, '0000-00-00', 151),
-(0, 0, 0, 0, 0, 98, '0000-00-00', 152),
-(0, 0, 0, 0, 0, 99, '0000-00-00', 153),
-(0, 0, 0, 0, 0, 909, '0000-00-00', 154),
-(0, 0, 0, 0, 0, 909, '0000-00-00', 154),
-(0, 0, 0, 0, 0, 909, '0000-00-00', 154),
-(0, 0, 0, 0, 0, 899, '0000-00-00', 155),
-(0, 0, 0, 0, 0, 1, '0000-00-00', 157),
-(0, 0, 0, 0, 0, 2, '0000-00-00', 158),
-(0, 0, 0, 0, 0, 3, '0000-00-00', 159),
-(0, 0, 0, 0, 0, 4, '0000-00-00', 160),
-(0, 0, 0, 0, 0, 3, '0000-00-00', 162),
-(0, 0, 0, 0, 0, 100, '0000-00-00', 164),
-(0, 0, 0, 0, 0, 102, '0000-00-00', 165),
-(0, 0, 0, 0, 0, 99, '0000-00-00', 169);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `attendance`
 --
 
@@ -198,17 +112,6 @@ CREATE TABLE `attendance` (
   `date` date NOT NULL,
   `class` varchar(5) NOT NULL,
   `section` varchar(3) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `balance_student`
---
-
-CREATE TABLE `balance_student` (
-  `balance_id` int(11) NOT NULL,
-  `student_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -240,11 +143,10 @@ CREATE TABLE `caste` (
 --
 
 INSERT INTO `caste` (`caste_id`, `caste_name`) VALUES
-(38, 'Hindu'),
 (39, 'Hindu'),
-(40, 'Sikhs'),
 (41, 'Muslim'),
-(42, 'Christian');
+(42, 'Christian'),
+(43, 'Defence');
 
 -- --------------------------------------------------------
 
@@ -262,10 +164,11 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`category_id`, `category_name`) VALUES
-(22, 'kj'),
-(23, 'dynami'),
-(24, 'dynamo'),
-(25, 'kl');
+(29, 'General'),
+(30, 'OBC'),
+(31, 'SC'),
+(32, 'ST'),
+(34, 'Minorities');
 
 -- --------------------------------------------------------
 
@@ -286,10 +189,11 @@ CREATE TABLE `class` (
 --
 
 INSERT INTO `class` (`class`, `prefix`, `start_from`, `incharge`, `class_id`) VALUES
-(4, 'th', '2017-01-01', 'Mr. Sachin', 21),
-(2, 'nd', '2016-03-03', 'Ms Sonali', 22),
-(3, '', '0000-00-00', '', 24),
-(1, '', '0000-00-00', '', 25);
+(2, '', '0000-00-00', '', 30),
+(3, '', '0000-00-00', '', 31),
+(4, '', '0000-00-00', '', 32),
+(5, '', '0000-00-00', 'mr nicshay', 35),
+(6, 'th', '0000-00-00', 'xyz', 36);
 
 -- --------------------------------------------------------
 
@@ -360,7 +264,8 @@ CREATE TABLE `debit_note` (
 --
 
 CREATE TABLE `family` (
-  `family_id` int(11) NOT NULL
+  `family_id` int(11) NOT NULL,
+  `family_name` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -405,7 +310,10 @@ INSERT INTO `fees_head` (`fees_head_id`, `fees_heading`, `group_name`, `account_
 (8, 'testhead', 'fortest', 'WithTest', 'quaterly'),
 (9, 'sch', 'schinsidefees', 'WithScholarship', 'quaterly'),
 (10, 'new', 'Fees Head 1', 'Bank Accounts', 'annual'),
-(11, 'new', 'Fees Head 1', 'Bank Accounts', 'bi_monthly');
+(11, 'new', 'Fees Head 1', 'Bank Accounts', 'bi_monthly'),
+(12, 'misc', 'Fees Head 4', 'Bank Accounts', 'quaterly'),
+(13, 'asdjkas', 'Fees Head 1', 'Bank Accounts', 'annual'),
+(14, 'tuti', 'tutio', 'tut', 'monthly');
 
 -- --------------------------------------------------------
 
@@ -426,7 +334,9 @@ INSERT INTO `fees_head_group` (`fees_head_group_id`, `fees_head_group_name`) VAL
 (29, 'Fees Head 1'),
 (30, 'Fees Head 2'),
 (31, 'Fees Head 3'),
-(32, 'Fees Head 4');
+(32, 'Fees Head 4'),
+(33, 'fh3'),
+(34, 'tutio');
 
 -- --------------------------------------------------------
 
@@ -439,6 +349,28 @@ CREATE TABLE `fees_reciept` (
   `date` date NOT NULL,
   `reciept_no` int(5) NOT NULL,
   `admission_no` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gatepass`
+--
+
+CREATE TABLE `gatepass` (
+  `gatepass_id` int(11) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `photo` text NOT NULL,
+  `profession` varchar(30) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `contact_no` int(10) NOT NULL,
+  `purpose` text NOT NULL,
+  `date_of_visit` date NOT NULL,
+  `time_of_visit` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `expected_return_date` date NOT NULL,
+  `expected_return_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `proof_of_identity` text NOT NULL,
+  `items_retained` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -457,29 +389,10 @@ CREATE TABLE `house` (
 --
 
 INSERT INTO `house` (`house_id`, `house_name`) VALUES
-(5, 'newh'),
-(6, 'askdjaks'),
-(7, 'test'),
-(8, 'testhouse'),
-(9, 'newhois'),
-(10, 'mm'),
-(11, 'mm'),
-(12, 'test1'),
-(13, 'asd'),
-(14, 'kjk'),
-(15, 'nnnnnnnnn');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `info_multiple`
---
-
-CREATE TABLE `info_multiple` (
-  `mobile` int(10) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `student_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+(17, 'Blue'),
+(18, 'Yellow'),
+(19, 'Red'),
+(20, 'Green');
 
 -- --------------------------------------------------------
 
@@ -496,117 +409,6 @@ CREATE TABLE `journal` (
   `amount` int(10) NOT NULL,
   `short_narration` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `misc_info`
---
-
-CREATE TABLE `misc_info` (
-  `las` varchar(50) NOT NULL,
-  `remarks` varchar(30) NOT NULL,
-  `last_exam_given` varchar(20) NOT NULL,
-  `year` date NOT NULL,
-  `status` varchar(10) NOT NULL,
-  `marks` int(2) NOT NULL,
-  `board` varchar(20) NOT NULL,
-  `bg` varchar(10) NOT NULL,
-  `vl` int(10) NOT NULL,
-  `vr` int(10) NOT NULL,
-  `height` int(5) NOT NULL,
-  `weight` int(5) NOT NULL,
-  `dental_hy` varchar(20) NOT NULL,
-  `student_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `misc_info`
---
-
-INSERT INTO `misc_info` (`las`, `remarks`, `last_exam_given`, `year`, `status`, `marks`, `board`, `bg`, `vl`, `vr`, `height`, `weight`, `dental_hy`, `student_id`) VALUES
-('', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0),
-('', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0),
-('', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0),
-('', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0),
-('', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0),
-('', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0),
-('', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0),
-('', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0),
-('', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0),
-('', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0),
-('', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0),
-('', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0),
-('', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0),
-('', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0),
-('', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0),
-('', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0),
-('', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0),
-('', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0),
-('', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 151),
-('', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 151),
-('simpkins school', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 151),
-('simpkins school', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 151),
-('simpkins school', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 151),
-('simpkins school', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 151),
-('simpkins school', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 151),
-('simpkins school', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 151),
-('simpkins school', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 151),
-('masd', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 151),
-('jhj', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 151),
-('St. Peters', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 152),
-('simpkins school', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 153),
-('Holy public school', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 154),
-('University Model School', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 155),
-('St. francis', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 157),
-('amsndmas', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 158),
-('zzzz School', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 159),
-('nil', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 160),
-('simpkins school', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 162),
-('ss', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 164),
-('nnnn', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 165),
-('Xyz ', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 169);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `old_balance`
---
-
-CREATE TABLE `old_balance` (
-  `balance_id` int(11) NOT NULL,
-  `ledger_balance` int(10) NOT NULL,
-  `fees_balance` int(10) NOT NULL,
-  `comments` text NOT NULL,
-  `hostel_room_no` int(5) NOT NULL,
-  `bed_no` int(5) NOT NULL,
-  `scholarship_no` int(10) NOT NULL,
-  `aadhar_uid` int(16) NOT NULL,
-  `family` varchar(20) NOT NULL,
-  `status` varchar(10) NOT NULL,
-  `discontinue_date` date NOT NULL,
-  `student_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `old_balance`
---
-
-INSERT INTO `old_balance` (`balance_id`, `ledger_balance`, `fees_balance`, `comments`, `hostel_room_no`, `bed_no`, `scholarship_no`, `aadhar_uid`, `family`, `status`, `discontinue_date`, `student_id`) VALUES
-(1, 66, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 151),
-(2, 66, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 151),
-(3, 8782, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 153),
-(4, 9898, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 154),
-(5, 6000, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 155),
-(6, 999, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 157),
-(7, 21, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 158),
-(8, 21, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 158),
-(9, 0, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 159),
-(10, 90, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 160),
-(11, 66, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 162),
-(12, 99, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 164),
-(13, 198273, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 165),
-(14, 900, 0, '', 0, 0, 0, 0, '', '', '0000-00-00', 169);
 
 -- --------------------------------------------------------
 
@@ -645,57 +447,6 @@ INSERT INTO `organisation_info` (`org_id`, `name`, `address_1`, `address_2`, `ci
 -- --------------------------------------------------------
 
 --
--- Table structure for table `other_info`
---
-
-CREATE TABLE `other_info` (
-  `other_info_id` int(10) NOT NULL,
-  `fathers_first_name` varchar(20) NOT NULL,
-  `fathers_middle_name` varchar(20) NOT NULL,
-  `fathers_last_name` varchar(20) NOT NULL,
-  `f_mobile` int(10) NOT NULL,
-  `f_qual` varchar(20) NOT NULL,
-  `f_occu` varchar(20) NOT NULL,
-  `f_dob` date NOT NULL,
-  `f_photo` int(11) NOT NULL,
-  `mothers_first_name` varchar(20) NOT NULL,
-  `mothers_middle_name` varchar(20) NOT NULL,
-  `mothers_last_name` varchar(20) NOT NULL,
-  `m_mobile` int(10) NOT NULL,
-  `m_qual` varchar(20) NOT NULL,
-  `m_occu` varchar(10) NOT NULL,
-  `m_dob` date NOT NULL,
-  `m_photo` int(11) NOT NULL,
-  `parents_wedding_date` date NOT NULL,
-  `student_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `other_info`
---
-
-INSERT INTO `other_info` (`other_info_id`, `fathers_first_name`, `fathers_middle_name`, `fathers_last_name`, `f_mobile`, `f_qual`, `f_occu`, `f_dob`, `f_photo`, `mothers_first_name`, `mothers_middle_name`, `mothers_last_name`, `m_mobile`, `m_qual`, `m_occu`, `m_dob`, `m_photo`, `parents_wedding_date`, `student_id`) VALUES
-(34, 'Akshat', '', '', 0, '', 'service', '0000-00-00', 0, 'Ridhima', '', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 151),
-(35, 'asdasd', '', '', 0, '', 'service', '0000-00-00', 0, 'asda', '', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 151),
-(36, 'asdasd', '', '', 0, '', 'service', '0000-00-00', 0, 'asda', '', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 151),
-(37, 'asdasd', '', '', 0, '', 'service', '0000-00-00', 0, 'asda', '', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 151),
-(38, 'Sanjay ', '', 'Mehra', 0, '', 'service', '0000-00-00', 0, 'Veena ', '', 'Mehra', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 152),
-(39, 'ajsdhj', '', '', 0, '', 'service', '0000-00-00', 0, 'ajsdjas', '', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 153),
-(40, 'Alok ', '', '', 0, '', 'service', '0000-00-00', 0, 'Gupta', '', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 154),
-(41, 'Kaushal Kishore Garg', '', '', 0, '', 'service', '0000-00-00', 0, 'Kalpna Garg', '', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 155),
-(42, 'asdbasjd', '', '', 0, '', 'service', '0000-00-00', 0, 'jashdjas', 'ajd', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 156),
-(43, 'Raja ', '', 'Babu', 0, '', 'service', '0000-00-00', 0, 'Rani', '', 'Bai', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 157),
-(44, 'aksjd', '', '', 0, '', 'service', '0000-00-00', 0, 'ajsdjas', '', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 158),
-(45, 'Fname', '', '', 0, '', 'service', '0000-00-00', 0, 'Mname', '', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 159),
-(46, 'Abcde', '', '', 0, '', 'service', '0000-00-00', 0, 'defgh', '', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 160),
-(47, 'abcd', '', '', 0, '', 'service', '0000-00-00', 0, 'efgh', '', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 162),
-(48, 'new', '', '', 0, '', 'service', '0000-00-00', 0, 'old', '', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 164),
-(49, 'abcdde', '', '', 0, '', 'service', '0000-00-00', 0, 'defgh', '', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 165),
-(50, 'Ashok Gupta', '', '', 0, '', 'service', '0000-00-00', 0, 'Harsha Gupta', '', '', 0, '', 'service', '0000-00-00', 0, '0000-00-00', 169);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `owner`
 --
 
@@ -729,31 +480,6 @@ CREATE TABLE `payments` (
   `amount` int(10) NOT NULL,
   `short_narration` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `payments`
---
-
-INSERT INTO `payments` (`payment_id`, `date`, `vch_no`, `d_c`, `account_name`, `amount`, `short_narration`) VALUES
-(1, '0000-00-00', 22, 0, 'Bank Accounts', 0, ''),
-(2, '0000-00-00', 22, 0, 'Bank Accounts', 0, ''),
-(3, '0000-00-00', 21, 0, 'Bank Accounts', 0, ''),
-(4, '0000-00-00', 21, 0, 'Bank Accounts', 0, ''),
-(5, '0000-00-00', 21, 0, 'Bank Accounts', 0, ''),
-(6, '0000-00-00', 21, 0, 'Bank Accounts', 0, ''),
-(7, '0000-00-00', 21, 0, 'Bank Accounts', 0, ''),
-(8, '0000-00-00', 21, 0, 'Bank Accounts', 0, ''),
-(9, '0000-00-00', 21, 0, 'Bank Accounts', 0, ''),
-(10, '2017-08-16', 23, 0, 'withhereacc', 244, 'This is test'),
-(11, '0000-00-00', 33, 0, 'Bank Accounts', 0, ''),
-(12, '0000-00-00', 33, 0, 'Bank Accounts', 0, ''),
-(13, '0000-00-00', 33, 0, 'Bank Accounts', 234, ''),
-(14, '2017-08-11', 33, 0, 'withhereacc', 234234, 'test'),
-(15, '2017-08-11', 33, 0, 'withhereacc', 234234, 'test'),
-(16, '0000-00-00', 33, 0, 'Bank Accounts', 1234, 'test'),
-(17, '0000-00-00', 33, 0, 'Bank Accounts', 1234, 'test'),
-(18, '2017-08-15', 87, 0, 'Books', 7656, 'test narrration'),
-(19, '2017-08-15', 87, 0, 'Books', 7656, 'test narrration');
 
 -- --------------------------------------------------------
 
@@ -800,7 +526,10 @@ INSERT INTO `route` (`route_id`, `route_name`, `freq`) VALUES
 (10, 'RN', 'annual'),
 (11, 'TestR', 'one_time'),
 (12, 'Shahganj', 'annual'),
-(13, 'Rajamandi', 'quaterly');
+(13, 'Rajamandi', 'quaterly'),
+(14, 'lohamandi', 'half_yearly'),
+(15, 'COD', 'quaterly'),
+(16, '300', 'monthly');
 
 -- --------------------------------------------------------
 
@@ -833,9 +562,7 @@ INSERT INTO `section` (`section_id`, `section_name`) VALUES
 (98, 'A'),
 (99, 'B'),
 (100, 'C'),
-(101, 'D'),
-(104, 'E'),
-(105, 'F');
+(104, 'E');
 
 -- --------------------------------------------------------
 
@@ -858,32 +585,90 @@ CREATE TABLE `student` (
   `student_photo` int(11) DEFAULT NULL,
   `admission_no` int(5) NOT NULL,
   `gender` varchar(5) NOT NULL,
-  `student_dob` date NOT NULL
+  `student_dob` date NOT NULL,
+  `house_no` varchar(5) NOT NULL,
+  `street_name` varchar(50) NOT NULL,
+  `other_info` varchar(60) NOT NULL,
+  `zip_code` varchar(6) NOT NULL,
+  `city` varchar(20) NOT NULL,
+  `state` varchar(20) NOT NULL,
+  `country` varchar(20) NOT NULL,
+  `fathers_first_name` varchar(20) NOT NULL,
+  `fathers_middle_name` varchar(20) NOT NULL,
+  `fathers_last_name` varchar(25) NOT NULL,
+  `f_mobile` int(10) NOT NULL,
+  `f_qual` varchar(15) NOT NULL,
+  `f_occu` varchar(15) NOT NULL,
+  `f_dob` date NOT NULL,
+  `f_photo` text NOT NULL,
+  `mothers_first_name` varchar(20) NOT NULL,
+  `mothers_middle_name` varchar(15) NOT NULL,
+  `mothers_last_name` varchar(20) NOT NULL,
+  `m_mobile` int(10) NOT NULL,
+  `m_qual` varchar(15) NOT NULL,
+  `m_occu` varchar(15) NOT NULL,
+  `m_dob` date NOT NULL,
+  `m_photo` text NOT NULL,
+  `parents_wedding_date` date NOT NULL,
+  `las` varchar(50) NOT NULL,
+  `remarks` varchar(30) NOT NULL,
+  `last_exam_given` varchar(20) NOT NULL,
+  `year` date NOT NULL,
+  `status` varchar(10) NOT NULL,
+  `marks` int(11) NOT NULL,
+  `board` varchar(10) NOT NULL,
+  `bg` varchar(5) NOT NULL,
+  `vl` int(10) NOT NULL,
+  `vr` int(10) NOT NULL,
+  `height` int(5) NOT NULL,
+  `weight` int(5) NOT NULL,
+  `dental_hy` varchar(20) NOT NULL,
+  `tc` int(11) NOT NULL,
+  `cc` int(11) NOT NULL,
+  `report_cc` int(11) NOT NULL,
+  `dob_certificate` int(11) NOT NULL,
+  `admission_form_no` int(11) NOT NULL,
+  `date_admission` date NOT NULL,
+  `ledger_balance` int(5) NOT NULL,
+  `fees_balance` int(5) NOT NULL,
+  `comments` varchar(50) NOT NULL,
+  `hostel_room_no` varchar(5) NOT NULL,
+  `bed_no` int(5) NOT NULL,
+  `scholarship_no` int(10) NOT NULL,
+  `aadhar_uid` int(16) NOT NULL,
+  `family` varchar(20) NOT NULL,
+  `status_adm` varchar(10) NOT NULL,
+  `discontinue_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `student`
 --
 
-INSERT INTO `student` (`student_id`, `student_first_name`, `student_middle_name`, `student_last_name`, `student_class`, `student_section`, `student_roll_no`, `route`, `caste`, `category`, `house`, `student_photo`, `admission_no`, `gender`, `student_dob`) VALUES
-(162, 'Sachin', '', 'Bansal', 'Ist', 'A', 98, 'PL', 'Hindu', 'General', 'Green', 0, 99, 'Male', '2018-05-02'),
-(163, 'aksdk', '', 'kajsdkaj', 'Ist', 'A', 90, '', 'Hindu', 'General', 'Red', 0, 100, 'Male', '0022-01-29'),
-(164, 'Aks', '', 'Gu', 'Ist', 'A', 21, '', 'Hindu', 'General', 'Red', 0, 101, 'Male', '1111-02-02'),
-(165, 'Sachin', '', 'Mittal', 'Ist', 'A', 9, '', 'Hindu', 'General', 'Red', 0, 102, 'Male', '1001-01-01'),
-(166, 'New', '', 'Name', '0', '0', 192, '', 'Hindu', '0', 'Red', 0, 123, 'Male', '1101-01-01'),
-(167, 'test', '', 'admission', '0', '0', 123312, '', 'Hindu', '0', 'Red', 0, 987, 'Male', '1001-01-01'),
-(168, 'New', '', 'test', '0', '0', 12, '', '0', '0', 'Red', 0, 98, 'Male', '1100-01-01'),
-(169, 'Tanvi', '', 'Gupta', '0', '0', 66, '', '0', '0', 'Red', 0, 99, 'Male', '1996-01-01');
+INSERT INTO `student` (`student_id`, `student_first_name`, `student_middle_name`, `student_last_name`, `student_class`, `student_section`, `student_roll_no`, `route`, `caste`, `category`, `house`, `student_photo`, `admission_no`, `gender`, `student_dob`, `house_no`, `street_name`, `other_info`, `zip_code`, `city`, `state`, `country`, `fathers_first_name`, `fathers_middle_name`, `fathers_last_name`, `f_mobile`, `f_qual`, `f_occu`, `f_dob`, `f_photo`, `mothers_first_name`, `mothers_middle_name`, `mothers_last_name`, `m_mobile`, `m_qual`, `m_occu`, `m_dob`, `m_photo`, `parents_wedding_date`, `las`, `remarks`, `last_exam_given`, `year`, `status`, `marks`, `board`, `bg`, `vl`, `vr`, `height`, `weight`, `dental_hy`, `tc`, `cc`, `report_cc`, `dob_certificate`, `admission_form_no`, `date_admission`, `ledger_balance`, `fees_balance`, `comments`, `hostel_room_no`, `bed_no`, `scholarship_no`, `aadhar_uid`, `family`, `status_adm`, `discontinue_date`) VALUES
+(283, 'Akshat', '', 'Gupta', '3', 'B', 5, '300', 'Hindu', 'General', 'Yellow', 0, 1, 'Male', '1995-04-12', '7', '', '', '', 'agra', '', '', 'alok', '', '', 0, '', 'business', '0000-00-00', '', 'varsha', '', '', 0, '', 'business', '0000-00-00', '', '0000-00-00', 'simpkins school', '', '', '0000-00-00', 'pass', 0, '', 'a+', 0, 0, 0, 0, '', 0, 0, 0, 0, 75, '0000-00-00', 0, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
+(284, 'Abhinav', '', 'Singh', '2', 'A', 0, '', 'Hindu', 'General', 'Blue', 0, 2, 'Male', '0000-00-00', '76', '', '', '', 'Newyork', '', '', 'XYZA', '', '', 0, '', 'business', '0000-00-00', '', 'BCDE', '', '', 0, '', 'business', '0000-00-00', '', '0000-00-00', 'St. Peters', '', '', '0000-00-00', 'pass', 0, '', 'a+', 0, 0, 0, 0, '', 0, 0, 0, 0, 1623, '0000-00-00', 735, 0, '', '', 0, 0, 0, '', '', '0000-00-00');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `student_address`
+-- Table structure for table `student_leaving_certificate`
 --
 
-CREATE TABLE `student_address` (
-  `student_id` int(11) NOT NULL,
-  `address_id` int(11) NOT NULL
+CREATE TABLE `student_leaving_certificate` (
+  `slc_id` int(11) NOT NULL,
+  `name` varchar(25) NOT NULL,
+  `f_name` varchar(25) NOT NULL,
+  `m_name` varchar(25) NOT NULL,
+  `class` int(3) NOT NULL,
+  `school_name` varchar(50) NOT NULL,
+  `end_date` date NOT NULL,
+  `start_date` date NOT NULL,
+  `dob` date NOT NULL,
+  `dob_words` text NOT NULL,
+  `class_present` int(3) NOT NULL,
+  `year` int(4) NOT NULL,
+  `caste_name` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -901,12 +686,6 @@ ALTER TABLE `account`
 --
 ALTER TABLE `account_group`
   ADD PRIMARY KEY (`account_group_id`);
-
---
--- Indexes for table `address`
---
-ALTER TABLE `address`
-  ADD PRIMARY KEY (`address_id`);
 
 --
 -- Indexes for table `admin`
@@ -999,6 +778,12 @@ ALTER TABLE `fees_reciept`
   ADD PRIMARY KEY (`reciept_id`);
 
 --
+-- Indexes for table `gatepass`
+--
+ALTER TABLE `gatepass`
+  ADD PRIMARY KEY (`gatepass_id`);
+
+--
 -- Indexes for table `house`
 --
 ALTER TABLE `house`
@@ -1011,22 +796,10 @@ ALTER TABLE `journal`
   ADD PRIMARY KEY (`journal_id`);
 
 --
--- Indexes for table `old_balance`
---
-ALTER TABLE `old_balance`
-  ADD PRIMARY KEY (`balance_id`);
-
---
 -- Indexes for table `organisation_info`
 --
 ALTER TABLE `organisation_info`
   ADD PRIMARY KEY (`org_id`);
-
---
--- Indexes for table `other_info`
---
-ALTER TABLE `other_info`
-  ADD PRIMARY KEY (`other_info_id`);
 
 --
 -- Indexes for table `owner`
@@ -1071,6 +844,12 @@ ALTER TABLE `student`
   ADD PRIMARY KEY (`student_id`);
 
 --
+-- Indexes for table `student_leaving_certificate`
+--
+ALTER TABLE `student_leaving_certificate`
+  ADD PRIMARY KEY (`slc_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -1078,17 +857,12 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `account`
 --
 ALTER TABLE `account`
-  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `account_group`
 --
 ALTER TABLE `account_group`
-  MODIFY `account_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
---
--- AUTO_INCREMENT for table `address`
---
-ALTER TABLE `address`
-  MODIFY `address_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `account_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 --
 -- AUTO_INCREMENT for table `admin`
 --
@@ -1108,17 +882,17 @@ ALTER TABLE `bill_sundry`
 -- AUTO_INCREMENT for table `caste`
 --
 ALTER TABLE `caste`
-  MODIFY `caste_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `caste_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 --
 -- AUTO_INCREMENT for table `class`
 --
 ALTER TABLE `class`
-  MODIFY `class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 --
 -- AUTO_INCREMENT for table `contact_us`
 --
@@ -1153,42 +927,37 @@ ALTER TABLE `feedback`
 -- AUTO_INCREMENT for table `fees_head`
 --
 ALTER TABLE `fees_head`
-  MODIFY `fees_head_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `fees_head_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `fees_head_group`
 --
 ALTER TABLE `fees_head_group`
-  MODIFY `fees_head_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `fees_head_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 --
 -- AUTO_INCREMENT for table `fees_reciept`
 --
 ALTER TABLE `fees_reciept`
   MODIFY `reciept_id` int(11) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `gatepass`
+--
+ALTER TABLE `gatepass`
+  MODIFY `gatepass_id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `house`
 --
 ALTER TABLE `house`
-  MODIFY `house_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `house_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `journal`
 --
 ALTER TABLE `journal`
   MODIFY `journal_id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `old_balance`
---
-ALTER TABLE `old_balance`
-  MODIFY `balance_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
---
 -- AUTO_INCREMENT for table `organisation_info`
 --
 ALTER TABLE `organisation_info`
   MODIFY `org_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
---
--- AUTO_INCREMENT for table `other_info`
---
-ALTER TABLE `other_info`
-  MODIFY `other_info_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 --
 -- AUTO_INCREMENT for table `owner`
 --
@@ -1198,7 +967,7 @@ ALTER TABLE `owner`
 -- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `payment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `payment_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `receipt`
 --
@@ -1208,7 +977,7 @@ ALTER TABLE `receipt`
 -- AUTO_INCREMENT for table `route`
 --
 ALTER TABLE `route`
-  MODIFY `route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `route_plan`
 --
@@ -1218,12 +987,17 @@ ALTER TABLE `route_plan`
 -- AUTO_INCREMENT for table `section`
 --
 ALTER TABLE `section`
-  MODIFY `section_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
+  MODIFY `section_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 --
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `student_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=170;
+  MODIFY `student_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=285;
+--
+-- AUTO_INCREMENT for table `student_leaving_certificate`
+--
+ALTER TABLE `student_leaving_certificate`
+  MODIFY `slc_id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
