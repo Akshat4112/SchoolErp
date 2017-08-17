@@ -3,10 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admissions extends MY_Controller
 {
+    public $info = array();
+
     public function __construct()
     {
         parent::__construct();
-
         $this->load->model('get_header_info', 'ghi');
         $username = $this->ghi->get_admin();
         $this->load->view('private/admissions/header_admission', ['username' => $username]);
@@ -15,17 +16,13 @@ class Admissions extends MY_Controller
 
     }
 
+
     public function index()
     {
         //get name list for autocomplete functionality
-
-
         $this->load->model('student_model', 'sm');
-
-
         $data = $this->input->post();
         unset($data['submit']);
-        //print_r($data);
         if ($this->form_validation->run('sort_admission')) {
             $field_name = $data['sort_col'];
             $by=$data['sort_type'];
@@ -45,13 +42,11 @@ class Admissions extends MY_Controller
     public function student_details()
     {
 
-        $this->load->model('get_model', 'gm');
-        $last = $this->gm->last_admission_no();
-
+//        $this->load->model('get_model', 'gm');
+//        $last = $this->gm->last_admission_no();
 
         $this->load->model('get_model', 'gm');
         $class_list = $this->gm->get_class_list();
-
 
 
         $fieldhouse= 'house_name';
@@ -74,31 +69,24 @@ class Admissions extends MY_Controller
         $this->load->model('get_model', 'gm');
         $caste_list = $this->gm->get_list($fieldcast, $table_namecast);
 
+        $this->load->model('get_model', 'gm');
+        $last = $this->gm->last_admission_no();
 
         if ($this->form_validation->run('student')) {
-
-            $this->load->model('get_model', 'gm');
-            $last = $this->gm->last_admission_no();
-
-
             $post = $this->input->post();
             unset($post['submit']);
-            $this->load->model('add_model', 'am');
-            $table_name = 'student';
 
-            if ($this->am->insert_data($table_name, $post)) {
-                $this->session->set_flashdata('stu_succ','General details filled Successfully.');
-                $this->load->view('private/admissions/address');
-            } else {
-                echo 'Database query error';
-                $this->load->view('private/admissions/student_details', ['last_adm' => $last,
-                    'class_drop' => $class_list, 'section_drop' => $section_list, 'category_drop' => $category_list,
-                    'caste_drop' => $caste_list,'house_drop'=>$house_list]);
-            }
+
+
+            $si=$this->info=$post;
+            print_r($si);
+
+            $this->session->set_flashdata('stu_succ','General details filled Successfully.');
+            $this->load->view('private/admissions/address');
+            //print_r($_POST['si']);
+
         } else {
-            $this->load->model('get_model', 'gm');
-            $last = $this->gm->last_admission_no();
-            $this->load->view('private/admissions/create_admission_view', ['last_adm' => $last,
+                $this->load->view('private/admissions/create_admission_view', ['last_adm' => $last,
                 'class_drop' => $class_list, 'section_drop' => $section_list, 'category_drop' => $category_list,
                 'caste_drop' => $caste_list,'house_drop'=>$house_list]);
         }
@@ -109,23 +97,18 @@ class Admissions extends MY_Controller
      * loading model get_model as gm for student id,
      * loading model add_model as am for data insertion
      */
+
     public function address_details()
     {
-
-
         if ($this->form_validation->run('address')) {
-
-            /*for getting student id of last admitted student so thar it can
-            *be traced for address details
-            */
-
-            $this->load->model('get_model', 'gm');
-            $stu_id = $this->gm->last_student_id();
-
             $post = $this->input->post();
-            $post['student_id'] = $stu_id;
+            $table_name = 'student';
             unset($post['submit']);
-            $table_name = 'address';
+
+
+            $ad = $this->info=$post;
+            print_r($this->info);
+
             $this->load->model('add_model', 'am');
             if ($this->am->insert_data($table_name, $post)) {
                 $this->session->set_flashdata('stu_succ','Address details filled Successfully.');
@@ -136,15 +119,10 @@ class Admissions extends MY_Controller
         } else {
             $this->load->view('private/admissions/address');
         }
-        //Below Part in function is for testing of other functions in same controller
-        //$this->load->view('private/admissions/parents');
-
     }
 
     public function other_info_details()
     {
-
-
 
         if ($this->form_validation->run('other_info')) {
             $post = $this->input->post();
@@ -168,14 +146,10 @@ class Admissions extends MY_Controller
         }
         //Below Part in function is for testing of other functions in same controller
         //$this->load->view('private/admissions/misc');
-
-
     }
 
     public function misc_details()
     {
-
-
         if ($this->form_validation->run('misc_stu_details')) {
             $post = $this->input->post();
             $this->load->model('get_model', 'gm');
@@ -228,8 +202,6 @@ class Admissions extends MY_Controller
 
     public function balance()
     {
-
-
         if ($this->form_validation->run('balance')) {
             $post = $this->input->post();
             $this->load->model('get_model', 'gm');
@@ -293,7 +265,6 @@ class Admissions extends MY_Controller
         $this->load->model('get_model', 'gm');
         $class_list = $this->gm->get_list($field, $table_name);
 
-
         $fieldsec = 'section_name';
         $table_namesec = 'section';
         $section_list = $this->gm->get_list($fieldsec, $table_namesec);
@@ -317,13 +288,13 @@ class Admissions extends MY_Controller
             $this->load->view('private/admissions/id_card.php', ['class_drop' => $class_list, 'section_drop' => $section_list,
                 'table_view' => $table_view]);
         }
-
     }
 
     public function create_list()
     {
         $this->load->view('private/admissions/create_list_view');
     }
+
     public function download_as_pdf()
     {
 
