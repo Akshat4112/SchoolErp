@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admissions extends MY_Controller
 {
+
     public $info = array();
 
     public function __construct()
@@ -73,18 +74,22 @@ class Admissions extends MY_Controller
         $last = $this->gm->last_admission_no();
 
         if ($this->form_validation->run('student')) {
+
             $post = $this->input->post();
             unset($post['submit']);
+            $table_name = 'student';
+            $this->load->model('add_model','am');
+            if ($this->am->insert_data($table_name, $post)) {
 
+                $si = $this->info['si'] = $post;
+                //print_r($this->info['si']);
 
-
-            $si=$this->info=$post;
-            print_r($si);
-
-            $this->session->set_flashdata('stu_succ','General details filled Successfully.');
-            $this->load->view('private/admissions/address');
-            //print_r($_POST['si']);
-
+                $this->session->set_flashdata('stu_succ', 'General details filled Successfully.');
+                $this->load->view('private/admissions/address');
+                //print_r($_POST['si']);
+            }else{
+                echo 'DB Query Error';
+            }
         } else {
                 $this->load->view('private/admissions/create_admission_view', ['last_adm' => $last,
                 'class_drop' => $class_list, 'section_drop' => $section_list, 'category_drop' => $category_list,
@@ -92,7 +97,7 @@ class Admissions extends MY_Controller
         }
     }
 
-    /**
+    /*
      *function for insert details in adress,
      * loading model get_model as gm for student id,
      * loading model add_model as am for data insertion
@@ -104,10 +109,11 @@ class Admissions extends MY_Controller
             $post = $this->input->post();
             $table_name = 'student';
             unset($post['submit']);
-
-
+            global $si;
+            //print_r($si);
             $ad = $this->info=$post;
-            print_r($this->info);
+            global $info;
+            print_r($info);
 
             $this->load->model('add_model', 'am');
             if ($this->am->insert_data($table_name, $post)) {
