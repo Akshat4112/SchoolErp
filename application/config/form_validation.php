@@ -402,5 +402,12 @@ $config=[
             'label'=>'This',
             'rules'=>'required'
         ]
+    ],
+    'search_admission'=>[
+        [
+            'field'=>'search_col_1',
+            'label'=>'This',
+            'rules'=>'required'
+        ]
     ]
 ];

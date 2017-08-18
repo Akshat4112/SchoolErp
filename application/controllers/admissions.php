@@ -295,5 +295,41 @@ class Admissions extends MY_Controller
     {
 
     }
+    public function search_view(){
 
+        $search_col_1=$data['search_col_1']='';
+        $search_col_2=$data['search_col_2']='';
+        $search_col_3=$data['search_col_3']='';
+
+        $sb1=$data['sb1']='';
+        $sb2=$data['sb2']='';
+        $sb3=$data['sb3']='';
+
+        $this->load->model('student_model', 'sm');
+        $data = $this->input->post();
+        unset($data['submit']);
+        print_r($data);
+
+        if ($this->form_validation->run('search_admission')) {
+            $table_name = 'student';
+            $search_col_1=$data['search_col_1'];
+            $search_col_2=$data['search_col_2'];
+            $search_col_3=$data['search_col_3'];
+
+            $sb1=$data['sb1'];
+            $sb2=$data['sb2'];
+            $sb3=$data['sb3'];
+            echo  $search_col_2,$sb2;
+
+            $stu_list = $this->sm->search($table_name,$search_col_1,$sb1,$search_col_2,$sb2
+            ,$search_col_3,$sb3);
+            //$stu_list = $this->sm->student_list();
+            $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
+            //echo 'success';
+        }else{
+            echo 'failed';
+            $stu_list = $this->sm->student_list();
+            $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
+        }
+    }
 }

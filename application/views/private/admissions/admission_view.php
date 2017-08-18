@@ -1,46 +1,131 @@
+<div class="container">
 <div class="row">
-    <div class="col-lg-1">
-    </div>
-    <div class="col-lg-10">
-        <?php echo form_open('admissions/', ['class' => 'form-horizontal']); ?>
-
+    <?php echo form_open('admissions/search_view', ['class' => 'form-horizontal']); ?>
         <div class="form-group">
             <label for="tags"></label>
             <div class="col-lg-1 text-info" style="font-size: 19px;">Search:</div>
-            <div class="col-lg-3">
-                <input type="text" id="autocomplete" class="form-control search" placeholder="What you are looking for?">
+            <div class="col-lg-1">
+                <?php $options = [
+                    'student_first_name' => 'Name',
+                    'student_class' => 'Class',
+                    'student_section' => 'Section',
+                    'student_roll_no'=>'Roll No',
+                    'student_dob'=>'DOB'
+                ];
+                $attribute_class = [
+                    'class' => 'form-control',
+                    'id' => 'select',
+                ];
+                echo form_dropdown('search_col_1', $options, set_value('search_col_1'), $attribute_class);
+                ?>
             </div>
-            <div class="col-lg-1 text-info" style="font-size: 19px;">Sort by:</div>
             <div class="col-lg-2">
-                <select class="form-control" name="sort_col">
-                    <option value="student_first_name">Name</option>
-                    <option value="student_class">Class</option>
-                    <option value="student_section">Section</option>
-                    <option value="student_roll_no">Roll No</option>
-                    <option value="student_dob">DOB</option>
-                </select>
+                <?php echo form_input(['name' => 'sb1', 'class' => 'form-control',
+                    'placeholder' => 'Enter',
+                    'value' => set_value('sb1')]); ?>
+                <?php echo form_error('sb1'); ?>
+            </div>
+            <div class="col-lg-1">
+                <?php $options = [
+                    'student_first_name' => 'Name',
+                    'student_class' => 'Class',
+                    'student_section' => 'Section',
+                    'student_roll_no'=>'Roll No',
+                    'student_dob'=>'DOB'
+                ];
+                $attribute_class = [
+                    'class' => 'form-control',
+                    'id' => 'select',
+                ];
+                echo form_dropdown('search_col_2', $options, set_value('search_col_2'), $attribute_class);
+                ?>
             </div>
             <div class="col-lg-2">
-                <select class="form-control" name="sort_type">
-                    <option value="ASC">Ascending</option>
-                    <option value="DESC">Descending</option>
-                </select>
+                <?php echo form_input(['name' => 'sb2', 'class' => 'form-control',
+                    'placeholder' => 'Enter',
+                    'value' => set_value('sb2')]); ?>
             </div>
-
-            <div class="col-lg-3">
-                <input type="submit" class="btn btn-info" name="submit" value="Sort">
-                <?php form_close(); ?>
+            <div class="col-lg-1">
+                <?php $options = [
+                    'student_first_name' => 'Name',
+                    'student_class' => 'Class',
+                    'student_section' => 'Section',
+                    'student_roll_no'=>'Roll No',
+                    'student_dob'=>'DOB'
+                ];
+                $attribute_class = [
+                    'class' => 'form-control',
+                    'id' => 'select',
+                ];
+                echo form_dropdown('search_col_3', $options, set_value('search_col_3'), $attribute_class);
+                ?>
             </div>
-            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <?php echo form_input(['name' => 'sb3', 'class' => 'form-control',
+                    'placeholder' => 'Enter',
+                    'value' => set_value('sb3')]); ?>
+            </div>
+            <div class="col-lg-1">
+                <input type="submit" class="btn btn-info" name="submit" value="Search">
+            </div>
         </div>
+    <?php echo form_close();?>
+</div>
+    <?php echo form_open('admissions/', ['class' => 'form-horizontal']); ?>
+<div class="row">
+    <div class="col-lg-1 text-info" style="font-size: 19px;">Sort by:</div>
+    <div class="col-lg-1">
+        <select class="form-control" name="sort_col_1">
+            <option value="student_first_name">Name</option>
+            <option value="student_class">Class</option>
+            <option value="student_section">Section</option>
+            <option value="student_roll_no">Roll No</option>
+            <option value="student_dob">DOB</option>
+        </select>
+    </div>
+    <div class="col-lg-2">
+        <select class="form-control" name="sort_type_2">
+            <option value="ASC">Ascending</option>
+            <option value="DESC">Descending</option>
+        </select>
     </div>
     <div class="col-lg-1">
+        <select class="form-control" name="sort_col_3">
+            <option value="student_first_name">Name</option>
+            <option value="student_class">Class</option>
+            <option value="student_section">Section</option>
+            <option value="student_roll_no">Roll No</option>
+            <option value="student_dob">DOB</option>
+        </select>
     </div>
-    <div class="col-lg-1"></div>
+    <div class="col-lg-2">
+        <select class="form-control" name="sort_type">
+            <option value="ASC">Ascending</option>
+            <option value="DESC">Descending</option>
+        </select>
+    </div>
+    <div class="col-lg-1">
+        <select class="form-control" name="sort_col">
+            <option value="student_first_name">Name</option>
+            <option value="student_class">Class</option>
+            <option value="student_section">Section</option>
+            <option value="student_roll_no">Roll No</option>
+            <option value="student_dob">DOB</option>
+        </select>
+    </div>
+    <div class="col-lg-2">
+        <select class="form-control" name="sort_type">
+            <option value="ASC">Ascending</option>
+            <option value="DESC">Descending</option>
+        </select>
+    </div>
+    <div class="col-lg-2">
+        <input type="submit" class="btn btn-info" name="submit" value="Sort">
+        <?php form_close(); ?>
+    </div>
 </div>
-<div class="row">
-    <div class="col-lg-1"></div>
-    <div class="col-lg-10">
+<div class="row" style="margin-top: 10px;">
+    <div class="col-lg-12">
         <table class="table table-hover " id="userTbl">
             <thead>
             <tr class="info">
@@ -86,7 +171,7 @@
             </tbody>
         </table>
     </div>
-    <div class="col-lg-1"></div>
+</div>
 </div>
 <script>
     $(document).ready(function(){
@@ -103,8 +188,6 @@
         });
     });
 </script>
-
-
 <?php foreach ($stu_det as $student_det){
     $var =  $student_det->student_first_name;
     $jd[]= json_encode($var);

@@ -16,4 +16,9 @@ class Student_model extends MY_Model {
         $res = $query->result();
         return $res;
     }
+    public function search($table_name,$search_col_1,$sb1,$search_col_2,$sb2){
+        $query = $this->db->select('*')->where($search_col_1,$sb1)->get($table_name);
+        $res = $query->result();
+        return $res;
+    }
 }
