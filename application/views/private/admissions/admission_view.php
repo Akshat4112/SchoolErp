@@ -281,7 +281,6 @@
                         <td><?php echo $student_det->route ?></td>
                         <td><?php echo $student_det->scholarship_no ?></td>
                         <td><?php echo $student_det->fees_balance ?></td>
-
                     </tr>
                 <?php endforeach; ?>
             <?php else: ?>

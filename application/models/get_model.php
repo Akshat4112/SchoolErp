@@ -87,6 +87,12 @@ class Get_model extends MY_Model
         $res = $query->result();
         return $res;
     }
+    public function student_list(){
+
+        $query = $this->db->get('student');
+        $res = $query->result();
+        return $res;
+    }
     public function show_table($table_name){
         $query = $this->db->get($table_name);
         $res = $query->result();

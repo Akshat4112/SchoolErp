@@ -405,7 +405,7 @@ $config=[
         ],
     'sort_admission'=>[
         [
-            'field'=>'sort_col',
+            'field'=>'sort_col_1',
             'label'=>'This',
             'rules'=>'required'
         ]

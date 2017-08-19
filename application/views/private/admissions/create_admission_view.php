@@ -1,7 +1,6 @@
 <?php
 declare(strict_types=1);
 ?>
-
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
@@ -144,7 +143,6 @@ declare(strict_types=1);
                     echo form_dropdown('student_section', $drop, '', $attribute_class);
                     ?>
                     <?php echo form_error('student_section'); ?>
-
                 </div>
             </div>
             <div class="form-group">

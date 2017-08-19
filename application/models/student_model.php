@@ -11,7 +11,17 @@ class Student_model extends MY_Model {
         $res = $query->result();
         return $res;
     }
-    public function order_by($field_name,$by,$table_name){
+    public function order_by_one($field_name,$by,$table_name){
+        $query = $this->db->order_by($field_name,$by)->get($table_name);
+        $res = $query->result();
+        return $res;
+    }
+    public function order_by_two($field_name,$by,$table_name){
+        $query = $this->db->order_by($field_name,$by)->get($table_name);
+        $res = $query->result();
+        return $res;
+    }
+    public function order_by_three($field_name,$by,$table_name){
         $query = $this->db->order_by($field_name,$by)->get($table_name);
         $res = $query->result();
         return $res;

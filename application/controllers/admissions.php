@@ -14,22 +14,52 @@ class Admissions extends MY_Controller
 
     }
 
-
     public function index()
     {
-        //get name list for autocomplete functionality
+        $sort_col_1=$data['sort_col_1']='';
+        $sort_col_2=$data['sort_col_2']='';
+        $sort_col_3=$data['sort_col_3']='';
+
+        $sort_type_1=$data['sort_type_1']='';
+        $sort_type_2=$data['sort_type_2']='';
+        $sort_type_3=$data['sort_type_3']='';
+
         $this->load->model('student_model', 'sm');
         $data = $this->input->post();
         unset($data['submit']);
-        //print_r($data);
+//        print_r($data);
+
         if ($this->form_validation->run('sort_admission')) {
-            $field_name = $data['sort_col'];
-            $by=$data['sort_type'];
-            $table_name='student';
-            $stu_list = $this->sm->order_by($field_name,$by,$table_name);
-            $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
-            //echo 'success';
+            $table_name = 'student';
+            $sort_col_1=$data['sort_col_1'];
+            $sort_col_2=$data['sort_col_2'];
+            $sort_col_3=$data['sort_col_3'];
+
+            $sort_type_1=$data['sort_type_1'];
+            $sort_type_2=$data['sort_type_2'];
+            $sort_type_3=$data['sort_type_3'];
+
+            if($data['sort_type_3']==''){
+                if($data['sort_type_2']=='') {
+
+                    $stu_list = $this->sm->order_by_one($sort_col_1,$sort_type_1,$table_name);
+                    $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
+
+                }
+                else {
+                    echo '1';
+//                    $stu_list = $this->sm->order_by_one($table_name, $sort_col_1, $sort_type_1, $sort_col_2, $sort_type_2
+//                        , $sort_col_3, $sort_type_3);
+//                    $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
+                }
+            }else{
+                echo '2';
+//                $stu_list = $this->sm->order_by_one($table_name,$sort_col_1,$sort_type_1,$sort_col_2,$sort_type_2,
+//                    $sort_col_3,$sort_type_3);
+//                $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
+            }
         }else{
+            //echo 'failed';
             $stu_list = $this->sm->student_list();
             $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
         }
@@ -225,12 +255,7 @@ class Admissions extends MY_Controller
         $this->load->view('private/admissions/import_view');
     }
 
-    public function export()
-    {
-        $this->load->model('student_model', 'sm');
-        $stu_list = $this->sm->student_list();
-        $this->load->view('private/admissions/export_view', ['stu_det' => $stu_list]);
-    }
+
 
     public function admission_form()
     {
@@ -342,5 +367,47 @@ class Admissions extends MY_Controller
             $stu_list = $this->sm->student_list();
             $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
         }
+    }
+    public function export()
+    {
+        $this->load->model('student_model', 'sm');
+        $stu_list = $this->sm->student_list();
+        $this->load->view('private/admissions/export_view', ['stu_det' => $stu_list]);
+    }
+    public function excel_export(){
+        $this->load->model('student_model');
+        $this->load->library("excel");
+        $object = new PHPExcel();
+
+        $object->setActiveSheetIndex(0);
+        $table_coloums = array("Admission No.","Student Name","Fathers Name","Mothers Name",
+            "Class","Section","Roll No.","DOB","Contact No.","Route","Scholarship No.","Old Balance");
+        $coloumn=0;
+        foreach ($table_coloums as $field){
+            $object->getActiveSheet()->setCellValueByColumnAndRow($coloumn,1,$field);
+            $coloumn++;
+        }
+        $this->load->model('student_model', 'sm');
+        $student_data = $this->sm->student_list();
+        $excel_row = 2;
+        foreach ($student_data as $row){
+            $object->getActiveSheet()->setCellValueByColumnAndRow(0,$excel_row,$row->admission_no);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(1,$excel_row,$row->student_first_name);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(2,$excel_row,$row->fathers_first_name);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(3,$excel_row,$row->mothers_first_name);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(4,$excel_row,$row->student_class);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(5,$excel_row,$row->student_section);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(6,$excel_row,$row->student_roll_no);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(7,$excel_row,$row->student_dob);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(8,$excel_row,$row->f_mobile);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(9,$excel_row,$row->route);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(10,$excel_row,$row->scholarship_no);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(11,$excel_row,$row->fees_balance);
+            $excel_row++;
+        }
+        $object_writer =PHPExcel_IOFactory::createWriter($object,'Excel5');
+        header('Content-Type:application/vnd.ms-excel');
+        header('Content-Description:attachment;filename="AccounData.xls"');
+        $object_writer->save('php://output');
     }
 }
