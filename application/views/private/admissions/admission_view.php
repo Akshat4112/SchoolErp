@@ -4,13 +4,27 @@
         <div class="form-group">
             <label for="tags"></label>
             <div class="col-lg-1 text-info" style="font-size: 19px;">Search:</div>
-            <div class="col-lg-1">
+            <div class="col-lg-2">
                 <?php $options = [
-                    'student_first_name' => 'Name',
-                    'student_class' => 'Class',
-                    'student_section' => 'Section',
+                    'admission_no'=>'Admission No.',
+                    'student_first_name' => 'Student Name',
+                    'fathers_first_name'=>'Father Name',
+                    'mothers_first_name'=>'Mother Name',
                     'student_roll_no'=>'Roll No',
-                    'student_dob'=>'DOB'
+                    'city'=>'City',
+                    'f_mobile'=>'Contact No.',
+                    'email'=>'Email',
+                    'student_section' => 'Section',
+                    'gender' => 'Gender',
+                    'student_dob'=>'DOB',
+                    'route'=>'Route',
+                    'category' => 'Category',
+                    'scholarship_no'=>'Scholarship No.',
+                    'aadhar_uid'=>'Aadhar UID No.',
+                    'family'=>'Family',
+                    'house'=>'House',
+                    'caste'=>'Caste',
+                    'student_class'=>'Class'
                 ];
                 $attribute_class = [
                     'class' => 'form-control',
@@ -19,19 +33,33 @@
                 echo form_dropdown('search_col_1', $options, set_value('search_col_1'), $attribute_class);
                 ?>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-1">
                 <?php echo form_input(['name' => 'sb1', 'class' => 'form-control',
                     'placeholder' => 'Enter',
                     'value' => set_value('sb1')]); ?>
                 <?php echo form_error('sb1'); ?>
             </div>
-            <div class="col-lg-1">
+            <div class="col-lg-2">
                 <?php $options = [
-                    'student_first_name' => 'Name',
-                    'student_class' => 'Class',
-                    'student_section' => 'Section',
+                    'admission_no'=>'Admission No.',
+                    'student_first_name' => 'Student Name',
+                    'fathers_first_name'=>'Father Name',
+                    'mothers_first_name'=>'Mother Name',
                     'student_roll_no'=>'Roll No',
-                    'student_dob'=>'DOB'
+                    'city'=>'City',
+                    'f_mobile'=>'Contact No.',
+                    'email'=>'Email',
+                    'student_section' => 'Section',
+                    'gender' => 'Gender',
+                    'student_dob'=>'DOB',
+                    'route'=>'Route',
+                    'category' => 'Category',
+                    'scholarship_no'=>'Scholarship No.',
+                    'aadhar_uid'=>'Aadhar UID No.',
+                    'family'=>'Family',
+                    'house'=>'House',
+                    'caste'=>'Caste',
+                    'student_class'=>'Class'
                 ];
                 $attribute_class = [
                     'class' => 'form-control',
@@ -40,18 +68,32 @@
                 echo form_dropdown('search_col_2', $options, set_value('search_col_2'), $attribute_class);
                 ?>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-1">
                 <?php echo form_input(['name' => 'sb2', 'class' => 'form-control',
                     'placeholder' => 'Enter',
                     'value' => set_value('sb2')]); ?>
             </div>
-            <div class="col-lg-1">
+            <div class="col-lg-2">
                 <?php $options = [
-                    'student_first_name' => 'Name',
-                    'student_class' => 'Class',
-                    'student_section' => 'Section',
+                    'admission_no'=>'Admission No.',
+                    'student_first_name' => 'Student Name',
+                    'fathers_first_name'=>'Father Name',
+                    'mothers_first_name'=>'Mother Name',
                     'student_roll_no'=>'Roll No',
-                    'student_dob'=>'DOB'
+                    'city'=>'City',
+                    'f_mobile'=>'Contact No.',
+                    'email'=>'Email',
+                    'student_section' => 'Section',
+                    'gender' => 'Gender',
+                    'student_dob'=>'DOB',
+                    'route'=>'Route',
+                    'category' => 'Category',
+                    'scholarship_no'=>'Scholarship No.',
+                    'aadhar_uid'=>'Aadhar UID No.',
+                    'family'=>'Family',
+                    'house'=>'House',
+                    'caste'=>'Caste',
+                    'student_class'=>'Class'
                 ];
                 $attribute_class = [
                     'class' => 'form-control',
@@ -60,7 +102,7 @@
                 echo form_dropdown('search_col_3', $options, set_value('search_col_3'), $attribute_class);
                 ?>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-1">
                 <?php echo form_input(['name' => 'sb3', 'class' => 'form-control',
                     'placeholder' => 'Enter',
                     'value' => set_value('sb3')]); ?>
@@ -74,13 +116,27 @@
     <?php echo form_open('admissions/', ['class' => 'form-horizontal']); ?>
 <div class="row">
     <div class="col-lg-1 text-info" style="font-size: 19px;">Sort by:</div>
-    <div class="col-lg-1">
+    <div class="col-lg-2">
         <?php $options = [
-            'student_first_name' => 'Name',
-            'student_class' => 'Class',
-            'student_section' => 'Section',
+            'admission_no'=>'Admission No.',
+            'student_first_name' => 'Student Name',
+            'fathers_first_name'=>'Father Name',
+            'mothers_first_name'=>'Mother Name',
             'student_roll_no'=>'Roll No',
-            'student_dob'=>'DOB'
+            'city'=>'City',
+            'f_mobile'=>'Contact No.',
+            'email'=>'Email',
+            'student_section' => 'Section',
+            'gender' => 'Gender',
+            'student_dob'=>'DOB',
+            'route'=>'Route',
+            'category' => 'Category',
+            'scholarship_no'=>'Scholarship No.',
+            'aadhar_uid'=>'Aadhar UID No.',
+            'family'=>'Family',
+            'house'=>'House',
+            'caste'=>'Caste',
+            'student_class'=>'Class'
         ];
         $attribute_class = [
             'class' => 'form-control',
@@ -89,10 +145,10 @@
         echo form_dropdown('sort_col_1', $options, set_value('sort_col_1'), $attribute_class);
         ?>
     </div>
-    <div class="col-lg-2">
+    <div class="col-lg-1">
         <?php $options = [
-            'ASC' => 'Ascending',
-            'DESC' => 'Descending'
+            'ASC' => 'ASC',
+            'DESC' => 'DSC'
         ];
         $attribute_class = [
             'class' => 'form-control',
@@ -101,13 +157,27 @@
         echo form_dropdown('sort_type_1', $options, set_value('sort_type_1'), $attribute_class);
         ?>
     </div>
-    <div class="col-lg-1">
+    <div class="col-lg-2">
         <?php $options = [
-            'student_first_name' => 'Name',
-            'student_class' => 'Class',
-            'student_section' => 'Section',
+            'admission_no'=>'Admission No.',
+            'student_first_name' => 'Student Name',
+            'fathers_first_name'=>'Father Name',
+            'mothers_first_name'=>'Mother Name',
             'student_roll_no'=>'Roll No',
-            'student_dob'=>'DOB'
+            'city'=>'City',
+            'f_mobile'=>'Contact No.',
+            'email'=>'Email',
+            'student_section' => 'Section',
+            'gender' => 'Gender',
+            'student_dob'=>'DOB',
+            'route'=>'Route',
+            'category' => 'Category',
+            'scholarship_no'=>'Scholarship No.',
+            'aadhar_uid'=>'Aadhar UID No.',
+            'family'=>'Family',
+            'house'=>'House',
+            'caste'=>'Caste',
+            'student_class'=>'Class'
         ];
         $attribute_class = [
             'class' => 'form-control',
@@ -116,10 +186,10 @@
         echo form_dropdown('sort_col_2', $options, set_value('sort_col_2'), $attribute_class);
         ?>
     </div>
-    <div class="col-lg-2">
+    <div class="col-lg-1">
         <?php $options = [
-            'ASC' => 'Ascending',
-            'DESC' => 'Descending'
+            'ASC' => 'ASC',
+            'DESC' => 'DSC'
         ];
         $attribute_class = [
             'class' => 'form-control',
@@ -128,13 +198,27 @@
         echo form_dropdown('sort_type_2', $options, set_value('sort_type_2'), $attribute_class);
         ?>
     </div>
-    <div class="col-lg-1">
+    <div class="col-lg-2">
         <?php $options = [
-            'student_first_name' => 'Name',
-            'student_class' => 'Class',
-            'student_section' => 'Section',
+            'admission_no'=>'Admission No.',
+            'student_first_name' => 'Student Name',
+            'fathers_first_name'=>'Father Name',
+            'mothers_first_name'=>'Mother Name',
             'student_roll_no'=>'Roll No',
-            'student_dob'=>'DOB'
+            'city'=>'City',
+            'f_mobile'=>'Contact No.',
+            'email'=>'Email',
+            'student_section' => 'Section',
+            'gender' => 'Gender',
+            'student_dob'=>'DOB',
+            'route'=>'Route',
+            'category' => 'Category',
+            'scholarship_no'=>'Scholarship No.',
+            'aadhar_uid'=>'Aadhar UID No.',
+            'family'=>'Family',
+            'house'=>'House',
+            'caste'=>'Caste',
+            'student_class'=>'Class'
         ];
         $attribute_class = [
             'class' => 'form-control',
@@ -143,10 +227,10 @@
         echo form_dropdown('sort_col_3', $options, set_value('sort_col_3'), $attribute_class);
         ?>
     </div>
-    <div class="col-lg-2">
+    <div class="col-lg-1">
         <?php $options = [
-            'ASC' => 'Ascending',
-            'DESC' => 'Descending'
+            'ASC' => 'ASC',
+            'DESC' => 'DSC'
         ];
         $attribute_class = [
             'class' => 'form-control',
@@ -184,7 +268,7 @@
             <?php if (count($stu_det)): ?>
                 <?php foreach ($stu_det as $student_det): ?>
                     <tr class="success ">
-                        <td><?php echo $student_det->student_id ?></td>
+                        <td><?php echo $student_det->admission_no?></td>
                         <td><?php echo $student_det->student_first_name ?></td>
                         <td><?php echo $student_det->fathers_first_name ?></td>
                         <td><?php echo $student_det->mothers_first_name ?></td>
