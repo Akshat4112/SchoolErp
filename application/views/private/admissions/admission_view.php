@@ -75,49 +75,85 @@
 <div class="row">
     <div class="col-lg-1 text-info" style="font-size: 19px;">Sort by:</div>
     <div class="col-lg-1">
-        <select class="form-control" name="sort_col_1">
-            <option value="student_first_name">Name</option>
-            <option value="student_class">Class</option>
-            <option value="student_section">Section</option>
-            <option value="student_roll_no">Roll No</option>
-            <option value="student_dob">DOB</option>
-        </select>
+        <?php $options = [
+            'student_first_name' => 'Name',
+            'student_class' => 'Class',
+            'student_section' => 'Section',
+            'student_roll_no'=>'Roll No',
+            'student_dob'=>'DOB'
+        ];
+        $attribute_class = [
+            'class' => 'form-control',
+            'id' => 'select',
+        ];
+        echo form_dropdown('sort_col_1', $options, set_value('sort_col_1'), $attribute_class);
+        ?>
     </div>
     <div class="col-lg-2">
-        <select class="form-control" name="sort_type_2">
-            <option value="ASC">Ascending</option>
-            <option value="DESC">Descending</option>
-        </select>
+        <?php $options = [
+            'ASC' => 'Ascending',
+            'DESC' => 'Descending'
+        ];
+        $attribute_class = [
+            'class' => 'form-control',
+            'id' => 'select',
+        ];
+        echo form_dropdown('sort_type', $options, set_value('sort_type'), $attribute_class);
+        ?>
     </div>
     <div class="col-lg-1">
-        <select class="form-control" name="sort_col_3">
-            <option value="student_first_name">Name</option>
-            <option value="student_class">Class</option>
-            <option value="student_section">Section</option>
-            <option value="student_roll_no">Roll No</option>
-            <option value="student_dob">DOB</option>
-        </select>
+        <?php $options = [
+            'student_first_name' => 'Name',
+            'student_class' => 'Class',
+            'student_section' => 'Section',
+            'student_roll_no'=>'Roll No',
+            'student_dob'=>'DOB'
+        ];
+        $attribute_class = [
+            'class' => 'form-control',
+            'id' => 'select',
+        ];
+        echo form_dropdown('sort_col_2', $options, set_value('sort_col_2'), $attribute_class);
+        ?>
     </div>
     <div class="col-lg-2">
-        <select class="form-control" name="sort_type">
-            <option value="ASC">Ascending</option>
-            <option value="DESC">Descending</option>
-        </select>
+        <?php $options = [
+            'ASC' => 'Ascending',
+            'DESC' => 'Descending'
+        ];
+        $attribute_class = [
+            'class' => 'form-control',
+            'id' => 'select',
+        ];
+        echo form_dropdown('sort_type', $options, set_value('sort_type'), $attribute_class);
+        ?>
     </div>
     <div class="col-lg-1">
-        <select class="form-control" name="sort_col">
-            <option value="student_first_name">Name</option>
-            <option value="student_class">Class</option>
-            <option value="student_section">Section</option>
-            <option value="student_roll_no">Roll No</option>
-            <option value="student_dob">DOB</option>
-        </select>
+        <?php $options = [
+            'student_first_name' => 'Name',
+            'student_class' => 'Class',
+            'student_section' => 'Section',
+            'student_roll_no'=>'Roll No',
+            'student_dob'=>'DOB'
+        ];
+        $attribute_class = [
+            'class' => 'form-control',
+            'id' => 'select',
+        ];
+        echo form_dropdown('sort_col_3', $options, set_value('sort_col_3'), $attribute_class);
+        ?>
     </div>
     <div class="col-lg-2">
-        <select class="form-control" name="sort_type">
-            <option value="ASC">Ascending</option>
-            <option value="DESC">Descending</option>
-        </select>
+        <?php $options = [
+            'ASC' => 'Ascending',
+            'DESC' => 'Descending'
+        ];
+        $attribute_class = [
+            'class' => 'form-control',
+            'id' => 'select',
+        ];
+        echo form_dropdown('sort_type', $options, set_value('sort_type'), $attribute_class);
+        ?>
     </div>
     <div class="col-lg-2">
         <input type="submit" class="btn btn-info" name="submit" value="Sort">

@@ -323,9 +323,8 @@ class Admissions extends MY_Controller
 
             $stu_list = $this->sm->search($table_name,$search_col_1,$sb1,$search_col_2,$sb2
             ,$search_col_3,$sb3);
-            //$stu_list = $this->sm->student_list();
             $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
-            //echo 'success';
+
         }else{
             echo 'failed';
             $stu_list = $this->sm->student_list();
