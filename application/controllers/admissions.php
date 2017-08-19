@@ -21,7 +21,7 @@ class Admissions extends MY_Controller
         $this->load->model('student_model', 'sm');
         $data = $this->input->post();
         unset($data['submit']);
-        print_r($data);
+        //print_r($data);
         if ($this->form_validation->run('sort_admission')) {
             $field_name = $data['sort_col'];
             $by=$data['sort_type'];
@@ -309,7 +309,7 @@ class Admissions extends MY_Controller
         $this->load->model('student_model', 'sm');
         $data = $this->input->post();
         unset($data['submit']);
-        print_r($data);
+//        print_r($data);
 
         if ($this->form_validation->run('search_admission')) {
             $table_name = 'student';
@@ -320,14 +320,25 @@ class Admissions extends MY_Controller
             $sb1=$data['sb1'];
             $sb2=$data['sb2'];
             $sb3=$data['sb3'];
-            echo  $search_col_2,$sb2;
 
-            $stu_list = $this->sm->search($table_name,$search_col_1,$sb1,$search_col_2,$sb2
-            ,$search_col_3,$sb3);
-            $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
+            if($data['sb3']==''){
+                if($data['sb2']==''){
 
+                    $stu_list = $this->sm->search_one($table_name,$search_col_1,$sb1);
+                    $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
+
+                }else {
+                    $stu_list = $this->sm->search_two($table_name, $search_col_1, $sb1, $search_col_2, $sb2
+                        , $search_col_3, $sb3);
+                    $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
+                }
+            }else{
+                $stu_list = $this->sm->search_three($table_name,$search_col_1,$sb1,$search_col_2,$sb2,
+                    $search_col_3,$sb3);
+                $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
+            }
         }else{
-            echo 'failed';
+            //echo 'failed';
             $stu_list = $this->sm->student_list();
             $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
         }

@@ -16,8 +16,20 @@ class Student_model extends MY_Model {
         $res = $query->result();
         return $res;
     }
-    public function search($table_name,$search_col_1,$sb1,$search_col_2,$sb2){
+    public function search_one($table_name,$search_col_1,$sb1){
         $query = $this->db->select('*')->where($search_col_1,$sb1)->get($table_name);
+        $res = $query->result();
+        return $res;
+    }
+    public function search_two($table_name,$search_col_1,$sb1,$search_col_2,$sb2){
+        $query = $this->db->select('*')->where($search_col_1,$sb1)->where($search_col_2
+        ,$sb2)->get($table_name);
+        $res = $query->result();
+        return $res;
+    }
+    public function search_three($table_name,$search_col_1,$sb1,$search_col_2,$sb2,$search_col_3,$sb3){
+        $query = $this->db->select('*')->where($search_col_1,$sb1)->where($search_col_2
+            ,$sb2)->where($search_col_3,$sb3)->get($table_name);
         $res = $query->result();
         return $res;
     }
