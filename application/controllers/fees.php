@@ -106,9 +106,7 @@ class Fees extends MY_Controller{
     public function fees_card(){
         $this->load->view('private/fees/fees_card');
     }
-    public function fees_plan(){
-        $this->load->view('private/fees/fees_plan');
-    }
+
     public function fees_day_book(){
         $this->load->view('private/fees/fees_day_book');
     }
@@ -139,4 +137,57 @@ class Fees extends MY_Controller{
     public function fees_status_report(){}
     public function fees_dues_list_detailed(){}
     public function fees_estimation_list(){}
+    public function fees_receipt_register(){
+        $this->load->view('private/fees/fees_reports/fees_receipt_register');
+    }
+    public function fees_head_summary(){
+        $this->load->view('private/fees/fees_reports/fees_head_summary');
+    }
+    public function fees_monthly_summary(){
+        $this->load->view('private/fees/fees_reports/fees_monthly_summary');
+    }
+    public function fees_concc_sett(){
+        $this->load->view('private/fees/fees_reports/fees_concession_settings');
+    }
+    public function defaulter_list(){
+        $this->load->view('private/fees/fees_reports/defaulter_list');
+    }
+    public function balance_fees_report(){
+        $this->load->view('private/fees/fees_reports/balance_fees_report');
+    }
+    public function yearly_fees_receivable_report(){
+        $this->load->view('private/fees/fees_reports/yearly_fees_receivable_report');
+    }
+    public function receipt_book(){
+        $this->load->view('private/fees/fees_reports/receipt_book');
+    }
+    public function head_wise_collection(){
+        $this->load->view('private/fees/fees_reports/head_wise_collection');
+    }
+    public function fees_group_ledger(){
+        $this->load->view('private/fees/fees_reports/fees_group_ledger');
+    }
+    public function fees_structure(){
+        $this->load->view('private/fees/fees_reports/fees_structure');
+    }
+    public function fees_summary_date_wise(){
+        $this->load->view('private/fees/fees_reports/fees_summary_date_wise');
+    }
+    public function fees_category_concc_wise(){
+        $this->load->view('private/fees/fees_reports/fees_category_concc_wise');
+    }
+    public function fees_head_wise_concc_report(){
+        $this->load->view('private/fees/fees_reports/fees_head_wise_concc_report');
+    }
+    public function concc_register(){
+        $this->load->view('private/fees/fees_reports/concc_register');
+    }
+
+
+    public function fees_plan(){
+        $this->load->view('private/fees/fees_plan');
+    }
+    public function fees_plan_category(){
+        $this->load->view('private/fees/fees_plan_category');
+    }
 }

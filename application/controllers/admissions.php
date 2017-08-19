@@ -21,6 +21,7 @@ class Admissions extends MY_Controller
         $this->load->model('student_model', 'sm');
         $data = $this->input->post();
         unset($data['submit']);
+        print_r($data);
         if ($this->form_validation->run('sort_admission')) {
             $field_name = $data['sort_col'];
             $by=$data['sort_type'];
@@ -265,21 +266,21 @@ class Admissions extends MY_Controller
         $table_namesec = 'section';
         $section_list = $this->gm->get_list($fieldsec, $table_namesec);
 
-        $this->load->model('get_model', 'gm');
-        if ($this->form_validation->run()) {
+
+        if ($this->form_validation->run('id_card')) {
             $class = '';
             $section = '';
             $data = $this->input->post();
             unset($data['submit']);
-            print_r($data);
+
             $class = $data['class'];
             $section = $data['section'];
 
             $table_view = $this->gm->id_card_rec($class, $section);
-            print_r($table_view);
             $this->load->view('private/admissions/id_card.php', ['class_drop' => $class_list, 'section_drop' => $section_list,
                 'table_view' => $table_view]);
         } else {
+
             $table_view = $this->gm->id_card_rec(-1,-1);
             $this->load->view('private/admissions/id_card.php', ['class_drop' => $class_list, 'section_drop' => $section_list,
                 'table_view' => $table_view]);

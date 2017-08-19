@@ -98,7 +98,7 @@
             'class' => 'form-control',
             'id' => 'select',
         ];
-        echo form_dropdown('sort_type', $options, set_value('sort_type'), $attribute_class);
+        echo form_dropdown('sort_type_1', $options, set_value('sort_type_1'), $attribute_class);
         ?>
     </div>
     <div class="col-lg-1">
@@ -125,7 +125,7 @@
             'class' => 'form-control',
             'id' => 'select',
         ];
-        echo form_dropdown('sort_type', $options, set_value('sort_type'), $attribute_class);
+        echo form_dropdown('sort_type_2', $options, set_value('sort_type_2'), $attribute_class);
         ?>
     </div>
     <div class="col-lg-1">
@@ -152,7 +152,7 @@
             'class' => 'form-control',
             'id' => 'select',
         ];
-        echo form_dropdown('sort_type', $options, set_value('sort_type'), $attribute_class);
+        echo form_dropdown('sort_type_3', $options, set_value('sort_type_3'), $attribute_class);
         ?>
     </div>
     <div class="col-lg-2">

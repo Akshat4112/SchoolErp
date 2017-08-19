@@ -6,6 +6,13 @@
  * Time: 12:30 AM
  */
 $config=[
+    'id_card'=>[
+        [
+            'field'=>'class',
+            'label'=>'Name',
+            'rules'=>'required'
+        ]
+    ],
     'sln'=>[
         [
             'field'=>'student_name',

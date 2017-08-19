@@ -15,7 +15,7 @@
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('class', $drop,'', $attribute_class);
+                    echo form_dropdown('class', $drop,set_value('class'), $attribute_class);
                     ?>
                     <?php echo form_error('class'); ?>
                 </div>
@@ -33,7 +33,7 @@
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('section', $drop,'', $attribute_class);
+                    echo form_dropdown('section', $drop,set_value('section'), $attribute_class);
                     ?>
                     <?php echo form_error('section'); ?>
                 </div>
