@@ -249,7 +249,7 @@
         <table class="table table-hover " id="userTbl">
             <thead>
             <tr class="info">
-
+                <th>Sno.</th>
                 <th>Admission No.</th>
                 <th>Name</th>
                 <th>Father</th>
@@ -268,6 +268,7 @@
             <?php if (count($stu_det)): ?>
                 <?php foreach ($stu_det as $student_det): ?>
                     <tr class="success ">
+                        <td><?php echo 'sno'; ?></td>
                         <td><?php echo $student_det->admission_no?></td>
                         <td><?php echo $student_det->student_first_name ?></td>
                         <td><?php echo $student_det->fathers_first_name ?></td>

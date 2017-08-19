@@ -58,15 +58,15 @@ declare(strict_types=1);
                 <label for="select" class="col-lg-2 control-label">Gender</label>
                 <div class="col-lg-10">
                     <?php $options = [
-                        'Male' => 'Male',
-                        'Female' => 'Female',
-                        'Other' => 'Other'
+                        'male' => 'Male',
+                        'female' => 'Female',
+                        'other' => 'Other'
                     ];
                     $attribute_class = [
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('gender', $options, 'male', $attribute_class);
+                    echo form_dropdown('gender', $options,set_value('gender'), $attribute_class);
                     ?>
                     <?php echo form_error('gender'); ?>
 
