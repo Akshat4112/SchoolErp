@@ -38,41 +38,44 @@
             </div>
 
             <div class="col-lg-6">
-                Category
-                <div class="checkbox">
-                    <label>
-                        <input  type="checkbox" value="jan" class="monthly quaterly"> Select all
-                    </label><br>
-                    <label>
-                        <input  type="checkbox" value="jan" class="monthly quaterly"> General
-                    </label><br>
-                    <label>
-                        <input type="checkbox" value="feb" class="monthly bi_monthly"> OBC
-                    </label><br>
-                    <label>
-                        <input type="checkbox" value="mar" class="monthly"> New Student with old Uniform
-                    </label><br>
-                    <label>
-                        <input type="checkbox" value="apr" class="monthly quaterly four_monthly half_yearly annual bi_monthly one_time"> Apr
-                    </label><br>
-                </div>
+                <?php
+                echo '<p class="text-info" style="font-size: 17px;">Category</p>'.'<br>';
+                $drop=array();
+                foreach($category as $r){
+                    $drop[$r['category_name']]=$r['category_name'];
+                }
+                $ara=$drop;
+                if(!empty($ara)){
+                    foreach ($ara as $hb){
+                        $checked = (in_array($hb,$ara))?'':'';
+                ?>
+                        <input type="checkbox" name="hb[]" value="<?php echo $hb?>" size="17" <?php echo $checked;
+                        ?>><?php echo $hb.'<br>'; ?>
+                <?php
+                    }
+                }
+                ?>
             </div>
-            <div class="col-lg-6">Class
-                    <div class="checkbox">
-                        <label>
-                            <input  type="checkbox" value="jan" class="monthly quaterly"> Select all
-                        </label><br>
-                        <label>
-                            <input  type="checkbox" value="jan" class="monthly quaterly"> 1
-                        </label><br>
-                        <label>
-                            <input type="checkbox" value="feb" class="monthly bi_monthly"> 2
-                        </label><br>
-                        <label>
-                            <input type="checkbox" value="mar" class="monthly"> 3
-                        </label><br>
-                    </div>
-                </div>
+            <div class="col-lg-6">
+                <?php
+                echo '<p class="text-info" style="font-size: 17px;">Class</p>'.'<br>';
+                $drop=array();
+                foreach($class as $r){
+                    $drop[$r['class']]=$r['class'];
+                }
+                $ara=$drop;
+
+                if(!empty($ara)){
+                    foreach ($ara as $hb){
+                        $checked = (in_array($hb,$ara))?'':'';
+                        ?>
+                        <input type="checkbox" name="hb[]" value="<?php echo $hb?>" size="17" <?php echo $checked;
+                        ?>><?php echo $hb.'<br>'; ?>
+                        <?php
+                    }
+                }
+                ?>
+            </div>
         </div>
         <div class="col-lg-6">
             <table class="table table-hover ">

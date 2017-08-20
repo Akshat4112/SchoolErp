@@ -54,7 +54,7 @@
             <table class="table table-hover ">
                 <thead>
                 <tr class="info">
-                    <th>Section</th>
+                    <th>Fees Head Group</th>
                 </tr>
                 </thead>
                 <tbody>
