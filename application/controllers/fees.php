@@ -101,9 +101,7 @@ class Fees extends MY_Controller{
     public function fees_view(){
         $this->load->view('private/fees/fees_view');
     }
-    public function fees_receipt(){
-        $this->load->view('private/fees/fees_receipt');
-    }
+
     public function fees_card(){
         $this->load->view('private/fees/fees_card');
     }
@@ -223,5 +221,19 @@ class Fees extends MY_Controller{
         $unset='del_category';
         $value_form='category_delete';
         $this->delete_genric($form_validation,$table_name,$view,$field,$unset,$value_form);
+    }
+    public function fees_receipt(){
+        if ($this->form_validation->run('fees_receipt_search')) {
+            $post = $this->input->post();
+            unset($post['submit']);
+            $admission_no = $post['admission_no'];
+            $this->load->model('get_model', 'gm');
+            $stu_det = $this->gm->admission_form_search($admission_no);
+            $this->load->view('private/fees/fees_receipt', ['stu_det' => $stu_det]);
+        } else {
+            $this->load->model('get_model', 'gm');
+            $stu_list = $this->gm->admission_form_search(0);
+            $this->load->view('private/fees/fees_receipt', ['stu_det' => $stu_list]);
+        }
     }
 }

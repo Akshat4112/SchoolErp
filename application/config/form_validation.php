@@ -437,5 +437,12 @@ $config=[
             'label'=>'Category',
             'rules'=>'required'
         ]
+    ],
+    'fees_receipt_search'=>[
+        [
+            'field'=>'admission_no',
+            'label'=>'Admission No.',
+            'rules'=>'required'
+        ]
     ]
 ];

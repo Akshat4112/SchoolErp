@@ -10,16 +10,16 @@
         <div class="col-lg-4">
             <p style="font-size: 20px;" class="text-info">Fees Receipt</p>
 
-            <?php echo form_open('admissions/student_details', ['class' => 'form-horizontal']); ?>
+            <?php echo form_open('fees/fees_receipt', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">Date</label>
-                <div class="col-lg-10">
+                <label for="inputText" class="col-lg-3 control-label">Date</label>
+                <div class="col-lg-9">
                     <input type="date" class="form-control" name="date">
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">Reciept No.</label>
-                <div class="col-lg-10">
+                <label for="inputText" class="col-lg-3 control-label">Reciept No.</label>
+                <div class="col-lg-9">
                     <?php echo form_input(['name' => 'receipt_no', 'class' => 'form-control',
                         'placeholder' => 'Enter Reciept No.',
                         'value' => set_value('receipt_no')]);
@@ -28,8 +28,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">Admission No.</label>
-                <div class="col-lg-10">
+                <label for="inputText" class="col-lg-3 control-label">Admission No.</label>
+                <div class="col-lg-9">
                     <?php echo form_input(['name' => 'admission_no', 'class' => 'form-control',
                         'placeholder' => 'Enter Admission No.',
                         'value' => set_value('admission_no')]);
@@ -57,16 +57,25 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>Akshat</td>
-                    <td>6</td>
-                    <td>COD</td>
-                    <td>General</td>
-                    <td>A.K Gupta</td>
-                    <td>5</td>
-                    <td>9090909090</td>
-                    <td>5000</td>
-                </tr>
+                <?php if (count($stu_det)): ?>
+
+                    <?php foreach ($stu_det as $student_det): ?>
+                        <tr>
+                            <td><?php echo $student_det['student_first_name'] ?></td>
+                            <td><?php echo $student_det['student_class'] ?></td>
+                            <td><?php echo $student_det['route'] ?></td>
+                            <td><?php echo $student_det['category']?></td>
+                            <td><?php echo $student_det['fathers_first_name'] ?></td>
+                            <td><?php echo $student_det['student_roll_no'] ?></td>
+                            <td><?php echo $student_det['f_mobile'] ?></td>
+                            <td><?php echo $student_det['fees_balance'] ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <tr class="success">
+                        <td>No Records Found</td>
+                    </tr>
+                <?php endif; ?>
                 </tbody>
             </table>
 
