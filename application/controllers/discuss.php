@@ -5,6 +5,7 @@
  * Date: 7/19/2017
  * Time: 1:40 PM
  */
+defined('BASEPATH') OR exit('No direct script access allowed');
 class Discuss extends MY_Controller{
     public function __construct()
     {

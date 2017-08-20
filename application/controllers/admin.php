@@ -6,6 +6,7 @@
  * Date: 7/15/2017
  * Time: 8:27 PM
  */
+defined('BASEPATH') OR exit('No direct script access allowed');
 class Admin extends MY_Controller
 {
     public function __construct()

@@ -5,6 +5,7 @@
  * Date: 7/17/2017
  * Time: 8:22 PM
  */
+defined('BASEPATH') OR exit('No direct script access allowed');
 class Attendance extends MY_Controller{
     public function __construct()
     {

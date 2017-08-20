@@ -11,8 +11,8 @@
         <p style="font-size: 20px" class="text-info">Create Fees Heading</p>
         <?php echo form_open('fees/fees_head', ['class' => 'form-horizontal']); ?>
         <div class="form-group">
-            <label for="inputText" class="col-lg-2 control-label">Fees Heading</label>
-            <div class="col-lg-10">
+            <label for="inputText" class="col-lg-3 control-label">Fees Heading</label>
+            <div class="col-lg-9">
                 <?php echo form_input(['name' => 'fees_heading', 'class' => 'form-control',
                     'placeholder' => 'Enter Fees Heading',
                     'value' => set_value('fees_heading')]);
@@ -21,8 +21,8 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="inputText" class="col-lg-2 control-label">Group Name</label>
-            <div class="col-lg-10">
+            <label for="inputText" class="col-lg-3 control-label">Group Name</label>
+            <div class="col-lg-9">
                 <?php
                 $drop=array();
                 foreach($view_drop_fhg as $r){
@@ -37,8 +37,8 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="inputText" class="col-lg-2 control-label">Account Name</label>
-            <div class="col-lg-10">
+            <label for="inputText" class="col-lg-3 control-label">Account Name</label>
+            <div class="col-lg-9">
                 <?php
                 $drop=array();
                 foreach($view_drop_anl as $r){
@@ -53,8 +53,8 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="inputText" class="col-lg-2 control-label">Frequency</label>
-            <div class="col-lg-10">
+            <label for="inputText" class="col-lg-3 control-label">Frequency</label>
+            <div class="col-lg-9">
                 <select class="form-control" name="frequency">
                     <option value="annual">Annual</option>
                     <option value="bi_monthly">Bi Monthly</option>

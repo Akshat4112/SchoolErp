@@ -5,6 +5,7 @@
  * Date: 8/6/2017
  * Time: 1:35 PM
  */
+defined('BASEPATH') OR exit('No direct script access allowed');
 class Enquiry extends MY_Controller{
     public function __construct()
     {

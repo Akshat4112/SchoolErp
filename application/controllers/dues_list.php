@@ -5,6 +5,7 @@
  * Date: 7/17/2017
  * Time: 1:16 PM
  */
+defined('BASEPATH') OR exit('No direct script access allowed');
 class Dues_list extends MY_Controller{
     public function __construct()
     {

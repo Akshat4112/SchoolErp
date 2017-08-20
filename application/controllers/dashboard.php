@@ -6,6 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Date: 5/30/2017
  * Time: 6:36 PM
  */
+defined('BASEPATH') OR exit('No direct script access allowed');
 class Dashboard extends MY_Controller{
     /**
      * Dashboard constructor.

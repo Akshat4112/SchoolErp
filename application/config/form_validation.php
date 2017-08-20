@@ -416,5 +416,12 @@ $config=[
             'label'=>'This',
             'rules'=>'required'
         ]
+    ],
+    'fees_head_group_del'=>[
+        [
+            'field'=>'fees_head_group_name_del',
+            'label'=>'This',
+            'rules'=>'required'
+        ]
     ]
 ];

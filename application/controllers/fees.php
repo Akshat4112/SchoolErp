@@ -5,7 +5,7 @@
  * Date: 7/18/2017
  * Time: 10:30 PM
  */
-
+defined('BASEPATH') OR exit('No direct script access allowed');
 class Fees extends MY_Controller{
     public function __construct()
     {
@@ -83,14 +83,18 @@ class Fees extends MY_Controller{
         $view='fees_head_group';
         $field='fees_head_group_name';
         $this->insert_genric($form_validation,$table_name,$view,$field);
+    }
+    public function fees_head_group_del(){
 
-        //for deleting records in databse from fees_head group
-        $form_validation='fees_head_del';
-        $table_name='';
-        $view='fees/fees_head';
-        $unset='';
-        $value_form='';
-        //delete_genric($form_validation,$table_name,$view,$field,$unset,$value_form);
+        $form_validation='fees_head_group_del';
+        $table_name='fees_head_group';
+        $view='fees/fees_head_group';
+        $field='fees_head_group_name';
+        $unset='del_fhg';
+        $value_form='fees_head_group_name_del';
+        $this->delete_genric($form_validation,$table_name,$view,$field,$unset,$value_form);
+
+
 
     }
     public function fees_conc_sett()
@@ -110,12 +114,10 @@ class Fees extends MY_Controller{
     public function fees_day_book(){
         $this->load->view('private/fees/fees_day_book');
     }
+
     public function insert_genric($form_validation,$table_name,$view,$field)
     {
         if ($this->form_validation->run($form_validation)) {
-
-            // for inserting class in database from model
-
             $this->load->model('add_model', 'am');
             $post = $this->input->post();
             unset($post['submit']);
@@ -132,6 +134,7 @@ class Fees extends MY_Controller{
             $this->load->view('private/fees/'.$view,['view'=>$array]);
         }
     }
+
     public function fees_dues_class_fees(){}
     public function family_wise_dues_list(){}
     public function fees_status_report(){}
@@ -190,7 +193,7 @@ class Fees extends MY_Controller{
         $fees_head_list = $this->gm->get_list($field,$table_name);
         $data=$this->input->post();
         unset($data['submit']);
-        print_r($data);
+//        print_r($data);
         $this->load->view('private/fees/fees_plan',['fhl'=>$fees_head_list]);
 
     }
