@@ -117,11 +117,10 @@
                     <input type="checkbox"> Dec
                 </label>
             </div>
+            <input type="submit" name="submit" value="Ok" class="btn btn-info"">
             <div class="row" style="margin-top: 30px;">
                 <div class="col-lg-12">
                 <div class="col-lg-2">
-
-
                 </div>
                 <div class="col-lg-2">
                     <?php echo form_open('admissions/student_details', ['class' => 'form-horizontal']); ?>
@@ -199,5 +198,28 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="row">
+        <table class="table table-hover ">
+            <thead>
+            <tr class="info">
+                <th>Admission No.</th>
+                <th>Name</th>
+                <th>Father</th>
+                <th>Mother</th>
+                <th>Class</th>
+                <th>Section</th>
+                <th>Roll No.</th>
+                <th>DOB</th>
+                <th>Contact No.</th>
+                <th>Route</th>
+                <th>Sch. No.</th>
+                <th>Old Balance</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
     </div>
 </div>
