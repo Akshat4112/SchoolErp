@@ -93,9 +93,6 @@ class Fees extends MY_Controller{
         $unset='del_fhg';
         $value_form='fees_head_group_name_del';
         $this->delete_genric($form_validation,$table_name,$view,$field,$unset,$value_form);
-
-
-
     }
     public function fees_conc_sett()
     {
@@ -198,6 +195,20 @@ class Fees extends MY_Controller{
 
     }
     public function fees_plan_category(){
-        $this->load->view('private/fees/fees_plan_category');
+        $form_validation='fees_plan_category';
+        $table_name='fees_plan_category';
+        $view='fees_plan_category';
+        $field='category_name';
+        $this->insert_genric($form_validation,$table_name,$view,$field);
+    }
+    public function fees_plan_category_del()
+    {
+        $form_validation='fees_plan_category_del';
+        $table_name='fees_plan_category';
+        $view='fees/fees_plan_category';
+        $field='category_name';
+        $unset='del_category';
+        $value_form='category_delete';
+        $this->delete_genric($form_validation,$table_name,$view,$field,$unset,$value_form);
     }
 }

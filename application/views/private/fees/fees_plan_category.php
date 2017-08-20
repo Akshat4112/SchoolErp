@@ -17,7 +17,6 @@
                         'placeholder' => 'Enter Category',
                         'value' => set_value('category_name')]);
                     ?>
-                    <?php echo form_error('category_name'); ?>
                 </div>
             </div>
             <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-info',
@@ -27,32 +26,39 @@
             <?php echo form_close();?>
 
             <p style="font-size: 20px; margin-top: 40px;" class="text-info">Enter Category to be deletd</p>
-            <?php echo form_open('admin/masters_section_del', ['class' => 'form-horizontal']); ?>
+            <?php echo form_open('fees/fees_plan_category_del', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">Section</label>
+                <label for="inputText" class="col-lg-2 control-label">Category</label>
                 <div class="col-lg-10">
-                    <?php  echo form_input(['name' => 'category_delete', 'class' => 'form-control',
-                        'placeholder' => 'Enter Category',
-                        'value' => set_value('category_delete')]);
+                    <?php
+                    $drop=array();
+                    foreach($view as $r){
+                        $drop[$r['category_name']]=$r['category_name'];
+                    }
+                    $attribute_class = [
+                        'class' => 'form-control',
+                        'id' => 'select',
+                    ];
+                    echo form_dropdown('category_delete', $drop,'', $attribute_class);
                     ?>
-                    <?php echo form_error('category_delete'); ?>
+
                 </div>
-                <input type="submit" name="del_section" class="btn btn-danger" value="DELETE" style="margin-left: 50px; margin-top: 20px;">
+                <input type="submit" name="del_category" class="btn btn-danger" value="DELETE" style="margin-left: 50px; margin-top: 20px;">
                 <?php  form_close(); ?>
             </div>
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-5">
             <table class="table table-hover ">
                 <thead>
                 <tr class="info">
-                    <th>Section</th>
+                    <th>Fees Plan Category</th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php if (count($view)): ?>
                     <?php
-                    foreach ($view as $section) {
-                        echo "<tr class='success'><td>" . $section['section_name'] . '<br>' . "</td></tr>";
+                    foreach ($view as $fpc) {
+                        echo "<tr class='success'><td>" . $fpc['category_name'] . '<br>' . "</td></tr>";
                     }
                     ?>
 
@@ -63,6 +69,10 @@
                 <?php endif; ?>
                 </tbody>
             </table>
+        </div>
+        <div class="col-lg-3">
+            <?php echo form_error('category_name'); ?>
+            <?php echo form_error('category_delete'); ?>
         </div>
     </div>
 </div>

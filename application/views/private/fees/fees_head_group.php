@@ -19,7 +19,7 @@
                         'placeholder' => 'Enter Fees Head Group',
                         'value' => set_value('fees_head_group_namee')]);
                     ?>
-                    <?php echo form_error('fees_head_group_name'); ?>
+
                 </div>
             </div>
             <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-info',
@@ -33,17 +33,24 @@
             <div class="form-group">
                 <label for="inputText" class="col-lg-4 control-label">Fees head Group</label>
                 <div class="col-lg-8">
-                    <?php  echo form_input(['name' => 'fees_head_group_name_del', 'class' => 'form-control',
-                        'placeholder' => 'Enter Fees Head Group',
-                        'value' => set_value('fees_head_group_name_del')]);
+                    <?php
+                    $drop=array();
+                    foreach($view as $r){
+                        $drop[$r['fees_head_group_name']]=$r['fees_head_group_name'];
+                    }
+                    $attribute_class = [
+                        'class' => 'form-control',
+                        'id' => 'select',
+                    ];
+                    echo form_dropdown('fees_head_group_name_del', $drop,'', $attribute_class);
                     ?>
-                    <?php echo form_error('fees_head_group_name_del'); ?>
                 </div>
                 <input type="submit" name="del_fhg" class="btn btn-danger" value="DELETE" style="margin-left: 50px; margin-top: 20px;">
                 <?php  form_close(); ?>
             </div>
         </div>
-        <div class="col-lg-8">
+
+        <div class="col-lg-5">
             <table class="table table-hover ">
                 <thead>
                 <tr class="info">
@@ -58,6 +65,10 @@
                 ?>
                 </tbody>
             </table>
+        </div>
+        <div class="col-lg-3">
+            <?php echo form_error('fees_head_group_name'); ?>
+            <?php echo form_error('fees_head_group_name_del'); ?>
         </div>
     </div>
 </div>

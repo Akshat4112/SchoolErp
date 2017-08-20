@@ -90,7 +90,7 @@ $config=[
         [
             [
                 'field'=>'fees_head_group_name',
-                'label'=>'Fees Head Group Name',
+                'label'=>'Fees Head Group',
                 'rules'=>'required'
             ]
         ],
@@ -420,7 +420,21 @@ $config=[
     'fees_head_group_del'=>[
         [
             'field'=>'fees_head_group_name_del',
-            'label'=>'This',
+            'label'=>'Fees Head Group',
+            'rules'=>'required'
+        ]
+    ],
+    'fees_plan_category'=>[
+        [
+            'field'=>'category_name',
+            'label'=>'Category',
+            'rules'=>'required'
+        ]
+    ],
+    'fees_plan_category_del'=>[
+        [
+            'field'=>'category_delete',
+            'label'=>'Category',
             'rules'=>'required'
         ]
     ]
