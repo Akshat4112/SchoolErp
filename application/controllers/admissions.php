@@ -44,7 +44,6 @@ class Admissions extends MY_Controller
 
                     $stu_list = $this->sm->order_by_one($sort_col_1,$sort_type_1,$table_name);
                     $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
-
                 }
                 else {
                     echo '1';
