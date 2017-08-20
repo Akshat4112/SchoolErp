@@ -183,9 +183,16 @@ class Fees extends MY_Controller{
         $this->load->view('private/fees/fees_reports/concc_register');
     }
 
-
     public function fees_plan(){
-        $this->load->view('private/fees/fees_plan');
+        $table_name =  'fees_head';
+        $field = 'fees_heading';
+        $this->load->model('get_model', 'gm');
+        $fees_head_list = $this->gm->get_list($field,$table_name);
+        $data=$this->input->post();
+        unset($data['submit']);
+        print_r($data);
+        $this->load->view('private/fees/fees_plan',['fhl'=>$fees_head_list]);
+
     }
     public function fees_plan_category(){
         $this->load->view('private/fees/fees_plan_category');
