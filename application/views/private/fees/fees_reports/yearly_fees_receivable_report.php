@@ -79,7 +79,9 @@
                     <th>Father</th>
                     <th>Old Balance</th>
                     <th>Total Fees</th>
-                    <th>Old Balance</th>
+                    <th>Late Fees</th>
+                    <th>Net Amount</th>
+                    <th>Fees Received</th>
                 </tr>
                 </thead>
                 <tbody>

@@ -38,7 +38,6 @@
                         <li><a href="<?=site_url('fees_reports/fees_receipt_register') ?>">Fees Receipt Register</a></li>
                         <li><a href="<?=site_url('fees_reports/fees_head_summary') ?>">Fees Head Summary</a></li>
                         <li><a href="<?=site_url('fees/fees_monthly_summary') ?>">Fees Monthly Summary</a></li>
-                        <li><a href="<?=site_url('fees/fees_conc_sett') ?>">Fees Concesion Settings</a></li>
                         <li><a href="<?=site_url('fees/defaulter_list') ?>">Defaulter List</a></li>
                         <li><a href="<?=site_url('fees_reports/balance_fees_report') ?>">Balance Fees Report</a></li>
                         <li><a href="<?=site_url('fees/yearly_fees_receivable_report') ?>">Yearly Fees Receivable Report</a></li>
@@ -72,6 +71,7 @@
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="<?=site_url('fees/fees_head_group') ?>">Fees Head Group</a></li>
                         <li><a href="<?=site_url('fees/fees_plan_category') ?>">Fees Plan Category</a></li>
+                        <li><a href="<?=site_url('fees/fees_conc_sett') ?>">Fees Concesion Settings</a></li>
                     </ul>
                 </li>
 
