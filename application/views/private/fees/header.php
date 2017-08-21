@@ -35,8 +35,8 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Fees Reports<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="<?=site_url('fees/fees_receipt_register') ?>">Fees Receipt Register</a></li>
-                        <li><a href="<?=site_url('fees/fees_head_summary') ?>">Fees Head Summary</a></li>
+                        <li><a href="<?=site_url('fees_reports/fees_receipt_register') ?>">Fees Receipt Register</a></li>
+                        <li><a href="<?=site_url('fees_reports/fees_head_summary') ?>">Fees Head Summary</a></li>
                         <li><a href="<?=site_url('fees/fees_monthly_summary') ?>">Fees Monthly Summary</a></li>
                         <li><a href="<?=site_url('fees/fees_conc_sett') ?>">Fees Concesion Settings</a></li>
                         <li><a href="<?=site_url('fees/defaulter_list') ?>">Defaulter List</a></li>
