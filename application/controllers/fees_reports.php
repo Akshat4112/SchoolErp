@@ -17,6 +17,8 @@ class Fees_reports extends MY_Controller {
     }
 
     public function balance_fees_report(){
+//        $data=$this->input->post();
+//        print_r($data);
         $this->load->view('private/fees/fees_reports/balance_fees_report');
     }
     public function fees_receipt_register(){

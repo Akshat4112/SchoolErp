@@ -79,11 +79,7 @@
                     <th>Father</th>
                     <th>Old Balance</th>
                     <th>Total Fees</th>
-                    <th></th>
-                    <th>Route</th>
-                    <th>Months</th>
                     <th>Old Balance</th>
-                    <th>Fees</th>
                 </tr>
                 </thead>
                 <tbody>
