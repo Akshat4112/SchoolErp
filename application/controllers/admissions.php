@@ -27,7 +27,7 @@ class Admissions extends MY_Controller
         $this->load->model('student_model', 'sm');
         $data = $this->input->post();
         unset($data['submit']);
-//        print_r($data);
+        print_r($data);
 
         if ($this->form_validation->run('sort_admission')) {
             $table_name = 'student';
@@ -39,26 +39,26 @@ class Admissions extends MY_Controller
             $sort_type_2=$data['sort_type_2'];
             $sort_type_3=$data['sort_type_3'];
 
-            if($data['sort_type_3']==''){
-                if($data['sort_type_2']=='') {
+//            if($data['sort_type_3']==''){
+//                if($data['sort_type_2']=='') {
 
                     $stu_list = $this->sm->order_by_one($sort_col_1,$sort_type_1,$table_name);
                     $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
-                }
-                else {
-                    echo '1';
+//                }
+//                else {
+//                    echo '1';
 //                    $stu_list = $this->sm->order_by_one($table_name, $sort_col_1, $sort_type_1, $sort_col_2, $sort_type_2
 //                        , $sort_col_3, $sort_type_3);
 //                    $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
-                }
-            }else{
-                echo '2';
+//                }
+//            }else{
+//                echo '2';
 //                $stu_list = $this->sm->order_by_one($table_name,$sort_col_1,$sort_type_1,$sort_col_2,$sort_type_2,
 //                    $sort_col_3,$sort_type_3);
 //                $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
-            }
+//            }
         }else{
-            //echo 'failed';
+            echo 'failed';
             $stu_list = $this->sm->student_list();
             $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
         }
