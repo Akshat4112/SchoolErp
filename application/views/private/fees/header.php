@@ -31,7 +31,6 @@
                 <li><a href="<?=site_url('fees/fees_receipt'); ?>">Fees Receipt</a></li>
                 <li><a href="<?=site_url('fees/fees_card'); ?>">Fees Card</a></li>
                 <li><a href="<?=site_url('fees/fees_plan'); ?>">Fees Plan</a></li>
-                <li><a href="<?=site_url('fees/fees_day_book'); ?>">Fees Day Book</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Fees Reports<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
@@ -42,7 +41,7 @@
                         <li><a href="<?=site_url('fees_reports/balance_fees_report') ?>">Balance Fees Report</a></li>
                         <li><a href="<?=site_url('fees/yearly_fees_receivable_report') ?>">Yearly Fees Receivable Report</a></li>
                         <li><a href="<?=site_url('fees/receipt_book') ?>">Receipt Book</a></li>
-                        <li><a href="<?=site_url('fees/fees_day_book') ?>">Fees Day Book</a></li>
+                        <li><a href="<?=site_url('fees_reports/fees_day_book') ?>">Fees Day Book</a></li>
                         <li><a href="<?=site_url('fees/head_wise_collection') ?>">Head Wise Collection</a></li>
                         <li><a href="<?=site_url('fees/fees_group_ledger') ?>">Fees Group Ledger</a></li>
                         <li><a href="<?=site_url('fees/fees_structure') ?>">Fees Structure</a></li>

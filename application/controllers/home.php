@@ -65,4 +65,7 @@ class Home extends MY_Controller
     public function feedback(){
         $this->load->view('public/feedback');
     }
+    public function register(){
+
+    }
 }

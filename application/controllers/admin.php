@@ -22,9 +22,7 @@ class Admin extends MY_Controller
 
         $this->load->view('private/admin/admin_dash');
     }
-    public function cw_strength(){
-        $this->load->view('private/admin/cw_strength');
-    }
+
     public function class_report(){
         $this->load->view('private/admin/class_report');
     }
@@ -228,5 +226,10 @@ class Admin extends MY_Controller
     }
     public function document_template(){
         $this->load->view('private/admin/misc/document_template');
+    }
+    public function cw_strength(){
+        $this->load->model('get_model','gm');
+        $sm = $this->gm->student_list();
+        $this->load->view('private/admin/cw_strength',['sm'=>$sm]);
     }
 }

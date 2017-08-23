@@ -27,7 +27,7 @@ class Admissions extends MY_Controller
         $this->load->model('student_model', 'sm');
         $data = $this->input->post();
         unset($data['submit']);
-        print_r($data);
+  //      print_r($data);
 
         if ($this->form_validation->run('sort_admission')) {
             $table_name = 'student';
@@ -58,7 +58,7 @@ class Admissions extends MY_Controller
 //                $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
 //            }
         }else{
-            echo 'failed';
+//            echo 'failed';
             $stu_list = $this->sm->student_list();
             $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
         }

@@ -9,7 +9,6 @@
     <div class="row">
         <div class="col-lg-4">
             <p style="font-size: 20px;" class="text-info">Fees Receipt</p>
-
             <?php echo form_open('fees/fees_receipt', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
                 <label for="inputText" class="col-lg-3 control-label">Date</label>
@@ -43,9 +42,9 @@
             <?php echo form_close(); ?>
         </div>
         <div class="col-lg-8">
-            <table class="table table-striped table-hover ">
+            <table class="table table-hover ">
                 <thead>
-                <tr>
+                <tr class="info">
                     <th>Name</th>
                     <th>Class</th>
                     <th>Route</th>
@@ -60,7 +59,7 @@
                 <?php if (count($stu_det)): ?>
 
                     <?php foreach ($stu_det as $student_det): ?>
-                        <tr>
+                        <tr class="success">
                             <td><?php echo $student_det['student_first_name'] ?></td>
                             <td><?php echo $student_det['student_class'] ?></td>
                             <td><?php echo $student_det['route'] ?></td>

@@ -28,12 +28,15 @@
                         <?php  echo form_error('password',"<p class='text-danger'>","</p>"); ?>
                     </div>
                 </div>
+                <a href="<?= site_url('home/register'); ?>"><p class="" style="margin-left: 100px;">
+                        New? Click here to register</p></a>
                 <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
                         <?php echo form_submit(['name'=>'Submit','value'=>'Login','class'=>'btn btn-info']),
                         form_reset(['name'=>'reset','value'=>'reset','class'=>'btn btn-warning']);?>
                     </div>
                 </div>
+
             </fieldset>
         </form>
     </div>
