@@ -18,7 +18,7 @@ foreach($data as $stu): ?>
         </div>
         <div class="row">
             <div class="col-md-5">
-                <?php echo form_open_multipart('admissions/student_details', ['class' => 'form-horizontal']); ?>
+                <?php echo form_open_multipart('admissions/edit_student_details', ['class' => 'form-horizontal']); ?>
                 <div class="form-group">
                     <label for="inputText" class="col-lg-2 control-label">First Name</label>
                     <div class="col-lg-10">
@@ -154,10 +154,8 @@ foreach($data as $stu): ?>
                 </div>
                 <?php if (isset($upload_error)) echo $upload_error ?>
                 <br>
-                <?php echo form_submit(['name' => 'submit', 'value' => 'Next', 'class' => 'btn btn-info',
-                    'style' => 'margin-left:45px; margin-top:20px;']),
-                form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
-                    'style' => 'margin-top:20px;']); ?>
+                <?php echo form_submit(['name' => 'submit', 'value' => 'Update', 'class' => 'btn btn-info',
+                    'style' => 'margin-left:15px; margin-top:20px;']); ?>
             </div>
             <div class="col-lg-2">
                 <?php echo form_error('student_first_name'); ?>

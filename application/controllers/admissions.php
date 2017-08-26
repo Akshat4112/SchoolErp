@@ -418,15 +418,12 @@ class Admissions extends MY_Controller
     }
     public function edit($var){
         $admission_no =  $var;
-  //      echo 'Admission No. is: '.$admission_no;
         $this->load->model('get_model','gm');
         $data = $this->gm->admission_form_search($admission_no);
-
-
-
         $this->load->view('private/admissions/edit/create_admission_view',["data"=>$data]);
-//        echo '<pre>';
-////        print_r($data);
-//        echo '</pre>';
+
+    }
+    public function edit_student_details(){
+        echo 'Hello';
     }
 }
