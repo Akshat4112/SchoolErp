@@ -233,15 +233,25 @@ class Fees extends MY_Controller{
         $this->delete_genric($form_validation,$table_name,$view,$field,$unset,$value_form);
     }
     public function fees_receipt(){
+        $this->load->model('add_model','am');
+        $this->load->model('get_model', 'gm');
+
         if ($this->form_validation->run('fees_receipt_search')) {
             $post = $this->input->post();
             unset($post['submit']);
             $admission_no = $post['admission_no'];
             $this->load->model('get_model', 'gm');
             $stu_det = $this->gm->admission_form_search($admission_no);
-            $this->load->view('private/fees/fees_receipt', ['stu_det' => $stu_det]);
+
+            //inserting data in db
+            $table_name = 'fees_reciept';
+            if($this->am->insert_data($table_name,$post)) {
+                $this->load->view('private/fees/fees_receipt', ['stu_det' => $stu_det]);
+            }else{
+                echo 'Problem';
+            }
         } else {
-            $this->load->model('get_model', 'gm');
+
             $stu_list = $this->gm->admission_form_search(0);
             $this->load->view('private/fees/fees_receipt', ['stu_det' => $stu_list]);
         }

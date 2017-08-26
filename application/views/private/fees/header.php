@@ -46,7 +46,7 @@
                         <li><a href="<?=site_url('fees/fees_group_ledger') ?>">Fees Group Ledger</a></li>
                         <li><a href="<?=site_url('fees/fees_structure') ?>">Fees Structure</a></li>
                         <li><a href="<?=site_url('fees/fees_summary_date_wise') ?>">Fees Summary Date Wise</a></li>
-                        <li><a href="<?=site_url('fees/fees_category_concc_wise') ?>">Fees Catogory Concession Wise</a></li>
+                        <li><a href="<?=site_url('fees/fees_category_concc_wise') ?>">Fees Catogory Wise Details</a></li>
                         <li><a href="<?=site_url('fees/fees_head_wise_concc_report') ?>">Fees Head Wise Concession Report</a></li>
                         <li><a href="<?=site_url('fees/concc_register') ?>">Concession Register</a></li>
                     </ul>

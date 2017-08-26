@@ -66,6 +66,12 @@ class Admissions extends MY_Controller
 
     public function student_details()
     {
+        $configs = [
+            'upload_path' => ' ./uploads',
+            'allowed_types' => 'png|jpg|gif|jpeg'
+        ];
+        $this->load->library('upload',$configs);
+
         $this->load->model('get_model', 'gm');
         $last = $this->gm->last_admission_no();
 
@@ -96,7 +102,7 @@ class Admissions extends MY_Controller
         $this->load->model('get_model', 'gm');
         $last = $this->gm->last_admission_no();
 
-        if ($this->form_validation->run('student')) {
+        if ($this->form_validation->run('student') /*&& $this->upload->do_upload()*/) {
 
             $post = $this->input->post();
             unset($post['submit']);
@@ -110,9 +116,10 @@ class Admissions extends MY_Controller
                 echo 'DB Query Error';
             }
         } else {
+            $upload_error = $this->upload->display_errors();
                 $this->load->view('private/admissions/create_admission_view', ['last_adm' => $last,
                 'class_drop' => $class_list, 'section_drop' => $section_list, 'category_drop' => $category_list,
-                'caste_drop' => $caste_list,'house_drop'=>$house_list]);
+                'caste_drop' => $caste_list,'house_drop'=>$house_list],compact('upload_error'));
         }
     }
 
@@ -408,5 +415,8 @@ class Admissions extends MY_Controller
         header('Content-Type:application/vnd.ms-excel');
         header('Content-Description:attachment;filename="AccounData.xls"');
         $object_writer->save('php://output');
+    }
+    public function edit(){
+        echo 'In a edit function';
     }
 }

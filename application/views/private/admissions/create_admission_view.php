@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+//    declare(strict_types=1);
 ?>
 <div class="container">
     <div class="row">
@@ -17,7 +17,7 @@ declare(strict_types=1);
     </div>
     <div class="row">
         <div class="col-md-5">
-            <?php echo form_open('admissions/student_details', ['class' => 'form-horizontal']); ?>
+            <?php echo form_open_multipart('admissions/student_details', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">First Name</label>
                 <div class="col-lg-10">
@@ -182,12 +182,13 @@ declare(strict_types=1);
                 </div>
             </div>
             <div class="form-group">
-                <label for="select" class="col-lg-2 control-label">Photo</label>
+                <label for="inputText" class="col-lg-2 control-label">Select Photo</label>
                 <div class="col-lg-10">
-                    <input type="file" name="student_photo">
-                    <br>
+                    <?php echo form_upload(['name' => 'userfile', 'class' => 'form-control',]);
+                    ?>
                 </div>
             </div>
+            <?php  if(isset($upload_error)) echo $upload_error ?>
             <br>
             <div class="form-group">
                 <b><p style="margin-left: 16px;" class="text-success">Last Admission

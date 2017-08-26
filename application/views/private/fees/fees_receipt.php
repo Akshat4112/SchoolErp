@@ -19,11 +19,11 @@
             <div class="form-group">
                 <label for="inputText" class="col-lg-3 control-label">Reciept No.</label>
                 <div class="col-lg-9">
-                    <?php echo form_input(['name' => 'receipt_no', 'class' => 'form-control',
+                    <?php echo form_input(['name' => 'reciept_no', 'class' => 'form-control',
                         'placeholder' => 'Enter Reciept No.',
-                        'value' => set_value('receipt_no')]);
+                        'value' => set_value('reciept_no')]);
                     ?>
-                    <?php echo form_error('receipt_no'); ?>
+                    <?php echo form_error('reciept_no'); ?>
                 </div>
             </div>
             <div class="form-group">
@@ -36,10 +36,7 @@
                     <?php echo form_error('admission_no'); ?>
                 </div>
             </div>
-            <div class="form-group">
-                <input type="submit" name="submit" value="search" class="btn btn-info" style="margin-left: 70px;">
-            </div>
-            <?php echo form_close(); ?>
+
         </div>
         <div class="col-lg-8">
             <table class="table table-hover ">
@@ -77,116 +74,53 @@
                 <?php endif; ?>
                 </tbody>
             </table>
-
+            <?php echo form_open('fees/fees_receipt', ['class' => 'form-horizontal']); ?>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox"> Jan
+                    <input type="checkbox" name="jan" value="1" <?php echo set_checkbox('jan', '1'); ?>> Jan
                 </label>
                 <label>
-                    <input type="checkbox"> Feb
+                    <input type="checkbox" name="feb" value="1" <?php echo set_checkbox('feb', '1'); ?>> Feb
                 </label>
                 <label>
-                    <input type="checkbox"> Mar
+                    <input type="checkbox" name="mar" value="1" <?php echo set_checkbox('mar', '1'); ?> > Mar
                 </label>
                 <label>
-                    <input type="checkbox"> Apr
+                    <input type="checkbox" name="apr" value="1" <?php echo set_checkbox('apr', '1'); ?>> Apr
                 </label>
                 <label>
-                    <input type="checkbox"> May
+                    <input type="checkbox" name="may" value="1" <?php echo set_checkbox('may', '1'); ?>> May
                 </label>
                 <label>
-                    <input type="checkbox"> Jun
+                    <input type="checkbox" name="jun" value="1" <?php echo set_checkbox('jun', '1'); ?>> Jun
                 </label>
                 <label>
-                    <input type="checkbox"> Jul
+                    <input type="checkbox" name="jul" value="1" <?php echo set_checkbox('jul', '1'); ?>> Jul
                 </label>
                 <label>
-                    <input type="checkbox"> Aug
+                    <input type="checkbox" name="aug" value="1" <?php echo set_checkbox('aug', '1'); ?>> Aug
                 </label>
                 <label>
-                    <input type="checkbox"> Sep
+                    <input type="checkbox" name="sep" value="1" <?php echo set_checkbox('sep', '1'); ?>> Sep
                 </label>
                 <label>
-                    <input type="checkbox"> Oct
+                    <input type="checkbox" name="oct" value="1" <?php echo set_checkbox('oct', '1'); ?>> Oct
                 </label>
                 <label>
-                    <input type="checkbox"> Nov
+                    <input type="checkbox" name="nov" value="1" <?php echo set_checkbox('nov', '1'); ?>> Nov
                 </label>
                 <label>
-                    <input type="checkbox"> Dec
+                    <input type="checkbox" name="dece" value="1" <?php echo set_checkbox('dec', '1'); ?>> Dec
                 </label>
             </div>
-            <input type="submit" name="submit" value="Ok" class="btn btn-info"">
+            <div class="form-group">
+                <input type="submit" name="submit" value="Ok" class="btn btn-info" style="margin-top: 10px;
+                margin-left: 10px;">
+            </div>
+            <?php echo form_close(); ?>
             <div class="row" style="margin-top: 30px;">
-                <div class="col-lg-12">
-                <div class="col-lg-2">
-                </div>
-                <div class="col-lg-2">
-                    <?php echo form_open('admissions/student_details', ['class' => 'form-horizontal']); ?>
-                    <div class="form-group">
-                        <label for="inputText" class="col-lg-2 control-label">Late Fees</label>
-                        <div class="col-lg-10">
-                            <?php echo form_input(['name' => 'receipt_no', 'class' => 'form-control',
-                                'placeholder' => 'Enter',
-                                'value' => set_value('receipt_no')]);
-                            ?>
-                            <?php echo form_error('receipt_no'); ?>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-lg-2">
-                    <div class="form-group">
-                        <label for="inputText" class="col-lg-2 control-label">Concession(%)</label>
-                        <div class="col-lg-10">
-                            <?php echo form_input(['name' => 'receipt_no', 'class' => 'form-control',
-                                'placeholder' => 'Enter',
-                                'value' => set_value('receipt_no')]);
-                            ?>
-                            <?php echo form_error('receipt_no'); ?>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="form-group">
-                        <label for="inputText" class="col-lg-2 control-label">Concession(Amt.)</label>
-                        <div class="col-lg-10">
-                            <?php echo form_input(['name' => 'receipt_no', 'class' => 'form-control',
-                                'placeholder' => 'Enter',
-                                'value' => set_value('receipt_no')]);
-                            ?>
-                            <?php echo form_error('receipt_no'); ?>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="form-group">
-                        <label for="inputText" class="col-lg-2 control-label">Net Fees</label>
-                        <div class="col-lg-10">
-                            <?php echo form_input(['name' => 'receipt_no', 'class' => 'form-control',
-                                'placeholder' => 'Enter',
-                                'value' => set_value('receipt_no')]);
-                            ?>
-                            <?php echo form_error('receipt_no'); ?>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="form-group">
-                        <label for="inputText" class="col-lg-2 control-label">Receipt(Amt.)</label>
-                        <div class="col-lg-10">
-                            <?php echo form_input(['name' => 'receipt_no', 'class' => 'form-control',
-                                'placeholder' => 'Enter',
-                                'value' => set_value('receipt_no')]);
-                            ?>
-                            <?php echo form_error('receipt_no'); ?>
-                        </div>
-                    </div>
-                </div>
-                    <?php echo form_close(); ?>
-                </div>
-            </div>
-            <div class="row">
+                <div class="col-lg-12"></div>
+                <div class="row">
                 <div class="col-lg-12">
                     <div class="col-lg-2"></div>
                     <div class="col-lg-2"></div>
@@ -202,18 +136,10 @@
         <table class="table table-hover ">
             <thead>
             <tr class="info">
-                <th>Admission No.</th>
-                <th>Name</th>
-                <th>Father</th>
-                <th>Mother</th>
-                <th>Class</th>
-                <th>Section</th>
-                <th>Roll No.</th>
-                <th>DOB</th>
-                <th>Contact No.</th>
-                <th>Route</th>
-                <th>Sch. No.</th>
-                <th>Old Balance</th>
+                <th>Fees Head</th>
+                <th>Jan </th>
+                <th>Feb</th>
+                <th>Total</th>
             </tr>
             </thead>
             <tbody>
@@ -221,4 +147,9 @@
             </tbody>
         </table>
     </div>
+        <div class="row">
+            <div class="col-lg-12">
+
+            </div>
+        </div>
 </div>
