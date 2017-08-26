@@ -248,7 +248,7 @@
     <div class="col-lg-12">
         <table class="table table-hover " id="userTbl">
             <thead>
-            <tr class="info">
+            <tr class="info text-info">
                 <th>Sno.</th>
                 <th>Admission No.</th>
                 <th>Name</th>
@@ -267,10 +267,10 @@
             <tbody>
             <?php if (count($stu_det)): ?>
                 <?php foreach ($stu_det as $student_det): ?>
-                    <tr>
+                    <tr class="">
                         <td><?php echo 'sno'; ?></td>
-                        <td><?php echo $student_det->admission_no?></td>
-                        <td><?php echo '<a href="admissions/edit">'.$student_det->student_first_name.'</a>' ?></td>
+                        <td><?php echo '<a href="admissions/edit/'.$student_det->admission_no.'">'.$student_det->admission_no?></td>
+                        <td><?php echo $student_det->student_first_name ?></td>
                         <td><?php echo $student_det->fathers_first_name ?></td>
                         <td><?php echo $student_det->mothers_first_name ?></td>
                         <td><?php echo $student_det->student_class ?></td>
@@ -293,21 +293,7 @@
     </div>
 </div>
 </div>
-<script>
-    $(document).ready(function(){
-        $('.search').on('keyup',function(){
-            var searchTerm = $(this).val().toLowerCase();
-            $('#userTbl tbody tr').each(function(){
-                var lineStr = $(this).text().toLowerCase();
-                if(lineStr.indexOf(searchTerm) === -1){
-                    $(this).hide();
-                }else{
-                    $(this).show();
-                }
-            });
-        });
-    });
-</script>
+
 <?php foreach ($stu_det as $student_det){
     $var =  $student_det->student_first_name;
     $jd[]= json_encode($var);

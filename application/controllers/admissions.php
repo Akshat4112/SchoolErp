@@ -416,7 +416,17 @@ class Admissions extends MY_Controller
         header('Content-Description:attachment;filename="AccounData.xls"');
         $object_writer->save('php://output');
     }
-    public function edit(){
-        echo 'In a edit function';
+    public function edit($var){
+        $admission_no =  $var;
+  //      echo 'Admission No. is: '.$admission_no;
+        $this->load->model('get_model','gm');
+        $data = $this->gm->admission_form_search($admission_no);
+
+
+
+        $this->load->view('private/admissions/edit/create_admission_view',["data"=>$data]);
+//        echo '<pre>';
+////        print_r($data);
+//        echo '</pre>';
     }
 }
