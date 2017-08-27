@@ -77,10 +77,10 @@ foreach($data as $stu): ?>
                     <label for="inputText" class="col-lg-2 control-label">Category</label>
                     <div class="col-lg-10">
 
-                        <?php echo form_input(['name' => 'student_last_name', 'class' => 'form-control',
-                            'placeholder' => 'Enter Last Name',
+                        <?php echo form_input(['name' => 'category', 'class' => 'form-control',
+                            'placeholder' => 'Enter Category',
                             'value' => $stu['category']]); ?>
-                        <?php echo form_error('student_last_name'); ?>
+                        <?php echo form_error('category'); ?>
                     </div>
                 </div>
             </div>
@@ -89,60 +89,60 @@ foreach($data as $stu): ?>
                     <label for="inputText" class="col-lg-2 control-label">Caste</label>
                     <div class="col-lg-10">
 
-                        <?php echo form_input(['name' => 'student_last_name', 'class' => 'form-control',
-                            'placeholder' => 'Enter Last Name',
+                        <?php echo form_input(['name' => 'caste', 'class' => 'form-control',
+                            'placeholder' => 'Enter Caste',
                             'value' => $stu['caste']]); ?>
-                        <?php echo form_error('student_last_name'); ?>
+                        <?php echo form_error('caste'); ?>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputText" class="col-lg-2 control-label">Class</label>
                     <div class="col-lg-10">
 
-                        <?php echo form_input(['name' => 'student_last_name', 'class' => 'form-control',
-                            'placeholder' => 'Enter Last Name',
+                        <?php echo form_input(['name' => 'student_class', 'class' => 'form-control',
+                            'placeholder' => 'Enter Class',
                             'value' => $stu['student_class']]); ?>
-                        <?php echo form_error('student_last_name'); ?>
+                        <?php echo form_error('student_class'); ?>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputText" class="col-lg-2 control-label">Section</label>
                     <div class="col-lg-10">
 
-                        <?php echo form_input(['name' => 'student_last_name', 'class' => 'form-control',
-                            'placeholder' => 'Enter Last Name',
+                        <?php echo form_input(['name' => 'student_section', 'class' => 'form-control',
+                            'placeholder' => 'Enter Section',
                             'value' => $stu['student_section']]); ?>
-                        <?php echo form_error('student_last_name'); ?>
+                        <?php echo form_error('student_section'); ?>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputText" class="col-lg-2 control-label">Roll No.</label>
                     <div class="col-lg-10">
 
-                        <?php echo form_input(['name' => 'student_last_name', 'class' => 'form-control',
-                            'placeholder' => 'Enter Last Name',
+                        <?php echo form_input(['name' => 'student_roll_no', 'class' => 'form-control',
+                            'placeholder' => 'Enter Roll No.',
                             'value' => $stu['student_roll_no']]); ?>
-                        <?php echo form_error('student_last_name'); ?>
+                        <?php echo form_error('student_roll_no'); ?>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputText" class="col-lg-2 control-label">Route</label>
                     <div class="col-lg-10">
 
-                        <?php echo form_input(['name' => 'student_last_name', 'class' => 'form-control',
-                            'placeholder' => 'Enter Last Name',
+                        <?php echo form_input(['name' => 'route', 'class' => 'form-control',
+                            'placeholder' => 'Enter Route',
                             'value' => $stu['route']]); ?>
-                        <?php echo form_error('student_last_name'); ?>
+                        <?php echo form_error('route'); ?>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputText" class="col-lg-2 control-label">House</label>
                     <div class="col-lg-10">
 
-                        <?php echo form_input(['name' => 'student_last_name', 'class' => 'form-control',
-                            'placeholder' => 'Enter Last Name',
+                        <?php echo form_input(['name' => 'house', 'class' => 'form-control',
+                            'placeholder' => 'Enter House',
                             'value' => $stu['house']]); ?>
-                        <?php echo form_error('student_last_name'); ?>
+                        <?php echo form_error('house'); ?>
                     </div>
                 </div>
                 <div class="form-group">

@@ -28,7 +28,6 @@
                 <li><a href="<?=site_url('admissions/student_details'); ?>">Create</a></li>
                 <li><a href="<?=site_url('admissions/import'); ?>">Import</a></li>
                 <li><a href="<?=site_url('admissions/export'); ?>">Export</a></li>
-                <li><a href="<?=site_url('admissions/admission_form'); ?>">Admissions Form</a></li>
                 <li><a href="<?=site_url('admissions/send_sms'); ?>">Send SMS</a></li>
                 <li><a href="<?=site_url('admissions/id_card'); ?>">ID Card</a></li>
                 <li><a href="<?=site_url('admissions/create_list'); ?>">List</a></li>

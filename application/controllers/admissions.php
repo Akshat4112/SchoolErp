@@ -424,6 +424,8 @@ class Admissions extends MY_Controller
 
     }
     public function edit_student_details(){
-        echo 'Hello';
+        $data = $this->input->post();
+        unset($data['submit']);
+        print_r($data);
     }
 }

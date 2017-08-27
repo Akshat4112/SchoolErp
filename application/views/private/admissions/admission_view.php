@@ -245,7 +245,7 @@
     </div>
 </div>
 <div class="row" style="margin-top: 10px;">
-    <div class="col-lg-12">
+    <div class="col-lg-12" id="" style="overflow-y:scroll; overflow-x:hidden; height: 400px; width:1200px;">
         <table class="table table-hover " id="userTbl">
             <thead>
             <tr class="info text-info">
