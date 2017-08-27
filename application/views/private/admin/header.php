@@ -68,7 +68,6 @@
                     </ul>
                 </li>
                 <li><a href="<?= site_url('enquiry') ?>">Enquiry Form</a></li>
-                <li><a href="<?= site_url('admissions/create_admission_view') ?>">Student Admission</a></li>
                 <li><a href="<?= site_url('admin/org_info') ?>">Organisation Info</a></li>
                 <li><a href="<?= site_url('admin/bill_sundry') ?>">Bill Sundry</a></li>
                 <li><a href="<?= site_url('admin/shift') ?>">Shift</a></li>
@@ -83,6 +82,7 @@
                         <li><a href="<?= site_url('admin/cw_strength') ?>">Class-Wise Strength</a></li>
                     </ul>
                 </li>
+                <li><a href="<?= site_url('misc/demand_bill_printing'); ?>">SMS Templates</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">

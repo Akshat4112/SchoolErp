@@ -55,7 +55,9 @@
                         <li><a href="<?=site_url('accounts/credit_note')?>">Ledger</a></li>
                         <li><a href="<?=site_url('accounts/credit_note')?>">Cash /  Bank Book</a></li>
                         <li><a href="<?=site_url('accounts/credit_note')?>">Day Book Cum Cash Book</a></li>
-                        <li><a href="<?=site_url('accounts/credit_note')?>"></a></li>
+                        <li><a href="<?=site_url('accounts/credit_note')?>">Quick Payment</a></li>
+                        <li><a href="<?=site_url('accounts/credit_note')?>">Quick Receipt</a></li>
+                        <li><a href="<?=site_url('accounts/credit_note')?>">Bank Entry</a></li>
 
                     </ul>
                 </li>

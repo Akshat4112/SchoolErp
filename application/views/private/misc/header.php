@@ -33,6 +33,15 @@
                 <li><a href="<?= site_url('misc/stock_purchase'); ?>">Stock Purchase</a></li>
                 <li><a href="<?= site_url('misc/document_issue'); ?>">Document Issue</a></li>
                 <li><a href="<?= site_url('misc/demand_bill_printing'); ?>">Demand Bill Printing</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Stock Reports<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="<?=site_url('accounts/balance_sheet')?>">Matrial Issue Register</a></li>
+                        <li><a href="<?=site_url('accounts/profit_loss')?>">Stock Purchase Register</a></li>
+                        <li><a href="<?=site_url('accounts/profit_loss')?>">Stock Register</a></li>
+
+                    </ul>
+                </li>
 
             </ul>
             <ul class="nav navbar-nav navbar-right">

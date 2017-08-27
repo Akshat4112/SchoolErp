@@ -32,6 +32,8 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Fees<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="<?=site_url('fees/fees_receipt'); ?>">Fees Receipt</a></li>
+                        <li><a href="<?=site_url('fees/fees_receipt'); ?>">Family Receipt</a></li>
+                        <li><a href="<?=site_url('fees/fees_receipt'); ?>">Misc. Fees Receipt</a></li>
                         <li><a href="<?=site_url('fees/fees_card'); ?>">Fees Card</a></li>
                         <li><a href="<?=site_url('fees/fees_plan'); ?>">Fees Plan</a></li>
                         <li><a href="<?=site_url('fees/fees_head') ?>">Fees Head</a></li>
