@@ -27,6 +27,7 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
+                <li><a href="<?= site_url('accounts'); ?>">Dashboard</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Accounts<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
@@ -84,10 +85,17 @@
                         <li><a href="<?=site_url('accounts/outstanding_balance')?>">Handy Cash Book</a></li>
                         <li><a href="<?=site_url('accounts/outstanding_balance')?>">Group Ledger</a></li>
                         <li><a href="<?=site_url('accounts/outstanding_balance')?>">User Shift Report</a></li>
-
                     </ul>
                 </li>
-
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Interest Calculation<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="<?=site_url('accounts/balance_sheet')?>">Simple Interest Calculation</a></li>
+                        <li><a href="<?=site_url('accounts/trading_accounts')?>">Interest on Balance</a></li>
+                        <li><a href="<?=site_url('accounts/profit_loss')?>">Cummulative Interest</a></li>
+                        <li><a href="<?=site_url('accounts/trial_balance')?>">Bill Wise Interest Calculation</a></li>
+                    </ul>
+                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">

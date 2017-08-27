@@ -15,7 +15,7 @@
     <link href="<?= base_url() ?>public/assets/css/font-awesome.min.css" rel="stylesheet">
     <link href='<?= base_url() ?>public/assets/css/google_fonts.css' rel='stylesheet' type='text/css'>
     <title>
-        Admissions
+        Fees
     </title>
 </head>
 <body>
@@ -28,9 +28,15 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="<?=site_url('fees/fees_view'); ?>">Dashboard</a></li>
-                <li><a href="<?=site_url('fees/fees_receipt'); ?>">Fees Receipt</a></li>
-                <li><a href="<?=site_url('fees/fees_card'); ?>">Fees Card</a></li>
-                <li><a href="<?=site_url('fees/fees_plan'); ?>">Fees Plan</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Fees<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="<?=site_url('fees/fees_receipt'); ?>">Fees Receipt</a></li>
+                        <li><a href="<?=site_url('fees/fees_card'); ?>">Fees Card</a></li>
+                        <li><a href="<?=site_url('fees/fees_plan'); ?>">Fees Plan</a></li>
+                        <li><a href="<?=site_url('fees/fees_head') ?>">Fees Head</a></li>
+                    </ul>
+                </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Fees Reports<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
@@ -61,9 +67,6 @@
                         <li><a href="<?=site_url('fees/fees_estimation_list') ?>">Fees Estimation List</a></li>
                     </ul>
                 </li>
-                <li><a href="<?=site_url('fees/fees_head') ?>">Fees Head</a></li>
-
-                <li><a href="<?=site_url('fees/fees_conc_sett') ?>">Fees Concesion Settings</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         Settings<span class="caret"></span></a>
