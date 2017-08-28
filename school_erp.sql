@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 17, 2017 at 08:39 PM
+-- Generation Time: Aug 28, 2017 at 09:13 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -53,8 +53,7 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`account_id`, `account_name`, `print_name`, `group_acc`, `op_bal`, `dr_cr`, `address`, `address1`, `city`, `state`, `email`, `phone`, `mobile`, `contact_per`, `birthday_on`, `anniv_on`, `bank_name`, `bank_acc_no`, `cheque_p_name`) VALUES
-(3, 'Banks Account', 'BA', 'Banks', 5000, 'dr', 'Balaji Puram', '', 'Agra', 'Uttar Pradesh', 'Akshat41121995@gmail.com', 2147483647, 2147483647, 'Rajesh', '2017-08-17', '2017-08-15', 'SBI', 2147483647, 'SBI Cheque'),
-(4, 'tut', '', 'tution', 0, 'dr', '', '', '', '', '', 0, 0, '', '0000-00-00', '0000-00-00', '', 0, '');
+(3, 'Banks Account', 'BA', 'Banks', 5000, 'dr', 'Balaji Puram', '', 'Agra', 'Uttar Pradesh', 'Akshat41121995@gmail.com', 2147483647, 2147483647, 'Rajesh', '2017-08-17', '2017-08-15', 'SBI', 2147483647, 'SBI Cheque');
 
 -- --------------------------------------------------------
 
@@ -146,7 +145,8 @@ INSERT INTO `caste` (`caste_id`, `caste_name`) VALUES
 (39, 'Hindu'),
 (41, 'Muslim'),
 (42, 'Christian'),
-(43, 'Defence');
+(43, 'Defence'),
+(44, 'Sikhs');
 
 -- --------------------------------------------------------
 
@@ -300,20 +300,9 @@ CREATE TABLE `fees_head` (
 --
 
 INSERT INTO `fees_head` (`fees_head_id`, `fees_heading`, `group_name`, `account_name`, `frequency`) VALUES
-(1, 'new', 'abcdefg', 'Bank Accounts', 'half_yearly'),
-(2, 'new', 'abcdefg', 'Bank Accounts', 'four_monthly'),
-(3, 'new', 'abcdefg', 'Bank Accounts', 'four_monthly'),
-(4, 'test', 'abcdefg', 'Bank Accounts', 'monthly'),
-(5, 'testfinal', 'forhereacc', 'fortest2', 'half_yearly'),
-(6, 'testfinal', 'forhereacc', 'fortest2', 'half_yearly'),
-(7, 'testfeeshead', 'library', 'withhereacc', 'monthly'),
-(8, 'testhead', 'fortest', 'WithTest', 'quaterly'),
-(9, 'sch', 'schinsidefees', 'WithScholarship', 'quaterly'),
-(10, 'new', 'Fees Head 1', 'Bank Accounts', 'annual'),
-(11, 'new', 'Fees Head 1', 'Bank Accounts', 'bi_monthly'),
-(12, 'misc', 'Fees Head 4', 'Bank Accounts', 'quaterly'),
-(13, 'asdjkas', 'Fees Head 1', 'Bank Accounts', 'annual'),
-(14, 'tuti', 'tutio', 'tut', 'monthly');
+(16, 'Misc Fees', 'Misc. Fees', 'Banks Account', 'bi_monthly'),
+(17, 'mn', 'Misc. Fees', 'Banks Account', 'annual'),
+(18, 'library', 'Misc. Fees', 'Banks Account', 'four_monthly');
 
 -- --------------------------------------------------------
 
@@ -331,12 +320,45 @@ CREATE TABLE `fees_head_group` (
 --
 
 INSERT INTO `fees_head_group` (`fees_head_group_id`, `fees_head_group_name`) VALUES
-(29, 'Fees Head 1'),
-(30, 'Fees Head 2'),
-(31, 'Fees Head 3'),
-(32, 'Fees Head 4'),
-(33, 'fh3'),
-(34, 'tutio');
+(11, 'Academic Fees'),
+(12, 'Misc. Fees'),
+(13, 'Development Fees');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fees_plan`
+--
+
+CREATE TABLE `fees_plan` (
+  `fees_plan_id` int(11) NOT NULL,
+  `fees_heading` varchar(20) DEFAULT NULL,
+  `value` int(10) DEFAULT NULL,
+  `category` varchar(5) DEFAULT NULL,
+  `class` varchar(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fees_plan_category`
+--
+
+CREATE TABLE `fees_plan_category` (
+  `category_id` int(11) NOT NULL,
+  `category_name` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `fees_plan_category`
+--
+
+INSERT INTO `fees_plan_category` (`category_id`, `category_name`) VALUES
+(16, 'SC'),
+(17, 'OBC'),
+(18, 'Old Student Without Uniform'),
+(19, 'General'),
+(20, 'Test');
 
 -- --------------------------------------------------------
 
@@ -348,8 +370,36 @@ CREATE TABLE `fees_reciept` (
   `reciept_id` int(11) NOT NULL,
   `date` date NOT NULL,
   `reciept_no` int(5) NOT NULL,
-  `admission_no` int(5) NOT NULL
+  `admission_no` int(5) NOT NULL,
+  `jan` int(11) NOT NULL,
+  `feb` int(11) NOT NULL,
+  `mar` int(11) NOT NULL,
+  `apr` int(11) NOT NULL,
+  `may` int(11) NOT NULL,
+  `jun` int(11) NOT NULL,
+  `jul` int(11) NOT NULL,
+  `aug` int(11) NOT NULL,
+  `sep` int(11) NOT NULL,
+  `oct` int(11) NOT NULL,
+  `nov` int(11) NOT NULL,
+  `dece` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `fees_reciept`
+--
+
+INSERT INTO `fees_reciept` (`reciept_id`, `date`, `reciept_no`, `admission_no`, `jan`, `feb`, `mar`, `apr`, `may`, `jun`, `jul`, `aug`, `sep`, `oct`, `nov`, `dece`) VALUES
+(12, '0000-00-00', 22, 4, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0),
+(13, '0000-00-00', 22, 4, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0),
+(14, '0000-00-00', 22, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+(15, '0000-00-00', 4, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(16, '0000-00-00', 4, 8, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(17, '0000-00-00', 7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(18, '0000-00-00', 7, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(19, '0000-00-00', 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(20, '0000-00-00', 7, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(21, '0000-00-00', 7, 5, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -647,7 +697,15 @@ CREATE TABLE `student` (
 
 INSERT INTO `student` (`student_id`, `student_first_name`, `student_middle_name`, `student_last_name`, `student_class`, `student_section`, `student_roll_no`, `route`, `caste`, `category`, `house`, `student_photo`, `admission_no`, `gender`, `student_dob`, `house_no`, `street_name`, `other_info`, `zip_code`, `city`, `state`, `country`, `fathers_first_name`, `fathers_middle_name`, `fathers_last_name`, `f_mobile`, `f_qual`, `f_occu`, `f_dob`, `f_photo`, `mothers_first_name`, `mothers_middle_name`, `mothers_last_name`, `m_mobile`, `m_qual`, `m_occu`, `m_dob`, `m_photo`, `parents_wedding_date`, `las`, `remarks`, `last_exam_given`, `year`, `status`, `marks`, `board`, `bg`, `vl`, `vr`, `height`, `weight`, `dental_hy`, `tc`, `cc`, `report_cc`, `dob_certificate`, `admission_form_no`, `date_admission`, `ledger_balance`, `fees_balance`, `comments`, `hostel_room_no`, `bed_no`, `scholarship_no`, `aadhar_uid`, `family`, `status_adm`, `discontinue_date`) VALUES
 (283, 'Akshat', '', 'Gupta', '3', 'B', 5, '300', 'Hindu', 'General', 'Yellow', 0, 1, 'Male', '1995-04-12', '7', '', '', '', 'agra', '', '', 'alok', '', '', 0, '', 'business', '0000-00-00', '', 'varsha', '', '', 0, '', 'business', '0000-00-00', '', '0000-00-00', 'simpkins school', '', '', '0000-00-00', 'pass', 0, '', 'a+', 0, 0, 0, 0, '', 0, 0, 0, 0, 75, '0000-00-00', 0, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
-(284, 'Abhinav', '', 'Singh', '2', 'A', 0, '', 'Hindu', 'General', 'Blue', 0, 2, 'Male', '0000-00-00', '76', '', '', '', 'Newyork', '', '', 'XYZA', '', '', 0, '', 'business', '0000-00-00', '', 'BCDE', '', '', 0, '', 'business', '0000-00-00', '', '0000-00-00', 'St. Peters', '', '', '0000-00-00', 'pass', 0, '', 'a+', 0, 0, 0, 0, '', 0, 0, 0, 0, 1623, '0000-00-00', 735, 0, '', '', 0, 0, 0, '', '', '0000-00-00');
+(284, 'Abhinav', '', 'Singh', '2', 'A', 0, '', 'Hindu', 'General', 'Blue', 0, 2, 'Male', '0000-00-00', '76', '', '', '', 'Newyork', '', '', 'XYZA', '', '', 0, '', 'business', '0000-00-00', '', 'BCDE', '', '', 0, '', 'business', '0000-00-00', '', '0000-00-00', 'St. Peters', '', '', '0000-00-00', 'pass', 0, '', 'a+', 0, 0, 0, 0, '', 0, 0, 0, 0, 1623, '0000-00-00', 735, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
+(285, 'Akshat', '', 'Gupta', '4', 'B', 5, 'Balaji Puram', 'Hindu', 'General', 'Green', 0, 3, 'Male', '1995-04-12', 'b21', '', '', '', 'Agra', '', '', 'ak', '', '', 0, '', 'business', '0000-00-00', '', 'va', '', '', 0, '', 'business', '0000-00-00', '', '0000-00-00', 'ss', '', '', '0000-00-00', 'pass', 0, '', 'a+', 0, 0, 0, 0, '', 0, 0, 0, 0, 8123, '0000-00-00', 250, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
+(286, 'Aman', '', 'Mehra', '2', 'A', 8, 'Kargil', 'Hindu', 'General', 'Blue', 0, 4, 'Male', '2222-02-22', '', '', '', '', '', '', '', '', '', '', 0, '', '', '0000-00-00', '', '', '', '', 0, '', '', '0000-00-00', '', '0000-00-00', '', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0, 0, 0, 0, 0, '0000-00-00', 0, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
+(287, 'Naina', '', 'Sharma', '3', 'C', 88, 'Kamla Nagar', 'Hindu', 'OBC', 'Yellow', 0, 5, 'Femal', '1996-10-10', '88', '', '', '282010', 'Agra', '', '', 'Shyam ', '', 'Sharma', 0, '', 'business', '0000-00-00', '', 'Radha Sharms', '', '', 0, '', 'business', '0000-00-00', '', '0000-00-00', 'UML', '', '', '0000-00-00', 'pass', 0, '', 'a+', 0, 0, 0, 0, '', 0, 0, 0, 0, 123, '0000-00-00', 0, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
+(288, 'Himanshi', '', 'Gupta', '3', 'C', 45, 'Jaipur House', 'Hindu', 'General', 'Red', 0, 6, 'femal', '1998-10-10', '78', '', '', '', 'kanpur', '', '', 'anil', '', '', 0, '', 'business', '0000-00-00', '', 'poonam', '', '', 0, '', 'business', '0000-00-00', '', '0000-00-00', 'st petrics', '', '', '0000-00-00', 'pass', 0, '', 'a+', 0, 0, 0, 0, '', 0, 0, 0, 0, 56, '0000-00-00', 0, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
+(289, 'Shashank', '', '', '2', 'A', 0, '', 'Hindu', 'General', 'Blue', 0, 7, 'male', '0000-00-00', '77', '', '', '', 'agra', '', '', 'Ak', '', '', 0, '', 'business', '0000-00-00', '', 'VK', '', '', 0, '', 'business', '0000-00-00', '', '0000-00-00', '', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0, 0, 0, 0, 0, '0000-00-00', 0, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
+(290, 'manushi', '', '', '2', 'A', 0, '', 'Hindu', 'General', 'Blue', 0, 8, 'male', '0000-00-00', '77', '', '', '', 'Agra', '', '', 'abcd', '', '', 0, '', 'business', '0000-00-00', '', 'efgh', '', '', 0, '', 'business', '0000-00-00', '', '0000-00-00', 'ss', '', '', '0000-00-00', 'pass', 0, '', 'a+', 0, 0, 0, 0, '', 0, 0, 0, 0, 66, '0000-00-00', 765, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
+(291, 'Akshat', '', '', '2', 'A', 0, '', 'Hindu', 'General', 'Blue', NULL, 9, 'male', '0000-00-00', '', '', '', '', '', '', '', '', '', '', 0, '', '', '0000-00-00', '', '', '', '', 0, '', '', '0000-00-00', '', '0000-00-00', '', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0, 0, 0, 0, 0, '0000-00-00', 0, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
+(293, 'Test', '', '', '2', 'A', 0, '', 'Hindu', 'General', 'Blue', NULL, 10, 'male', '0000-00-00', '', '', '', '', '', '', '', '', '', '', 0, '', '', '0000-00-00', '', '', '', '', 0, '', '', '0000-00-00', '', '0000-00-00', '', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0, 0, 0, 0, 0, '0000-00-00', 0, 0, '', '', 0, 0, 0, '', '', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -772,6 +830,18 @@ ALTER TABLE `fees_head_group`
   ADD PRIMARY KEY (`fees_head_group_id`);
 
 --
+-- Indexes for table `fees_plan`
+--
+ALTER TABLE `fees_plan`
+  ADD PRIMARY KEY (`fees_plan_id`);
+
+--
+-- Indexes for table `fees_plan_category`
+--
+ALTER TABLE `fees_plan_category`
+  ADD PRIMARY KEY (`category_id`);
+
+--
 -- Indexes for table `fees_reciept`
 --
 ALTER TABLE `fees_reciept`
@@ -857,7 +927,7 @@ ALTER TABLE `student_leaving_certificate`
 -- AUTO_INCREMENT for table `account`
 --
 ALTER TABLE `account`
-  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `account_group`
 --
@@ -882,7 +952,7 @@ ALTER TABLE `bill_sundry`
 -- AUTO_INCREMENT for table `caste`
 --
 ALTER TABLE `caste`
-  MODIFY `caste_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `caste_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 --
 -- AUTO_INCREMENT for table `category`
 --
@@ -927,17 +997,22 @@ ALTER TABLE `feedback`
 -- AUTO_INCREMENT for table `fees_head`
 --
 ALTER TABLE `fees_head`
-  MODIFY `fees_head_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `fees_head_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `fees_head_group`
 --
 ALTER TABLE `fees_head_group`
-  MODIFY `fees_head_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `fees_head_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+--
+-- AUTO_INCREMENT for table `fees_plan_category`
+--
+ALTER TABLE `fees_plan_category`
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `fees_reciept`
 --
 ALTER TABLE `fees_reciept`
-  MODIFY `reciept_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `reciept_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT for table `gatepass`
 --
@@ -992,7 +1067,7 @@ ALTER TABLE `section`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `student_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=285;
+  MODIFY `student_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=294;
 --
 -- AUTO_INCREMENT for table `student_leaving_certificate`
 --
