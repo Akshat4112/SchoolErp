@@ -40,9 +40,9 @@ class Attendance extends MY_Controller{
             array_push($list, $type['class']);
         }
 
-        $data=$this->input->post();
-        unset($data['submit']);
-        print_r($data);
+//        $data=$this->input->post();
+//        unset($data['submit']);
+//        print_r($data);
 
         //loading table data dynamically based upon input by form...
         $data['class']=0;
@@ -53,10 +53,14 @@ class Attendance extends MY_Controller{
         $date_table = $data['date'];
         //$this->load->model('');
         $this->load->view('private/attendance/attend_new.php',['section'=>$list1,'class_drop'=>$list]);
-
-
-
-
-
+    }
+    public function summary(){
+        $this->load->view('private/attendance/summary.php');
+    }
+    public function prints(){
+        $this->load->view('private/attendance/print.php');
+    }
+    public function auto(){
+        $this->load->view('private/attendance/auto.php');
     }
 }

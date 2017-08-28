@@ -30,7 +30,7 @@
                 <li><a href="<?= site_url('attendance/attend_view'); ?>">Attendance</a></li>
                 <li><a href="<?= site_url('attendance/attend_new'); ?>">New</a></li>
                 <li><a href="<?= site_url('attendance/summary'); ?>">Summary</a></li>
-                <li><a href="<?= site_url('attendance/print'); ?>">Print</a></li>
+                <li><a href="<?= site_url('attendance/prints'); ?>">Print</a></li>
                 <li><a href="<?= site_url('attendance/auto'); ?>">Auto</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

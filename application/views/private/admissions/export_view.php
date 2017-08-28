@@ -20,7 +20,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-lg-12">
+    <div class="col-lg-12" style="overflow-y:scroll; overflow-x:hidden; height: 400px; width:1200px;">
         <table class="table table-hover ">
             <thead>
             <tr class="info">
@@ -65,7 +65,7 @@
         </table>
     </div>
     <div class="row">
-        <div class="col-lg-12" style="margin-left: 500px;">
+        <div class="col-lg-12" style="margin-left: 500px; margin-top: 20px;">
             <form action="<?php echo base_url(); ?>admissions/excel_export" class="form-horizontal" method="post">
                 <input type="submit" name="export" class="btn btn-success" value="Export">
             </form>
