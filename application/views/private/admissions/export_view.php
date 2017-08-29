@@ -21,9 +21,9 @@
 </div>
 <div class="row">
     <div class="col-lg-12" style="overflow-y:scroll; overflow-x:hidden; height: 400px; width:1200px;">
-        <table class="table table-hover ">
+        <table class="table table-hover table-bordered">
             <thead>
-            <tr class="info">
+            <tr class="text-info">
                 <th>Admission No.</th>
                 <th>Name</th>
                 <th>Father</th>
@@ -41,7 +41,7 @@
             <tbody>
             <?php if (count($stu_det)): ?>
                 <?php foreach ($stu_det as $student_det): ?>
-                    <tr class="success ">
+                    <tr class="">
                         <td><?php echo $student_det->admission_no?></td>
                         <td><?php echo $student_det->student_first_name ?></td>
                         <td><?php echo $student_det->fathers_first_name ?></td>
