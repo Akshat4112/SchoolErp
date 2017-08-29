@@ -22,10 +22,6 @@ class Admin extends MY_Controller
 
         $this->load->view('private/admin/admin_dash');
     }
-
-    public function class_report(){
-        $this->load->view('private/admin/class_report');
-    }
     public function masters_class()
     {
         if ($this->form_validation->run('class')) {
@@ -231,5 +227,29 @@ class Admin extends MY_Controller
         $this->load->model('get_model','gm');
         $sm = $this->gm->student_list();
         $this->load->view('private/admin/cw_strength',['sm'=>$sm]);
+    }
+    public function class_report(){
+        //for dynamic dropdown of class
+        $this->load->model('get_model', 'gm');
+        $class_list = $this->gm->get_class_list();
+
+        //for dynamic dropdown of section
+        $fieldsec = 'section_name';
+        $table_namesec = 'section';
+        $this->load->model('get_model', 'gm');
+        $section_list = $this->gm->get_list($fieldsec, $table_namesec);
+
+        //for dynamic dropdown of category
+        $fieldcat = 'category_name';
+        $table_namecat = 'category';
+        $this->load->model('get_model', 'gm');
+        $category_list = $this->gm->get_list($fieldcat, $table_namecat);
+
+        $data = $this->input->post();
+        unset($data['submit']);
+        //print_r($data);
+
+        $this->load->view('private/admin/class_report',['class'=>$class_list,'section'=>$section_list,
+            'category'=>$category_list]);
     }
 }

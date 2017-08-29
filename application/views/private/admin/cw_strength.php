@@ -13,9 +13,9 @@
     </div>
     <div class="row">
         <div class="col-lg-6">
-            <table class="table table-hover ">
+            <table class="table table-hover table-bordered">
                 <thead>
-                <tr class="info">
+                <tr class="text-info">
                     <th>Class</th>
                     <th>Section</th>
                     <th>Boys</th>
@@ -26,7 +26,7 @@
                 <tbody>
                 <?php if (count($sm)): ?>
                     <?php foreach ($sm as $student_det): ?>
-                        <tr class="success ">
+                        <tr class="">
                             <td><?php echo $student_det->student_class ?></td>
                             <td><?php echo $student_det->student_section ?></td>
                         </tr>
@@ -40,9 +40,9 @@
             </table>
         </div>
         <div class="col-lg-6">
-            <table class="table table-hover ">
+            <table class="table table-hover table-bordered">
                 <thead>
-                <tr class="info">
+                <tr class="text-info">
                     <th>Route</th>
                     <th>Boys</th>
                     <th>Girls</th>
@@ -52,7 +52,7 @@
                 <tbody>
                 <?php if (count($sm)): ?>
                     <?php foreach ($sm as $student_det): ?>
-                        <tr class="success ">
+                        <tr class="">
                             <td><?php echo $student_det->route ?></td>
                         </tr>
                     <?php endforeach; ?>

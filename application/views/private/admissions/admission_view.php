@@ -3,7 +3,7 @@
     <?php echo form_open('admissions/search_view', ['class' => 'form-horizontal']); ?>
         <div class="form-group">
             <label for="tags"></label>
-            <div class="col-lg-1 text-info" style="font-size: 19px;">Search:</div>
+            <div class="col-lg-1 text-info" style="font-size: 17px; margin-top: 7px;"><b>Search</b></div>
             <div class="col-lg-2">
                 <?php $options = [
                     'admission_no'=>'Admission No.',
@@ -115,7 +115,7 @@
 </div>
     <?php echo form_open('admissions/', ['class' => 'form-horizontal']); ?>
 <div class="row">
-    <div class="col-lg-1 text-info" style="font-size: 19px;">Sort by:</div>
+    <div class="col-lg-1 text-info" style="font-size: 17px; margin-top: 8px;"><b>Sort by</b></div>
     <div class="col-lg-2">
         <?php $options = [
             'admission_no'=>'Admission No.',
