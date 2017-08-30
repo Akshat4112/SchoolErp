@@ -7,8 +7,18 @@
  */?>
 <div class="container">
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-5">
             <p class="text-info" style="font-size: 20px;">Fees Group Ledger</p>
+        </div>
+        <div class="col-lg-6">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Actions
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Print</a></li>
+                    <li><a href="#">Summary</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="row">
@@ -42,16 +52,14 @@
             </div>
         </div>
         <div class="col-lg-3">
-            <input type="submit" class="btn btn-info" value="Ok">
-            <input type="submit" class="btn btn-info" value="Print">
-            <input type="submit" class="btn btn-info" value="Summary">
+            <input type="submit" class="btn btn-info" value="Search">
         </div>
     </div>
     <div class="row">
         <div class="col-lg-12" id="" style="overflow-y:scroll; overflow-x:hidden; height: 350px; width:1200px;">
-            <table class="table  table-hover ">
+            <table class="table  table-hover table-bordered">
                 <thead>
-                <tr class="info">
+                <tr class="text-info">
                     <th>Date</th>
                     <th>Rec No.</th>
                     <th>Name</th>
@@ -62,7 +70,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr class="success">
+                <tr class="">
                     <td></td>
                 </tr>
                 </tbody>

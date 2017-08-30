@@ -7,15 +7,25 @@
  */?>
 <div class="container">
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-5">
             <p class="text-info" style="font-size: 20px;">Fees Head Wise Concession Reports</p>
+        </div>
+        <div class="col-lg-6">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Actions
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Print</a></li>
+
+                </ul>
+            </div>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-3">
             <div class="form-group">
-                <label for="inputText" class="col-lg-4 control-label">Name</label>
-                <div class="col-lg-8">
+                <label for="inputText" class="col-lg-3 control-label text-info" style="font-size: 17px; margin-top: 7px;"><b>Name</b></label>
+                <div class="col-lg-9">
                     <input type="text" name="name" class="form-control">
                 </div>
             </div>
@@ -23,8 +33,8 @@
         </div>
         <div class="col-lg-3">
             <div class="form-group">
-                <label for="inputText" class="col-lg-4 control-label">Fees Head</label>
-                <div class="col-lg-8">
+                <label for="inputText" class="col-lg-6 control-label  text-info" style="font-size: 17px; margin-top: 7px;"><b>Fees Head</b></label>
+                <div class="col-lg-6">
                     <?php
                     //                    $drop=array();
                     //                    foreach($view as $r){
@@ -41,8 +51,8 @@
         </div>
         <div class="col-lg-3">
             <div class="form-group">
-                <label for="inputText" class="col-lg-4 control-label">Class</label>
-                <div class="col-lg-8">
+                <label for="inputText" class="col-lg-3 control-label text-info" style="margin-top: 5px; font-size: 17px;"><b>Class</b></label>
+                <div class="col-lg-9">
                     <?php
                     //                    $drop=array();
                     //                    foreach($view as $r){
@@ -59,19 +69,15 @@
             </div>
         </div>
         <div class="col-lg-2">
-            <?php echo form_submit(['name' => 'submit', 'value' => 'Print', 'class' => 'btn btn-success',
+            <?php echo form_submit(['name' => 'submit', 'value' => 'Search', 'class' => 'btn btn-info',
                 'style' => '']); ?>
-            <?php echo form_submit(['name' => 'submit', 'value' => 'Ok', 'class' => 'btn btn-success',
-                'style' => '']); ?>
-
         </div>
-
     </div>
-    <div class="row">
+    <div class="row" style="margin-top: 5px;">
         <div class="col-lg-12">
-            <table class="table  table-hover ">
+            <table class="table  table-hover table-bordered">
                 <thead>
-                <tr class="info">
+                <tr class="text-info">
                     <th>Class</th>
                     <th>Reg No.</th>
                     <th>Student</th>
@@ -83,7 +89,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr class="success">
+                <tr class="">
                     <td></td>
                 </tr>
                 </tbody>

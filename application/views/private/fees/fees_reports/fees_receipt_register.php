@@ -20,7 +20,6 @@
                     <li><a href="#">Receipts</a></li>
                     <li><a href="#">Search</a></li>
                     <li><a href="#">SMS</a></li>
-                    <li><a href="#"></a></li>
                 </ul>
             </div>
         </div>

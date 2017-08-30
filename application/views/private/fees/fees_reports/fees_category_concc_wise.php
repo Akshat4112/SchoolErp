@@ -12,10 +12,10 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-3">
+        <div class="col-lg-4">
             <div class="form-group">
-                <label for="inputText" class="col-lg-4 control-label">Select Category</label>
-                <div class="col-lg-8">
+                <label for="inputText" class="col-lg-5 control-label text-info" style="font-size: 16px; margin-top: 7px;"><b>Select Category</b></label>
+                <div class="col-lg-7">
                     <?php
                     //                    $drop=array();
                     //                    foreach($view as $r){
@@ -30,18 +30,15 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-2">
-            <input type="subbmit" class="btn btn-info" value="Ok">
+        <div class="col-lg-1">
+            <input type="subbmit" class="btn btn-info" value="Search">
         </div>
-        <div class="col-lg-4"></div>
-
     </div>
-
-    <div class="row">
+    <div class="row" style="margin-top: 5px;">
         <div class="col-lg-12">
-            <table class="table  table-hover ">
+            <table class="table  table-hover table-bordered">
                 <thead>
-                <tr class="info">
+                <tr class="text-info">
                     <th>Student</th>
                     <th>Father</th>
                     <th>Class</th>
@@ -53,7 +50,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr class="success">
+                <tr class="">
                     <td></td>
                 </tr>
                 </tbody>

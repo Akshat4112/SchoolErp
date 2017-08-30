@@ -7,8 +7,19 @@
  */?>
 <div class="container">
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-5">
             <p class="text-info" style="font-size: 20px">Defaulter List</p>
+        </div>
+        <div class="col-lg-6">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Actions
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Print</a></li>
+                    <li><a href="#">SMS</a></li>
+                    <li><a href="#">Reminder Later</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="row">
@@ -25,32 +36,29 @@
         </div>
         <div class="col-lg-2">
             <div class="form-group">
-                <label for="inputText" class="col-lg-4 control-label">Minimum Value</label>
-                <div class="col-lg-8">
+                <label for="inputText" class="col-lg-6 control-label text-info" style="font-size: 15px;"><b>Minimum Value</b></label>
+                <div class="col-lg-6">
                     <input type="text" class="form-control">
                 </div>
             </div>
         </div>
         <div class="col-lg-2">
             <div class="form-group">
-                <label for="inputText" class="col-lg-4 control-label">Maximum Value</label>
-                <div class="col-lg-8">
+                <label for="inputText" class="col-lg-6 control-label text-info" style="font-size: 15px;"><b>Maximum Value</b></label>
+                <div class="col-lg-6">
                     <input type="text" class="form-control">
                 </div>
             </div>
         </div>
         <div class="col-lg-4">
-            <input type="submit" value="Ok" class="btn btn-info">
-            <input type="submit" value="Print" class="btn btn-info">
-            <input type="submit" value="SMS" class="btn btn-info">
-            <input type="submit" value="Reminder Letter" class="btn btn-info">
+            <input type="submit" value="Search" class="btn btn-info">
         </div>
     </div>
     <div class="row" style="margin-top: 20px;">
         <div class="col-lg-12">
-            <table class="table  table-hover ">
+            <table class="table  table-hover table-bordered">
                 <thead>
-                <tr class="info">
+                <tr class="text-info">
                     <th>ID</th>
                     <th>Month</th>
                     <th>Admission No.</th>
@@ -65,7 +73,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr class="success">
+                <tr class="">
                     <td></td>
                 </tr>
                 </tbody>
