@@ -41,19 +41,10 @@ class Fees_reports extends MY_Controller {
     public function fees_day_book(){
         $this->load->view('private/fees/fees_reports/fees_day_book');
     }
-
-    public function fees_group_ledger(){
-        $this->load->view('private/fees/fees_reports/fees_group_ledger');
-    }
-    public function fees_structure(){
-        $this->load->view('private/fees/fees_reports/fees_structure');
-    }
     public function fees_summary_date_wise(){
         $this->load->view('private/fees/fees_reports/fees_summary_date_wise');
     }
-    public function fees_category_concc_wise(){
-        $this->load->view('private/fees/fees_reports/fees_category_concc_wise');
-    }
+
     public function fees_head_wise_concc_report(){
         $this->load->view('private/fees/fees_reports/fees_head_wise_concc_report');
     }
@@ -106,6 +97,46 @@ class Fees_reports extends MY_Controller {
         $class = $this->gm->get_list($field_cla,$table_name_cla);
 
         $this->load->view('private/fees/fees_reports/head_wise_collection',['fees_head'=>$fees_head,'class'=>$class]);
+    }
+    public function fees_group_ledger(){
+        //dropdown for fees head group
+        $this->load->model('get_model','gm');
+
+        $field= 'fees_head_group_name';
+        $table_name= 'fees_head_group';
+        $fhgn = $this->gm->get_list($field,$table_name);
+
+        $this->load->view('private/fees/fees_reports/fees_group_ledger',['fhgn'=>$fhgn]);
+    }
+    public function fees_structure(){
+        //dropdown for class
+        $this->load->model('get_model','gm');
+
+        $field= 'class';
+        $table_name= 'class';
+        $class = $this->gm->get_list($field,$table_name);
+
+        //dropdown for category
+        $field_cat= 'category_name';
+        $table_name_cat= 'category';
+        $category = $this->gm->get_list($field_cat,$table_name_cat);
+
+        //dropdown for route
+        $field_rou = 'route_name';
+        $table_name_rou = 'route';
+        $route= $this->gm->get_list($field_rou,$table_name_rou);
+
+        $this->load->view('private/fees/fees_reports/fees_structure',['class'=>$class,'category'=>$category,'route'=>$route]);
+    }
+    public function fees_category_concc_wise(){
+        //dropdown for category
+        $this->load->model('get_model','gm');
+
+        $field_cat= 'category_name';
+        $table_name_cat= 'category';
+        $category = $this->gm->get_list($field_cat,$table_name_cat);
+
+        $this->load->view('private/fees/fees_reports/fees_category_concc_wise',['category'=>$category]);
     }
 
 

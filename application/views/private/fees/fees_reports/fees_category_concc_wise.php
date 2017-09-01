@@ -17,16 +17,17 @@
                 <label for="inputText" class="col-lg-5 control-label text-info" style="font-size: 16px; margin-top: 7px;"><b>Select Category</b></label>
                 <div class="col-lg-7">
                     <?php
-                    //                    $drop=array();
-                    //                    foreach($view as $r){
-                    //                        $drop[$r['fees_head_group_name']]=$r['fees_head_group_name'];
-                    //                    }
+                    $drop = array();
+                    foreach ($category as $r) {
+                        $drop[$r['category_name']] = $r['category_name'];
+                    }
                     $attribute_class = [
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('fees_head_group_name_del', '','', $attribute_class);
+                    echo form_dropdown('catrgory', $drop, '1', $attribute_class);
                     ?>
+                    <?php echo form_error('catrgory'); ?>
                 </div>
             </div>
         </div>

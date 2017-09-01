@@ -26,10 +26,18 @@
             <div class="form-group">
                 <label for="inputText" class="col-lg-3 control-label text-info" style="font-size: 17px; margin-top: 5px;"><b>Class</b></label>
                 <div class="col-lg-9">
-                    <select class="form-control">
-                        <option>class 1</option>
-                        <option>class 2</option>
-                    </select>
+                    <?php
+                    $drop = array();
+                    foreach ($class as $r) {
+                        $drop[$r['class']] = $r['class'];
+                    }
+                    $attribute_class = [
+                        'class' => 'form-control',
+                        'id' => 'select',
+                    ];
+                    echo form_dropdown('class', $drop, '1', $attribute_class);
+                    ?>
+                    <?php echo form_error('class'); ?>
                 </div>
             </div>
         </div>
@@ -37,10 +45,18 @@
             <div class="form-group">
                 <label for="inputText" class="col-lg-4 control-label text-info" style="font-size: 17px; margin-top: 5px;"><b>Category</b></label>
                 <div class="col-lg-8">
-                    <select class="form-control">
-                        <option>class 1</option>
-                        <option>class 2</option>
-                    </select>
+                    <?php
+                    $drop = array();
+                    foreach ($category as $r) {
+                        $drop[$r['category_name']] = $r['category_name'];
+                    }
+                    $attribute_class = [
+                        'class' => 'form-control',
+                        'id' => 'select',
+                    ];
+                    echo form_dropdown('catrgory', $drop, '1', $attribute_class);
+                    ?>
+                    <?php echo form_error('catrgory'); ?>
                 </div>
             </div>
         </div>
@@ -48,10 +64,18 @@
             <div class="form-group">
                 <label for="inputText" class="col-lg-3 control-label text-info" style="font-size: 17px; margin-top: 5px;"><b>Route</b></label>
                 <div class="col-lg-9">
-                    <select class="form-control">
-                        <option>class 1</option>
-                        <option>class 2</option>
-                    </select>
+                    <?php
+                    $drop = array();
+                    foreach ($route as $r) {
+                        $drop[$r['route_name']] = $r['route_name'];
+                    }
+                    $attribute_class = [
+                        'class' => 'form-control',
+                        'id' => 'select',
+                    ];
+                    echo form_dropdown('route_name', $drop, '1', $attribute_class);
+                    ?>
+                    <?php echo form_error('route_name'); ?>
                 </div>
             </div>
         </div>

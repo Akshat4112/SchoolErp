@@ -26,12 +26,18 @@
             <div class="form-group">
                 <label for="inputText" class="col-lg-4 control-label">Fees Group</label>
                 <div class="col-lg-8">
-                    <select class="form-control">
-                        <option>Fees Group 1</option>
-                        <option>Fees Group 2</option>
-                        <option>Fees Group 3</option>
-                        <option>Fees Group 4</option>
-                    </select>
+                    <?php
+                    $drop = array();
+                    foreach ($fhgn as $r) {
+                        $drop[$r['fees_head_group_name']] = $r['fees_head_group_name'];
+                    }
+                    $attribute_class = [
+                        'class' => 'form-control',
+                        'id' => 'select',
+                    ];
+                    echo form_dropdown('fhgn', $drop, '1', $attribute_class);
+                    ?>
+                    <?php echo form_error('fhgn'); ?>
                 </div>
             </div>
         </div>
