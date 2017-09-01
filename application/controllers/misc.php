@@ -16,11 +16,11 @@ class Misc extends MY_Controller{
 
     }
     public function gatepass(){
-        $this->load->model('add_model','am');
+ 
         $data=$this->input->post();
         unset($data['submit']);
         $table_name = 'gatepass';
-        if($this->am->insert_data($table_name,$data))
+        if($this->insert_data($table_name,$data))
         {
 
             $this->load->view('private/misc/gatepass');

@@ -231,7 +231,7 @@ class Fees extends MY_Controller{
         $this->delete_genric($form_validation,$table_name,$view,$field,$unset,$value_form);
     }
     public function fees_receipt(){
-        $this->load->model('add_model','am');
+ 
         $this->load->model('get_model', 'gm');
 
         if ($this->form_validation->run('fees_receipt_search')) {

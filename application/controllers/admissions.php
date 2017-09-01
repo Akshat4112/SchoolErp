@@ -105,8 +105,7 @@ class Admissions extends MY_Controller
             $post = $this->input->post();
             unset($post['submit']);
             $table_name = 'student';
-            $this->load->model('add_model','am');
-            if ($this->am->insert_data($table_name, $post)) {
+            if ($this->insert_data($table_name, $post)) {
                 $this->session->set_flashdata('stu_succ', 'General details filled Successfully.');
                 $this->load->view('private/admissions/address');
                 //print_r($_POST['si']);
@@ -140,7 +139,7 @@ class Admissions extends MY_Controller
             unset($post['submit']);
 
             
-            if ($this->am->insert_data_key($table_name,$post,$last_student_id)) {
+            if ($this->insert_data_key($table_name,$post,$last_student_id)) {
                 $this->session->set_flashdata('stu_succ','Address details filled Successfully.');
                 $this->load->view('private/admissions/parents');
             } else {
@@ -164,7 +163,7 @@ class Admissions extends MY_Controller
 
             
 
-            if ($this->am->insert_data_key($table_name, $post,$last_student_id)) {
+            if ($this->insert_data_key($table_name, $post,$last_student_id)) {
                 $this->session->set_flashdata('stu_succ','Parents details filled Successfully.');
                 $this->load->view('private/admissions/misc');
             } else {
@@ -190,7 +189,7 @@ class Admissions extends MY_Controller
 
             $table_name = 'student';
             
-            if ($this->am->insert_data_key($table_name, $post,$student_id)) {
+            if ($this->insert_data_key($table_name, $post,$student_id)) {
                 $this->session->set_flashdata('stu_succ','Misc. details filled Successfully.');
                 $this->load->view('private/admissions/attach');
             } else {
@@ -217,7 +216,7 @@ class Admissions extends MY_Controller
 
             $table_name = 'student';
             
-            if ($this->am->insert_data_key($table_name, $post,$student_id)) {
+            if ($this->insert_data_key($table_name, $post,$student_id)) {
                 $this->session->set_flashdata('stu_succ','Attachements updated filled Successfully.');
                 $this->load->view('private/admissions/balance');
             } else {
@@ -243,7 +242,7 @@ class Admissions extends MY_Controller
 
             $table_name = 'student';
             
-            if ($this->am->insert_data_key($table_name, $post,$student_id)) {
+            if ($this->insert_data_key($table_name, $post,$student_id)) {
                 redirect('admissions/');
             } else {
                 $this->load->view('private/admissions/balance');
