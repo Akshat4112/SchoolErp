@@ -65,9 +65,9 @@
         </table>
     </div>
     <div class="row">
-        <div class="col-lg-12" style="margin-left: 500px; margin-top: 20px;">
+        <div class="col-lg-12" style="margin-left: 12px; margin-top: 30px;">
             <form action="<?php echo base_url(); ?>admissions/excel_export" class="form-horizontal" method="post">
-                <input type="submit" name="export" class="btn btn-success" value="Export">
+                <input type="submit" name="export" class="btn btn-info" value="Export">
             </form>
 
         </div>

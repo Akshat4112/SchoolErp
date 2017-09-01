@@ -43,9 +43,9 @@
             <?php form_close();?>
         </div>
         <div class="col-lg-8">
-            <table class="table table-hover ">
+            <table class="table table-hover table-bordered">
                 <thead>
-                <tr class="info">
+                <tr class="text-info">
                     <th>Name</th>
                     <th>Class</th>
                     <th>Section</th>
@@ -62,7 +62,7 @@
                         </tr>
                     <?php endforeach; ?>
                 <?php else: ?>
-                    <tr class="success">
+                    <tr class="">
                         <td>No Records Found</td>
                     </tr>
                 <?php endif; ?>

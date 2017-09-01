@@ -30,10 +30,10 @@
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="<?=site_url('admissions/student_details'); ?>">Create</a></li>
                         <li><a href="<?=site_url('admissions/import'); ?>">Import</a></li>
-                        <li><a href="<?=site_url('admissions/export'); ?>">Export</a></li>
                         <li><a href="<?=site_url('admissions/send_sms'); ?>">Send SMS</a></li>
                         <li><a href="<?=site_url('admissions/id_card'); ?>">ID Card</a></li>
-                        <li><a href="<?=site_url('admissions/create_list'); ?>">List</a></li>
+                        <li><a href="<?=site_url('admissions/excel_export'); ?>">Downlaod as CSV</a></li>
+                        <li><a href="<?=site_url('admissions/create_list'); ?>">Download as PDF</a></li>
                     </ul>
                 </li>
 
