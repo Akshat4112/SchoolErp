@@ -28,11 +28,11 @@ class Admin extends MY_Controller
 
         if ($this->form_validation->run('class')) {
             // for inserting class in database from model
-            $this->load->model('add_model', 'am');
+            
             $post = $this->input->post();
             unset($post['submit']);
             $table_name='class';
-            if ($this->am->insert_data($table_name,$post)) {
+            if ($this->insert_data($table_name,$post)) {
                 //  $this->load->view('private/admin/masters/class');
             } else {
                 echo 'Query failed in inserting record';
@@ -55,11 +55,11 @@ class Admin extends MY_Controller
         if ($this->form_validation->run('class_del')) {
             $post = $this->input->post();
             unset($post['del_class']);
-            $this->load->model('del_model', 'dm');
+            
             $value = $post['class_delete'];
             $table_name='class';
             $field='class';
-            if($this->dm->delete_row($table_name,$field,$value)){
+            if($this->delete_row($table_name,$field,$value)){
                 $this->load->model('get_model', 'gm');
                 $class = $this->gm->get_class();
                 $this->load->view('private/admin/masters/class', ['det_class' => $class,'dropdown'=>$drop]);
@@ -178,10 +178,10 @@ class Admin extends MY_Controller
 
             $post = $this->input->post();
             unset($post['submit']);
-            $this->load->model('add_model', 'am');
+            
             $table_name='organisation_info';
 
-            if ($this->am->insert_data($table_name,$post)) {
+            if ($this->insert_data($table_name,$post)) {
                 $this->load->view('private/admin/organisation_info');
             } else {
                 echo 'Database query error';

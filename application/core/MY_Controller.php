@@ -11,9 +11,9 @@ class MY_Controller extends CI_Controller{
         if ($this->form_validation->run($form_validation)) {
             $post = $this->input->post();
             unset($post[$unset]);
-            $this->load->model('del_model', 'dm');
+            
             $value = $post[$value_form];
-            if($this->dm->delete_row($table_name,$field,$value)){
+            if($this->delete_row($table_name,$field,$value)){
                 $this->load->model('get_model', 'gm');
                 $array = $this->gm->get_list($field,$table_name);
                 $this->load->view('private/'.$view, ['view' => $array]);
@@ -33,10 +33,10 @@ class MY_Controller extends CI_Controller{
 
             // for inserting class in database from model
 
-            $this->load->model('add_model', 'am');
+            
             $post = $this->input->post();
             unset($post['submit']);
-            if ($this->am->insert_data($table_name,$post)) {
+            if ($this->insert_data($table_name,$post)) {
                 $this->load->model('get_model', 'gm');
                 $array = $this->gm->get_list($field,$table_name);
                 $this->load->view('private/'.$view,['view'=>$array]);
@@ -57,5 +57,23 @@ class MY_Controller extends CI_Controller{
         $admin_id = $this->session->userdata('login_id');
         $user_name = $this->db->select('admin_name')->from('admin')->where('admin_id',$admin_id)->get();
         return $user_name->result();
+    }
+    public function delete(){}
+    public function traverse(){}
+    public function get_all(){}
+    public function update(){}
+
+    public function delete_row($table_name,$field,$value){
+        $this->db->where($field, $value);
+        if($this->db->delete($table_name)){
+            return true;
+        }
+    }
+    public function insert_data($table_name,$array){
+        return $this->db->insert($table_name,$array);
+    }
+    public function insert_data_key($table_name,$array,$key){
+        $this->db->where('student_id', $key);
+        return $this->db->update($table_name, $array);
     }
 }

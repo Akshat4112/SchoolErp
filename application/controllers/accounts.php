@@ -36,11 +36,11 @@ class Accounts extends MY_Controller{
 
             $post = $this->input->post();
             unset($post['del_account_group']);
-            $this->load->model('del_model', 'dm');
+            
             $value = $post['account_group_delete'];
             $table_name='account_group';
             $field='account_group_name';
-            if($this->dm->delete_row($table_name,$field,$value)){
+            if($this->delete_row($table_name,$field,$value)){
                 $this->load->model('get_model', 'gm');
                 $list= $this->gm->get_list($field,$table_name);
                 $this->load->view('private/accounts/account_group',['view' => $list]);
@@ -66,10 +66,10 @@ class Accounts extends MY_Controller{
 
             $post = $this->input->post();
             unset($post['submit']);
-            $this->load->model('add_model', 'am');
+            
             $table_name='account';
 
-            if ($this->am->insert_data($table_name,$post)) {
+            if ($this->insert_data($table_name,$post)) {
                 $field_a='account_group_name';
                 $table_name_a='account_group';
                 $this->load->model('get_model','gm');
@@ -99,11 +99,11 @@ class Accounts extends MY_Controller{
 
             $post = $this->input->post();
             unset($post['del_account_name']);
-            $this->load->model('del_model', 'dm');
+            
             $value = $post['account_name_delete'];
             $table_name='account';
             $field='account_name';
-            if($this->dm->delete_row($table_name,$field,$value)){
+            if($this->delete_row($table_name,$field,$value)){
                 $this->load->model('get_model', 'gm');
                 $list= $this->gm->get_list($field,$table_name);
                 $this->load->view('private/accounts/delete',['view' => $list]);
@@ -218,9 +218,9 @@ class Accounts extends MY_Controller{
         if ($this->form_validation->run('payments')) {
             $post = $this->input->post();
             unset($post['submit']);
-            $this->load->model('add_model', 'am');
+            
             $table_name='payments';
-            if ($this->am->insert_data($table_name,$post)) {
+            if ($this->insert_data($table_name,$post)) {
                 $field_a='account_name';
                 $table_name_a='account';
                 $this->load->model('get_model','gm');

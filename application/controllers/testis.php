@@ -21,10 +21,10 @@ class Testis extends MY_Controller{
 
             // for inserting class in database from model
 
-            $this->load->model('add_model', 'am');
+            
             $post = $this->input->post();
             unset($post['submit']);
-            if ($this->am->insert_data($table_name,$post)) {
+            if ($this->insert_data($table_name,$post)) {
                 $this->load->model('get_model', 'gm');
                 $array = $this->gm->get_list($field,$table_name);
                 $this->load->view('private/admin/masters/'.$view,['view'=>$array]);

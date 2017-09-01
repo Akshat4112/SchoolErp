@@ -25,10 +25,10 @@ class Fees extends MY_Controller{
         if ($this->form_validation->run('fees_head')) {
             $post = $this->input->post();
             unset($post['submit']);
-            $this->load->model('add_model', 'am');
+            
             $table_name='fees_head';
 
-            if ($this->am->insert_data($table_name,$post)) {
+            if ($this->insert_data($table_name,$post)) {
                 $field_fhg='fees_head_group_name';
                 $field_a='account_name';
                 $table_name_fhg='fees_head_group';
@@ -113,10 +113,10 @@ class Fees extends MY_Controller{
     public function insert_genric($form_validation,$table_name,$view,$field)
     {
         if ($this->form_validation->run($form_validation)) {
-            $this->load->model('add_model', 'am');
+            
             $post = $this->input->post();
             unset($post['submit']);
-            if ($this->am->insert_data($table_name,$post)) {
+            if ($this->insert_data($table_name,$post)) {
                 $this->load->model('get_model', 'gm');
                 $array = $this->gm->get_list($field,$table_name);
                 $this->load->view('private/fees/'.$view,['view'=>$array]);
@@ -243,7 +243,7 @@ class Fees extends MY_Controller{
 
             //inserting data in db
             $table_name = 'fees_reciept';
-            if($this->am->insert_data($table_name,$post)) {
+            if($this->insert_data($table_name,$post)) {
                 $this->load->view('private/fees/fees_receipt', ['stu_det' => $stu_det]);
             }else{
                 echo 'Problem';

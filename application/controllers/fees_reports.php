@@ -9,7 +9,7 @@ class Fees_reports extends MY_Controller {
     public function __construct()
     {
         parent::__construct();
-        
+
        
         $this->load->view('private/fees/header',['username' => $this->get_admin()]);
         $this->load->view('private/fees/footer');

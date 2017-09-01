@@ -139,7 +139,7 @@ class Admissions extends MY_Controller
 
             unset($post['submit']);
 
-            $this->load->model('add_model', 'am');
+            
             if ($this->am->insert_data_key($table_name,$post,$last_student_id)) {
                 $this->session->set_flashdata('stu_succ','Address details filled Successfully.');
                 $this->load->view('private/admissions/parents');
@@ -162,7 +162,7 @@ class Admissions extends MY_Controller
 
             $table_name = 'student';
 
-            $this->load->model('add_model', 'am');
+            
 
             if ($this->am->insert_data_key($table_name, $post,$last_student_id)) {
                 $this->session->set_flashdata('stu_succ','Parents details filled Successfully.');
@@ -189,7 +189,7 @@ class Admissions extends MY_Controller
             unset($post['Submit']);
 
             $table_name = 'student';
-            $this->load->model('add_model', 'am');
+            
             if ($this->am->insert_data_key($table_name, $post,$student_id)) {
                 $this->session->set_flashdata('stu_succ','Misc. details filled Successfully.');
                 $this->load->view('private/admissions/attach');
@@ -216,7 +216,7 @@ class Admissions extends MY_Controller
             unset($post['Submit']);
 
             $table_name = 'student';
-            $this->load->model('add_model', 'am');
+            
             if ($this->am->insert_data_key($table_name, $post,$student_id)) {
                 $this->session->set_flashdata('stu_succ','Attachements updated filled Successfully.');
                 $this->load->view('private/admissions/balance');
@@ -242,7 +242,7 @@ class Admissions extends MY_Controller
             unset($post['Submit']);
 
             $table_name = 'student';
-            $this->load->model('add_model', 'am');
+            
             if ($this->am->insert_data_key($table_name, $post,$student_id)) {
                 redirect('admissions/');
             } else {

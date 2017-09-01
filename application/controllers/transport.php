@@ -21,10 +21,10 @@ class Transport extends MY_Controller{
 
             $post = $this->input->post();
             unset($post['submit']);
-            $this->load->model('add_model', 'am');
+            
             $table_name='route';
 
-            if ($this->am->insert_data($table_name,$post)) {
+            if ($this->insert_data($table_name,$post)) {
 
                 $this->load->model('get_model', 'gm');
                 $rhl = $this->gm->route_list();
@@ -50,7 +50,7 @@ class Transport extends MY_Controller{
            $post = $this->input->post();
             unset($post['submit']);
             print_r($post);
-            $this->load->model('add_model', 'am');
+            
             $route_name='route_name';
             $table_name='route';
             $this->load->model('get_model', 'gm');
