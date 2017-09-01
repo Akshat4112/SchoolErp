@@ -15,50 +15,29 @@ class Attendance extends MY_Controller{
 
     }
     public function attend_view(){
+        $data = $this->input->post();
+
         $this->load->view('private/attendance/attend_view.php');
     }
-    public function attend_new(){
 
-        //loading section dropdown form database
-        $fieldsec='section_name';
-        $table_namesec='section';
-        $this->load->model('get_model','gm');
-        $section_list=$this->gm->get_list($fieldsec,$table_namesec);
-        $list1=array();
-        foreach($section_list as $type )
-        {
-            array_push($list1, $type['section_name']);
-        }
-        //loading class dropdown from database
-        $this->load->model('get_model','gm');
-        $class_list=$this->gm->get_class_list();
-        $list=array();
-        foreach($class_list as $type )
-        {
-            array_push($list, $type['class']);
-        }
-
-//        $data=$this->input->post();
-//        unset($data['submit']);
-//        print_r($data);
-
-        //loading table data dynamically based upon input by form...
-        $data['class']=0;
-        $data['section']=0;
-        $data['date']=0;
-        $class_table = $data['class'];
-        $section_table = $data['section'];
-        $date_table = $data['date'];
-        //$this->load->model('');
-        $this->load->view('private/attendance/attend_new.php',['section'=>$list1,'class_drop'=>$list]);
-    }
     public function summary(){
-        $this->load->view('private/attendance/summary.php');
+        $this->load->view('private/attendance/summary/summary.php');
     }
     public function prints(){
         $this->load->view('private/attendance/print.php');
     }
-    public function auto(){
-        $this->load->view('private/attendance/auto.php');
+    public function attend_new(){
+        //loading section dropdown form database
+        $section_list = $this->dropdown_db('section_name','section');
+
+        //loading class dropdown from database
+        $class_list = $this->dropdown_db('class','class');
+
+//        $post = $this->input->post();
+//        unset($post['submit']);
+//        print_r($post);
+
+        $this->load->view('private/attendance/new/attend_new.php',['section_drop'=>$section_list,
+            'class_drop'=>$class_list]);
     }
 }

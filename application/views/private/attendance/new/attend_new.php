@@ -21,27 +21,35 @@
                 <label for="inputText" class="col-lg-2 control-label">Class</label>
                 <div class="col-lg-10">
                     <?php
+                    $drop = array();
+                    foreach ($class_drop as $r) {
+                        $drop[$r['class']] = $r['class'];
+                    }
                     $attribute_class = [
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('class', $class_drop, 'class', $attribute_class);
+                    echo form_dropdown('class', $drop, '1', $attribute_class);
                     ?>
                     <?php echo form_error('class'); ?>
+
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Section</label>
                 <div class="col-lg-10">
                     <?php
+                    $drop = array();
+                    foreach ($section_drop as $r) {
+                        $drop[$r['section_name']] = $r['section_name'];
+                    }
                     $attribute_class = [
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('section', $section, 'class', $attribute_class);
+                    echo form_dropdown('section', $drop, '1', $attribute_class);
                     ?>
                     <?php echo form_error('section'); ?>
-
                 </div>
             </div>
             <?php echo form_submit(['name' => 'submit', 'value' => 'Ok', 'class' => 'btn btn-info',
@@ -51,9 +59,9 @@
             <?php echo form_close();?>
         </div>
         <div class="col-lg-8">
-            <table class="table table-hover ">
+            <table class="table table-hover table-bordered">
                 <thead>
-                <tr class="info">
+                <tr class="text-info">
                     <th>Roll No.</th>
                     <th>Name</th>
                     <th>Admission No.</th>
@@ -64,7 +72,20 @@
                 </tr>
                 </thead>
                 <tbody>
-
+<!--                --><?php //if (count($data)): ?>
+<!---->
+<!--                    --><?php //foreach ($data as $student_det): ?>
+<!--                        <tr class="">-->
+<!--                            <td>--><?php //echo $student_det['student_roll_no'] ?><!--</td>-->
+<!--                            <td>--><?php //echo $student_det['student_first_name'] ?><!--</td>-->
+<!--                            <td>--><?php //echo $student_det['admission_no'] ?><!--</td>-->
+<!--                        </tr>-->
+<!--                    --><?php //endforeach; ?>
+<!--                --><?php //else: ?>
+<!--                    <tr class="">-->
+<!--                        <td>No Records Found</td>-->
+<!--                    </tr>-->
+<!--                --><?php //endif; ?>
                 </tbody>
             </table>
         </div>
