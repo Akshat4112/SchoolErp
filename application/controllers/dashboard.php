@@ -19,9 +19,7 @@ class Dashboard extends MY_Controller{
             return redirect('home');
             exit();
         }
-        $this->load->model('get_header_info','ghi');
-        $username = $this->ghi->get_admin();
-        $this->load->view('private/dashboard/dashboard_header',['username'=>$username]);
+        $this->load->view('private/dashboard/dashboard_header',['username'=>$this->get_admin()]);
 
     }
     public function index(){

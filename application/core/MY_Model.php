@@ -13,4 +13,13 @@ class MY_Model extends CI_Model{
         $this->db->where('student_id', $key);
         return $this->db->update($table_name, $array);
     }
+    public function insert(){
+        $this->db->insert();
+    }
+    public function delete(){}
+    public function traverse(){}
+    public function get_all(){}
+    public function update(){}
+
+
 }

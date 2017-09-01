@@ -53,4 +53,9 @@ class MY_Controller extends CI_Controller{
         $this->load->model('get_model','gm');
         return $dropdownn = $this->gm->get_list($field,$table_name);
     }
+    public function get_admin(){
+        $admin_id = $this->session->userdata('login_id');
+        $user_name = $this->db->select('admin_name')->from('admin')->where('admin_id',$admin_id)->get();
+        return $user_name->result();
+    }
 }

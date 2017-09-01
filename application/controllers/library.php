@@ -9,9 +9,9 @@ class Library extends MY_Controller{
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('get_header_info','ghi');
-        $username = $this->ghi->get_admin();
-        $this->load->view('private/library/header',['username'=>$username]);
+        
+       
+        $this->load->view('private/library/header',['username' => $this->get_admin()]);
         $this->load->view('private/library/footer');
     }
     public function index(){
