@@ -57,11 +57,18 @@
         <div class="form-group">
             <label for="inputText" class="col-lg-2 control-label">Class</label>
             <div class="col-lg-10">
-            <?php  echo form_input(['name' => 'class_delete', 'class' => 'form-control',
-                    'placeholder' => 'Enter Class to be deleted',
-                    'value' => set_value('class_delete')]);
+                <?php
+                $drop = array();
+                foreach ($dropdown as $r) {
+                    $drop[$r['class']] = $r['class'];
+                }
+                $attribute_class = [
+                    'class' => 'form-control',
+                    'id' => 'select',
+                ];
+                echo form_dropdown('class_delete', $drop, '1', $attribute_class);
                 ?>
-            <?php echo form_error('class_delete'); ?>
+                <?php echo form_error('class_delete'); ?>
             </div>
             <input type="submit" name="del_class" class="btn btn-danger" value="DELETE" style="margin-left: 50px; margin-top: 20px;">
                 <?php  form_close(); ?>
@@ -71,9 +78,9 @@
 
 
         <div class="col-lg-8">
-            <table class="table table-hover ">
+            <table class="table table-hover table-bordered">
                 <thead>
-                <tr class="info">
+                <tr class="text-info">
                     <th>Class</th>
                     <th>Prefix</th>
                     <th>Start from</th>
@@ -83,7 +90,7 @@
                 <tbody>
                 <?php if (count($det_class)): ?>
                     <?php foreach($det_class as $class_det): ?>
-                        <tr class="success">
+                        <tr class="">
                             <td><?php echo $class_det->class?></td>
                             <td><?php echo $class_det->prefix?></td>
                             <td><?php echo $class_det->start_from?></td>

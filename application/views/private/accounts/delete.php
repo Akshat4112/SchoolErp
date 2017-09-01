@@ -13,9 +13,16 @@
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Account Name</label>
                 <div class="col-lg-10">
-                    <?php  echo form_input(['name' => 'account_name_delete', 'class' => 'form-control',
-                        'placeholder' => 'Enter Account Name to be deleted',
-                        'value' => set_value('account_name_delete')]);
+                    <?php
+                    $drop = array();
+                    foreach ($view as $r) {
+                        $drop[$r['account_name']] = $r['account_name'];
+                    }
+                    $attribute_class = [
+                        'class' => 'form-control',
+                        'id' => 'select',
+                    ];
+                    echo form_dropdown('account_name_delete', $drop, '1', $attribute_class);
                     ?>
                     <?php echo form_error('account_name_delete'); ?>
                 </div>
@@ -24,9 +31,9 @@
             </div>
         </div>
         <div class="col-lg-6">
-            <table class="table table-hover ">
+            <table class="table table-hover table-bordered ">
                 <thead>
-                <tr class="info">
+                <tr class="text-info">
                     <th>Accounts</th>
                 </tr>
                 </thead>
@@ -34,7 +41,7 @@
                 <?php if (count($view)): ?>
                     <?php
                     foreach ($view as $account_name) {
-                        echo "<tr class='success'><td>" . $account_name['account_name'] . '<br>' . "</td></tr>";
+                        echo "<tr class=''><td>" . $account_name['account_name'] . '<br>' . "</td></tr>";
                    }
                     ?>
 

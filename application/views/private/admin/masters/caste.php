@@ -42,17 +42,17 @@
             </div>
         </div>
         <div class="col-lg-8">
-            <table class="table table-hover ">
+            <table class="table table-hover table-bordered">
                 <thead>
-                <tr class="info">
-                    <th>caste</th>
+                <tr class="text-info">
+                    <th>Caste</th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php if (count($view)): ?>
                     <?php
                     foreach ($view as $caste) {
-                        echo "<tr class='success'><td>" . $caste['caste_name'] . '<br>' . "</td></tr>";
+                        echo "<tr class=''><td>" . $caste['caste_name'] . '<br>' . "</td></tr>";
                     }
                     ?>
 

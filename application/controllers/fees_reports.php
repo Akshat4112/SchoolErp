@@ -59,12 +59,10 @@ class Fees_reports extends MY_Controller {
         //dropdown for fees head
         $this->load->model('get_model','gm');
 
-        $field= 'fees_heading';
-        $table_name= 'fees_head';
+        $drop = $this->dropdown_db('fees_heading','fees_head');
 
-        $fees_head = $this->gm->get_list($field,$table_name);
         $this->load->view('private/fees/fees_reports/fees_monthly_summary',
-            ['fees_head'=>$fees_head]);
+            ['fees_head'=>$drop]);
     }
     public function yearly_fees_receivable_report(){
         //dropdown for class

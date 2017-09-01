@@ -49,5 +49,8 @@ class MY_Controller extends CI_Controller{
             $this->load->view('private/'.$view,['view'=>$array]);
         }
     }
-
+    public function dropdown_db($field,$table_name){
+        $this->load->model('get_model','gm');
+        return $dropdownn = $this->gm->get_list($field,$table_name);
+    }
 }

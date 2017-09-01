@@ -32,7 +32,6 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Accounts<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="<?= site_url('accounts/new_account'); ?>">New</a></li>
-                        <li><a href="<?=site_url('accounts/labels'); ?>">Labels</a></li>
                         <li><a href="<?=site_url('accounts/export'); ?>">Export</a></li>
                         <li><a href="<?=site_url('accounts/import'); ?>">Import</a></li>
                         <li><a href="<?=site_url('accounts/send_sms'); ?>">Send SMS</a></li>

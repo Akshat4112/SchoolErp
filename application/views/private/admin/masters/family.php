@@ -43,9 +43,9 @@
             </div>
         </div>
         <div class="col-lg-8">
-            <table class="table table-hover ">
+            <table class="table table-hover table-bordered">
                 <thead>
-                <tr class="info">
+                <tr class="text-info">
                     <th>Family</th>
                 </tr>
                 </thead>
@@ -53,7 +53,7 @@
                 <?php if (count($view)): ?>
                     <?php
                     foreach ($view as $family) {
-                        echo "<tr class='success'><td>" . $family['family_name'] . '<br>' . "</td></tr>";
+                        echo "<tr class=''><td>" . $family['family_name'] . '<br>' . "</td></tr>";
                     }
                     ?>
 

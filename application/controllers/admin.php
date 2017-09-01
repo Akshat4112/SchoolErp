@@ -24,6 +24,8 @@ class Admin extends MY_Controller
     }
     public function masters_class()
     {
+        $drop = $this->dropdown_db('class','class');
+
         if ($this->form_validation->run('class')) {
             // for inserting class in database from model
             $this->load->model('add_model', 'am');
@@ -41,13 +43,13 @@ class Admin extends MY_Controller
         //for getting data to populate in table in masters class
         $this->load->model('get_model', 'gm');
         $class = $this->gm->get_class();
-        $this->load->view('private/admin/masters/class', ['det_class' => $class]);
+        $this->load->view('private/admin/masters/class', ['det_class' => $class,'dropdown'=>$drop]);
     }
 
 
     public function masters_class_del()
     {
-
+        $drop = $this->dropdown_db('class','class');
         //Delete Functionality to be made later...
 
         if ($this->form_validation->run('class_del')) {
@@ -60,13 +62,13 @@ class Admin extends MY_Controller
             if($this->dm->delete_row($table_name,$field,$value)){
                 $this->load->model('get_model', 'gm');
                 $class = $this->gm->get_class();
-                $this->load->view('private/admin/masters/class', ['det_class' => $class]);
+                $this->load->view('private/admin/masters/class', ['det_class' => $class,'dropdown'=>$drop]);
             }
         }
         else{
             $this->load->model('get_model', 'gm');
             $class = $this->gm->get_class();
-            $this->load->view('private/admin/masters/class', ['det_class' => $class]);
+            $this->load->view('private/admin/masters/class', ['det_class' => $class,'dropdown'=>$drop]);
            }
     }
 

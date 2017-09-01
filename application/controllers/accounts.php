@@ -96,6 +96,7 @@ class Accounts extends MY_Controller{
     }
     public function account_del()
     {
+
         if ($this->form_validation->run('account_delete')) {
 
             $post = $this->input->post();
