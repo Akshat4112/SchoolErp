@@ -26,16 +26,17 @@
                 <label for="inputText" class="col-lg-4 control-label text-info" style="font-size: 17px; margin-top: 5px;"><b>Class</b></label>
                 <div class="col-lg-8">
                     <?php
-//                    $drop=array();
-//                    foreach($view as $r){
-//                        $drop[$r['fees_head_group_name']]=$r['fees_head_group_name'];
-//                    }
+                    $drop = array();
+                    foreach ($class as $r) {
+                        $drop[$r['class']] = $r['class'];
+                    }
                     $attribute_class = [
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('fees_head_group_name_del', '','', $attribute_class);
+                    echo form_dropdown('class', $drop, '1', $attribute_class);
                     ?>
+                    <?php echo form_error('class'); ?>
                 </div>
             </div>
         </div>
@@ -44,16 +45,17 @@
                 <label for="inputText" class="col-lg-4 control-label text-info" style="font-size: 17px; margin-top: 5px;"><b>Section</b></label>
                 <div class="col-lg-8">
                     <?php
-                    //                    $drop=array();
-                    //                    foreach($view as $r){
-                    //                        $drop[$r['fees_head_group_name']]=$r['fees_head_group_name'];
-                    //                    }
+                    $drop = array();
+                    foreach ($section as $r) {
+                        $drop[$r['section_name']] = $r['section_name'];
+                    }
                     $attribute_class = [
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('fees_head_group_name_del', '','', $attribute_class);
+                    echo form_dropdown('section', $drop, '1', $attribute_class);
                     ?>
+                    <?php echo form_error('section'); ?>
                 </div>
             </div>
         </div>

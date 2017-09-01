@@ -42,15 +42,23 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-3">
             <div class="form-group">
-                <label for="inputText" class="col-lg-4 control-label text-info" style="font-size: 15px;
-            margin-top: 0px;"><b>Fees Head</b></label>
-                <div class="col-lg-8">
-                    <?php echo form_input(['name' => 'fees_head', 'class' => 'form-control',
-                        'placeholder' => 'Enter Fees Head Group',
-                        'value' => set_value('fees_head')]);
+                <label for="inputText" class="col-lg-5 control-label text-info" style="font-size: 15px;
+                    margin-top: 10px;"><b>Fees Head</b></label>
+                <div class="col-lg-7">
+                    <?php
+                    $drop = array();
+                    foreach ($fees_head as $r) {
+                        $drop[$r['fees_heading']] = $r['fees_heading'];
+                    }
+                    $attribute_class = [
+                        'class' => 'form-control',
+                        'id' => 'select',
+                    ];
+                    echo form_dropdown('fees_head', $drop, '1', $attribute_class);
                     ?>
+                    <?php echo form_error('fees_head'); ?>
                 </div>
             </div>
         </div>

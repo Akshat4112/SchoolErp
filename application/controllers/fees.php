@@ -187,9 +187,7 @@ class Fees extends MY_Controller{
     public function fees_head_wise_concc_report(){
         $this->load->view('private/fees/fees_reports/fees_head_wise_concc_report');
     }
-    public function concc_register(){
-        $this->load->view('private/fees/fees_reports/concc_register');
-    }
+
 
     public function fees_plan(){
 

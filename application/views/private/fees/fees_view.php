@@ -68,9 +68,9 @@
 <div class="row">
     <div class="col-lg-1"></div>
     <div class="col-lg-10">
-        <table class="table  table-hover ">
+        <table class="table  table-hover table-bordered">
             <thead>
-            <tr class="info">
+            <tr class="text-info">
                 <th>Voucher ID</th>
                 <th>Date</th>
                 <th>Rec. No.</th>
@@ -85,7 +85,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr class="success">
+            <tr class="">
                 <td></td>
             </tr>
             </tbody>

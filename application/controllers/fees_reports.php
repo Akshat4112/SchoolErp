@@ -27,27 +27,21 @@ class Fees_reports extends MY_Controller {
     public function fees_head_summary(){
         $this->load->view('private/fees/fees_reports/fees_head_summary');
     }
-    public function fees_monthly_summary(){
-        $this->load->view('private/fees/fees_reports/fees_monthly_summary');
-    }
+
     public function fees_concc_settingsI(){
         $this->load->view('private/fees/fees_reports/fees_concc_settings');
     }
     public function defaulter_list(){
         $this->load->view('private/fees/fees_reports/defaulter_list');
     }
-    public function yearly_receivable_report(){
-        $this->load->view('private/fees/fees_reports/yearly_receivable_report');
-    }
+
     public function receipt_book(){
         $this->load->view('private/fees/fees_reports/receipt_book');
     }
     public function fees_day_book(){
         $this->load->view('private/fees/fees_reports/fees_day_book');
     }
-    public function head_wise_collection(){
-        $this->load->view('private/fees/fees_reports/head_wise_collection');
-    }
+
     public function fees_group_ledger(){
         $this->load->view('private/fees/fees_reports/fees_group_ledger');
     }
@@ -63,7 +57,56 @@ class Fees_reports extends MY_Controller {
     public function fees_head_wise_concc_report(){
         $this->load->view('private/fees/fees_reports/fees_head_wise_concc_report');
     }
-    public function concession_register(){
-        $this->load->view('private/fees/fees_reports/concesstion_register');
+    public function concc_register(){
+        $this->load->view('private/fees/fees_reports/concc_register');
     }
+
+    /**
+     *function for fees_monthly summary
+     */
+    public function fees_monthly_summary(){
+        //dropdown for fees head
+        $this->load->model('get_model','gm');
+
+        $field= 'fees_heading';
+        $table_name= 'fees_head';
+
+        $fees_head = $this->gm->get_list($field,$table_name);
+        $this->load->view('private/fees/fees_reports/fees_monthly_summary',
+            ['fees_head'=>$fees_head]);
+    }
+    public function yearly_fees_receivable_report(){
+        //dropdown for class
+        $this->load->model('get_model','gm');
+
+        $field= 'class';
+        $table_name= 'class';
+        $class = $this->gm->get_list($field,$table_name);
+
+        //dropdown for section
+        $field_sec = 'section_name';
+        $table_name_sec = 'section';
+        $section = $this->gm->get_list($field_sec,$table_name_sec);
+
+        $this->load->view('private/fees/fees_reports/yearly_fees_receivable_report',['class'=>$class,'section'=>$section]);
+    }
+
+    public function head_wise_collection(){
+
+        //dropdown for fees head
+        $this->load->model('get_model','gm');
+
+        $field= 'fees_heading';
+        $table_name= 'fees_head';
+        $fees_head = $this->gm->get_list($field,$table_name);
+
+        //dropdown for class
+        $field_cla= 'class';
+        $table_name_cla= 'class';
+        $class = $this->gm->get_list($field_cla,$table_name_cla);
+
+        $this->load->view('private/fees/fees_reports/head_wise_collection',['fees_head'=>$fees_head,'class'=>$class]);
+    }
+
+
 }

@@ -27,10 +27,18 @@
                 <label for="inputText" class="col-lg-6 control-label text-info"
                        style="font-size: 17px;"><b>Fees Head</b></label>
                 <div class="col-lg-6">
-                    <select class="form-control">
-                        <option>fh1</option>
-                        <option>fh2</option>
-                    </select>
+                    <?php
+                    $drop = array();
+                    foreach ($fees_head as $r) {
+                        $drop[$r['fees_heading']] = $r['fees_heading'];
+                    }
+                    $attribute_class = [
+                        'class' => 'form-control',
+                        'id' => 'select',
+                    ];
+                    echo form_dropdown('fees_head', $drop, '1', $attribute_class);
+                    ?>
+                    <?php echo form_error('fees_head'); ?>
                 </div>
             </div>
         </div>
@@ -38,10 +46,18 @@
             <div class="form-group">
                 <label for="inputText" class="col-lg-5 control-label text-info" style="font-size: 17px; margin-top: 6px;"><b>Class</b></label>
                 <div class="col-lg-7">
-                    <select class="form-control">
-                        <option>1</option>
-                        <option>2</option>
-                    </select>
+                    <?php
+                    $drop = array();
+                    foreach ($class as $r) {
+                        $drop[$r['class']] = $r['class'];
+                    }
+                    $attribute_class = [
+                        'class' => 'form-control',
+                        'id' => 'select',
+                    ];
+                    echo form_dropdown('class', $drop, '1', $attribute_class);
+                    ?>
+                    <?php echo form_error('class'); ?>
                 </div>
             </div>
 
