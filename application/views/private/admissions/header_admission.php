@@ -36,8 +36,6 @@
                         <li><a href="<?=site_url('admissions/create_list'); ?>">Download as PDF</a></li>
                     </ul>
                 </li>
-
-
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">

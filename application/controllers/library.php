@@ -9,12 +9,10 @@ class Library extends MY_Controller{
     public function __construct()
     {
         parent::__construct();
-        
-       
         $this->load->view('private/library/header',['username' => $this->get_admin()]);
         $this->load->view('private/library/footer');
     }
     public function index(){
-
+        $this->load->view('private/library/dashboard');
     }
 }

@@ -27,7 +27,31 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="<?= site_url('library'); ?>">Library</a></li>
+                <li><a href="<?= site_url('library'); ?>">Library Register</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        Library<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="<?=site_url('admissions/student_details'); ?>">New Book Entry</a></li>
+                        <li><a href="<?=site_url('admissions/import'); ?>">Import</a></li>
+                        <li><a href="<?=site_url('admissions/excel_export'); ?>">Downlaod as CSV</a></li>
+                        <li><a href="<?=site_url('admissions/create_list'); ?>">Download as PDF</a></li>
+                    </ul>
+                </li>
+                <li><a href="<?= site_url('library'); ?>">Issue Book</a></li>
+                <li><a href="<?= site_url('library'); ?>">Receive Book</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        Register<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="<?=site_url('admissions/student_details'); ?>">Book Issue Register</a></li>
+                        <li><a href="<?=site_url('admissions/import'); ?>">Book Receive Register</a></li>
+                    </ul>
+                </li>
+                <li><a href="<?= site_url('library'); ?>">Book Ledger</a></li>
+                <li><a href="<?= site_url('library'); ?>">Pending Books</a></li>
+
+
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">

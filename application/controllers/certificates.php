@@ -7,6 +7,7 @@
  * Time: 1:40 PM
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
+
 class Certificates extends MY_Controller
 {
     public function __construct()
@@ -14,14 +15,13 @@ class Certificates extends MY_Controller
         parent::__construct();
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
 
+
     }
 
     public function index()
     {
-
-
         $this->load->view('private/certificates/header', ['username' => $this->get_admin()]);
-        $this->load->view('private/certificates/cert_view');
+        $this->load->view('private/certificates/cert_view',['username' => $this->get_admin()]);
     }
 
     public function slc_new()
@@ -94,7 +94,7 @@ class Certificates extends MY_Controller
     }
     else{
 
-        $this->load->model('get_header_info', 'ghi');
+        
        
         $this->load->view('private/certificates/slc_header', ['username' => $username]);
         $this->load->view('private/certificates/slc_new');
@@ -104,7 +104,7 @@ class Certificates extends MY_Controller
 
     public function entrance_test()
     {
-        $this->load->model('get_header_info', 'ghi');
+        
        
         $this->load->view('private/certificates/et_header', ['username' => $username]);
         $this->load->view('private/certificates/entrance_test');
@@ -112,7 +112,7 @@ class Certificates extends MY_Controller
 
     public function student_cert()
     {
-        $this->load->model('get_header_info', 'ghi');
+        
        
         $this->load->view('private/certificates/sc_header', ['username' => $username]);
         $this->load->view('private/certificates/student_cert');
@@ -121,7 +121,7 @@ class Certificates extends MY_Controller
     public function school_leaving_cert()
     {
 
-        $this->load->model('get_header_info', 'ghi');
+        
        
 
 
@@ -131,7 +131,7 @@ class Certificates extends MY_Controller
 
     public function teacher_cert_l()
     {
-        $this->load->model('get_header_info', 'ghi');
+        
        
         $this->load->view('private/certificates/tcl_header', ['username' => $username]);
         $this->load->view('private/certificates/teacher_cert_l');
@@ -139,7 +139,7 @@ class Certificates extends MY_Controller
 
     public function teacher_cert_p()
     {
-        $this->load->model('get_header_info', 'ghi');
+        
        
         $this->load->view('private/certificates/tcp_header', ['username' => $username]);
         $this->load->view('private/certificates/teacher_cert_p');
