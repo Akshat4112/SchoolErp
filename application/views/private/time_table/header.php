@@ -29,8 +29,13 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="<?= site_url('time_table'); ?>">Time Table</a></li>
-
+                <li><a href="<?= site_url('time_table'); ?>">Dashboard</a></li>
+                <li><a href="<?= site_url('time_table/assign_periods'); ?>">Assign Periods</a></li>
+                <li><a href="<?= site_url('time_table/subject_masters'); ?>">Subject Master</a></li>
+                <li><a href="<?= site_url('time_table/teachers_subject'); ?>">Teacher's Subject</a></li>
+                <li><a href="<?= site_url('time_table/teachers_period'); ?>">Teacher's Period</a></li>
+                <li><a href="<?= site_url('time_table/class_wise_time_table'); ?>">Class wise Time Table</a></li>
+                <li><a href="<?= site_url('time_table/teacher_wise_time_table'); ?>">Teacher wise Time Table</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
