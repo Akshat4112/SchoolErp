@@ -15,4 +15,37 @@ class Library extends MY_Controller{
     public function index(){
         $this->load->view('private/library/dashboard');
     }
+    public function book_issue_register(){
+        $this->load->view('private/library/book_issue_register');
+    }
+    public function book_ledger(){
+        $this->load->view('private/library/book_ledger');
+    }
+    public function book_receive_register(){
+        $this->load->view('private/library/book_receive_register');
+    }
+    public function export(){
+        $this->load->view('private/library/export');
+    }
+    public function import(){
+        $this->load->view('private/library/import');
+    }
+    public function issue_book(){
+        $this->load->view('private/library/issue_book');
+    }
+    public function new_book_entry(){
+        $this->load->view('private/library/new_book_entry');
+    }
+    public function pending_books(){
+        $this->load->view('private/library/pending_books');
+    }
+    public function prints(){
+        $this->load->view('private/library/print');
+    }
+    public function receive_books(){
+        $this->load->view('private/library/receive_books');
+    }
+    public function send_sms(){
+        $this->load->view('private/library/send_sms');
+    }
 }
