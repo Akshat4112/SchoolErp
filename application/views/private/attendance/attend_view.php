@@ -44,7 +44,7 @@
 
     </div>
     <div class="row" style="margin-top:10px;">
-        <div class="col-lg-12">
+        <div class="col-lg-12" style="overflow-y:scroll; overflow-x:hidden; height: 400px; width:1200px;">
             <table class="table table-hover table-bordered">
                 <thead>
                 <tr class="text-info">

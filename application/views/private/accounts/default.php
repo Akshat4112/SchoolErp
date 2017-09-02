@@ -39,7 +39,7 @@
 </div>
 <div class="row">
     <div class="col-lg-1"></div>
-    <div class="col-lg-10">
+    <div class="col-lg-10" style="overflow-y:scroll; overflow-x:hidden; height: 400px; width:1200px;">
         <table class="table  table-hover table-bordered " id="userTbl">
             <thead>
             <tr class="text-info">

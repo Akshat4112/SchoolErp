@@ -17,7 +17,6 @@
                         'placeholder' => 'Enter Account Group Name',
                         'value' => set_value('account_group_name')]);
                     ?>
-                    <?php echo form_error('account_group_name'); ?>
                 </div>
             </div>
             <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-info',
@@ -44,22 +43,12 @@
                     ];
                     echo form_dropdown('account_group_delete', $drop, '1', $attribute_class);
                     ?>
-                    <?php echo form_error('account_group_delete'); ?>
-
-<!--                    --><?php // echo form_input(['name' => 'account_group_delete', 'class' => 'form-control',
-//                        'placeholder' => 'Enter Account Group to be deleted',
-//                        'value' => set_value('account_group_delete')]);
-//                    ?>
-                    <?php echo form_error('account_group_delete'); ?>
                 </div>
                 <input type="submit" name="del_account_group" class="btn btn-danger" value="DELETE" style="margin-left: 50px; margin-top: 20px;">
                 <?php  form_close(); ?>
             </div>
-
         </div>
-
-
-        <div class="col-lg-8">
+        <div class="col-lg-4">
             <table class="table table-hover table-bordered">
                 <thead>
                 <tr class="text-info">
@@ -73,7 +62,6 @@
                         echo "<tr class=''><td>" . $account_group['account_group_name'] . '<br>' . "</td></tr>";
                     }
                     ?>
-
                 <?php else: ?>
                     <tr>
                         <td>No Records Found</td>
@@ -81,6 +69,9 @@
                 <?php endif; ?>
                 </tbody>
             </table>
+        </div>
+        <div class="col-lg-4">
+            <?php echo form_error('account_group_name'); ?>
         </div>
     </div>
 </div>

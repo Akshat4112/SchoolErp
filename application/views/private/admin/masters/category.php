@@ -17,7 +17,6 @@
                         'placeholder' => 'Enter Category',
                         'value' => set_value('category_name')]);
                     ?>
-                    <?php echo form_error('category_name'); ?>
                 </div>
             </div>
             <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-info',
@@ -35,13 +34,12 @@
                         'placeholder' => 'Enter Category to be deleted',
                         'value' => set_value('category_delete')]);
                     ?>
-                    <?php echo form_error('category_delete'); ?>
                 </div>
                 <input type="submit" name="del_category" class="btn btn-danger" value="DELETE" style="margin-left: 50px; margin-top: 20px;">
                 <?php  form_close(); ?>
             </div>
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-4" style="overflow-y:scroll; overflow-x:hidden; height: 300px; width:390px;">
             <table class="table table-hover table-bordered">
                 <thead>
                 <tr class="text-info">
@@ -63,6 +61,11 @@
                 <?php endif; ?>
                 </tbody>
             </table>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-3">
+            <?php echo form_error('category_name'); ?>
+            <?php echo form_error('category_delete'); ?>
         </div>
     </div>
 </div>

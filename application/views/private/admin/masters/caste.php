@@ -17,7 +17,6 @@
                         'placeholder' => 'Enter Caste',
                         'value' => set_value('caste_name')]);
                     ?>
-                    <?php echo form_error('caste_name'); ?>
                 </div>
             </div>
             <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-info',
@@ -41,7 +40,7 @@
                 <?php  form_close(); ?>
             </div>
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-4" style="overflow-y:scroll; overflow-x:hidden; height: 340px; width:350px;">
             <table class="table table-hover table-bordered">
                 <thead>
                 <tr class="text-info">
@@ -63,6 +62,10 @@
                 <?php endif; ?>
                 </tbody>
             </table>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-3">
+            <?php echo form_error('caste_name'); ?>
         </div>
     </div>
 </div>

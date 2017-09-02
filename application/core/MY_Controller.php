@@ -7,6 +7,7 @@
  */
 
 class MY_Controller extends CI_Controller{
+
     public function delete_genric($form_validation,$table_name,$view,$field,$unset,$value_form){
         if ($this->form_validation->run($form_validation)) {
             $post = $this->input->post();
@@ -58,7 +59,7 @@ class MY_Controller extends CI_Controller{
         $user_name = $this->db->select('admin_name')->from('admin')->where('admin_id',$admin_id)->get();
         return $user_name->result();
     }
-    public function delete(){}
+
     public function traverse(){}
     public function get_all(){}
     public function update(){}

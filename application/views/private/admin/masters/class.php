@@ -17,7 +17,6 @@
                     'placeholder' => 'Enter Class',
                     'value' => set_value('class')]);
                 ?>
-                <?php echo form_error('class'); ?>
             </div>
         </div>
         <div class="form-group">
@@ -27,7 +26,6 @@
                     'placeholder' => 'Enter Prefix',
                     'value' => set_value('prefix')]);
                 ?>
-
             </div>
         </div>
         <div class="form-group">
@@ -43,7 +41,6 @@
                     'placeholder' => 'Enter Incharge',
                     'value' => set_value('incharge')]);
                 ?>
-
             </div>
         </div>
         <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-info',
@@ -73,11 +70,8 @@
             <input type="submit" name="del_class" class="btn btn-danger" value="DELETE" style="margin-left: 50px; margin-top: 20px;">
                 <?php  form_close(); ?>
         </div>
-
     </div>
-
-
-        <div class="col-lg-8">
+        <div class="col-lg-4" style="overflow-y:scroll; overflow-x:hidden; height: 400px; width:390px;">
             <table class="table table-hover table-bordered">
                 <thead>
                 <tr class="text-info">
@@ -104,6 +98,10 @@
                 <?php endif; ?>
                 </tbody>
             </table>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-3">
+            <?php echo form_error('class'); ?>
         </div>
     </div>
 </div>
