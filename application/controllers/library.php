@@ -43,7 +43,7 @@ class Library extends MY_Controller{
         $this->load->view('private/library/print');
     }
     public function receive_books(){
-        $this->load->view('private/library/receive_books');
+        $this->load->view('private/library/receive_book');
     }
     public function send_sms(){
         $this->load->view('private/library/send_sms');

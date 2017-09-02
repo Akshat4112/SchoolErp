@@ -32,24 +32,24 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         Library<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="<?=site_url('admissions/student_details'); ?>">New Book Entry</a></li>
-                        <li><a href="<?=site_url('admissions/import'); ?>">Import</a></li>
-                        <li><a href="<?=site_url('admissions/excel_export'); ?>">Downlaod as CSV</a></li>
-                        <li><a href="<?=site_url('admissions/create_list'); ?>">Download as PDF</a></li>
+                        <li><a href="<?=site_url('library/new_book_entry'); ?>">New Book Entry</a></li>
+                        <li><a href="<?=site_url('library/import'); ?>">Import</a></li>
+                        <li><a href="<?=site_url('library/export'); ?>">Downlaod as CSV</a></li>
+                        <li><a href="<?=site_url('library/export'); ?>">Download as PDF</a></li>
                     </ul>
                 </li>
-                <li><a href="<?= site_url('library'); ?>">Issue Book</a></li>
-                <li><a href="<?= site_url('library'); ?>">Receive Book</a></li>
+                <li><a href="<?= site_url('library/issue_book'); ?>">Issue Book</a></li>
+                <li><a href="<?= site_url('library/receive_books'); ?>">Receive Book</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         Register<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="<?=site_url('admissions/student_details'); ?>">Book Issue Register</a></li>
-                        <li><a href="<?=site_url('admissions/import'); ?>">Book Receive Register</a></li>
+                        <li><a href="<?=site_url('library/book_issue_register'); ?>">Book Issue Register</a></li>
+                        <li><a href="<?=site_url('library/book_receive_register'); ?>">Book Receive Register</a></li>
                     </ul>
                 </li>
-                <li><a href="<?= site_url('library'); ?>">Book Ledger</a></li>
-                <li><a href="<?= site_url('library'); ?>">Pending Books</a></li>
+                <li><a href="<?= site_url('library/book_ledger'); ?>">Book Ledger</a></li>
+                <li><a href="<?= site_url('library/pending_books'); ?>">Pending Books</a></li>
 
 
             </ul>
