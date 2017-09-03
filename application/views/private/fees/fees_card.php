@@ -40,7 +40,7 @@
 
     </div>
     <div class="col-lg-8">
-        <table class="table table-hover ">
+        <table class="table table-hover table-bordered">
             <thead>
             <tr class="info">
                 <th>Fees Head</th>
