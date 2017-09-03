@@ -12,6 +12,13 @@ class Admin extends MY_Controller
     {
         parent::__construct();
 
+        // for checking if user is logged in or not.
+
+        if( ! $this->session->userdata('login_id')){
+            return redirect('home');
+            exit();
+        }
+
 
         $this->load->view('private/admin/header',['username'=>$this->get_admin()]);
         $this->load->view('private/admin/footer');

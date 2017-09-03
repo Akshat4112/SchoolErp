@@ -13,6 +13,14 @@ class Certificates extends MY_Controller
     public function __construct()
     {
         parent::__construct();
+
+        // for checking if user is logged in or not.
+
+        if( ! $this->session->userdata('login_id')){
+            return redirect('home');
+            exit();
+        }
+
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
 
 

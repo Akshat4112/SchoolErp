@@ -10,8 +10,15 @@ class Fees extends MY_Controller{
     public function __construct()
     {
         parent::__construct();
-        
-       
+
+        // for checking if user is logged in or not.
+
+        if( ! $this->session->userdata('login_id')){
+            return redirect('home');
+            exit();
+        }
+
+
         $this->load->view('private/fees/header',['username' => $this->get_admin()]);
         $this->load->view('private/fees/footer');
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
@@ -98,7 +105,7 @@ class Fees extends MY_Controller{
     {
         $this->load->view('private/fees/fees_conc_settings');
     }
-    public function fees_view(){
+    public function index(){
         $this->load->view('private/fees/fees_view');
     }
 

@@ -37,7 +37,7 @@
         </div>
         <div class="row">
             <div class="col-lg-2">
-                <a href="<?= site_url('fees/fees_view'); ?>"><img src="<?= base_url() ?>/public/assets/img/fees.png"
+                <a href="<?= site_url('fees'); ?>"><img src="<?= base_url() ?>/public/assets/img/fees.png"
                                                                    height="80" width="80"></a><br>
                 <p style="font-size: 18px; margin-left: 20px;" class="text-info">Fees</p>
             </div>

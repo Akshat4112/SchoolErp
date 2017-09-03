@@ -10,6 +10,14 @@ class Calendar extends MY_Controller{
     public function __construct()
     {
         parent::__construct();
+
+        // for checking if user is logged in or not.
+
+        if( ! $this->session->userdata('login_id')){
+            return redirect('home');
+            exit();
+        }
+
         $this->load->view('private/calendar/header',['username'=>$this->get_admin()]);
         $this->load->view('private/calendar/footer');
     }

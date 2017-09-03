@@ -9,8 +9,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Dashboard extends MY_Controller{
     /**
-     * Dashboard constructor.
-     * for checking if user is logged in or not.
+     * Dashboard constructor.*/
+     /** for checking if user is logged in or not.
      */
     public function __construct()
     {

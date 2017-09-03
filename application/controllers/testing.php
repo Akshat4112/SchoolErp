@@ -10,32 +10,17 @@ class Testing extends MY_Controller{
     public function __construct()
     {
         parent::__construct();
-        $this->load->view('private/admin/header');
-        $this->load->view('private/admin/footer');
+
+        // for checking if user is logged in or not.
+
+        if( ! $this->session->userdata('login_id')){
+            return redirect('home');
+            exit();
+        }
+
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
     }
-
-    public function insert_genric($form_validation,$table_name,$view,$field)
-    {
-        if ($this->form_validation->run($form_validation)) {
-
-            // for inserting class in database from model
-
-            
-            $post = $this->input->post();
-            unset($post['submit']);
-            if ($this->insert_data($table_name,$post)) {
-                $this->load->model('get_model', 'gm');
-                $array = $this->gm->get_list($field,$table_name);
-                $this->load->view('private/admin/masters/'.$view,['view'=>$array]);
-            } else {
-                echo 'Query failed in inserting record';
-            }
-        } else {
-            $this->load->model('get_model', 'gm');
-            $array = $this->gm->get_list($field,$table_name);
-            $this->load->view('private/admin/masters/'.$view,['view'=>$array]);
-        }
+    public function upload(){
+        $this->load->view('test_view');
     }
-
 }

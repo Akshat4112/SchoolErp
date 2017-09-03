@@ -7,6 +7,14 @@
  */
 
 class MY_Controller extends CI_Controller{
+    public function __construct()
+    {
+        parent::__construct();
+//            if( ! $this->session->userdata('login_id')){
+//                return redirect('home');
+//                exit();
+//            }
+    }
 
     public function delete_genric($form_validation,$table_name,$view,$field,$unset,$value_form){
         if ($this->form_validation->run($form_validation)) {

@@ -7,6 +7,14 @@ class Admissions extends MY_Controller
      function __construct()
     {
         parent::__construct();
+
+        // for checking if user is logged in or not.
+
+        if( ! $this->session->userdata('login_id')){
+            return redirect('home');
+            exit();
+        }
+
         $this->load->view('private/admissions/header_admission', ['username' => $this->get_admin()]);
         $this->load->view('private/admissions/footer_admission');
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
