@@ -21,6 +21,19 @@ class Summary extends MY_Controller{
         $this->load->view('private/summary/footer');
     }
     public function fees_summary(){
+        $this->benchmark->mark('code_start');
+
+        // Some code happens here
         $this->load->view('private/summary/fees_summary');
+        $this->benchmark->mark('code_end');
+
+        //echo $this->benchmark->elapsed_time('code_start', 'code_end');
+
+        $this->load->library('encryption');
+        $t='This is cipher text';
+        $key = $this->encryption->create_key(128);
+
+        $key = bin2hex($this->encryption->create_key(16));
+        echo $key;
     }
 }

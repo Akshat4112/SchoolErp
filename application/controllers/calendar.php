@@ -22,5 +22,7 @@ class Calendar extends MY_Controller{
         $this->load->view('private/calendar/footer');
     }
     public function index(){
+        $this->load->library('calendar');
+        echo $this->calendar->generate();
     }
 }

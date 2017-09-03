@@ -20,7 +20,21 @@ class Testing extends MY_Controller{
 
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
     }
-    public function upload(){
-        $this->load->view('test_view');
+    public function test(){
+        $this->load->library('email');
+
+        $this->email->from('garg.ridhima72@gmail.com', 'Ridhima ');
+        $this->email->to('akshat41121995@gmail.com');
+        $this->email->cc('');
+        $this->email->bcc('');
+
+        $this->email->subject('Email Test');
+        $this->email->message('Testing the email class.');
+
+        if($this->email->send()){
+            echo 'success';
+        }else{
+            echo 'Error';
+        }
     }
 }

@@ -18,7 +18,7 @@ class Upload extends CI_Controller {
             return redirect('home');
             exit();
         }
-        
+
     }
 
     public function index()
