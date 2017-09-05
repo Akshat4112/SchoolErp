@@ -49,7 +49,7 @@
                     foreach ($ara as $hb){
                         $checked = (in_array($hb,$ara))?'':'';
                 ?>
-                        <input type="checkbox" name="hb[]" value="<?php echo $hb?>" size="17" <?php echo $checked;
+                        <input type="checkbox" name="category_name[]" value="<?php echo $hb?>" size="17" <?php echo $checked;
                         ?>><?php echo $hb.'<br>'; ?>
                 <?php
                     }
@@ -69,7 +69,7 @@
                     foreach ($ara as $hb){
                         $checked = (in_array($hb,$ara))?'':'';
                         ?>
-                        <input type="checkbox" name="hb[]" value="<?php echo $hb?>" size="17" <?php echo $checked;
+                        <input type="checkbox" name="class[]" value="<?php echo $hb?>" size="17" <?php echo $checked;
                         ?>><?php echo $hb.'<br>'; ?>
                         <?php
                     }

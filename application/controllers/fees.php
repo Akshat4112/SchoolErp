@@ -216,7 +216,7 @@ class Fees extends MY_Controller{
         $fees_head_list = $this->gm->get_list($field,$table_name);
         $data=$this->input->post();
         unset($data['submit']);
-//        print_r($data);
+        print_r($data);
         $this->load->view('private/fees/fees_plan',['fhl'=>$fees_head_list,'category'=>$category,'class'=>$class]);
 
     }
