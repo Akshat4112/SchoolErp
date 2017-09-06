@@ -444,5 +444,12 @@ $config=[
             'label'=>'Admission No.',
             'rules'=>'required'
         ]
+    ],
+    'attend_new'=>[
+        [
+            'field'=>'class',
+            'label'=>'Class',
+            'rules'=>'required'
+        ]
     ]
 ];

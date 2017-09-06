@@ -43,13 +43,24 @@ class Attendance extends MY_Controller{
         //loading class dropdown from database
         $class_list = $this->dropdown_db('class','class');
 
-        $post = $this->input->post();
-        unset($post['submit']);
-        //print_r($post);
+        if($this->form_validation->run('attend_new'))
+        {
+            $post = $this->input->post();
+            unset($post['submit']);
+            print_r($post);
 
-        $get_data = $this->gm->attendance_search($post['class'],$post['section']);
+            $get_data = $this->gm->attendance_search($post['class'],$post['section']);
 
-        $this->load->view('private/attendance/new/attend_new.php',['section_drop'=>$section_list,
-            'class_drop'=>$class_list,'data'=>$get_data]);
+
+
+            $this->load->view('private/attendance/new/attend_new.php',['section_drop'=>$section_list,
+                'class_drop'=>$class_list,'data'=>$get_data]);
+        }
+        else{
+            $data=array();
+            $this->load->view('private/attendance/new/attend_new.php',['section_drop'=>$section_list,
+                'class_drop'=>$class_list,'data'=>$data]);
+        }
+
     }
 }

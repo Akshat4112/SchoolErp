@@ -14,7 +14,7 @@
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Date</label>
                 <div class="col-lg-10">
-                    <input type="date" class="form-control" name="date" >
+                    <input type="date" class="form-control" name="entry_date" >
                 </div>
             </div>
             <div class="form-group">
@@ -56,7 +56,7 @@
                 'style' => 'margin-left:45px; margin-top:20px;']),
             form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
                 'style' => 'margin-top:20px;']); ?>
-            <?php echo form_close();?>
+
         </div>
         <div class="col-lg-8">
             <table class="table table-hover table-bordered">
@@ -79,6 +79,22 @@
                             <td><?php echo $student_det['student_roll_no'] ?></td>
                             <td><?php echo $student_det['student_first_name'] ?></td>
                             <td><?php echo $student_det['admission_no'] ?></td>
+                            <td>
+                                <?php echo '<input type="checkbox" name="present"
+                                   value="" size="17" checked="checked" id="P">';
+                                ?>
+                            </td>
+                            <td>
+                                <?php echo '<input type="checkbox" name="absent"
+                                   value="" size="17" id="A">';
+                                ?>
+                            </td>
+                            <td>
+                                <?php echo '<input type="checkbox" name="remarks"
+                                   value="" size="17" id="R">';
+                                ?>
+                            </td>
+                            <td><?php echo ''; ?></td>
                         </tr>
                     <?php endforeach; ?>
                 <?php else: ?>
@@ -91,3 +107,4 @@
         </div>
     </div>
 </div>
+<?php echo form_close();?>
