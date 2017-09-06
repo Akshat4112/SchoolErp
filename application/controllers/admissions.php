@@ -147,7 +147,7 @@ class Admissions extends MY_Controller
 
             unset($post['submit']);
 
-            
+
             if ($this->insert_data_key($table_name,$post,$last_student_id)) {
                 $this->session->set_flashdata('stu_succ','Address details filled Successfully.');
                 $this->load->view('private/admissions/parents');
@@ -170,7 +170,7 @@ class Admissions extends MY_Controller
 
             $table_name = 'student';
 
-            
+
 
             if ($this->insert_data_key($table_name, $post,$last_student_id)) {
                 $this->session->set_flashdata('stu_succ','Parents details filled Successfully.');
@@ -197,7 +197,7 @@ class Admissions extends MY_Controller
             unset($post['Submit']);
 
             $table_name = 'student';
-            
+
             if ($this->insert_data_key($table_name, $post,$student_id)) {
                 $this->session->set_flashdata('stu_succ','Misc. details filled Successfully.');
                 $this->load->view('private/admissions/attach');
@@ -224,7 +224,7 @@ class Admissions extends MY_Controller
             unset($post['Submit']);
 
             $table_name = 'student';
-            
+
             if ($this->insert_data_key($table_name, $post,$student_id)) {
                 $this->session->set_flashdata('stu_succ','Attachements updated filled Successfully.');
                 $this->load->view('private/admissions/balance');
@@ -250,7 +250,7 @@ class Admissions extends MY_Controller
             unset($post['Submit']);
 
             $table_name = 'student';
-            
+
             if ($this->insert_data_key($table_name, $post,$student_id)) {
                 redirect('admissions/');
             } else {
@@ -324,13 +324,55 @@ class Admissions extends MY_Controller
         }
     }
 
-    public function create_list()
+    public function download_pdf()
     {
-        $this->load->view('private/admissions/create_list_view');
-    }
+            // Code for genrating pdf in Admissions
+            $this->load->library('Pdf');
+            $pdf = new Pdf('P', 'mm', 'A4', true, 'UTF-8', false);
+            $pdf->SetCreator(PDF_CREATOR);
+            $pdf->SetAuthor('SchoolERP');
+            $pdf->SetTitle('Admission PDF');
+            $pdf->SetSubject('Admission Reports in PDF');
+            $pdf->SetKeywords('ADMISSION,Report,PDF');
+            $pdf->AddPage();
 
-    public function download_as_pdf()
-    {
+            // create some HTML content
+
+            $html = '
+          <p style="font-size: 15px; font-weight: bold; text-align: center">
+            Admission Report
+           </p>
+           <hr>
+           
+           
+           <div class="row">
+    <div class="col-lg-12" id="" style="overflow-y:scroll; overflow-x:hidden; height: 400px; width:1200px;">
+        <table class="table table-hover table-bordered" id="userTbl">
+            <thead>
+            <tr class="text-info">
+                <th>Sno.</th>
+                <th>Admission No.</th>
+                <th>House</th>
+                <th>Student Name</th>
+                <th>Father</th>
+                <th>Mother</th>
+                <th>DOB</th>
+                <th>Gender</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+           ';
+
+            $pdf->writeHTML($html, true, false, true, false, 'center');
+            //Close and output PDF document
+            $pdf->output();
+
 
     }
     public function search_view(){
@@ -433,5 +475,8 @@ class Admissions extends MY_Controller
         $data = $this->input->post();
         unset($data['submit']);
         print_r($data);
+    }
+    public function analysis(){
+
     }
 }

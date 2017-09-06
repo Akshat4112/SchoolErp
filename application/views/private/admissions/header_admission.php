@@ -33,9 +33,10 @@
                         <li><a href="<?=site_url('admissions/send_sms'); ?>">Send SMS</a></li>
                         <li><a href="<?=site_url('admissions/id_card'); ?>">ID Card</a></li>
                         <li><a href="<?=site_url('admissions/excel_export'); ?>">Downlaod as CSV</a></li>
-                        <li><a href="<?=site_url('admissions/create_list'); ?>">Download as PDF</a></li>
+                        <li><a href="<?=site_url('admissions/download_pdf'); ?>">Download as PDF</a></li>
                     </ul>
                 </li>
+                <li><a href="<?= site_url('admissions/analysis'); ?>">Admission Analysis</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">

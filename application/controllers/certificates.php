@@ -20,8 +20,8 @@ class Certificates extends MY_Controller
             return redirect('home');
             exit();
         }
-
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+        $username = $this->get_admin();
 
 
     }
@@ -101,10 +101,7 @@ class Certificates extends MY_Controller
 
     }
     else{
-
-        
-       
-        $this->load->view('private/certificates/slc_header', ['username' => $username]);
+        $this->load->view('private/certificates/slc_header', ['username' => $this->get_admin()]);
         $this->load->view('private/certificates/slc_new');
 //        echo 'Form Validation Failed';
     }
@@ -112,44 +109,31 @@ class Certificates extends MY_Controller
 
     public function entrance_test()
     {
-        
-       
-        $this->load->view('private/certificates/et_header', ['username' => $username]);
+        $this->load->view('private/certificates/et_header', ['username' => $this->get_admin()]);
         $this->load->view('private/certificates/entrance_test');
     }
 
     public function student_cert()
     {
-        
-       
-        $this->load->view('private/certificates/sc_header', ['username' => $username]);
+        $this->load->view('private/certificates/sc_header', ['username' => $this->get_admin()]);
         $this->load->view('private/certificates/student_cert');
     }
 
     public function school_leaving_cert()
     {
-
-        
-       
-
-
-        $this->load->view('private/certificates/slc_header', ['username' => $username]);
+        $this->load->view('private/certificates/slc_header', ['username' => $this->get_admin()]);
         $this->load->view('private/certificates/school_leaving_cert');
     }
 
     public function teacher_cert_l()
     {
-        
-       
-        $this->load->view('private/certificates/tcl_header', ['username' => $username]);
+        $this->load->view('private/certificates/tcl_header', ['username' => $this->get_admin()]);
         $this->load->view('private/certificates/teacher_cert_l');
     }
 
     public function teacher_cert_p()
     {
-        
-       
-        $this->load->view('private/certificates/tcp_header', ['username' => $username]);
+        $this->load->view('private/certificates/tcp_header', ['username' => $this->get_admin()]);
         $this->load->view('private/certificates/teacher_cert_p');
     }
 }
