@@ -14,7 +14,7 @@
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Date</label>
                 <div class="col-lg-10">
-                    <input type="date" class="form-control" name="date">
+                    <input type="date" class="form-control" name="date" >
                 </div>
             </div>
             <div class="form-group">
@@ -29,7 +29,7 @@
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('class', $drop, '1', $attribute_class);
+                    echo form_dropdown('class', $drop, set_value('class'), $attribute_class);
                     ?>
                     <?php echo form_error('class'); ?>
 
@@ -47,7 +47,7 @@
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('section', $drop, '1', $attribute_class);
+                    echo form_dropdown('section', $drop, set_value('section'), $attribute_class);
                     ?>
                     <?php echo form_error('section'); ?>
                 </div>
@@ -72,20 +72,20 @@
                 </tr>
                 </thead>
                 <tbody>
-<!--                --><?php //if (count($data)): ?>
-<!---->
-<!--                    --><?php //foreach ($data as $student_det): ?>
-<!--                        <tr class="">-->
-<!--                            <td>--><?php //echo $student_det['student_roll_no'] ?><!--</td>-->
-<!--                            <td>--><?php //echo $student_det['student_first_name'] ?><!--</td>-->
-<!--                            <td>--><?php //echo $student_det['admission_no'] ?><!--</td>-->
-<!--                        </tr>-->
-<!--                    --><?php //endforeach; ?>
-<!--                --><?php //else: ?>
-<!--                    <tr class="">-->
-<!--                        <td>No Records Found</td>-->
-<!--                    </tr>-->
-<!--                --><?php //endif; ?>
+                <?php if (count($data)): ?>
+
+                    <?php foreach ($data as $student_det): ?>
+                        <tr class="">
+                            <td><?php echo $student_det['student_roll_no'] ?></td>
+                            <td><?php echo $student_det['student_first_name'] ?></td>
+                            <td><?php echo $student_det['admission_no'] ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <tr class="">
+                        <td>No Records Found</td>
+                    </tr>
+                <?php endif; ?>
                 </tbody>
             </table>
         </div>

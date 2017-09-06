@@ -35,17 +35,21 @@ class Attendance extends MY_Controller{
         $this->load->view('private/attendance/print.php');
     }
     public function attend_new(){
+        $this->load->model('get_model','gm');
+
         //loading section dropdown form database
         $section_list = $this->dropdown_db('section_name','section');
 
         //loading class dropdown from database
         $class_list = $this->dropdown_db('class','class');
 
-//        $post = $this->input->post();
-//        unset($post['submit']);
-//        print_r($post);
+        $post = $this->input->post();
+        unset($post['submit']);
+        //print_r($post);
+
+        $get_data = $this->gm->attendance_search($post['class'],$post['section']);
 
         $this->load->view('private/attendance/new/attend_new.php',['section_drop'=>$section_list,
-            'class_drop'=>$class_list]);
+            'class_drop'=>$class_list,'data'=>$get_data]);
     }
 }

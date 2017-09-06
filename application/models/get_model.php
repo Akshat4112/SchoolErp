@@ -111,4 +111,10 @@ class Get_model extends MY_Model
         return $res;
 
     }
+    public function  attendance_search($class,$section){
+        $query=$this->db->select('*')->where('student_class',$class)->where('student_section',$section)
+            ->get('student');
+        $res=$query->result_array();
+        return $res;
+    }
 }
