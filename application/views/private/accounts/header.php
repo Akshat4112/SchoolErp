@@ -32,11 +32,12 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Accounts<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="<?= site_url('accounts/new_account'); ?>">New</a></li>
-                        <li><a href="<?=site_url('accounts/export'); ?>">Export</a></li>
-                        <li><a href="<?=site_url('accounts/import'); ?>">Import</a></li>
+<!--                      <li><a href="--><?//=site_url('accounts/import'); ?><!--">Import</a></li>-->
                         <li><a href="<?=site_url('accounts/send_sms'); ?>">Send SMS</a></li>
                         <li><a href="<?= site_url('accounts/account_del'); ?>">Delete</a></li>
                         <li><a href="<?=site_url('accounts/account_group'); ?>">Account Group</a></li>
+                        <li><a href="<?=site_url('accounts/excel_export'); ?>">Download as CSV</a></li>
+                        <li><a href="<?=site_url('accounts/download_pdf'); ?>">Download as PDF</a></li>
                         <li><a href="<?=site_url('accounts/open_balance_editor'); ?>">Opening Balance Editor</a></li>
                     </ul>
                 </li>

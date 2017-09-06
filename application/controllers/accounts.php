@@ -132,10 +132,54 @@ class Accounts extends MY_Controller{
     public function import(){
         $this->load->view('private/accounts/import');
     }
-    public function export(){
-        $this->load->model('get_model', 'gm');
-        $stu_list = $this->gm->account_list();
-        $this->load->view('private/accounts/export', ['account_det' => $stu_list]);
+    public function download_pdf(){
+        // Code for genrating pdf in Admissions
+        $this->load->library('Pdf');
+        $pdf = new Pdf('P', 'mm', 'A4', true, 'UTF-8', false);
+        $pdf->SetCreator(PDF_CREATOR);
+        $pdf->SetAuthor('SchoolERP');
+        $pdf->SetTitle('Admission PDF');
+        $pdf->SetSubject('Admission Reports in PDF');
+        $pdf->SetKeywords('ADMISSION,Report,PDF');
+        $pdf->AddPage();
+
+        // create some HTML content
+
+        $html = '
+          <p style="font-size: 15px; font-weight: bold; text-align: center">
+            Admission Report
+           </p>
+           <hr>
+           
+           
+           <div class="row">
+    <div class="col-lg-12" id="" style="overflow-y:scroll; overflow-x:hidden; height: 400px; width:1200px;">
+        <table class="table table-hover table-bordered" id="userTbl">
+            <thead>
+            <tr class="text-info">
+                <th>Sno.</th>
+                <th>Admission No.</th>
+                <th>House</th>
+                <th>Student Name</th>
+                <th>Father</th>
+                <th>Mother</th>
+                <th>DOB</th>
+                <th>Gender</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+           ';
+
+        $pdf->writeHTML($html, true, false, true, false, 'center');
+        //Close and output PDF document
+        $pdf->output();
+
     }
     public function excel_export(){
         $this->load->model('get_model');
