@@ -50,14 +50,14 @@
                         <li><a href="<?=site_url('accounts/contra')?>">Contra</a></li>
                         <li><a href="<?=site_url('accounts/debit_note')?>">Debit Note</a></li>
                         <li><a href="<?=site_url('accounts/credit_note')?>">Credit Note</a></li>
-                        <li><a href="<?=site_url('accounts/credit_note')?>">Day Book</a></li>
-                        <li><a href="<?=site_url('accounts/credit_note')?>">Log Book</a></li>
-                        <li><a href="<?=site_url('accounts/credit_note')?>">Ledger</a></li>
-                        <li><a href="<?=site_url('accounts/credit_note')?>">Cash /  Bank Book</a></li>
-                        <li><a href="<?=site_url('accounts/credit_note')?>">Day Book Cum Cash Book</a></li>
-                        <li><a href="<?=site_url('accounts/credit_note')?>">Quick Payment</a></li>
-                        <li><a href="<?=site_url('accounts/credit_note')?>">Quick Receipt</a></li>
-                        <li><a href="<?=site_url('accounts/credit_note')?>">Bank Entry</a></li>
+                        <li><a href="<?=site_url('accounts/day_book')?>">Day Book</a></li>
+                        <li><a href="<?=site_url('accounts/log_book')?>">Log Book</a></li>
+                        <li><a href="<?=site_url('accounts/ledger')?>">Ledger</a></li>
+                        <li><a href="<?=site_url('accounts/cash_bank_book')?>">Cash /  Bank Book</a></li>
+                        <li><a href="<?=site_url('accounts/day_book_cum_cash_book')?>">Day Book Cum Cash Book</a></li>
+                        <li><a href="<?=site_url('accounts/quick_payment')?>">Quick Payment</a></li>
+                        <li><a href="<?=site_url('accounts/quick_receipt')?>">Quick Receipt</a></li>
+                        <li><a href="<?=site_url('accounts/bank_entry')?>">Bank Entry</a></li>
 
                     </ul>
                 </li>
@@ -92,10 +92,10 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Interest Calculation<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="<?=site_url('accounts/balance_sheet')?>">Simple Interest Calculation</a></li>
-                        <li><a href="<?=site_url('accounts/trading_accounts')?>">Interest on Balance</a></li>
-                        <li><a href="<?=site_url('accounts/profit_loss')?>">Cummulative Interest</a></li>
-                        <li><a href="<?=site_url('accounts/trial_balance')?>">Bill Wise Interest Calculation</a></li>
+                        <li><a href="<?=site_url('accounts/simple_interest_calculation')?>">Simple Interest Calculation</a></li>
+                        <li><a href="<?=site_url('accounts/interest_on_balance')?>">Interest on Balance</a></li>
+                        <li><a href="<?=site_url('accounts/cumulative_interest')?>">Cummulative Interest</a></li>
+                        <li><a href="<?=site_url('accounts/bill_wise_interest_calculation')?>">Bill Wise Interest Calculation</a></li>
                     </ul>
                 </li>
             </ul>

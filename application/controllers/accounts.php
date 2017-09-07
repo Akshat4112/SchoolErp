@@ -228,36 +228,36 @@ class Accounts extends MY_Controller{
         $this->load->view('private/accounts/delete');
     }
     public function balance_sheet(){
-        $this->load->view('private/accounts/balance_sheet');
+        $this->load->view('private/accounts/final_accounts/balance_sheet');
     }
     public function contra(){
-        $this->load->view('private/accounts/contra');
+        $this->load->view('private/accounts/financial_accounting/contra');
     }
     public function credit_note(){
-        $this->load->view('private/accounts/credit_note');
+        $this->load->view('private/accounts/financial_accounting/credit_note');
     }
     public function debit_note(){
-        $this->load->view('private/accounts/debit_note');
+        $this->load->view('private/accounts/financial_accounting/debit_note');
     }
     public function journal(){
-        $this->load->view('private/accounts/journal');
+        $this->load->view('private/accounts/financial_accounting/journal');
     }
     public function outstanding_balance(){
-        $this->load->view('private/accounts/outstanding_balance');
+        $this->load->view('private/accounts/final_accounts/outstanding_balance');
     }
 
     public function profit_loss()
     {
-        $this->load->view('private/accounts/profit_loss');
+        $this->load->view('private/accounts/final_accounts/profit_loss');
     }
     public function receipt(){
-        $this->load->view('private/accounts/receipt');
+        $this->load->view('private/accounts/financial_accounting/receipt');
     }
-    public function trading_account(){
-        $this->load->view('private/accounts/trading_account');
+    public function trading_accounts(){
+        $this->load->view('private/accounts/final_accounts/trading_account');
     }
     public function trial_balance(){
-        $this->load->view('private/accounts/trial_balance');
+        $this->load->view('private/accounts/final_accounts/trial_balance');
     }
     public function payments(){
         $this->load->model('get_model', 'gm');
@@ -277,21 +277,59 @@ class Accounts extends MY_Controller{
                 $table_name_a='account';
                 $this->load->model('get_model','gm');
                 $account= $this->gm->get_list($field_a,$table_name_a);
-                $this->load->view('private/accounts/payments',['account'=>$account,'payments' => $payments_table]);
+                $this->load->view('private/accounts/financial_accounting/payments',['account'=>$account,'payments' => $payments_table]);
             } else {
                 echo 'Database query error';
                 $field_a='account_name';
                 $table_name_a='account';
                 $this->load->model('get_model','gm');
                 $account= $this->gm->get_list($field_a,$table_name_a);
-                $this->load->view('private/accounts/payments',['account'=>$account,'payments' => $payments_table]);
+                $this->load->view('private/accounts/financial_accounting/payments',['account'=>$account,'payments' => $payments_table]);
             }
         } else {
             $field_a='account_name';
             $table_name_a='account';
             $this->load->model('get_model','gm');
             $account= $this->gm->get_list($field_a,$table_name_a);
-            $this->load->view('private/accounts/payments',['account'=>$account,'payments' => $payments_table]);
+            $this->load->view('private/accounts/financial_accounting/payments',['account'=>$account,'payments' => $payments_table]);
         }
+    }
+    public function day_book(){
+        $this->load->view('private/accounts/financial_accounting/day_book');
+    }
+    public function log_book(){
+        $this->load->view('private/accounts/financial_accounting/log_book');
+    }
+    public function ledger(){
+        $this->load->view('private/accounts/financial_accounting/ledger');
+    }
+    public function quick_payment(){
+        $this->load->view('private/accounts/financial_accounting/quick_payment');
+    }
+    public function quick_receipt(){
+        $this->load->view('private/accounts/financial_accounting/quick_receipt');
+    }
+    public function bank_entry(){
+        $this->load->view('private/accounts/financial_accounting/bank_entry');
+    }
+    public function day_book_cum_cash_book(){
+        $this->load->view('private/accounts/financial_accounting/day_book_cum_cash_book');
+    }
+    public function cash_bank_book()
+    {
+        $this->load->view('private/accounts/financial_accounting/cash_bank_book');
+
+    }
+    public function cumulative_interest(){
+        $this->load->view('private/accounts/intereset_calculation/cumulative_interest');
+    }
+    public function bill_wise_interest_calculation(){
+        $this->load->view('private/accounts/intereset_calculation/bill_wise_interest_calculation');
+    }
+    public function interest_on_balance(){
+        $this->load->view('private/accounts/intereset_calculation/interest_on_balance');
+    }
+    public function simple_interest_calculation(){
+        $this->load->view('private/accounts/intereset_calculation/simple_intereset_calculation');
     }
 }
