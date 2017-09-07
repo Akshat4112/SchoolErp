@@ -4,7 +4,10 @@
  * User: Akshat
  * Date: 7/22/2017
  * Time: 12:11 PM
- */?>
+ */
+//print_r($org_info);
+
+?>
 <div class="container">
     <p class="text-info" style="font-size: 20px;">School Leaving Certificate / New</p>
     <div class="row">
@@ -12,7 +15,7 @@
             School Code: 871238
         </div>
         <div class="col-lg-8">
-            <p style="font-size: 40px;"><b>Simpkins Senior Secondary School</b></p>
+            <p style="font-size: 40px;"><b></b></p>
         </div>
         <div class="col-lg-2">
             Dise Code: 989897

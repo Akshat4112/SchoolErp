@@ -33,7 +33,7 @@
                 <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
                         <?php echo form_submit(['name'=>'Submit','value'=>'Login','class'=>'btn btn-info']),
-                        form_reset(['name'=>'reset','value'=>'reset','class'=>'btn btn-warning']);?>
+                        form_reset(['name'=>'reset','value'=>'reset','class'=>'btn btn-warning btn-sm']);?>
                     </div>
                 </div>
 

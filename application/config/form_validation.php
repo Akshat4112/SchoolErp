@@ -451,5 +451,13 @@ $config=[
             'label'=>'Class',
             'rules'=>'required'
         ]
+    ],
+    'gatepass'=>[
+        [
+            'field'=>'name',
+            'label'=>'Name',
+            'rules'=>'required'
+        ]
     ]
+
 ];

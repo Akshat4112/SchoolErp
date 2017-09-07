@@ -9,33 +9,33 @@
     <div class="row">
         <p style="font-size: 20px; margin-top:0px;" class="text-info">Create User</p>
         <div class="col-lg-4">
-            <?php echo form_open('admin/masters_class', ['class' => 'form-horizontal']); ?>
+            <?php echo form_open('admin/create_user', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">Username</label>
+                <label for="inputText" class="col-lg-2 control-label text-info"><b>Username</b></label>
                 <div class="col-lg-10">
-                    <?php echo form_input(['name' => 'class', 'class' => 'form-control',
+                    <?php echo form_input(['name' => 'username', 'class' => 'form-control',
                         'placeholder' => 'Enter Username',
-                        'value' => set_value('class')]);
+                        'value' => set_value('username')]);
                     ?>
-                    <?php echo form_error('class'); ?>
+                    <?php echo form_error('username'); ?>
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">Position</label>
+                <label for="inputText" class="col-lg-2 control-label text-info"><b>Position</b></label>
                 <div class="col-lg-10">
-                    <?php echo form_input(['name' => 'prefix', 'class' => 'form-control',
+                    <?php echo form_input(['name' => 'position', 'class' => 'form-control',
                         'placeholder' => 'Enter Position',
-                        'value' => set_value('prefix')]);
+                        'value' => set_value('position')]);
                     ?>
 
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">Password</label>
+                <label for="inputText" class="col-lg-2 control-label text-info"><b>Password</b></label>
                 <div class="col-lg-10">
-                    <?php echo form_input(['name' => 'incharge', 'class' => 'form-control',
+                    <?php echo form_input(['name' => 'password', 'class' => 'form-control',
                         'placeholder' => 'Enter Password',
-                        'value' => set_value('incharge')]);
+                        'value' => set_value('password')]);
                     ?>
 
                 </div>
@@ -47,7 +47,7 @@
             <?php echo form_close();?>
 
             <p style="font-size: 20px; margin-top: 40px;" class="text-info">Enter Username to be deletd</p>
-            <?php echo form_open('admin/masters_class_del', ['class' => 'form-horizontal']); ?>
+            <?php echo form_open('admin/user_del', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Username</label>
                 <div class="col-lg-10">
@@ -62,8 +62,6 @@
             </div>
 
         </div>
-
-
         <div class="col-lg-8">
             <table class="table table-striped table-hover ">
                 <thead>

@@ -106,7 +106,7 @@ declare(strict_types=1);
             </div>
             <?php echo form_submit(['name' => 'Submit', 'value' => 'Done',
                 'class' => 'btn btn-success', 'style' => 'margin-top:25px;']),
-            form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
+            form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning btn-sm',
                 'style' => 'margin-top:25px;']); ?>
 
             <?php

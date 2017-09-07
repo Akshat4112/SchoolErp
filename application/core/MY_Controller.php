@@ -41,8 +41,6 @@ class MY_Controller extends CI_Controller{
         if ($this->form_validation->run($form_validation)) {
 
             // for inserting class in database from model
-
-            
             $post = $this->input->post();
             unset($post['submit']);
             if ($this->insert_data($table_name,$post)) {

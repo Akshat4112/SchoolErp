@@ -26,13 +26,21 @@ class Misc extends MY_Controller{
     public function gatepass(){
  
         $data=$this->input->post();
+//        echo '<pre>';
+//        print_r($data);
         unset($data['submit']);
+//        echo '<pre>';
+//        print_r($data);
         $table_name = 'gatepass';
-        if($this->insert_data($table_name,$data))
-        {
+        if($this->form_validation->run('gatepass')){
 
+        $this->insert_data($table_name,$data);
+        $this->load->view('private/misc/gatepass');
+        }
+        else{
             $this->load->view('private/misc/gatepass');
         }
+
     }
     public function stock_purchase(){
         $this->load->view('private/misc/stock_purchase');

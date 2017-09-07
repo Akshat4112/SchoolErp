@@ -34,7 +34,11 @@ class Certificates extends MY_Controller
 
     public function slc_new()
     {
+        //getting information to be printed on certificate for school information.
+        $org_info= $this->get_model->show_table('organisation_info');
+        //print_r($org_info);
 
+        //working of generating pdf starting from here
         $data=$this->input->post();
         unset($data['submit']);
         //print_r($data);
@@ -102,7 +106,7 @@ class Certificates extends MY_Controller
     }
     else{
         $this->load->view('private/certificates/slc_header', ['username' => $this->get_admin()]);
-        $this->load->view('private/certificates/slc_new');
+        $this->load->view('private/certificates/slc_new',['org_info'=>$org_info]);
 //        echo 'Form Validation Failed';
     }
     }

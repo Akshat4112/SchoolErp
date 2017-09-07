@@ -108,7 +108,7 @@
                     'value' => set_value('sb3')]); ?>
             </div>
             <div class="col-lg-1">
-                <input type="submit" class="btn btn-info" name="submit" value="Search">
+                <input type="submit" class="btn btn-info btn-sm" name="submit" value="Search" style="margin-top: 6px;">
             </div>
         </div>
     <?php echo form_close();?>
@@ -240,7 +240,7 @@
         ?>
     </div>
     <div class="col-lg-2">
-        <input type="submit" class="btn btn-info" name="submit" value="Sort">
+        <input type="submit" class="btn btn-info btn-sm" name="submit" value="Sort" style="margin-top: 6px;">
         <?php form_close(); ?>
     </div>
 </div>

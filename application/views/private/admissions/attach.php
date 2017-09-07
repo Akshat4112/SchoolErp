@@ -60,7 +60,7 @@ declare(strict_types=1);
             </div>
             <?php echo form_submit(['name' => 'Submit', 'value' => 'Next', 'class' => 'btn btn-info',
                 'style' => 'margin-left:45px;']),
-            form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning']); ?>
+            form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning btn-sm']); ?>
             <?php
             $string = '</div>';
             form_close($string); ?>

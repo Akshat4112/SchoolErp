@@ -205,7 +205,7 @@
             </div>
             <?php echo form_submit(['name' => 'submit', 'value' => 'Next', 'class' => 'btn btn-info',
                 'style' => 'margin-left:45px; margin-top:20px;']),
-            form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
+            form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning btn-sm',
                 'style' => 'margin-top:20px;']); ?>
         </div>
         <div class="col-lg-2">

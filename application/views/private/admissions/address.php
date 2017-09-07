@@ -87,7 +87,7 @@ declare(strict_types=1);
 
                 <?php echo form_submit(['name' => 'submit', 'value' => 'Next', 'class' => 'btn btn-info',
                     'style' => 'margin-left:150px;margin-top:10px;']),
-                form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
+                form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning btn-sm',
                     'style' => 'margin-top:10px;']);
                 form_close('</div>');
                 ?>
