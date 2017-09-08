@@ -9,7 +9,6 @@
     <div class="row">
         <div class="col-lg-5">
             <p class="text-info" style="font-size: 20px">Fees Receipt Register</p>
-
         </div>
         <div class="col-lg-6">
             <div class="dropdown">

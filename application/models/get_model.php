@@ -117,4 +117,9 @@ class Get_model extends MY_Model
         $res=$query->result_array();
         return $res;
     }
+    public function fees_receipt_register_double_where($from,$to){
+        $query = $this->db->select('*')->where('date',$from)->where('date',$to)
+            ->get('fees_reciept');
+        return $query->result_array();
+    }
 }

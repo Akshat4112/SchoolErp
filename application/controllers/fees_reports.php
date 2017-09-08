@@ -28,9 +28,7 @@ class Fees_reports extends MY_Controller {
 //        print_r($data);
         $this->load->view('private/fees/fees_reports/balance_fees_report');
     }
-    public function fees_receipt_register(){
-        $this->load->view('private/fees/fees_reports/fees_receipt_register');
-    }
+
     public function fees_head_summary(){
         $this->load->view('private/fees/fees_reports/fees_head_summary');
     }
@@ -143,6 +141,19 @@ class Fees_reports extends MY_Controller {
 
         $this->load->view('private/fees/fees_reports/fees_category_concc_wise',['category'=>$category]);
     }
-
-
+    public function fees_receipt_register(){
+        $this->load->model('get_model','gm');
+        $data=$this->input->post();
+        unset($data['submit']);
+        $from=$data['from'];
+        $to=$data['to'];
+//        echo $from;
+//        echo $to;
+        $table = $this->gm->fees_receipt_register_double_where($from,$to);
+//        $adm_no=$table['admission_no'];
+//        echo $adm_no;
+        echo '<pre>';
+        print_r($table);
+        $this->load->view('private/fees/fees_reports/fees_receipt_register');
+    }
 }
