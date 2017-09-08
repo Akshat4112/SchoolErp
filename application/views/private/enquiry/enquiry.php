@@ -5,66 +5,25 @@
  * Date: 7/23/2017
  * Time: 12:45 PM
  */?>
+<div class="container">
 <div class="row">
-    <div class="col-lg-1">
-    </div>
-    <div class="col-lg-10">
+
+    <div class="col-lg-3">
         <?php echo form_open('enquiry/new', ['class' => 'form-horizontal']); ?>
         <div class="form-group">
-            <div class="col-lg-2">
-                <?php $options = [
-                    'admno' => 'Admission Number',
-                    'student_first_name' => 'Student First Name',
-                    'fathers_first_name' => 'Father\'s Name',
-                ];
-                $attribute_class = [
-                    'class' => 'form-control',
-                    'id' => 'select',
-                ];
-                echo form_dropdown('category', $options, 'admno', $attribute_class); ?>
+            <label for="inputText" class="col-lg-2 control-label">From</label>
+            <div class="col-lg-10">
+                <input type="date" name="student_dob" class="form-control">
+                <?php echo form_error('student_dob'); ?>
             </div>
-            <div class="col-lg-2">
-
-                <?php echo form_input(['name' => 'temp', 'class' => 'form-control',
-                    'placeholder' => 'temp',
-                    'value' => set_value('temp')]); ?>
-
-
-            </div>
-            <div class="col-lg-2">
-                <?php $options = [
-                    'admno' => 'House',
-                    'student_first_name' => 'Student First Name',
-                    'fathers_first_name' => 'Father \'s Name',
-                ];
-                $attribute_class = [
-                    'class' => 'form-control',
-                    'id' => 'select',
-                ];
-              echo form_dropdown('category', $options, 'admno', $attribute_class); ?>
-            </div>
-            <div class="col-lg-2">
-                <?php echo form_input(['name' => 'temp', 'class' => 'form-control',
-                    'placeholder' => 'temp',
-                    'value' => set_value('temp')]); ?>
-            </div>
-            <div class="col-lg-2">
-
-                <?php $options = [
-                    'admno' => 'Birth Month',
-                    'student_first_name' => 'Student First Name',
-                    'fathers_first_name' => 'Father \'s Name',
-                ];
-                $attribute_class = [
-                    'class' => 'form-control',
-                    'id' => 'select',
-                ];
-              echo form_dropdown('category', $options, 'admno', $attribute_class); ?>
-            </div>
-            <div class="col-lg-2">
-                <?php echo form_input(['name' => 'temp', 'class' => 'form-control',
-                    'placeholder' => 'temp',
-                    'value' => set_value('temp')]); ?>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="form-group">
+            <label for="inputText" class="col-lg-2 control-label">To</label>
+            <div class="col-lg-10">
+                <input type="date" name="student_dob" class="form-control">
+                <?php echo form_error('student_dob'); ?>
             </div>
         </div>
     </div>
@@ -97,4 +56,4 @@
     </div>
     <div class="col-lg-1"></div>
 </div>
-
+</div>
