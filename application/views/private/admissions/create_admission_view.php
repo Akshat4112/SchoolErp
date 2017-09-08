@@ -195,11 +195,9 @@
                         Number: <?php echo $last_adm; ?></p></b>
                 <label for="inputText" class="col-lg-2 control-label">Admission No.</label>
                 <div class="col-lg-10">
-
                     <?php echo form_input(['name' => 'admission_no', 'class' => 'form-control',
                         'placeholder' => 'Enter Admission Number',
                         'value' => set_value('admission_no')]); ?>
-
                 </div>
                 <br>
             </div>
