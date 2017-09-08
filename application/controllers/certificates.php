@@ -7,38 +7,26 @@
  * Time: 1:40 PM
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Certificates extends MY_Controller
 {
     public function __construct()
     {
         parent::__construct();
-
-        // for checking if user is logged in or not.
-
-        if( ! $this->session->userdata('login_id')){
-            return redirect('home');
-            exit();
-        }
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
-        $username = $this->get_admin();
-
 
     }
 
     public function index()
     {
-        $this->load->view('private/certificates/header', ['username' => $this->get_admin()]);
-        $this->load->view('private/certificates/cert_view',['username' => $this->get_admin()]);
+
+
+        $this->load->view('private/certificates/header', ['username' => $this->()]);
+        $this->load->view('private/certificates/cert_view');
     }
 
     public function slc_new()
     {
-        //getting information to be printed on certificate for school information.
-        $org_info= $this->get_model->show_table('organisation_info');
-        //print_r($org_info);
 
-        //working of generating pdf starting from here
         $data=$this->input->post();
         unset($data['submit']);
         //print_r($data);
@@ -105,39 +93,55 @@ class Certificates extends MY_Controller
 
     }
     else{
-        $this->load->view('private/certificates/slc_header', ['username' => $this->get_admin()]);
-        $this->load->view('private/certificates/slc_new',['org_info'=>$org_info]);
+
+        
+       
+        $this->load->view('private/certificates/slc_header', ['username' => $username]);
+        $this->load->view('private/certificates/slc_new');
 //        echo 'Form Validation Failed';
     }
     }
 
     public function entrance_test()
     {
-        $this->load->view('private/certificates/et_header', ['username' => $this->get_admin()]);
+        
+       
+        $this->load->view('private/certificates/et_header', ['username' => $username]);
         $this->load->view('private/certificates/entrance_test');
     }
 
     public function student_cert()
     {
-        $this->load->view('private/certificates/sc_header', ['username' => $this->get_admin()]);
+        
+       
+        $this->load->view('private/certificates/sc_header', ['username' => $username]);
         $this->load->view('private/certificates/student_cert');
     }
 
     public function school_leaving_cert()
     {
-        $this->load->view('private/certificates/slc_header', ['username' => $this->get_admin()]);
+
+        
+       
+
+
+        $this->load->view('private/certificates/slc_header', ['username' => $username]);
         $this->load->view('private/certificates/school_leaving_cert');
     }
 
     public function teacher_cert_l()
     {
-        $this->load->view('private/certificates/tcl_header', ['username' => $this->get_admin()]);
+        
+       
+        $this->load->view('private/certificates/tcl_header', ['username' => $username]);
         $this->load->view('private/certificates/teacher_cert_l');
     }
 
     public function teacher_cert_p()
     {
-        $this->load->view('private/certificates/tcp_header', ['username' => $this->get_admin()]);
+        
+       
+        $this->load->view('private/certificates/tcp_header', ['username' => $username]);
         $this->load->view('private/certificates/teacher_cert_p');
     }
 }

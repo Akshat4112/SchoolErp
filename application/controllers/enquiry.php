@@ -17,8 +17,6 @@ class Enquiry extends MY_Controller{
             return redirect('home');
             exit();
         }
-
-
         $this->load->view('private/enquiry/header',['username' => $this->get_admin()]);
         $this->load->view('private/enquiry/footer');
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');

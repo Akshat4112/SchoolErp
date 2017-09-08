@@ -9,7 +9,7 @@
     <div class="col-lg-1">
     </div>
     <div class="col-lg-10">
-        <?php echo form_open('admissions', ['class' => 'form-horizontal']); ?>
+        <?php echo form_open('enquiry/new', ['class' => 'form-horizontal']); ?>
         <div class="form-group">
             <div class="col-lg-2">
                 <?php $options = [
@@ -74,10 +74,9 @@
 <div class="row">
     <div class="col-lg-1"></div>
     <div class="col-lg-10">
-        <table class="table table-hover ">
+        <table class="table table-hover table-bordered">
             <thead>
-            <tr class="info">
-
+            <tr class="text-info">
                 <th>Enquiry No.</th>
                 <th>Name</th>
                 <th>Father</th>
@@ -90,11 +89,9 @@
                 <th>A/F No.</th>
                 <th>Pros. Fees</th>
                 <th>Reg. Fees</th>
-
             </tr>
             </thead>
             <tbody>
-
             </tbody>
         </table>
     </div>

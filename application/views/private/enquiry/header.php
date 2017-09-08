@@ -17,7 +17,7 @@
     <link href="<?= base_url() ?>public/assets/css/font-awesome.min.css" rel="stylesheet">
     <link href='<?= base_url() ?>public/assets/css/google_fonts.css' rel='stylesheet' type='text/css'>
     <title>
-        Admissions
+        Enquiry
     </title>
 </head>
 <body>
@@ -29,14 +29,17 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="<?= site_url('admin')?>">Admin</a></li>
-                <li><a href="<?= site_url('enquiry/new')?>">New</a></li>
-                <li><a href="<?= site_url('enquiry/sms')?>">SMS</a></li>
-                <li><a href="<?= site_url('enquiry/export') ?>">Export</a></li>
-                <li><a href="<?= site_url('enquiry/print_enq')?>">Print</a></li>
-                <li><a href="<?= site_url('enquiry/search')?>">Search</a></li>
-                <li><a href="<?= site_url('enquiry/sort')?>">Sort</a></li>
-
+                <li><a href="<?= site_url('admissions'); ?>">Enquiry Register</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        Enquiry<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="<?= site_url('enquiry/new')?>">New</a></li>
+                        <li><a href="<?= site_url('enquiry/sms')?>">SMS</a></li>
+                        <li><a href="<?= site_url('enquiry/export') ?>">Download as CSV</a></li>
+                        <li><a href="<?= site_url('enquiry/download_pdf') ?>">Download as PDF</a></li>
+                    </ul>
+                </li>
 
             </ul>
             <ul class="nav navbar-nav navbar-right">

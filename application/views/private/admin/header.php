@@ -67,7 +67,6 @@
                         <li><a href="<?= site_url('admin/document_template') ?>">Document Template</a></li>
                     </ul>
                 </li>
-                <li><a href="<?= site_url('enquiry') ?>">Enquiry Form</a></li>
                 <li><a href="<?= site_url('admin/org_info') ?>">Organisation Info</a></li>
                 <li><a href="<?= site_url('admin/bill_sundry') ?>">Bill Sundry</a></li>
                 <li><a href="<?= site_url('admin/shift') ?>">Shift</a></li>
