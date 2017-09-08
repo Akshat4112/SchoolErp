@@ -25,12 +25,12 @@ class Enquiry extends MY_Controller{
         $this->load->view('private/enquiry/enquiry');
     }
     public function new(){
-
+        $this->load->view('private/enquiry/new');
     }
-    public function sort(){}
     public function print(){}
-    public function search(){}
-    public function print_enq(){}
+
+
     public function export(){}
     public function sms(){}
+    public function download_pdf(){}
 }
