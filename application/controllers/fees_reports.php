@@ -154,6 +154,6 @@ class Fees_reports extends MY_Controller {
 //        echo $adm_no;
         echo '<pre>';
         print_r($table);
-        $this->load->view('private/fees/fees_reports/fees_receipt_register');
+        $this->load->view('private/fees/fees_reports/fees_recei88iiljuuuuuu67ttttttttttttttttttttttttewqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqyu7tr544444pt_register');
     }
 }

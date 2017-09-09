@@ -152,7 +152,6 @@
                         'placeholder' => 'Enter Roll no.',
                         'value' => set_value('student_roll_no')]); ?>
                     <?php echo form_error('student_roll_no'); ?>
-
                 </div>
             </div>
             <div class="form-group">
