@@ -43,7 +43,6 @@
                         'placeholder' => 'Enter First Name',
                         'value' => set_value('student_first_name')]);
                     ?>
-
                 </div>
             </div>
             <div class="form-group">
@@ -99,7 +98,7 @@
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('category', $drop, '1', $attribute_class);
+                    echo form_dropdown('category', $drop, set_value('category'), $attribute_class);
                     ?>
                     <?php echo form_error('category'); ?>
                 </div>
@@ -116,7 +115,7 @@
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('caste', $drop, '1', $attribute_class);
+                    echo form_dropdown('caste', $drop, set_value('caste'), $attribute_class);
                     ?>
                     <?php echo form_error('caste'); ?>
                 </div>
@@ -134,7 +133,7 @@
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('student_class', $drop, '1', $attribute_class);
+                    echo form_dropdown('student_class', $drop, set_value('student_class'), $attribute_class);
                     ?>
                     <?php echo form_error('student_class'); ?>
                 </div>
@@ -153,7 +152,7 @@
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('student_section', $drop, '', $attribute_class);
+                    echo form_dropdown('student_section', $drop,set_value('student_section'), $attribute_class);
                     ?>
                     <?php echo form_error('student_section'); ?>
                 </div>
@@ -187,7 +186,7 @@
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('house', $drop, '', $attribute_class);
+                    echo form_dropdown('house', $drop,set_value('house'), $attribute_class);
                     ?>
                     <?php echo form_error('house'); ?>
                     <br>
@@ -205,9 +204,9 @@
                 <b><p style="margin-left: 16px;" class="text-success"><br>Last Admission
                         Number: <?php echo $last_adm; ?></p></b>
                 <label for="inputText" class="col-lg-4 control-label">Admission No.</label>
-                <div class="col-lg-4">
+                <div class="col-lg-5">
                     <?php echo form_input(['name' => 'admission_no', 'class' => 'form-control',
-                        'placeholder' => 'Enter Admission Number',
+                        'placeholder' => 'Admission No.',
                         'value' => set_value('admission_no')]); ?>
                 </div>
             </div><br><br>
@@ -215,7 +214,7 @@
                 'style' => 'margin-left:45px; margin-top:5px;']); ?>
         </div>
         <div class="col-lg-2">
-            <?php echo form_error('student_first_name'); ?>
+            <?php echo form_error('student_first_name').'<br>';?>
             <?php echo form_error('admission_no'); ?>
         </div>
     </div>

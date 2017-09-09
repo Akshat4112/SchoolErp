@@ -4020,7 +4020,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     max-width: none;
 }
 .nav-tabs {
-    border-bottom: 1px solid #dddddd;
+    /*Manual Intervention is CSS for UI*/
+    /*border-bottom: 1px solid #dddddd;*/
 }
 .nav-tabs > li {
     float: left;
