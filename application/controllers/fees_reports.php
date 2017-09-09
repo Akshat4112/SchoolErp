@@ -28,7 +28,9 @@ class Fees_reports extends MY_Controller {
 //        print_r($data);
         $this->load->view('private/fees/fees_reports/balance_fees_report');
     }
-
+    public function fees_receipt_register(){
+        $this->load->view('private/fees/fees_reports/fees_receipt_register');
+    }
     public function fees_head_summary(){
         $this->load->view('private/fees/fees_reports/fees_head_summary');
     }
@@ -141,6 +143,7 @@ class Fees_reports extends MY_Controller {
 
         $this->load->view('private/fees/fees_reports/fees_category_concc_wise',['category'=>$category]);
     }
+<<<<<<< HEAD
     public function fees_receipt_register(){
         $this->load->model('get_model','gm');
         $data=$this->input->post();
@@ -156,4 +159,8 @@ class Fees_reports extends MY_Controller {
         print_r($table);
         $this->load->view('private/fees/fees_reports/fees_recei88iiljuuuuuu67ttttttttttttttttttttttttewqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqyu7tr544444pt_register');
     }
+=======
+
+
+>>>>>>> parent of 4712578... Changes in fees reports
 }
