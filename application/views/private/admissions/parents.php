@@ -4,17 +4,36 @@ declare(strict_types=1);
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-12">
-    <ul class="nav nav-tabs">
-        <li class="text-success"><b>General</b></li>
-        <li class="text-success" style="margin-left: 20px;"><b>Address Details</b></li>
-        <li class="active" style="margin-left: 20px;"><a href=""> <b>Parents Details</b></a></li>
-        <li style="margin-left: 20px;"><b>Misc Details</b></li>
-        <li style="margin-left: 20px;"><b>Attachements</b></li>
-        <li style="margin-left: 20px;"><b>Balance</b></li>
-        <li style="margin-left: 20px;"><b>Additional Fields</b></li>
-    </ul>
-        </div></div>
+        <div class="col-lg-10" style="font-size: 10px;">
+            <ul class="nav nav-tabs">
+                <table class="table table-hover table-bordered" id="userTbl">
+                    <thead>
+                    <tr class="">
+                        <th><a href="" class="text-success" style="font-size: 15px;"><b>General</b></a></th>
+                        <th>
+                            <li class="text-success" style="margin-left: 20px; font-size: 15px;"><b>Address Details</b></li>
+                        </th>
+                        <th>
+                            <li  class="text-info text-center" style="margin-left: 20px; font-size: 15px;"><b>Parents Details</b></li>
+                        </th>
+                        <th>
+                            <li style="font-size: 15px; margin-left: 20px; "><b>Misc Details</b></li>
+                        </th>
+                        <th>
+                            <li style="font-size: 15px; margin-left: 20px;"><b>Attachements</b></li>
+                        </th>
+                        <th>
+                            <li style=" font-size: 15px; margin-left: 20px;"><b>Balance</b></li>
+                        </th>
+                        <th>
+                            <li style="font-size: 15px; margin-left: 20px;"><b>Additional Fields</b></li>
+                        </th>
+                    </tr>
+                    </thead>
+                </table>
+            </ul>
+        </div>
+    </div>
     <div class="row">
         <div class="col-md-5">
             <?php echo form_open('admissions/other_info_details', ['class' => 'form-horizontal']); ?>
@@ -23,7 +42,7 @@ declare(strict_types=1);
             </div>
             <div class="form-group">
                 <label for="inputText" class="col-lg-3 control-label">First Name</label>
-                <div class="col-lg-9">
+                <div class="col-lg-5">
                     <?php echo form_input(['name' => 'fathers_first_name', 'class' => 'form-control',
                         'placeholder' => 'Enter First Name',
                         'value' => set_value('fathers_first_name')]); ?>
@@ -31,8 +50,8 @@ declare(strict_types=1);
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputText" class="col-lg-3 control-label">Middle Name</label>
-                <div class="col-lg-9">
+                <label for="inputText" class="col-lg-4 control-label">Middle Name</label>
+                <div class="col-lg-5">
                     <?php echo form_input(['name' => 'fathers_middle_name', 'class' => 'form-control',
                         'placeholder' => 'Enter Middle Name',
                         'value' => set_value('fathers_middle_name')]); ?>
@@ -40,31 +59,30 @@ declare(strict_types=1);
             </div>
             <div class="form-group">
                 <label for="inputText" class="col-lg-3 control-label">Last Name</label>
-                <div class="col-lg-9">
+                <div class="col-lg-5">
                     <?php echo form_input(['name' => 'fathers_last_name', 'class' => 'form-control',
                         'placeholder' => 'Enter Last Name',
                         'value' => set_value('fathers')]); ?>
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">DOB</label>
-                <div class="col-lg-10">
+                <label for="inputText" class="col-lg-3 control-label">DOB</label>
+                <div class="col-lg-6">
                     <input type="date" class="form-control" id="inputText" placeholder="DOB"
                            name="f_dob">
                 </div>
             </div>
             <div class="form-group">
-                <label for="select" class="col-lg-2 control-label">Mobile</label>
-                <div class="col-lg-10">
+                <label for="select" class="col-lg-3 control-label">Mobile</label>
+                <div class="col-lg-6">
                     <?php echo form_input(['name' => 'f_mobile', 'class' => 'form-control',
                         'placeholder' => 'Enter Mobile Number',
                         'value' => set_value('f_mobile')]); ?>
-
                 </div>
             </div>
             <div class="form-group">
-                <label for="select" class="col-lg-2 control-label">Qualification</label>
-                <div class="col-lg-10">
+                <label for="select" class="col-lg-3 control-label">Qualification</label>
+                <div class="col-lg-5">
                     <?php echo form_input(['name' => 'f_qual', 'class' => 'form-control',
                         'placeholder' => 'Enter Qualification',
                         'value' => set_value('f_qual')]); ?>
@@ -72,8 +90,8 @@ declare(strict_types=1);
                 </div>
             </div>
             <div class="form-group">
-                <label for="select" class="col-lg-2 control-label">Occupation</label>
-                <div class="col-lg-10">
+                <label for="select" class="col-lg-3 control-label">Occupation</label>
+                <div class="col-lg-5">
                     <?php $options = [
                         'business' => 'Business',
                         'service' => 'Service',
@@ -87,9 +105,9 @@ declare(strict_types=1);
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">Photo</label>
-                <div class="col-lg-10">
-                    <input type="file" name="f_photo" class="form-control">
+                <label for="inputText" class="col-lg-3 control-label">Photo</label>
+                <div class="col-lg-6">
+                    <input type="file" name="f_photo" class="form-control" value="">
                 </div>
             </div>
         </div>
@@ -99,32 +117,28 @@ declare(strict_types=1);
             </div>
             <div class="form-group">
                 <label for="inputText" class="col-lg-3 control-label" style="margin-top: 10px;">First Name</label>
-                <div class="col-lg-9">
+                <div class="col-lg-5">
                     <?php echo form_input(['name' => 'mothers_first_name', 'class' => 'form-control',
                         'placeholder' => 'Enter First Name',
                         'value' => set_value('mothers_first_name')]); ?>
-
                 </div>
-                <br>
-            </div>
+            </div><br><br>
             <div class="form-group">
-                <label for="inputText" class="col-lg-3 control-label" style="margin-top: 10px;">Middle Name</label>
-                <div class="col-lg-9">
+                <label for="inputText" class="col-lg-4 control-label" style="margin-top: 10px;">Middle Name</label>
+                <div class="col-lg-5">
                     <?php echo form_input(['name' => 'mothers_middle_name', 'class' => 'form-control',
                         'placeholder' => 'Enter Middle Name',
                         'value' => set_value('mothers_middle_name')]); ?>
                 </div>
-                <br>
-            </div>
+            </div><br><br>
             <div class="form-group">
                 <label for="inputText" class="col-lg-3 control-label" style="margin-top: 10px;">Last Name</label>
-                <div class="col-lg-9">
+                <div class="col-lg-5">
                     <?php echo form_input(['name' => 'mothers_last_name', 'class' => 'form-control',
                         'placeholder' => 'Enter Last Name',
                         'value' => set_value('mothers_last_name')]); ?>
                 </div>
-                <br>
-            </div>
+            </div><br><br>
             <div class="form-group">
                 <label for="inputText" class="col-lg-3 control-label" style="margin-top: 10px;">DOB</label>
                 <div class="col-lg-9">
@@ -169,33 +183,23 @@ declare(strict_types=1);
                 <div class="col-lg-9">
                     <input type="file" name="m_photo" class="form-control">
                 </div>
-                <br>
-            </div>
-            <div class="form-group">
-                <label for="inputText" class="col-lg-3 control-label" style="margin-top: 10px;">Parents Wedding Date</label>
-                <div class="col-lg-9">
-                    <input type="date" name="parents_wedding_date" class="form-control">
-                </div>
-                <br>
             </div>
             <?php echo form_submit(['name' => 'Submit',
                 'value' => 'Next',
-                'class' => 'btn btn-info', 'style' => 'margin-top:15px;']),
-            form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
-                'style' => 'margin-top:15px;']); ?>
+                'class' => 'btn btn-info', 'style' => 'margin-top:15px;']); ?>
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-2" style="margin-top: 50px;">
             <?php if($error = $this->session->flashdata('stu_succ')): ?>
                 <div class="alert alert-dismissible alert-success">
                     <?php echo $error ?>
                 </div>
             <?php endif; ?>
-            <?php echo form_error('fathers_first_name'); ?>
+            <?php echo form_error('fathers_first_name').'<br>'; ?>
             <?php echo form_error('mothers_first_name'); ?>
         </div>
     </div>
 </div>
     <?php
-    $string = '</div';
+    $string = '</div>';
     echo form_close($string) ?>
 

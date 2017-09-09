@@ -1,7 +1,6 @@
 <?php
 declare(strict_types=1);
 ?>
-
 <div class="container">
     <div class="row">
         <div class="col-lg-10" style="font-size: 10px;">
