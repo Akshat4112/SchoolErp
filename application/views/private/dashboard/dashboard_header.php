@@ -14,7 +14,7 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header"><a class="navbar-brand" href="<?= site_url('dashboard/') ?>">Dashboard</a>
-            <ul class="nav navbar-nav navbar-right" style="margin-left: 1120px;">
+            <ul class="nav navbar-nav navbar-right" style="margin-left: 1105px;">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         <?php
