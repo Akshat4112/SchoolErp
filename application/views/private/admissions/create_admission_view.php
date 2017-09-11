@@ -1,35 +1,18 @@
 <?php
 //    declare(strict_types=1);
 ?>
+
 <div class="container">
     <div class="row">
-        <div class="col-lg-10" style="font-size: 10px;">
-            <ul class="nav nav-tabs">
-                <table class="table table-hover table-bordered" id="userTbl">
-                    <thead>
-                    <tr class="">
-                        <th><a href="" class="text-primary text-center" style="font-size: 15px;"><b>General</b></a></th>
-                        <th>
-                            <li style="margin-left: 20px; font-size: 15px;"><b>Address Details</b></li>
-                        </th>
-                        <th>
-                            <li style="margin-left: 20px; font-size: 15px;"><b>Parents Details</b></li>
-                        </th>
-                        <th>
-                            <li style="font-size: 15px; margin-left: 20px; "><b>Misc Details</b></li>
-                        </th>
-                        <th>
-                            <li style="font-size: 15px; margin-left: 20px;"><b>Attachements</b></li>
-                        </th>
-                        <th>
-                            <li style=" font-size: 15px; margin-left: 20px;"><b>Balance</b></li>
-                        </th>
-                        <th>
-                            <li style="font-size: 15px; margin-left: 20px;"><b>Additional Fields</b></li>
-                        </th>
-                    </tr>
-                    </thead>
-                </table>
+        <div class="col-lg-10">
+            <ul class="nav nav-pills" style="font-size: 15px;">
+                <li class="active"><a href="">General</a></li>
+                <li><a href="">Address Details</a></li>
+                <li><a href="">Parents Details</a></li>
+                <li><a href="">Misc Details</a></li>
+                <li><a href="">Attachements</a> </li>
+                <li><a href="">Balance</a> </li>
+<!--                <li style="margin-left: 20px;">Additional Fields</li>-->
             </ul>
         </div>
     </div>
@@ -81,7 +64,7 @@
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('gender', $options,set_value('gender'), $attribute_class);
+                    echo form_dropdown('gender', $options, set_value('gender'), $attribute_class);
                     ?>
                     <?php echo form_error('gender'); ?>
                 </div>
@@ -152,11 +135,12 @@
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('student_section', $drop,set_value('student_section'), $attribute_class);
+                    echo form_dropdown('student_section', $drop, set_value('student_section'), $attribute_class);
                     ?>
                     <?php echo form_error('student_section'); ?>
                 </div>
-            </div><br><br>
+            </div>
+            <br><br>
             <div class="form-group">
                 <label for="inputText" class="col-lg-3 control-label">Roll No.</label>
                 <div class="col-lg-3">
@@ -165,7 +149,8 @@
                         'value' => set_value('student_roll_no')]); ?>
                     <?php echo form_error('student_roll_no'); ?>
                 </div>
-            </div><br><br>
+            </div>
+            <br><br>
             <div class="form-group">
                 <label for="inputText" class="col-lg-3 control-label">Route</label>
                 <div class="col-lg-4">
@@ -173,7 +158,8 @@
                         'placeholder' => 'Enter Route',
                         'value' => set_value('route')]); ?>
                 </div>
-            </div><br><br>
+            </div>
+            <br><br>
             <div class="form-group">
                 <label for="select" class="col-lg-3 control-label">House</label>
                 <div class="col-lg-4">
@@ -186,20 +172,22 @@
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('house', $drop,set_value('house'), $attribute_class);
+                    echo form_dropdown('house', $drop, set_value('house'), $attribute_class);
                     ?>
                     <?php echo form_error('house'); ?>
                     <br>
                 </div>
-            </div><br><br>
-            <div class="form-group"style="margin-top: 5px;">
+            </div>
+            <br><br>
+            <div class="form-group" style="margin-top: 5px;">
                 <label for="inputText" class="col-lg-3 control-label">Select Photo</label>
                 <div class="col-lg-4">
                     <?php echo form_upload(['name' => 'userfile', 'class' => 'form-control']);
                     ?>
                 </div>
-            </div><br>
-            <?php  if(isset($upload_error)) echo $upload_error ?>
+            </div>
+            <br>
+            <?php if (isset($upload_error)) echo $upload_error ?>
             <div class="form-group">
                 <b><p style="margin-left: 16px;" class="text-success"><br>Last Admission
                         Number: <?php echo $last_adm; ?></p></b>
@@ -209,12 +197,13 @@
                         'placeholder' => 'Admission No.',
                         'value' => set_value('admission_no')]); ?>
                 </div>
-            </div><br><br>
+            </div>
+            <br><br>
             <?php echo form_submit(['name' => 'submit', 'value' => 'Next', 'class' => 'btn btn-primary',
                 'style' => 'margin-left:45px; margin-top:5px;']); ?>
         </div>
         <div class="col-lg-2">
-            <?php echo form_error('student_first_name').'<br>';?>
+            <?php echo form_error('student_first_name') . '<br>'; ?>
             <?php echo form_error('admission_no'); ?>
         </div>
     </div>
