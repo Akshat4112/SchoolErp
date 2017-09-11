@@ -47,8 +47,7 @@
                     Already have a account! Click here to login</p></a>
             <div class="form-group">
                 <div class="col-lg-10 col-lg-offset-2">
-                    <?php echo form_submit(['name'=>'Submit','value'=>'Register','class'=>'btn btn-info']),
-                    form_reset(['name'=>'reset','value'=>'reset','class'=>'btn btn-warning']);?>
+                    <?php echo form_submit(['name'=>'Submit','value'=>'Register','class'=>'btn btn-info']);?>
                 </div>
             </div>
 

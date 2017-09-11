@@ -4,22 +4,39 @@ declare(strict_types=1);
 ?>
 <div class="container">
     <div class="row">
-        <div class="col-lg-12">
-    <ul class="nav nav-tabs">
-        <li class="text-success"><b>General</b></li>
-        <li class="text-success" style="margin-left: 20px;"><b>Address Details</b></li>
-        <li class="text-success" style="margin-left: 20px;"><b>Parents Details</b></li>
-        <li class="text-success" style="margin-left: 20px;"><b>Misc Details</b></li>
-        <li class="text-success" style="margin-left: 20px;"><b>Attachements</b></li>
-        <li class="active" style="margin-left: 20px;"><a href=""><b>Balance</b></a></li>
-        <li style="margin-left: 20px;"><b>Additional Fields</b></li>
-    </ul>
+        <div class="col-lg-10" style="font-size: 10px;">
+            <ul class="nav nav-tabs">
+                <table class="table table-hover table-bordered" id="userTbl">
+                    <thead>
+                    <tr class="">
+                        <th><a href="" class="text-success" style="font-size: 15px;"><b>General</b></a></th>
+                        <th>
+                            <li class="text-success" style="margin-left: 20px; font-size: 15px;"><b>Address Details</b></li>
+                        </th>
+                        <th>
+                            <li  class="text-success" style="margin-left: 20px; font-size: 15px;"><b>Parents Details</b></li>
+                        </th>
+                        <th>
+                            <li class="text-success" style="margin-left: 20px; font-size: 15px;"><b>Misc Details</b></li>
+                        </th>
+                        <th>
+                            <li class="text-success" style="margin-left: 20px; font-size: 15px;"><b>Attachements</b></li>
+                        </th>
+                        <th>
+                            <li class="text-info text-center" style="margin-left: 20px; font-size: 15px;"><b>Balance</b></li>
+                        </th>
+                        <th>
+                            <li style="font-size: 15px; margin-left: 20px;"><b>Additional Fields</b></li>
+                        </th>
+                    </tr>
+                    </thead>
+                </table>
+            </ul>
         </div>
     </div>
-    <div class="row">
+    <div class="row" style="margin-top: 10px;">
         <div class="col-md-5">
             <?php echo form_open('admissions/balance', ['class' => 'form-horizontal']); ?>
-            <h4>Balance</h4>
             <div class="form-group">
                 <label for="inputText" class="col-lg-3 control-label">Ledger Balance</label>
                 <div class="col-lg-9">
@@ -77,6 +94,8 @@ declare(strict_types=1);
                         'value' => set_value('aadhar_uid')]); ?>
                 </div>
             </div>
+        </div>
+        <div class="col-md-5" style="margin-top: 10px;">
             <div class="form-group">
                 <label for="inputText" class="col-lg-3 control-label">Family</label>
                 <div class="col-lg-9">
@@ -86,10 +105,7 @@ declare(strict_types=1);
                 </div>
                 <br><br>
             </div>
-        </div>
-        <div class="col-md-5">
-
-            <div class="form-group" style="margin-top: 40px;">
+            <div class="form-group">
                 <label for="inputText" class="col-lg-3 control-label" style="margin-top: 10px;">Status</label>
                 <div class="col-lg-9">
                     <?php echo form_input(['name' => 'status_adm', 'class' => 'form-control',
@@ -105,9 +121,7 @@ declare(strict_types=1);
                 </div>
             </div>
             <?php echo form_submit(['name' => 'Submit', 'value' => 'Done',
-                'class' => 'btn btn-success', 'style' => 'margin-top:25px;']),
-            form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning btn-sm',
-                'style' => 'margin-top:25px;']); ?>
+                'class' => 'btn btn-primary', 'style' => 'margin-top:25px;']); ?>
 
             <?php
             $string='</div>';

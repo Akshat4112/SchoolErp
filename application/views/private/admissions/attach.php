@@ -3,16 +3,34 @@ declare(strict_types=1);
 ?>
 <div class="container">
     <div class="row">
-        <div class="col-lg-12">
-    <ul class="nav nav-tabs">
-        <li class="text-success"><b>General</b></li>
-        <li class="text-success" style="margin-left: 20px;"><b>Address Details</b></li>
-        <li class="text-success" style="margin-left: 20px;"><b>Parents Details</b></li>
-        <li class="text-success" style="margin-left: 20px;"><b>Misc Details</b></li>
-        <li class="active" style="margin-left: 20px;"><a href=""><b>Attachements</b></a></li>
-        <li style="margin-left: 20px;"><b>Balance</b></li>
-        <li style="margin-left: 20px;"><b>Additional Fields</b></li>
-    </ul>
+        <div class="col-lg-10" style="font-size: 10px;">
+            <ul class="nav nav-tabs">
+                <table class="table table-hover table-bordered" id="userTbl">
+                    <thead>
+                    <tr class="">
+                        <th><a href="" class="text-success" style="font-size: 15px;"><b>General</b></a></th>
+                        <th>
+                            <li class="text-success" style="margin-left: 20px; font-size: 15px;"><b>Address Details</b></li>
+                        </th>
+                        <th>
+                            <li  class="text-success" style="margin-left: 20px; font-size: 15px;"><b>Parents Details</b></li>
+                        </th>
+                        <th>
+                            <li class="text-success" style="margin-left: 20px; font-size: 15px;"><b>Misc Details</b></li>
+                        </th>
+                        <th>
+                            <li class="text-info text-center" style="margin-left: 20px; font-size: 15px;"><b>Attachements</b></li>
+                        </th>
+                        <th>
+                            <li style=" font-size: 15px; margin-left: 20px;"><b>Balance</b></li>
+                        </th>
+                        <th>
+                            <li style="font-size: 15px; margin-left: 20px;"><b>Additional Fields</b></li>
+                        </th>
+                    </tr>
+                    </thead>
+                </table>
+            </ul>
         </div>
     </div>
     <div class="row">
@@ -59,8 +77,7 @@ declare(strict_types=1);
                 </div>
             </div>
             <?php echo form_submit(['name' => 'Submit', 'value' => 'Next', 'class' => 'btn btn-info',
-                'style' => 'margin-left:45px;']),
-            form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning btn-sm']); ?>
+                'style' => 'margin-left:180px;']); ?>
             <?php
             $string = '</div>';
             form_close($string); ?>

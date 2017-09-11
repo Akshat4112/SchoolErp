@@ -8,7 +8,7 @@
                 <table class="table table-hover table-bordered" id="userTbl">
                     <thead>
                     <tr class="">
-                        <th><a href="" class="text-info text-center" style="font-size: 15px;"><b>General</b></a></th>
+                        <th><a href="" class="text-primary text-center" style="font-size: 15px;"><b>General</b></a></th>
                         <th>
                             <li style="margin-left: 20px; font-size: 15px;"><b>Address Details</b></li>
                         </th>
@@ -210,7 +210,7 @@
                         'value' => set_value('admission_no')]); ?>
                 </div>
             </div><br><br>
-            <?php echo form_submit(['name' => 'submit', 'value' => 'Next', 'class' => 'btn btn-info',
+            <?php echo form_submit(['name' => 'submit', 'value' => 'Next', 'class' => 'btn btn-primary',
                 'style' => 'margin-left:45px; margin-top:5px;']); ?>
         </div>
         <div class="col-lg-2">
