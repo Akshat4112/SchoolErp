@@ -3,33 +3,15 @@ declare(strict_types=1);
 ?>
 <div class="container">
     <div class="row">
-        <div class="col-lg-10" style="font-size: 10px;">
-            <ul class="nav nav-tabs">
-                <table class="table table-hover table-bordered" id="userTbl">
-                    <thead>
-                    <tr class="">
-                        <th><a href="" class="text-success" style="font-size: 15px;"><b>General</b></a></th>
-                        <th>
-                            <li class="text-info text-center" style="margin-left: 20px; font-size: 15px;"><b>Address Details</b></li>
-                        </th>
-                        <th>
-                            <li style="margin-left: 20px; font-size: 15px;"><b>Parents Details</b></li>
-                        </th>
-                        <th>
-                            <li style="font-size: 15px; margin-left: 20px; "><b>Misc Details</b></li>
-                        </th>
-                        <th>
-                            <li style="font-size: 15px; margin-left: 20px;"><b>Attachements</b></li>
-                        </th>
-                        <th>
-                            <li style=" font-size: 15px; margin-left: 20px;"><b>Balance</b></li>
-                        </th>
-                        <th>
-                            <li style="font-size: 15px; margin-left: 20px;"><b>Additional Fields</b></li>
-                        </th>
-                    </tr>
-                    </thead>
-                </table>
+        <div class="col-lg-10">
+            <ul class="nav nav-pills" style="font-size: 15px;">
+                <li class="success"><a href="">General</a></li>
+                <li class="active"><a href="">Address Details</a></li>
+                <li><a href="">Parents Details</a></li>
+                <li><a href="">Misc Details</a></li>
+                <li><a href="">Attachements</a> </li>
+                <li><a href="">Balance</a> </li>
+                <!--                <li style="margin-left: 20px;">Additional Fields</li>-->
             </ul>
         </div>
     </div>
@@ -102,19 +84,27 @@ declare(strict_types=1);
                         </div>
                     </div>
 
-                <?php echo form_submit(['name' => 'submit', 'value' => 'Next', 'class' => 'btn btn-info',
+                <?php echo form_submit(['name' => 'submit', 'value' => 'Next', 'class' => 'btn btn-primary',
                     'style' => 'margin-left:220px;margin-top:8px;']);
                 form_close('</div>');
                 ?>
 
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-3" style="margin-top: 10px;">
             <?php if($error = $this->session->flashdata('stu_succ')): ?>
                 <div class="alert alert-dismissible alert-success">
                     <?php echo $error ?>
                 </div>
             <?php endif; ?>
-            <?php echo form_error('house_no').'<br>'; ?>
-            <?php echo form_error('city'); ?>
+            <?php if(form_error('house_no')){
+                $error = form_error('house_no');
+            echo '<div class="alert alert-dismissible alert-danger">
+                '.$error.'</div>';} ?>
+            <?php if(form_error('city')){
+                $error = form_error('city');
+                echo '<div class="alert alert-dismissible alert-danger">
+                '.$error.'</div>';} ?>
         </div>
     </div>
+</div>
