@@ -36,6 +36,7 @@ class MY_Controller extends CI_Controller{
             $this->load->view('private/'.$view, ['view' => $array]);
         }
     }
+
     public function insert_genric($form_validation,$table_name,$view,$field)
     {
         if ($this->form_validation->run($form_validation)) {
@@ -56,10 +57,12 @@ class MY_Controller extends CI_Controller{
             $this->load->view('private/'.$view,['view'=>$array]);
         }
     }
+
     public function dropdown_db($field,$table_name){
         $this->load->model('get_model','gm');
         return $dropdownn = $this->gm->get_list($field,$table_name);
     }
+
     public function get_admin(){
         $admin_id = $this->session->userdata('login_id');
         $user_name = $this->db->select('admin_name')->from('admin')->where('admin_id',$admin_id)->get();
@@ -76,9 +79,11 @@ class MY_Controller extends CI_Controller{
             return true;
         }
     }
+
     public function insert_data($table_name,$array){
         return $this->db->insert($table_name,$array);
     }
+
     public function insert_data_key($table_name,$array,$key){
         $this->db->where('student_id', $key);
         return $this->db->update($table_name, $array);
