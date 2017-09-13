@@ -203,8 +203,14 @@
                 'style' => 'margin-left:45px; margin-top:5px;']); ?>
         </div>
         <div class="col-lg-2">
-            <?php echo form_error('student_first_name') . '<br>'; ?>
-            <?php echo form_error('admission_no'); ?>
+            <?php if(form_error('student_first_name')){
+                $error = form_error('student_first_name');
+                echo '<div class="alert alert-dismissible alert-danger">
+                '.$error.'</div>';} ?>
+            <?php if(form_error('admission_no')){
+                $error = form_error('admission_no');
+                echo '<div class="alert alert-dismissible alert-danger">
+                '.$error.'</div>';} ?>
         </div>
     </div>
 </div>

@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-5">
-            <p class="text-info" style="font-size: 20px;">Attendacne Register</p>
+            <p class="text-primary" style="font-size: 20px;">Attendacne Register</p>
         </div>
         <div class="col-lg-6">
             <div class="dropdown">
@@ -26,7 +26,7 @@
     <div class="row">
         <div class="col-lg-5">
             <div class="form-group">
-                <label for="inputText" class="col-lg-7 control-label text-info"
+                <label for="inputText" class="col-lg-7 control-label text-primary"
                        style="font-size: 17px; margin-top: 8px;"><b>Attendance summary as on</b></label>
                 <div class="col-lg-5">
                     <input type="date" name="summary_on" class="form-control">
@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="col-lg-3">
-            <?php echo form_submit(['name' => 'submit', 'value' => 'Search', 'class' => 'btn btn-info',
+            <?php echo form_submit(['name' => 'submit', 'value' => 'Search', 'class' => 'btn btn-primary',
                 'style' => '']); ?>
             <?php echo form_close();?>
         </div>
@@ -47,7 +47,7 @@
         <div class="col-lg-12" style="overflow-y:scroll; overflow-x:hidden; height: 400px; width:1200px;">
             <table class="table table-hover table-bordered">
                 <thead>
-                <tr class="text-info">
+                <tr class="text-primary">
                     <th>S.no</th>
                     <th>Class</th>
                     <th>Section</th>

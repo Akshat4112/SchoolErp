@@ -3,55 +3,31 @@ declare(strict_types=1);
 ?>
 <div class="container">
     <div class="row">
-        <div class="col-lg-10" style="font-size: 10px;">
-            <ul class="nav nav-tabs">
-                <table class="table table-hover table-bordered" id="userTbl">
-                    <thead>
-                    <tr class="">
-                        <th><a href="" class="text-success" style="font-size: 15px;"><b>General</b></a></th>
-                        <th>
-                            <li class="text-success" style="margin-left: 20px; font-size: 15px;"><b>Address Details</b></li>
-                        </th>
-                        <th>
-                            <li  class="text-success" style="margin-left: 20px; font-size: 15px;"><b>Parents Details</b></li>
-                        </th>
-                        <th>
-                            <li class="text-info text-center" style="margin-left: 20px; font-size: 15px;"><b>Misc Details</b></li>
-                        </th>
-                        <th>
-                            <li style="font-size: 15px; margin-left: 20px;"><b>Attachements</b></li>
-                        </th>
-                        <th>
-                            <li style=" font-size: 15px; margin-left: 20px;"><b>Balance</b></li>
-                        </th>
-                        <th>
-                            <li style="font-size: 15px; margin-left: 20px;"><b>Additional Fields</b></li>
-                        </th>
-                    </tr>
-                    </thead>
-                </table>
+        <div class="col-lg-10">
+            <ul class="nav nav-pills" style="font-size: 15px;">
+                <li class="success"><a href="">General</a></li>
+                <li class="success"><a href="">Address Details</a></li>
+                <li ><a href="">Parents Details</a></li>
+                <li class="active"><a href="">Misc Details</a></li>
+                <li><a href="">Attachements</a> </li>
+                <li><a href="">Balance</a> </li>
+                <!--                <li style="margin-left: 20px;">Additional Fields</li>-->
             </ul>
         </div>
     </div>
-    <div class="row">
-        <div class="col-lg-12">
-
-        </div>
-    </div>
-    <div class="row">
+    <div class="row" style="margin-top: 10px;">
         <div class="col-md-5">
                 <?php echo form_open('admissions/misc_details', ['class' => 'form-horizontal']); ?>
                     <div class="form-group">
-                        <label for="inputText" class="col-lg-6 control-label">Last Attended School</label>
+                        <label for="inputText" class="col-lg-4 control-label">Last Attended School</label>
                         <div class="col-lg-5">
                             <?php echo form_input(['name' => 'las', 'class' => 'form-control',
-                                'placeholder' => 'Enter Last Attended School',
+                                'placeholder' => 'Last Attended School',
                                 'value' => set_value('las')]); ?>
-
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="inputText" class="col-lg-3 control-label">Remarks</label>
+                        <label for="inputText" class="col-lg-4 control-label">Remarks</label>
                         <div class="col-lg-5">
                             <?php echo form_input(['name' => 'remarks', 'class' => 'form-control',
                                 'placeholder' => 'Enter Reamrks',
@@ -59,23 +35,23 @@ declare(strict_types=1);
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="inputText" class="col-lg-3 control-label">Last Exam Given</label>
+                        <label for="inputText" class="col-lg-4 control-label">Last Exam Given</label>
                         <div class="col-lg-5">
                             <?php echo form_input(['name' => 'last_exam_given', 'class' => 'form-control',
-                                'placeholder' => 'Enter Last Exam Given',
+                                'placeholder' => 'Last Exam Given',
                                 'value' => set_value('last_exam_given')]); ?>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="inputText" class="col-lg-3 control-label">Year</label>
-                        <div class="col-lg-4">
+                        <label for="inputText" class="col-lg-4 control-label">Year</label>
+                        <div class="col-lg-5">
                             <?php echo form_input(['name' => 'year', 'class' => 'form-control',
-                                'placeholder' => 'Enter Year of Last Exam',
+                                'placeholder' => 'Year of Last Exam',
                                 'value' => set_value('year')]); ?>
                         </div>
                     </div>
             <div class="form-group">
-                <label for="inputText" class="col-lg-3 control-label">Status</label>
+                <label for="inputText" class="col-lg-4 control-label">Status</label>
                 <div class="col-lg-4">
                     <?php
                     $drop=array(
@@ -92,19 +68,18 @@ declare(strict_types=1);
                 </div>
             </div>
                     <div class="form-group">
-                        <label for="select" class="col-lg-3 control-label">Marks</label>
-                        <div class="col-lg-4">
+                        <label for="select" class="col-lg-4 control-label">Marks</label>
+                        <div class="col-lg-7">
                             <?php echo form_input(['name' => 'marks', 'class' => 'form-control',
-                                'placeholder' => 'Enter Marks of Last Year in %age',
+                                'placeholder' => 'Marks of Last Year in %age',
                                 'value' => set_value('marks')]); ?>
-                            <br>
                         </div>
                     </div>
             <div class="form-group">
-                <label for="inputText" class="col-lg-3 control-label">Board / University</label>
-                <div class="col-lg-4">
+                <label for="inputText" class="col-lg-4 control-label">Board / University</label>
+                <div class="col-lg-6">
                     <?php echo form_input(['name' => 'board', 'class' => 'form-control',
-                        'placeholder' => 'Enter Last Board / University',
+                        'placeholder' => 'Last Board / University',
                         'value' => set_value('year')]); ?>
                 </div>
             </div>
@@ -168,8 +143,8 @@ declare(strict_types=1);
                     </div>
                     <br><br>
                 </div>
-                <?php echo form_submit(['name' => 'Submit', 'value' => 'Next', 'class' => 'btn btn-info',
-                    'style' => 'margin-left:45px;']); ?>
+                <?php echo form_submit(['name' => 'Submit', 'value' => 'Next', 'class' => 'btn btn-primary',
+                    'style' => 'margin-left:145px;']); ?>
             </div>
         <div class="col-lg-2">
             <?php if($error = $this->session->flashdata('stu_succ')): ?>
@@ -177,9 +152,14 @@ declare(strict_types=1);
                     <?php echo $error ?>
                 </div>
             <?php endif; ?>
-            <?php echo form_error('las'); ?>
+            <?php if(form_error('las')){
+                $error = form_error('las');
+                echo '<div class="alert alert-dismissible alert-danger">
+                '.$error.'</div>';} ?>
         </div>
         </div>
     <?php echo form_close() ?>
 </div>
 </div>
+
+
