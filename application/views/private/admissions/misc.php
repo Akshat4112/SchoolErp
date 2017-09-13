@@ -20,7 +20,7 @@ declare(strict_types=1);
                 <?php echo form_open('admissions/misc_details', ['class' => 'form-horizontal']); ?>
                     <div class="form-group">
                         <label for="inputText" class="col-lg-4 control-label">Last Attended School</label>
-                        <div class="col-lg-5">
+                        <div class="col-lg-6">
                             <?php echo form_input(['name' => 'las', 'class' => 'form-control',
                                 'placeholder' => 'Last Attended School',
                                 'value' => set_value('las')]); ?>
