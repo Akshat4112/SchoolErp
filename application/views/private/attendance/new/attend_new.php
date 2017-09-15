@@ -80,18 +80,18 @@
                             <td><?php echo $student_det['student_first_name'] ?></td>
                             <td><?php echo $student_det['admission_no'] ?></td>
                             <td>
-                                <?php echo '<input type="checkbox" name="present"
-                                   value="" size="17" checked="checked" id="P">';
+                                <?php $data = array('name'=>'optradio', 'id'=>'P','value'=>'', 'checked'=>'True');
+                                      echo form_radio($data);
                                 ?>
                             </td>
                             <td>
-                                <?php echo '<input type="checkbox" name="absent"
-                                   value="" size="17" id="A">';
+                                <?php $data = array('name'=>'optradio', 'id'=>'A','value'=>'');
+                                      echo form_radio($data);
                                 ?>
                             </td>
                             <td>
-                                <?php echo '<input type="checkbox" name="remarks"
-                                   value="" size="17" id="R">';
+                                <?php $data = array('name'=>'optradio', 'id'=>'L','value'=>'');
+                                      echo form_radio($data);
                                 ?>
                             </td>
                             <td><?php echo ''; ?></td>

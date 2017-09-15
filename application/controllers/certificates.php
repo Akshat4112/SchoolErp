@@ -20,7 +20,7 @@ class Certificates extends MY_Controller
     {
 
 
-        $this->load->view('private/certificates/header', ['username' => $this->()]);
+        $this->load->view('private/certificates/header', ['username' => $this->get_admin()]);
         $this->load->view('private/certificates/cert_view');
     }
 
@@ -96,7 +96,7 @@ class Certificates extends MY_Controller
 
         
        
-        $this->load->view('private/certificates/slc_header', ['username' => $username]);
+        $this->load->view('private/certificates/slc_header', ['username' => $this->get_admin()]);
         $this->load->view('private/certificates/slc_new');
 //        echo 'Form Validation Failed';
     }
@@ -106,7 +106,7 @@ class Certificates extends MY_Controller
     {
         
        
-        $this->load->view('private/certificates/et_header', ['username' => $username]);
+        $this->load->view('private/certificates/et_header', ['username' => $this->get_admin()]);
         $this->load->view('private/certificates/entrance_test');
     }
 
@@ -114,7 +114,7 @@ class Certificates extends MY_Controller
     {
         
        
-        $this->load->view('private/certificates/sc_header', ['username' => $username]);
+        $this->load->view('private/certificates/sc_header', ['username' => $this->get_admin()]);
         $this->load->view('private/certificates/student_cert');
     }
 
@@ -122,10 +122,7 @@ class Certificates extends MY_Controller
     {
 
         
-       
-
-
-        $this->load->view('private/certificates/slc_header', ['username' => $username]);
+        $this->load->view('private/certificates/slc_header', ['username' => $this->get_admin()]);
         $this->load->view('private/certificates/school_leaving_cert');
     }
 
@@ -133,7 +130,7 @@ class Certificates extends MY_Controller
     {
         
        
-        $this->load->view('private/certificates/tcl_header', ['username' => $username]);
+        $this->load->view('private/certificates/tcl_header', ['username' => $this->get_admin()]);
         $this->load->view('private/certificates/teacher_cert_l');
     }
 
@@ -141,7 +138,7 @@ class Certificates extends MY_Controller
     {
         
        
-        $this->load->view('private/certificates/tcp_header', ['username' => $username]);
+        $this->load->view('private/certificates/tcp_header', ['username' => $this->get_admin()]);
         $this->load->view('private/certificates/teacher_cert_p');
     }
 }
