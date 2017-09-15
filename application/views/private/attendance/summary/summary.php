@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-5">
-            <p class="text-info" style="font-size: 20px;">Attendacne Report</p>
+            <p class="text-default" style="font-size: 20px;">Attendacne Report</p>
         </div>
         <div class="col-lg-6">
             <div class="dropdown">
@@ -23,19 +23,20 @@
             <?php echo form_open('attendance/summary', ['class' => 'form-horizontal']); ?>
         </div>
     </div>
-    <div class="row">
+    <div class="row" style="margin-top: 10px;">
         <div class="col-lg-3">
             <div class="form-group">
-                <label for="inputText" class="col-lg-7 control-label text-info"
-                       style="font-size: 17px; margin-top: 8px;"><b>Admission No.</b></label>
-                <div class="col-lg-5">
+                <label for="inputText" class="col-lg-7 control-label text-default"
+                       style="font-size: 15px; margin-top: 8px;">Admission No.</label>
+                <div class="col-lg-4">
                     <input type="text" name="summary_on" class="form-control">
                 </div>
+                <div class="col-lg-1"></div>
             </div>
         </div>
         <div class="col-lg-3">
             <div class="form-group">
-                <label for="inputText" class="col-lg-3 control-label text-info"
+                <label for="inputText" class="col-lg-3 control-label text-default"
                        style="font-size: 17px; margin-top: 8px;"><b>From</b></label>
                 <div class="col-lg-9">
                     <input type="date" name="summary_on" class="form-control">
@@ -44,7 +45,7 @@
         </div>
         <div class="col-lg-3">
             <div class="form-group">
-                <label for="inputText" class="col-lg-3 control-label text-info"
+                <label for="inputText" class="col-lg-3 control-label text-default"
                        style="font-size: 17px; margin-top: 8px;"><b>To</b></label>
                 <div class="col-lg-9">
                     <input type="date" name="summary_on" class="form-control">
@@ -52,8 +53,8 @@
             </div>
         </div>
         <div class="col-lg-1">
-            <?php echo form_submit(['name' => 'submit', 'value' => 'Search', 'class' => 'btn btn-info',
-                'style' => '']); ?>
+            <?php echo form_submit(['name' => 'submit', 'value' => 'Search', 'class' => 'btn btn-primary btn-sm',
+                'style' => 'margin-top:3px;']); ?>
             <?php echo form_close();?>
         </div>
         <div class="col-lg-4">
@@ -65,7 +66,7 @@
         <div class="col-lg-12">
             <table class="table table-hover table-bordered">
                 <thead>
-                <tr class="text-info">
+                <tr class="text-default">
                     <th>Entry Date</th>
                     <th>Present</th>
                     <th>Absent</th>
