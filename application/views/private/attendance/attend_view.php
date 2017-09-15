@@ -46,7 +46,7 @@
         <div class="col-lg-12" style="overflow-y:scroll; overflow-x:hidden; height: 400px; width:1200px;">
             <table class="table table-hover table-bordered">
                 <thead>
-                <tr class="text-primary">
+                <tr class="text-default">
                     <th>S.no</th>
                     <th>Class</th>
                     <th>Section</th>
