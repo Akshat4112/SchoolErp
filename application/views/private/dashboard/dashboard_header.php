@@ -11,10 +11,10 @@
     </title>
 </head>
 <body>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse">
     <div class="container-fluid">
-        <div class="navbar-header"><a class="navbar-brand" href="<?= site_url('dashboard/') ?>">Dashboard</a>
-            <ul class="nav navbar-nav navbar-right" style="margin-left: 1105px;">
+        <div class="navbar-header"><a class="navbar-brand"  href="<?= site_url('dashboard/') ?>">Dashboard</a>
+            <ul class="nav navbar-nav navbar-right" style="margin-left: 1113px;">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         <?php

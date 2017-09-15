@@ -18,8 +18,11 @@ class Certificates extends MY_Controller
 
     public function index()
     {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ca9961efb1f6ef9926311f0061a984f2196ac6b2
         $this->load->view('private/certificates/header', ['username' => $this->get_admin()]);
         $this->load->view('private/certificates/cert_view');
     }
@@ -105,7 +108,11 @@ class Certificates extends MY_Controller
     public function entrance_test()
     {
         
+<<<<<<< HEAD
        
+=======
+
+>>>>>>> ca9961efb1f6ef9926311f0061a984f2196ac6b2
         $this->load->view('private/certificates/et_header', ['username' => $this->get_admin()]);
         $this->load->view('private/certificates/entrance_test');
     }
@@ -120,24 +127,33 @@ class Certificates extends MY_Controller
 
     public function school_leaving_cert()
     {
+<<<<<<< HEAD
 
         
+=======
+>>>>>>> ca9961efb1f6ef9926311f0061a984f2196ac6b2
         $this->load->view('private/certificates/slc_header', ['username' => $this->get_admin()]);
         $this->load->view('private/certificates/school_leaving_cert');
     }
 
     public function teacher_cert_l()
     {
+<<<<<<< HEAD
         
        
+=======
+>>>>>>> ca9961efb1f6ef9926311f0061a984f2196ac6b2
         $this->load->view('private/certificates/tcl_header', ['username' => $this->get_admin()]);
         $this->load->view('private/certificates/teacher_cert_l');
     }
 
     public function teacher_cert_p()
     {
+<<<<<<< HEAD
         
        
+=======
+>>>>>>> ca9961efb1f6ef9926311f0061a984f2196ac6b2
         $this->load->view('private/certificates/tcp_header', ['username' => $this->get_admin()]);
         $this->load->view('private/certificates/teacher_cert_p');
     }
