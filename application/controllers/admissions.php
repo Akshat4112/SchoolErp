@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Admissions extends MY_Controller
 {
 
-     public function __construct()
+     function __construct()
     {
         parent::__construct();
 
@@ -20,7 +20,7 @@ class Admissions extends MY_Controller
 
         $this->load->view('private/admissions/header_admission', ['username' => $this->get_admin()]);
         $this->load->view('private/admissions/footer_admission');
-//        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
 
     }
 
