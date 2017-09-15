@@ -34,16 +34,16 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3">
-            <?php echo form_submit(['name' => 'submit', 'value' => 'Search', 'class' => 'btn btn-primary',
+        <div class="col-lg-3" style="margin-left: -95px; margin-top: 3px;">
+            <?php echo form_submit(['name' => 'submit', 'value' => 'Search', 'class' => 'btn btn-primary btn-sm',
                 'style' => 'margin-top:0px;']); ?>
             <?php echo form_close();?>
         </div>
         <div class="col-lg-4">
         </div>
     </div>
-    <div class="row" style="margin-top:10px;">
-        <div class="col-lg-12" style="overflow-y:scroll; overflow-x:hidden; height: 400px; width:1200px;">
+    <div class="row" style="margin-top:15px;">
+        <div class="col-lg-8" style="overflow-y:scroll; overflow-x:hidden; height: 400px; width:900px;">
             <table class="table table-hover table-bordered">
                 <thead>
                 <tr class="text-default">
@@ -54,20 +54,10 @@
                     <th>Absent</th>
                     <th>Present</th>
                     <th>On leave</th>
-                    <th>Edit</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr class="">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
                 </tbody>
             </table>
         </div>
