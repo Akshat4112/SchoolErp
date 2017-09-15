@@ -61,8 +61,7 @@
                             'style' => 'margin-top:4px; margin-left:10px;']); ?>
                     </div>
                 </div>
-        </div>
-<<<<<<< HEAD
+        </div><?php echo form_close(); ?>
         <div class="col-lg-8">
             <table class="table table-hover table-bordered">
                 <thead>
@@ -78,8 +77,7 @@
                 </thead>
                 <tbody>
                 <?php if (count($data)): ?>
-
-                    <?php foreach ($data as $student_det): ?>
+             <?php foreach ($data as $student_det): ?>
                         <tr class="">
                             <td><?php echo $student_det['student_roll_no'] ?></td>
                             <td><?php echo $student_det['student_first_name'] ?></td>
@@ -100,50 +98,11 @@
                                 ?>
                             </td>
                             <td><?php echo ''; ?></td>
-=======
-        <div class="row" style="margin-top: 10px;">
-            <div class="col-lg-10">
-                <table class="table table-hover table-bordered">
-                    <thead>
-                    <tr class="text-default">
-                        <th>Roll No.</th>
-                        <th>Name</th>
-                        <th>Admission No.</th>
-                        <th>Present</th>
-                        <th>Absent</th>
-                        <th>Leave</th>
-                        <th>Remark</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <?php if (count($data)): ?>
-                        <?php foreach ($data as $student_det): ?>
-                            <tr class="">
-                                <td><?php echo $student_det['student_roll_no'] ?></td>
-                                <td><?php echo $student_det['student_first_name'].' '.$student_det['student_last_name'] ?></td>
-                                <td><?php echo $student_det['admission_no'] ?></td>
-                                <td>
-                                    <?php echo '<input type="checkbox" name="present"
-                                   value="" size="17" checked="checked" id="P">';
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php echo '<input type="checkbox" name="absent"
-                                   value="" size="17" id="A">';
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php echo '<input type="checkbox" name="remarks"
-                                   value="" size="17" id="R">';
-                                    ?>
-                                </td>
-                                <td><?php echo ''; ?></td>
-                            </tr>
+                        </tr>
                         <?php endforeach; ?>
                     <?php else: ?>
                         <tr class="">
                             <td>No Records Found</td>
->>>>>>> ca9961efb1f6ef9926311f0061a984f2196ac6b2
                         </tr>
                     <?php endif; ?>
                     </tbody>
@@ -151,4 +110,3 @@
             </div>
         </div>
     </div>
-<?php echo form_close(); ?>
