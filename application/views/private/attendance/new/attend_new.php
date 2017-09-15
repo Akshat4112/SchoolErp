@@ -52,14 +52,14 @@
                     <?php echo form_error('section'); ?>
                 </div>
             </div>
-            <?php echo form_submit(['name' => 'submit', 'value' => 'Ok', 'class' => 'btn btn-primary',
+            <?php echo form_submit(['name' => 'submit', 'value' => 'Search', 'class' => 'btn btn-primary btn-sm',
                 'style' => 'margin-left:80px; margin-top:5px;']); ?>
 
         </div>
         <div class="col-lg-8">
             <table class="table table-hover table-bordered">
                 <thead>
-                <tr class="text-primary">
+                <tr class="text-default">
                     <th>Roll No.</th>
                     <th>Name</th>
                     <th>Admission No.</th>
