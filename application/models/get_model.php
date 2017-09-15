@@ -27,8 +27,11 @@ class Get_model extends MY_Model
 
     public function get_class(){
         $query = $this->db->get('class');
-        $res = $query->result();
-        return $res;
+		//And this for all methods
+		if($query->num_rows() > 0) {
+			$res = $query->result();
+			return $res;
+		}
     }
 
     public function get_section_list(){
