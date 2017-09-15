@@ -1,6 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Class Admissions
+ */
 class Admissions extends MY_Controller
 {
 
@@ -317,11 +320,20 @@ class Admissions extends MY_Controller
             $this->load->view('private/admissions/id_card.php', ['class_drop' => $class_list, 'section_drop' => $section_list,
                 'table_view' => $table_view]);
         } else {
-
             $table_view = $this->gm->id_card_rec(-1,-1);
             $this->load->view('private/admissions/id_card.php', ['class_drop' => $class_list, 'section_drop' => $section_list,
                 'table_view' => $table_view]);
         }
+    }
+
+    /*
+     * for generating ID Cards in PDF format
+     * data is loading from function id_card which represents the
+     * information currently generated depending on input of User.
+     */
+
+    public function id_generate(){
+        $table_view = '';
     }
 
     public function download_pdf()
