@@ -24,12 +24,12 @@
         </div>
     </div>
     <div class="row" style="margin-top: 10px;">
-        <div class="col-lg-3">
+        <div class="col-lg-3" style="margin-right: -50px;">
             <div class="form-group">
                 <label for="inputText" class="col-lg-7 control-label text-default"
                        style="font-size: 15px; margin-top: 8px;">Admission No.</label>
                 <div class="col-lg-4">
-                    <input type="text" name="summary_on" class="form-control">
+                    <input type="text" name="summary_on" class="form-control" style="margin-right: -20px;">
                 </div>
                 <div class="col-lg-1"></div>
             </div>
