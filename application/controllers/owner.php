@@ -26,16 +26,21 @@ class Owner extends MY_Controller
 
     public function owner_login()
     {
-        $email = $this->input->POST('owneremail');
-        $password = $this->input->POST('password');
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('owneremail', 'owneremailn', 'trim|required');
+		$this->form_validation->set_rules('password', 'password', 'trim|required');
 
-        if ($email == 'akshat41121995@gmail.com' && $password == 'nicola11') {
-            $name = 'akshat';
+		if ($this->form_validation->run() == FALSE) {
+				die('ERROR!');
+		} else {	
+        if ($this->input->POST('owneremail') == 'akshat41121995@gmail.com' && $this->input->POST('password') == 'nicola11') {
+            //Why?
+			$name = 'akshat';
             $this->load->view('public/login_success');
-
         } else {
             redirect('owner/incinfo');
         }
+	  }
     }
 
     public function incinfo()
