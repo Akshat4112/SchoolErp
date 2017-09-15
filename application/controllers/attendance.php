@@ -47,7 +47,7 @@ class Attendance extends MY_Controller{
         {
             $post = $this->input->post();
             unset($post['submit']);
-            print_r($post);
+//            print_r($post);
 
             $get_data = $this->gm->attendance_search($post['class'],$post['section']);
 

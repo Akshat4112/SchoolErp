@@ -8,18 +8,18 @@
 ?>
 <div class="container">
     <div class="row">
-        <p style="font-size: 20px; margin-top:0px;" class="text-info">Attendance / New</p>
+        <p style="font-size: 20px; margin-top:0px;" class="text-default">Attendance / New</p>
         <div class="col-lg-4">
             <?php echo form_open('attendance/attend_new', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Date</label>
-                <div class="col-lg-10">
+                <div class="col-lg-7">
                     <input type="date" class="form-control" name="entry_date" >
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Class</label>
-                <div class="col-lg-10">
+                <div class="col-lg-5">
                     <?php
                     $drop = array();
                     foreach ($class_drop as $r) {
@@ -37,7 +37,7 @@
             </div>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Section</label>
-                <div class="col-lg-10">
+                <div class="col-lg-5">
                     <?php
                     $drop = array();
                     foreach ($section_drop as $r) {
@@ -52,16 +52,14 @@
                     <?php echo form_error('section'); ?>
                 </div>
             </div>
-            <?php echo form_submit(['name' => 'submit', 'value' => 'Ok', 'class' => 'btn btn-info',
-                'style' => 'margin-left:45px; margin-top:20px;']),
-            form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
-                'style' => 'margin-top:20px;']); ?>
+            <?php echo form_submit(['name' => 'submit', 'value' => 'Ok', 'class' => 'btn btn-primary',
+                'style' => 'margin-left:80px; margin-top:5px;']); ?>
 
         </div>
         <div class="col-lg-8">
             <table class="table table-hover table-bordered">
                 <thead>
-                <tr class="text-info">
+                <tr class="text-primary">
                     <th>Roll No.</th>
                     <th>Name</th>
                     <th>Admission No.</th>
