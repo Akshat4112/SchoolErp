@@ -65,16 +65,16 @@
     <?php echo form_close(); ?>
     <?php echo form_open('attendance/attend_new_insert', ['class' => 'form-horizontal']); ?>
     <div class="row">
-    <div class="col-lg-8" style="overflow-y:scroll; overflow-x:hidden; height: 350px; width:850px;">
+    <div class="col-lg-8" style="overflow-y:scroll; overflow-x:hidden; height: 350px; width:860px;">
         <table class="table table-hover table-bordered">
             <thead>
             <tr class="text-default">
                 <th>Class</th>
                 <th>Section</th>
-                <th>Student Id</th>
-                <th>Roll No.</th>
+                <th>Student_Id</th>
+                <th>Roll_No</th>
                 <th>Name</th>
-                <th>Admission No.</th>
+                <th>Admission_No.</th>
                 <th>Present</th>
                 <th>Absent</th>
                 <th>Leave</th>
