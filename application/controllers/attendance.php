@@ -63,4 +63,21 @@ class Attendance extends MY_Controller{
         }
 
     }
+    public function attend_new_insert()
+    {
+if($_POST)
+{
+    $field_array = array();
+    for( $i=0 ; $i < count($_POST['optradio']) ; $i++ )
+    {
+        $field_array[$i]['optradio']        = $_POST['optradio'][$i];
+        echo $field_array[$i]['optradio'];
+
+
+        // if you require then the query for your database
+    }
+    $array = json_decode($data);
+    print_r($array);
+}
+}
 }

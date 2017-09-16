@@ -62,10 +62,14 @@
                     </div>
                 </div>
         </div><?php echo form_close(); ?>
+         <?php echo form_open('attendance/attend_new_insert', ['class' => 'form-horizontal']);?>
         <div class="col-lg-8">
             <table class="table table-hover table-bordered">
                 <thead>
                 <tr class="text-info">
+                    <th>Class</th>
+                    <th>Section</th>
+                    <th>Student Id</th>
                     <th>Roll No.</th>
                     <th>Name</th>
                     <th>Admission No.</th>
@@ -76,25 +80,42 @@
                 </tr>
                 </thead>
                 <tbody>
+               
                 <?php if (count($data)): ?>
              <?php foreach ($data as $student_det): ?>
                         <tr class="">
-                            <td><?php echo $student_det['student_roll_no'] ?></td>
+                            <td><?php echo $student_det['student_class'];?></td>
+                            <?php $myArray = array();
+                            $myArray = $student_det['student_class'];?>
+                            <td><?php echo $student_det['student_section'];?></td>
+                            <td><?php echo $student_det['student_id'];?></td>
+                            <td><?php echo $student_det['student_roll_no'];?></td>
                             <td><?php echo $student_det['student_first_name'] ?></td>
                             <td><?php echo $student_det['admission_no'] ?></td>
+                            <?php $data = json_encode($myArray); ?>
+
+
                             <td>
-                                <?php $data = array('name'=>'optradio', 'id'=>'P','value'=>'', 'checked'=>'True');
-                                      echo form_radio($data);
+                                <?php $data = array('name'=>'optradio[]', 'id'=>'P','value'=>'Present', 'checked'=>'True');
+                                      echo form_checkbox($data);
                                 ?>
                             </td>
                             <td>
-                                <?php $data = array('name'=>'optradio', 'id'=>'A','value'=>'');
-                                      echo form_radio($data);
+                                <?php $data = array('name'=>'optradio[]', 'id'=>'A','value'=>'Absent');
+                                      echo form_checkbox($data);?>
+                                      <script>
+                                      if(document.getElementByID("P").checked)
+                                      {
+                                        alert("ajsj");
+                                        document.getElementByID('P').checked=false;
+                                      }
+                                        </script>
+                                        <?php
                                 ?>
                             </td>
                             <td>
-                                <?php $data = array('name'=>'optradio', 'id'=>'L','value'=>'');
-                                      echo form_radio($data);
+                                <?php $data = array('name'=>'optradio[]', 'id'=>'L','value'=>'');
+                                      echo form_checkbox($data);
                                 ?>
                             </td>
                             <td><?php echo ''; ?></td>
@@ -105,8 +126,12 @@
                             <td>No Records Found</td>
                         </tr>
                     <?php endif; ?>
+
                     </tbody>
                 </table>
             </div>
+                                <?php echo form_submit(['name' => 'insert', 'value' => 'Save', 'class' => 'btn btn-primary btn-sm',
+                            'style' => 'margin-top:4px; margin-left:10px;']); ?>
+                    <?php echo form_close();?>
         </div>
     </div>
