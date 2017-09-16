@@ -5,7 +5,11 @@ class Home extends MY_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->view('public/header_view');
+        $this->load->library('parser');
+        $data= array(
+            'title' => 'SchooLERP'
+        );
+        $this->parser->parse('public/header_view', $data);
         $this->load->helper('form');
         $this->load->library('form_validation');
         $this->load->helper('form');

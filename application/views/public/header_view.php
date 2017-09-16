@@ -5,7 +5,7 @@
 
     <script src="<?= base_url()?>public/assets/js/jquery.js"></script>
     <script src="<?= base_url()?>public/assets/js/bootstrap.js"></script>
-    <title>School ERP</title>
+    <title>{title}</title>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
