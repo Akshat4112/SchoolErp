@@ -1,11 +1,18 @@
+<!DOCTYPE>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"
+    <title>School ERP</title>
     <link rel="stylesheet" href="<?= base_url() ?>public/assets/css/bootswatch_paper.css" />
     <link rel="stylesheet" href="<?= base_url() ?>public/assets/css/style.css" />
+<<<<<<< HEAD
 
     <script src="<?= base_url()?>public/assets/js/jquery.js"></script>
     <script src="<?= base_url()?>public/assets/js/bootstrap.js"></script>
     <title>{title}</title>
+=======
+>>>>>>> 18859466258aa141550b06546fe8ff403a90da3c
 </head>
 <body>
 <nav class="navbar navbar-inverse">
