@@ -8,5 +8,9 @@
 </div>
 </div>
 </div>
+	<footer>
+	<script src="<?= base_url()?>public/assets/js/jquery.js"></script>
+	<script src="<?= base_url()?>public/assets/js/bootstrap.js"></script>
+	</footer>
 </body>
 </html>
