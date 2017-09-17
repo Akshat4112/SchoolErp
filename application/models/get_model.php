@@ -120,4 +120,15 @@ class Get_model extends MY_Model
         $res=$query->result_array();
         return $res;
     }
+    public function insert_datewise_attendance($data)
+    { 
+        $insert = array(
+                'date' => $data[4],
+                'class' => $data[2],
+                'section' =>$data[3],
+                'student_id' =>$data[1],
+                'status' =>$data[0],
+            );
+        $this->db->insert('attendance',$insert);
+    }
 }

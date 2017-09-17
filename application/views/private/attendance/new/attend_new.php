@@ -78,6 +78,7 @@
                 <th>Present</th>
                 <th>Absent</th>
                 <th>Leave</th>
+                <th>Date</th>
             </tr>
             </thead>
             <tbody>
@@ -95,13 +96,15 @@
                         <td><?php echo $student_det['student_first_name'] ?></td>
                         <td><?php echo $student_det['admission_no'] ?></td>
                         <td>
-                            <?php $data = array('name' => 'optradio[]', 'id' => 'P', 'value' => 'Present'.$student_det['student_id'],
-                                'checked' => 'True');
+                            <?php $data = array('name' => 'optradio[]', 'id' => 'P', 'value' => 'P '.$student_det['student_id'].' '.$student_det['student_class'].' '.$student_det['student_section'].
+                                ' '.$date,
+                                'checked' => 'True'); 
                             echo form_checkbox($data);
                             ?>
                         </td>
                         <td>
-                            <?php $data = array('name' => 'optradio[]', 'id' => 'A', 'value' => 'Absent');
+                            <?php $data = array('name' => 'optradio[]', 'id' => 'A', 'value' => 'A '.$student_det['student_id'].' '.$student_det['student_class'].' '.$student_det['student_section'].
+                                ' '.$date);
                             echo form_checkbox($data); ?>
 <!--                            <script>-->
 <!--                                if (document.getElementByID("P").checked) {-->
@@ -111,10 +114,11 @@
 <!--                            </script>-->
                         </td>
                         <td>
-                            <?php $data = array('name' => 'optradio[]', 'id' => 'L', 'value' => '');
+                            <?php $data = array('name' => 'optradio[]', 'id' => 'L', 'value' => 'L '.$student_det['student_id'].' '.$student_det['student_class'].' '.$student_det['student_section']);
                             echo form_checkbox($data);
                             ?>
                         </td>
+                        <td><?php echo $date; ?></td>
                     </tr>
                 <?php endforeach; ?>
             <?php else: ?>

@@ -63,14 +63,14 @@ class Attendance extends MY_Controller
             //print_r($post);
             $get_data = $this->gm->attendance_search($post['class'], $post['section']);
             $this->load->view('private/attendance/new/attend_new.php', ['section_drop' => $section_list,
-                'class_drop' => $class_list, 'data' => $get_data]);
+                'class_drop' => $class_list, 'data' => $get_data,'date' =>$post['entry_date']]);
         } else {
             $data = array();
             $this->load->view('private/attendance/new/attend_new.php', ['section_drop' => $section_list,
                 'class_drop' => $class_list, 'data' => $data]);
         }
     }
-
+    //for updating attendance datewise.
     public function attend_new_insert()
     {
         
@@ -78,11 +78,13 @@ class Attendance extends MY_Controller
             $field_array = array();
             for ($i = 0; $i < count($_POST['optradio']); $i++) {
                 $field_array[$i]['optradio'] = $_POST['optradio'][$i];
-                echo $field_array[$i]['optradio'].'<br>';
-                // if you require then the query for your database
+                $array = explode(" ",  $field_array[$i]['optradio']);
+                $this->load->model('get_model','gm');
+                $this->gm->insert_datewise_attendance($array);
             }
-//            $array = json_decode($data);
-//            print_r($array);
-        }
+            }
+       
     }
+
+
 }
