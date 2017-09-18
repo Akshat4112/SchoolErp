@@ -29,8 +29,18 @@ class Attendance extends MY_Controller
     public function attend_view()
     {
         $data = $this->input->post();
+        //unset($data['submit']);
+        //echo $data;
+        $this->load->model('get_model','gm');
+        $r = $this->gm->attendance_history($data['summary_on']);
+        print_r($r);
+        $r1 = $this->gm->attendance_history_present($data['summary_on']);
+        print_r($r1);
+        $r2 = $this->gm->attendance_history_absent($data['summary_on']);
+        print_r($r2);
 
-        $this->load->view('private/attendance/attend_view.php');
+
+        $this->load->view('private/attendance/attend_view.php',['data'=>$r,'datap'=>$r1,'dataa'=>$r2]);
     }
 
     public function summary()

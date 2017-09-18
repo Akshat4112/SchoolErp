@@ -57,6 +57,70 @@
                 </tr>
                 </thead>
                 <tbody>
+                <?php if (count($data)): ?>
+                    <?php $i=1;?>
+                    <?php
+// $it = new MultipleIterator();
+// $it->attachIterator(new ArrayIterator($data),'data');
+// $it->attachIterator(new ArrayIterator($datap),'datap');
+
+// foreach($it as $e) {
+//   echo $e['data']['count(status)'];
+// }
+    //                 while ((list($k1, $n) = each($data)) && (list($k2, $t) = each($datap))) {
+    // echo $n;
+    // echo $t;
+//                     $zipped = array_map(null, $data, $datap);
+
+// foreach($zipped as $tuple) {
+//     // here you could do list($n, $t) = $tuple; to get pretty variable names
+//     echo $tuple[0]['class']; // name
+//     //echo $tuple[1]['class']; // type
+// }
+                    $it = new MultipleIterator();
+$it->attachIterator(new ArrayIterator($data));
+$it->attachIterator(new ArrayIterator($datap));
+$it->attachIterator(new ArrayIterator($dataa));
+//Add more arrays if needed 
+
+foreach($it as $a) {
+    echo $a[0]['count(status)'] . "<br>";
+    echo $a[1]['count(status)'] . "<br>";
+    echo $a[2]['count(status)'] . "<br><br>";
+
+}
+
+?>
+               
+                    
+                        
+                    <tr class="">
+                        
+                        <!-- <td><?php echo $i;  ?></td> -->
+                         <?php foreach ($data as $student_det): ?>
+                        <td><?php echo $student_det['class']; ?></td>
+                        <?php endforeach; ?>
+                        
+<!--                         <td><?php echo $student_det['section']; ?></td>
+                        <td><?php echo $student_det['count(status)']; ?></td> -->
+                        <?php $i++; ?>
+                        
+<!--                         <?php foreach ($dataa as $student_det2): ?>
+
+                        <td><?php echo $student_det2['count(status)']; ?></td>
+                        <?php endforeach; ?>
+                        <?php foreach ($datap as $student_det1): ?>
+                        <td><?php echo $student_det1['count(status)']; ?></td> -->
+                        
+                        
+ <!--                    <?php endforeach; ?>-->
+                    </tr>
+                
+            <?php else: ?>
+                <tr class="">
+                    <td>No Records Found</td>
+                </tr>
+            <?php endif; ?>
                 </tbody>
             </table>
         </div>

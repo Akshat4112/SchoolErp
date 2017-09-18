@@ -65,7 +65,7 @@
     <?php echo form_close(); ?>
     <?php echo form_open('attendance/attend_new_insert', ['class' => 'form-horizontal']); ?>
     <div class="row">
-    <div class="col-lg-8" style="overflow-y:scroll; overflow-x:hidden; height: 350px; width:860px;">
+    <div class="col-lg-8" style="overflow-y:scroll; overflow-x:hidden; height: 350px; width:950px;">
         <table class="table table-hover table-bordered">
             <thead>
             <tr class="text-default">
@@ -85,11 +85,7 @@
             <?php if (count($data)): ?>
                 <?php foreach ($data as $student_det): ?>
                     <tr class="">
-                        <td>
-                            <?php echo $student_det['student_class']; ?>
-                        </td>
-                        <?php $myArray = array();
-                        $myArray = $student_det['student_class']; ?>
+                        <td><?php echo $student_det['student_class']; ?></td>
                         <td><?php echo $student_det['student_section']; ?></td>
                         <td><?php echo $student_det['student_id']; ?></td>
                         <td><?php echo $student_det['student_roll_no']; ?></td>
