@@ -160,7 +160,7 @@ class Get_model extends MY_Model
         $res = $query->result_array();
         return $res;
     }
-    
+
             public function attendance_history_absent($data)
     {
         $query = $this->db->select('count(status)')
@@ -169,6 +169,16 @@ class Get_model extends MY_Model
                             ->where('date',$data)
                             ->where('status',"A")
                             ->group_by(array("class","section"))
+                            ->get('attendance');
+        $res = $query->result_array();
+        return $res;
+    }
+
+    public function attendance_summary($si,$date)
+    {   
+        $query = $this->db->select('class')
+                            ->where('student_id',$si)
+                            ->where('date',$date)
                             ->get('attendance');
         $res = $query->result_array();
         return $res;

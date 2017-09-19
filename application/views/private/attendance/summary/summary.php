@@ -29,7 +29,7 @@
                 <label for="inputText" class="col-lg-7 control-label text-default"
                        style="font-size: 15px; margin-top: 8px;">Admission No.</label>
                 <div class="col-lg-4">
-                    <input type="text" name="summary_on" class="form-control" style="margin-right: -20px;">
+                    <input type="text" name="admission_no" class="form-control" style="margin-right: -20px;">
                 </div>
                 <div class="col-lg-1"></div>
             </div>
@@ -39,7 +39,7 @@
                 <label for="inputText" class="col-lg-2 control-label text-default"
                        style="font-size: 15px; margin-top: 8px;">From</label>
                 <div class="col-lg-10">
-                    <input type="date" name="summary_on" class="form-control" style="margin-left: 7px;">
+                    <input type="date" name="from" class="form-control" style="margin-left: 7px;">
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@
                 <label for="inputText" class="col-lg-1 control-label text-default"
                        style="font-size: 15px; margin-top: 8px;">To</label>
                 <div class="col-lg-10">
-                    <input type="date" name="summary_on" class="form-control">
+                    <input type="date" name="to" class="form-control">
                 </div>
             </div>
         </div>
