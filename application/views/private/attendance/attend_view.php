@@ -60,28 +60,12 @@
                 <?php if (count($data)): ?>
                     <?php $i=1;?>
                     <?php
-// $it = new MultipleIterator();
-// $it->attachIterator(new ArrayIterator($data),'data');
-// $it->attachIterator(new ArrayIterator($datap),'datap');
 
-// foreach($it as $e) {
-//   echo $e['data']['count(status)'];
-// }
-    //                 while ((list($k1, $n) = each($data)) && (list($k2, $t) = each($datap))) {
-    // echo $n;
-    // echo $t;
-//                     $zipped = array_map(null, $data, $datap);
-
-// foreach($zipped as $tuple) {
-//     // here you could do list($n, $t) = $tuple; to get pretty variable names
-//     echo $tuple[0]['class']; // name
-//     //echo $tuple[1]['class']; // type
-// }
-                    $it = new MultipleIterator();
+$it = new MultipleIterator();
 $it->attachIterator(new ArrayIterator($data));
 $it->attachIterator(new ArrayIterator($datap));
 $it->attachIterator(new ArrayIterator($dataa));
-//Add more arrays if needed 
+ 
 
 
 ?>
@@ -92,7 +76,7 @@ $it->attachIterator(new ArrayIterator($dataa));
                         
                         
                          <?php foreach ($it as $student_det): ?>
-                            <td><?php echo $i;  ?></td> 
+                        <td><?php echo $i;  ?></td> 
                         <td><?php echo $student_det[0]['class']; ?></td>
                         
                         
@@ -104,11 +88,11 @@ $it->attachIterator(new ArrayIterator($dataa));
                         <td><?php echo $student_det[2]['count(status)']; ?></td>
                         
                        </tr> 
-                     <?php endforeach; ?>
+                        <?php endforeach; ?>
                     
                 
             <?php else: ?>
-                <tr class="">
+                    <tr class="">
                     <td>No Records Found</td>
                 </tr>
             <?php endif; ?>
