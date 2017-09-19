@@ -95,13 +95,14 @@
                         <td><?php echo $student_det['student_first_name'] ?></td>
                         <td><?php echo $student_det['admission_no'] ?></td>
                         <td>
-                            <?php $data = array('name' => 'optradio[]', 'id' => 'P', 'value' => 'Present'.$student_det['student_id'],
+                            <?php $data = array('name' => 'optradio[]', 'id' => 'P', 'value' =>
+                                'P'.$student_det['student_id'],
                                 'checked' => 'True');
                             echo form_checkbox($data);
                             ?>
                         </td>
                         <td>
-                            <?php $data = array('name' => 'optradio[]', 'id' => 'A', 'value' => 'Absent');
+                            <?php $data = array('name' => 'optradio[]', 'id' => 'A', 'value' => 'A');
                             echo form_checkbox($data); ?>
 <!--                            <script>-->
 <!--                                if (document.getElementByID("P").checked) {-->
@@ -111,7 +112,7 @@
 <!--                            </script>-->
                         </td>
                         <td>
-                            <?php $data = array('name' => 'optradio[]', 'id' => 'L', 'value' => '');
+                            <?php $data = array('name' => 'optradio[]', 'id' => 'L', 'value' => 'L');
                             echo form_checkbox($data);
                             ?>
                         </td>
