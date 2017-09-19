@@ -71,6 +71,18 @@
                 </tr>
                 </thead>
                 <tbody>
+                <?php if (count($data)): ?>
+                <?php foreach ($data as $student_det): ?>
+                    <tr class="">
+                    <td><?php echo $student_det['class'];?></td>
+                    <td><?php echo $student_det['status'];?></td>
+                    </tr>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <tr class="">
+                    <td>No Records Found</td>
+                </tr>
+            <?php endif; ?>
 
                 </tbody>
             </table>

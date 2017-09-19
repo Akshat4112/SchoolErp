@@ -41,23 +41,27 @@ class Attendance extends MY_Controller
 
     public function summary()
     {
-        $this->load->view('private/attendance/summary/summary.php');
+        //$this->load->view('private/attendance/summary/summary.php');
         $data = $this->input->post();
         echo $data['admission_no'];
         $this->load->model('get_model','gm');
         echo $data['from'];
         echo $data['to'];
-         
+         $i=0;
         $c = $data["from"];
-        while($c != $data['to'])
+        while($c <= $data['to'])
 {
-$r = $this->gm->attendance_summary($data['admission_no'],$c);
+$r[$i] = $this->gm->attendance_summary($data['admission_no'],$c);
 $c = (new DateTime($c))->add(new DateInterval("P1D"))
                                  ->format('Y-m-d');
-print_r($r);
+print_r($r[$i]);
+$this->load->view('private/attendance/summary/summary.php',['data'=>$r[$i]]);
+
 }
-$r = $this->gm->attendance_summary($data['admission_no'],$c);
-print_r($r);
+//$r = $this->gm->attendance_summary($data['admission_no'],$c);
+//print_r($r);
+
+
 
     }
 

@@ -177,6 +177,7 @@ class Get_model extends MY_Model
     public function attendance_summary($si,$date)
     {   
         $query = $this->db->select('class')
+                            ->select('status')
                             ->where('student_id',$si)
                             ->where('date',$date)
                             ->get('attendance');
