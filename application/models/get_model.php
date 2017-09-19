@@ -120,4 +120,62 @@ class Get_model extends MY_Model
         $res=$query->result_array();
         return $res;
     }
+    public function insert_datewise_attendance($data)
+    { 
+        $insert = array(
+                'date' => $data[4],
+                'class' => $data[2],
+                'section' =>$data[3],
+                'student_id' =>$data[1],
+                'status' =>$data[0],
+            );
+        $this->db->insert('attendance',$insert);
+    }
+    public function attendance_history($data)
+    {
+        $query = $this->db->select('count(status)')
+                            ->select('class')
+                            ->select('section')
+                            //->select('status')
+                            ->where('date',$data)
+                            ->group_by(array("class","section"))
+                            //->having('date',$data)
+                            ->get('attendance');
+                            //->group_by("class");
+        $res = $query->result_array();
+        return $res;//[0]['count(status)'];
+         //return $query->num_rows();
+    }
+        public function attendance_history_present($data)
+    {
+        $query = $this->db->select('count(status)')
+                            ->select('class')
+                            ->select('section')
+                            //->select('status')
+                            ->where('date',$data)
+                            ->where('status',"P")
+                            ->group_by(array("class","section"))
+                            //->having('date',$data)
+                            ->get('attendance');
+                            //->group_by("class");
+        $res = $query->result_array();
+        return $res;//[0]['count(status)'];
+         //return $query->num_rows();
+    }
+            public function attendance_history_absent($data)
+    {
+        $query = $this->db->select('count(status)')
+                            ->select('class')
+                            ->select('section')
+                            //->select('status')
+                            ->where('date',$data)
+                            ->where('status',"A")
+                            ->group_by(array("class","section"))
+                            //->having('date',$data)
+                            ->get('attendance');
+                            //->group_by("class");
+        $res = $query->result_array();
+        return $res;//[0]['count(status)'];
+         //return $query->num_rows();
+    }
 }

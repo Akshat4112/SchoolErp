@@ -25,8 +25,18 @@ class Attendance extends MY_Controller
     public function attend_view()
     {
         $data = $this->input->post();
+        //unset($data['submit']);
+        //echo $data;
+        $this->load->model('get_model','gm');
+        $r = $this->gm->attendance_history($data['summary_on']);
+        print_r($r);
+        $r1 = $this->gm->attendance_history_present($data['summary_on']);
+        print_r($r1);
+        $r2 = $this->gm->attendance_history_absent($data['summary_on']);
+        print_r($r2);
 
-        $this->load->view('private/attendance/attend_view.php');
+
+        $this->load->view('private/attendance/attend_view.php',['data'=>$r,'datap'=>$r1,'dataa'=>$r2]);
     }
 
     public function summary()
@@ -54,14 +64,14 @@ class Attendance extends MY_Controller
             unset($post['submit']);
             $get_data = $this->gm->attendance_search($post['class'], $post['section']);
             $this->load->view('private/attendance/new/attend_new.php', ['section_drop' => $section_list,
-                'class_drop' => $class_list, 'data' => $get_data]);
+                'class_drop' => $class_list, 'data' => $get_data,'date' =>$post['entry_date']]);
         } else {
             $data = array();
             $this->load->view('private/attendance/new/attend_new.php', ['section_drop' => $section_list,
                 'class_drop' => $class_list, 'data' => $data]);
         }
     }
-
+    //for updating attendance datewise.
     public function attend_new_insert()
     {
         if ($_POST) {
@@ -70,9 +80,11 @@ class Attendance extends MY_Controller
                 $field_array[$i]['optradio'] = $_POST['optradio'][$i];
                 //echo $field_array[$i]['optradio'].'<br>';
                 // if you require then the query for your database
+
+                $array = explode(" ",  $field_array[$i]['optradio']);
+                $this->load->model('get_model','gm');
+                $this->gm->insert_datewise_attendance($array);
             }
-//            $array = json_decode($data);
-//            print_r($array);
         }
     }
 }

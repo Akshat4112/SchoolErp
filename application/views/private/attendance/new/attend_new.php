@@ -65,7 +65,7 @@
     <?php echo form_close(); ?>
     <?php echo form_open('attendance/attend_new_insert', ['class' => 'form-horizontal']); ?>
     <div class="row">
-    <div class="col-lg-8" style="overflow-y:scroll; overflow-x:hidden; height: 350px; width:860px;">
+    <div class="col-lg-8" style="overflow-y:scroll; overflow-x:hidden; height: 350px; width:950px;">
         <table class="table table-hover table-bordered">
             <thead>
             <tr class="text-default">
@@ -78,31 +78,39 @@
                 <th>Present</th>
                 <th>Absent</th>
                 <th>Leave</th>
+                <th>Date</th>
             </tr>
             </thead>
             <tbody>
             <?php if (count($data)): ?>
                 <?php foreach ($data as $student_det): ?>
                     <tr class="">
-                        <td>
-                            <?php echo $student_det['student_class']; ?>
-                        </td>
-                        <?php $myArray = array();
-                        $myArray = $student_det['student_class']; ?>
+                        <td><?php echo $student_det['student_class']; ?></td>
                         <td><?php echo $student_det['student_section']; ?></td>
                         <td><?php echo $student_det['student_id']; ?></td>
                         <td><?php echo $student_det['student_roll_no']; ?></td>
                         <td><?php echo $student_det['student_first_name'] ?></td>
                         <td><?php echo $student_det['admission_no'] ?></td>
                         <td>
+<<<<<<< HEAD
                             <?php $data = array('name' => 'optradio[]', 'id' => 'P', 'value' =>
                                 'P'.$student_det['student_id'],
                                 'checked' => 'True');
+=======
+                            <?php $data = array('name' => 'optradio[]', 'id' => 'P', 'value' => 'P '.$student_det['student_id'].' '.$student_det['student_class'].' '.$student_det['student_section'].
+                                ' '.$date,
+                                'checked' => 'True'); 
+>>>>>>> ffc7ad55c217c0f9e7eba1b071ce5b564fc5859b
                             echo form_checkbox($data);
                             ?>
                         </td>
                         <td>
+<<<<<<< HEAD
                             <?php $data = array('name' => 'optradio[]', 'id' => 'A', 'value' => 'A');
+=======
+                            <?php $data = array('name' => 'optradio[]', 'id' => 'A', 'value' => 'A '.$student_det['student_id'].' '.$student_det['student_class'].' '.$student_det['student_section'].
+                                ' '.$date);
+>>>>>>> ffc7ad55c217c0f9e7eba1b071ce5b564fc5859b
                             echo form_checkbox($data); ?>
 <!--                            <script>-->
 <!--                                if (document.getElementByID("P").checked) {-->
@@ -112,10 +120,15 @@
 <!--                            </script>-->
                         </td>
                         <td>
+<<<<<<< HEAD
                             <?php $data = array('name' => 'optradio[]', 'id' => 'L', 'value' => 'L');
+=======
+                            <?php $data = array('name' => 'optradio[]', 'id' => 'L', 'value' => 'L '.$student_det['student_id'].' '.$student_det['student_class'].' '.$student_det['student_section']);
+>>>>>>> ffc7ad55c217c0f9e7eba1b071ce5b564fc5859b
                             echo form_checkbox($data);
                             ?>
                         </td>
+                        <td><?php echo $date; ?></td>
                     </tr>
                 <?php endforeach; ?>
             <?php else: ?>

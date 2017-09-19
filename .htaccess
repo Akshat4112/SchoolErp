@@ -5,8 +5,8 @@
  #then, the "RewriteBase /" will be like this "RewriteBase /mysite" 
  #same as at line number 10, "RewriteRule ^(.*)$ /codeIgniter213/index.php #/$1 [L]" will be like this "RewriteRule ^(.*)$ /mysite/index.php/$1 [L]"
 
- RewriteBase /SchoolERP
+ RewriteBase /schoolerp
  RewriteCond %{REQUEST_FILENAME} !-f
  RewriteCond %{REQUEST_FILENAME} !-d
- RewriteRule ^(.*)$ /SchoolERP/index.php/$1 [L]
+ RewriteRule ^(.*)$ /schoolerp/index.php/$1 [L]
 </IfModule>
