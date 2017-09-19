@@ -92,25 +92,25 @@
                         <td><?php echo $student_det['student_first_name'] ?></td>
                         <td><?php echo $student_det['admission_no'] ?></td>
                         <td>
-<<<<<<< HEAD
+
                             <?php $data = array('name' => 'optradio[]', 'id' => 'P', 'value' =>
                                 'P'.$student_det['student_id'],
-                                'checked' => 'True');
-=======
+                                'checked' => 'True');?>
+
                             <?php $data = array('name' => 'optradio[]', 'id' => 'P', 'value' => 'P '.$student_det['student_id'].' '.$student_det['student_class'].' '.$student_det['student_section'].
                                 ' '.$date,
                                 'checked' => 'True'); 
->>>>>>> ffc7ad55c217c0f9e7eba1b071ce5b564fc5859b
+
                             echo form_checkbox($data);
                             ?>
                         </td>
                         <td>
-<<<<<<< HEAD
-                            <?php $data = array('name' => 'optradio[]', 'id' => 'A', 'value' => 'A');
-=======
+
+                            <?php $data = array('name' => 'optradio[]', 'id' => 'A', 'value' => 'A');?>
+
                             <?php $data = array('name' => 'optradio[]', 'id' => 'A', 'value' => 'A '.$student_det['student_id'].' '.$student_det['student_class'].' '.$student_det['student_section'].
                                 ' '.$date);
->>>>>>> ffc7ad55c217c0f9e7eba1b071ce5b564fc5859b
+
                             echo form_checkbox($data); ?>
 <!--                            <script>-->
 <!--                                if (document.getElementByID("P").checked) {-->
@@ -120,11 +120,11 @@
 <!--                            </script>-->
                         </td>
                         <td>
-<<<<<<< HEAD
-                            <?php $data = array('name' => 'optradio[]', 'id' => 'L', 'value' => 'L');
-=======
+
+                            <?php $data = array('name' => 'optradio[]', 'id' => 'L', 'value' => 'L');?>
+
                             <?php $data = array('name' => 'optradio[]', 'id' => 'L', 'value' => 'L '.$student_det['student_id'].' '.$student_det['student_class'].' '.$student_det['student_section']);
->>>>>>> ffc7ad55c217c0f9e7eba1b071ce5b564fc5859b
+
                             echo form_checkbox($data);
                             ?>
                         </td>
