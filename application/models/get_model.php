@@ -168,6 +168,7 @@ class Get_model extends MY_Model
                             ->select('class')
                             ->select('section')
                             //->select('status')
+                            //->join('attendance', 'status="A"', 'left outer')
                             ->where('date',$data)
                             ->where('status',"A")
                             ->group_by(array("class","section"))

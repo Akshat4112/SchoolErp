@@ -83,12 +83,6 @@ $it->attachIterator(new ArrayIterator($datap));
 $it->attachIterator(new ArrayIterator($dataa));
 //Add more arrays if needed 
 
-foreach($it as $a) {
-    echo $a[0]['count(status)'] . "<br>";
-    echo $a[1]['count(status)'] . "<br>";
-    echo $a[2]['count(status)'] . "<br><br>";
-
-}
 
 ?>
                
@@ -96,25 +90,22 @@ foreach($it as $a) {
                         
                     <tr class="">
                         
-                        <!-- <td><?php echo $i;  ?></td> -->
-                         <?php foreach ($data as $student_det): ?>
-                        <td><?php echo $student_det['class']; ?></td>
-                        <?php endforeach; ?>
                         
-<!--                         <td><?php echo $student_det['section']; ?></td>
-                        <td><?php echo $student_det['count(status)']; ?></td> -->
+                         <?php foreach ($it as $student_det): ?>
+                            <td><?php echo $i;  ?></td> 
+                        <td><?php echo $student_det[0]['class']; ?></td>
+                        
+                        
+                        <td><?php echo $student_det[0]['section']; ?></td>
+                        <td><?php echo $student_det[0]['count(status)']; ?></td> 
                         <?php $i++; ?>
-                        
-<!--                         <?php foreach ($dataa as $student_det2): ?>
 
-                        <td><?php echo $student_det2['count(status)']; ?></td>
-                        <?php endforeach; ?>
-                        <?php foreach ($datap as $student_det1): ?>
-                        <td><?php echo $student_det1['count(status)']; ?></td> -->
+                        <td><?php echo $student_det[1]['count(status)']; ?></td>
+                        <td><?php echo $student_det[2]['count(status)']; ?></td>
                         
-                        
- <!--                    <?php endforeach; ?>-->
-                    </tr>
+                       </tr> 
+                     <?php endforeach; ?>
+                    
                 
             <?php else: ?>
                 <tr class="">

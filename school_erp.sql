@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.6.5.2
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 28, 2017 at 09:13 PM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 7.0.9
+-- Generation Time: Sep 19, 2017 at 04:45 PM
+-- Server version: 10.1.21-MariaDB
+-- PHP Version: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -107,11 +107,55 @@ INSERT INTO `admin` (`admin_id`, `admin_email`, `admin_password`, `admin_name`) 
 --
 
 CREATE TABLE `attendance` (
-  `attendance_id` int(11) NOT NULL,
   `date` date NOT NULL,
   `class` varchar(5) NOT NULL,
-  `section` varchar(3) NOT NULL
+  `section` varchar(3) NOT NULL,
+  `student_id` int(11) NOT NULL,
+  `status` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `attendance`
+--
+
+INSERT INTO `attendance` (`date`, `class`, `section`, `student_id`, `status`) VALUES
+('0000-00-00', 'Prese', '293', 0, '2'),
+('2017-09-20', '2', 'A', 293, '0'),
+('2017-09-20', '2', 'A', 293, 'P'),
+('2017-09-26', '2', 'A', 284, 'P'),
+('2017-09-26', '2', 'A', 286, 'P'),
+('2017-09-26', '2', 'A', 289, 'P'),
+('2017-09-26', '2', 'A', 290, 'P'),
+('2017-09-26', '2', 'A', 291, 'P'),
+('2017-09-26', '2', 'A', 293, 'P'),
+('2017-09-26', '2', 'A', 284, 'P'),
+('2017-09-26', '2', 'A', 286, 'P'),
+('2017-09-26', '2', 'A', 289, 'P'),
+('2017-09-26', '2', 'A', 290, 'P'),
+('2017-09-26', '2', 'A', 291, 'P'),
+('2017-09-26', '2', 'A', 293, 'P'),
+('2017-09-27', '2', 'A', 284, 'P'),
+('2017-09-27', '2', 'A', 286, 'P'),
+('2017-09-27', '2', 'A', 289, 'P'),
+('2017-09-27', '2', 'A', 290, 'P'),
+('2017-09-27', '2', 'A', 291, 'P'),
+('2017-09-27', '2', 'A', 293, 'P'),
+('2017-09-26', '3', 'A', 111, 'A'),
+('2017-09-26', '3', 'A', 112, 'P'),
+('2017-09-26', '3', 'A', 113, 'P'),
+('0000-00-00', '2', 'A', 284, 'P'),
+('0000-00-00', '2', 'A', 286, 'P'),
+('0000-00-00', '2', 'A', 289, 'P'),
+('0000-00-00', '2', 'A', 290, 'P'),
+('0000-00-00', '2', 'A', 291, 'P'),
+('0000-00-00', '2', 'A', 293, 'P'),
+('2017-09-19', '2', 'A', 284, 'P'),
+('2017-09-19', '2', 'A', 286, 'P'),
+('2017-09-19', '2', 'A', 289, 'P'),
+('2017-09-19', '2', 'A', 290, 'P'),
+('2017-09-19', '2', 'A', 291, 'P'),
+('2017-09-19', '2', 'A', 293, 'P'),
+('2017-09-26', '2', 'A', 334, 'A');
 
 -- --------------------------------------------------------
 
@@ -399,7 +443,10 @@ INSERT INTO `fees_reciept` (`reciept_id`, `date`, `reciept_no`, `admission_no`, 
 (18, '0000-00-00', 7, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (19, '0000-00-00', 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (20, '0000-00-00', 7, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(21, '0000-00-00', 7, 5, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0);
+(21, '0000-00-00', 7, 5, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0),
+(22, '0000-00-00', 7, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(23, '0000-00-00', 7, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(24, '0000-00-00', 7, 8, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -752,12 +799,6 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`admin_id`);
 
 --
--- Indexes for table `attendance`
---
-ALTER TABLE `attendance`
-  ADD PRIMARY KEY (`attendance_id`);
-
---
 -- Indexes for table `bill_sundry`
 --
 ALTER TABLE `bill_sundry`
@@ -939,11 +980,6 @@ ALTER TABLE `account_group`
 ALTER TABLE `admin`
   MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT for table `attendance`
---
-ALTER TABLE `attendance`
-  MODIFY `attendance_id` int(11) NOT NULL AUTO_INCREMENT;
---
 -- AUTO_INCREMENT for table `bill_sundry`
 --
 ALTER TABLE `bill_sundry`
@@ -1012,7 +1048,7 @@ ALTER TABLE `fees_plan_category`
 -- AUTO_INCREMENT for table `fees_reciept`
 --
 ALTER TABLE `fees_reciept`
-  MODIFY `reciept_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `reciept_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `gatepass`
 --
