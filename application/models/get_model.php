@@ -131,6 +131,7 @@ class Get_model extends MY_Model
             );
         $this->db->insert('attendance',$insert);
     }
+
     public function attendance_history($data)
     {
         $query = $this->db->select('count(status)')
@@ -146,37 +147,30 @@ class Get_model extends MY_Model
         return $res;//[0]['count(status)'];
          //return $query->num_rows();
     }
+
         public function attendance_history_present($data)
     {
         $query = $this->db->select('count(status)')
                             ->select('class')
                             ->select('section')
-                            //->select('status')
                             ->where('date',$data)
                             ->where('status',"P")
                             ->group_by(array("class","section"))
-                            //->having('date',$data)
                             ->get('attendance');
-                            //->group_by("class");
         $res = $query->result_array();
-        return $res;//[0]['count(status)'];
-         //return $query->num_rows();
+        return $res;
     }
+    
             public function attendance_history_absent($data)
     {
         $query = $this->db->select('count(status)')
                             ->select('class')
                             ->select('section')
-                            //->select('status')
-                            //->join('attendance', 'status="A"', 'left outer')
                             ->where('date',$data)
                             ->where('status',"A")
                             ->group_by(array("class","section"))
-                            //->having('date',$data)
                             ->get('attendance');
-                            //->group_by("class");
         $res = $query->result_array();
-        return $res;//[0]['count(status)'];
-         //return $query->num_rows();
+        return $res;
     }
 }
