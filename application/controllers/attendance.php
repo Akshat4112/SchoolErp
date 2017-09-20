@@ -63,7 +63,7 @@ $i++;
 print("\n");
 print_r($r);  
 $this->load->view('private/attendance/summary/summary.php',['data'=>$r,'i'=>$i]); 
-echo $r[12][0]['class'];
+
 }
 
 //$r = $this->gm->attendance_summary($data['admission_no'],$c);

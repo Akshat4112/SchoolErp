@@ -64,10 +64,10 @@
                 <thead>
                 <tr class="text-default">
                     <th>Entry Date</th>
-                    <th>Present</th>
-                    <th>Absent</th>
+                    <th>Status</th>
+<!--                     <th>Absent</th>
                     <th>Leave</th>
-                    <th>Remarks</th>
+                    <th>Remarks</th> -->
                 </tr>
                 </thead>
                 <tbody>
@@ -76,8 +76,8 @@
                 <?php for($k=0;$k<$i;$k++){ ?>
                     <tr class="">
                     <?php if(!empty($data[$k])) {?>
+                    <td><?php echo $data[$k][0]['date'];?></td>
                     <td><?php echo $data[$k][0]['status'];?></td>
-                    <td><?php echo $data[$k][0]['class'];?></td>
                     <?php } ?>
                     </tr>
                 <?php } ?>
