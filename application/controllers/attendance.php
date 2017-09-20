@@ -104,6 +104,7 @@ class Attendance extends MY_Controller
                 $array = explode(" ", $field_array[$i]['optradio']);
                 $this->load->model('get_model', 'gm');
                 $this->gm->insert_datewise_attendance($array);
+                redirect('attendance/attend_new');
             }
         }
     }
