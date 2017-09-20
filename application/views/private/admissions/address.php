@@ -31,7 +31,6 @@ declare(strict_types=1);
                             <?php echo form_input(['name' => 'house_no', 'class' => 'form-control',
                                 'placeholder' => 'Enter House No.',
                                 'value' => set_value('house_no')]); ?>
-
                         </div>
                     </div>
                     <div class="form-group">

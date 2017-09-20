@@ -27,9 +27,11 @@
         <div class="col-lg-3" style="margin-right: -50px;">
             <div class="form-group">
                 <label for="inputText" class="col-lg-7 control-label text-default"
-                       style="font-size: 15px; margin-top: 8px;">Admission No.</label>
+                       style="font-size: 15px; margin-top: 8px;">Student ID</label>
                 <div class="col-lg-4">
-                    <input type="text" name="admission_no" class="form-control" style="margin-right: -20px;">
+                    <?php echo form_input(['name' => 'admission_no', 'class' => 'form-control',
+                        'placeholder' => '',
+                        'value' => set_value('admission_no')]); ?>
                 </div>
                 <div class="col-lg-1"></div>
             </div>

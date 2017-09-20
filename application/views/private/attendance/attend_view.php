@@ -30,6 +30,15 @@
                 <label for="inputText" class="col-lg-2 control-label text-default"
                        style="font-size: 17px; margin-top: 8px;"><b>Date</b></label>
                 <div class="col-lg-7">
+<!--                    --><?php
+//                    $data = array(
+//                        'type'  => 'date',
+//                        'name'  => 'summary_on',
+//                        'value' => set_value('summary_on')
+//                    );
+//
+//                    echo form_input($data);
+//                    ?>
                     <input type="date" name="summary_on" class="form-control">
                 </div>
             </div>
@@ -60,38 +69,23 @@
                 <?php if (count($data)): ?>
                     <?php $i=1;?>
                     <?php
-
-$it = new MultipleIterator();
+                    $it = new MultipleIterator();
 $it->attachIterator(new ArrayIterator($data));
 $it->attachIterator(new ArrayIterator($datap));
 $it->attachIterator(new ArrayIterator($dataa));
- 
-
-
-?>
-               
-                    
-                        
+                    ?>
                     <tr class="">
-                        
-                        
-                         <?php foreach ($it as $student_det): ?>
+                    <?php foreach ($it as $student_det): ?>
                         <td><?php echo $i;  ?></td> 
                         <td><?php echo $student_det[0]['class']; ?></td>
-                        
-                        
                         <td><?php echo $student_det[0]['section']; ?></td>
                         <td><?php echo $student_det[0]['count(status)']; ?></td> 
                         <?php $i++; ?>
-
                         <td><?php echo $student_det[1]['count(status)']; ?></td>
                         <td><?php echo $student_det[2]['count(status)']; ?></td>
-                        
-                       </tr> 
+                        </tr>
                         <?php endforeach; ?>
-                    
-                
-            <?php else: ?>
+                <?php else: ?>
                     <tr class="">
                     <td>No Records Found</td>
                 </tr>

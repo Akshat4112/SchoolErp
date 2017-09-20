@@ -6,6 +6,31 @@
  * Time: 12:30 AM
  */
 $config=[
+    'summary_iknow'=>[
+        [
+            'field'=>'admission_no',
+            'label'=>'Admission No',
+            'rules'=>'required'
+        ],
+        [
+            'field'=>'from',
+            'label'=>'From',
+            'rules'=>'required'
+        ],
+        [
+            'field'=>'to',
+            'label'=>'To',
+            'rules'=>'required'
+        ]
+    ],
+
+    'summary'=>[
+        [
+            'field'=>'summary_on',
+            'label'=>'Summary',
+            'rules'=>'required'
+        ]
+    ],
     'id_card'=>[
         [
             'field'=>'class',
