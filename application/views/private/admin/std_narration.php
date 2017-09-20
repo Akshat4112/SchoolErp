@@ -7,7 +7,7 @@
  */?>
 <div class="container">
     <div class="row">
-        <p class="text-info" style="font-size: 20px;">Standard Narration</p>
+        <p class="" style="font-size: 20px;">Standard Narration</p>
         <div class="col-lg-6">
 
         </div>

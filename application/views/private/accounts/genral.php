@@ -14,7 +14,7 @@
  */?>
 <div class="container">
     <div class="row">
-        <p style="font-size: 20px; margin-top:0px;" class="text-info">General</p>
+        <p style="font-size: 20px; margin-top:0px;" class="">General</p>
         <div class="col-lg-4">
             <?php echo form_open('accounts/payments', ['class' => 'form-horizontal']); ?>
             <div class="form-group">

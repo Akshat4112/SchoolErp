@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-6">
-            <p style="font-size: 20px;" class="text-info">Fees Plan</p>
+            <p style="font-size: 20px;" class="">Fees Plan</p>
             <?php echo form_open('fees/fees_plan', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
                 <label for="inputText" class="col-lg-3 control-label">Fees Heading</label>
@@ -39,7 +39,7 @@
 
             <div class="col-lg-6">
                 <?php
-                echo '<p class="text-info" style="font-size: 17px;">Category</p>'.'<br>';
+                echo '<p class="" style="font-size: 17px;">Category</p>'.'<br>';
                 $drop=array();
                 foreach($category as $r){
                     $drop[$r['category_name']]=$r['category_name'];
@@ -58,7 +58,7 @@
             </div>
             <div class="col-lg-6">
                 <?php
-                echo '<p class="text-info" style="font-size: 17px;">Class</p>'.'<br>';
+                echo '<p class="" style="font-size: 17px;">Class</p>'.'<br>';
                 $drop=array();
                 foreach($class as $r){
                     $drop[$r['class']]=$r['class'];

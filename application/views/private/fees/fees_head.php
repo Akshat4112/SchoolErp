@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
     <div class="col-lg-6">
-        <p style="font-size: 20px" class="text-info">Create Fees Heading</p>
+        <p style="font-size: 20px" class="">Create Fees Heading</p>
         <?php echo form_open('fees/fees_head', ['class' => 'form-horizontal']); ?>
         <div class="form-group">
             <label for="inputText" class="col-lg-3 control-label">Fees Heading</label>

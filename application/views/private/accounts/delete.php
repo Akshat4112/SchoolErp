@@ -7,7 +7,7 @@
  */?>
 <div class="container">
     <div class="row">
-        <p class="text-info" style="font-size: 20px;">Delete</p>
+        <p class="" style="font-size: 20px;">Delete</p>
         <div class="col-lg-6">
             <?php echo form_open('accounts/account_del', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
@@ -33,7 +33,7 @@
         <div class="col-lg-6">
             <table class="table table-hover table-bordered ">
                 <thead>
-                <tr class="text-info">
+                <tr class="">
                     <th>Accounts</th>
                 </tr>
                 </thead>

@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-3">
-            <h5 class="text-info">Admin Dashboard</h5>
+            <h5 class="">Admin Dashboard</h5>
 
 
         </div>

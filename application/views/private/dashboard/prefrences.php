@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <p class="text-info" style="font-size: 20px;">Prefrences</p>
+        <p class="" style="font-size: 20px;">Prefrences</p>
         <div class="col-lg-6"></div>
         <div class="col-lg-6"></div>
     </div>

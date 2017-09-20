@@ -42,7 +42,7 @@
     <div class="col-lg-10" style="overflow-y:scroll; overflow-x:hidden; height: 400px; width:1200px;">
         <table class="table  table-hover table-bordered " id="userTbl">
             <thead>
-            <tr class="text-info">
+            <tr class="">
                 <th>Account Name</th>
                 <th>Group</th>
                 <th>Address</th>

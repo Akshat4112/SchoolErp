@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-5">
-            <p style="font-size: 20px;" class="text-info">Fees Day Book</p>
+            <p style="font-size: 20px;" class="">Fees Day Book</p>
         </div>
         <div class="col-lg-6">
             <div class="dropdown">
@@ -56,7 +56,7 @@
         <div class="col-lg-12">
             <table class="table table-hover table-bordered">
                 <thead>
-                <tr class="text-info">
+                <tr class="">
                     <th>Date</th>
                     <th>Receipt No.</th>
                     <th>Name</th>

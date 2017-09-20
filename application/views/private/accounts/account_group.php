@@ -7,7 +7,7 @@
  */?>
 <div class="container">
     <div class="row">
-        <p style="font-size: 20px; margin-top:0px;" class="text-info">Enter Account Group to be Added</p>
+        <p style="font-size: 20px; margin-top:0px;" class="">Enter Account Group to be Added</p>
         <div class="col-lg-4">
             <?php echo form_open('accounts/account_group', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
@@ -25,7 +25,7 @@
                 'style' => 'margin-top:20px;']); ?>
             <?php echo form_close();?>
 
-            <p style="font-size: 20px; margin-top: 40px;" class="text-info">Enter Account Group to be deletd</p>
+            <p style="font-size: 20px; margin-top: 40px;" class="">Enter Account Group to be deletd</p>
 
             <?php echo form_open('accounts/account_group_del', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
@@ -51,7 +51,7 @@
         <div class="col-lg-4">
             <table class="table table-hover table-bordered">
                 <thead>
-                <tr class="text-info">
+                <tr class="">
                     <th>Account Group</th>
                 </tr>
                 </thead>

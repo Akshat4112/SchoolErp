@@ -8,14 +8,14 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
-            <p class="text-info" style="font-size: 20px;">Book Ledger</p>
+            <p class="" style="font-size: 20px;">Book Ledger</p>
         </div>
     </div>
     <div class="row">
     <div class="col-lg-12">
         <table class="table table-hover table-bordered">
             <thead>
-            <tr class="text-info">
+            <tr class="">
                 <th>S No.</th>
                 <th>Author</th>
                 <th>Title</th>

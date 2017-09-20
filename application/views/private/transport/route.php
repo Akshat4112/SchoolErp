@@ -9,7 +9,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-6">
-            <p style="font-size: 20px" class="text-info">Create Route Master</p>
+            <p style="font-size: 20px" class="">Create Route Master</p>
             <?php echo form_open('transport/route', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Route Name</label>

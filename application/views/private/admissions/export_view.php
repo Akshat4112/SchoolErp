@@ -23,7 +23,7 @@
     <div class="col-lg-12" style="overflow-y:scroll; overflow-x:hidden; height: 400px; width:1200px;">
         <table class="table table-hover table-bordered">
             <thead>
-            <tr class="text-info">
+            <tr class="">
                 <th>Admission No.</th>
                 <th>Name</th>
                 <th>Father</th>

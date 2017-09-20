@@ -9,7 +9,7 @@
 
 ?>
 <div class="container">
-    <p class="text-info" style="font-size: 20px;">School Leaving Certificate / New</p>
+    <p class="" style="font-size: 20px;">School Leaving Certificate / New</p>
     <div class="row">
         <div class="col-lg-2">
             School Code: 871238

@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
-            <p class="text-info" style="font-size: 20px;">Enquiry / New</p>
+            <p class="" style="font-size: 20px;">Enquiry / New</p>
         </div>
     </div>
     <div class="row">

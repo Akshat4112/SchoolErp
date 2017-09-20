@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-5">
-            <p style="font-size: 20px;" class="text-info">Admission Form</p>
+            <p style="font-size: 20px;" class="">Admission Form</p>
             <?php echo form_open('admissions/admission_form', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
                 <label for="inputText" class="col-lg-5 control-label">Enter Admission No.</label>

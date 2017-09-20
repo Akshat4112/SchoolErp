@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-5">
-            <p class="text-info" style="font-size: 20px">Defaulter List</p>
+            <p class="" style="font-size: 20px">Defaulter List</p>
         </div>
         <div class="col-lg-6">
             <div class="dropdown">
@@ -24,12 +24,12 @@
     </div>
     <div class="row">
         <div class="col-lg-2 text-success" id="" style="overflow-y:scroll; overflow-x:hidden; height: 100px; width:150px;">
-            <b class="text-info">Class</b><br>
+            <b class="">Class</b><br>
             1(A)-2<br>
             1(B)-2<br>
         </div>
         <div class="col-lg-2 text-success" id="" style="overflow-y:scroll; overflow-x:hidden; height: 100px; width:150px;">
-            <b class="text-info">Months</b><br>
+            <b class="">Months</b><br>
             January<br>
             February<br>
             March<br>
@@ -58,7 +58,7 @@
         <div class="col-lg-12">
             <table class="table  table-hover table-bordered">
                 <thead>
-                <tr class="text-info">
+                <tr class="">
                     <th>ID</th>
                     <th>Month</th>
                     <th>Admission No.</th>

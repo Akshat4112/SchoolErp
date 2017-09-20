@@ -7,7 +7,7 @@
  */?>
 <div class="container">
     <div class="row">
-        <p style="font-size: 20px; margin-top:0px;" class="text-info">Bill Sundry /  New</p>
+        <p style="font-size: 20px; margin-top:0px;" class="">Bill Sundry /  New</p>
         <div class="col-lg-4">
             <?php echo form_open('admin/masters_class', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
@@ -38,7 +38,7 @@
                 'style' => 'margin-top:20px;']); ?>
             <?php echo form_close();?>
 
-            <p style="font-size: 20px; margin-top: 40px;" class="text-info">Bill Sundry / Delete</p>
+            <p style="font-size: 20px; margin-top: 40px;" class="">Bill Sundry / Delete</p>
             <?php echo form_open('admin/masters_class_del', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
                 <label for="inputText" class="col-lg-3 control-label">Bill Sundary</label>

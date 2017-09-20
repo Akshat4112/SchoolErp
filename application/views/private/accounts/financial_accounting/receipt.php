@@ -7,7 +7,7 @@
  */?>
 <div class="container">
     <div class="row">
-        <p style="font-size: 20px; margin-top:0px;" class="text-info">Receipt</p>
+        <p style="font-size: 20px; margin-top:0px;" class="">Receipt</p>
         <div class="col-lg-4">
             <?php echo form_open('accounts/payments', ['class' => 'form-horizontal']); ?>
             <div class="form-group">

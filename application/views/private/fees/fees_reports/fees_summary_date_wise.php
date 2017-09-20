@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-5">
-            <p class="text-info" style="font-size: 20px;">Fees Summary Date Wise</p>
+            <p class="" style="font-size: 20px;">Fees Summary Date Wise</p>
         </div>
         <div class="col-lg-6">
             <div class="dropdown">
@@ -58,7 +58,7 @@
         <div class="col-lg-12">
             <table class="table  table-hover table-bordered">
                 <thead>
-                <tr class="text-info">
+                <tr class="">
                     <th>Entry Date</th>
                     <th>Old Balance</th>
                     <th>FH1</th>

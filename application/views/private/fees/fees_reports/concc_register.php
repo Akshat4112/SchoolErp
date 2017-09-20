@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-5">
-            <p class="text-info" style="font-size: 20px;">Concession Register</p>
+            <p class="" style="font-size: 20px;">Concession Register</p>
         </div>
         <div class="col-lg-6">
             <div class="dropdown">
@@ -57,7 +57,7 @@
         <div class="col-lg-12">
             <table class="table  table-hover table-bordered">
                 <thead>
-                <tr class="text-info">
+                <tr class="">
                     <th>Date</th>
                     <th>Rec. No.</th>
                     <th>Regn No.</th>

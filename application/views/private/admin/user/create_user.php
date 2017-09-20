@@ -7,7 +7,7 @@
  */?>
 <div class="container">
     <div class="row">
-        <p style="font-size: 20px; margin-top:0px;" class="text-info">Create User</p>
+        <p style="font-size: 20px; margin-top:0px;" class="">Create User</p>
         <div class="col-lg-4">
             <?php echo form_open('admin/create_user', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
@@ -46,7 +46,7 @@
                 'style' => 'margin-top:20px;']); ?>
             <?php echo form_close();?>
 
-            <p style="font-size: 20px; margin-top: 40px;" class="text-info">Enter Username to be deletd</p>
+            <p style="font-size: 20px; margin-top: 40px;" class="">Enter Username to be deletd</p>
             <?php echo form_open('admin/user_del', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Username</label>

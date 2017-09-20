@@ -46,7 +46,7 @@
     <div class="col-lg-10">
         <table class="table  table-hover table-bordered">
             <thead>
-            <tr class="text-info">
+            <tr class="">
                 <th>Account Name</th>
                 <th>Group</th>
                 <th>Address</th>

@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-4">
-            <p style="font-size: 20px;" class="text-info">Fees Receipt</p>
+            <p style="font-size: 20px;" class="">Fees Receipt</p>
             <?php echo form_open('fees/fees_receipt', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
                 <label for="inputText" class="col-lg-3 control-label">Date</label>

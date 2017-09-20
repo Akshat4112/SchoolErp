@@ -8,14 +8,14 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
-            <p class="text-info" style="font-size: 20px;">Pending Books</p>
+            <p class="" style="font-size: 20px;">Pending Books</p>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-12">
             <table class="table table-hover table-bordered">
                 <thead>
-                <tr class="text-info">
+                <tr class="">
                     <th>Book ID</th>
                     <th>Acc. No.</th>
                     <th>Title</th>

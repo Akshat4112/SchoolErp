@@ -7,11 +7,11 @@
  */?>
 <div class="container">
     <div class="row">
-        <p class="text-info" style="font-size: 20px;">School Leaving Certificate</p>
+        <p class="" style="font-size: 20px;">School Leaving Certificate</p>
         <div class="col-lg-12">
             <table class="table table-hover table-bordered">
                 <thead>
-                <tr class="text-info">
+                <tr class="">
                     <th>Sr No.</th>
                     <th>Adm. No.</th>
                     <th>Name</th>

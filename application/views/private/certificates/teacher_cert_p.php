@@ -7,7 +7,7 @@
  */?>
 <div class="container">
     <div class="row">
-        <p class="text-info" style="font-size: 20px;">Teacher Certificate Present</p>
+        <p class="" style="font-size: 20px;">Teacher Certificate Present</p>
         <div class="col-lg-6">
 
         </div>

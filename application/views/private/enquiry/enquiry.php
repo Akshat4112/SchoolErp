@@ -35,7 +35,7 @@
     <div class="col-lg-10">
         <table class="table table-hover table-bordered">
             <thead>
-            <tr class="text-info">
+            <tr class="">
                 <th>Enquiry No.</th>
                 <th>Name</th>
                 <th>Father</th>

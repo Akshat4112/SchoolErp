@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-6">
-            <p style="font-size: 20px;" class="text-info">HR</p>
+            <p style="font-size: 20px;" class="">HR</p>
         </div>
         <div class="col-lg-6"></div>
     </div>

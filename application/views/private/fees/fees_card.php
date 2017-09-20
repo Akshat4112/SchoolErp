@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-4">
-            <p style="font-size: 20px;" class="text-info">Fees Card</p>
+            <p style="font-size: 20px;" class="">Fees Card</p>
             <?php echo form_open('admin/masters_section', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
                 <label for="inputText" class="col-lg-4 control-label">Admission No.</label>
@@ -66,7 +66,7 @@
 </div>
 <div class="row">
     <div class="col-lg-4">
-        <p style="font-size: 15px;" class="text-info">
+        <p style="font-size: 15px;" class="">
             Name:
             <br>
             Father:

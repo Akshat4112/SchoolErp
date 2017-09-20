@@ -7,7 +7,7 @@
  */?>
 <div class="container">
     <div class="row">
-        <p style="font-size: 20px; margin-top:0px;" class="text-info">Enter Category to be Added</p>
+        <p style="font-size: 20px; margin-top:0px;" class="">Enter Category to be Added</p>
         <div class="col-lg-4">
             <?php echo form_open('admin/masters_category', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
@@ -25,7 +25,7 @@
                 'style' => 'margin-top:20px;']); ?>
             <?php echo form_close();?>
 
-            <p style="font-size: 20px; margin-top: 40px;" class="text-info">Enter Category to be deletd</p>
+            <p style="font-size: 20px; margin-top: 40px;" class="">Enter Category to be deletd</p>
             <?php echo form_open('admin/masters_category_del', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Section</label>
@@ -42,7 +42,7 @@
         <div class="col-lg-4" style="overflow-y:scroll; overflow-x:hidden; height: 300px; width:390px;">
             <table class="table table-hover table-bordered">
                 <thead>
-                <tr class="text-info">
+                <tr class="">
                     <th>Category</th>
                 </tr>
                 </thead>

@@ -8,14 +8,14 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
-            <p class="text-info" style="font-size: 20px;">Book Receive Register</p>
+            <p class="" style="font-size: 20px;">Book Receive Register</p>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-12">
             <table class="table table-hover table-bordered">
                 <thead>
-                <tr class="text-info">
+                <tr class="">
                     <th>Voucher ID</th>
                     <th>Date</th>
                     <th>S No.</th>

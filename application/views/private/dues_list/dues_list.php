@@ -10,7 +10,7 @@
 <div class="container">
     <div class="row">
     <div class="col-lg-6">
-        <p class="text-info" style="font-size: 20px;">Dues List</p>
+        <p class="" style="font-size: 20px;">Dues List</p>
         <?php echo form_open('dues_list/dues_lis', ['class' => 'form-horizontal']); ?>
         <div class="form-group">
             <label for="select" class="col-lg-2 control-label">Class</label>

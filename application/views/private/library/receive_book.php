@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
-            <p class="text-info" style="font-size: 20px;">Receive Book</p>
+            <p class="" style="font-size: 20px;">Receive Book</p>
         </div>
     </div>
     <div class="row">
@@ -68,48 +68,48 @@
     </div>
     <div class="row">
         <div class="col-lg-12">
-            <p class="text-info" style="font-size: 20px;"><b>Student Details</b></p>
+            <p class="" style="font-size: 20px;"><b>Student Details</b></p>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-3">
-            <p class="text-info" style="font-size: 17px;"><b>Name</b></p>
+            <p class="" style="font-size: 17px;"><b>Name</b></p>
         </div>
         <div class="col-lg-3">
-            <p class="text-info" style="font-size: 17px;"><b>Class</b></p>
+            <p class="" style="font-size: 17px;"><b>Class</b></p>
         </div>
         <div class="col-lg-3">
-            <p class="text-info" style="font-size: 17px;"><b>Father name</b></p>
+            <p class="" style="font-size: 17px;"><b>Father name</b></p>
         </div>
         <div class="col-lg-3">
-            <p class="text-info" style="font-size: 17px;"><b>Roll No.</b></p>
+            <p class="" style="font-size: 17px;"><b>Roll No.</b></p>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-3">
-            <p class="text-info" style="font-size: 17px;"><b>Contact No.</b></p>
+            <p class="" style="font-size: 17px;"><b>Contact No.</b></p>
         </div>
         <div class="col-lg-3">
-            <p class="text-info" style="font-size: 17px;"><b>Remarks</b></p>
+            <p class="" style="font-size: 17px;"><b>Remarks</b></p>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-12">
-            <p class="text-info" style="font-size: 20px;"><b>Book Details</b></p>
+            <p class="" style="font-size: 20px;"><b>Book Details</b></p>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-3">
-            <p class="text-info" style="font-size: 17px;"><b>Title</b></p>
+            <p class="" style="font-size: 17px;"><b>Title</b></p>
         </div>
         <div class="col-lg-3">
-            <p class="text-info" style="font-size: 17px;"><b>Author</b></p>
+            <p class="" style="font-size: 17px;"><b>Author</b></p>
         </div>
         <div class="col-lg-3">
-            <p class="text-info" style="font-size: 17px;"><b>Subject</b></p>
+            <p class="" style="font-size: 17px;"><b>Subject</b></p>
         </div>
         <div class="col-lg-3">
-            <p class="text-info" style="font-size: 17px;"><b>Publisher</b></p>
+            <p class="" style="font-size: 17px;"><b>Publisher</b></p>
         </div>
     </div>
 </div>

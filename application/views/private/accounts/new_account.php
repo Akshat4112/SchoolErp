@@ -7,7 +7,7 @@
  */?>
 <div class="container">
     <div class="row">
-        <p class="text-info" style="font-size: 20px;">Create New Account</p>
+        <p class="" style="font-size: 20px;">Create New Account</p>
         <div class="col-lg-5">
             <?php echo form_open('accounts/new_account', ['class' => 'form-horizontal']); ?>
             <div class="form-group">

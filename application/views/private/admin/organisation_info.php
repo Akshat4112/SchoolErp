@@ -7,9 +7,9 @@
  */ ?>
 <div class="container">
     <div class="row">
-        <!-- p class="text-info" style="font-size: 20px;">Organisation Information</p -->
+        <!-- p class="" style="font-size: 20px;">Organisation Information</p -->
         <div class="col-lg-6">
-            <p class="text-info" style="font-size: 20px;">Basic Details</p>
+            <p class="" style="font-size: 20px;">Basic Details</p>
             <?php echo form_open('admin/org_info', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Name of Organisation</label>
@@ -111,7 +111,7 @@
                     ?>
                 </div>
             </div>
-            <p class="text-info" style="font-size: 20px;">Registration Details</p>
+            <p class="" style="font-size: 20px;">Registration Details</p>
         </div>
         <div class="col-lg-6">
 
@@ -136,7 +136,7 @@
                 <br><br>
             </div>
 
-            <p class="text-info" style="font-size: 20px;">Affiliation Details</p>
+            <p class="" style="font-size: 20px;">Affiliation Details</p>
             <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Affiliation</label>
                 <div class="col-lg-10">
@@ -167,7 +167,7 @@
                 </div>
                 <br><br>
             </div>
-            <p class="text-info" style="font-size: 20px;">Session Information</p>
+            <p class="" style="font-size: 20px;">Session Information</p>
             <div class="form-group">
                 <label for="inputText" class="col-lg-4 control-label">Session Starts from</label>
                 <div class="col-lg-8">

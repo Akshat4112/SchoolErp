@@ -360,7 +360,7 @@ class Admissions extends MY_Controller
     <div class="col-lg-12" id="" style="overflow-y:scroll; overflow-x:hidden; height: 400px; width:1200px;">
         <table class="table table-hover table-bordered" id="userTbl">
             <thead>
-            <tr class="text-info">
+            <tr class="">
                 <th>Sno.</th>
                 <th>Admission No.</th>
                 <th>House</th>
