@@ -25,8 +25,6 @@ class Attendance extends MY_Controller
     public function attend_view()
     {
         $data = $this->input->post();
-        //unset($data['submit']);
-        //echo $data;
         $this->load->model('get_model','gm');
         $r = $this->gm->attendance_history($data['summary_on']);
         print_r($r);
@@ -39,9 +37,9 @@ class Attendance extends MY_Controller
         $this->load->view('private/attendance/attend_view.php',['data'=>$r,'datap'=>$r1,'dataa'=>$r2]);
     }
 
-    public function summary()
+public function summary()
     {
-        //$this->load->view('private/attendance/summary/summary.php');
+        
         $data = $this->input->post();
         echo $data['admission_no'];
         $this->load->model('get_model','gm');
@@ -50,29 +48,18 @@ class Attendance extends MY_Controller
          $i=0;
         $c = $data["from"];
         while($c <= $data['to'])
-{
-$r[$i] = $this->gm->attendance_summary($data['admission_no'],$c);
-$c = (new DateTime($c))->add(new DateInterval("P1D"))
+                {
+                $r[$i] = $this->gm->attendance_summary($data['admission_no'],$c);
+                $c = (new DateTime($c))->add(new DateInterval("P1D"))
                                  ->format('Y-m-d');
-//print_r($r);
-$i++;
 
-
-
-}
+                $i++;
+                }
 print("\n");
 print_r($r);  
 $this->load->view('private/attendance/summary/summary.php',['data'=>$r,'i'=>$i]); 
 
 }
-
-//$r = $this->gm->attendance_summary($data['admission_no'],$c);
-//print_r($r);
-
-
-
-
-    
 
     public function prints()
     {
@@ -108,9 +95,6 @@ $this->load->view('private/attendance/summary/summary.php',['data'=>$r,'i'=>$i])
             $field_array = array();
             for ($i = 0; $i < count($_POST['optradio']); $i++) {
                 $field_array[$i]['optradio'] = $_POST['optradio'][$i];
-                //echo $field_array[$i]['optradio'].'<br>';
-                // if you require then the query for your database
-
                 $array = explode(" ",  $field_array[$i]['optradio']);
                 $this->load->model('get_model','gm');
                 $this->gm->insert_datewise_attendance($array);
