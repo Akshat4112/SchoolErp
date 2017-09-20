@@ -72,12 +72,15 @@
                 </thead>
                 <tbody>
                 <?php if (count($data)): ?>
-                <?php foreach ($data as $student_det): ?>
+
+                <?php for($k=0;$k<$i;$k++){ ?>
                     <tr class="">
-                    <td><?php echo $student_det['class'];?></td>
-                    <td><?php echo $student_det['status'];?></td>
+                    <?php if(!empty($data[$k])) {?>
+                    <td><?php echo $data[$k][0]['status'];?></td>
+                    <td><?php echo $data[$k][0]['class'];?></td>
+                    <?php } ?>
                     </tr>
-                <?php endforeach; ?>
+                <?php } ?>
             <?php else: ?>
                 <tr class="">
                     <td>No Records Found</td>

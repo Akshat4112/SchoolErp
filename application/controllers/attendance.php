@@ -54,16 +54,25 @@ class Attendance extends MY_Controller
 $r[$i] = $this->gm->attendance_summary($data['admission_no'],$c);
 $c = (new DateTime($c))->add(new DateInterval("P1D"))
                                  ->format('Y-m-d');
-print_r($r[$i]);
-$this->load->view('private/attendance/summary/summary.php',['data'=>$r[$i]]);
+//print_r($r);
+$i++;
+
+
 
 }
+print("\n");
+print_r($r);  
+$this->load->view('private/attendance/summary/summary.php',['data'=>$r,'i'=>$i]); 
+echo $r[12][0]['class'];
+}
+
 //$r = $this->gm->attendance_summary($data['admission_no'],$c);
 //print_r($r);
 
 
 
-    }
+
+    
 
     public function prints()
     {
