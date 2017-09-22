@@ -1,21 +1,22 @@
-###################
-What is SchoolERP
-###################
+## What is SchoolERP ?
 School ERP automates the process of student management right from filling the admission form to the time of pass out. It manages exams, results, time table, fees, transportation of students as well it manages inventory, attendance of teachers, substitute lectures and connecting teachers with parents through SMS.
 
-*******************
-Release Information
-*******************
+## Installation 
+Installing SchoolERP is a very easy process.
+1. Download the latest zip from above and extract to your web-root/ subfolder   
+or clone from https://github.com/akshat4112/SchoolERP 
+2. Create a database for your SchoolERP with name school_erp.
+3. Access your SchoolERP by accessing proper url like http://localhost/SchoolERP.
 
-This repo contains in-development code for future releases.It is based on full MVC CI framework in PHP.
+## Requirements
+1. PHP 5.3 +
+2. Mysql 5.0 +
+3. PDO Extension in PHP
+4. Web Browser FF17.0+, IE8+, Opera, Chrome .... TODO testing
 
-*******************
-Server Requirements
-*******************
+## Credits 
+Odoo based Openeducat
 
-PHP version 5.6 or newer is recommended.
-
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
-
+## Copyright
+1. Copyright (C) 2017. All rights reserved.
+2. xEpan CMS is distributed under MIT License for personal, private and open-source projects.
