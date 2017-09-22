@@ -28,33 +28,60 @@ or clone from https://github.com/akshat4112/SchoolERP
 :thumbsup: Registration
 
 :thumbsup: Document Management
-4. Admission
-5. Fee Management
-6. Cheque Management
-7. ECS Management
-8. Concession Management
-9. Examination
-10. Dynamic CCE Handling
-11. XII Board Marks Import & Analysis
-12. Library
-13. Reserve Book Facility
-14. Purchase Management
-15. Store & Inventory
-16. Transport
-17. Payroll Management
-18. Accounting
-19. Class Teacher
-20. Dynamic SMS Integration
-21. Activity Module
-22. Security
-23. Front Office
-24. Time Table
-25. Infirmary
-26. Hostel Management
-27. Mess Management
-28. Cloud Parent Login
-29. Cloud Teacher Login
-30. Cloud Admin Login
+
+:thumbsup: Admission
+
+:thumbsup: Fee Management
+
+:thumbsup: Cheque Management
+
+:thumbsup: ECS Management
+
+:thumbsup: Concession Management
+
+:thumbsup: Examination
+
+:thumbsup: Dynamic CCE Handling
+
+:thumbsup: XII Board Marks Import & Analysis
+
+:thumbsup: Library
+
+:thumbsup: Reserve Book Facility
+
+:thumbsup: Purchase Management
+
+:thumbsup: Store & Inventory
+
+:thumbsup: Transport
+
+:thumbsup: Payroll Management
+
+:thumbsup: Accounting
+
+:thumbsup: Class Teacher
+
+:thumbsup: Dynamic SMS Integration
+
+:thumbsup: Activity Module
+
+:thumbsup: Security
+
+:thumbsup: Front Office
+
+:thumbsup: Time Table
+
+:thumbsup: Infirmary
+
+:thumbsup: Hostel Management
+
+:thumbsup: Mess Management
+
+:thumbsup: Cloud Parent Login
+
+:thumbsup: Cloud Teacher Login
+
+:thumbsup: Cloud Admin Login
 
 ## Credits 
 
