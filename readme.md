@@ -54,5 +54,6 @@ or clone from https://github.com/akshat4112/SchoolERP
 30. Online Admin Login
 
 ## Credits 
-Akshat Gupta (Author)
-Ridhima Garg (Author)
+Akshat Gupta (Author) @github/akshat4112
+
+Ridhima Garg (Author) @github/ri-dhimagarg1
