@@ -1,4 +1,4 @@
-## What is SchoolERP ?
+### SchoolERP
 
 School ERP automates the process of student management right from filling the admission form to the time of pass out. It manages exams, results, time table, fees, transportation of students as well it manages inventory, attendance of teachers, substitute lectures and connecting teachers with parents through SMS.
 
