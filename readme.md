@@ -57,3 +57,8 @@ or clone from https://github.com/akshat4112/SchoolERP
 Akshat Gupta (Author) @github/akshat4112
 
 Ridhima Garg (Author) @github/ri-dhimagarg1
+
+## Resources
+* Documentation
+* Community
+* Bug Tracker
