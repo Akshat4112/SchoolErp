@@ -15,8 +15,4 @@ or clone from https://github.com/akshat4112/SchoolERP
 4. Web Browser FF17.0+, IE8+, Opera, Chrome .... TODO testing
 
 ## Credits 
-Odoo based Openeducat
-
-## Copyright
-1. Copyright (C) 2017. All rights reserved.
-2. xEpan CMS is distributed under MIT License for personal, private and open-source projects.
+Akshat Gupta (Author)
