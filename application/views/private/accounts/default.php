@@ -5,12 +5,6 @@
  * Date: 7/28/2017
  * Time: 2:30 AM
  */?>
-
-
-
-
-
-
 <div class="row">
     <div class="col-lg-1">
     </div>
@@ -135,7 +129,6 @@
                         <td><?php echo $acc_det->email ?></td>
                         <td><?php echo $acc_det->contact_per ?></td>
                         <td><?php echo $acc_det->birthday_on ?></td>
-
                     </tr>
                 <?php endforeach; ?>
             <?php else: ?>
