@@ -55,9 +55,9 @@ or clone from https://github.com/akshat4112/SchoolERP
 
 ## Credits 
 
-[Akshat Gupta](https://www.github.com/akshat4112).
+:blush: [Akshat Gupta](https://www.github.com/akshat4112).
 
-[Ridhima Garg](https://www.github.com/ri-dhimagarg1).
+:blush: [Ridhima Garg](https://www.github.com/ri-dhimagarg1).
 
 ## Resources
 * Documentation
