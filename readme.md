@@ -54,9 +54,9 @@ or clone from https://github.com/akshat4112/SchoolERP
 30. Cloud Admin Login
 
 ## Credits 
-Akshat Gupta (Author) [www.github.com/akshat4112]
+[Akshat Gupta (Author)] (https://www.github.com/akshat4112)
 
-Ridhima Garg (Author) [www.github.com/ri-dhimagarg1]
+[Ridhima Garg (Author)] (https://www.github.com/ri-dhimagarg1)
 
 ## Resources
 * Documentation
