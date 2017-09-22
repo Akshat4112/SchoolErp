@@ -1,6 +1,11 @@
 # SchoolERP
 
-School ERP automates the process of student management right from filling the admission form to the time of pass out. It manages exams, results, time table, fees, transportation of students as well it manages inventory, attendance of teachers, substitute lectures and connecting teachers with parents through SMS.
+SchoolERP provides a suite of software covering all parts of a schools' administration, managing registration and admissions, from behaviour and achievement [As part of CCE in Examination module], managing Library, Fee, Accounts, Front - Office, Inventory, Time Table, Infirmary, Hostel & Mess, HR & Payroll and Transport .
+
+Complete application is created in such a manner that at almost all possible places, you may play with records in your style, you may create master records as per your need.
+
+Application is ready to be integrated with any third party device, viz. Biometric Attendance Machine, Barcode Scanner etc.
+
 
 ## Installation 
 Installing SchoolERP is a very easy process.
