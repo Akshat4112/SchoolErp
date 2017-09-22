@@ -49,9 +49,9 @@ or clone from https://github.com/akshat4112/SchoolERP
 25. Infirmary
 26. Hostel Management
 27. Mess Management
-28. Online Parent Login
-29. Online Teacher Login
-30. Online Admin Login
+28. Cloud Parent Login
+29. Cloud Teacher Login
+30. Cloud Admin Login
 
 ## Credits 
 Akshat Gupta (Author) [www.github.com/akshat4112]
