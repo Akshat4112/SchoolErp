@@ -22,65 +22,36 @@ or clone from https://github.com/akshat4112/SchoolERP
 
 ## Modules
 
-Registration
-
-Registration with Test
-
-Document Management
-
-Admission
-
-Fee Management
-
-Cheque Management
-
-ECS Management
-
-Concession Management
-
-Examination
-
-Dynamic CCE Handling
-
-XII Board Marks Import & Analysis
-
-Library
-
-Reserve Book Facility
-
-Purchase Management
-
-Store & Inventory
-
-Transport
-
-Payroll Management
-
-Accounting
-
-Class Teacher
-
-Dynamic SMS Integration
-
-Activity Module
-
-Security
-
-Front Office
-
-Time Table
-
-Infirmary
-
-Hostel Management
-
-Mess Management
-
-Online Parent Login
-
-Online Teacher Login
-
-Online Admin Login
+1. Registration
+2. Registration with Test
+3. Document Management
+4. Admission
+5. Fee Management
+6. Cheque Management
+7. ECS Management
+8. Concession Management
+9. Examination
+10. Dynamic CCE Handling
+11. XII Board Marks Import & Analysis
+12. Library
+13. Reserve Book Facility
+14. Purchase Management
+15. Store & Inventory
+16. Transport
+17. Payroll Management
+18. Accounting
+19. Class Teacher
+20. Dynamic SMS Integration
+21. Activity Module
+22. Security
+23. Front Office
+24. Time Table
+25. Infirmary
+26. Hostel Management
+27. Mess Management
+28. Online Parent Login
+29. Online Teacher Login
+30. Online Admin Login
 
 ## Credits 
 Akshat Gupta (Author)
