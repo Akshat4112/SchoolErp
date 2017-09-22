@@ -231,16 +231,20 @@ class Accounts extends MY_Controller{
         $this->load->view('private/accounts/final_accounts/balance_sheet');
     }
     public function contra(){
-        $this->load->view('private/accounts/financial_accounting/contra');
+        $account = $this->dropdown_db('account_name','account');
+        $this->load->view('private/accounts/financial_accounting/contra',['account'=>$account]);
     }
     public function credit_note(){
-        $this->load->view('private/accounts/financial_accounting/credit_note');
+        $account = $this->dropdown_db('account_name','account');
+        $this->load->view('private/accounts/financial_accounting/credit_note',['account'=>$account]);
     }
     public function debit_note(){
-        $this->load->view('private/accounts/financial_accounting/debit_note');
+        $account = $this->dropdown_db('account_name','account');
+        $this->load->view('private/accounts/financial_accounting/debit_note',['account'=>$account]);
     }
     public function journal(){
-        $this->load->view('private/accounts/financial_accounting/journal');
+        $account = $this->dropdown_db('account_name','account');
+        $this->load->view('private/accounts/financial_accounting/journal',['account'=>$account]);
     }
     public function outstanding_balance(){
         $this->load->view('private/accounts/final_accounts/outstanding_balance');
@@ -251,7 +255,8 @@ class Accounts extends MY_Controller{
         $this->load->view('private/accounts/final_accounts/profit_loss');
     }
     public function receipt(){
-        $this->load->view('private/accounts/financial_accounting/receipt');
+        $account = $this->dropdown_db('account_name','account');
+        $this->load->view('private/accounts/financial_accounting/receipt',['account'=>$account]);
     }
     public function trading_accounts(){
         $this->load->view('private/accounts/final_accounts/trading_account');
@@ -307,7 +312,8 @@ class Accounts extends MY_Controller{
         $this->load->view('private/accounts/financial_accounting/quick_payment');
     }
     public function quick_receipt(){
-        $this->load->view('private/accounts/financial_accounting/quick_receipt');
+        $account = $this->dropdown_db('account_name','account');
+        $this->load->view('private/accounts/financial_accounting/quick_receipt',['account'=>$account]);
     }
     public function bank_entry(){
         $this->load->view('private/accounts/financial_accounting/bank_entry');

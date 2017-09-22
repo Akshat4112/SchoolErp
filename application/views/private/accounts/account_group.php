@@ -19,10 +19,8 @@
                     ?>
                 </div>
             </div>
-            <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-info',
-                'style' => 'margin-left:45px; margin-top:20px;']),
-            form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
-                'style' => 'margin-top:20px;']); ?>
+            <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-primary btn-sm',
+                'style' => 'margin-left:85px; margin-top:0px;']); ?>
             <?php echo form_close();?>
 
             <p style="font-size: 20px; margin-top: 40px;" class="">Enter Account Group to be deletd</p>
@@ -41,10 +39,10 @@
                         'class' => 'form-control',
                         'id' => 'select',
                     ];
-                    echo form_dropdown('account_group_delete', $drop, '1', $attribute_class);
+                    echo form_dropdown('account_group_delete', $drop, set_value('account_group_delete'), $attribute_class);
                     ?>
                 </div>
-                <input type="submit" name="del_account_group" class="btn btn-danger" value="DELETE" style="margin-left: 50px; margin-top: 20px;">
+                <input type="submit" name="del_account_group" class="btn btn-danger btn-sm" value="DELETE" style="margin-left: 85px; margin-top: 20px;">
                 <?php  form_close(); ?>
             </div>
         </div>
