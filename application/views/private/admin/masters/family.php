@@ -12,8 +12,8 @@
         <div class="col-lg-4">
             <?php echo form_open('admin/masters_family', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">Family</label>
-                <div class="col-lg-10">
+                <label for="inputText" class="col-lg-3 control-label">Family</label>
+                <div class="col-lg-7">
                     <?php echo form_input(['name' => 'family_name', 'class' => 'form-control',
                         'placeholder' => 'Enter Family',
                         'value' => set_value('family_name')]);
@@ -21,28 +21,27 @@
                     <?php echo form_error('family_name'); ?>
                 </div>
             </div>
-            <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-info',
-                'style' => 'margin-left:45px; margin-top:20px;']),
-            form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
-                'style' => 'margin-top:20px;']); ?>
+            <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-primary btn-sm',
+                'style' => 'margin-left:120px; margin-top:0px;']); ?>
             <?php echo form_close();?>
 
             <p style="font-size: 20px; margin-top: 40px;" class="">Enter family to be deletd</p>
             <?php echo form_open('admin/masters_family_del', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">Family</label>
-                <div class="col-lg-10">
+                <label for="inputText" class="col-lg-3 control-label">Family</label>
+                <div class="col-lg-7">
                     <?php  echo form_input(['name' => 'family_delete', 'class' => 'form-control',
-                        'placeholder' => 'Enter family to be deleted',
+                        'placeholder' => 'Enter family',
                         'value' => set_value('family_delete')]);
                     ?>
                     <?php echo form_error('family_delete'); ?>
                 </div>
-                <input type="submit" name="del_family" class="btn btn-danger" value="DELETE" style="margin-left: 50px; margin-top: 20px;">
+                <input type="submit" name="del_family" class="btn btn-danger btn-sm"
+                       value="DELETE" style="margin-left: 120px; margin-top: 10px;">
                 <?php  form_close(); ?>
             </div>
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-3">
             <table class="table table-hover table-bordered">
                 <thead>
                 <tr class="">
@@ -65,5 +64,6 @@
                 </tbody>
             </table>
         </div>
+        <div class="col-lg-5"
     </div>
 </div>

@@ -11,31 +11,30 @@
         <div class="col-lg-4">
             <?php echo form_open('admin/masters_category', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">Category</label>
-                <div class="col-lg-10">
+                <label for="inputText" class="col-lg-3 control-label">Category</label>
+                <div class="col-lg-7">
                     <?php echo form_input(['name' => 'category_name', 'class' => 'form-control',
                         'placeholder' => 'Enter Category',
                         'value' => set_value('category_name')]);
                     ?>
                 </div>
             </div>
-            <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-info',
-                'style' => 'margin-left:45px; margin-top:20px;']),
-            form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
-                'style' => 'margin-top:20px;']); ?>
+            <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-primary btn-sm',
+                'style' => 'margin-left:120px; margin-top:0px;']); ?>
             <?php echo form_close();?>
 
             <p style="font-size: 20px; margin-top: 40px;" class="">Enter Category to be deletd</p>
             <?php echo form_open('admin/masters_category_del', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">Section</label>
-                <div class="col-lg-10">
+                <label for="inputText" class="col-lg-3 control-label">Section</label>
+                <div class="col-lg-7">
                     <?php  echo form_input(['name' => 'category_delete', 'class' => 'form-control',
-                        'placeholder' => 'Enter Category to be deleted',
+                        'placeholder' => 'Enter Category',
                         'value' => set_value('category_delete')]);
                     ?>
                 </div>
-                <input type="submit" name="del_category" class="btn btn-danger" value="DELETE" style="margin-left: 50px; margin-top: 20px;">
+                <input type="submit" name="del_category" class="btn btn-danger btn-sm"
+                       value="DELETE" style="margin-left: 120px; margin-top: 10px;">
                 <?php  form_close(); ?>
             </div>
         </div>

@@ -8,11 +8,11 @@
 <div class="container">
     <div class="row">
         <p style="font-size: 20px; margin-top:0px;" class="">Enter Class to be Added</p>
-    <div class="col-lg-4">
+    <div class="col-lg-4" style="margin-top: 10px;">
         <?php echo form_open('admin/masters_class', ['class' => 'form-horizontal']); ?>
         <div class="form-group">
-            <label for="inputText" class="col-lg-2 control-label">Class</label>
-            <div class="col-lg-10">
+            <label for="inputText" class="col-lg-3 control-label">Class</label>
+            <div class="col-lg-7">
                 <?php echo form_input(['name' => 'class', 'class' => 'form-control',
                     'placeholder' => 'Enter Class',
                     'value' => set_value('class')]);
@@ -20,8 +20,8 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="inputText" class="col-lg-2 control-label">Prefix</label>
-            <div class="col-lg-10">
+            <label for="inputText" class="col-lg-3 control-label">Prefix</label>
+            <div class="col-lg-7">
                 <?php echo form_input(['name' => 'prefix', 'class' => 'form-control',
                     'placeholder' => 'Enter Prefix',
                     'value' => set_value('prefix')]);
@@ -29,31 +29,29 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="inputText" class="col-lg-2 control-label">Start From</label>
-            <div class="col-lg-10">
+            <label for="inputText" class="col-lg-3 control-label">Start From</label>
+            <div class="col-lg-7">
                 <input type="date" class="form-control" name="start_from">
             </div>
         </div>
         <div class="form-group">
-            <label for="inputText" class="col-lg-2 control-label">Incharge</label>
-            <div class="col-lg-10">
+            <label for="inputText" class="col-lg-3 control-label">Incharge</label>
+            <div class="col-lg-7">
                 <?php echo form_input(['name' => 'incharge', 'class' => 'form-control',
                     'placeholder' => 'Enter Incharge',
                     'value' => set_value('incharge')]);
                 ?>
             </div>
         </div>
-        <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-info',
-            'style' => 'margin-left:45px; margin-top:20px;']),
-        form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
-            'style' => 'margin-top:20px;']); ?>
+        <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-primary btn-sm',
+            'style' => 'margin-left:120px; margin-top:0px;']); ?>
         <?php echo form_close();?>
 
         <p style="font-size: 20px; margin-top: 40px;" class="">Enter Class to be deletd</p>
         <?php echo form_open('admin/masters_class_del', ['class' => 'form-horizontal']); ?>
         <div class="form-group">
-            <label for="inputText" class="col-lg-2 control-label">Class</label>
-            <div class="col-lg-10">
+            <label for="inputText" class="col-lg-3 control-label">Class</label>
+            <div class="col-lg-7">
                 <?php
                 $drop = array();
                 foreach ($dropdown as $r) {
@@ -67,7 +65,8 @@
                 ?>
                 <?php echo form_error('class_delete'); ?>
             </div>
-            <input type="submit" name="del_class" class="btn btn-danger" value="DELETE" style="margin-left: 50px; margin-top: 20px;">
+            <input type="submit" name="del_class" class="btn btn-danger btn-sm"
+                   value="DELETE" style="margin-left: 120px; margin-top: 20px;">
                 <?php  form_close(); ?>
         </div>
     </div>

@@ -265,6 +265,7 @@ class Accounts extends MY_Controller{
         $this->load->view('private/accounts/final_accounts/trial_balance');
     }
     public function payments(){
+        $account= $this->dropdown_db('account_name','account');
         $this->load->model('get_model', 'gm');
         $table_name='payments';
         $payments_table= $this->gm->show_table($table_name);
@@ -275,28 +276,18 @@ class Accounts extends MY_Controller{
         if ($this->form_validation->run('payments')) {
             $post = $this->input->post();
             unset($post['submit']);
-            
             $table_name='payments';
             if ($this->insert_data($table_name,$post)) {
-                $field_a='account_name';
-                $table_name_a='account';
-                $this->load->model('get_model','gm');
-                $account= $this->gm->get_list($field_a,$table_name_a);
-                $this->load->view('private/accounts/financial_accounting/payments',['account'=>$account,'payments' => $payments_table]);
+                $this->load->view('private/accounts/financial_accounting/payments',['account'=>$account,
+                    'payments' => $payments_table]);
             } else {
                 echo 'Database query error';
-                $field_a='account_name';
-                $table_name_a='account';
-                $this->load->model('get_model','gm');
-                $account= $this->gm->get_list($field_a,$table_name_a);
-                $this->load->view('private/accounts/financial_accounting/payments',['account'=>$account,'payments' => $payments_table]);
+                $this->load->view('private/accounts/financial_accounting/payments',['account'=>$account,
+                    'payments' => $payments_table]);
             }
         } else {
-            $field_a='account_name';
-            $table_name_a='account';
-            $this->load->model('get_model','gm');
-            $account= $this->gm->get_list($field_a,$table_name_a);
-            $this->load->view('private/accounts/financial_accounting/payments',['account'=>$account,'payments' => $payments_table]);
+            $this->load->view('private/accounts/financial_accounting/payments',['account'=>$account,
+                'payments' => $payments_table]);
         }
     }
     public function day_book(){
