@@ -20,5 +20,68 @@ or clone from https://github.com/akshat4112/SchoolERP
 3. PDO Extension in PHP
 4. Web Browser FF17.0+, IE8+, Opera, Chrome .... TODO testing
 
+## Modules
+
+Registration
+
+Registration with Test
+
+Document Management
+
+Admission
+
+Fee Management
+
+Cheque Management
+
+ECS Management
+
+Concession Management
+
+Examination
+
+Dynamic CCE Handling
+
+XII Board Marks Import & Analysis
+
+Library
+
+Reserve Book Facility
+
+Purchase Management
+
+Store & Inventory
+
+Transport
+
+Payroll Management
+
+Accounting
+
+Class Teacher
+
+Dynamic SMS Integration
+
+Activity Module
+
+Security
+
+Front Office
+
+Time Table
+
+Infirmary
+
+Hostel Management
+
+Mess Management
+
+Online Parent Login
+
+Online Teacher Login
+
+Online Admin Login
+
 ## Credits 
 Akshat Gupta (Author)
+Ridhima Garg (Author)
