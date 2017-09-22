@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"
-    <link rel="stylesheet" href="<?= base_url() ?>public/assets/css/bootswatch_paper.css" />
-    <link rel="stylesheet" href="<?= base_url() ?>public/assets/css/style.css" />
-    <script src="<?= base_url()?>public/assets/js/jquery.js"></script>
-    <script src="<?= base_url()?>public/assets/js/bootstrap.js"></script>
+    <link href="<?= base_url() ?>public/assets/css/bootswatch_paper.css" rel="stylesheet"/>
+    <link href='<?= base_url() ?>public/assets/css/google_fonts.css' rel='stylesheet' type='text/css'>
     <title>{title}</title>
 </head>
 <body>
