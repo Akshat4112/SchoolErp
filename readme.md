@@ -25,9 +25,9 @@ or clone from https://github.com/akshat4112/SchoolERP
 
 ## Modules
 
-1. :pencil: Registration
-2. Registration with Test
-3. Document Management
+:thumbsup: Registration
+
+:thumbsup: Document Management
 4. Admission
 5. Fee Management
 6. Cheque Management
