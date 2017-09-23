@@ -64,7 +64,7 @@
         <div class="col-lg-1"></div>
         <div class="col-lg-3">
             <?php echo form_error('category_name'); ?>
-            <?php echo form_error('category_delete'); ?>la
+            <?php echo form_error('category_delete'); ?>
         </div>
     </div>
 </div>

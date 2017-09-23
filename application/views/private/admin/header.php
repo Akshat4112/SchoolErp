@@ -31,14 +31,6 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Transport<span
-                                class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="<?= site_url('transport/route') ?>">Route</a></li>
-                        <li><a href="<?= site_url('transport/route_plan') ?>">Route Plan</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Masters
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
@@ -66,13 +58,12 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Reports<span
                                 class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="<?= site_url('admin/items') ?>">Demand Register</a></li>
-                        <li><a href="<?= site_url('admin/set') ?>">Fees Card</a></li>
+                        <li><a href="<?= site_url('admin/demand_register') ?>">Demand Register</a></li>
                         <li><a href="<?= site_url('admin/class_report') ?>">Class Report</a></li>
                         <li><a href="<?= site_url('admin/cw_strength') ?>">Class-Wise Strength</a></li>
                     </ul>
                 </li>
-                <li><a href="<?= site_url('misc/demand_bill_printing'); ?>">SMS Templates</a></li>
+                <li><a href="<?= site_url('sms/sms_templates'); ?>">SMS Templates</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">

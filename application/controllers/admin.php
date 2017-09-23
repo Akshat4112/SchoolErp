@@ -214,7 +214,8 @@ class Admin extends MY_Controller
 
     }
     public function bill_sundry(){
-        $this->load->view('private/admin/bill_sundry');
+        $account = $this->dropdown_db('account_name','account');
+        $this->load->view('private/admin/bill_sundry',['account'=>$account]);
 
     }
     public function shift(){
@@ -238,27 +239,21 @@ class Admin extends MY_Controller
         $this->load->view('private/admin/cw_strength',['sm'=>$sm]);
     }
     public function class_report(){
+
         //for dynamic dropdown of class
-        $this->load->model('get_model', 'gm');
-        $class_list = $this->gm->get_class_list();
+        $class_list = $this->dropdown_db('class','class');
 
         //for dynamic dropdown of section
-        $fieldsec = 'section_name';
-        $table_namesec = 'section';
-        $this->load->model('get_model', 'gm');
-        $section_list = $this->gm->get_list($fieldsec, $table_namesec);
+        $section_list = $this->dropdown_db('section_name','section');
 
         //for dynamic dropdown of category
-        $fieldcat = 'category_name';
-        $table_namecat = 'category';
-        $this->load->model('get_model', 'gm');
-        $category_list = $this->gm->get_list($fieldcat, $table_namecat);
+        $category_list = $this->dropdown_db('category_name','category');
 
         $data = $this->input->post();
         unset($data['submit']);
         //print_r($data);
-
-        $this->load->view('private/admin/class_report',['class'=>$class_list,'section'=>$section_list,
+        $this->load->view('private/admin/class_report',['class'=>$class_list,
+            'section'=>$section_list,
             'category'=>$category_list]);
     }
 }
