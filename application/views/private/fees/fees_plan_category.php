@@ -11,25 +11,23 @@
         <div class="col-lg-4">
             <?php echo form_open('fees/fees_plan_category', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">Category</label>
-                <div class="col-lg-10">
+                <label for="inputText" class="col-lg-4 control-label">Category</label>
+                <div class="col-lg-8">
                     <?php echo form_input(['name' => 'category_name', 'class' => 'form-control',
                         'placeholder' => 'Enter Category',
                         'value' => set_value('category_name')]);
                     ?>
                 </div>
             </div>
-            <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-info',
-                'style' => 'margin-left:45px; margin-top:20px;']),
-            form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
-                'style' => 'margin-top:20px;']); ?>
+            <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-primary btn-sm',
+                'style' => 'margin-left:145px; margin-top:0px;']);?>
             <?php echo form_close();?>
 
             <p style="font-size: 20px; margin-top: 40px;" class="">Enter Category to be deletd</p>
             <?php echo form_open('fees/fees_plan_category_del', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
-                <label for="inputText" class="col-lg-2 control-label">Category</label>
-                <div class="col-lg-10">
+                <label for="inputText" class="col-lg-4 control-label">Category</label>
+                <div class="col-lg-8">
                     <?php
                     $drop=array();
                     foreach($view as $r){
@@ -43,14 +41,15 @@
                     ?>
 
                 </div>
-                <input type="submit" name="del_category" class="btn btn-danger" value="DELETE" style="margin-left: 50px; margin-top: 20px;">
+                <input type="submit" name="del_category" class="btn btn-danger btn-sm" value="DELETE"
+                       style="margin-left: 155px; margin-top: 20px;">
                 <?php  form_close(); ?>
             </div>
         </div>
         <div class="col-lg-5">
-            <table class="table table-hover ">
+            <table class="table table-hover table-bordered">
                 <thead>
-                <tr class="info">
+                <tr class="">
                     <th>Fees Plan Category</th>
                 </tr>
                 </thead>
@@ -58,10 +57,9 @@
                 <?php if (count($view)): ?>
                     <?php
                     foreach ($view as $fpc) {
-                        echo "<tr class='success'><td>" . $fpc['category_name'] . '<br>' . "</td></tr>";
+                        echo "<tr class=''><td>" . $fpc['category_name'] . '<br>' . "</td></tr>";
                     }
                     ?>
-
                 <?php else: ?>
                     <tr>
                         <td>No Records Found</td>

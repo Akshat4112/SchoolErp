@@ -69,10 +69,8 @@
         </div>
 
 
-        <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-info',
-            'style' => 'margin-left:45px; margin-top:20px;']),
-        form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
-            'style' => 'margin-top:20px;']); ?>
+        <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-primary btn-sm',
+            'style' => 'margin-left:180px; margin-top:0px;']); ?>
 
 
     </div>
@@ -119,9 +117,9 @@
     </div>
     <div class="row">
         <div class="col-lg-12">
-            <table class="table table-hover ">
+            <table class="table table-hover table-bordered">
                 <thead>
-                <tr class="info">
+                <tr class="">
                     <th>Fees Heading</th>
                     <th>Group</th>
                     <th>Account</th>
@@ -143,7 +141,7 @@
                 <tbody>
                 <?php if (count($fhl)): ?>
                     <?php foreach ($fhl as $fees_head_det): ?>
-                        <tr class="success">
+                        <tr class="">
                             <td><?php echo $fees_head_det->fees_heading ?></td>
                             <td><?php echo $fees_head_det->group_name?></td>
                             <td><?php echo $fees_head_det->account_name ?></td>

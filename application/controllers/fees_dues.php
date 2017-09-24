@@ -23,7 +23,13 @@ class Fees_dues extends MY_Controller{
     }
 
     public function fees_dues_class_wise(){
-        $this->load->view('private/fees/fees_dues_list/fees_dues_list_class_wise');
+        $class = $this->dropdown_db('class','class');
+        $section = $this->dropdown_db('section_name','section');
+        $category = $this->dropdown_db('category_name','category');
+        $route = $this->dropdown_db('route_name','route');
+
+        $this->load->view('private/fees/fees_dues_list/fees_dues_list_class_wise',
+            ['class'=>$class,'section'=>$section,'category'=>$category,'route'=>$route]);
     }
     public function family_wise_dues_list(){
         $this->load->view('private/fees/fees_dues_list/family_wise_dues_list');

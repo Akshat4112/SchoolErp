@@ -11,14 +11,14 @@
             <p style="font-size: 20px;" class="">Fees Receipt</p>
             <?php echo form_open('fees/fees_receipt', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
-                <label for="inputText" class="col-lg-3 control-label">Date</label>
-                <div class="col-lg-9">
+                <label for="inputText" class="col-lg-4 control-label">Date</label>
+                <div class="col-lg-7">
                     <input type="date" class="form-control" name="date">
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputText" class="col-lg-3 control-label">Reciept No.</label>
-                <div class="col-lg-9">
+                <label for="inputText" class="col-lg-4 control-label">Reciept No.</label>
+                <div class="col-lg-7">
                     <?php echo form_input(['name' => 'reciept_no', 'class' => 'form-control',
                         'placeholder' => 'Enter Reciept No.',
                         'value' => set_value('reciept_no')]);
@@ -27,8 +27,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputText" class="col-lg-3 control-label">Admission No.</label>
-                <div class="col-lg-9">
+                <label for="inputText" class="col-lg-4 control-label">Admission No.</label>
+                <div class="col-lg-7">
                     <?php echo form_input(['name' => 'admission_no', 'class' => 'form-control',
                         'placeholder' => 'Enter Admission No.',
                         'value' => set_value('admission_no')]);
@@ -39,9 +39,9 @@
 
         </div>
         <div class="col-lg-8">
-            <table class="table table-hover ">
+            <table class="table table-hover table-bordered">
                 <thead>
-                <tr class="info">
+                <tr class="">
                     <th>Name</th>
                     <th>Class</th>
                     <th>Route</th>
@@ -56,7 +56,7 @@
                 <?php if (count($stu_det)): ?>
 
                     <?php foreach ($stu_det as $student_det): ?>
-                        <tr class="success">
+                        <tr class="">
                             <td><?php echo $student_det['student_first_name'] ?></td>
                             <td><?php echo $student_det['student_class'] ?></td>
                             <td><?php echo $student_det['route'] ?></td>
@@ -114,7 +114,7 @@
                 </label>
             </div>
             <div class="form-group">
-                <input type="submit" name="submit" value="Ok" class="btn btn-info" style="margin-top: 10px;
+                <input type="submit" name="submit" value="Submit" class="btn btn-primary btn-sm" style="margin-top: 10px;
                 margin-left: 10px;">
             </div>
             <?php echo form_close(); ?>
@@ -133,9 +133,9 @@
         </div>
     </div>
     <div class="row">
-        <table class="table table-hover ">
+        <table class="table table-hover table-bordered">
             <thead>
-            <tr class="info">
+            <tr class="">
                 <th>Fees Head</th>
                 <th>Jan </th>
                 <th>Feb</th>
