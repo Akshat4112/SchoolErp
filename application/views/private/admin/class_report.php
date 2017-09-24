@@ -24,12 +24,11 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-2">
             <div class="form-group">
-                <label for="inputText" class="col-lg-4 control-label text-info" style="margin-top: 8px;font-size: 15px;"><b>Select</b></label>
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <?php $options = [
-                        'student_first_name' => 'Student Name',
+                        'student_first_name' => 'Class',
                         'fathers_first_name'=>'Father Name',
                         'mothers_first_name'=>'Mother Name',
                         'student_roll_no'=>'Roll No',
@@ -55,12 +54,14 @@
                 <input type="text" name="class" class="form-control">
             </div>
         </div>
-        <div class="col-lg-3">
+    </div>
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-2">
             <div class="form-group">
-                <label for="inputText" class="col-lg-3 control-label text-info" style="margin-top: 8px; font-size: 15px;"><b>Select</b></label>
-                <div class="col-lg-9">
+                <div class="col-lg-12">
                     <?php $options = [
-                        'student_first_name' => 'Student Name',
+                        'student_first_name' => 'Section',
                         'fathers_first_name'=>'Father Name',
                         'mothers_first_name'=>'Mother Name',
                         'student_roll_no'=>'Roll No',
@@ -89,13 +90,12 @@
         </div>
     </div>
     <div class="row">
-
-        <div class="col-lg-3">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-2">
             <div class="form-group">
-                <label for="inputText" class="col-lg-3 control-label text-info" style="margin-top: 8px; font-size: 15px;"><b>Select</b></label>
-                <div class="col-lg-9">
+                <div class="col-lg-12">
                     <?php $options = [
-                        'student_first_name' => 'Student Name',
+                        'student_first_name' => 'Category',
                         'fathers_first_name'=>'Father Name',
                         'mothers_first_name'=>'Mother Name',
                         'student_roll_no'=>'Roll No',
@@ -123,8 +123,7 @@
             </div>
         </div>
         <div class="col-lg-3" style="margin-top: 8px;">
-            <input type="submit" name="submit" class="btn btn-info" value="Ok">
-            <input type="submit" name="submit" class="btn btn-info" value="Print">
+            <input type="submit" name="submit" class="btn btn-primary btn-sm" value="Show">
         </div>
     </div>
     <div class="row">
