@@ -37,10 +37,8 @@
                     <?php echo form_error('value'); ?>
                 </div>
             </div>
-            <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-info',
-                'style' => 'margin-left:45px; margin-top:20px;']),
-            form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
-                'style' => 'margin-top:20px;']); ?>
+            <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-primary btn-sm',
+                'style' => 'margin-left:125px; margin-top:0px;']); ?>
             <div class="row">
                 <div class="col-lg-6">
             <div class="form-group">
@@ -73,16 +71,16 @@
         </div>
         <?php form_close()?>
         <div class="col-lg-6">
-            <table class="table  table-hover ">
+            <table class="table  table-hover table-bordered">
                 <thead>
-                <tr class="info">
+                <tr class="">
                     <th>Class</th>
                     <th>Category</th>
                     <th>Route Name</th>
                     <th>Value</th>
                 </tr>
                 </thead>
-                <tbody class="success">
+                <tbody class="">
 
                 </tbody>
             </table>

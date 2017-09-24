@@ -38,10 +38,8 @@
             </div>
 
 
-            <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-info',
-                'style' => 'margin-left:45px; margin-top:20px;']),
-            form_reset(['name' => 'reset', 'value' => 'reset', 'class' => 'btn btn-warning',
-                'style' => 'margin-top:20px;']); ?>
+            <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-primary btn-sm',
+                'style' => 'margin-left:125px; margin-top:0px;']); ?>
 
 
         </div>
@@ -88,9 +86,9 @@
     </div>
     <div class="row">
         <div class="col-lg-12">
-            <table class="table table-hover ">
+            <table class="table table-hover table-bordered">
                 <thead>
-                <tr class="info">
+                <tr class="">
                     <th>Route Heading</th>
                     <th>Frequency</th>
                     <th>Jan</th>
@@ -110,7 +108,7 @@
                 <tbody>
                 <?php if (count($rhl)): ?>
                     <?php foreach ($rhl as $route_head_det): ?>
-                        <tr class="success">
+                        <tr class="">
                             <td><?php echo $route_head_det->route_name?></td>
                             <td><?php echo $route_head_det->freq?></td>
                         </tr>
@@ -123,7 +121,6 @@
 
                 </tbody>
             </table>
-
         </div>
     </div>
 </div>

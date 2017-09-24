@@ -8,19 +8,20 @@
 class Transport extends MY_Controller{
     public function __construct()
     {
-        parent::__construct();
-
         // for checking if user is logged in or not.
-
+        parent::__construct();
         if( ! $this->session->userdata('login_id')){
             return redirect('home');
             exit();
         }
-
-        $this->load->view('private/transport/header');
+        $this->load->view('private/transport/header',['username'=>$this->get_admin()]);
         $this->load->view('private/transport/footer');
     }
-    public function index(){}
+    public function index(){
+        $this->load->model('get_model', 'gm');
+        $rhl = $this->gm->route_list();
+        $this->load->view('private/transport/dashboard',['rhl'=>$rhl]);
+    }
     public function route()
     {
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
@@ -52,12 +53,14 @@ class Transport extends MY_Controller{
         }
     }
 
-
+    public function settings(){
+        $this->load->view('private/transport/settings');
+    }
     public function route_plan()
     {
            $post = $this->input->post();
             unset($post['submit']);
-            print_r($post);
+//            print_r($post);
             
             $route_name='route_name';
             $table_name='route';
