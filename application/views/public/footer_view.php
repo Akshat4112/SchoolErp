@@ -9,8 +9,8 @@
 </div>
 </div>
 	<footer>
-	<script src="<?= base_url()?>public/assets/js/jquery.js"></script>
-	<script src="<?= base_url()?>public/assets/js/bootstrap.js"></script>
+        <script src="<?= base_url() ?>public/assets/js/jquery.js" type="text/javascript"></script>
+        <script src="<?= base_url() ?>public//assets/js/bootstrap.js" type="text/javascript"></script>
 	</footer>
 </body>
 </html>

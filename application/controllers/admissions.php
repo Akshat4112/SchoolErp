@@ -84,29 +84,11 @@ class Admissions extends MY_Controller
         $this->load->model('get_model', 'gm');
         $last = $this->gm->last_admission_no();
 
-        $this->load->model('get_model', 'gm');
-        $class_list = $this->gm->get_class_list();
-
-
-        $fieldhouse= 'house_name';
-        $table_namehouse= 'house';
-        $this->load->model('get_model', 'gm');
-        $house_list = $this->gm->get_list($fieldhouse, $table_namehouse);
-
-        $fieldsec = 'section_name';
-        $table_namesec = 'section';
-        $this->load->model('get_model', 'gm');
-        $section_list = $this->gm->get_list($fieldsec, $table_namesec);
-
-        $fieldcat = 'category_name';
-        $table_namecat = 'category';
-        $this->load->model('get_model', 'gm');
-        $category_list = $this->gm->get_list($fieldcat, $table_namecat);
-
-        $fieldcast = 'caste_name';
-        $table_namecast = 'caste';
-        $this->load->model('get_model', 'gm');
-        $caste_list = $this->gm->get_list($fieldcast, $table_namecast);
+        $class_list = $this->dropdown_db('class','class');
+        $house_list = $this->dropdown_db('house_name', 'house');
+        $section_list = $this->dropdown_db('section_name', 'section');
+        $category_list = $this->dropdown_db('category_name','category');
+        $caste_list = $this->dropdown_db('caste_name', 'caste');
 
         $this->load->model('get_model', 'gm');
         $last = $this->gm->last_admission_no();

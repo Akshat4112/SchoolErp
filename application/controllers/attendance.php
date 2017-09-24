@@ -87,10 +87,12 @@ class Attendance extends MY_Controller
             $get_data = $this->gm->attendance_search($post['class'], $post['section']);
             $this->load->view('private/attendance/new/attend_new.php', ['section_drop' => $section_list,
                 'class_drop' => $class_list, 'data' => $get_data, 'date' => $post['entry_date']]);
+            $this->session->set_flashdata('attendance', 'Attendance Updated Successfully.');
         } else {
             $data = array();
             $this->load->view('private/attendance/new/attend_new.php', ['section_drop' => $section_list,
                 'class_drop' => $class_list, 'data' => $data]);
+            $this->session->set_flashdata('attendance', 'Attendance Failed.');
         }
     }
 

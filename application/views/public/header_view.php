@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"
     <link href="<?= base_url() ?>public/assets/css/redable.css" rel="stylesheet"/>
+    <link href="<?= base_url() ?>public/assets/css/font-awesome.min.css" rel="stylesheet">
     <link href='<?= base_url() ?>public/assets/css/google_fonts.css' rel='stylesheet' type='text/css'>
     <title>{title}</title>
 </head>
