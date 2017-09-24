@@ -21,7 +21,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row" style="margin-top: 10px;">
         <div class="col-lg-3">
             <?php echo form_open('fees_dues/fees_dues_class_wise', ['class' => 'form-horizontal']); ?>
             <div class="form-group">

@@ -21,13 +21,13 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-2">
+        <div class="col-lg-3">
             <div class="form-group">
-                <label for="inputText" class="col-lg-5 control-label text-info" style="font-size: 17px; margin-top: 6px;"><b>Class</b></label>
+                <label for="inputText" class="col-lg-5 control-label" style="font-size: 17px; margin-top: 6px;"><b>Class</b></label>
                 <div class="col-lg-7">
                     <?php
                     $drop = array();
-                    foreach ($drop as $r) {
+                    foreach ($class as $r) {
                         $drop[$r['class']] = $r['class'];
                     }
                     $attribute_class = [
@@ -42,7 +42,7 @@
         </div>
         <div class="col-lg-1">
             <?php echo form_submit(['name' => 'submit', 'value' => 'Search',
-                'class' => 'btn btn-info', 'style' => '']); ?>
+                'class' => 'btn btn-primary btn-sm', 'style' => 'margin-top:5px;']); ?>
             <?php echo form_close(); ?>
         </div>
     </div>

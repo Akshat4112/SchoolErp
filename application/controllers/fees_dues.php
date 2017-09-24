@@ -38,9 +38,16 @@ class Fees_dues extends MY_Controller{
         $this->load->view('private/fees/fees_dues_list/fees_status_report');
     }
     public function fees_dues_list_detailed(){
-        $this->load->view('private/fees/fees_dues_list/fees_dues_list_detailed');
+        $class = $this->dropdown_db('class','class');
+        $section = $this->dropdown_db('section_name','section');
+        $category = $this->dropdown_db('category_name','category');
+        $route = $this->dropdown_db('route_name','route');
+
+        $this->load->view('private/fees/fees_dues_list/fees_dues_list_detailed',
+            ['class'=>$class,'section'=>$section,'category'=>$category,'route'=>$route]);
     }
     public function fees_estimation_list(){
-        $this->load->view('private/fees/fees_dues_list/fees_estimation_list');
+        $class = $this->dropdown_db('class','class');
+        $this->load->view('private/fees/fees_dues_list/fees_estimation_list',['class'=>$class]);
     }
 }
