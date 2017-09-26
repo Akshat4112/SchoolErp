@@ -101,8 +101,8 @@ class Certificates extends MY_Controller
 
     public function entrance_test()
     {
-        $this->load->view('private/certificates/et_header', ['username' => $this->get_admin()]);
-        $this->load->view('private/certificates/entrance_test');
+        $this->load->view('private/certificates/enterance_test/header', ['username' => $this->get_admin()]);
+        $this->load->view('private/certificates/enterance_test/dashboard');
     }
 
     public function student_cert()
@@ -140,5 +140,13 @@ class Certificates extends MY_Controller
     public function print_list()
     {
         echo 'print list view';
+    }
+    public function ent_new()
+    {
+
+    }
+    public function delete_ent()
+    {
+
     }
 }

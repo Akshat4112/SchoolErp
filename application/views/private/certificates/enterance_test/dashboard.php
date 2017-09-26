@@ -13,18 +13,16 @@
             <table class="table table-hover table-bordered">
                 <thead>
                 <tr class="">
-                    <th>Sr No.</th>
-                    <th>Adm. No.</th>
+                    <th>Rec No.</th>
                     <th>Name</th>
                     <th>Father</th>
-                    <th>Issue on</th>
-                    <th>Reason</th>
-                    <th>Remarks</th>
+                    <th>Village</th>
+                    <th>Mobile</th>
+                    <th>Admitted to</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr class="">
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
