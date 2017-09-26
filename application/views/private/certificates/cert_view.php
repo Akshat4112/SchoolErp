@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-lg-4">
             <p style="font-size: 20px;" class="text-success"><b>Generate Certificates</b></p>
-            <a href="<?= site_url('certificates/school_leaving_cert'); ?>"><img style="margin-left: 30px;" src="<?= base_url() ?>/public/assets/img/certificate.png"
+            <a href="<?= site_url('certificates/dashboard'); ?>"><img style="margin-left: 30px;" src="<?= base_url() ?>/public/assets/img/certificate.png"
                                                           height="120" width="120"></a>
             <p style="font-size: 18px; margin-left: -5px;" class="">School Leaving Certificate</p>
             <div style="margin-left: 15px; margin-top: 50px;">

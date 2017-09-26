@@ -184,4 +184,21 @@ class Get_model extends MY_Model
         $res = $query->result_array();
         return $res;
     }
+    public  function  org_info_cert()
+    {
+        $query = $this->db->select('name')
+            ->select('address_1')
+            ->select('address_2')
+        ->select('city')
+            ->select('dise_code')
+            ->select('school_code')
+            ->where('org_id',4)
+        ->get('organisation_info');
+        $res = $query->result_array();
+        return $res;
+    }
+    public function show_table_slc()
+    {
+
+    }
 }

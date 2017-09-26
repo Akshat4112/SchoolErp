@@ -29,8 +29,8 @@
             <ul class="nav navbar-nav">
                 <li><a href="<?= site_url('certificates'); ?>">Home</a></li>
                 <li><a href="<?= site_url('certificates/slc_new'); ?>">New</a></li>
-                <li><a href="<?= site_url('certificates'); ?>">Delete</a></li>
-                <li><a href="<?= site_url('certificates'); ?>">Print</a></li>
+                <li><a href="<?= site_url('certificates/delete_sl'); ?>">Delete</a></li>
+                <li><a href="<?= site_url('certificates/print_list'); ?>">Print</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
