@@ -35,7 +35,12 @@ class Certificates extends MY_Controller
         //print_r($data);
 
         if ($this->form_validation->run('sln')) {
-            //      Code for genrating pdf in school leaving certificate
+
+            //inserting data in database for dashboard view
+            $this->insert_data('student_leaving_certificate',$data);
+
+
+            // Code for genrating pdf in school leaving certificate
             $this->load->library('Pdf');
             $pdf = new Pdf('P', 'mm', 'A4', true, 'UTF-8', false);
             $pdf->SetCreator(PDF_CREATOR);
@@ -62,7 +67,7 @@ class Certificates extends MY_Controller
             Transfer Certificate
             </p>
             <p style="font-size: 15px;">
-                This is to certify that <b>' . $data['student_name'] . '</b> Son of Mr. <b>' . $data['f_name'] . '</b>
+                This is to certify that <b>' . $data['name'] . '</b> Son of Mr. <b>' . $data['f_name'] . '</b>
                 and Mrs.<b> ' . $data['m_name'] . '</b> was reading in class <b>' . $data['class'] . '</b> of the
                 school <b>' . $data['school_name'] . '</b> .He has ended school from <b>' . $data['end_date'] . '</b> to
                 <b>' . $data['start_date'] . '</b> having paid all fees dues to school.
@@ -114,7 +119,8 @@ class Certificates extends MY_Controller
     public function dashboard()
     {
         $this->load->model('get_model','gm');
-//        $this->gm->show_table_slc();
+        $table = $this->gm->show_table('student_leaving_certificate');
+        print_r($table);
 
         $this->load->view('private/certificates/school_leaving/slc_header', ['username' => $this->get_admin()]);
         $this->load->view('private/certificates/school_leaving/dashboard');

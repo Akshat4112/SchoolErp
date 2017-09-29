@@ -197,8 +197,5 @@ class Get_model extends MY_Model
         $res = $query->result_array();
         return $res;
     }
-    public function show_table_slc()
-    {
 
-    }
 }

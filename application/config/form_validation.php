@@ -40,7 +40,7 @@ $config=[
     ],
     'sln'=>[
         [
-            'field'=>'student_name',
+            'field'=>'name',
             'label'=>'Name',
             'rules'=>'required'
         ]

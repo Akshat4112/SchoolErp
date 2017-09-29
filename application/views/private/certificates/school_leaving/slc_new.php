@@ -32,7 +32,7 @@
         <?php echo form_open('certificates/slc_new', ['class' => 'form-horizontal']); ?>
         <div class="col-lg-10">
             <p style="font-size: 15px;">
-                This is to certify that <input type="text" name="student_name" class=""> Son of Mr.
+                This is to certify that <input type="text" name="name" class=""> Son of Mr.
                 <input type="text" name="f_name"> and Mrs. <input type="text" name="m_name"> was <br><br>
                 reading in class <input type="text" name="class"> of the school <input type="text" name="school_name">.
                 He has ended school from<br><br> <input type="text" name="end_date"> to
