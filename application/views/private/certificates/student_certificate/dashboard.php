@@ -23,15 +23,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr class="">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
                 </tbody>
             </table>
         </div>

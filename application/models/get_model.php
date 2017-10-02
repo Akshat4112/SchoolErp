@@ -98,7 +98,7 @@ class Get_model extends MY_Model
     }
     public function show_table($table_name){
         $query = $this->db->get($table_name);
-        $res = $query->result_array();
+        $res = $query->result();
         return $res;
 
     }

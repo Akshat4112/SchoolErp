@@ -22,15 +22,23 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr class="">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+                <?php if (count($dash)): ?>
+                    <?php foreach ($dash as $details): ?>
+                        <tr class="">
+                            <td><?php echo $details->slc_id?></td>
+                            <td><?php echo $details->m_name ?></td>
+                            <td><?php echo $details->name?></td>
+                            <td><?php echo $details->f_name?></td>
+                            <td><?php echo $details->year ?></td>
+                            <td><?php echo $details->start_class ?></td>
+                            <td><?php echo $details->dob_words ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <tr>
+                        <td>No Records Found</td>
+                    </tr>
+                <?php endif; ?>
                 </tbody>
             </table>
         </div>

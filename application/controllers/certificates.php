@@ -120,10 +120,10 @@ class Certificates extends MY_Controller
     {
         $this->load->model('get_model','gm');
         $table = $this->gm->show_table('student_leaving_certificate');
-        print_r($table);
+        //print_r($table);
 
         $this->load->view('private/certificates/school_leaving/slc_header', ['username' => $this->get_admin()]);
-        $this->load->view('private/certificates/school_leaving/dashboard');
+        $this->load->view('private/certificates/school_leaving/dashboard',['dash'=>$table]);
     }
 
     public function teacher_cert_l()
