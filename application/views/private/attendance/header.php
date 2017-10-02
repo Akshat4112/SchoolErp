@@ -30,6 +30,7 @@
                 <li><a href="<?= site_url('attendance/attend_view'); ?>">Attendance Register</a></li>
                 <li><a href="<?= site_url('attendance/attend_new'); ?>">New</a></li>
                 <li><a href="<?= site_url('attendance/summary'); ?>">Summary</a></li>
+                <li><a href="<?= site_url('attendance/analytics'); ?>">Attendance Analytics</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">

@@ -110,5 +110,8 @@ class Attendance extends MY_Controller
             }
         }
     }
+    public function analytics(){
+        $this->load->view('private/attendance/analytics/dashboard');
+    }
 }
 
