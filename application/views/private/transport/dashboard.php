@@ -34,6 +34,7 @@
                         <tr class="">
                             <td><?php echo $route_head_det->route_name?></td>
                             <td><?php echo $route_head_det->freq?></td>
+
                         </tr>
                     <?php endforeach; ?>
                 <?php else: ?>
