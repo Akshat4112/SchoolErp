@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2017 at 04:45 PM
--- Server version: 10.1.21-MariaDB
--- PHP Version: 5.6.30
+-- Generation Time: Oct 04, 2017 at 09:39 PM
+-- Server version: 10.1.16-MariaDB
+-- PHP Version: 7.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -75,7 +75,10 @@ INSERT INTO `account_group` (`account_group_id`, `account_group_name`) VALUES
 (40, 'Library'),
 (47, 'Transport'),
 (48, 'test'),
-(49, 'tution');
+(49, 'tution'),
+(51, 'Group2'),
+(52, 'Group1'),
+(53, 'testgr');
 
 -- --------------------------------------------------------
 
@@ -155,7 +158,28 @@ INSERT INTO `attendance` (`date`, `class`, `section`, `student_id`, `status`) VA
 ('2017-09-19', '2', 'A', 290, 'P'),
 ('2017-09-19', '2', 'A', 291, 'P'),
 ('2017-09-19', '2', 'A', 293, 'P'),
-('2017-09-26', '2', 'A', 334, 'A');
+('2017-09-26', '2', 'A', 334, 'A'),
+('0000-00-00', '2', 'A', 284, 'P'),
+('0000-00-00', '2', 'A', 286, 'P'),
+('0000-00-00', '2', 'A', 289, 'P'),
+('0000-00-00', '2', 'A', 290, 'P'),
+('0000-00-00', '2', 'A', 291, 'P'),
+('0000-00-00', '2', 'A', 293, 'P'),
+('2017-09-13', '2', 'A', 284, 'P'),
+('2017-09-13', '2', 'A', 286, 'P'),
+('2017-09-13', '2', 'A', 290, 'A'),
+('2017-09-13', '2', 'A', 291, 'P'),
+('2017-09-13', '2', 'A', 293, 'P'),
+('2017-09-21', '2', 'A', 284, 'P'),
+('2017-09-21', '2', 'A', 284, 'P'),
+('2017-09-26', '2', 'A', 284, 'P'),
+('2017-09-26', '2', 'A', 284, 'P'),
+('2017-09-06', '2', 'A', 284, 'P'),
+('2017-09-27', '2', 'A', 284, 'P'),
+('2017-09-27', '2', 'A', 284, 'P'),
+('0000-00-00', '2', 'A', 284, 'P'),
+('2017-10-25', '2', 'A', 284, 'P'),
+('2017-10-17', '2', 'A', 284, 'P');
 
 -- --------------------------------------------------------
 
@@ -237,7 +261,9 @@ INSERT INTO `class` (`class`, `prefix`, `start_from`, `incharge`, `class_id`) VA
 (3, '', '0000-00-00', '', 31),
 (4, '', '0000-00-00', '', 32),
 (5, '', '0000-00-00', 'mr nicshay', 35),
-(6, 'th', '0000-00-00', 'xyz', 36);
+(6, 'th', '0000-00-00', 'xyz', 36),
+(13, 'th', '2017-09-20', 'Mr. Mittal', 37),
+(15, 'th', '0000-00-00', 'Mr. Joraver', 38);
 
 -- --------------------------------------------------------
 
@@ -364,9 +390,9 @@ CREATE TABLE `fees_head_group` (
 --
 
 INSERT INTO `fees_head_group` (`fees_head_group_id`, `fees_head_group_name`) VALUES
-(11, 'Academic Fees'),
 (12, 'Misc. Fees'),
-(13, 'Development Fees');
+(14, 'test'),
+(15, 'Test1');
 
 -- --------------------------------------------------------
 
@@ -446,7 +472,27 @@ INSERT INTO `fees_reciept` (`reciept_id`, `date`, `reciept_no`, `admission_no`, 
 (21, '0000-00-00', 7, 5, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0),
 (22, '0000-00-00', 7, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (23, '0000-00-00', 7, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(24, '0000-00-00', 7, 8, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(24, '0000-00-00', 7, 8, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(25, '0000-00-00', 5, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(26, '0000-00-00', 5, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(27, '0000-00-00', 5, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(28, '0000-00-00', 5, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(29, '0000-00-00', 5, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(30, '0000-00-00', 5, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(31, '0000-00-00', 5, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(32, '0000-00-00', 5, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(33, '0000-00-00', 8, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(34, '0000-00-00', 8, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(35, '0000-00-00', 8, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(36, '0000-00-00', 8, 289, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(37, '0000-00-00', 8, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(38, '0000-00-00', 8, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(39, '0000-00-00', 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(40, '0000-00-00', 8, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(41, '0000-00-00', 8, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(42, '0000-00-00', 8, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(43, '0000-00-00', 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(44, '0000-00-00', 8, 8, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -531,15 +577,17 @@ CREATE TABLE `organisation_info` (
   `license_no` int(20) NOT NULL,
   `service_tax_no` int(20) NOT NULL,
   `session_start` date NOT NULL,
-  `session_end` date NOT NULL
+  `session_end` date NOT NULL,
+  `dise_code` int(11) DEFAULT NULL,
+  `school_code` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `organisation_info`
 --
 
-INSERT INTO `organisation_info` (`org_id`, `name`, `address_1`, `address_2`, `city`, `phone_no`, `fax_no`, `mobile`, `email`, `password`, `website`, `contact_person`, `pan_no`, `affiliation`, `license_no`, `service_tax_no`, `session_start`, `session_end`) VALUES
-(4, 'Simpkins School', 'A22', 'maruti estate', 'Agra', 98989898, 287832, 878797897, 'akshat41121995@gmail.com', 'nicola', 'www.futureheadech.com', 'akshat', '9882ckkasj09', 'cbse', 29, 0, '1222-12-12', '3122-12-12');
+INSERT INTO `organisation_info` (`org_id`, `name`, `address_1`, `address_2`, `city`, `phone_no`, `fax_no`, `mobile`, `email`, `password`, `website`, `contact_person`, `pan_no`, `affiliation`, `license_no`, `service_tax_no`, `session_start`, `session_end`, `dise_code`, `school_code`) VALUES
+(4, 'Simpkins School', 'A22', 'maruti estate', 'Agra', 98989898, 287832, 878797897, 'akshat41121995@gmail.com', 'nicola', 'www.futureheadech.com', 'akshat', '9882ckkasj09', 'cbse', 29, 0, '1222-12-12', '3122-12-12', 32145, 921834);
 
 -- --------------------------------------------------------
 
@@ -603,30 +651,39 @@ CREATE TABLE `receipt` (
 CREATE TABLE `route` (
   `route_id` int(11) NOT NULL,
   `route_name` text NOT NULL,
-  `freq` varchar(20) NOT NULL
+  `freq` varchar(20) NOT NULL,
+  `january` int(11) DEFAULT NULL,
+  `february` int(11) DEFAULT NULL,
+  `march` int(11) DEFAULT NULL,
+  `april` int(11) DEFAULT NULL,
+  `may` int(11) DEFAULT NULL,
+  `june` int(11) DEFAULT NULL,
+  `july` int(11) DEFAULT NULL,
+  `august` int(11) DEFAULT NULL,
+  `september` int(11) DEFAULT NULL,
+  `october` int(11) DEFAULT NULL,
+  `november` int(11) DEFAULT NULL,
+  `december` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `route`
 --
 
-INSERT INTO `route` (`route_id`, `route_name`, `freq`) VALUES
-(1, 'Test', 'bi_monthly'),
-(2, 'new', 'annual'),
-(3, 'new', 'annual'),
-(4, 'newtest', 'annual'),
-(5, 'new', 'annual'),
-(6, 'new', 'annual'),
-(7, 'route', 'annual'),
-(8, 'route', 'one_time'),
-(9, 'routequat', 'quaterly'),
-(10, 'RN', 'annual'),
-(11, 'TestR', 'one_time'),
-(12, 'Shahganj', 'annual'),
-(13, 'Rajamandi', 'quaterly'),
-(14, 'lohamandi', 'half_yearly'),
-(15, 'COD', 'quaterly'),
-(16, '300', 'monthly');
+INSERT INTO `route` (`route_id`, `route_name`, `freq`, `january`, `february`, `march`, `april`, `may`, `june`, `july`, `august`, `september`, `october`, `november`, `december`) VALUES
+(56, 'final', 'bi_monthly', NULL, 1, NULL, 1, NULL, 1, NULL, 1, NULL, 1, NULL, 1),
+(57, 'fees head', 'monthly', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+(58, 'fees head 1', 'half_yearly', NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL),
+(59, 'fees head kasjd', 'bi_monthly', 0, 1, NULL, 1, NULL, 1, NULL, 1, NULL, 1, NULL, 1),
+(60, 'fees head kasjd', 'monthly', 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+(61, 'fees head kasjd', 'monthly', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+(62, 'fees head kasjd', 'bi_monthly', NULL, 1, NULL, 1, NULL, 1, NULL, 1, NULL, 1, NULL, 1),
+(63, 'fees head kasjd', 'monthly', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+(64, 'fees head kasjd', 'half_yearly', NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL),
+(65, 'fees head kasjd', 'half_yearly', NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL),
+(66, 'fees head kasjda', 'quaterly', 1, NULL, NULL, 1, NULL, NULL, 1, NULL, NULL, 1, NULL, NULL),
+(67, 'fees head kasjda', 'quaterly', 1, NULL, NULL, 1, NULL, NULL, 1, NULL, NULL, 1, NULL, NULL),
+(68, 'tesy', 'half_yearly', NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -656,10 +713,10 @@ CREATE TABLE `section` (
 --
 
 INSERT INTO `section` (`section_id`, `section_name`) VALUES
-(98, 'A'),
-(99, 'B'),
 (100, 'C'),
-(104, 'E');
+(104, 'E'),
+(107, 'A'),
+(108, 'B');
 
 -- --------------------------------------------------------
 
@@ -773,8 +830,22 @@ CREATE TABLE `student_leaving_certificate` (
   `dob_words` text NOT NULL,
   `class_present` int(3) NOT NULL,
   `year` int(4) NOT NULL,
+  `start_class` int(11) DEFAULT NULL,
   `caste_name` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `student_leaving_certificate`
+--
+
+INSERT INTO `student_leaving_certificate` (`slc_id`, `name`, `f_name`, `m_name`, `class`, `school_name`, `end_date`, `start_date`, `dob`, `dob_words`, `class_present`, `year`, `start_class`, `caste_name`) VALUES
+(1, 'Akshat', '', '', 0, '', '0000-00-00', '0000-00-00', '0000-00-00', '', 0, 0, 0, ''),
+(2, 'Akshat', '', '', 0, '', '0000-00-00', '0000-00-00', '0000-00-00', '', 0, 0, 0, ''),
+(3, 'Akshat', '', '', 0, '', '0000-00-00', '0000-00-00', '0000-00-00', '', 0, 0, 0, ''),
+(4, 'Akshat', '', '', 0, '', '0000-00-00', '0000-00-00', '0000-00-00', '', 0, 0, 0, ''),
+(5, 'Satyam', '', '', 0, '', '0000-00-00', '0000-00-00', '0000-00-00', '', 0, 0, 0, ''),
+(6, 'Aman', 'Naman', 'Swati', 8, 'Simpkins School', '0000-00-00', '0000-00-00', '0000-00-00', 'aksjdkajskjdak', 8, 2018, 0, 'general'),
+(7, 'Aman', 'Naman', 'Swati', 8, 'Simpkins School', '0000-00-00', '0000-00-00', '0000-00-00', 'aksjdkajskjdak', 8, 2018, 0, 'general');
 
 --
 -- Indexes for dumped tables
@@ -973,7 +1044,7 @@ ALTER TABLE `account`
 -- AUTO_INCREMENT for table `account_group`
 --
 ALTER TABLE `account_group`
-  MODIFY `account_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `account_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 --
 -- AUTO_INCREMENT for table `admin`
 --
@@ -998,7 +1069,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `class`
 --
 ALTER TABLE `class`
-  MODIFY `class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 --
 -- AUTO_INCREMENT for table `contact_us`
 --
@@ -1038,7 +1109,7 @@ ALTER TABLE `fees_head`
 -- AUTO_INCREMENT for table `fees_head_group`
 --
 ALTER TABLE `fees_head_group`
-  MODIFY `fees_head_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `fees_head_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `fees_plan_category`
 --
@@ -1048,7 +1119,7 @@ ALTER TABLE `fees_plan_category`
 -- AUTO_INCREMENT for table `fees_reciept`
 --
 ALTER TABLE `fees_reciept`
-  MODIFY `reciept_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `reciept_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 --
 -- AUTO_INCREMENT for table `gatepass`
 --
@@ -1088,7 +1159,7 @@ ALTER TABLE `receipt`
 -- AUTO_INCREMENT for table `route`
 --
 ALTER TABLE `route`
-  MODIFY `route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 --
 -- AUTO_INCREMENT for table `route_plan`
 --
@@ -1098,7 +1169,7 @@ ALTER TABLE `route_plan`
 -- AUTO_INCREMENT for table `section`
 --
 ALTER TABLE `section`
-  MODIFY `section_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
+  MODIFY `section_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
 --
 -- AUTO_INCREMENT for table `student`
 --
@@ -1108,7 +1179,7 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `student_leaving_certificate`
 --
 ALTER TABLE `student_leaving_certificate`
-  MODIFY `slc_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `slc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
