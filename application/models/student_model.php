@@ -8,7 +8,7 @@
 class Student_model extends MY_Model {
     public function student_list(){
         $query = $this->db->order_by('student_first_name','ASC')->get('student');
-        $res = $query->result();
+        $res = $query->result_array();
         return $res;
     }
     public function order_by_one($field_name,$by,$table_name){

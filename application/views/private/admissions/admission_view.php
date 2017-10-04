@@ -250,7 +250,7 @@
             <thead>
             <tr class="text-default">
                 <th>Sno.</th>
-                <th>Admission No.</th>
+<!--                <th>Admission No.</th>-->
                 <th>Name</th>
                 <th>Father</th>
                 <th>Mother</th>
@@ -269,18 +269,18 @@
                 <?php foreach ($stu_det as $student_det): ?>
                     <tr class="">
                         <td><?php echo 'sno'; ?></td>
-                        <td><?php echo '<a href="admissions/edit/'.$student_det->admission_no.'">'.$student_det->admission_no?></td>
-                        <td><?php echo $student_det->student_first_name ?></td>
-                        <td><?php echo $student_det->fathers_first_name ?></td>
-                        <td><?php echo $student_det->mothers_first_name ?></td>
-                        <td><?php echo $student_det->student_class ?></td>
-                        <td><?php echo $student_det->student_section ?></td>
-                        <td><?php echo $student_det->student_roll_no ?></td>
-                        <td><?php echo $student_det->student_dob ?></td>
-                        <td><?php echo $student_det->f_mobile ?></td>
-                        <td><?php echo $student_det->route ?></td>
-                        <td><?php echo $student_det->scholarship_no ?></td>
-                        <td><?php echo $student_det->fees_balance ?></td>
+<!--                        <td>--><?php //echo '<a href="admissions/edit/'.$student_det->admission_no.'">'.$student_det['admission_no']?><!--</td>-->
+                        <td><?php echo $student_det['student_first_name'] ?></td>
+                        <td><?php echo $student_det['fathers_first_name'] ?></td>
+                        <td><?php echo $student_det['mothers_first_name'] ?></td>
+                        <td><?php echo $student_det['student_class'] ?></td>
+                        <td><?php echo $student_det['student_section'] ?></td>
+                        <td><?php echo $student_det['student_roll_no'] ?></td>
+                        <td><?php echo $student_det['student_dob'] ?></td>
+                        <td><?php echo $student_det['f_mobile'] ?></td>
+                        <td><?php echo $student_det['route'] ?></td>
+                        <td><?php echo $student_det['scholarship_no'] ?></td>
+                        <td><?php echo $student_det['fees_balance'] ?></td>
                     </tr>
                 <?php endforeach; ?>
             <?php else: ?>
@@ -295,7 +295,7 @@
 </div>
 
 <?php foreach ($stu_det as $student_det){
-    $var =  $student_det->student_first_name;
+    $var =  $student_det['student_first_name'];
     $jd[]= json_encode($var);
 }
 ?>
