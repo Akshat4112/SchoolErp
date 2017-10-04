@@ -31,12 +31,15 @@ class Transport extends MY_Controller
     public function route()
     {
         if ($this->form_validation->run('route')) {
+
             $post = $this->input->post();
             unset($post['submit']);
-            print_r($post);
+//            print_r($post);
 
             $table_name = 'route';
-
+            if($post==null){
+                $post=0;
+            }
             if ($this->insert_data($table_name, $post)) {
 
                 $this->load->model('get_model', 'gm');

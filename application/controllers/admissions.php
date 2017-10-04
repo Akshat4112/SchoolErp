@@ -83,7 +83,6 @@ class Admissions extends MY_Controller
 
         $this->load->model('get_model', 'gm');
         $last = $this->gm->last_admission_no();
-
         $class_list = $this->dropdown_db('class','class');
         $house_list = $this->dropdown_db('house_name', 'house');
         $section_list = $this->dropdown_db('section_name', 'section');
@@ -128,10 +127,7 @@ class Admissions extends MY_Controller
 
             $post = $this->input->post();
             $table_name = 'student';
-
             unset($post['submit']);
-
-
             if ($this->insert_data_key($table_name,$post,$last_student_id)) {
                 $this->session->set_flashdata('stu_succ','Address details filled Successfully.');
                 $this->load->view('private/admissions/parents');
@@ -470,6 +466,5 @@ class Admissions extends MY_Controller
         print_r($data);
     }
     public function analysis(){
-
     }
 }

@@ -42,7 +42,6 @@
                         <td>No Records Found</td>
                     </tr>
                 <?php endif; ?>
-
                 </tbody>
             </table>
 
