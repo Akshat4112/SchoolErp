@@ -25,6 +25,7 @@ class Fees extends MY_Controller{
     }
     public function fees_head()
     {
+        $this->load->model('get_model', 'gm');
         //for showing info in table
         //insert fees heading info. in database with insert_genric function
 
@@ -32,51 +33,16 @@ class Fees extends MY_Controller{
         if ($this->form_validation->run('fees_head')) {
             $post = $this->input->post();
             unset($post['submit']);
-            
-            $table_name='fees_head';
-
-            if ($this->insert_data($table_name,$post)) {
-                $field_fhg='fees_head_group_name';
-                $field_a='account_name';
-                $table_name_fhg='fees_head_group';
-                $table_name_a='account';
-                $this->load->model('get_model','gm');
-                $fees_head_list = $this->gm->get_list($field_fhg,$table_name_fhg);
-                $account_name_list = $this->gm->get_list($field_a,$table_name_a);
-
-                $this->load->model('get_model', 'gm');
-                $fhl = $this->gm->fees_head_list();
-
-                $this->load->view('private/fees/fees_head',
-                    ['view_drop_fhg'=>$fees_head_list,'view_drop_anl'=>$account_name_list,'fhl'=>$fhl]);
-            } else {
-                echo 'Database query error';
-                $field_fhg='fees_head_group_name';
-                $field_a='account_name';
-                $table_name_fhg='fees_head_group';
-                $table_name_a='account';
-                $this->load->model('get_model','gm');
-                $fees_head_list = $this->gm->get_list($field_fhg,$table_name_fhg);
-                $account_name_list = $this->gm->get_list($field_a,$table_name_a);
-
-                $this->load->model('get_model', 'gm');
-                $fhl = $this->gm->fees_head_list();
-
-                $this->load->view('private/fees/fees_head',['view_drop_fhg'=>$fees_head_list,
-                    'view_drop_anl'=>$account_name_list,'fhl'=>$fhl]);
-            }
+            $this->insert_data('fees_head',$post);
+            $fees_head_list = $this->dropdown_db('fees_head_group_name','fees_head_group');
+            $account_name_list = $this->dropdown_db('account_name','account');
+            $fhl = $this->gm->show_table('fees_head');
+            $this->load->view('private/fees/fees_head',
+                ['view_drop_fhg'=>$fees_head_list,'view_drop_anl'=>$account_name_list,'fhl'=>$fhl]);
         } else {
-            $field_fhg='fees_head_group_name';
-            $field_a='account_name';
-            $table_name_fhg='fees_head_group';
-            $table_name_a='account';
-            $this->load->model('get_model','gm');
-            $fees_head_list = $this->gm->get_list($field_fhg,$table_name_fhg);
-            $account_name_list = $this->gm->get_list($field_a,$table_name_a);
-
-            $this->load->model('get_model', 'gm');
-            $fhl = $this->gm->fees_head_list();
-
+            $fees_head_list = $this->dropdown_db('fees_head_group_name','fees_head_group');
+            $account_name_list = $this->dropdown_db('account_name','account');
+            $fhl = $this->gm->show_table('fees_head');
             $this->load->view('private/fees/fees_head',['view_drop_fhg'=>$fees_head_list,
                 'view_drop_anl'=>$account_name_list,'fhl'=>$fhl]);
         }

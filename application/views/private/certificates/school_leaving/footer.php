@@ -2,13 +2,6 @@
 /**
  * Created by PhpStorm.
  * User: Akshat
- * Date: 7/20/2017
- * Time: 12:16 PM
- */?>
-<?php
-/**
- * Created by PhpStorm.
- * User: Akshat
  * Date: 10/7/2017
  * Time: 2:07 PM
  */?>
@@ -18,7 +11,6 @@
         <a href="<?= site_url('home/query')?>">Query | </a>
         <a href="<?= site_url('home/suggestions')?>">Suggestions |</a>
         <a href="<?= site_url('home/help')?>">Help </a>
-
         <p class="pull-right">Copyright 2017 at <a href="http://www.futureheadtech.com">Futurehead Technologies</a></p>
     </div>
 
@@ -54,4 +46,3 @@
     });
 </script>
 </html>
-

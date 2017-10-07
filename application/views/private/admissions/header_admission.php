@@ -36,7 +36,7 @@
                         <li><a href="<?=site_url('admissions/download_pdf'); ?>">Download as PDF</a></li>
                     </ul>
                 </li>
-                <li><a href="<?= site_url('admissions/analysis'); ?>">Admission Analysis</a></li>
+                <li><a href="<?= site_url('admissions/analysis'); ?>">Admission Analytics</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">

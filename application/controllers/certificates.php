@@ -21,6 +21,7 @@ class Certificates extends MY_Controller
     {
         $this->load->view('private/certificates/header', ['username' => $this->get_admin()]);
         $this->load->view('private/certificates/cert_view');
+        $this->load->view('private/certificates/footer');
     }
 
     public function slc_new()
@@ -124,6 +125,8 @@ class Certificates extends MY_Controller
 
         $this->load->view('private/certificates/school_leaving/slc_header', ['username' => $this->get_admin()]);
         $this->load->view('private/certificates/school_leaving/dashboard',['dash'=>$table]);
+        $this->load->view('private/certificates/school_leaving/footer');
+        
     }
 
     public function teacher_cert_l()
