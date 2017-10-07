@@ -74,6 +74,7 @@ class Admissions extends MY_Controller
             $stu_list = $this->sm->student_list();
             $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
         }
+        $this->session->set_flashdata('Item',$stu_list);
     }
 
     public function student_details()
@@ -272,6 +273,8 @@ class Admissions extends MY_Controller
     {
 
         $this->load->view('private/admissions/send_sms.php');
+        $var = $this->session->flashdata('Item');
+        print_r($var);
 
     }
 
@@ -327,6 +330,7 @@ class Admissions extends MY_Controller
             $pdf->SetSubject('Admission Reports in PDF');
             $pdf->SetKeywords('ADMISSION,Report,PDF');
             $pdf->AddPage();
+            $var = $this->session->flashdata('Item');
 
             // create some HTML content
 
@@ -335,7 +339,6 @@ class Admissions extends MY_Controller
             Admission Report
            </p>
            <hr>
-           
            
            <div class="row">
     <div class="col-lg-12" id="" style="overflow-y:scroll; overflow-x:hidden; height: 400px; width:1200px;">
@@ -352,8 +355,27 @@ class Admissions extends MY_Controller
                 <th>Gender</th>
             </tr>
             </thead>
-            <tbody>
-            </tbody>
+            <tbody>';
+            if(count($var)):
+                $count =0;
+                foreach ($var as $student_det): 
+                    $html .='<tr class="">
+                        <td>'.++$count.'</td>
+                        <td>'.$student_det['admission_no'] .'</td>
+                        <td>' .$student_det['house'] .'</td>
+                        <td>' .$student_det['student_first_name'] .'</td>
+                        <td>' . $student_det['fathers_first_name'] .'</td>
+                        <td>' .$student_det['mothers_first_name'] .'</td>
+                        <td>' .$student_det['student_dob'] .'</td>
+                        <td>' . $student_det['gender'] .'</td>
+                    </tr>';
+                endforeach; 
+             else: 
+                $html .='<tr>
+                    <td>No Records Found</td>
+                </tr>';
+            endif;
+           $html .='</tbody>
         </table>
     </div>
 </div>
