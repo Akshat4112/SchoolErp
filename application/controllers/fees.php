@@ -165,24 +165,13 @@ class Fees extends MY_Controller{
     public function fees_plan(){
 
         //getting category list for checkbox (dynamic checkboxes for category and class)
-        $this->load->model('get_model','gm');
-        $table_name='fees_plan_category';
-        $field='category_name';
-        $category = $this->gm->get_list($field,$table_name);
-
+        $category = $this->dropdown_db('category_name','fees_plan_category');
         //getting class list for checkbox (dynamic checkboxes for category and class)
-        $this->load->model('get_model','gm');
-        $table_name='class';
-        $field='class';
-        $class = $this->gm->get_list($field,$table_name);
-
-        $table_name =  'fees_head';
-        $field = 'fees_heading';
-        $this->load->model('get_model', 'gm');
-        $fees_head_list = $this->gm->get_list($field,$table_name);
+        $class = $this->gm->get_list('class','class');
+        $fees_head_list = $this->dropdown_db('fees_heading','fees_head');
         $data=$this->input->post();
         unset($data['submit']);
-        print_r($data);
+        //print_r($data);
         $this->load->view('private/fees/fees_plan',['fhl'=>$fees_head_list,'category'=>$category,'class'=>$class]);
 
     }

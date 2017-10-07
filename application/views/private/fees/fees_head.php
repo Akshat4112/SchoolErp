@@ -67,12 +67,8 @@
                 </select>
             </div>
         </div>
-
-
         <?php echo form_submit(['name' => 'submit', 'value' => 'Save', 'class' => 'btn btn-primary btn-sm',
             'style' => 'margin-left:180px; margin-top:0px;']); ?>
-
-
     </div>
     <div class="col-lg-6">
         <div class="checkbox">
@@ -146,6 +142,18 @@
                             <td><?php echo $fees_head_det->group_name?></td>
                             <td><?php echo $fees_head_det->account_name ?></td>
                             <td><?php echo $fees_head_det->frequency ?></td>
+                            <td><?php echo $fees_head_det->january?></td>
+                            <td><?php echo $fees_head_det->february?></td>
+                            <td><?php echo $fees_head_det->march?></td>
+                            <td><?php echo $fees_head_det->april?></td>
+                            <td><?php echo $fees_head_det->may?></td>
+                            <td><?php echo $fees_head_det->june?></td>
+                            <td><?php echo $fees_head_det->july?></td>
+                            <td><?php echo $fees_head_det->august?></td>
+                            <td><?php echo $fees_head_det->september?></td>
+                            <td><?php echo $fees_head_det->october?></td>
+                            <td><?php echo $fees_head_det->november?></td>
+                            <td><?php echo $fees_head_det->december?></td>
                         </tr>
                     <?php endforeach; ?>
                 <?php else: ?>
