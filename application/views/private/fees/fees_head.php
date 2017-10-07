@@ -77,40 +77,40 @@
     <div class="col-lg-6">
         <div class="checkbox">
             <label>
-                <input  type="checkbox" value="jan" class="monthly quaterly"> Jan
+                <input  type="checkbox" value="1" class="monthly quaterly" name="january"> Jan
             </label><br>
             <label>
-                <input type="checkbox" value="feb" class="monthly bi_monthly"> Feb
+                <input type="checkbox" value="1" class="monthly bi_monthly" name="february"> Feb
             </label><br>
             <label>
-                <input type="checkbox" value="mar" class="monthly"> Mar
+                <input type="checkbox" value="1" class="monthly" name="march"> Mar
             </label><br>
             <label>
-                <input type="checkbox" value="apr" class="monthly quaterly four_monthly half_yearly annual bi_monthly one_time"> Apr
+                <input type="checkbox" value="1" class="monthly quaterly four_monthly half_yearly annual bi_monthly one_time" name="april"> Apr
             </label><br>
             <label>
-                <input type="checkbox" value="may" class="monthly"> May
+                <input type="checkbox" value="1" class="monthly" name="may"> May
             </label><br>
             <label>
-                <input type="checkbox" value="jun" class="monthly bi_monthly"> Jun
+                <input type="checkbox" value="1" class="monthly bi_monthly" name="june"> Jun
             </label><br>
             <label>
-                <input type="checkbox" value="jul" class="monthly quaterly"> Jul
+                <input type="checkbox" value="1" class="monthly quaterly" name="july"> Jul
             </label><br>
             <label>
-                <input type="checkbox" value="aug" class="monthly four_monthly bi_monthly"> Aug
+                <input type="checkbox" value="1" class="monthly four_monthly bi_monthly" name="august"> Aug
             </label><br>
             <label>
-                <input type="checkbox" value="sep" class="monthly"> Sep
+                <input type="checkbox" value="1" class="monthly" name="september"> Sep
             </label><br>
             <label>
-                <input type="checkbox" value="oct" class="monthly quaterly half_yearly bi_monthly"> Oct
+                <input type="checkbox" value="1" class="monthly quaterly half_yearly bi_monthly" name="october"> Oct
             </label><br>
             <label>
-                <input type="checkbox" value="nov" class="monthly"> Nov
+                <input type="checkbox" value="1" class="monthly" name="november"> Nov
             </label><br>
             <label>
-                <input type="checkbox" value="dec" class="monthly four_monthly bi_monthly"> Dec
+                <input type="checkbox" value="1" class="monthly four_monthly bi_monthly" name="december"> Dec
             </label>
         </div>
     </div>
