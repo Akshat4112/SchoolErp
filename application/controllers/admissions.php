@@ -435,6 +435,7 @@ class Admissions extends MY_Controller
             $stu_list = $this->sm->student_list();
             $this->load->view('private/admissions/admission_view', ['stu_det' => $stu_list]);
         }
+        $this->session->set_flashdata('Item',$stu_list);
     }
     public function export()
     {
