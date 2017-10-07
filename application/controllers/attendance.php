@@ -25,8 +25,6 @@ class Attendance extends MY_Controller
     public function attend_view()
     {
         if ($this->form_validation->run('summary')) {
-
-
             $data = $this->input->post();
             $this->load->model('get_model', 'gm');
             $r = $this->gm->attendance_history($data['summary_on']);
