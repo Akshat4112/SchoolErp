@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 04, 2017 at 09:39 PM
+-- Generation Time: Oct 09, 2017 at 08:11 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -263,7 +263,9 @@ INSERT INTO `class` (`class`, `prefix`, `start_from`, `incharge`, `class_id`) VA
 (5, '', '0000-00-00', 'mr nicshay', 35),
 (6, 'th', '0000-00-00', 'xyz', 36),
 (13, 'th', '2017-09-20', 'Mr. Mittal', 37),
-(15, 'th', '0000-00-00', 'Mr. Joraver', 38);
+(15, 'th', '0000-00-00', 'Mr. Joraver', 38),
+(1, 'ok', '2016-10-30', 'Mr. Joraver', 39),
+(99, 'th', '2017-12-31', 'Ms Ridhima', 40);
 
 -- --------------------------------------------------------
 
@@ -362,17 +364,32 @@ CREATE TABLE `fees_head` (
   `fees_heading` text NOT NULL,
   `group_name` text NOT NULL,
   `account_name` text NOT NULL,
-  `frequency` text NOT NULL
+  `frequency` text NOT NULL,
+  `january` int(11) DEFAULT NULL,
+  `february` int(11) DEFAULT NULL,
+  `march` int(11) DEFAULT NULL,
+  `april` int(11) DEFAULT NULL,
+  `may` int(11) DEFAULT NULL,
+  `june` int(11) DEFAULT NULL,
+  `july` int(11) DEFAULT NULL,
+  `august` int(11) DEFAULT NULL,
+  `september` int(11) DEFAULT NULL,
+  `october` int(11) DEFAULT NULL,
+  `december` int(11) DEFAULT NULL,
+  `november` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `fees_head`
 --
 
-INSERT INTO `fees_head` (`fees_head_id`, `fees_heading`, `group_name`, `account_name`, `frequency`) VALUES
-(16, 'Misc Fees', 'Misc. Fees', 'Banks Account', 'bi_monthly'),
-(17, 'mn', 'Misc. Fees', 'Banks Account', 'annual'),
-(18, 'library', 'Misc. Fees', 'Banks Account', 'four_monthly');
+INSERT INTO `fees_head` (`fees_head_id`, `fees_heading`, `group_name`, `account_name`, `frequency`, `january`, `february`, `march`, `april`, `may`, `june`, `july`, `august`, `september`, `october`, `december`, `november`) VALUES
+(27, 'fh1', 'test', 'Banks Account', 'monthly', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+(28, 'fh2', 'Misc. Fees', 'Banks Account', 'half_yearly', NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL),
+(29, 'fh2', 'Misc. Fees', 'Banks Account', 'half_yearly', NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL),
+(30, 'fh3', 'test', 'Banks Account', 'monthly', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+(31, 'njkiu', 'mkmk', 'Banks Account', 'half_yearly', NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL),
+(32, 'library', '', 'Banks Account', 'annual', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -384,15 +401,6 @@ CREATE TABLE `fees_head_group` (
   `fees_head_group_id` int(11) NOT NULL,
   `fees_head_group_name` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `fees_head_group`
---
-
-INSERT INTO `fees_head_group` (`fees_head_group_id`, `fees_head_group_name`) VALUES
-(12, 'Misc. Fees'),
-(14, 'test'),
-(15, 'Test1');
 
 -- --------------------------------------------------------
 
@@ -428,7 +436,11 @@ INSERT INTO `fees_plan_category` (`category_id`, `category_name`) VALUES
 (17, 'OBC'),
 (18, 'Old Student Without Uniform'),
 (19, 'General'),
-(20, 'Test');
+(20, 'Test'),
+(21, 'cat1'),
+(22, 'cat2'),
+(23, 'cat3'),
+(24, 'cat4');
 
 -- --------------------------------------------------------
 
@@ -492,7 +504,11 @@ INSERT INTO `fees_reciept` (`reciept_id`, `date`, `reciept_no`, `admission_no`, 
 (41, '0000-00-00', 8, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (42, '0000-00-00', 8, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (43, '0000-00-00', 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(44, '0000-00-00', 8, 8, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0);
+(44, '0000-00-00', 8, 8, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0),
+(45, '0000-00-00', 8, 288, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(46, '0000-00-00', 8, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(47, '0000-00-00', 8, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(48, '0000-00-00', 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -683,7 +699,8 @@ INSERT INTO `route` (`route_id`, `route_name`, `freq`, `january`, `february`, `m
 (65, 'fees head kasjd', 'half_yearly', NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL),
 (66, 'fees head kasjda', 'quaterly', 1, NULL, NULL, 1, NULL, NULL, 1, NULL, NULL, 1, NULL, NULL),
 (67, 'fees head kasjda', 'quaterly', 1, NULL, NULL, 1, NULL, NULL, 1, NULL, NULL, 1, NULL, NULL),
-(68, 'tesy', 'half_yearly', NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL);
+(68, 'tesy', 'half_yearly', NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL),
+(69, 'kajsd', 'custom', NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -845,7 +862,8 @@ INSERT INTO `student_leaving_certificate` (`slc_id`, `name`, `f_name`, `m_name`,
 (4, 'Akshat', '', '', 0, '', '0000-00-00', '0000-00-00', '0000-00-00', '', 0, 0, 0, ''),
 (5, 'Satyam', '', '', 0, '', '0000-00-00', '0000-00-00', '0000-00-00', '', 0, 0, 0, ''),
 (6, 'Aman', 'Naman', 'Swati', 8, 'Simpkins School', '0000-00-00', '0000-00-00', '0000-00-00', 'aksjdkajskjdak', 8, 2018, 0, 'general'),
-(7, 'Aman', 'Naman', 'Swati', 8, 'Simpkins School', '0000-00-00', '0000-00-00', '0000-00-00', 'aksjdkajskjdak', 8, 2018, 0, 'general');
+(7, 'Aman', 'Naman', 'Swati', 8, 'Simpkins School', '0000-00-00', '0000-00-00', '0000-00-00', 'aksjdkajskjdak', 8, 2018, 0, 'general'),
+(8, 'Akshat', '', '', 0, '', '0000-00-00', '0000-00-00', '0000-00-00', '', 0, 0, 0, '');
 
 --
 -- Indexes for dumped tables
@@ -1069,7 +1087,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `class`
 --
 ALTER TABLE `class`
-  MODIFY `class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 --
 -- AUTO_INCREMENT for table `contact_us`
 --
@@ -1104,22 +1122,22 @@ ALTER TABLE `feedback`
 -- AUTO_INCREMENT for table `fees_head`
 --
 ALTER TABLE `fees_head`
-  MODIFY `fees_head_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `fees_head_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 --
 -- AUTO_INCREMENT for table `fees_head_group`
 --
 ALTER TABLE `fees_head_group`
-  MODIFY `fees_head_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `fees_head_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `fees_plan_category`
 --
 ALTER TABLE `fees_plan_category`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `fees_reciept`
 --
 ALTER TABLE `fees_reciept`
-  MODIFY `reciept_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `reciept_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 --
 -- AUTO_INCREMENT for table `gatepass`
 --
@@ -1159,7 +1177,7 @@ ALTER TABLE `receipt`
 -- AUTO_INCREMENT for table `route`
 --
 ALTER TABLE `route`
-  MODIFY `route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 --
 -- AUTO_INCREMENT for table `route_plan`
 --
@@ -1179,7 +1197,7 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `student_leaving_certificate`
 --
 ALTER TABLE `student_leaving_certificate`
-  MODIFY `slc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `slc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
