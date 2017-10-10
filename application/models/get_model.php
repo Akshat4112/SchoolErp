@@ -197,5 +197,12 @@ class Get_model extends MY_Model
         $res = $query->result_array();
         return $res;
     }
+    public function get_fees_plan()
+    {
+        $query = $this->db->select('*')
+                            ->get('fees_plan');
+        $res = $query->result_array();
+        return $res;
+    }
 
 }

@@ -100,6 +100,18 @@
                 </tr>
                 </thead>
                 <tbody>
+                    <?php
+                        foreach ($fees as $fee) {
+                            ?>
+                        <tr class="">
+                        <td><?php echo $fee['class'] ?></td>
+                        <td><?php echo $fee['category'] ?></td>
+                        <td><?php echo $fee['fees_heading'] ?></td>
+                        <td><?php echo $fee['value'] ?></td>
+                    </tr>
+                    <?php
+                        }
+                    ?>
 
                 </tbody>
             </table>

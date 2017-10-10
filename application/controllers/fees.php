@@ -172,9 +172,17 @@ class Fees extends MY_Controller{
         $fees_head_list = $this->dropdown_db('fees_heading','fees_head');
         $data=$this->input->post();
         unset($data['submit']);
-//        print_r($data);
+       //print_r($data);
+        if(!empty($data))
+        {
+       $this->load->model('insert_model','im');
+       $this->im->insert_fees_plan($data);
+   }
+   $this->load->model('get_model','gm');
+   $fees = $this->gm->get_fees_plan();
+
 //        print_r(json_encode($data));
-        $this->load->view('private/fees/fees_plan',['fhl'=>$fees_head_list,'category'=>$category,'class'=>$class]);
+        $this->load->view('private/fees/fees_plan',['fhl'=>$fees_head_list,'category'=>$category,'class'=>$class,'fees'=>$fees]);
     }
 
     public function fees_plan_category(){
