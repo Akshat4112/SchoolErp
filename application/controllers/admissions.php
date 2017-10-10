@@ -460,18 +460,18 @@ class Admissions extends MY_Controller
         $student_data = $this->sm->student_list();
         $excel_row = 2;
         foreach ($student_data as $row){
-            $object->getActiveSheet()->setCellValueByColumnAndRow(0,$excel_row,$row->admission_no);
-            $object->getActiveSheet()->setCellValueByColumnAndRow(1,$excel_row,$row->student_first_name);
-            $object->getActiveSheet()->setCellValueByColumnAndRow(2,$excel_row,$row->fathers_first_name);
-            $object->getActiveSheet()->setCellValueByColumnAndRow(3,$excel_row,$row->mothers_first_name);
-            $object->getActiveSheet()->setCellValueByColumnAndRow(4,$excel_row,$row->student_class);
-            $object->getActiveSheet()->setCellValueByColumnAndRow(5,$excel_row,$row->student_section);
-            $object->getActiveSheet()->setCellValueByColumnAndRow(6,$excel_row,$row->student_roll_no);
-            $object->getActiveSheet()->setCellValueByColumnAndRow(7,$excel_row,$row->student_dob);
-            $object->getActiveSheet()->setCellValueByColumnAndRow(8,$excel_row,$row->f_mobile);
-            $object->getActiveSheet()->setCellValueByColumnAndRow(9,$excel_row,$row->route);
-            $object->getActiveSheet()->setCellValueByColumnAndRow(10,$excel_row,$row->scholarship_no);
-            $object->getActiveSheet()->setCellValueByColumnAndRow(11,$excel_row,$row->fees_balance);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(0,$excel_row,$row['admission_no']);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(1,$excel_row,$row['student_first_name']);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(2,$excel_row,$row['fathers_first_name']);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(3,$excel_row,$row['mothers_first_name']);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(4,$excel_row,$row['student_class']);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(5,$excel_row,$row['student_section']);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(6,$excel_row,$row['student_roll_no']);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(7,$excel_row,$row['student_dob']);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(8,$excel_row,$row['f_mobile']);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(9,$excel_row,$row['route']);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(10,$excel_row,$row['scholarship_no']);
+            $object->getActiveSheet()->setCellValueByColumnAndRow(11,$excel_row,$row['fees_balance']);
             $excel_row++;
         }
         $object_writer =PHPExcel_IOFactory::createWriter($object,'Excel5');
