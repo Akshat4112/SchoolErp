@@ -7,12 +7,11 @@
  */?>
 <div class="container">
 <div class="row">
-
     <div class="col-lg-3">
-        <?php echo form_open('enquiry/new', ['class' => 'form-horizontal']); ?>
+        <?php echo form_open('enquiry', ['class' => 'form-horizontal']); ?>
         <div class="form-group">
-            <label for="inputText" class="col-lg-2 control-label">From</label>
-            <div class="col-lg-10">
+            <label for="inputText" class="col-lg-3 control-label">From</label>
+            <div class="col-lg-9">
                 <input type="date" name="student_dob" class="form-control">
                 <?php echo form_error('student_dob'); ?>
             </div>
@@ -20,19 +19,21 @@
     </div>
     <div class="col-lg-3">
         <div class="form-group">
-            <label for="inputText" class="col-lg-2 control-label">To</label>
+            <label for="inputText" class="col-lg-2 control-label" style="margin-top: 9px;">To</label>
             <div class="col-lg-10">
                 <input type="date" name="student_dob" class="form-control">
                 <?php echo form_error('student_dob'); ?>
             </div>
         </div>
+    </div>
+    <div class="col-lg-3">
+        <input type="submit" class="btn btn-primary btn-sm" name="submit" value="Search" style="margin-top: 2px;">
     </div>
     <div class="col-lg-1">
     </div>
 </div>
 <div class="row">
-    <div class="col-lg-1"></div>
-    <div class="col-lg-10">
+    <div class="col-lg-12">
         <table class="table table-hover table-bordered">
             <thead>
             <tr class="">
@@ -54,6 +55,5 @@
             </tbody>
         </table>
     </div>
-    <div class="col-lg-1"></div>
 </div>
 </div>
