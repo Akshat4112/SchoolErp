@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputText" class="col-lg-4 control-label">Seeking Admisison in class</label>
+                <label for="inputText" class="col-lg-4 control-label">Admisison in class</label>
                 <div class="col-lg-8">
                     <?php echo form_input(['name' => 'student_first_name', 'class' => 'form-control',
                         'placeholder' => 'Admission in class',

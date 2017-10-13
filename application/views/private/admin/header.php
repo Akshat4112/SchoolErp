@@ -17,7 +17,7 @@
     <link href="<?= base_url() ?>public/assets/css/font-awesome.min.css" rel="stylesheet">
     <link href='<?= base_url() ?>public/assets/css/google_fonts.css' rel='stylesheet' type='text/css'>
     <title>
-        Admissions
+        Admin
     </title>
 </head>
 <body>

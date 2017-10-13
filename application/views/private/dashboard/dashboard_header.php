@@ -5,12 +5,13 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
     <link href="<?= base_url() ?>public/assets/css/redable.css" rel="stylesheet"/>
+    <link href="<?= base_url() ?>public/assets/css/styles.css" rel="stylesheet"/>
     <link href='<?= base_url() ?>public/assets/css/google_fonts.css' rel='stylesheet' type='text/css'>
     <title>
         Dashboard
     </title>
 </head>
-<body>
+<body class="back_image">
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header"><a class="navbar-brand"  href="<?= site_url('dashboard/') ?>">Dashboard</a>
