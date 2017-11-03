@@ -90,7 +90,7 @@
             </div>
         </div>
         <div class="col-lg-6">
-            <table class="table table-hover table-bordered">
+            <table class="table table-hover table-bordered" style="">
                 <thead>
                 <tr class="">
                     <th>Class</th>
@@ -99,7 +99,7 @@
                     <th>Value</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody style="">
                     <?php
                         foreach ($fees as $fee) {
                             ?>

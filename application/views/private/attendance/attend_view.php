@@ -81,7 +81,7 @@ $it->attachIterator(new ArrayIterator($dataa));
                         <td><?php echo $student_det[0]['section']; ?></td>
                         <td><?php echo $student_det[0]['count(status)']; ?></td> 
                         <?php $i++; ?>
-                        <td><?php echo $student_det[1]['count(status)']; ?></td>
+                        <td class="text-danger"><?php echo $student_det[1]['count(status)']; ?></td>
                         <td><?php echo $student_det[2]['count(status)']; ?></td>
                         </tr>
                         <?php endforeach; ?>
