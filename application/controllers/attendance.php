@@ -58,9 +58,9 @@ class Attendance extends MY_Controller
             }
 //            print("\n");
 //            print_r($r);
-            $this->load->view('private/attendance/summary/summary.php', ['data' => $r, 'i' => $i]);
+            $this->load->view('private/attendance/summary/Summary.php', ['data' => $r, 'i' => $i]);
         }else{
-            $this->load->view('private/attendance/summary/summary.php', ['data' => null, 'i' => null]);
+            $this->load->view('private/attendance/summary/Summary.php', ['data' => null, 'i' => null]);
         }
     }
 
