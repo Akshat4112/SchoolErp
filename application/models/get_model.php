@@ -205,4 +205,41 @@ class Get_model extends MY_Model
         return $res;
     }
 
+    public function fees_structure($data)
+    {
+        $query = $this->db->select('value')
+                            ->select('fees_heading')
+                            ->where('category',$data['catrgory'])
+                            ->where('class',$data['class'])
+                            ->get('fees_plan');
+        $res = $query->result_array();
+        //return $res;
+        $i =0;
+        foreach ($res as $r) {
+        $query = $this->db->select('frequency')
+                            ->where('fees_heading',$r['fees_heading'])
+                            ->select('january')
+                            ->select('february')
+                            ->where('january','1')
+                            ->where('february','1')
+                            ->get('fees_head');
+        $result = $query->result_array();
+
+        $new[$i] = $result;
+        $new[$i]['value']=$r['value'];
+        $i++;
+        //print_r($result);
+        }
+        return $new;
+    }
+    public function enquiry_summary($date)
+    {   
+        $query = $this->db->select('enquiry_no')
+                            ->select('class')
+                            //->where('student_id',$si)
+                            ->where('date',$date)
+                            ->get('enquiry');
+        $res = $query->result_array();
+        return $res;
+    }
 }
