@@ -14,6 +14,12 @@ class Insert_model extends MY_Model
 }
 	}
 
+	public function submit_enquiry($data)
+	{
+		$this->db->insert('enquiry',$data);
+
+	}
+
 }
 
 ?>

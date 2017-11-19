@@ -54,12 +54,15 @@
             <tbody>
                 <?php if (count($data)): ?>
 
-                <?php for($k=0;$k<$i;$k++){ ?>
+                <?php for($k=0;$k<$i;$k++){ 
+                    $count = count($data[$k]);?>
                     <tr class="">
-                    <?php if(!empty($data[$k])) {?>
-                    <td><?php echo $data[$k][0]['enquiry_no'];?></td>
-                    <td><?php echo $data[$k][0]['class'];?></td>
-                    <?php } ?>
+                    <?php $j=0; while($j<$count) {?>
+                    <tr class="">
+                    <td><?php echo $data[$k][$j]['enquiry_no'];?></td>
+                    <td><?php echo $data[$k][$j]['class'];?></td>
+                </tr>
+                    <?php $j++;} ?>
                     </tr>
                 <?php } ?>
             <?php else: ?>
