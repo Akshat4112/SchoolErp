@@ -68,7 +68,8 @@
             <div class="form-group">
                 <label for="inputText" class="col-lg-4 control-label">Photo</label>
                 <div class="col-lg-8">
-                <input type="file" class="form-control" name="photo">
+                    <input type="file" accept="image/*" capture="camera">
+                <!--input type="file" class="form-control" name="photo"-->
                 </div><br>
             </div>
             <div class="form-group">

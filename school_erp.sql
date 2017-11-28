@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.7.0
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2017 at 08:11 AM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 7.0.9
+-- Generation Time: Nov 28, 2017 at 06:46 AM
+-- Server version: 10.1.25-MariaDB
+-- PHP Version: 7.1.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -328,6 +330,47 @@ CREATE TABLE `debit_note` (
   `amount` int(10) NOT NULL,
   `short_narration` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `enquiry`
+--
+
+CREATE TABLE `enquiry` (
+  `enquiry_no` int(225) NOT NULL,
+  `class` varchar(11) NOT NULL,
+  `first_name` varchar(11) NOT NULL,
+  `last_name` varchar(11) NOT NULL,
+  `dob` varchar(11) NOT NULL,
+  `gender` varchar(11) NOT NULL,
+  `address1` varchar(225) NOT NULL,
+  `address2` varchar(225) NOT NULL,
+  `city` varchar(225) NOT NULL,
+  `photo` varchar(225) NOT NULL,
+  `contact_no` int(11) NOT NULL,
+  `last_school` varchar(225) NOT NULL,
+  `last_exam` varchar(225) NOT NULL,
+  `year` int(11) NOT NULL,
+  `date` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `enquiry`
+--
+
+INSERT INTO `enquiry` (`enquiry_no`, `class`, `first_name`, `last_name`, `dob`, `gender`, `address1`, `address2`, `city`, `photo`, `contact_no`, `last_school`, `last_exam`, `year`, `date`) VALUES
+(11, '1', 'ridhima', 'garg', '2017-11-19', 'male', '', '', '', '', 0, '', '', 0, ''),
+(11, '8', 'ridhima', 'garg', '2017-11-21', 'male', '', '', '', '', 0, '', '', 0, ''),
+(11, '8', 'ridhima', 'garg', '2017-11-21', 'male', '', '', '', '', 0, '', '', 0, ''),
+(11, '8', 'ridhima', 'garg', '2017-11-21', 'male', '', '', '', '', 0, '', '', 0, ''),
+(11, '8', 'ridhima', 'garg', '2017-11-21', 'male', '', '', '', '', 0, '', '', 0, ''),
+(11, '8', 'ridhima', 'garg', '2017-11-21', 'male', '', '', '', '', 0, '', '', 0, ''),
+(11, '8', 'ridhima', 'garg', '2017-11-21', 'male', '', '', '', '', 0, '', '', 0, '2017-11-14'),
+(10, '7', 'akshat', 'gupta', '2017-11-14', 'male', '', '', '', '', 0, '', '', 0, '2017-11-14'),
+(20, '2', 'mini', '', '', 'male', '', '', '', '', 0, '', '', 0, '2017-11-19'),
+(56, '3', 'ridhu', 'garg', '', 'male', '', '', '', '', 0, '', '', 0, '2017-11-19'),
+(87, '4', 'deeku', '', '', 'male', '', '', '', '', 0, '', '', 0, '2017-11-19');
 
 -- --------------------------------------------------------
 
@@ -1127,7 +1170,7 @@ ALTER TABLE `fees_head`
 -- AUTO_INCREMENT for table `fees_head_group`
 --
 ALTER TABLE `fees_head_group`
-  MODIFY `fees_head_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `fees_head_group_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `fees_plan_category`
 --
@@ -1197,7 +1240,8 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `student_leaving_certificate`
 --
 ALTER TABLE `student_leaving_certificate`
-  MODIFY `slc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `slc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
