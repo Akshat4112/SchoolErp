@@ -1,7 +1,8 @@
 # SchoolERP
 :school:
 
-Project is hosted at http://schoolerp.futureheadtech.com
+Project is hosted at http://schoolerp.futureheadtech.com 
+
 SchoolERP provides a suite of software covering all parts of a schools' administration, managing registration and admissions, from behaviour and achievement [As part of CCE in Examination module], managing Library, Fee, Accounts, Front - Office, Inventory, Time Table, Infirmary, Hostel & Mess, HR & Payroll and Transport .
 
 Complete application is created in such a manner that at almost all possible places, you may play with records in your style, you may create master records as per your need.
