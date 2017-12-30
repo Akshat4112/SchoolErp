@@ -1,12 +1,12 @@
-<IfModule mod_rewrite.c> 
+<IfModule mod_rewrite.c>
  RewriteEngine On
- #rename "codeIgniter213" with your application directory 
- #For example you rename the entire CodeIgniter application as "mysite" 
- #then, the "RewriteBase /" will be like this "RewriteBase /mysite" 
+ #rename "codeIgniter213" with your application directory
+ #For example you rename the entire CodeIgniter application as "mysite"
+ #then, the "RewriteBase /" will be like this "RewriteBase /mysite"
  #same as at line number 10, "RewriteRule ^(.*)$ /codeIgniter213/index.php #/$1 [L]" will be like this "RewriteRule ^(.*)$ /mysite/index.php/$1 [L]"
 
- RewriteBase /SchoolErp
+ RewriteBase /SchoolERP
  RewriteCond %{REQUEST_FILENAME} !-f
  RewriteCond %{REQUEST_FILENAME} !-d
- RewriteRule ^(.*)$ /SchoolErp/index.php/$1 [L]
+ RewriteRule ^(.*)$ /SchoolERP/index.php/$1 [L]
 </IfModule>
