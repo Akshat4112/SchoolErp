@@ -242,4 +242,13 @@ class Get_model extends MY_Model
         $res = $query->result_array();
         return $res;
     }
+    public function get_fees_plan_reciept($data)
+    {
+        $query = $this->db->select("*")
+                        ->where('class',$data[0]['student_class'])
+                        ->where('category',$data[0]['category'])
+                        ->get('fees_plan');
+        $res = $query->result_array();
+        return $res;
+    }
 }

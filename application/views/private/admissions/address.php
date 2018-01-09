@@ -96,14 +96,12 @@ declare(strict_types=1);
                     <?php echo $error ?>
                 </div>
             <?php endif; ?>
-            <?php if(form_error('house_no')){
-                $error = form_error('house_no');
-            echo '<div class="alert alert-dismissible alert-danger">
-                '.$error.'</div>';} ?>
-            <?php if(form_error('city')){
-                $error = form_error('city');
-                echo '<div class="alert alert-dismissible alert-danger">
-                '.$error.'</div>';} ?>
+            <?php if($error  = form_error('house_no')): ?>
+                <div class="alert alert-dismissible alert-warning">
+                    <?php echo $error ?>
+                </div>
+            <?php endif; ?>
+
         </div>
     </div>
 </div>
