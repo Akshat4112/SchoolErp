@@ -10,13 +10,13 @@
     <div class="row">
         <p style="font-size: 20px; margin-top:0px;" class="">Enter Terms to be Added</p>
         <div class="col-lg-4">
-            <?php echo form_open('admin/masters_caste', ['class' => 'form-horizontal']); ?>
+            <?php echo form_open('exams/term_master', ['class' => 'form-horizontal']); ?>
             <div class="form-group">
                 <label for="inputText" class="col-lg-3 control-label">Term</label>
                 <div class="col-lg-7">
-                    <?php echo form_input(['name' => 'caste_name', 'class' => 'form-control',
+                    <?php echo form_input(['name' => 'term_name', 'class' => 'form-control',
                         'placeholder' => 'Enter Term',
-                        'value' => set_value('subject_name')]);
+                        'value' => set_value('term_name')]);
                     ?>
                 </div>
             </div>

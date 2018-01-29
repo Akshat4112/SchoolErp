@@ -483,6 +483,14 @@ $config=[
             'label'=>'Name',
             'rules'=>'required'
         ]
+    ],
+    [
+        'subject'=>
+        [
+            'field'=>'subject_name',
+            'label'=>'Subject',
+            'rules'=>'required'
+        ]
     ]
 
 ];

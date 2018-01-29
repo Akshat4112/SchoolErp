@@ -3,15 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Generation Time: Jan 29, 2018 at 09:39 AM
+-- Generation Time: Jan 29, 2018 at 10:39 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
-=======
--- Generation Time: Jan 09, 2018 at 02:35 PM
--- Server version: 10.1.25-MariaDB
--- PHP Version: 7.1.7
->>>>>>> 0ca749e04cdaec6ac7322abe7320984359cdea2f
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -235,7 +229,8 @@ INSERT INTO `caste` (`caste_id`, `caste_name`) VALUES
 (41, 'Muslim'),
 (42, 'Christian'),
 (43, 'Defence'),
-(44, 'Sikhs');
+(44, 'Sikhs'),
+(45, 'hello');
 
 -- --------------------------------------------------------
 
@@ -431,38 +426,9 @@ CREATE TABLE `fees_head_group` (
 --
 
 INSERT INTO `fees_head_group` (`fees_head_group_id`, `fees_head_group_name`) VALUES
-<<<<<<< HEAD
 (18, 'General'),
 (19, 'uniform'),
 (20, 'g1');
-=======
-(2, 'g1'),
-(3, 'g2');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `fees_manage`
---
-
-CREATE TABLE `fees_manage` (
-  `s_id` int(10) NOT NULL,
-  `s_name` varchar(255) NOT NULL,
-  `class` int(10) NOT NULL,
-  `admission_no` int(11) NOT NULL,
-  `category` varchar(255) NOT NULL,
-  `fees_head` varchar(255) NOT NULL,
-  `total_pay` int(10) NOT NULL,
-  `remaining` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `fees_manage`
---
-
-INSERT INTO `fees_manage` (`s_id`, `s_name`, `class`, `admission_no`, `category`, `fees_head`, `total_pay`, `remaining`) VALUES
-(294, 'ridhima', 3, 0, 'SC', '', 0, 0);
->>>>>>> 0ca749e04cdaec6ac7322abe7320984359cdea2f
 
 -- --------------------------------------------------------
 
@@ -482,7 +448,6 @@ CREATE TABLE `fees_plan` (
 --
 
 INSERT INTO `fees_plan` (`fees_heading`, `value`, `category`, `class`) VALUES
-<<<<<<< HEAD
 ('fh1', 200, 'SC', '3'),
 ('fh1', 200, 'SC', '3'),
 ('fh1', 200, 'SC', '4'),
@@ -531,10 +496,6 @@ INSERT INTO `fees_plan` (`fees_heading`, `value`, `category`, `class`) VALUES
 ('Admission Fees', 98, 'New', '2'),
 ('Admission Fees', 98, 'New', '3'),
 ('fh1', 500, 'New', '2');
-=======
-('fh1', 500, 'SC', '3'),
-('fh3', 500, 'Gener', '3');
->>>>>>> 0ca749e04cdaec6ac7322abe7320984359cdea2f
 
 -- --------------------------------------------------------
 
@@ -624,7 +585,6 @@ INSERT INTO `fees_reciept` (`reciept_id`, `date`, `reciept_no`, `admission_no`, 
 (46, '0000-00-00', 8, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (47, '0000-00-00', 8, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (48, '0000-00-00', 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-<<<<<<< HEAD
 (49, '2017-10-16', 90, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (50, '0000-00-00', 90, 8, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0),
 (51, '0000-00-00', 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
@@ -632,27 +592,6 @@ INSERT INTO `fees_reciept` (`reciept_id`, `date`, `reciept_no`, `admission_no`, 
 (53, '0000-00-00', 7, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (54, '0000-00-00', 7, 9, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0),
 (55, '0000-00-00', 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-=======
-(49, '2017-12-13', 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(50, '2017-12-14', 34, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(51, '0000-00-00', 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(52, '0000-00-00', 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(53, '0000-00-00', 36, 2, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0),
-(54, '0000-00-00', 36, 2, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0),
-(55, '0000-00-00', 36, 2, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0),
-(56, '0000-00-00', 36, 2, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0),
-(57, '0000-00-00', 56, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(58, '0000-00-00', 56, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(59, '0000-00-00', 56, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(60, '0000-00-00', 56, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(61, '0000-00-00', 56, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(62, '0000-00-00', 56, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(63, '0000-00-00', 56, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(64, '0000-00-00', 56, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(65, '0000-00-00', 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(66, '0000-00-00', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(67, '0000-00-00', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
->>>>>>> 0ca749e04cdaec6ac7322abe7320984359cdea2f
 
 -- --------------------------------------------------------
 
@@ -941,7 +880,6 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`student_id`, `student_first_name`, `student_middle_name`, `student_last_name`, `student_class`, `student_section`, `student_roll_no`, `route`, `caste`, `category`, `house`, `student_photo`, `admission_no`, `gender`, `student_dob`, `house_no`, `street_name`, `other_info`, `zip_code`, `city`, `state`, `country`, `fathers_first_name`, `fathers_middle_name`, `fathers_last_name`, `f_mobile`, `f_qual`, `f_occu`, `f_dob`, `f_photo`, `mothers_first_name`, `mothers_middle_name`, `mothers_last_name`, `m_mobile`, `m_qual`, `m_occu`, `m_dob`, `m_photo`, `parents_wedding_date`, `las`, `remarks`, `last_exam_given`, `year`, `status`, `marks`, `board`, `bg`, `vl`, `vr`, `height`, `weight`, `dental_hy`, `tc`, `cc`, `report_cc`, `dob_certificate`, `admission_form_no`, `date_admission`, `ledger_balance`, `fees_balance`, `comments`, `hostel_room_no`, `bed_no`, `scholarship_no`, `aadhar_uid`, `family`, `status_adm`, `discontinue_date`) VALUES
-<<<<<<< HEAD
 (283, 'Akshat', '', 'Gupta', '3', 'B', 5, '300', 'Hindu', 'General', 'Yellow', 0, 1, 'Male', '1995-04-12', '7', '', '', '', 'agra', '', '', 'alok', '', '', 0, '', 'business', '0000-00-00', '', 'varsha', '', '', 0, '', 'business', '0000-00-00', '', '0000-00-00', 'simpkins school', '', '', '0000-00-00', 'pass', 0, '', 'a+', 0, 0, 0, 0, '', 0, 0, 0, 0, 75, '0000-00-00', 0, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
 (284, 'Abhinav', '', 'Singh', '2', 'A', 0, '', 'Hindu', 'General', 'Blue', 0, 2, 'Male', '0000-00-00', '76', '', '', '', 'Newyork', '', '', 'XYZA', '', '', 0, '', 'business', '0000-00-00', '', 'BCDE', '', '', 0, '', 'business', '0000-00-00', '', '0000-00-00', 'St. Peters', '', '', '0000-00-00', 'pass', 0, '', 'a+', 0, 0, 0, 0, '', 0, 0, 0, 0, 1623, '0000-00-00', 735, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
 (285, 'Akshat', '', 'Gupta', '4', 'B', 5, 'Balaji Puram', 'Hindu', 'General', 'Green', 0, 3, 'Male', '1995-04-12', 'b21', '', '', '', 'Agra', '', '', 'ak', '', '', 0, '', 'business', '0000-00-00', '', 'va', '', '', 0, '', 'business', '0000-00-00', '', '0000-00-00', 'ss', '', '', '0000-00-00', 'pass', 0, '', 'a+', 0, 0, 0, 0, '', 0, 0, 0, 0, 8123, '0000-00-00', 250, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
@@ -953,10 +891,15 @@ INSERT INTO `student` (`student_id`, `student_first_name`, `student_middle_name`
 (291, 'Akshat', '', '', '2', 'A', 0, '', 'Hindu', 'General', 'Blue', NULL, 9, 'male', '0000-00-00', '', '', '', '', '', '', '', '', '', '', 0, '', '', '0000-00-00', '', '', '', '', 0, '', '', '0000-00-00', '', '0000-00-00', '', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0, 0, 0, 0, 0, '0000-00-00', 0, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
 (293, 'Test', '', '', '2', 'A', 0, '', 'Hindu', 'General', 'Blue', NULL, 10, 'male', '0000-00-00', '', '', '', '', '', '', '', '', '', '', 0, '', '', '0000-00-00', '', '', '', '', 0, '', '', '0000-00-00', '', '0000-00-00', '', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0, 0, 0, 0, 0, '0000-00-00', 0, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
 (294, 'Ram', '', 'Verma', '2', 'C', 0, 'Balaji Puram', 'Hindu', 'General', 'Blue', NULL, 11, 'male', '0000-00-00', 'c 7', '', '', '', 'Agra', '', '', 'Ram', '', 'Verma', 2147483647, '', 'business', '0000-00-00', '', 'Ram', '', 'Verma', 2147483647, '', 'business', '0000-00-00', '', '0000-00-00', 'Verma', '', '', '0000-00-00', 'pass', 0, '', 'a+', 0, 0, 0, 0, '', 0, 0, 0, 0, 923, '0000-00-00', 0, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
-(295, 'abcd', '', '', '2', 'E', 9, 'Shahganj', 'Hindu', 'General', 'Yellow', NULL, 12, 'male', '2017-12-31', '66', '', '', '', 'agra', '', '', '', '', '', 0, '', '', '0000-00-00', '', '', '', '', 0, '', '', '0000-00-00', '', '0000-00-00', '', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0, 0, 0, 0, 0, '0000-00-00', 0, 0, '', '', 0, 0, 0, '', '', '0000-00-00');
-=======
-(298, 'deeku', '', 'gRG', '2', 'C', 90, 'nj', 'Hindu', 'General', 'Blue', NULL, 89, 'femal', '2018-01-09', '', '', '', '', '', '', '', '', '', '', 0, '', '', '0000-00-00', '', '', '', '', 0, '', '', '0000-00-00', '', '0000-00-00', '', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0, 0, 0, 0, 0, '0000-00-00', 0, 0, '', '', 0, 0, 0, '', '', '0000-00-00');
->>>>>>> 0ca749e04cdaec6ac7322abe7320984359cdea2f
+(295, 'abcd', '', '', '2', 'E', 9, 'Shahganj', 'Hindu', 'General', 'Yellow', NULL, 12, 'male', '2017-12-31', '66', '', '', '', 'agra', '', '', '', '', '', 0, '', '', '0000-00-00', '', '', '', '', 0, '', '', '0000-00-00', '', '0000-00-00', '', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0, 0, 0, 0, 0, '0000-00-00', 0, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
+(296, 'Sajal', '', '', '2', 'C', 0, '', 'Hindu', 'General', 'Blue', NULL, 13, 'male', '0000-00-00', '77', '', '', '', 'Agra', '', '', '', '', '', 0, '', '', '0000-00-00', '', '', '', '', 0, '', '', '0000-00-00', '', '0000-00-00', '', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0, 0, 0, 0, 0, '0000-00-00', 0, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
+(297, 'asd', '', '', '2', 'C', 0, '', 'Hindu', 'General', 'Blue', NULL, 14, 'male', '0000-00-00', '', '', '', '', '', '', '', '', '', '', 0, '', '', '0000-00-00', '', '', '', '', 0, '', '', '0000-00-00', '', '0000-00-00', '', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0, 0, 0, 0, 0, '0000-00-00', 0, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
+(298, 'Akshat', '', '', '2', 'C', 0, 'Balaji Puram', 'Hindu', 'General', 'Blue', NULL, 15, 'male', '0000-00-00', '', '', '', '', '', '', '', '', '', '', 0, '', '', '0000-00-00', '', '', '', '', 0, '', '', '0000-00-00', '', '0000-00-00', '', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0, 0, 0, 0, 0, '0000-00-00', 0, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
+(299, 'Sachin', '', '', '2', 'C', 0, '', 'Hindu', 'General', 'Blue', NULL, 16, 'male', '0000-00-00', '99', '', '', '', 'Agra', '', '', 'Fname', '', '', 0, '', 'business', '0000-00-00', '', 'mname', '', '', 0, '', 'business', '0000-00-00', '', '0000-00-00', 'ss', '', '', '0000-00-00', 'pass', 0, '', 'a+', 0, 0, 0, 0, '', 0, 0, 0, 0, 90, '0000-00-00', 0, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
+(300, 'asd', '', '', '2', 'C', 0, '', 'Hindu', 'General', 'Blue', NULL, 17, 'male', '0000-00-00', '1', '', '', '', 'agra', '', '', 'asd', '', '', 0, '', 'business', '0000-00-00', '', 'asjdhasjd', '', '', 0, '', 'business', '0000-00-00', '', '0000-00-00', 'as', '', '', '0000-00-00', 'pass', 0, '', 'a+', 0, 0, 0, 0, '', 0, 0, 0, 0, 0, '0000-00-00', 0, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
+(301, 'Raja', '', '', '2', 'C', 0, '', 'Hindu', 'General', 'Blue', NULL, 18, 'male', '0000-00-00', '', '', '', '', '', '', '', '', '', '', 0, '', '', '0000-00-00', '', '', '', '', 0, '', '', '0000-00-00', '', '0000-00-00', '', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0, 0, 0, 0, 0, '0000-00-00', 0, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
+(302, 'Raja', '', '', '2', 'C', 0, '', 'Hindu', 'General', 'Blue', NULL, 18, 'male', '0000-00-00', '', '', '', '', '', '', '', '', '', '', 0, '', '', '0000-00-00', '', '', '', '', 0, '', '', '0000-00-00', '', '0000-00-00', '', '', '', '0000-00-00', '', 0, '', '', 0, 0, 0, 0, '', 0, 0, 0, 0, 0, '0000-00-00', 0, 0, '', '', 0, 0, 0, '', '', '0000-00-00'),
+(303, 'Raja', '', '', '2', 'C', 0, '', 'Hindu', 'General', 'Blue', NULL, 18, 'male', '0000-00-00', '445', '', '', '', 'dash', '', '', 'abcd', '', '', 0, '', 'business', '0000-00-00', '', 'efgh', '', '', 0, '', 'business', '0000-00-00', '', '0000-00-00', 'DPS', '', '', '0000-00-00', 'pass', 0, '', 'a+', 0, 0, 0, 0, '', 0, 0, 0, 0, 1823, '0000-00-00', 788, 0, '', '', 0, 0, 0, '', '', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -1251,7 +1194,7 @@ ALTER TABLE `bill_sundry`
 -- AUTO_INCREMENT for table `caste`
 --
 ALTER TABLE `caste`
-  MODIFY `caste_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `caste_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 --
 -- AUTO_INCREMENT for table `category`
 --
@@ -1301,11 +1244,7 @@ ALTER TABLE `fees_head`
 -- AUTO_INCREMENT for table `fees_head_group`
 --
 ALTER TABLE `fees_head_group`
-<<<<<<< HEAD
   MODIFY `fees_head_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-=======
-  MODIFY `fees_head_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
->>>>>>> 0ca749e04cdaec6ac7322abe7320984359cdea2f
 --
 -- AUTO_INCREMENT for table `fees_plan_category`
 --
@@ -1315,11 +1254,7 @@ ALTER TABLE `fees_plan_category`
 -- AUTO_INCREMENT for table `fees_reciept`
 --
 ALTER TABLE `fees_reciept`
-<<<<<<< HEAD
   MODIFY `reciept_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
-=======
-  MODIFY `reciept_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
->>>>>>> 0ca749e04cdaec6ac7322abe7320984359cdea2f
 --
 -- AUTO_INCREMENT for table `gatepass`
 --
@@ -1374,11 +1309,7 @@ ALTER TABLE `section`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-<<<<<<< HEAD
-  MODIFY `student_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=296;
-=======
-  MODIFY `student_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=299;
->>>>>>> 0ca749e04cdaec6ac7322abe7320984359cdea2f
+  MODIFY `student_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=304;
 --
 -- AUTO_INCREMENT for table `student_leaving_certificate`
 --

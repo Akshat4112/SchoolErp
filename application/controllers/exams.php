@@ -25,10 +25,19 @@ class Exams extends MY_Controller{
         $this->load->view('private/exams/dashboard');
     }
     public function subject_master(){
-        $this->load->view('private/exams/subject_master');
+        $form_validation='subject';
+        $table_name='subject';
+        $view='exams/subject_master';
+        $field='subject_name';
+        $this->insert_genric($form_validation,$table_name,$view,$field);
     }
+
     public function term_master(){
-        $this->load->view('private/exams/term_master');
+        $form_validation='term';
+        $table_name='terms';
+        $view='exams/term_master';
+        $field='term_name';
+        $this->insert_genric($form_validation,$table_name,$view,$field);
     }
     public function assessment_master(){
         $this->load->view('private/exams/assessment_master');
