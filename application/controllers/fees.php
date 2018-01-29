@@ -213,11 +213,17 @@ class Fees extends MY_Controller{
             $this->load->model('get_model', 'gm');
             $stu_det = $this->gm->admission_form_search($admission_no);
 
+            print $stu_det[0]['student_class'];
+            $fees = $this->gm->get_fees_plan_reciept($stu_det);
+            print_r($fees);
+
             //inserting data in db
             $table_name = 'fees_reciept';
             if($this->insert_data($table_name,$post)) {
+                echo "yeah";
                 $this->load->view('private/fees/fees_receipt', ['stu_det' => $stu_det]);
-            }else{
+            }
+            else{
                 echo 'Problem';
             }
         } else {
@@ -225,5 +231,8 @@ class Fees extends MY_Controller{
             $stu_list = $this->gm->admission_form_search(0);
             $this->load->view('private/fees/fees_receipt', ['stu_det' => $stu_list]);
         }
+    }
+    public function fees_insert(){
+        
     }
 }

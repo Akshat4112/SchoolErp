@@ -116,7 +116,7 @@ declare(strict_types=1);
             <?php endif; ?>
             <?php if(form_error('ledger_balance')){
                 $error = form_error('ledger_balance');
-                echo '<div class="alert alert-dismissible alert-danger">
+                echo '<div class="alert alert-dismissible alert-warning">
                 '.$error.'</div>';} ?>
         </div>
     </div>

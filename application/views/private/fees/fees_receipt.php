@@ -118,6 +118,50 @@
                 margin-left: 10px;">
             </div>
             <?php echo form_close(); ?>
+            <?php echo form_open('fees/fees_insert' , ['class'=>'form-horizontal']);?>
+                <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="jan" value="1" <?php echo set_checkbox('jan', '1'); ?>> Jan
+                </label>
+                <label>
+                    <input type="checkbox" name="feb" value="1" <?php echo set_checkbox('feb', '1'); ?>> Feb
+                </label>
+                <label>
+                    <input type="checkbox" name="mar" value="1" <?php echo set_checkbox('mar', '1'); ?> > Mar
+                </label>
+                <label>
+                    <input type="checkbox" name="apr" value="1" <?php echo set_checkbox('apr', '1'); ?>> Apr
+                </label>
+                <label>
+                    <input type="checkbox" name="may" value="1" <?php echo set_checkbox('may', '1'); ?>> May
+                </label>
+                <label>
+                    <input type="checkbox" name="jun" value="1" <?php echo set_checkbox('jun', '1'); ?>> Jun
+                </label>
+                <label>
+                    <input type="checkbox" name="jul" value="1" <?php echo set_checkbox('jul', '1'); ?>> Jul
+                </label>
+                <label>
+                    <input type="checkbox" name="aug" value="1" <?php echo set_checkbox('aug', '1'); ?>> Aug
+                </label>
+                <label>
+                    <input type="checkbox" name="sep" value="1" <?php echo set_checkbox('sep', '1'); ?>> Sep
+                </label>
+                <label>
+                    <input type="checkbox" name="oct" value="1" <?php echo set_checkbox('oct', '1'); ?>> Oct
+                </label>
+                <label>
+                    <input type="checkbox" name="nov" value="1" <?php echo set_checkbox('nov', '1'); ?>> Nov
+                </label>
+                <label>
+                    <input type="checkbox" name="dece" value="1" <?php echo set_checkbox('dec', '1'); ?>> Dec
+                </label>
+            </div>
+                        <div class="form-group">
+                <input type="submit" name="insert" value="insert data" class="btn btn-primary btn-sm" style="margin-top: 10px;
+                margin-left: 10px;">
+            </div>
+            <?php echo form_close(); ?>
             <div class="row" style="margin-top: 30px;">
                 <div class="col-lg-12"></div>
                 <div class="row">
