@@ -89,15 +89,15 @@ declare(strict_types=1);
                 ?>
 
         </div>
-        <div class="col-lg-3"></div>
-        <div class="col-lg-3" style="margin-top: 10px;">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4" style="margin-top: 10px;">
             <?php if($error = $this->session->flashdata('stu_succ')): ?>
                 <div class="alert alert-dismissible alert-success">
                     <?php echo $error ?>
                 </div>
             <?php endif; ?>
             <?php if($error  = form_error('house_no')): ?>
-                <div class="alert alert-dismissible alert-warning">
+                <div class="alert alert-dismissible alert-danger">
                     <?php echo $error ?>
                 </div>
             <?php endif; ?>

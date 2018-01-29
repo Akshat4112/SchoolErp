@@ -64,8 +64,8 @@ declare(strict_types=1);
             $string = '</div>';
             form_close($string); ?>
         </div>
-        <div class="col-lg-4"></div>
-        <div class="col-lg-3">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-5">
             <?php if($error = $this->session->flashdata('stu_succ')): ?>
                 <div class="alert alert-dismissible alert-success">
                     <?php echo $error ?>
@@ -73,7 +73,7 @@ declare(strict_types=1);
             <?php endif; ?>
             <?php if(form_error('admission_form_no')){
                 $error = form_error('admission_form_no');
-                echo '<div class="alert alert-dismissible alert-warning">
+                echo '<div class="alert alert-dismissible alert-danger">
                 '.$error.'</div>';} ?>
         </div>
     </div>
