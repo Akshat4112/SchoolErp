@@ -5,6 +5,9 @@
  * Date: 7/15/2017
  * Time: 8:27 PM
  */
+
+/* this is a test comment. */
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Admin extends MY_Controller
 {
